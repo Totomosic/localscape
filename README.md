@@ -156,6 +156,34 @@ git submodule add --name rsmod https://github.com/Totomosic/rsmod upstream/rsmod
 This reuses the existing server checkout, including its game data and local fix.
 Publish the fix commit to your fork before others clone the workspace.
 
+## In-game keybinds
+
+The in-game settings can assign F1-F12 or Escape to the side panels. Choosing
+None removes a binding. Assigning a key to a different panel clears its previous
+assignment, and Restore default keybinds restores the starter's F1-F12 layout.
+Bindings are saved to the account and synchronized again at login. New accounts
+receive defaults; saved bindings, including deliberately unbound panels, are
+preserved.
+
+The revision-233 dropdown only changes its displayed text and does not submit
+the selected binding. The custom client's hidden **Local Server Settings** plugin
+captures the settings script's arguments and submits them through the existing
+`ClientCheat` packet (`localscape_keybind` or `localscape_keybind_reset`). RSMod
+accepts only the supported setting IDs and keys while the settings overlay is
+open, updates the persistent keybinding varps, and sends their values back to the
+client. The native client handles the actual F-key presses.
+
+Changes to this feature require both the custom client and the server:
+
+```bash
+./dev build-client
+# Stop and restart RSMod with ./dev server, then launch a new RSProx session.
+```
+
+Client regression tests live under `client/src/test/java/` and are copied into
+the RuneLite checkout alongside the production overlay. Server regression tests
+live in RSMod's settings module under `src/integration/kotlin/`.
+
 ## Change the custom client
 
 ```bash
@@ -205,11 +233,14 @@ does not update previously packaged manifest URLs.
 
 Offline tests cover world-list encoding, launch-config rewriting, public-key
 parsing, source locking, submodule initialization, preservation of local server
-commits and edits, and custom-JAR packaging. The settings close-button fix was
-compiled with the cached Kotlin compiler and verified by replaying button
-packets through RSMod's actual handler and scripts. Full Gradle checks and a real
-login have not been verified in the restricted agent environment; Gradle's
-socket initialization and shell access to GitHub are blocked here.
+commits and edits, and custom-JAR packaging. The custom client builds with the
+cached Maven dependencies, and its keybind bridge tests pass through JUnit.
+The server settings scripts were compiled with the cached Kotlin compiler and
+verified through the actual packet handlers. Keybind verification also covers
+SQLite account save/load, login synchronization, and the cache's native F-key
+slot-selection script. Full server Gradle checks and a live GUI session have not
+been verified here; Gradle's socket initialization and shell access to GitHub
+are blocked in the restricted agent environment.
 
 ## Upstream references
 

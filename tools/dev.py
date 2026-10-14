@@ -309,14 +309,15 @@ def configure_target():
 
 
 def sync_client():
-    sources = ROOT / "client/src/main/java"
-    destination = UPSTREAM / "runelite/runelite-client/src/main/java"
-    if not destination.is_dir():
+    destination_root = UPSTREAM / "runelite/runelite-client/src"
+    if not (destination_root / "main/java").is_dir():
         raise ValueError("RuneLite checkout missing. Run ./dev setup.")
-    for source in sources.rglob("*.java"):
-        target = destination / source.relative_to(sources)
-        target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(source, target)
+    for kind in ("main", "test"):
+        sources = ROOT / f"client/src/{kind}/java"
+        for source in sources.rglob("*.java"):
+            target = destination_root / kind / "java" / source.relative_to(sources)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, target)
 
 
 def package_client(jar, bootstrap):
