@@ -1,0 +1,21 @@
+{
+  "name": "LocalScape",
+  "revision": 233,
+  "world": 301,
+  "game_port": 43594,
+  "http_port": 8080,
+  "runelite_version": "1.11.19",
+  "bootstrap_url": "https://raw.githubusercontent.com/runelite/static.runelite.net/cea91b9921a3647683ba8a5c22ec75c752c91b07/bootstrap.json",
+  "bootstrap_sha256": "6e7b0da812b64bba9ec8e6647f8acc436d9119274ac06b27f5abbcf33c04031e",
+  "jav_config_template_url": "https://client.blurite.io/jav_local_233.ws",
+  "repositories": {
+    "runelite": {
+      "url": "https://github.com/runelite/runelite.git",
+      "ref": "runelite-parent-1.11.19"
+    },
+    "rsprox": {
+      "url": "https://github.com/blurite/rsprox.git",
+      "ref": "master"
+    }
+  }
+}

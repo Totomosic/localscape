@@ -1,0 +1,16 @@
+// Gradle's daemon runs on JDK 21, but this upstream build requests a JDK 11 toolchain.
+// The project supplies both JDKs without modifying the upstream build.
+gradle.projectsEvaluated {
+    def app = gradle.rootProject
+    if (app.name == 'rsprox') {
+        app.tasks.named('proxy', JavaExec).configure {
+            systemProperty 'user.home', System.getenv('LOCALSCAPE_RUNTIME_HOME')
+            // Child JVMs need the same home for sockets, settings and caches.
+            environment 'JAVA_TOOL_OPTIONS', (System.getenv('JAVA_TOOL_OPTIONS') ?: '') +
+                ' -Duser.home="' + System.getenv('LOCALSCAPE_RUNTIME_HOME') + '"'
+            environment 'RUNELITE_ARGS', '--disable-telemetry'
+            // Run the GUI and its child launcher on JDK 21, despite compiling for 11.
+            executable = new File(System.getenv('JAVA_HOME'), 'bin/java').absolutePath
+        }
+    }
+}
