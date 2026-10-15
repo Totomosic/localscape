@@ -81,8 +81,12 @@ source, rather than claims about an uninspected download.
 The `nylocas` admin command copies the complete map square on all four levels
 using `RegionTemplate.copyAllLevels(408, 528)` with an 8×8 chunk block. The block
 starts at instance chunk `(4,4)`, keeping the arena near the instance centre.
-It teleports to the instance equivalent of source `(3295,4248,0)`. All scenery
-and clipping come from the existing map; no new NPCs, waves, or raid varbits are
+`nylocas` teleports to the instance equivalent of source `(3295,4248,0)`;
+`nylocasbridge` lands outside on the northern approach bridge at `(3295,4264,0)`.
+The bridge tile has a plane-1 floor with the link-below flag, placing its visible
+surface on player plane 0. Its destination and access restriction are covered by
+the command integration checks. All scenery and clipping come from the existing
+map; no new NPCs, waves, or raid varbits are
 introduced. Each request creates a fresh instance, and the existing region
 allocator reclaims rooms after players leave. The Local Development sidebar
 submits this command through its existing login-checked client-thread bridge.

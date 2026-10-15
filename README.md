@@ -262,24 +262,26 @@ Open the terminal icon in the RuneLite sidebar while logged into LocalScape:
 - **Teleport to Nylocas** enters a fresh, empty instance of the original Nylocas
   room. Its map and scenery already exist in the revision-233 cache. The boss
   encounter is not implemented yet.
+- **Teleport to Nylocas Bridge** lands on the bridge outside the room, at the
+  instance equivalent of `(3295, 4264, 0)`.
 - Search for an item by name or ID, select a result, enter a quantity, and click
   **Add Selected Item**. Results show IDs and identify noted items. Search reads
   the local game cache, includes untradeable items, and excludes placeholders.
   Broad searches show the first 100 matches; narrow the query to find more.
 
 The item list loads over several client ticks after login. Controls use RSMod's
-`master`, `invclear`, `invadd`, and `nylocas` admin commands. Your account needs
-server admin access; command results and inventory-limit messages appear in game
-chat. Restore Skills preserves earned XP.
+`master`, `invclear`, `invadd`, `nylocas`, and `nylocasbridge` admin commands. Your
+account needs server admin access; command results and inventory-limit messages
+appear in game chat. Restore Skills preserves earned XP.
 
 Nylocas access preserves source region **13122**, plane **0**, and lands at the
 instance equivalent of `(3295, 4248, 0)`. ToB QoL requires an instance with the
 original source chunks. Nyloer and Nylo Death Indicators also depend on official
 NPCs, raid state, and combat events when the encounter is added. The compatibility
 research and remaining requirements are in [docs/nylocas-research.md](docs/nylocas-research.md).
-Use `::nylocas` directly as an admin, or rebuild the custom client and restart
-RSMod to use the sidebar button. No cache repack is required. Each click creates
-a new instance; the normal region allocator reclaims abandoned rooms. To leave,
+Use `::nylocas` or `::nylocasbridge` directly as an admin, or rebuild the custom
+client and restart RSMod to use the sidebar buttons. No cache repack is required.
+Each click creates a new instance; the normal region allocator reclaims abandoned rooms. To leave,
 use the existing `::tele 0 50 50 22 18` command to return to Lumbridge.
 
 ## Change the custom client
