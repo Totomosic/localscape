@@ -183,6 +183,19 @@ the original materials. Each cast consumes one charge, including splashes, and
 the last charge turns it back into the uncharged item. Charging costs follow the
 [OSRS rules](https://osrsindex.com/wiki/eye-of-ayak?site=osrs_wiki).
 
+Dinh's bulwark and Dinh's blazing bulwark have the Shield Bash special attack,
+costing 50% energy and using a custom 25% accuracy bonus against crush defence.
+In multi-combat, the primary NPC takes two independently rolled, full-strength
+hits on the same tick. The sweep hits up to ten NPCs total, including the primary,
+within an 11x11 square centred on the player. Other targets must be attackable,
+visible, in multi-combat, and in line of sight. Single-combat and player targets
+receive one hit. Successful hits drain the highest offensive stats by 5% of their
+current levels, once per target per special; melee drains both Attack and Strength,
+with ties preferring melee, then Ranged, then Magic. Energy, area restrictions,
+and stat drain follow the [Wiki special attack rules](https://osrsindex.com/wiki/special-attacks?site=osrs_wiki)
+and [stat drain rules](https://osrsindex.com/wiki/temporary-skill-drain?site=osrs_wiki),
+with the requested accuracy bonus and primary-plus-sweep behavior.
+
 For an existing workspace converting from the earlier downloaded checkout,
 register the prepared submodule from a terminal with write access to `.git`:
 
