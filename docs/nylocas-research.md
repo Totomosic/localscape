@@ -171,6 +171,10 @@ and source lane coordinates:
 | West | Small Nylocas toxobolos (ranger) | 8343 | `(3281,4249,0)` |
 | East | Small Nylocas ischyros (melee) | 8342 | `(3310,4248,0)` |
 
+All three small nylos spawn with both current and maximum HP set to **8** for
+1–3 players, **9** for four players, or **11** for five players. Scaling uses the
+team size recorded by Start Raid and stays fixed if members leave or disconnect.
+
 The countdown belongs to the instance and runs on server ticks, independently of
 the player's actions or session. Subsequent Pass actions do not reset or repeat
 it. Deleted instances lose their pending wave, and NPCs are reclaimed with their
@@ -207,7 +211,7 @@ The room, native HUD, and first spawns establish geometry, location, basic raid/
   normal-range culling, retention of all three lanes while moving between the
   west and east sides at 32 tiles, the large packet format, and return to the
   normal packet and range afterwards. Removing the range update makes it fail.
-- RSMod `:content:areas:dungeons:nylocas:integration`: nineteen tests passed through
+- RSMod `:content:areas:dungeons:nylocas:integration`: twenty-five tests passed through
   real loc interaction packets, covering exact four-tick timing, NPC IDs and
   lane coordinates, both barrier halves sharing a countdown, starter logout,
   repeated entry, instance isolation, cancellation on reclamation, and passing
@@ -220,7 +224,9 @@ The room, native HUD, and first spawns establish geometry, location, basic raid/
   locations, oversized parties, and refusing barrier entry before raid start.
   Visibility tests cover source-map normalization across instances, bridge/Bloat
   transitions, independent players, plane changes, and applying the radius before
-  the client update.
+  the client update. HP tests cover all five team sizes, current and maximum HP
+  for all three styles, persistence over 40 ticks, and a five-player raid retaining
+  its scaling when four members depart during the countdown.
 - RSMod `:content:areas:dungeons:nylocas:spotlessCheck`: passed.
 - `./dev test`: all 12 workspace tests passed.
 
