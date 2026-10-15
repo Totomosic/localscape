@@ -167,6 +167,12 @@ Sulphur blades, use a shared helper that rolls from zero through the max hit and
 clamps the result to at least one. A rolled zero and a rolled one both deal one
 damage after a successful accuracy check.
 
+Scythe of vitur attacks use one splat per NPC tile size, up to three, with each
+splat rolling accuracy separately and landing on the same tick. Each successive
+max hit is half the previous one, rounded down (51 becomes 51, 25, 12). This also
+applies to the holy, sanguine, and blighted cosmetics, including all uncharged
+forms. Player targets receive one standard hit.
+
 For an existing workspace converting from the earlier downloaded checkout,
 register the prepared submodule from a terminal with write access to `.git`:
 
