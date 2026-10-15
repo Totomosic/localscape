@@ -162,6 +162,11 @@ NPCs and players, with both splats landing on the same tick. Their max hits spli
 the normal melee max hit, rounding the first down and the second up (45 becomes
 22 and 23).
 
+Player melee, ranged, and powered-staff damage rolls, including godswords and
+Sulphur blades, use a shared helper that rolls from zero through the max hit and
+clamps the result to at least one. A rolled zero and a rolled one both deal one
+damage after a successful accuracy check.
+
 For an existing workspace converting from the earlier downloaded checkout,
 register the prepared submodule from a terminal with write access to `.git`:
 
