@@ -173,6 +173,16 @@ max hit is half the previous one, rounded down (51 becomes 51, 25, 12). This als
 applies to the holy, sanguine, and blighted cosmetics, including all uncharged
 forms. Player targets receive one standard hit.
 
+The Eye of ayak is a powered staff with a three-tick attack cycle and a base max
+hit of `floor(current_magic_level / 3) - 6`, before normal magic damage bonuses.
+It uses its native casting and projectile effects. It holds up to 50,000 charges:
+either two death runes and one chaos rune per charge, or one demon tear. The two
+charge types cannot be mixed. Use charging materials on the staff, or use Charge
+on the uncharged item; Check reports the remaining charges, and Uncharge refunds
+the original materials. Each cast consumes one charge, including splashes, and
+the last charge turns it back into the uncharged item. Charging costs follow the
+[OSRS rules](https://osrsindex.com/wiki/eye-of-ayak?site=osrs_wiki).
+
 For an existing workspace converting from the earlier downloaded checkout,
 register the prepared submodule from a terminal with write access to `.git`:
 
