@@ -9,9 +9,10 @@ custom RuneLite → RSProx → RSMod game and cache/update services
 local HTTP service → launch configuration, world list, custom client manifest/JAR
 ```
 
-The custom client includes a **Local Development** plugin. On login it writes
-`Custom RuneLite build active.` to game chat, confirming that RSProx launched
-your build. Edit the Java sources under `client/` to extend it.
+The custom client includes a **Local Development** plugin. Its terminal icon in
+the RuneLite sidebar opens item search and server controls. On login it also
+writes `Custom RuneLite build active.` to game chat, confirming that RSProx
+launched your build. Edit the Java sources under `client/` to extend it.
 
 ## First setup
 
@@ -189,6 +190,22 @@ Changes to this feature require both the custom client and the server:
 Client regression tests live under `client/src/test/java/` and are copied into
 the RuneLite checkout alongside the production overlay. Server regression tests
 live in RSMod's settings module under `src/integration/kotlin/`.
+
+## Local Development sidebar
+
+Open the terminal icon in the RuneLite sidebar while logged into LocalScape:
+
+- **Restore Skills** restores all skills, including Hitpoints and Prayer, to 99.
+- **Clear Inventory** removes all items from your inventory.
+- Search for an item by name or ID, select a result, enter a quantity, and click
+  **Add Selected Item**. Results show IDs and identify noted items. Search reads
+  the local game cache, includes untradeable items, and excludes placeholders.
+  Broad searches show the first 100 matches; narrow the query to find more.
+
+The item list loads over several client ticks after login. Controls use RSMod's
+existing `master`, `invclear`, and `invadd` admin commands. Your account needs
+server admin access; command results and inventory-limit messages appear in game
+chat. Restore Skills preserves earned XP.
 
 ## Change the custom client
 
