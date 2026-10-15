@@ -157,6 +157,10 @@ Lumbridge is multi-combat throughout its defined map boundary on all four height
 levels. Changes to map-area definitions require running `./gradlew packCache`
 from `upstream/rsmod` with the server stopped, then restarting `./dev server`.
 
+All seven ordinary cow and calf variants have 50 hitpoints. This is an NPC stat
+override in `api/config/src/main/kotlin/org/rsmod/api/config/editors/NpcEdits.kt`;
+NPC stat overrides also require repacking the cache with the server stopped.
+
 Sulphur blades make two independent melee accuracy and damage rolls against
 NPCs and players, with both splats landing on the same tick. Their max hits split
 the normal melee max hit, rounding the first down and the second up (45 becomes
