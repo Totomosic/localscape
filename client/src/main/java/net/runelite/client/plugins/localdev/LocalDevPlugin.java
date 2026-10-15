@@ -22,7 +22,7 @@ import net.runelite.client.ui.NavigationButton;
 
 @PluginDescriptor(
 	name = "Local Development",
-	description = "Search and spawn items, clear inventory, and restore skills on the local server",
+	description = "Search and spawn items, restore skills, and teleport to development rooms on the local server",
 	tags = {"local", "development"},
 	enabledByDefault = true
 )
