@@ -179,6 +179,15 @@ movement, combat, and additional waves remain unimplemented. Basic party state
 and room-progress varbits are supplied by explicit raid startup.
 See [NylocasEncounter.kt](../upstream/rsmod/content/areas/dungeons/nylocas/src/main/kotlin/org/rsmod/content/areas/dungeons/nylocas/NylocasEncounter.kt).
 
+NPC visibility expands from the normal 15-tile radius to 32 tiles on plane 0 of
+the Nylocas source map, including instanced copies and the bridge. The incoming
+east and west lanes are 29 tiles apart, so the normal radius dropped the opposite
+lane when walking across the arena. The radius updates after movement and before
+NPC info encoding, independently of raid startup. RSProt selects the native large
+NPC info packet for the expanded range. Leaving the room restores the normal
+radius. This changes server tracking; client camera and draw-distance settings
+still control what is drawn on screen.
+
 ### Remaining encounter work
 
 The room, native HUD, and first spawns establish geometry, location, basic raid/party state, NPC identity, and tick grouping. Full compatibility still requires movement, combat XP/hitsplats, later encounter lifecycle events, and live checks with the installed plugins. These findings are source inspection and server integration tests, not a completed encounter compatibility test.
@@ -194,7 +203,11 @@ The room, native HUD, and first spawns establish geometry, location, basic raid/
   four source levels, reclamation after repeated entry and departure, and the
   Start Raid command's HUD setup and idempotence.
 - RSMod `:content:other:commands:spotlessCheck`: passed.
-- RSMod `:content:areas:dungeons:nylocas:integration`: seventeen tests passed through
+- RSMod `:api:net:test`: the real NPC info protocol regression test confirms
+  normal-range culling, retention of all three lanes while moving between the
+  west and east sides at 32 tiles, the large packet format, and return to the
+  normal packet and range afterwards. Removing the range update makes it fail.
+- RSMod `:content:areas:dungeons:nylocas:integration`: nineteen tests passed through
   real loc interaction packets, covering exact four-tick timing, NPC IDs and
   lane coordinates, both barrier halves sharing a countdown, starter logout,
   repeated entry, instance isolation, cancellation on reclamation, and passing
@@ -205,6 +218,9 @@ The room, native HUD, and first spawns establish geometry, location, basic raid/
   open/name/varp packets, solo and five-player slots, live HP synchronization,
   departure and login cleanup, same-tick teleport/start ordering, invalid
   locations, oversized parties, and refusing barrier entry before raid start.
+  Visibility tests cover source-map normalization across instances, bridge/Bloat
+  transitions, independent players, plane changes, and applying the radius before
+  the client update.
 - RSMod `:content:areas:dungeons:nylocas:spotlessCheck`: passed.
 - `./dev test`: all 12 workspace tests passed.
 
