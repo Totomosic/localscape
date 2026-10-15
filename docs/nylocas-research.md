@@ -95,6 +95,27 @@ Relevant local sources: [map loading](../upstream/rsmod/api/cache/src/main/kotli
 [instance rebuild packets](../upstream/rsmod/api/net/src/main/kotlin/org/rsmod/api/net/rsprot/RspCycle.kt),
 and [region allocation and reclamation](../upstream/rsmod/api/repo/src/main/kotlin/org/rsmod/api/repo/region/RegionRepository.kt).
 
+### Bloat exit approach
+
+The `bloatexit` admin command and **Teleport to Bloat Exit** sidebar button land
+at source `(3322,4447,0)`, immediately inside the eastern exit of Bloat's region
+`13125` (`51_69`). Local cache inspection found the exit scenery and stairs,
+with walkable linked floor ending at `x=3322`; no interactive passage exists at
+that exit in the cache. The server adds two native Formidable passage clickboxes
+(`33113`) there, at `y=4447/4448`, with wall shape 0 facing east. Both **Enter**
+and **Quick-Enter** lead to source `(3302,4275,0)` at the start of the Nylocas
+bridge, just inside its cached eastern entrance.
+
+This development route copies both complete source map squares on all four
+levels into one large instance. Bloat occupies instance chunks `(20..27,4..11)`
+and Nylocas `(4..11,4..11)`. The spacing keeps Nylocas's source region outside the
+client's scene while at the Bloat exit. Door traversal retains the same instance,
+so multiple players share the destination and its first-wave state. The handler
+checks the passage's source coordinates to avoid changing other Theatre doors.
+Arrival does not start the wave; passing the Nylocas barrier remains the trigger.
+There is no Bloat combat or completion requirement in this development route.
+See [BloatExit.kt](../upstream/rsmod/content/areas/dungeons/nylocas/src/main/kotlin/org/rsmod/content/areas/dungeons/nylocas/BloatExit.kt).
+
 ### First wave
 
 Both entrance barriers are object `32755` (`tob_arena_barrier`), with **Pass** as
@@ -134,11 +155,14 @@ The room and first spawns establish geometry, location, NPC identity, and tick g
   source-coordinate preservation for the incoming lanes and entry line, all
   four source levels, and reclamation after repeated entry and departure.
 - RSMod `:content:other:commands:spotlessCheck`: passed.
-- RSMod `:content:areas:dungeons:nylocas:integration`: six tests passed through
+- RSMod `:content:areas:dungeons:nylocas:integration`: nine tests passed through
   real loc interaction packets, covering exact four-tick timing, NPC IDs and
   lane coordinates, both barrier halves sharing a countdown, starter logout,
   repeated entry, instance isolation, cancellation on reclamation, and passing
-  out without starting the encounter.
+  out without starting the encounter. Bloat exit checks also cover both passage
+  options and halves, shared instance identity, loaded cache collision at both
+  destinations, cleanup, unrelated passages, and walking from the bridge start
+  to the barrier before the first wave's countdown.
 - RSMod `:content:areas:dungeons:nylocas:spotlessCheck`: passed.
 - `./dev test`: all 12 workspace tests passed.
 

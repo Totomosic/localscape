@@ -36,6 +36,7 @@ final class LocalDevPanel extends PluginPanel
 	private final JButton restoreSkills = new JButton("Restore Skills");
 	private final JButton teleportNylocas = new JButton("Teleport to Nylocas");
 	private final JButton teleportNylocasBridge = new JButton("Teleport to Nylocas Bridge");
+	private final JButton teleportBloatExit = new JButton("Teleport to Bloat Exit");
 	private final Timer searchTimer = new Timer(200, event -> filterItems());
 	private List<LocalItem> items = Collections.emptyList();
 	private boolean loaded;
@@ -57,6 +58,9 @@ final class LocalDevPanel extends PluginPanel
 		teleportNylocasBridge.setToolTipText("Teleport onto the bridge outside the Nylocas room.");
 		teleportNylocasBridge.addActionListener(event -> submit.accept("nylocasbridge"));
 		add(teleportNylocasBridge);
+		teleportBloatExit.setToolTipText("Teleport just before the Bloat exit door to the Nylocas bridge.");
+		teleportBloatExit.addActionListener(event -> submit.accept("bloatexit"));
+		add(teleportBloatExit);
 		add(new JLabel("Search items by name or ID"));
 		add(search);
 		add(summary);
@@ -180,6 +184,7 @@ final class LocalDevPanel extends PluginPanel
 		clearInventory.setEnabled(loggedIn);
 		teleportNylocas.setEnabled(loggedIn);
 		teleportNylocasBridge.setEnabled(loggedIn);
+		teleportBloatExit.setEnabled(loggedIn);
 		addItem.setEnabled(loggedIn && itemList.getSelectedValue() != null);
 	}
 }

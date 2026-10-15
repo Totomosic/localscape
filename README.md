@@ -263,14 +263,18 @@ Open the terminal icon in the RuneLite sidebar while logged into LocalScape:
   room. Its map and scenery already exist in the revision-233 cache.
 - **Teleport to Nylocas Bridge** lands on the bridge outside the room, at the
   instance equivalent of `(3295, 4264, 0)`.
+- **Teleport to Bloat Exit** lands immediately before the Bloat room's exit
+  door, at the instance equivalent of `(3322, 4447, 0)`. Use **Enter** or
+  **Quick-Enter** on either half of the passage to reach the start of the Nylocas
+  bridge at `(3302, 4275, 0)` within the same instance.
 - Search for an item by name or ID, select a result, enter a quantity, and click
   **Add Selected Item**. Results show IDs and identify noted items. Search reads
   the local game cache, includes untradeable items, and excludes placeholders.
   Broad searches show the first 100 matches; narrow the query to find more.
 
 The item list loads over several client ticks after login. Controls use RSMod's
-`master`, `invclear`, `invadd`, `nylocas`, and `nylocasbridge` admin commands. Your
-account needs server admin access; command results and inventory-limit messages
+`master`, `invclear`, `invadd`, `nylocas`, `nylocasbridge`, and `bloatexit` admin
+commands. Your account needs server admin access; command results and inventory-limit messages
 appear in game chat. Restore Skills preserves earned XP.
 
 Nylocas access preserves source region **13122**, plane **0**, and lands at the
@@ -282,6 +286,13 @@ Use `::nylocas` or `::nylocasbridge` directly as an admin, or rebuild the custom
 client and restart RSMod to use the sidebar buttons. No cache repack is required.
 Each click creates a new instance; the normal region allocator reclaims abandoned rooms. To leave,
 use the existing `::tele 0 50 50 22 18` command to return to Lumbridge.
+
+`::bloatexit` is the command behind the Bloat exit button. This instance contains
+both Bloat and Nylocas source maps, spaced apart so the client loads the correct
+room's region. The cache supplies the doorway scenery; the server adds the native
+Formidable passage clickboxes at the exit. Traversing the door keeps players in
+the same instance and does not start the Nylocas wave. Bloat combat is not
+implemented.
 
 To start the first Nylocas wave, use the bridge teleport, walk to the barrier,
 and click **Pass**. Either half of the barrier moves you into the room and starts
