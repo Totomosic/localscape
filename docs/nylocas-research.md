@@ -1,6 +1,6 @@
 # Nylocas room and RuneLite compatibility
 
-Researched 2026-10-15 against the public source revisions selected by RuneLite's Plugin Hub. This milestone provides access to the room; NPC waves, combat, raid state, and end-to-end plugin verification are future encounter work.
+Researched 2026-10-15 against the public source revisions selected by RuneLite's Plugin Hub. The implementation provides room access and one wave triggered by passing the entrance barrier. Movement, combat, further waves, raid state, and end-to-end plugin verification are future encounter work.
 
 ## Source revisions
 
@@ -72,10 +72,9 @@ encrypted scenery archive `l51_66`, and `xteas.json` contains its key. Decoding
 both with RuneLite's cache library succeeded and found **601 scenery placements**,
 including the four intact pillar objects `32862`. The central arena has the
 original 12-tile-wide floor with clipped corners. RSMod loads maps listed in the
-XTEA file, including this one, during startup. There are no Nylocas encounter
-scripts in this checkout. This establishes that the **map exists**, while the
-**encounter still needs implementation**; creating a replacement 12×12 map is
-unnecessary. These are observations from this workspace's installed cache and
+XTEA file, including this one, during startup. The **map exists** independently of
+the new encounter scripts; creating a replacement 12×12 map is unnecessary.
+These are observations from this workspace's installed cache and
 source, rather than claims about an uninspected download.
 
 The `nylocas` admin command copies the complete map square on all four levels
@@ -86,19 +85,44 @@ starts at instance chunk `(4,4)`, keeping the arena near the instance centre.
 The bridge tile has a plane-1 floor with the link-below flag, placing its visible
 surface on player plane 0. Its destination and access restriction are covered by
 the command integration checks. All scenery and clipping come from the existing
-map; no new NPCs, waves, or raid varbits are
-introduced. Each request creates a fresh instance, and the existing region
+map. Teleporting does not start the encounter. Each request creates a fresh instance, and the existing region
 allocator reclaims rooms after players leave. The Local Development sidebar
 submits this command through its existing login-checked client-thread bridge.
 
 Relevant local sources: [map loading](../upstream/rsmod/api/cache/src/main/kotlin/org/rsmod/api/cache/map/GameMapDecoder.kt),
 [instance creation](../upstream/rsmod/content/other/commands/src/main/kotlin/org/rsmod/content/other/commands/NylocasDevelopmentCommand.kt),
+[shared room template](../upstream/rsmod/content/areas/dungeons/nylocas/src/main/kotlin/org/rsmod/content/areas/dungeons/nylocas/NylocasRoom.kt),
 [instance rebuild packets](../upstream/rsmod/api/net/src/main/kotlin/org/rsmod/api/net/rsprot/RspCycle.kt),
 and [region allocation and reclamation](../upstream/rsmod/api/repo/src/main/kotlin/org/rsmod/api/repo/region/RegionRepository.kt).
 
+### First wave
+
+Both entrance barriers are object `32755` (`tob_arena_barrier`), with **Pass** as
+their first option. The cache places them at `(3295,4255,1)` and `(3296,4255,1)`;
+the bridge link-below flag resolves them onto player plane 0. The handler checks
+their original coordinates, since other Theatre rooms share this object type.
+Entering crosses to `y=4254`; passing out crosses to `y=4256`.
+
+The first entry schedules a wave exactly four ticks after the Pass action.
+All three spawns occur in the same server tick, using official incoming NPC IDs
+and source lane coordinates:
+
+| Lane | NPC | ID | Source tile |
+| --- | --- | --- | --- |
+| South | Small Nylocas hagios (mage) | 8344 | `(3295,4233,0)` |
+| West | Small Nylocas toxobolos (ranger) | 8343 | `(3281,4249,0)` |
+| East | Small Nylocas ischyros (melee) | 8342 | `(3310,4248,0)` |
+
+The countdown belongs to the instance and runs on server ticks, independently of
+the player's actions or session. Subsequent Pass actions do not reset or repeat
+it. Deleted instances lose their pending wave, and NPCs are reclaimed with their
+instance. Crabs currently stay at the spawn points without hunting or respawning;
+no movement, combat, additional waves, or raid varbits are introduced here.
+See [NylocasEncounter.kt](../upstream/rsmod/content/areas/dungeons/nylocas/src/main/kotlin/org/rsmod/content/areas/dungeons/nylocas/NylocasEncounter.kt).
+
 ### Remaining encounter work
 
-An accessible empty room establishes geometry and location only. Full compatibility requires a source-mapped instance, correct raid/party state, official NPCs, spawn positions, tick grouping, combat XP/hitsplats, and live checks with the installed plugins. These findings are source inspection, not a completed encounter compatibility test.
+The room and first spawns establish geometry, location, NPC identity, and tick grouping. Full compatibility still requires correct raid/party state, movement, combat XP/hitsplats, and live checks with the installed plugins. These findings are source inspection and server integration tests, not a completed encounter compatibility test.
 
 ### Checks performed
 
@@ -110,6 +134,12 @@ An accessible empty room establishes geometry and location only. Full compatibil
   source-coordinate preservation for the incoming lanes and entry line, all
   four source levels, and reclamation after repeated entry and departure.
 - RSMod `:content:other:commands:spotlessCheck`: passed.
+- RSMod `:content:areas:dungeons:nylocas:integration`: six tests passed through
+  real loc interaction packets, covering exact four-tick timing, NPC IDs and
+  lane coordinates, both barrier halves sharing a countdown, starter logout,
+  repeated entry, instance isolation, cancellation on reclamation, and passing
+  out without starting the encounter.
+- RSMod `:content:areas:dungeons:nylocas:spotlessCheck`: passed.
 - `./dev test`: all 12 workspace tests passed.
 
 The client tests ran with `-Djava.awt.headless=true` and a workspace `user.home`.

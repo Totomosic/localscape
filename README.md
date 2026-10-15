@@ -260,8 +260,7 @@ Open the terminal icon in the RuneLite sidebar while logged into LocalScape:
 - **Restore Skills** restores all skills, including Hitpoints and Prayer, to 99.
 - **Clear Inventory** removes all items from your inventory.
 - **Teleport to Nylocas** enters a fresh, empty instance of the original Nylocas
-  room. Its map and scenery already exist in the revision-233 cache. The boss
-  encounter is not implemented yet.
+  room. Its map and scenery already exist in the revision-233 cache.
 - **Teleport to Nylocas Bridge** lands on the bridge outside the room, at the
   instance equivalent of `(3295, 4264, 0)`.
 - Search for an item by name or ID, select a result, enter a quantity, and click
@@ -283,6 +282,17 @@ Use `::nylocas` or `::nylocasbridge` directly as an admin, or rebuild the custom
 client and restart RSMod to use the sidebar buttons. No cache repack is required.
 Each click creates a new instance; the normal region allocator reclaims abandoned rooms. To leave,
 use the existing `::tele 0 50 50 22 18` command to return to Lumbridge.
+
+To start the first Nylocas wave, use the bridge teleport, walk to the barrier,
+and click **Pass**. Either half of the barrier moves you into the room and starts
+a four-tick countdown. The first wave spawns together: one small Nylocas hagios
+(mage) south, one small Nylocas toxobolos (ranger) west, and one small Nylocas
+ischyros (melee) east. Repeated entry does not restart the wave; use a teleport
+to create a fresh instance for another attempt. Passing from inside returns you
+to the bridge. Only this wave's spawns are implemented; the crabs remain at their
+spawn points, and movement, combat, later waves, and raid state are future work.
+Restart RSMod to load this server change; no cache repack or client rebuild is
+needed for the encounter scripts.
 
 ## Change the custom client
 
