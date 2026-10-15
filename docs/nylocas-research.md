@@ -1,6 +1,6 @@
 # Nylocas room and RuneLite compatibility
 
-Researched 2026-10-15 against the public source revisions selected by RuneLite's Plugin Hub. The implementation provides room access, explicit raid startup with the native party HUD, and one wave triggered by passing the entrance barrier. Movement, combat, further waves, full raid completion, and end-to-end plugin verification are future encounter work.
+Researched 2026-10-15 against the public source revisions selected by RuneLite's Plugin Hub. The implementation provides room access, explicit raid startup with the native party HUD, and one configured wave triggered by passing the entrance barrier. Nylos follow their lanes, then path to assigned pillars or attack players. Further waves, pillar damage, full raid completion, and end-to-end plugin verification are future encounter work.
 
 ## Source revisions
 
@@ -171,17 +171,47 @@ and source lane coordinates:
 | West | Small Nylocas toxobolos (ranger) | 8343 | `(3281,4249,0)` |
 | East | Small Nylocas ischyros (melee) | 8342 | `(3310,4248,0)` |
 
-All three small nylos spawn with both current and maximum HP set to **8** for
-1–3 players, **9** for four players, or **11** for five players. Scaling uses the
-team size recorded by Start Raid and stays fixed if members leave or disconnect.
+Small nylos spawn with both current and maximum HP set to **8** for 1–3 players,
+**9** for four players, or **11** for five players. Big nylos use **16**, **19**,
+or **22** HP respectively. Scaling uses the team size recorded by Start Raid
+and stays fixed if members leave or disconnect.
 
 The countdown belongs to the instance and runs on server ticks, independently of
 the player's actions or session. Subsequent Pass actions do not reset or repeat
 it. Deleted instances lose their pending wave, and NPCs are reclaimed with their
-instance. Crabs currently stay at the spawn points without hunting or respawning;
-movement, combat, and additional waves remain unimplemented. Basic party state
-and room-progress varbits are supplied by explicit raid startup.
+instance. Nylos do not respawn. Basic party state and room-progress varbits are
+supplied by explicit raid startup.
 See [NylocasEncounter.kt](../upstream/rsmod/content/areas/dungeons/nylocas/src/main/kotlin/org/rsmod/content/areas/dungeons/nylocas/NylocasEncounter.kt).
+
+### Wave table and targeting
+
+[NylocasWaves.kt](../upstream/rsmod/content/areas/dungeons/nylocas/src/main/kotlin/org/rsmod/content/areas/dungeons/nylocas/NylocasWaves.kt)
+defines six nullable slots per row: west north/south, south west/east, and east
+north/south. An occupied slot specifies small/big, melee/ranged/magic, and an
+optional target pillar. Empty slots spawn nothing. Only the original first wave
+is configured: west north targets the northwest pillar, south west targets the
+southwest pillar, and east south targets the northeast pillar. These are explicit
+development targets, not a complete reconstruction of the official wave table.
+
+The first row's `ticksAfterPrevious` counts from barrier entry; subsequent rows
+count from the preceding wave's spawn. All occupied slots in a row spawn together.
+The scheduler consumes further configured rows and updates the native wave counter.
+
+Each nylo walks one tile per tick to its slot's entry point before acquiring a
+target. The source cache marks incoming lanes as blocked terrain, so only this
+straight approach uses the per-NPC blocked/normal movement override. Arena movement
+switches to normal terrain collision with NPC stacking and uses the existing route
+finder to navigate around scenery. On lane completion, the nylo changes to its
+matching official fighting NPC ID without resetting HP.
+
+Pillar targets use the cache's 3×3 support bounds and stop at an adjacent tile.
+Pillar HP, damage, and collapse are not implemented. A null pillar target selects
+the nearest living player inside the same instance's arena, retains that target
+while valid, and selects another if they leave or die. Players on the bridge or
+in other instances are excluded. Melee requires adjacency; ranged/magic currently
+use four-tile range and line of sight. Attacks use the existing accuracy/max-hit
+formulas, attack-rate parameters, typed queued hits, and protection prayers.
+Full ToB attack stats, projectiles, and visual timing still need encounter tuning.
 
 NPC visibility expands from the normal 15-tile radius to 32 tiles on plane 0 of
 the Nylocas source map, including instanced copies and the bridge. The incoming
@@ -194,7 +224,7 @@ still control what is drawn on screen.
 
 ### Remaining encounter work
 
-The room, native HUD, and first spawns establish geometry, location, basic raid/party state, NPC identity, and tick grouping. Full compatibility still requires movement, combat XP/hitsplats, later encounter lifecycle events, and live checks with the installed plugins. These findings are source inspection and server integration tests, not a completed encounter compatibility test.
+The room, native HUD, wave scheduler, and movement/targeting establish the encounter foundation. Full compatibility still requires the remaining wave data, pillar health/damage/collapse, splitting and expiry, full combat tuning, later encounter lifecycle events, and live checks with the installed plugins. These findings are source inspection and server integration tests, not a completed encounter compatibility test.
 
 ### Checks performed
 
@@ -211,7 +241,7 @@ The room, native HUD, and first spawns establish geometry, location, basic raid/
   normal-range culling, retention of all three lanes while moving between the
   west and east sides at 32 tiles, the large packet format, and return to the
   normal packet and range afterwards. Removing the range update makes it fail.
-- RSMod `:content:areas:dungeons:nylocas:integration`: twenty-five tests passed through
+- RSMod `:content:areas:dungeons:nylocas:integration`: thirty-five tests passed through
   real loc interaction packets, covering exact four-tick timing, NPC IDs and
   lane coordinates, both barrier halves sharing a countdown, starter logout,
   repeated entry, instance isolation, cancellation on reclamation, and passing
@@ -227,7 +257,14 @@ The room, native HUD, and first spawns establish geometry, location, basic raid/
   the client update. HP tests cover all five team sizes, current and maximum HP
   for all three styles, persistence over 40 ticks, and a five-player raid retaining
   its scaling when four members depart during the countdown.
+  Movement tests cover lane-first travel on actual cache collision, reaching pillar
+  bounds, all six spawn slots and all size/style combinations, later-row delays
+  and HUD progress, big-nylo routing around obstacles, queued player damage,
+  retargeting on departure, and excluding the bridge and other instances.
 - RSMod `:content:areas:dungeons:nylocas:spotlessCheck`: passed.
+- RSMod `:engine:game:test`: 128 tests passed; the existing
+  `NpcMovementProcessorTest` integration regression also passed. The changed NPC
+  file passed its targeted formatting check.
 - `./dev test`: all 12 workspace tests passed.
 
 The client tests ran with `-Djava.awt.headless=true` and a workspace `user.home`.
