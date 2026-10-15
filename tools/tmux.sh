@@ -33,11 +33,13 @@ fi
 
 session="localscape"
 detach=false
+rsprox=false
 while (($#)); do
     case "$1" in
         --detach) detach=true ;;
+        --rsprox) rsprox=true ;;
         -h|--help)
-            printf 'Usage: %s [--detach] [session-name]\n' "$0"
+            printf 'Usage: %s [--detach] [--rsprox] [session-name]\n' "$0"
             exit 0
             ;;
         -*) printf 'Unknown option: %s\n' "$1" >&2; exit 1 ;;
@@ -58,18 +60,22 @@ fi
 if ! tmux has-session -t "=$session" 2>/dev/null; then
     http_pane="$(tmux new-session -d -s "$session" -n http -c "$project_root" -P -F '#{pane_id}')"
     server_pane="$(tmux new-window -d -t "=$session" -n rsmod -c "$project_root" -P -F '#{pane_id}')"
-    proxy_pane="$(tmux new-window -d -t "=$session" -n rsprox -c "$project_root" -P -F '#{pane_id}')"
+    if "$rsprox"; then
+        proxy_pane="$(tmux new-window -d -t "=$session" -n rsprox -c "$project_root" -P -F '#{pane_id}')"
+        tmux set-option -w -t "$proxy_pane" automatic-rename off
+    fi
     shell_window="$(tmux new-window -d -t "=$session" -n shell -c "$project_root" -P -F '#{window_id}')"
     tmux set-option -w -t "$http_pane" automatic-rename off
     tmux set-option -w -t "$server_pane" automatic-rename off
-    tmux set-option -w -t "$proxy_pane" automatic-rename off
     tmux set-option -w -t "$shell_window" automatic-rename off
     tmux send-keys -t "$http_pane" -l './dev serve'
     tmux send-keys -t "$http_pane" Enter
     tmux send-keys -t "$server_pane" -l './dev server'
     tmux send-keys -t "$server_pane" Enter
-    tmux send-keys -t "$proxy_pane" -l './tools/tmux.sh --proxy-window'
-    tmux send-keys -t "$proxy_pane" Enter
+    if "$rsprox"; then
+        tmux send-keys -t "$proxy_pane" -l './tools/tmux.sh --proxy-window'
+        tmux send-keys -t "$proxy_pane" Enter
+    fi
     tmux select-window -t "$shell_window"
 fi
 

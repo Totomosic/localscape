@@ -61,15 +61,21 @@ tools, source directories, and the desktop display.
 
 ## Run locally
 
-After setup, open all four terminals in a tmux session:
+After setup, start a tmux session:
 
 ```bash
 ./tools/tmux.sh
 ```
 
-This creates four separate windows: `http`, `rsmod`, `rsprox`, and `shell`,
-with the general shell selected initially.
-RSProx waits for the HTTP service to start. Running the script again reattaches
+This creates three separate windows: `http`, `rsmod`, and `shell`,
+with the general shell selected initially. Add `--rsprox` to also create an
+`rsprox` window and launch RSProx:
+
+```bash
+./tools/tmux.sh --rsprox
+```
+
+When enabled, RSProx waits for the HTTP service to start. Running the script again reattaches
 to the existing `localscape` session without starting duplicate services. Inside
 tmux, it switches to that session. Use `Ctrl+b`, then `n` or `p` to change windows,
 or `Ctrl+b`, then `d` to detach while services keep running.
