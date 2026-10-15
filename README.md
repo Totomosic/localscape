@@ -175,7 +175,9 @@ forms. Player targets receive one standard hit.
 
 The Eye of ayak is a powered staff with a three-tick attack cycle and a base max
 hit of `floor(current_magic_level / 3) - 6`, before normal magic damage bonuses.
-It uses its native casting and projectile effects. It holds up to 50,000 charges:
+It uses its native casting and projectile effects, with a powered-staff firing
+sound. Its attack range is seven tiles, or nine on Longrange. It holds up to
+50,000 charges:
 either two death runes and one chaos rune per charge, or one demon tear. The two
 charge types cannot be mixed. Use charging materials on the staff, or use Charge
 on the uncharged item; Check reports the remaining charges, and Uncharge refunds
