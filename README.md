@@ -153,6 +153,10 @@ branch as `2c9a471`. It handles `settings:close` and sends the interface close
 packet while preserving the settings sidebar. Server integration tests also
 cover closing and reopening the panel.
 
+Lumbridge is multi-combat throughout its defined map boundary on all four height
+levels. Changes to map-area definitions require running `./gradlew packCache`
+from `upstream/rsmod` with the server stopped, then restarting `./dev server`.
+
 For an existing workspace converting from the earlier downloaded checkout,
 register the prepared submodule from a terminal with write access to `.git`:
 
