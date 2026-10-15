@@ -157,6 +157,11 @@ Lumbridge is multi-combat throughout its defined map boundary on all four height
 levels. Changes to map-area definitions require running `./gradlew packCache`
 from `upstream/rsmod` with the server stopped, then restarting `./dev server`.
 
+Sulphur blades make two independent melee accuracy and damage rolls against
+NPCs and players, with both splats landing on the same tick. Their max hits split
+the normal melee max hit, rounding the first down and the second up (45 becomes
+22 and 23).
+
 For an existing workspace converting from the earlier downloaded checkout,
 register the prepared submodule from a terminal with write access to `.git`:
 
