@@ -1,6 +1,6 @@
 # Nylocas room and RuneLite compatibility
 
-Researched 2026-10-15 against the public source revisions selected by RuneLite's Plugin Hub. The implementation provides room access and one wave triggered by passing the entrance barrier. Movement, combat, further waves, raid state, and end-to-end plugin verification are future encounter work.
+Researched 2026-10-15 against the public source revisions selected by RuneLite's Plugin Hub. The implementation provides room access, explicit raid startup with the native party HUD, and one wave triggered by passing the entrance barrier. Movement, combat, further waves, full raid completion, and end-to-end plugin verification are future encounter work.
 
 ## Source revisions
 
@@ -116,6 +116,43 @@ Arrival does not start the wave; passing the Nylocas barrier remains the trigger
 There is no Bloat combat or completion requirement in this development route.
 See [BloatExit.kt](../upstream/rsmod/content/areas/dungeons/nylocas/src/main/kotlin/org/rsmod/content/areas/dungeons/nylocas/BloatExit.kt).
 
+### Raid startup and native party HUD
+
+**Start Raid** submits the admin command `starttob`. It starts the existing Bloat
+or Nylocas development instance without teleporting or spawning NPCs, and includes
+up to five players already present. The Nylocas barrier requires membership in
+this started raid before allowing entry. Repeating Start Raid does not reset the
+encounter. Starting a new raid requires a fresh development instance.
+
+The server opens native interface `28` (`tob_hud`) on the gameframe's
+`overlay_hud` target. Inspection of the revision-233 cache confirms its on-load
+script `2087` already has the 24 component arguments needed to initialize the HP
+orbs. No custom RuneLite overlay is needed. Script `2301` takes five names and
+writes varc strings `330..334`; the server supplies blank strings for empty slots.
+Party status `6440=2` enables the native orb display. Party slot `6441` is
+one-based (`1..5`), allowing the client to label and update the viewer's own orb.
+
+The inspected HUD draw script `2297` requires an instance coordinate with
+`x>=6400`, through script `1935`, and status `2`. Both development templates use
+the server's instance allocation area and satisfy this check. Script `2298`
+hides empty orb slots (`0`) and maps values `1..27` to `0..26` HP-fill pixels.
+The server sends `1 + ceil(26 * clamped_current_hp / base_hp)` for each member,
+updating changed values each server tick. The viewer's own orb additionally uses
+native stat-transmit script `2299`/`2300` for precise HP updates.
+
+Before the barrier, room-progress type `6447` is `0`. Passing sets it to `1`
+during the four-tick countdown, which ToB QoL observes as room start. The first
+wave then sets type `2` and progress `1/31`. This is one implemented wave within
+the normal-mode wave count, not a completed raid. Names, slots, HP, progress, and
+the HUD are cleared on departure or logout; login also clears stale state.
+The default route is to start at Bloat's exit before its door causes the scene
+transition to Nylocas, so region- and login-state-based plugins can observe the
+party values on room entry. Live plugin behavior remains unverified.
+
+These HUD details were decoded from this workspace's revision-233 cache with
+RuneLite's `ScriptLoader`, `Disassembler`, and `InterfaceLoader`.
+See [TheatreRaid.kt](../upstream/rsmod/content/areas/dungeons/nylocas/src/main/kotlin/org/rsmod/content/areas/dungeons/nylocas/TheatreRaid.kt).
+
 ### First wave
 
 Both entrance barriers are object `32755` (`tob_arena_barrier`), with **Pass** as
@@ -138,31 +175,36 @@ The countdown belongs to the instance and runs on server ticks, independently of
 the player's actions or session. Subsequent Pass actions do not reset or repeat
 it. Deleted instances lose their pending wave, and NPCs are reclaimed with their
 instance. Crabs currently stay at the spawn points without hunting or respawning;
-no movement, combat, additional waves, or raid varbits are introduced here.
+movement, combat, and additional waves remain unimplemented. Basic party state
+and room-progress varbits are supplied by explicit raid startup.
 See [NylocasEncounter.kt](../upstream/rsmod/content/areas/dungeons/nylocas/src/main/kotlin/org/rsmod/content/areas/dungeons/nylocas/NylocasEncounter.kt).
 
 ### Remaining encounter work
 
-The room and first spawns establish geometry, location, NPC identity, and tick grouping. Full compatibility still requires correct raid/party state, movement, combat XP/hitsplats, and live checks with the installed plugins. These findings are source inspection and server integration tests, not a completed encounter compatibility test.
+The room, native HUD, and first spawns establish geometry, location, basic raid/party state, NPC identity, and tick grouping. Full compatibility still requires movement, combat XP/hitsplats, later encounter lifecycle events, and live checks with the installed plugins. These findings are source inspection and server integration tests, not a completed encounter compatibility test.
 
 ### Checks performed
 
-- `./dev build-client`: built and packaged the client with the teleport button.
+- `./dev build-client`: built and packaged the client with teleport and Start Raid buttons.
 - Existing `LocalDevPanelTest` and `LocalDevPluginTest`: six tests passed with
   headless AWT and the workspace Java home.
-- RSMod `:content:other:commands:integration`: three tests passed through the
+- RSMod `:content:other:commands:integration`: four tests passed through the
   `ClientCheat` handler, covering admin-only access, walkable arrival terrain,
   source-coordinate preservation for the incoming lanes and entry line, all
-  four source levels, and reclamation after repeated entry and departure.
+  four source levels, reclamation after repeated entry and departure, and the
+  Start Raid command's HUD setup and idempotence.
 - RSMod `:content:other:commands:spotlessCheck`: passed.
-- RSMod `:content:areas:dungeons:nylocas:integration`: nine tests passed through
+- RSMod `:content:areas:dungeons:nylocas:integration`: seventeen tests passed through
   real loc interaction packets, covering exact four-tick timing, NPC IDs and
   lane coordinates, both barrier halves sharing a countdown, starter logout,
   repeated entry, instance isolation, cancellation on reclamation, and passing
   out without starting the encounter. Bloat exit checks also cover both passage
   options and halves, shared instance identity, loaded cache collision at both
   destinations, cleanup, unrelated passages, and walking from the bridge start
-  to the barrier before the first wave's countdown.
+  to the barrier before the first wave's countdown. Raid tests cover native HUD
+  open/name/varp packets, solo and five-player slots, live HP synchronization,
+  departure and login cleanup, same-tick teleport/start ordering, invalid
+  locations, oversized parties, and refusing barrier entry before raid start.
 - RSMod `:content:areas:dungeons:nylocas:spotlessCheck`: passed.
 - `./dev test`: all 12 workspace tests passed.
 

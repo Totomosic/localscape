@@ -37,6 +37,7 @@ final class LocalDevPanel extends PluginPanel
 	private final JButton teleportNylocas = new JButton("Teleport to Nylocas");
 	private final JButton teleportNylocasBridge = new JButton("Teleport to Nylocas Bridge");
 	private final JButton teleportBloatExit = new JButton("Teleport to Bloat Exit");
+	private final JButton startRaid = new JButton("Start Raid");
 	private final Timer searchTimer = new Timer(200, event -> filterItems());
 	private List<LocalItem> items = Collections.emptyList();
 	private boolean loaded;
@@ -61,6 +62,9 @@ final class LocalDevPanel extends PluginPanel
 		teleportBloatExit.setToolTipText("Teleport just before the Bloat exit door to the Nylocas bridge.");
 		teleportBloatExit.addActionListener(event -> submit.accept("bloatexit"));
 		add(teleportBloatExit);
+		startRaid.setToolTipText("Start the raid and show the ToB party HP orbs before passing the barrier.");
+		startRaid.addActionListener(event -> submit.accept("starttob"));
+		add(startRaid);
 		add(new JLabel("Search items by name or ID"));
 		add(search);
 		add(summary);
@@ -185,6 +189,7 @@ final class LocalDevPanel extends PluginPanel
 		teleportNylocas.setEnabled(loggedIn);
 		teleportNylocasBridge.setEnabled(loggedIn);
 		teleportBloatExit.setEnabled(loggedIn);
+		startRaid.setEnabled(loggedIn);
 		addItem.setEnabled(loggedIn && itemList.getSelectedValue() != null);
 	}
 }

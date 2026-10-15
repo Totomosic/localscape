@@ -267,15 +267,19 @@ Open the terminal icon in the RuneLite sidebar while logged into LocalScape:
   door, at the instance equivalent of `(3322, 4447, 0)`. Use **Enter** or
   **Quick-Enter** on either half of the passage to reach the start of the Nylocas
   bridge at `(3302, 4275, 0)` within the same instance.
+- **Start Raid** starts the raid in the current development instance and opens
+  the native ToB party HP orbs in the top left. It includes up to five players
+  already in the instance, synchronizes party names and HP, and preserves your
+  position. Use it before passing the Nylocas barrier.
 - Search for an item by name or ID, select a result, enter a quantity, and click
   **Add Selected Item**. Results show IDs and identify noted items. Search reads
   the local game cache, includes untradeable items, and excludes placeholders.
   Broad searches show the first 100 matches; narrow the query to find more.
 
 The item list loads over several client ticks after login. Controls use RSMod's
-`master`, `invclear`, `invadd`, `nylocas`, `nylocasbridge`, and `bloatexit` admin
-commands. Your account needs server admin access; command results and inventory-limit messages
-appear in game chat. Restore Skills preserves earned XP.
+`master`, `invclear`, `invadd`, `nylocas`, `nylocasbridge`, `bloatexit`, and
+`starttob` admin commands. Your account needs server admin access; command results
+and inventory-limit messages appear in game chat. Restore Skills preserves earned XP.
 
 Nylocas access preserves source region **13122**, plane **0**, and lands at the
 instance equivalent of `(3295, 4248, 0)`. ToB QoL requires an instance with the
@@ -294,14 +298,19 @@ Formidable passage clickboxes at the exit. Traversing the door keeps players in
 the same instance and does not start the Nylocas wave. Bloat combat is not
 implemented.
 
-To start the first Nylocas wave, use the bridge teleport, walk to the barrier,
-and click **Pass**. Either half of the barrier moves you into the room and starts
-a four-tick countdown. The first wave spawns together: one small Nylocas hagios
+To start the first Nylocas wave, teleport to the Bloat exit or Nylocas bridge,
+click **Start Raid** (or use `::starttob`), walk to the barrier, and click **Pass**.
+The barrier refuses entry until the raid has started. Either half moves you into
+the room and starts a four-tick countdown. The first wave spawns together: one small Nylocas hagios
 (mage) south, one small Nylocas toxobolos (ranger) west, and one small Nylocas
 ischyros (melee) east. Repeated entry does not restart the wave; use a teleport
 to create a fresh instance for another attempt. Passing from inside returns you
 to the bridge. Only this wave's spawns are implemented; the crabs remain at their
-spawn points, and movement, combat, later waves, and raid state are future work.
+spawn points; movement, combat, later waves, and full raid completion are future work.
+Starting the raid again does not reset its wave or progress. Leaving the instance
+or logging out clears your party state and closes the HUD. Each player's own HP
+orb follows native stat updates, while party HP values update every server tick.
+For the intended approach, use **Bloat Exit → Start Raid → Enter → Pass**.
 Restart RSMod to load this server change; no cache repack or client rebuild is
 needed for the encounter scripts.
 
