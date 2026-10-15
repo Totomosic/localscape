@@ -203,6 +203,7 @@ the contents, and Unload lets you recover just the darts or all darts and scales
 The blowpipe adds +20 Ranged strength to its loaded dart's strength and uses +30
 Ranged accuracy, ignoring quiver ammunition. Rapid attacks take two ticks;
 Accurate and Longrange take three. Range is five tiles, or seven on Longrange.
+The dart sound effect plays at the target when the projectile lands.
 Shots consume a dart unless Ava's device saves it, and consume a scale two-thirds
 of the time, including on misses. Running out of one resource preserves the other.
 These charging and normal attack mechanics follow the
