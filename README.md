@@ -257,7 +257,8 @@ live in RSMod's settings module under `src/integration/kotlin/`.
 
 Open the terminal icon in the RuneLite sidebar while logged into LocalScape:
 
-- **Restore Skills** restores all skills, including Hitpoints and Prayer, to 99.
+- **Restore Skills** restores all skills, including Hitpoints and Prayer, to 99,
+  and refills run energy to 100%.
 - **Clear Inventory** removes all items from your inventory.
 - **Teleport to Nylocas** enters a fresh, empty instance of the original Nylocas
   room. Its map and scenery already exist in the revision-233 cache.
