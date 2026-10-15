@@ -196,6 +196,18 @@ and stat drain follow the [Wiki special attack rules](https://osrsindex.com/wiki
 and [stat drain rules](https://osrsindex.com/wiki/temporary-skill-drain?site=osrs_wiki),
 with the requested accuracy bonus and primary-plus-sweep behavior.
 
+Normal toxic blowpipe attacks, including the blazing cosmetic, require stored
+Zulrah's scales and unpoisoned darts. Use either material on the blowpipe to load
+up to 16,383 of each; unload its darts before changing dart type. Check reports
+the contents, and Unload lets you recover just the darts or all darts and scales.
+The blowpipe adds +20 Ranged strength to its loaded dart's strength and uses +30
+Ranged accuracy, ignoring quiver ammunition. Rapid attacks take two ticks;
+Accurate and Longrange take three. Range is five tiles, or seven on Longrange.
+Shots consume a dart unless Ava's device saves it, and consume a scale two-thirds
+of the time, including on misses. Running out of one resource preserves the other.
+These charging and normal attack mechanics follow the
+[OSRS Wiki](https://oldschool.runescape.wiki/w/Toxic_blowpipe).
+
 For an existing workspace converting from the earlier downloaded checkout,
 register the prepared submodule from a terminal with write access to `.git`:
 
