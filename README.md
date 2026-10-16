@@ -183,7 +183,7 @@ It uses its native casting and projectile effects, with the `shadow_cast` sound
 (178), rather than Tumeken's Shadow's firing sound (6410). Its projectile follows
 the [Eye of Ayak hit-delay table](https://oldschool.runescape.wiki/w/Hit_delay#Eye_of_Ayak):
 one tick at distances 1–2 and two ticks at distances 3–8. NPC processing adds one
-tick to those listed delays. Its attack range is seven tiles, or nine on Longrange.
+tick to those listed delays. Its attack range is six tiles, or eight on Longrange.
 It holds up to 50,000 charges:
 either two death runes and one chaos rune per charge, or one demon tear. The two
 charge types cannot be mixed. Use charging materials on the staff, or use Charge
