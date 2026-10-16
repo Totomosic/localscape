@@ -13,8 +13,12 @@ come from the positive-HP observations in
 each wave; the server stores that delay **before the next** wave. With no cap
 stalls, wave 31 is 232 ticks after wave 1.
 
-`Start Raid` prepares the party and HUD. The first barrier entry starts the
-room clock at tick 0, so the first wave always spawns at room tick 4.
+`Start Raid` prepares the party and HUD. Before the room starts, clicking the
+barrier opens a chatbox choice: **1: Enter**, **2: Cancel**. Walking away also
+cancels. One confirmation brings all players still waiting at either barrier
+half in that instance through on the same tick; other party members stay outside.
+The first confirmed entry starts the room clock at tick 0, so the first wave
+always spawns at room tick 4. Once started, entry needs no further confirmation.
 Either half of the starting barrier uses walking movement with a one-tick
 action delay in both directions, including when run is enabled.
 Waiting before entry does not advance the room clock. Starting the raid again

@@ -209,6 +209,17 @@ max hit is half the previous one, rounded down (51 becomes 51, 25, 12). This als
 applies to the holy, sanguine, and blighted cosmetics, including all uncharged
 forms. Player targets receive one standard hit.
 
+Against a 1x1 NPC in multi-combat, the scythe sweeps the primary target's tile
+and the two tiles beside it, perpendicular to the attack direction. It hits up
+to three eligible 1x1 NPCs overall, including NPCs stacked on the same tile.
+The primary receives the full max hit; additional targets receive half and
+quarter max hits with independent accuracy rolls. The local ordering checks
+other NPCs on the primary tile, then the player's left, then right, skipping
+empty tiles and ineligible NPCs. This ordering is an assumption: [Jagex's original description](https://secure.runescape.com/m=news/dev-blog-theatre-of-blood?oldschool=1)
+confirms the arc and damage progression but does not assign damage to either
+side. See the [research note](docs/research/scythe-aoe.md). Restart RSMod to load
+the change; no cache repack is required.
+
 The Eye of ayak is a powered staff with a three-tick attack cycle and a base max
 hit of `floor(current_magic_level / 3) - 6`, before normal magic damage bonuses.
 It uses its native casting and projectile effects, with the `shadow_cast` sound
@@ -360,9 +371,13 @@ It is available before starting the raid.
 
 To start the first Nylocas wave, teleport to the Bloat exit or Nylocas bridge,
 click **Start Raid** (or use `::starttob`), walk to the barrier, and click **Pass**.
-The barrier refuses entry until the raid has started. Either half walks you
-through with a one-tick action delay. The first entry starts the room clock at
-tick 0, and wave 1 spawns exactly four ticks later, regardless of the wait after
+The barrier refuses entry until the raid has started. Before the room begins,
+**Pass** opens a chatbox confirmation: press **1** to enter or **2** to cancel.
+Walking away also cancels. When one player confirms, everyone still waiting at
+either half of that instance's barrier enters on the same tick. Once the room
+has started, **Pass** enters immediately without confirmation. Either half walks
+you through with a one-tick action delay. The first confirmed entry starts the
+room clock at tick 0, and wave 1 spawns exactly four ticks later, regardless of the wait after
 **Start Raid**. Further entries share the running room clock. Entry also spawns
 the four native pillar NPCs, giving ToB QoL a valid timer start so its **Waves**
 and **Cleanup** splits appear during the encounter. The first wave has a small
