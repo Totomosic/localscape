@@ -189,6 +189,14 @@ the original materials. Each cast consumes one charge, including splashes, and
 the last charge turns it back into the uncharged item. Charging costs follow the
 [OSRS rules](https://osrsindex.com/wiki/eye-of-ayak?site=osrs_wiki).
 
+Eye of ayak and all ancient sceptre variants use upright staff animations while
+idle, turning, walking, and running. Powered staves, including Eye of ayak and
+Tumeken's shadow, award 1.33 Magic XP and 1 Defence XP per damage on Longrange;
+Accurate retains 2 Magic XP per damage. This supplies the Defence XP used by
+[Nylo Death Indicators](https://github.com/InfernoStats/Nylo-Death-Indicators/blob/1b29a76e1799cf813299bfdc75e12251028643ae/src/main/java/com/infernostats/NyloDeathIndicatorsPlugin.java#L293-L327)
+to predict Longrange kills before the projectile lands. Restart RSMod to load
+these changes.
+
 Dinh's bulwark and Dinh's blazing bulwark have the Shield Bash special attack,
 costing 50% energy and using a custom 25% accuracy bonus against crush defence.
 In multi-combat, the primary NPC takes two independently rolled, full-strength
