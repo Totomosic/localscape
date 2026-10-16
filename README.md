@@ -342,7 +342,7 @@ areas. Source-map membership applies to every instance and drives both combat
 rules and the native multi-combat indicator, before or after Start Raid.
 
 Restart RSMod to load encounter script changes. Changes to
-`TheatreMapAreas.kt` additionally require running `./gradlew packCache` from
+`TheatreMapAreas.kt` or `NylocasNpcEdits.kt` additionally require running `./gradlew packCache` from
 `upstream/rsmod` with the server stopped, then restarting it. No client rebuild
 is needed. The cache was repacked locally for the current multi-combat change.
 

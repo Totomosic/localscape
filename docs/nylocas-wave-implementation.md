@@ -76,7 +76,17 @@ sequence. Expiry deletes the NPC directly without drops or respawning. A prior
 lethal hit follows normal death handling and does not later trigger expiry.
 Player-killed regular Nylocas use a type-specific no-drop death handler for all
 12 ordinary/aggro forms, preventing the generic fallback bone drop while
-preserving the existing death animation and removal sequence.
+playing their visible style's native death sequence. Smalls retain their body
+for one animation tick, then use a detached standard-death map effect;
+bigs retain their body for five animation ticks. The generic death handler
+still supplies movement-stop/arrival delay and combat cleanup. Death selection
+uses the visible form after flickering rather than the original spawn style.
+All 12 forms have explicit native attack/death animation overrides. Hit reactions
+only play explicitly configured NPC block sequences, so the shared human block
+default cannot distort Nylocas or replace an ongoing attack. Other NPCs retain
+their configured hit reactions. Previously these Nylo forms had no overrides:
+parameter resolution supplied human punch 422, block 424, and death 836. The
+animation regression checks cover that failure in addition to removal/drops.
 These timings follow the [lifecycle evidence](nylocas-lifecycle-evidence.md) and
 [Blert's death appendix](https://blert.io/guides/tob/nylocas/mechanics#death-timing).
 
@@ -132,9 +142,13 @@ multiway area script drives the native indicator. This applies before raid start
 Integration checks exercise source/instanced coordinates at every map corner
 and centre on all levels, plus indicator entry/exit through Bloat and Nylocas.
 They load the actual packed area definitions into each isolated test scope.
-All 117 Nylocas integration tests and the affected formatting checks pass.
+The integration suite also checks native attack sequences through actual combat,
+all 12 animation configurations, hit-reaction suppression, visible-style deaths
+after transmogs, detached small death effects, and body-removal timing.
+All 137 integration tests and the affected formatting checks pass.
 
-Restart RSMod to load script changes. Changes to `TheatreMapAreas` require
+Restart RSMod to load script changes. Changes to `TheatreMapAreas` or
+`NylocasNpcEdits` require
 `./gradlew packCache` while the server is stopped, then a restart. The local
 cache has been repacked for this change. The cache packer now always writes the
 final resource pack, so map-only edits are applied even when config identities
