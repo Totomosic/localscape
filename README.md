@@ -298,6 +298,8 @@ instance equivalent of `(3295, 4248, 0)`. ToB QoL requires an instance with the
 original source chunks. Nyloer and Nylo Death Indicators also depend on official
 NPCs, raid state, and combat events when the encounter is added. The compatibility
 research and remaining requirements are in [docs/nylocas-research.md](docs/nylocas-research.md).
+The recording-backed movement, occupancy, and lifecycle investigation, including
+proposed accuracy tests, is in [docs/nylocas-simulation-accuracy-report.md](docs/nylocas-simulation-accuracy-report.md).
 Use `::nylocas` or `::nylocasbridge` directly as an admin, or rebuild the custom
 client and restart RSMod to use the sidebar buttons. No cache repack is required.
 Each click creates a new instance; the normal region allocator reclaims abandoned rooms. To leave,

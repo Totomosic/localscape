@@ -1,0 +1,241 @@
+{
+  "counters": {
+    "children_per_big": {
+      "0": 2,
+      "1": 4,
+      "2": 553
+    },
+    "event_counts": {
+      "spawn_above_cap": 202,
+      "stall": 367,
+      "stall_with_positive_hp_count_below_cap": 92,
+      "wave": 403
+    },
+    "hp_zero_delays_big": {
+      "6": 108,
+      "7": 285,
+      "None": 166
+    },
+    "hp_zero_delays_small": {
+      "1": 237,
+      "2": 1104,
+      "None": 778
+    },
+    "npc_counts": {
+      "big": 559,
+      "small": 2119
+    },
+    "positive_terminal_ages_big": {
+      "55": 166
+    },
+    "positive_terminal_ages_small": {
+      "52": 778
+    },
+    "postzero_moves_big": {
+      "0": 319,
+      "1": 74
+    },
+    "postzero_moves_small": {
+      "0": 999,
+      "1": 342
+    },
+    "split_counts": {
+      "all": 1118,
+      "parent_inferred": 1110,
+      "parent_unknown": 8
+    },
+    "split_delays": {
+      "0": 1110
+    },
+    "split_offsets": {
+      "-1,0": 3,
+      "0,0": 534,
+      "0,1": 8,
+      "1,0": 18,
+      "1,1": 535,
+      "2,1": 12
+    },
+    "split_pair_offsets": {
+      "[(-1, 0), (0, 1)]": 3,
+      "[(0, 0), (0, 1)]": 5,
+      "[(0, 0), (1, 1)]": 527,
+      "[(1, 0), (1, 1)]": 6,
+      "[(1, 0), (2, 1)]": 12
+    },
+    "style_change_ages": {
+      "26": 341,
+      "5": 689,
+      "7": 676
+    },
+    "style_change_positive_hp_ages": {
+      "26": 331,
+      "5": 676,
+      "7": 646
+    },
+    "style_change_zero_hp_ages": {
+      "26": 10,
+      "5": 13,
+      "7": 30
+    }
+  },
+  "distinct_lane_spawn_slots": 120,
+  "method": "Zero-based ages; first zero is a client HP estimate; parents inferred by Blert",
+  "recordings": [
+    {
+      "boss_spawn": 328,
+      "cleanup": 311,
+      "cleanup_to_boss": 17,
+      "first_wave": 4,
+      "last_wave": 272,
+      "maximum_recorded_count": 28,
+      "scale": 2,
+      "stalls": 9,
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "wave_phase": 0
+    },
+    {
+      "boss_spawn": 360,
+      "cleanup": 342,
+      "cleanup_to_boss": 18,
+      "first_wave": 4,
+      "last_wave": 300,
+      "maximum_recorded_count": 29,
+      "scale": 2,
+      "stalls": 16,
+      "uuid": "4ed0a471-7c3a-46d7-8f9c-e807f0275be3",
+      "wave_phase": 0
+    },
+    {
+      "boss_spawn": 562,
+      "cleanup": 545,
+      "cleanup_to_boss": 17,
+      "first_wave": 6,
+      "last_wave": 450,
+      "maximum_recorded_count": 31,
+      "scale": 1,
+      "stalls": 53,
+      "uuid": "65c9f142-f240-4284-9384-d32fa313067e",
+      "wave_phase": 2
+    },
+    {
+      "boss_spawn": 356,
+      "cleanup": 340,
+      "cleanup_to_boss": 16,
+      "first_wave": 4,
+      "last_wave": 288,
+      "maximum_recorded_count": 29,
+      "scale": 2,
+      "stalls": 13,
+      "uuid": "9ac3826e-aa64-4f5a-b00f-4208f97f0307",
+      "wave_phase": 0
+    },
+    {
+      "boss_spawn": 432,
+      "cleanup": 415,
+      "cleanup_to_boss": 17,
+      "first_wave": 4,
+      "last_wave": 336,
+      "maximum_recorded_count": 29,
+      "scale": 2,
+      "stalls": 25,
+      "uuid": "9f8f1a77-a528-454f-bfac-8251dec9de32",
+      "wave_phase": 0
+    },
+    {
+      "boss_spawn": 543,
+      "cleanup": 526,
+      "cleanup_to_boss": 17,
+      "first_wave": 7,
+      "last_wave": 427,
+      "maximum_recorded_count": 32,
+      "scale": 1,
+      "stalls": 47,
+      "uuid": "a37210fe-5737-480f-8fca-518e56205e9b",
+      "wave_phase": 3
+    },
+    {
+      "boss_spawn": 368,
+      "cleanup": 350,
+      "cleanup_to_boss": 18,
+      "first_wave": 4,
+      "last_wave": 300,
+      "maximum_recorded_count": 29,
+      "scale": 2,
+      "stalls": 16,
+      "uuid": "bbd10de2-8831-4b53-9872-970d547d3a5d",
+      "wave_phase": 0
+    },
+    {
+      "boss_spawn": 444,
+      "cleanup": 425,
+      "cleanup_to_boss": 19,
+      "first_wave": 4,
+      "last_wave": 344,
+      "maximum_recorded_count": 29,
+      "scale": 2,
+      "stalls": 27,
+      "uuid": "bef6ad10-3ef3-48b7-97a5-d019cf9ba303",
+      "wave_phase": 0
+    },
+    {
+      "boss_spawn": 320,
+      "cleanup": 304,
+      "cleanup_to_boss": 16,
+      "first_wave": 4,
+      "last_wave": 268,
+      "maximum_recorded_count": 29,
+      "scale": 2,
+      "stalls": 8,
+      "uuid": "c77441a7-3caf-4d9d-a482-8ffe8d7f293d",
+      "wave_phase": 0
+    },
+    {
+      "boss_spawn": 444,
+      "cleanup": 426,
+      "cleanup_to_boss": 18,
+      "first_wave": 4,
+      "last_wave": 368,
+      "maximum_recorded_count": 31,
+      "scale": 1,
+      "stalls": 33,
+      "uuid": "df03c4dc-1e1d-4f57-8e6c-403803205659",
+      "wave_phase": 0
+    },
+    {
+      "boss_spawn": 536,
+      "cleanup": 519,
+      "cleanup_to_boss": 17,
+      "first_wave": 4,
+      "last_wave": 420,
+      "maximum_recorded_count": 34,
+      "scale": 1,
+      "stalls": 46,
+      "uuid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "wave_phase": 0
+    },
+    {
+      "boss_spawn": 412,
+      "cleanup": 395,
+      "cleanup_to_boss": 17,
+      "first_wave": 4,
+      "last_wave": 348,
+      "maximum_recorded_count": 29,
+      "scale": 1,
+      "stalls": 28,
+      "uuid": "ebaeaf20-9862-4548-af9f-1a37c52b020a",
+      "wave_phase": 0
+    },
+    {
+      "boss_spawn": 536,
+      "cleanup": 519,
+      "cleanup_to_boss": 17,
+      "first_wave": 4,
+      "last_wave": 420,
+      "maximum_recorded_count": 31,
+      "scale": 1,
+      "stalls": 46,
+      "uuid": "fc7d6eaa-eaec-43e5-ae66-6be8364ad312",
+      "wave_phase": 0
+    }
+  ]
+}
