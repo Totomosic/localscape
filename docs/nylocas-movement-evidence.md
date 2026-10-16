@@ -161,3 +161,92 @@ Each token is `S/B initial-style → target`, where S=small, B=big, M=melee, R=r
 7. **Lifecycle vacancy release:** fixtures B and C admit a replacement on the same visible tick that the old occupant is still recorded with positive HP, one tick before its despawn event. Test collision release separately from renderer removal and HP snapshots; exact sub-tick release semantics remain an inference.
 8. **Congestion direction selection:** keep fixtures A/B/C as coordinate-by-coordinate targets for the eventual movement engine. Until the movement rule is independently established, do not claim exact parity merely because blocked actors remain near their intended pillar. An implementation may need actor processing order and current collision flags to match every tick.
 9. **Post-pillar-collapse route changes:** add dedicated fixtures with direct pillar-state evidence before specifying retarget rules. Preserve the outlier counts so fixed initial targeting does not incorrectly become an assertion that an NPC can never later change destination.
+
+## Aggro ranged and magic reach
+
+Follow-up verification on 2026-10-16: use **two tiles from the nearest occupied
+NPC tile** for ranged and magic aggros. The original simulator's four-tile value
+was a provisional default, explicitly unverified in the accuracy audit. The
+published [Blert mechanics guide](https://blert.io/guides/tob/nylocas/mechanics#behavior)
+describes aggros but gives no numeric reach; this correction is inferred from
+recorded approach/holding behavior, not a published server-script constant.
+
+Four concrete examples in the pinned solo corpus follow. In each, the sole
+player stays on the listed tile throughout the approach and hold. NPCs remain
+in the same aggressive style with positive recorded HP. Coordinates are source
+southwest anchors; distances are Chebyshev distance to the nearest occupied
+tile of the 1×1 or 2×2 NPC footprint.
+
+| Replay / roomId | Form | Player tile | Approach | Hold | Nearest-tile distance |
+| --- | --- | --- | --- | --- | --- |
+| [Pw5, fc7d6eaa](https://blert.io/raids/tob/fc7d6eaa-eaec-43e5-ae66-6be8364ad312/nylocas), `35225` | Small ranged, 8349 | `(3296,4248)` | Tick 96 `(3299,4248)` → 97 `(3298,4248)` | 97–100 | 3 → 2 |
+| [zythe_x, df03c4dc](https://blert.io/raids/tob/df03c4dc-1e1d-4f57-8e6c-403803205659/nylocas), `60510` | Small magic, 8350 | `(3295,4249)` | Tick 345 `(3298,4249)` → 346 `(3297,4249)` | 346–349 | 3 → 2 |
+| [zythe_x, df03c4dc](https://blert.io/raids/tob/df03c4dc-1e1d-4f57-8e6c-403803205659/nylocas), `58862` | Big ranged, 8352 | `(3298,4249)` | Tick 211 `(3294,4249)` → 212 `(3295,4249)` | 212–214 | 3 → 2 |
+| [Pw5, fc7d6eaa](https://blert.io/raids/tob/fc7d6eaa-eaec-43e5-ae66-6be8364ad312/nylocas), `35714` | Big magic, 8353 | `(3296,4248)` | Tick 116 `(3292,4248)` → 117 `(3293,4248)` | 117–119 | 3 → 2 |
+
+These traces support two-tile reach and contradict a simple three/four-tile
+stop-distance rule in open approaches. A big's southwest anchor can be three
+tiles from a player while its nearest occupied tile is only two away; measuring
+only anchor distance would obscure that distinction. Diagonal distances use the
+maximum axis separation, rather than adding both axes.
+
+Limits: ordinary wave-NPC attack-launch events are absent from this recording
+format; type-10 NPC attacks in these rooms describe the boss. Stationary NPCs
+alone do not establish an attack radius: freezing, blockers, expiry and target
+changes can also stop movement. The chosen approach-and-hold traces provide
+behavioral evidence; they do not independently prove exact attack sub-phase
+ordering or every special case. Player attack events and later HP drops are not
+substitutes for an observed NPC launch. Melee continues to require cardinal
+footprint contact; this change does not alter expiry blast geometry.
+
+Integration regressions exercise actual AI and native attack animations: both
+sizes/styles can launch at distance two, must approach at three/four, then stop
+and attack at two. They cover opposite sides and diagonals, including the big's
+extra footprint row/column. The three-tile boundary tests fail against the old
+four-tile default and pass after reducing reach to two.
+
+## Outer-end pillar preference
+
+Follow-up implementation check on 2026-10-16: unobstructed lane arrivals in the
+recordings favor the **outer end of an approached inward-facing pillar edge**,
+rather than the individual adjacent tile nearest the room center. These are
+still tiles on the pillar's two accessible inward faces. For NE, for example,
+the west-face outer end is `(3299,4254)` and the south-face outer end is
+`(3301,4252)`; the inner alternatives are `(3299,4253)` and `(3300,4252)`.
+
+Concrete small-arrival evidence from the pinned, checksum-verified corpus:
+
+| Lane spawn | Apparent target | Recorded outer-end anchor | Sustained observations |
+| --- | --- | --- | --- |
+| Wave 1 east melee | NW | `(3292,4254)` | All 10 recordings where sustained contact was observed |
+| Wave 1 south magic | NE | `(3301,4252)` | Both recordings where sustained contact was observed |
+| Wave 2 west magic | NE | `(3299,4254)` | All 6 recordings where sustained contact was observed |
+| Wave 2 east ranged | SE | `(3301,4245)` | The recording where sustained contact was observed |
+
+The existing [lane-target CSV](research/nylocas/lane-spawn-targets.csv) links an
+example replay, NPC identity and contact interval for each row. Kills in the
+incoming lane account for missing contact observations; these counts do not
+mean the other recordings used a different endpoint. The previously documented
+[big approach](#coordinate-conventions-and-attack-positions) also supports the
+size-adjusted outer endpoints: duo `1073635f` big `62546` stops at NE
+`(3300,4251)`, and big `62545` stops at SE `(3298,4243)`.
+
+**It is a preference, not an outer-only restriction.** In
+[solo 65c9f142](https://blert.io/raids/tob/65c9f142-f240-4284-9384-d32fa313067e/nylocas),
+wave-3 west small `47590` settles at NE's inner west tile `(3299,4253)` at tick
+32 and remains there through positive-HP tick 65. Small `47549` occupies that
+face's outer end `(3299,4254)` at ticks 31–32; `47634` occupies the other face's
+outer end `(3301,4252)` at those ticks. The full-pillar fixture above likewise
+contains all four adjacent small anchors, including both inner positions.
+
+The simulator previously sorted every available contact tile by distance from
+the NPC, causing five of six unobstructed regression scenes to stop on an inner
+tile instead of the recorded outer endpoint. Destination ordering now considers
+the nearer face first and tries its outer end before inner alternatives;
+occupied or unreachable tiles remain unavailable. Settled NPCs retain their
+positions. The regression suite covers these six recorded endpoint cases plus
+an occupied outer-end fallback.
+
+This reproduces the unobstructed endpoints and preserves inner-tile use. The
+observations do not establish every face-selection tie, congestion ordering,
+or NPC collision rule; the earlier movement/occupancy caveats still apply.

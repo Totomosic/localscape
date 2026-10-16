@@ -166,6 +166,16 @@ NPCs and players, with both splats landing on the same tick. Their max hits spli
 the normal melee max hit, rounding the first down and the second up (45 becomes
 22 and 23).
 
+Players start with base level 99 skills and permanent combat boosts: **118
+Attack, Strength, and Defence; 112 Ranged and Magic**. The boosts use the super
+combat formula (`5 + floor(base × 15%)`) and the ranging potion / saturated heart
+formula (`4 + floor(base × 10%)`). They apply everywhere, including Nylocas,
+and top back up after decay, stat drains, or Restore Skills without supplies or
+activation. Higher boosts are preserved; XP and base levels stay unchanged.
+The [saturated heart](https://oldschool.runescape.wiki/w/Saturated_heart) and
+[Ranged boost table](https://oldschool.runescape.wiki/w/Ranged#Temporary_boosts)
+document the shared four-plus-ten-percent boost.
+
 Player melee, ranged, and powered-staff damage rolls, including godswords and
 Sulphur blades, use a shared helper that rolls from zero through the max hit and
 clamps the result to at least one. A rolled zero and a rolled one both deal one
@@ -269,7 +279,8 @@ live in RSMod's settings module under `src/integration/kotlin/`.
 Open the terminal icon in the RuneLite sidebar while logged into LocalScape:
 
 - **Restore Skills** restores all skills, including Hitpoints and Prayer, to 99,
-  and refills run and special attack energy to 100%.
+  reapplies the permanent combat boosts, and refills run and special attack
+  energy to 100%.
 - **Clear Inventory** removes all items from your inventory.
 - **Teleport to Nylocas** enters a fresh, empty instance of the original Nylocas
   room. Its map and scenery already exist in the revision-233 cache.
@@ -324,7 +335,11 @@ spawns, fixed initial targets, and style changes at ages 5, 7, and 26. Repeated 
 sequence; use a teleport to create a fresh instance for another attempt.
 Passing from inside returns you to the bridge. Surviving nylocas now expire:
 smalls disappear at spawn+52 ticks and bigs at spawn+55, after their explosion
-animations. The provisional blast hits players within one tile of the NPC
+animations. Each big produces two smalls on its removal tick, after either a
+player kill or natural expiry. They appear at its final southwest anchor and one
+tile northeast, choose styles and pillar targets independently, and receive full
+scaled HP and a fresh 52-tick lifetime. The research's rare shifted birth positions
+still need an established placement rule. The provisional blast hits players within one tile of the NPC
 footprint for 0–18 damage (small) or 0–21 (big), ignoring protection prayers.
 The room cap starts at 12 and increases to 24 after wave 20 spawns. A due
 wave stalls when the existing count is at or above the cap and retries four

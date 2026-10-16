@@ -47,7 +47,7 @@ final class LocalDevPanel extends PluginPanel
 	{
 		add(new JLabel("Local Development"));
 		add(new JLabel("Server admin access required."));
-		restoreSkills.setToolTipText("Restore all skills, Hitpoints, and Prayer to level 99, and run and special attack energy to 100%.");
+		restoreSkills.setToolTipText("Restore combat stats to their boosted levels, other skills to level 99, and run and special attack energy to 100%.");
 		restoreSkills.addActionListener(event -> submit.accept("master"));
 		clearInventory.setToolTipText("Remove all items from your inventory.");
 		clearInventory.addActionListener(event -> submit.accept("invclear"));

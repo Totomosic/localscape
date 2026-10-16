@@ -6,6 +6,8 @@
 
 This task produced research, a preserved evidence corpus, and offline analysis tools. It did not change the simulator or implement the tests proposed below.
 
+Implementation follow-up: ranged/magic aggro reach has since been reduced from the provisional four tiles to **two tiles from the nearest occupied NPC tile**, based on [recorded approach/hold traces](nylocas-movement-evidence.md#aggro-ranged-and-magic-reach). References to the old range-four behavior below describe the audit snapshot; target choice and exact NPC attack-launch timing remain open questions.
+
 ## Evidence package
 
 | Document / artifact | Purpose |

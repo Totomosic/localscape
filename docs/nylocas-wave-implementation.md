@@ -29,11 +29,17 @@ ranged to melee at age 5, overriding the guide's magic entry.
 
 Style transformations preserve current/max HP, size, spawn age, assigned
 pillar, and player targeting state. Player attacks use the current style for
-range, accuracy, max hit, animation, and hit type. Pillar-directed NPCs retain
+range, accuracy, max hit, animation, and hit type. Ranged/magic aggros have a
+two-tile reach measured from their nearest footprint tile; melee requires
+cardinal contact. This replaces the original unverified four-tile default using
+[recorded approach/hold evidence](nylocas-movement-evidence.md#aggro-ranged-and-magic-reach). Pillar-directed NPCs retain
 ordinary IDs 8342–8347. Player aggros switch to IDs 8348–8353 after their lane
 approach and preserve that form through later style changes. Pillar contact
-uses the recorded 2×2 pillar coordinates and the NPC's actual size. The straight
-lane approach ends on the first arena tile: west x3290, east x3301, and south
+uses the recorded 2×2 pillar coordinates and the NPC's actual size. Arrivals
+prefer the outer end of the nearer pillar face, with inner contact tiles as
+fallbacks when the end is occupied or unreachable; see the
+[recorded endpoint evidence](nylocas-movement-evidence.md#outer-end-pillar-preference).
+The straight lane approach ends on the first arena tile: west x3290, east x3301, and south
 z4243. The next movement step uses target pathfinding immediately, so Nylocas
 can turn toward their pillar as soon as they enter instead of walking two
 extra tiles toward the centre. Big east spawns and shared-anchor overrides
@@ -124,13 +130,15 @@ GRADLE_USER_HOME=/home/jordan/osrs/.state/gradle \
 ```
 
 This change implements lane-wave composition, natural timing, style schedules,
-initial destinations, cap admission/retries, and natural expiry with provisional
-area damage. Big splitting, accurate congested routing, pillar damage/collapse,
+initial destinations, cap admission/retries, natural expiry with provisional
+area damage, and big splitting. Accurate congested routing, pillar damage/collapse,
 style-matched incoming
 damage/nulling, and boss/room completion remain separate encounter work. The
 full-schedule test deliberately avoids player combat and does not certify those
-mechanics. With no player kills or big splits, the full-schedule integration
-fixture spawns wave 31 at first-wave+384 ticks after 38 four-tick cap stalls.
+mechanics. With no player kills and both generations expiring naturally, the
+full-schedule integration fixture creates 206 NPCs, spawns wave 31 at
+first-wave+572 ticks after 85 four-tick cap stalls, and removes the last child at
+first-wave+671.
 
 All nine Theatre source-map regions are multi-combat across all four levels:
 12611, 12612, 12613, 12867, 12869, 13122, 13123, 13125, and 13379. The list
@@ -145,7 +153,7 @@ They load the actual packed area definitions into each isolated test scope.
 The integration suite also checks native attack sequences through actual combat,
 all 12 animation configurations, hit-reaction suppression, visible-style deaths
 after transmogs, detached small death effects, and body-removal timing.
-All 137 integration tests and the affected formatting checks pass.
+The integration suite and affected formatting checks cover these behaviors.
 
 Restart RSMod to load script changes. Changes to `TheatreMapAreas` or
 `NylocasNpcEdits` require
@@ -153,3 +161,36 @@ Restart RSMod to load script changes. Changes to `TheatreMapAreas` or
 cache has been repacked for this change. The cache packer now always writes the
 final resource pack, so map-only edits are applied even when config identities
 already match. No client rebuild is required.
+
+## Big splitting
+
+Tracked bigs create exactly two smalls in the same server cycle as their removal.
+Player kills use the existing five-tick big death animation, after the engine's
+queue and walking-arrival delays: removal/splits at lethal+6 when stationary or
+lethal+7 when walking. Natural expiry creates children at parent spawn+55, after
+the three-tick expiry animation. Administrative deletion and instance disposal
+create no children. The parent counts once until removal; both children then
+count independently, including above the room cap. Natural expiry and its splits
+run before the start-of-cycle wave check; queued player deaths run later.
+
+The baseline coordinates are the parent's **final** southwest anchor `(x,z)` and
+`(x+1,z+1)`, in its own instance and plane. Occupied tiles do not suppress or
+relocate births. Children wait until the next cycle before
+acting, start as ordinary small forms, select their own style and pillar, use the
+encounter's original team size for HP, and get their own 52-tick removal age.
+Children born in an incoming lane walk into the arena before pillar routing.
+Smalls do not split again. Killed children use the normal no-drop small death.
+
+Accuracy boundary: [the lifecycle research](nylocas-lifecycle-evidence.md#every-big-produces-two-splits-at-its-removal-tick)
+identifies the southwest/northeast pair in 527 of 553 linked pairs, plus rare
+shifted pairs, including children outside the recorded parent footprint. It
+explicitly leaves the position-selection rule unresolved. This implementation
+uses the dominant baseline, so it does **not** reproduce those shifted replay
+births. Independent uniform style and pillar choices are simulation defaults;
+the corpus supports duplicate/mixed styles and children reaching different
+pillars, but does not establish the exact probabilities or independence.
+
+Regression coverage includes killed ordinary/aggressive bigs of every style,
+stationary/walking timing, final anchors, immediate collision flags, lane-born
+children, natural-expiry splits, duplicate/mixed child styles, team-size scaling,
+fresh child lifetimes, cap growth, and all 206 births through the full schedule.
