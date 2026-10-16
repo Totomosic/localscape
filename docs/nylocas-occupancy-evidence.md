@@ -192,3 +192,21 @@ that is not evidence of the original game's rule. Removal now releases only
 the big's southwest reservation; it does not erase living neighbours' flags.
 The recording's early natural-death handoffs and exact collision-release phase
 remain separate timing questions.
+
+## Southwest pillar collision correction, 2026-10-17
+
+Starting the encounter without attacking exposed immediate pacing beside the
+empty southwest pillar. The native support NPC (8358) has size three, while
+pillar scenery and the encounter's contact positions use 2x2 geometry. Its
+default 3x3 collision reservation extended north and east across all four
+southwest small attack anchors and the big contact anchors on those faces.
+Northwest and southeast retained one unblocked inward face; northeast retained
+both. This was an oversized live reservation, rather than stale expiry flags.
+
+Support spawns now set a 2x2 collision footprint before registration. The native
+NPC size remains unchanged. Integration tests reproduce both small and big
+arrivals at all four pillars with the actual support NPCs enabled; both southwest
+cases failed before the correction. The full 31-wave occupancy check now also
+includes supports and checks that the first southwest big reaches contact.
+The earlier movement and expiry checks isolated the wave scripts without
+`NylocasPillars`, so they could not detect the live support's obstruction.
