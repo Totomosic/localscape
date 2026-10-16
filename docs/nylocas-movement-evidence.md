@@ -114,7 +114,7 @@ The distinct two-step and three-step cycles across these fixtures show why a gen
 
 ## Fixed target table
 
-Each token is `S/B initial-style → target`, where S=small, B=big, M=melee, R=ranged, G=magic, and P=player aggro. Multiple tokens follow guide-slot order, which is only an index. Physical spawn coordinates in the CSV resolve ambiguous lane sides; wave9's two west spawns share an anchor. Styles here are recorded initial styles, including the wave30 south mage that differs from the guide.
+Each token is `S/B initial-style → target`, where S=small, B=big, M=melee, R=ranged, G=magic, and P=player aggro. Multiple tokens follow guide-slot order, which is only an index. Physical spawn coordinates in the CSV resolve ambiguous lane sides; wave9's two west spawns share an anchor. The wave-30 east big uses x3310, while the other east bigs use x3309. Styles here are recorded initial styles, including the wave30 south mage that differs from the guide.
 
 | Wave | East | South | West |
 | --- | --- | --- | --- |

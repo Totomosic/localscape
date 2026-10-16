@@ -315,18 +315,36 @@ implemented.
 To start the first Nylocas wave, teleport to the Bloat exit or Nylocas bridge,
 click **Start Raid** (or use `::starttob`), walk to the barrier, and click **Pass**.
 The barrier refuses entry until the raid has started. Either half moves you into
-the room and starts a four-tick countdown. The first wave spawns together: one small Nylocas hagios
-(mage) south, one small Nylocas toxobolos (ranger) west, and one small Nylocas
-ischyros (melee) east. Repeated entry does not restart the wave; use a teleport
-to create a fresh instance for another attempt. Passing from inside returns you
-to the bridge. Only this wave's spawns are implemented; the crabs remain at their
-spawn points; movement, combat, later waves, and full raid completion are future work.
+the room and schedules wave 1 on the raid's four-tick phase, after a minimum
+four-tick countdown (four to seven ticks depending on entry time). The first
+wave has a small mage south targeting NE, a small ranger west targeting players,
+and a small melee east targeting NW. All **31 normal-mode lane waves** now spawn
+at their natural intervals, subject to room-cap stalls, with 120 recorded
+spawns, fixed initial targets, and style changes at ages 5, 7, and 26. Repeated entry does not restart the
+sequence; use a teleport to create a fresh instance for another attempt.
+Passing from inside returns you to the bridge. Surviving nylocas now expire:
+smalls disappear at spawn+52 ticks and bigs at spawn+55, after their explosion
+animations. The provisional blast hits players within one tile of the NPC
+footprint for 0–18 damage (small) or 0–21 (big), ignoring protection prayers.
+The room cap starts at 12 and increases to 24 after wave 20 spawns. A due
+wave stalls when the existing count is at or above the cap and retries four
+ticks later. Dying bodies count until removal; an admitted wave spawns in full.
+Three age-26 flicker styles remain unobserved in the research and retain their last confirmed style.
+See [wave implementation details](docs/nylocas-wave-implementation.md) for
+provenance, verification, and the remaining encounter mechanics.
 Starting the raid again does not reset its wave or progress. Leaving the instance
 or logging out clears your party state and closes the HUD. Each player's own HP
 orb follows native stat updates, while party HP values update every server tick.
 For the intended approach, use **Bloat Exit → Start Raid → Enter → Pass**.
-Restart RSMod to load this server change; no cache repack or client rebuild is
-needed for the encounter scripts.
+The entire Theatre of Blood map is multi-combat on all four height levels,
+including Nylocas, its lanes/bridge, the other boss rooms, and connecting/reward
+areas. Source-map membership applies to every instance and drives both combat
+rules and the native multi-combat indicator, before or after Start Raid.
+
+Restart RSMod to load encounter script changes. Changes to
+`TheatreMapAreas.kt` additionally require running `./gradlew packCache` from
+`upstream/rsmod` with the server stopped, then restarting it. No client rebuild
+is needed. The cache was repacked locally for the current multi-combat change.
 
 ## Change the custom client
 

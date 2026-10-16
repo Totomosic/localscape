@@ -193,6 +193,18 @@ All 13 recordings show:
 
 The [guide's backing wave data](https://github.com/blert-io/blert/blob/e5f44caceebd3a0979c9a89742f964f65841b670/common/data/nylocas-waves.json) lists both south entries as initially melee. The recording contradicts the west entry. In the user-supplied run, roomIds 44946/44947 spawn at tick 256, switch at 261 and 263, and surviving 44947 switches again at 282. The west spawn's fourth state is established by other runs where it survives. Prefer the repeated direct observations for simulation fixtures, and record the source-table discrepancy explicitly.
 
+### Additional corrections checked during wave implementation
+
+The frozen fingerprint CSV places the wave-30 east big mage at **(3310,4248)**
+in all 13 recordings. Other east big lane spawns use (3309,4248). The general
+size-dependent east anchor rule therefore needs this explicit exception.
+
+The wave-31 west south-anchor small ranged has positive-HP styles
+**ranged → melee → ranged → magic** at ages 0/5/7/26. The guide reference lists
+ranged → magic → ranged for its first three stages; the age-5 entry disagrees
+with the recorded melee observations. The implementation and its fixture use
+the positive-HP lifecycle matrix.
+
 ## What remains unproven
 
 - The exact server phase behind 1-tick versus 2-tick first-zero-to-removal delays for smalls, and a complete stationary/walking classifier for big death delays. Replay HP and anchors do not expose the necessary internal state.
