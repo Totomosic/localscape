@@ -40,6 +40,8 @@ public class LocalDevPlugin extends Plugin
 	private final List<LocalItem> items = new ArrayList<>();
 	private volatile LocalDevPanel panel;
 	private NavigationButton navigation;
+	private volatile TheatreControlsPanel theatrePanel;
+	private NavigationButton theatreNavigation;
 	private volatile int session;
 	private int nextItemId;
 	private boolean itemsLoaded;
@@ -55,6 +57,14 @@ public class LocalDevPlugin extends Plugin
 			.panel(panel)
 			.build();
 		clientToolbar.addNavigation(navigation);
+		theatrePanel = new TheatreControlsPanel(this::submit);
+		theatreNavigation = NavigationButton.builder()
+			.tooltip("Threatre Controls")
+			.icon(createTheatreIcon())
+			.priority(2)
+			.panel(theatrePanel)
+			.build();
+		clientToolbar.addNavigation(theatreNavigation);
 		clientThread.invokeLater(() -> updateLoginState(client.getGameState()));
 	}
 
@@ -63,6 +73,8 @@ public class LocalDevPlugin extends Plugin
 	{
 		session++;
 		clientToolbar.removeNavigation(navigation);
+		clientToolbar.removeNavigation(theatreNavigation);
+		theatrePanel = null;
 		LocalDevPanel oldPanel = panel;
 		panel = null;
 		SwingUtilities.invokeLater(oldPanel::close);
@@ -116,6 +128,7 @@ public class LocalDevPlugin extends Plugin
 			updatePanel(current -> current.setItems(null));
 		}
 		updatePanel(current -> current.setLoggedIn(state == GameState.LOGGED_IN));
+		updateTheatrePanel(current -> current.setLoggedIn(state == GameState.LOGGED_IN));
 	}
 
 	private void resetItems()
@@ -134,6 +147,7 @@ public class LocalDevPlugin extends Plugin
 			{
 				client.runScript(49, command);
 				updatePanel(current -> current.setStatus("Requested. See game chat for the result."));
+				updateTheatrePanel(current -> current.setStatus("Requested. See game chat for the result."));
 			}
 		});
 	}
@@ -148,6 +162,31 @@ public class LocalDevPlugin extends Plugin
 				update.accept(current);
 			}
 		});
+	}
+
+	private void updateTheatrePanel(java.util.function.Consumer<TheatreControlsPanel> update)
+	{
+		TheatreControlsPanel current = theatrePanel;
+		SwingUtilities.invokeLater(() ->
+		{
+			if (current != null && theatrePanel == current)
+			{
+				update.accept(current);
+			}
+		});
+	}
+
+	private static BufferedImage createTheatreIcon()
+	{
+		BufferedImage icon = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
+		Graphics2D graphics = icon.createGraphics();
+		graphics.setColor(new Color(200, 65, 75));
+		graphics.fillRoundRect(1, 1, 14, 14, 4, 4);
+		graphics.setColor(Color.WHITE);
+		graphics.drawLine(4, 5, 11, 5);
+		graphics.drawLine(8, 5, 8, 12);
+		graphics.dispose();
+		return icon;
 	}
 
 	private static BufferedImage createIcon()

@@ -14,6 +14,23 @@ the RuneLite sidebar opens item search and server controls. On login it also
 writes `Custom RuneLite build active.` to game chat, confirming that RSProx
 launched your build. Edit the Java sources under `client/` to extend it.
 
+A second sidebar panel, **Threatre Controls** (red T icon), provides multiplayer
+lobbies for ordinary players:
+
+1. The host clicks **Create lobby** to enter a fresh instance at the Bloat door.
+2. Other players enter the host's player name and click **Join raid**. Names are
+   case insensitive and may contain spaces. Parties support up to five players.
+3. The host clicks **Start raid** to open the party HUD and unlock the Bloat door.
+   Everyone can then use **Enter** or **Quick-Enter** to reach the Nylocas bridge
+   and pass the barrier together.
+
+Joining closes when the host starts. A host leaving or logging out closes their
+lobby to new joins; creating another lobby starts a fresh instance. Server results
+appear in game chat. The commands are `::theatrecreate`, `::theatrejoin <host name>`,
+and `::theatrestart`, with no admin access required. Rebuild the client with
+`./dev build-client` and restart RSMod to load these controls; no cache repack
+is required.
+
 ## First setup
 
 Use a Linux desktop session, including WSLg, with Git and Python 3.12 or newer.
@@ -124,6 +141,11 @@ in `project.json` describes the target port, so changing it also requires changi
 RSMod's listener configuration.
 
 ## Change the server
+
+If server ticks remain above 600 ms on WSL, check for operating-system clock
+skew before changing the game loop. Competing Ubuntu and Hyper-V time
+synchronization made a nominal 600 ms tick take roughly 640 ms in real time in
+this workspace. See the [diagnosis and clock fix](docs/server-tick-timing.md).
 
 The server at `upstream/rsmod` is a submodule of your RSMod fork. Its `origin`
 points to `https://github.com/Totomosic/rsmod`. In the existing development
@@ -300,7 +322,7 @@ Open the terminal icon in the RuneLite sidebar while logged into LocalScape:
 - **Start Raid** starts the raid in the current development instance and opens
   the native ToB party HP orbs in the top left. It includes up to five players
   already in the instance, synchronizes party names and HP, and preserves your
-  position. Use it before passing the Nylocas barrier.
+  position. Use it before entering the Bloat door or passing the Nylocas barrier.
 - Search for an item by name or ID, select a result, enter a quantity, and click
   **Add Selected Item**. Results show IDs and identify noted items. Search reads
   the local game cache, includes untradeable items, and excludes placeholders.
@@ -341,8 +363,10 @@ click **Start Raid** (or use `::starttob`), walk to the barrier, and click **Pas
 The barrier refuses entry until the raid has started. Either half walks you
 through with a one-tick action delay. The first entry starts the room clock at
 tick 0, and wave 1 spawns exactly four ticks later, regardless of the wait after
-**Start Raid**. Further entries share the running room clock. The first
-wave has a small mage south targeting NE, a small ranger west targeting players,
+**Start Raid**. Further entries share the running room clock. Entry also spawns
+the four native pillar NPCs, giving ToB QoL a valid timer start so its **Waves**
+and **Cleanup** splits appear during the encounter. The first wave has a small
+mage south targeting NE, a small ranger west targeting players,
 and a small melee east targeting NW. All **31 normal-mode lane waves** now spawn
 at their natural intervals, subject to room-cap stalls, with 120 recorded
 spawns, fixed initial targets, and style changes at ages 5, 7, and 26. Repeated entry does not restart the

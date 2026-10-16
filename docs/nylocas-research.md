@@ -271,3 +271,33 @@ The client tests ran with `-Djava.awt.headless=true` and a workspace `user.home`
 Gradle ran offline outside the restricted sandbox because its lock service needs
 local networking. A live graphical session and plugin overlays have not been
 tested.
+
+## ToB QoL Waves and Cleanup splits (2026-10-17)
+
+The installed ToB QoL plugin counts the final wave from native lane-spawn NPC
+events and records cleanup when its tracked nylocas disappear. Both markers
+were already detected in the captured run, but its live overlay hid them: the
+server omitted the four pillar NPCs (`8358`, `tob_nylocas_support`). Without a
+pillar spawn, room status 1 creates an uncertain starting tick, and the overlay
+renders only `Room`. See the pinned
+[Nylocas handler](https://github.com/damencs/tob-qol/blob/3715d6ae24547fa87dc7ed82665e37b632407ba7/src/main/java/com/tobqol/rooms/nylocas/NylocasHandler.java)
+and [room timing renderer](https://github.com/damencs/tob-qol/blob/3715d6ae24547fa87dc7ed82665e37b632407ba7/src/main/java/com/tobqol/timetracking/RoomDataHandler.java).
+
+Room entry now publishes a start event and spawns the four native support NPCs
+at the pillar anchors during that same countdown tick, before client updates.
+Repeated party entry does not duplicate them; reclaiming an instance removes
+its supports. Their damage/collapse mechanics and the boss remain separate work.
+
+A replay of the captured 31 wave batches and NPC removals against the installed
+plugin produced `Waves = 352` and `Cleanup = 401` ticks in both cases. Without
+the support spawn, visible rows were `[Room]`; with the support spawn before
+the first countdown `GameTick`, they were `[Waves, Cleanup, Room]`. This checks
+the real plugin handler and renderer rather than a replacement split detector.
+Server integration regressions cover all four support spawns before the first
+countdown client update, a second party member entering, separate instances,
+and support removal on reclamation.
+
+Validation: all 195 Nylocas integration tests passed, along with the module's
+`spotlessCheck`. The two new regressions failed with missing supports before
+the fix and passed afterward. A live client check after restarting RSMod remains
+to be performed.
