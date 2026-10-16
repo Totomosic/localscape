@@ -330,12 +330,18 @@ Formidable passage clickboxes at the exit. Traversing the door keeps players in
 the same instance and does not start the Nylocas wave. Bloat combat is not
 implemented.
 
+A combat dummy stands on the bridge just outside the Nylocas barrier, at source
+tile `(3296,4258)`. It stays still, never retaliates, and restores its health after
+each hitsplat. Melee, ranged, spells, powered staves, and special attacks always
+land at their maximum damage; weapon multipliers and multi-hit splits still apply.
+It is available before starting the raid.
+
 To start the first Nylocas wave, teleport to the Bloat exit or Nylocas bridge,
 click **Start Raid** (or use `::starttob`), walk to the barrier, and click **Pass**.
 The barrier refuses entry until the raid has started. Either half walks you
-through with a one-tick action delay and schedules wave 1 on the raid's four-tick
-phase, after a minimum four-tick countdown (four to seven ticks depending on
-entry time). The first
+through with a one-tick action delay. The first entry starts the room clock at
+tick 0, and wave 1 spawns exactly four ticks later, regardless of the wait after
+**Start Raid**. Further entries share the running room clock. The first
 wave has a small mage south targeting NE, a small ranger west targeting players,
 and a small melee east targeting NW. All **31 normal-mode lane waves** now spawn
 at their natural intervals, subject to room-cap stalls, with 120 recorded

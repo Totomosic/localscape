@@ -13,15 +13,15 @@ come from the positive-HP observations in
 each wave; the server stores that delay **before the next** wave. With no cap
 stalls, wave 31 is 232 ticks after wave 1.
 
-`Start Raid` establishes a four-tick phase for this development instance.
+`Start Raid` prepares the party and HUD. The first barrier entry starts the
+room clock at tick 0, so the first wave always spawns at room tick 4.
 Either half of the starting barrier uses walking movement with a one-tick
 action delay in both directions, including when run is enabled.
-Passing the barrier starts a minimum four-tick countdown, rounded forward to
-that phase, giving a delay of four to seven ticks. Starting the raid again or
-passing the barrier again preserves the phase and the encounter. The research
-establishes that the phase precedes entry; using `Start Raid` as its origin is
-the development server's convention, since the recordings do not identify
-Jagex's exact initialization event.
+Waiting before entry does not advance the room clock. Starting the raid again
+or passing the barrier again preserves the running encounter and its schedule.
+This simulator intentionally treats every first entry as tick 0; the
+[recorded game](nylocas-lifecycle-evidence.md#wave-checks-first-wave-phase-cleanup-and-boss-timing)
+can have a phase established before entry.
 
 The table preserves physical coordinates rather than treating guide display
 indices as north/south positions. Wave 9's west small and big share an anchor;
@@ -46,6 +46,11 @@ z4243. The next movement step uses target pathfinding immediately, so Nylocas
 can turn toward their pillar as soon as they enter instead of walking two
 extra tiles toward the centre. Big east spawns and shared-anchor overrides
 retain their physical lane row through this handoff.
+Unobstructed pillar approaches move diagonally until one axis lines up, then
+straight to the contact tile, matching the
+[recorded first-wave routes](nylocas-movement-evidence.md#diagonal-first-unobstructed-approaches).
+A complete direct approach is checked before using it; blocked approaches
+retain pathfinding, including detours away from the destination.
 
 Three flickering spawns lack a positive-HP age-26 observation: wave 18 west big,
 wave 19 east big, and wave 20 south big. Their `styleAt26` is explicitly null;

@@ -54,6 +54,23 @@ Typical unobstructed big approaches in that same replay:
 | Wave 17 east big `62546`, NE | 136 `(3301,4248)`; 137 `(3300,4249)`; 138 `(3300,4250)`; 139 `(3300,4251)` |
 | Wave 17 south big `62545`, SE | 138 `(3295,4243)`; 139 `(3296,4243)`; 140 `(3297,4243)`; 141 `(3298,4243)` |
 
+## Diagonal-first unobstructed approaches
+
+Wave 1's pillar attackers demonstrate diagonal movement followed by straight
+movement in the [pinned duo df03c4dc](https://blert.io/raids/tob/df03c4dc-1e1d-4f57-8e6c-403803205659/nylocas):
+
+- South magic `56526`, ticks 14–23: `(3296,4243)` diagonally northeast to
+  `(3301,4248)`, then straight north to `(3301,4252)`.
+- East melee `56527`, ticks 13–22: `(3301,4249)` diagonally northwest to
+  `(3296,4254)`, then straight west to `(3292,4254)`.
+
+Every intermediate tick advances one tile on each changing axis. The simulator's
+shortest-path waypoints previously chose equally short routes with straight
+movement before diagonal movement. Tick-by-tick integration regressions compare
+both complete recorded approaches, individually and in the full first wave.
+Obstacles and other NPCs can still require a different route; these traces
+establish the unobstructed ordering.
+
 ## Full-pillar fixture A: small waits and oscillates, then takes a vacancy
 
 Source: [solo eb3793f3](https://blert.io/raids/tob/eb3793f3-ce4a-4fcf-8ef9-e2098d39914a/nylocas), wave 6 west small mage, `roomId=33313`, spawned tick 36 at `(3281,4249)`, targeting NE. The JSON fixture includes ticks 49–61.
