@@ -14,6 +14,8 @@ each wave; the server stores that delay **before the next** wave. With no cap
 stalls, wave 31 is 232 ticks after wave 1.
 
 `Start Raid` establishes a four-tick phase for this development instance.
+Either half of the starting barrier uses walking movement with a one-tick
+action delay in both directions, including when run is enabled.
 Passing the barrier starts a minimum four-tick countdown, rounded forward to
 that phase, giving a delay of four to seven ticks. Starting the raid again or
 passing the barrier again preserves the phase and the encounter. The research

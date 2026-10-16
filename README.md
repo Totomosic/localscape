@@ -263,6 +263,13 @@ accepts only the supported setting IDs and keys while the settings overlay is
 open, updates the persistent keybinding varps, and sends their values back to the
 client. The native client handles the actual F-key presses.
 
+The **Modern Layout – Side panel can be closed by the hotkeys** checkbox is
+also saved to the account. Disabling it keeps the current panel open when its
+hotkey is pressed again; enabling it allows the panel to close. The custom
+client submits the native toggle's resulting value with
+`localscape_sidepanel_hotkeys`, and the server preserves it across keybind
+changes, restoring default keybinds, and logins.
+
 Changes to this feature require both the custom client and the server:
 
 ```bash
@@ -325,9 +332,10 @@ implemented.
 
 To start the first Nylocas wave, teleport to the Bloat exit or Nylocas bridge,
 click **Start Raid** (or use `::starttob`), walk to the barrier, and click **Pass**.
-The barrier refuses entry until the raid has started. Either half moves you into
-the room and schedules wave 1 on the raid's four-tick phase, after a minimum
-four-tick countdown (four to seven ticks depending on entry time). The first
+The barrier refuses entry until the raid has started. Either half walks you
+through with a one-tick action delay and schedules wave 1 on the raid's four-tick
+phase, after a minimum four-tick countdown (four to seven ticks depending on
+entry time). The first
 wave has a small mage south targeting NE, a small ranger west targeting players,
 and a small melee east targeting NW. All **31 normal-mode lane waves** now spawn
 at their natural intervals, subject to room-cap stalls, with 120 recorded
@@ -415,9 +423,11 @@ cached Maven dependencies, and its keybind bridge tests pass through JUnit.
 The server settings scripts were compiled with the cached Kotlin compiler and
 verified through the actual packet handlers. Keybind verification also covers
 SQLite account save/load, login synchronization, and the cache's native F-key
-slot-selection script. Full server Gradle checks and a live GUI session have not
-been verified here; Gradle's socket initialization and shell access to GitHub
-are blocked in the restricted agent environment.
+slot-selection script. All settings integration tests now pass through Gradle,
+including the modern-layout hotkey preference, and its client bridge tests pass
+through JUnit. The cache's native redraw script was also checked to confirm that
+the disabled checkbox installs hotkeys that keep the panel open. Full server
+checks and a live GUI session have not been verified here.
 
 ## Upstream references
 

@@ -4,7 +4,9 @@ import javax.inject.Inject;
 import net.runelite.api.Client;
 import net.runelite.api.GameState;
 import net.runelite.api.ScriptEvent;
+import net.runelite.api.events.ScriptPostFired;
 import net.runelite.api.events.ScriptPreFired;
+import net.runelite.api.gameval.VarbitID;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
@@ -12,7 +14,7 @@ import net.runelite.client.plugins.PluginDescriptor;
 
 @PluginDescriptor(
 	name = "Local Server Settings",
-	description = "Saves in-game keybind settings to the local server",
+	description = "Saves in-game keybind and side-panel settings to the local server",
 	enabledByDefault = true,
 	hidden = true
 )
@@ -23,6 +25,7 @@ public class LocalSettingsPlugin extends Plugin
 	private static final int CLICK_SETTING_BUTTON = 3969;
 	private static final int SEND_COMMAND = 49;
 	private static final int RESTORE_KEYBINDS = 58;
+	private static final int TOGGLE_SIDE_PANEL_HOTKEYS = 3995;
 
 	@Inject
 	private Client client;
@@ -53,6 +56,18 @@ public class LocalSettingsPlugin extends Plugin
 			{
 				submit("localscape_keybind_reset");
 			}
+		}
+	}
+
+	@Subscribe
+	public void onScriptPostFired(ScriptPostFired event)
+	{
+		if (event.getScriptId() == TOGGLE_SIDE_PANEL_HOTKEYS && client.getGameState() == GameState.LOGGED_IN)
+		{
+			// The native script toggles this inverted preference locally. Save its
+			// resulting value so server varp updates and relogging preserve it.
+			int cannotClose = client.getVarbitValue(VarbitID.HOTKEY_CANNOT_CLOSE_SIDEPANEL);
+			submit("localscape_sidepanel_hotkeys " + cannotClose);
 		}
 	}
 

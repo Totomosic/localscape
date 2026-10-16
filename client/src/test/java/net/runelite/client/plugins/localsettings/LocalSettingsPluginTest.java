@@ -5,6 +5,7 @@ import java.util.List;
 import net.runelite.api.Client;
 import net.runelite.api.GameState;
 import net.runelite.api.ScriptEvent;
+import net.runelite.api.events.ScriptPostFired;
 import net.runelite.api.events.ScriptPreFired;
 import net.runelite.client.callback.ClientThread;
 import org.junit.Before;
@@ -88,6 +89,50 @@ public class LocalSettingsPluginTest
 		plugin.onScriptPreFired(new ScriptPreFired(3968));
 		plugin.onScriptPreFired(new ScriptPreFired(3967));
 		verifyZeroInteractions(clientThread);
+	}
+
+	@Test
+	public void submitsSidePanelHotkeyToggle()
+	{
+		when(client.getVarbitValue(4611)).thenReturn(1);
+		plugin.onScriptPostFired(new ScriptPostFired(3995));
+
+		verify(client, never()).runScript(any());
+		assertEquals(1, pending.size());
+		pending.get(0).run();
+		verify(client).runScript(49, "localscape_sidepanel_hotkeys 1");
+	}
+
+	@Test
+	public void capturesBothSidePanelHotkeyStatesBeforeQueueRuns()
+	{
+		when(client.getVarbitValue(4611)).thenReturn(1);
+		plugin.onScriptPostFired(new ScriptPostFired(3995));
+		when(client.getVarbitValue(4611)).thenReturn(0);
+		plugin.onScriptPostFired(new ScriptPostFired(3995));
+
+		assertEquals(2, pending.size());
+		pending.forEach(Runnable::run);
+		verify(client).runScript(49, "localscape_sidepanel_hotkeys 1");
+		verify(client).runScript(49, "localscape_sidepanel_hotkeys 0");
+	}
+
+	@Test
+	public void ignoresOtherScriptsAndSidePanelToggleWhileLoggedOut()
+	{
+		plugin.onScriptPostFired(new ScriptPostFired(3996));
+		when(client.getGameState()).thenReturn(GameState.LOGIN_SCREEN);
+		plugin.onScriptPostFired(new ScriptPostFired(3995));
+		verifyZeroInteractions(clientThread);
+	}
+
+	@Test
+	public void cancelsPendingSidePanelToggleOnLogout()
+	{
+		plugin.onScriptPostFired(new ScriptPostFired(3995));
+		when(client.getGameState()).thenReturn(GameState.LOGIN_SCREEN);
+		pending.get(0).run();
+		verify(client, never()).runScript(any());
 	}
 
 	@Test
