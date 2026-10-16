@@ -47,8 +47,16 @@ python tools/research/nylocas_replays.py --output /tmp/nylocas-occupancy-summary
 cmp /tmp/nylocas-occupancy-summary.json docs/research/nylocas/occupancy-summary.json
 python tools/research/nylocas_targets.py
 python tools/research/nylocas_lifecycle.py
+python tools/research/nylocas_entry_contact.py
 ```
 
-The latter two commands regenerate their CSV/JSON outputs in this directory. All three use checksum verification of the pinned raw responses before analysis. See each script's module documentation for its filters and limitations. None executes simulator code, contacts the website, or changes the server.
+The latter three commands regenerate their CSV/JSON outputs in this directory. All four use checksum verification of the pinned raw responses before analysis. See each script's module documentation for its filters and limitations. None executes simulator code, contacts the website, or changes the server.
+
+The entry/contact follow-up records [entry pause evidence](../../nylocas-entry-timing-evidence.md)
+and [big arrivals below occupied north-pillar faces](../../nylocas-occupancy-evidence.md#follow-up-big-arrives-below-a-small-already-at-a-north-pillar).
+Its JSON preserves entry counts, every qualifying aggro movement counterexample,
+representative entry observations for the remaining categories, and all qualifying
+north-pillar arrival pairs. First run `nylocas_targets.py` if regenerating the
+fingerprint classification CSV from scratch.
 
 The report's acceptance tests remain a future implementation plan. Passing the offline analysis checks means the reported statistics can be reproduced from these snapshots; it does not establish a complete routing algorithm or game-server correctness.

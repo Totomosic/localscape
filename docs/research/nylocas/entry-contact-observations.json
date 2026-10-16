@@ -1,0 +1,3989 @@
+{
+  "entry_counts": [
+    {
+      "kind": "aggro",
+      "size": "big",
+      "outcome": "moved",
+      "count": 11
+    },
+    {
+      "kind": "aggro",
+      "size": "big",
+      "outcome": "stationary",
+      "count": 159
+    },
+    {
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "count": 22
+    },
+    {
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "stationary",
+      "count": 126
+    },
+    {
+      "kind": "pillar",
+      "size": "big",
+      "outcome": "moved",
+      "count": 296
+    },
+    {
+      "kind": "pillar",
+      "size": "big",
+      "outcome": "stationary",
+      "count": 1
+    },
+    {
+      "kind": "pillar",
+      "size": "small",
+      "outcome": "moved",
+      "count": 585
+    },
+    {
+      "kind": "pillar",
+      "size": "small",
+      "outcome": "stationary",
+      "count": 18
+    }
+  ],
+  "entry_examples": [
+    {
+      "raid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "room_id": 60649,
+      "wave": 1,
+      "lane": "east",
+      "kind": "pillar",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 12,
+          "anchor": [
+            3302,
+            4249
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 13,
+          "anchor": [
+            3301,
+            4249
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 14,
+          "anchor": [
+            3300,
+            4250
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 15,
+          "anchor": [
+            3299,
+            4251
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "room_id": 60691,
+      "wave": 2,
+      "lane": "south",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "stationary",
+      "samples": [
+        {
+          "tick": 17,
+          "anchor": [
+            3295,
+            4242
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 18,
+          "anchor": [
+            3295,
+            4243
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 19,
+          "anchor": [
+            3295,
+            4243
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        },
+        {
+          "tick": 20,
+          "anchor": [
+            3296,
+            4243
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "room_id": 61074,
+      "wave": 6,
+      "lane": "east",
+      "kind": "pillar",
+      "size": "big",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 43,
+          "anchor": [
+            3302,
+            4248
+          ],
+          "npc_id": 8345,
+          "hp": 16
+        },
+        {
+          "tick": 44,
+          "anchor": [
+            3301,
+            4248
+          ],
+          "npc_id": 8345,
+          "hp": 16
+        },
+        {
+          "tick": 45,
+          "anchor": [
+            3300,
+            4247
+          ],
+          "npc_id": 8345,
+          "hp": 16
+        },
+        {
+          "tick": 46,
+          "anchor": [
+            3300,
+            4246
+          ],
+          "npc_id": 8345,
+          "hp": 16
+        }
+      ]
+    },
+    {
+      "raid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "room_id": 61438,
+      "wave": 9,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "big",
+      "outcome": "stationary",
+      "samples": [
+        {
+          "tick": 64,
+          "anchor": [
+            3289,
+            4248
+          ],
+          "npc_id": 8346,
+          "hp": 10
+        },
+        {
+          "tick": 65,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8346,
+          "hp": 10
+        },
+        {
+          "tick": 66,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8352,
+          "hp": 6
+        },
+        {
+          "tick": 67,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8352,
+          "hp": 4
+        }
+      ]
+    },
+    {
+      "raid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "room_id": 64237,
+      "wave": 28,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 244,
+          "anchor": [
+            3289,
+            4248
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 245,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 246,
+          "anchor": [
+            3290,
+            4247
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        },
+        {
+          "tick": 247,
+          "anchor": [
+            3290,
+            4247
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "4ed0a471-7c3a-46d7-8f9c-e807f0275be3",
+      "room_id": 35294,
+      "wave": 13,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 108,
+          "anchor": [
+            3289,
+            4248
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 109,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 110,
+          "anchor": [
+            3290,
+            4249
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        },
+        {
+          "tick": 111,
+          "anchor": [
+            3291,
+            4248
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "4ed0a471-7c3a-46d7-8f9c-e807f0275be3",
+      "room_id": 39609,
+      "wave": 30,
+      "lane": "east",
+      "kind": "aggro",
+      "size": "big",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 300,
+          "anchor": [
+            3302,
+            4248
+          ],
+          "npc_id": 8347,
+          "hp": 16
+        },
+        {
+          "tick": 301,
+          "anchor": [
+            3301,
+            4248
+          ],
+          "npc_id": 8347,
+          "hp": 16
+        },
+        {
+          "tick": 302,
+          "anchor": [
+            3300,
+            4249
+          ],
+          "npc_id": 8353,
+          "hp": 1
+        },
+        {
+          "tick": 303,
+          "anchor": [
+            3299,
+            4249
+          ],
+          "npc_id": 8353,
+          "hp": 1
+        }
+      ]
+    },
+    {
+      "raid": "65c9f142-f240-4284-9384-d32fa313067e",
+      "room_id": 48187,
+      "wave": 7,
+      "lane": "south",
+      "kind": "aggro",
+      "size": "big",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 67,
+          "anchor": [
+            3295,
+            4242
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        },
+        {
+          "tick": 68,
+          "anchor": [
+            3295,
+            4243
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        },
+        {
+          "tick": 69,
+          "anchor": [
+            3296,
+            4243
+          ],
+          "npc_id": 8352,
+          "hp": 16
+        },
+        {
+          "tick": 70,
+          "anchor": [
+            3296,
+            4243
+          ],
+          "npc_id": 8352,
+          "hp": 16
+        }
+      ]
+    },
+    {
+      "raid": "65c9f142-f240-4284-9384-d32fa313067e",
+      "room_id": 49009,
+      "wave": 10,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 114,
+          "anchor": [
+            3289,
+            4248
+          ],
+          "npc_id": 8343,
+          "hp": 8
+        },
+        {
+          "tick": 115,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8343,
+          "hp": 8
+        },
+        {
+          "tick": 116,
+          "anchor": [
+            3291,
+            4249
+          ],
+          "npc_id": 8349,
+          "hp": 4
+        },
+        {
+          "tick": 117,
+          "anchor": [
+            3292,
+            4249
+          ],
+          "npc_id": 8349,
+          "hp": 4
+        }
+      ]
+    },
+    {
+      "raid": "65c9f142-f240-4284-9384-d32fa313067e",
+      "room_id": 50290,
+      "wave": 14,
+      "lane": "east",
+      "kind": "aggro",
+      "size": "big",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 189,
+          "anchor": [
+            3302,
+            4248
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        },
+        {
+          "tick": 190,
+          "anchor": [
+            3301,
+            4248
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        },
+        {
+          "tick": 191,
+          "anchor": [
+            3300,
+            4248
+          ],
+          "npc_id": 8352,
+          "hp": 15
+        },
+        {
+          "tick": 192,
+          "anchor": [
+            3300,
+            4248
+          ],
+          "npc_id": 8352,
+          "hp": 15
+        }
+      ]
+    },
+    {
+      "raid": "65c9f142-f240-4284-9384-d32fa313067e",
+      "room_id": 52062,
+      "wave": 21,
+      "lane": "south",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 311,
+          "anchor": [
+            3295,
+            4242
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 312,
+          "anchor": [
+            3295,
+            4243
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 313,
+          "anchor": [
+            3294,
+            4243
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        },
+        {
+          "tick": 314,
+          "anchor": [
+            3294,
+            4243
+          ],
+          "npc_id": 8348,
+          "hp": 0
+        }
+      ]
+    },
+    {
+      "raid": "65c9f142-f240-4284-9384-d32fa313067e",
+      "room_id": 53306,
+      "wave": 28,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 382,
+          "anchor": [
+            3289,
+            4248
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 383,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 384,
+          "anchor": [
+            3290,
+            4247
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        },
+        {
+          "tick": 385,
+          "anchor": [
+            3291,
+            4248
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "65c9f142-f240-4284-9384-d32fa313067e",
+      "room_id": 54025,
+      "wave": 29,
+      "lane": "east",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 438,
+          "anchor": [
+            3302,
+            4248
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 439,
+          "anchor": [
+            3301,
+            4248
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 440,
+          "anchor": [
+            3301,
+            4247
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        },
+        {
+          "tick": 441,
+          "anchor": [
+            3300,
+            4248
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "65c9f142-f240-4284-9384-d32fa313067e",
+      "room_id": 54144,
+      "wave": 30,
+      "lane": "south",
+      "kind": "pillar",
+      "size": "small",
+      "outcome": "stationary",
+      "samples": [
+        {
+          "tick": 447,
+          "anchor": [
+            3296,
+            4242
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 448,
+          "anchor": [
+            3296,
+            4243
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 449,
+          "anchor": [
+            3296,
+            4243
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        },
+        {
+          "tick": 450,
+          "anchor": [
+            3295,
+            4244
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "9ac3826e-aa64-4f5a-b00f-4208f97f0307",
+      "room_id": 62971,
+      "wave": 27,
+      "lane": "south",
+      "kind": "aggro",
+      "size": "big",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 253,
+          "anchor": [
+            3295,
+            4242
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        },
+        {
+          "tick": 254,
+          "anchor": [
+            3295,
+            4243
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        },
+        {
+          "tick": 255,
+          "anchor": [
+            3296,
+            4244
+          ],
+          "npc_id": 8352,
+          "hp": 9
+        },
+        {
+          "tick": 256,
+          "anchor": [
+            3295,
+            4245
+          ],
+          "npc_id": 8352,
+          "hp": 9
+        }
+      ]
+    },
+    {
+      "raid": "9f8f1a77-a528-454f-bfac-8251dec9de32",
+      "room_id": 47173,
+      "wave": 1,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 12,
+          "anchor": [
+            3289,
+            4248
+          ],
+          "npc_id": 8343,
+          "hp": 4
+        },
+        {
+          "tick": 13,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8343,
+          "hp": 4
+        },
+        {
+          "tick": 14,
+          "anchor": [
+            3290,
+            4247
+          ],
+          "npc_id": 8349,
+          "hp": 4
+        },
+        {
+          "tick": 15,
+          "anchor": [
+            3291,
+            4248
+          ],
+          "npc_id": 8349,
+          "hp": 0
+        }
+      ]
+    },
+    {
+      "raid": "9f8f1a77-a528-454f-bfac-8251dec9de32",
+      "room_id": 49426,
+      "wave": 15,
+      "lane": "east",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 148,
+          "anchor": [
+            3302,
+            4249
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 149,
+          "anchor": [
+            3301,
+            4249
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 150,
+          "anchor": [
+            3301,
+            4248
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        },
+        {
+          "tick": 151,
+          "anchor": [
+            3300,
+            4248
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "9f8f1a77-a528-454f-bfac-8251dec9de32",
+      "room_id": 51343,
+      "wave": 24,
+      "lane": "south",
+      "kind": "aggro",
+      "size": "big",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 257,
+          "anchor": [
+            3295,
+            4242
+          ],
+          "npc_id": 8347,
+          "hp": 16
+        },
+        {
+          "tick": 258,
+          "anchor": [
+            3295,
+            4243
+          ],
+          "npc_id": 8347,
+          "hp": 16
+        },
+        {
+          "tick": 259,
+          "anchor": [
+            3296,
+            4243
+          ],
+          "npc_id": 8353,
+          "hp": 16
+        },
+        {
+          "tick": 260,
+          "anchor": [
+            3295,
+            4244
+          ],
+          "npc_id": 8353,
+          "hp": 16
+        }
+      ]
+    },
+    {
+      "raid": "a37210fe-5737-480f-8fca-518e56205e9b",
+      "room_id": 60795,
+      "wave": 14,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 163,
+          "anchor": [
+            3289,
+            4248
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 164,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 165,
+          "anchor": [
+            3290,
+            4247
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        },
+        {
+          "tick": 166,
+          "anchor": [
+            3291,
+            4248
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "bbd10de2-8831-4b53-9872-970d547d3a5d",
+      "room_id": 58628,
+      "wave": 11,
+      "lane": "east",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 100,
+          "anchor": [
+            3302,
+            4249
+          ],
+          "npc_id": 8344,
+          "hp": 5
+        },
+        {
+          "tick": 101,
+          "anchor": [
+            3301,
+            4249
+          ],
+          "npc_id": 8344,
+          "hp": 5
+        },
+        {
+          "tick": 102,
+          "anchor": [
+            3300,
+            4248
+          ],
+          "npc_id": 8350,
+          "hp": 2
+        },
+        {
+          "tick": 103,
+          "anchor": [
+            3299,
+            4248
+          ],
+          "npc_id": 8350,
+          "hp": 2
+        }
+      ]
+    },
+    {
+      "raid": "bef6ad10-3ef3-48b7-97a5-d019cf9ba303",
+      "room_id": 60960,
+      "wave": 11,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "big",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 100,
+          "anchor": [
+            3289,
+            4248
+          ],
+          "npc_id": 8347,
+          "hp": 16
+        },
+        {
+          "tick": 101,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8347,
+          "hp": 16
+        },
+        {
+          "tick": 102,
+          "anchor": [
+            3290,
+            4249
+          ],
+          "npc_id": 8353,
+          "hp": 16
+        },
+        {
+          "tick": 103,
+          "anchor": [
+            3291,
+            4249
+          ],
+          "npc_id": 8353,
+          "hp": 16
+        }
+      ]
+    },
+    {
+      "raid": "c77441a7-3caf-4d9d-a482-8ffe8d7f293d",
+      "room_id": 44539,
+      "wave": 28,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 240,
+          "anchor": [
+            3289,
+            4248
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 241,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 242,
+          "anchor": [
+            3291,
+            4247
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        },
+        {
+          "tick": 243,
+          "anchor": [
+            3291,
+            4247
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "c77441a7-3caf-4d9d-a482-8ffe8d7f293d",
+      "room_id": 44896,
+      "wave": 29,
+      "lane": "east",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 260,
+          "anchor": [
+            3302,
+            4248
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 261,
+          "anchor": [
+            3301,
+            4248
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 262,
+          "anchor": [
+            3301,
+            4247
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        },
+        {
+          "tick": 263,
+          "anchor": [
+            3300,
+            4246
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "df03c4dc-1e1d-4f57-8e6c-403803205659",
+      "room_id": 57099,
+      "wave": 7,
+      "lane": "south",
+      "kind": "aggro",
+      "size": "big",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 61,
+          "anchor": [
+            3295,
+            4242
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        },
+        {
+          "tick": 62,
+          "anchor": [
+            3295,
+            4243
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        },
+        {
+          "tick": 63,
+          "anchor": [
+            3296,
+            4244
+          ],
+          "npc_id": 8352,
+          "hp": 7
+        },
+        {
+          "tick": 64,
+          "anchor": [
+            3296,
+            4244
+          ],
+          "npc_id": 8352,
+          "hp": 7
+        }
+      ]
+    },
+    {
+      "raid": "df03c4dc-1e1d-4f57-8e6c-403803205659",
+      "room_id": 58005,
+      "wave": 11,
+      "lane": "east",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 135,
+          "anchor": [
+            3302,
+            4249
+          ],
+          "npc_id": 8344,
+          "hp": 4
+        },
+        {
+          "tick": 136,
+          "anchor": [
+            3301,
+            4249
+          ],
+          "npc_id": 8344,
+          "hp": 4
+        },
+        {
+          "tick": 137,
+          "anchor": [
+            3301,
+            4248
+          ],
+          "npc_id": 8350,
+          "hp": 4
+        },
+        {
+          "tick": 138,
+          "anchor": [
+            3300,
+            4248
+          ],
+          "npc_id": 8350,
+          "hp": 0
+        }
+      ]
+    },
+    {
+      "raid": "df03c4dc-1e1d-4f57-8e6c-403803205659",
+      "room_id": 58104,
+      "wave": 12,
+      "lane": "east",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 136,
+          "anchor": [
+            3302,
+            4249
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 137,
+          "anchor": [
+            3301,
+            4249
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 138,
+          "anchor": [
+            3301,
+            4248
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        },
+        {
+          "tick": 139,
+          "anchor": [
+            3301,
+            4248
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "df03c4dc-1e1d-4f57-8e6c-403803205659",
+      "room_id": 58333,
+      "wave": 14,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 156,
+          "anchor": [
+            3289,
+            4248
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 157,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 158,
+          "anchor": [
+            3290,
+            4247
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        },
+        {
+          "tick": 159,
+          "anchor": [
+            3291,
+            4248
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "df03c4dc-1e1d-4f57-8e6c-403803205659",
+      "room_id": 58410,
+      "wave": 15,
+      "lane": "east",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 164,
+          "anchor": [
+            3302,
+            4249
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 165,
+          "anchor": [
+            3301,
+            4249
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 166,
+          "anchor": [
+            3301,
+            4250
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        },
+        {
+          "tick": 167,
+          "anchor": [
+            3300,
+            4249
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "df03c4dc-1e1d-4f57-8e6c-403803205659",
+      "room_id": 60080,
+      "wave": 25,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "big",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 304,
+          "anchor": [
+            3289,
+            4248
+          ],
+          "npc_id": 8345,
+          "hp": 16
+        },
+        {
+          "tick": 305,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8345,
+          "hp": 16
+        },
+        {
+          "tick": 306,
+          "anchor": [
+            3290,
+            4247
+          ],
+          "npc_id": 8351,
+          "hp": 16
+        },
+        {
+          "tick": 307,
+          "anchor": [
+            3291,
+            4248
+          ],
+          "npc_id": 8351,
+          "hp": 16
+        }
+      ]
+    },
+    {
+      "raid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "room_id": 65462,
+      "wave": 2,
+      "lane": "south",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 17,
+          "anchor": [
+            3295,
+            4242
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 18,
+          "anchor": [
+            3295,
+            4243
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 19,
+          "anchor": [
+            3294,
+            4243
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        },
+        {
+          "tick": 20,
+          "anchor": [
+            3293,
+            4244
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "room_id": 33900,
+      "wave": 10,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 112,
+          "anchor": [
+            3289,
+            4248
+          ],
+          "npc_id": 8343,
+          "hp": 8
+        },
+        {
+          "tick": 113,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8343,
+          "hp": 8
+        },
+        {
+          "tick": 114,
+          "anchor": [
+            3290,
+            4249
+          ],
+          "npc_id": 8349,
+          "hp": 8
+        },
+        {
+          "tick": 115,
+          "anchor": [
+            3291,
+            4248
+          ],
+          "npc_id": 8349,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "room_id": 34998,
+      "wave": 18,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "big",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 232,
+          "anchor": [
+            3289,
+            4248
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        },
+        {
+          "tick": 233,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        },
+        {
+          "tick": 234,
+          "anchor": [
+            3291,
+            4249
+          ],
+          "npc_id": 8352,
+          "hp": 16
+        },
+        {
+          "tick": 235,
+          "anchor": [
+            3292,
+            4249
+          ],
+          "npc_id": 8352,
+          "hp": 16
+        }
+      ]
+    },
+    {
+      "raid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "room_id": 36672,
+      "wave": 29,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 408,
+          "anchor": [
+            3289,
+            4249
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 409,
+          "anchor": [
+            3290,
+            4249
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 410,
+          "anchor": [
+            3290,
+            4250
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        },
+        {
+          "tick": 411,
+          "anchor": [
+            3291,
+            4249
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "ebaeaf20-9862-4548-af9f-1a37c52b020a",
+      "room_id": 41492,
+      "wave": 12,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 124,
+          "anchor": [
+            3289,
+            4248
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 125,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 126,
+          "anchor": [
+            3290,
+            4249
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        },
+        {
+          "tick": 127,
+          "anchor": [
+            3291,
+            4248
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "ebaeaf20-9862-4548-af9f-1a37c52b020a",
+      "room_id": 42790,
+      "wave": 18,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "big",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 192,
+          "anchor": [
+            3289,
+            4248
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        },
+        {
+          "tick": 193,
+          "anchor": [
+            3290,
+            4248
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        },
+        {
+          "tick": 194,
+          "anchor": [
+            3290,
+            4247
+          ],
+          "npc_id": 8352,
+          "hp": 16
+        },
+        {
+          "tick": 195,
+          "anchor": [
+            3291,
+            4248
+          ],
+          "npc_id": 8352,
+          "hp": 16
+        }
+      ]
+    },
+    {
+      "raid": "ebaeaf20-9862-4548-af9f-1a37c52b020a",
+      "room_id": 44681,
+      "wave": 25,
+      "lane": "south",
+      "kind": "pillar",
+      "size": "big",
+      "outcome": "stationary",
+      "samples": [
+        {
+          "tick": 285,
+          "anchor": [
+            3295,
+            4242
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        },
+        {
+          "tick": 286,
+          "anchor": [
+            3295,
+            4243
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        },
+        {
+          "tick": 287,
+          "anchor": [
+            3295,
+            4243
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        },
+        {
+          "tick": 288,
+          "anchor": [
+            3294,
+            4243
+          ],
+          "npc_id": 8346,
+          "hp": 16
+        }
+      ]
+    },
+    {
+      "raid": "fc7d6eaa-eaec-43e5-ae66-6be8364ad312",
+      "room_id": 40511,
+      "wave": 20,
+      "lane": "south",
+      "kind": "aggro",
+      "size": "big",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 277,
+          "anchor": [
+            3295,
+            4242
+          ],
+          "npc_id": 8345,
+          "hp": 16
+        },
+        {
+          "tick": 278,
+          "anchor": [
+            3295,
+            4243
+          ],
+          "npc_id": 8345,
+          "hp": 16
+        },
+        {
+          "tick": 279,
+          "anchor": [
+            3294,
+            4243
+          ],
+          "npc_id": 8351,
+          "hp": 16
+        },
+        {
+          "tick": 280,
+          "anchor": [
+            3294,
+            4244
+          ],
+          "npc_id": 8351,
+          "hp": 16
+        }
+      ]
+    },
+    {
+      "raid": "fc7d6eaa-eaec-43e5-ae66-6be8364ad312",
+      "room_id": 40977,
+      "wave": 21,
+      "lane": "south",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 293,
+          "anchor": [
+            3295,
+            4242
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 294,
+          "anchor": [
+            3295,
+            4243
+          ],
+          "npc_id": 8342,
+          "hp": 8
+        },
+        {
+          "tick": 295,
+          "anchor": [
+            3294,
+            4243
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        },
+        {
+          "tick": 296,
+          "anchor": [
+            3295,
+            4244
+          ],
+          "npc_id": 8348,
+          "hp": 8
+        }
+      ]
+    },
+    {
+      "raid": "fc7d6eaa-eaec-43e5-ae66-6be8364ad312",
+      "room_id": 44285,
+      "wave": 29,
+      "lane": "west",
+      "kind": "aggro",
+      "size": "small",
+      "outcome": "moved",
+      "samples": [
+        {
+          "tick": 408,
+          "anchor": [
+            3289,
+            4249
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 409,
+          "anchor": [
+            3290,
+            4249
+          ],
+          "npc_id": 8344,
+          "hp": 8
+        },
+        {
+          "tick": 410,
+          "anchor": [
+            3291,
+            4249
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        },
+        {
+          "tick": 411,
+          "anchor": [
+            3292,
+            4249
+          ],
+          "npc_id": 8350,
+          "hp": 8
+        }
+      ]
+    }
+  ],
+  "north_pillar_arrivals": [
+    {
+      "raid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "big_room_id": 61591,
+      "small_room_id": 61310,
+      "pillar": "NE",
+      "arrival_tick": 79,
+      "hold_through": 102,
+      "big_before": {
+        "tick": 78,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8346,
+        "hp": 8
+      },
+      "big_at_arrival": {
+        "tick": 79,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8346,
+        "hp": 8
+      },
+      "small_at_arrival": {
+        "tick": 79,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 5
+      }
+    },
+    {
+      "raid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "big_room_id": 62546,
+      "small_room_id": 62247,
+      "pillar": "NE",
+      "arrival_tick": 139,
+      "hold_through": 141,
+      "big_before": {
+        "tick": 138,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 139,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 139,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "big_room_id": 63723,
+      "small_room_id": 63460,
+      "pillar": "NE",
+      "arrival_tick": 211,
+      "hold_through": 234,
+      "big_before": {
+        "tick": 210,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 211,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 211,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "big_room_id": 64057,
+      "small_room_id": 63987,
+      "pillar": "NE",
+      "arrival_tick": 235,
+      "hold_through": 270,
+      "big_before": {
+        "tick": 234,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 235,
+        "anchor": [
+          3299,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 235,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "4ed0a471-7c3a-46d7-8f9c-e807f0275be3",
+      "big_room_id": 34702,
+      "small_room_id": 34466,
+      "pillar": "NE",
+      "arrival_tick": 79,
+      "hold_through": 83,
+      "big_before": {
+        "tick": 78,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8346,
+        "hp": 4
+      },
+      "big_at_arrival": {
+        "tick": 79,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8346,
+        "hp": 4
+      },
+      "small_at_arrival": {
+        "tick": 79,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "4ed0a471-7c3a-46d7-8f9c-e807f0275be3",
+      "big_room_id": 36971,
+      "small_room_id": 36994,
+      "pillar": "NE",
+      "arrival_tick": 179,
+      "hold_through": 216,
+      "big_before": {
+        "tick": 178,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 179,
+        "anchor": [
+          3299,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 179,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "4ed0a471-7c3a-46d7-8f9c-e807f0275be3",
+      "big_room_id": 38524,
+      "small_room_id": 38056,
+      "pillar": "NE",
+      "arrival_tick": 247,
+      "hold_through": 266,
+      "big_before": {
+        "tick": 246,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 247,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 247,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "4ed0a471-7c3a-46d7-8f9c-e807f0275be3",
+      "big_room_id": 38524,
+      "small_room_id": 38654,
+      "pillar": "NE",
+      "arrival_tick": 247,
+      "hold_through": 290,
+      "big_before": {
+        "tick": 246,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 247,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 247,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "4ed0a471-7c3a-46d7-8f9c-e807f0275be3",
+      "big_room_id": 38694,
+      "small_room_id": 37972,
+      "pillar": "NW",
+      "arrival_tick": 256,
+      "hold_through": 260,
+      "big_before": {
+        "tick": 255,
+        "anchor": [
+          3290,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 256,
+        "anchor": [
+          3290,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 256,
+        "anchor": [
+          3291,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "4ed0a471-7c3a-46d7-8f9c-e807f0275be3",
+      "big_room_id": 38694,
+      "small_room_id": 38816,
+      "pillar": "NW",
+      "arrival_tick": 256,
+      "hold_through": 260,
+      "big_before": {
+        "tick": 255,
+        "anchor": [
+          3290,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 256,
+        "anchor": [
+          3290,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 256,
+        "anchor": [
+          3291,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "65c9f142-f240-4284-9384-d32fa313067e",
+      "big_room_id": 50845,
+      "small_room_id": 50670,
+      "pillar": "NE",
+      "arrival_tick": 225,
+      "hold_through": 229,
+      "big_before": {
+        "tick": 224,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 225,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 225,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "65c9f142-f240-4284-9384-d32fa313067e",
+      "big_room_id": 51870,
+      "small_room_id": 51817,
+      "pillar": "NE",
+      "arrival_tick": 297,
+      "hold_through": 306,
+      "big_before": {
+        "tick": 296,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 297,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 297,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "65c9f142-f240-4284-9384-d32fa313067e",
+      "big_room_id": 52402,
+      "small_room_id": 52061,
+      "pillar": "NE",
+      "arrival_tick": 333,
+      "hold_through": 353,
+      "big_before": {
+        "tick": 332,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 333,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 333,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "65c9f142-f240-4284-9384-d32fa313067e",
+      "big_room_id": 52402,
+      "small_room_id": 52236,
+      "pillar": "NE",
+      "arrival_tick": 333,
+      "hold_through": 360,
+      "big_before": {
+        "tick": 332,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 333,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 333,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "9ac3826e-aa64-4f5a-b00f-4208f97f0307",
+      "big_room_id": 61687,
+      "small_room_id": 61559,
+      "pillar": "NW",
+      "arrival_tick": 188,
+      "hold_through": 217,
+      "big_before": {
+        "tick": 187,
+        "anchor": [
+          3290,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 188,
+        "anchor": [
+          3290,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 188,
+        "anchor": [
+          3290,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "9ac3826e-aa64-4f5a-b00f-4208f97f0307",
+      "big_room_id": 62328,
+      "small_room_id": 61946,
+      "pillar": "NE",
+      "arrival_tick": 223,
+      "hold_through": 241,
+      "big_before": {
+        "tick": 222,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 223,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 223,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "9ac3826e-aa64-4f5a-b00f-4208f97f0307",
+      "big_room_id": 62328,
+      "small_room_id": 62414,
+      "pillar": "NE",
+      "arrival_tick": 223,
+      "hold_through": 266,
+      "big_before": {
+        "tick": 222,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 223,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 223,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "9ac3826e-aa64-4f5a-b00f-4208f97f0307",
+      "big_room_id": 62878,
+      "small_room_id": 62414,
+      "pillar": "NE",
+      "arrival_tick": 251,
+      "hold_through": 260,
+      "big_before": {
+        "tick": 250,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 251,
+        "anchor": [
+          3299,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 251,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "9ac3826e-aa64-4f5a-b00f-4208f97f0307",
+      "big_room_id": 62878,
+      "small_room_id": 62468,
+      "pillar": "NE",
+      "arrival_tick": 251,
+      "hold_through": 260,
+      "big_before": {
+        "tick": 250,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 251,
+        "anchor": [
+          3299,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 251,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "9f8f1a77-a528-454f-bfac-8251dec9de32",
+      "big_room_id": 50374,
+      "small_room_id": 50339,
+      "pillar": "NE",
+      "arrival_tick": 215,
+      "hold_through": 235,
+      "big_before": {
+        "tick": 214,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 215,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 215,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "9f8f1a77-a528-454f-bfac-8251dec9de32",
+      "big_room_id": 50372,
+      "small_room_id": 50164,
+      "pillar": "NW",
+      "arrival_tick": 216,
+      "hold_through": 220,
+      "big_before": {
+        "tick": 215,
+        "anchor": [
+          3290,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 216,
+        "anchor": [
+          3290,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 216,
+        "anchor": [
+          3291,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "9f8f1a77-a528-454f-bfac-8251dec9de32",
+      "big_room_id": 51198,
+      "small_room_id": 50834,
+      "pillar": "NE",
+      "arrival_tick": 251,
+      "hold_through": 274,
+      "big_before": {
+        "tick": 250,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 251,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 251,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "9f8f1a77-a528-454f-bfac-8251dec9de32",
+      "big_room_id": 52060,
+      "small_room_id": 51933,
+      "pillar": "NW",
+      "arrival_tick": 288,
+      "hold_through": 303,
+      "big_before": {
+        "tick": 287,
+        "anchor": [
+          3290,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 288,
+        "anchor": [
+          3290,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 288,
+        "anchor": [
+          3290,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "9f8f1a77-a528-454f-bfac-8251dec9de32",
+      "big_room_id": 52060,
+      "small_room_id": 52027,
+      "pillar": "NW",
+      "arrival_tick": 288,
+      "hold_through": 303,
+      "big_before": {
+        "tick": 287,
+        "anchor": [
+          3290,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 288,
+        "anchor": [
+          3290,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 288,
+        "anchor": [
+          3291,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "9f8f1a77-a528-454f-bfac-8251dec9de32",
+      "big_room_id": 52060,
+      "small_room_id": 52165,
+      "pillar": "NW",
+      "arrival_tick": 288,
+      "hold_through": 303,
+      "big_before": {
+        "tick": 287,
+        "anchor": [
+          3290,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 288,
+        "anchor": [
+          3290,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 288,
+        "anchor": [
+          3291,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "a37210fe-5737-480f-8fca-518e56205e9b",
+      "big_room_id": 58850,
+      "small_room_id": 58426,
+      "pillar": "NE",
+      "arrival_tick": 114,
+      "hold_through": 145,
+      "big_before": {
+        "tick": 113,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8346,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 114,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8346,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 114,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "a37210fe-5737-480f-8fca-518e56205e9b",
+      "big_room_id": 34038,
+      "small_room_id": 33142,
+      "pillar": "NE",
+      "arrival_tick": 322,
+      "hold_through": 337,
+      "big_before": {
+        "tick": 321,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 322,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 322,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "a37210fe-5737-480f-8fca-518e56205e9b",
+      "big_room_id": 34038,
+      "small_room_id": 33716,
+      "pillar": "NE",
+      "arrival_tick": 322,
+      "hold_through": 352,
+      "big_before": {
+        "tick": 321,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 322,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 322,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "a37210fe-5737-480f-8fca-518e56205e9b",
+      "big_room_id": 34038,
+      "small_room_id": 33717,
+      "pillar": "NE",
+      "arrival_tick": 322,
+      "hold_through": 352,
+      "big_before": {
+        "tick": 321,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 322,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 322,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "a37210fe-5737-480f-8fca-518e56205e9b",
+      "big_room_id": 35469,
+      "small_room_id": 34039,
+      "pillar": "NW",
+      "arrival_tick": 359,
+      "hold_through": 362,
+      "big_before": {
+        "tick": 358,
+        "anchor": [
+          3290,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 359,
+        "anchor": [
+          3290,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 359,
+        "anchor": [
+          3290,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "bbd10de2-8831-4b53-9872-970d547d3a5d",
+      "big_room_id": 60793,
+      "small_room_id": 60928,
+      "pillar": "NE",
+      "arrival_tick": 227,
+      "hold_through": 249,
+      "big_before": {
+        "tick": 226,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 227,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 227,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "bbd10de2-8831-4b53-9872-970d547d3a5d",
+      "big_room_id": 61433,
+      "small_room_id": 60937,
+      "pillar": "NE",
+      "arrival_tick": 267,
+      "hold_through": 274,
+      "big_before": {
+        "tick": 266,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 267,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 267,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "bbd10de2-8831-4b53-9872-970d547d3a5d",
+      "big_room_id": 61433,
+      "small_room_id": 61398,
+      "pillar": "NE",
+      "arrival_tick": 267,
+      "hold_through": 289,
+      "big_before": {
+        "tick": 266,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 267,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 267,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "bef6ad10-3ef3-48b7-97a5-d019cf9ba303",
+      "big_room_id": 62515,
+      "small_room_id": 62123,
+      "pillar": "NE",
+      "arrival_tick": 223,
+      "hold_through": 233,
+      "big_before": {
+        "tick": 222,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 223,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 223,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "c77441a7-3caf-4d9d-a482-8ffe8d7f293d",
+      "big_room_id": 43983,
+      "small_room_id": 43826,
+      "pillar": "NE",
+      "arrival_tick": 203,
+      "hold_through": 230,
+      "big_before": {
+        "tick": 202,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 203,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 203,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "c77441a7-3caf-4d9d-a482-8ffe8d7f293d",
+      "big_room_id": 43983,
+      "small_room_id": 44058,
+      "pillar": "NE",
+      "arrival_tick": 203,
+      "hold_through": 246,
+      "big_before": {
+        "tick": 202,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 203,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 203,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "c77441a7-3caf-4d9d-a482-8ffe8d7f293d",
+      "big_room_id": 44308,
+      "small_room_id": 44058,
+      "pillar": "NE",
+      "arrival_tick": 227,
+      "hold_through": 249,
+      "big_before": {
+        "tick": 226,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 227,
+        "anchor": [
+          3299,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 227,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "df03c4dc-1e1d-4f57-8e6c-403803205659",
+      "big_room_id": 57537,
+      "small_room_id": 57468,
+      "pillar": "NE",
+      "arrival_tick": 91,
+      "hold_through": 97,
+      "big_before": {
+        "tick": 90,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8346,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 91,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8346,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 91,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "df03c4dc-1e1d-4f57-8e6c-403803205659",
+      "big_room_id": 59101,
+      "small_room_id": 59173,
+      "pillar": "NW",
+      "arrival_tick": 232,
+      "hold_through": 274,
+      "big_before": {
+        "tick": 231,
+        "anchor": [
+          3290,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 232,
+        "anchor": [
+          3290,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 232,
+        "anchor": [
+          3291,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "df03c4dc-1e1d-4f57-8e6c-403803205659",
+      "big_room_id": 59637,
+      "small_room_id": 59154,
+      "pillar": "NE",
+      "arrival_tick": 271,
+      "hold_through": 275,
+      "big_before": {
+        "tick": 270,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 271,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 271,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "df03c4dc-1e1d-4f57-8e6c-403803205659",
+      "big_room_id": 59637,
+      "small_room_id": 59415,
+      "pillar": "NE",
+      "arrival_tick": 271,
+      "hold_through": 290,
+      "big_before": {
+        "tick": 270,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 271,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 271,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "big_room_id": 33903,
+      "small_room_id": 33718,
+      "pillar": "NE",
+      "arrival_tick": 115,
+      "hold_through": 133,
+      "big_before": {
+        "tick": 114,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8346,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 115,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8346,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 115,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "big_room_id": 34881,
+      "small_room_id": 34597,
+      "pillar": "NE",
+      "arrival_tick": 223,
+      "hold_through": 229,
+      "big_before": {
+        "tick": 222,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 223,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 223,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "big_room_id": 34881,
+      "small_room_id": 34673,
+      "pillar": "NE",
+      "arrival_tick": 223,
+      "hold_through": 229,
+      "big_before": {
+        "tick": 222,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 223,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 223,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "big_room_id": 35488,
+      "small_room_id": 35565,
+      "pillar": "NE",
+      "arrival_tick": 279,
+      "hold_through": 296,
+      "big_before": {
+        "tick": 278,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 279,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 279,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "big_room_id": 35486,
+      "small_room_id": 35206,
+      "pillar": "NW",
+      "arrival_tick": 280,
+      "hold_through": 284,
+      "big_before": {
+        "tick": 279,
+        "anchor": [
+          3290,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 280,
+        "anchor": [
+          3290,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 280,
+        "anchor": [
+          3290,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "big_room_id": 35486,
+      "small_room_id": 35207,
+      "pillar": "NW",
+      "arrival_tick": 280,
+      "hold_through": 284,
+      "big_before": {
+        "tick": 279,
+        "anchor": [
+          3290,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 280,
+        "anchor": [
+          3290,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 280,
+        "anchor": [
+          3291,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "big_room_id": 35796,
+      "small_room_id": 35643,
+      "pillar": "NE",
+      "arrival_tick": 315,
+      "hold_through": 335,
+      "big_before": {
+        "tick": 314,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 315,
+        "anchor": [
+          3299,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 315,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "big_room_id": 36006,
+      "small_room_id": 35966,
+      "pillar": "NE",
+      "arrival_tick": 339,
+      "hold_through": 360,
+      "big_before": {
+        "tick": 338,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 339,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 339,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "big_room_id": 36065,
+      "small_room_id": 35797,
+      "pillar": "NW",
+      "arrival_tick": 348,
+      "hold_through": 355,
+      "big_before": {
+        "tick": 347,
+        "anchor": [
+          3290,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 348,
+        "anchor": [
+          3290,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 348,
+        "anchor": [
+          3291,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "ebaeaf20-9862-4548-af9f-1a37c52b020a",
+      "big_room_id": 42569,
+      "small_room_id": 42090,
+      "pillar": "NE",
+      "arrival_tick": 183,
+      "hold_through": 198,
+      "big_before": {
+        "tick": 182,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 183,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 183,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "ebaeaf20-9862-4548-af9f-1a37c52b020a",
+      "big_room_id": 44004,
+      "small_room_id": 43509,
+      "pillar": "NE",
+      "arrival_tick": 255,
+      "hold_through": 268,
+      "big_before": {
+        "tick": 254,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 255,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 255,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "ebaeaf20-9862-4548-af9f-1a37c52b020a",
+      "big_room_id": 44004,
+      "small_room_id": 43544,
+      "pillar": "NE",
+      "arrival_tick": 255,
+      "hold_through": 271,
+      "big_before": {
+        "tick": 254,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 255,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 255,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8342,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "ebaeaf20-9862-4548-af9f-1a37c52b020a",
+      "big_room_id": 44931,
+      "small_room_id": 44793,
+      "pillar": "NW",
+      "arrival_tick": 300,
+      "hold_through": 334,
+      "big_before": {
+        "tick": 299,
+        "anchor": [
+          3290,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 300,
+        "anchor": [
+          3290,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 300,
+        "anchor": [
+          3291,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "ebaeaf20-9862-4548-af9f-1a37c52b020a",
+      "big_room_id": 44931,
+      "small_room_id": 44817,
+      "pillar": "NW",
+      "arrival_tick": 300,
+      "hold_through": 335,
+      "big_before": {
+        "tick": 299,
+        "anchor": [
+          3290,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 300,
+        "anchor": [
+          3290,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 300,
+        "anchor": [
+          3290,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "fc7d6eaa-eaec-43e5-ae66-6be8364ad312",
+      "big_room_id": 38464,
+      "small_room_id": 37873,
+      "pillar": "NE",
+      "arrival_tick": 207,
+      "hold_through": 227,
+      "big_before": {
+        "tick": 206,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 207,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 207,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "fc7d6eaa-eaec-43e5-ae66-6be8364ad312",
+      "big_room_id": 40512,
+      "small_room_id": 39641,
+      "pillar": "NE",
+      "arrival_tick": 279,
+      "hold_through": 290,
+      "big_before": {
+        "tick": 278,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 279,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 279,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "fc7d6eaa-eaec-43e5-ae66-6be8364ad312",
+      "big_room_id": 41509,
+      "small_room_id": 40583,
+      "pillar": "NE",
+      "arrival_tick": 315,
+      "hold_through": 322,
+      "big_before": {
+        "tick": 314,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 315,
+        "anchor": [
+          3299,
+          4251
+        ],
+        "npc_id": 8345,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 315,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "fc7d6eaa-eaec-43e5-ae66-6be8364ad312",
+      "big_room_id": 42350,
+      "small_room_id": 42038,
+      "pillar": "NE",
+      "arrival_tick": 347,
+      "hold_through": 369,
+      "big_before": {
+        "tick": 346,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 347,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 347,
+        "anchor": [
+          3300,
+          4252
+        ],
+        "npc_id": 8344,
+        "hp": 8
+      }
+    },
+    {
+      "raid": "fc7d6eaa-eaec-43e5-ae66-6be8364ad312",
+      "big_room_id": 42350,
+      "small_room_id": 42039,
+      "pillar": "NE",
+      "arrival_tick": 347,
+      "hold_through": 374,
+      "big_before": {
+        "tick": 346,
+        "anchor": [
+          3300,
+          4250
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "big_at_arrival": {
+        "tick": 347,
+        "anchor": [
+          3300,
+          4251
+        ],
+        "npc_id": 8347,
+        "hp": 16
+      },
+      "small_at_arrival": {
+        "tick": 347,
+        "anchor": [
+          3301,
+          4252
+        ],
+        "npc_id": 8343,
+        "hp": 8
+      }
+    }
+  ]
+}

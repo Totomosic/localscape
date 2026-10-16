@@ -383,6 +383,10 @@ The room cap starts at 12 and increases to 24 after wave 20 spawns. A due
 wave stalls when the existing count is at or above the cap and retries four
 ticks later. Dying bodies count until removal; an admitted wave spawns in full.
 Three age-26 flicker styles remain unobserved in the research and retain their last confirmed style.
+Big Nylocas use their southwest tile for terrain and NPC occupancy checks, while
+retaining their 2×2 footprint for pillar contact and combat reach. Their other
+three tiles can overlap smalls or other bigs. Movement and removal release the
+southwest reservation without clearing neighbouring Nylocas' flags.
 See [wave implementation details](docs/nylocas-wave-implementation.md) for
 provenance, verification, and the remaining encounter mechanics.
 Starting the raid again does not reset its wave or progress. Leaving the instance

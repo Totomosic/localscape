@@ -66,6 +66,54 @@ Both 108 and 109 occupy the big's footprint. This also illustrates why collision
 
 Both anchors remain unchanged on the preceding and following tick around these observations. This repeats the big/small overlap with one player and a different run. The accompanying [movement evidence](nylocas-movement-evidence.md) includes another duo in which a big repeatedly walks through the northern portion of a parked big while its assigned pillar is full.
 
+## Follow-up: big arrives below a small already at a north pillar
+
+Verified 2026-10-17 against the same checksum-pinned recordings. **A small
+already on a north pillar's south face does not prevent a big from settling
+one anchor row farther south, overlapping that small with its northern row.**
+Pillar contact uses the big's full 2×2 footprint; its southwest anchor does not
+have to be adjacent to the pillar. This is direct arrival evidence for the
+specific north-pillar case, in addition to the parked overlaps above.
+
+In the [supplied duo](https://blert.io/raids/tob/c77441a7-3caf-4d9d-a482-8ffe8d7f293d/nylocas),
+big `43983` approaches NE while small `44058` already holds its south face:
+
+| Room tick | Big `43983` anchor | Small `44058` anchor |
+| --- | --- | --- |
+| 202 | `(3300,4250)` | `(3300,4252)` |
+| 203–246 | `(3300,4251)` | `(3300,4252)` |
+
+Both have positive recorded HP throughout the 44-tick hold. The big occupies
+X 3300–3301, Y 4251–4252; its northern row touches the pillar at Y 4253 and
+overlaps the small at `(3300,4252)`. The southwest anchors remain distinct.
+Small `43826` already occupies the other south-face tile `(3301,4252)` at tick
+202 and holds through 230 with positive recorded HP. Thus **both small
+south-face anchors are occupied when the big arrives**, and its northern row
+overlaps both smalls.
+The same pattern occurs at NW: in
+[duo df03c4dc](https://blert.io/raids/tob/df03c4dc-1e1d-4f57-8e6c-403803205659/nylocas),
+big `59101` moves from `(3290,4250)` to `(3290,4251)` at tick 232 while small
+`59173` holds `(3291,4252)`; both hold with positive recorded HP through 274.
+
+Run `python tools/research/nylocas_entry_contact.py` to regenerate
+[entry-contact-observations.json](research/nylocas/entry-contact-observations.json).
+It finds **60 big/small arrival pairs** across the corpus with a stationary
+positive-HP small on the preceding tick and at least three consecutive
+stationary positive-HP observations of both after the big arrives. A big may
+overlap two smalls, so pairs are not unique arrivals or independent trials.
+The filter requires an ordinary-form big, and matches overlapping footprint
+tiles immediately south of NE or NW. It does not establish every legal approach,
+terrain check, or diagonal collision rule.
+
+The simulator already generated size-aware pillar contact positions, including
+Y 4251 for bigs below northern pillars. Before the implementation follow-up
+below, its `canOccupy` check rejected NPC blockers anywhere in the big's
+footprint, and shared movement validated and reserved that whole footprint.
+Those rules could not reproduce these witnesses; merely adding another pillar
+destination would not fix the problem. See also the separate
+[entry timing findings](nylocas-entry-timing-evidence.md), which do not justify
+an unconditional one-tick pause for every player aggro.
+
 ## Corpus-level check
 
 The offline script [nylocas_replays.py](../tools/research/nylocas_replays.py) verifies snapshot hashes and counts **pair-ticks**, restricting both anchors to `x3290..3301, y4243..4254`, requiring both observed HP values positive, and requiring at least one member of the pair to be big. It excludes all boss IDs. It does not assume an inferred target or parent relationship.
@@ -111,4 +159,36 @@ The supported claim is therefore specific: **a big's other three footprint tiles
 7. **Collision release versus despawn:** reproduce the two natural-death handoffs without removing the blocker from room-cap membership early. Keep the timing model explicit until server-phase ordering is resolved.
 8. **Unproven geometry:** separately test terrain collision, player blocking, diagonals, combat range and area damage. These recordings do not establish that each uses the same anchor rule.
 
-Current code uses `npc.size` for both candidate occupancy checks and step validation in `NylocasBehaviour.canOccupy`/`pace`; this will reject Witness A/B under full-footprint NPC reservations. Change the encounter-specific occupancy behavior while preserving independently validated geometry. See the [source audit](nylocas-mechanics-source-audit.md) and [final report](nylocas-simulation-accuracy-report.md) for the wider implementation plan.
+At the audit snapshot, code used `npc.size` for candidate occupancy checks and
+step validation in `NylocasBehaviour.canOccupy`/`pace`, rejecting Witness A/B
+under full-footprint NPC reservations. See the [source audit](nylocas-mechanics-source-audit.md)
+and [final report](nylocas-simulation-accuracy-report.md) for that baseline and
+the wider implementation plan.
+
+## Implementation follow-up, 2026-10-17
+
+The user clarified that big Nylocas also use their southwest tile for terrain
+checks. This is an implementation requirement supplied by the user, rather
+than an additional terrain rule independently established by the corpus.
+
+Lane spawns now set `Npc.collisionSize = 1` before world registration. The real
+avatar remains size two. Shared movement, collision reservation, teleport and
+removal use the configured collision footprint; other NPCs retain their normal
+size by default. Encounter route searches, direct steps, pacing and contact-tile
+terrain checks all use one-tile movement geometry. Pillar contact candidates,
+melee contact, ranged/magic reach and explosion geometry retain the real size.
+The preferred outer endpoint remains aligned with the big's full footprint;
+permitting terrain under its other tiles does not force an overhanging endpoint.
+
+Integration regressions cover both occupied small south-face tiles at NE and
+NW, overlapping living bigs, reservation movement, occupied-anchor exclusion,
+terrain under each of the other three footprint tiles, ordinary-NPC defaults,
+and deletion/player death beside overlapping smalls. The death cases check that
+the surviving smalls keep their collision flags.
+
+The suggestion that a big's death clears every occupied flag under its 2×2
+extent remains unverified. The old simulator did clear that full extent, but
+that is not evidence of the original game's rule. Removal now releases only
+the big's southwest reservation; it does not erase living neighbours' flags.
+The recording's early natural-death handoffs and exact collision-release phase
+remain separate timing questions.
