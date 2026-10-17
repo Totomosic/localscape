@@ -285,6 +285,8 @@ Targets are fixed at launch. One accuracy roll against the primary controls
 the whole throw: a miss deals zero to everyone; a success rolls each target's
 damage independently. Each throw consumes one chinchompa, including misses,
 without Ava's recovery or a ground drop. Quiver bonuses do not apply.
+One explosion sound plays at the primary target's tile when the projectile lands,
+including on misses.
 Restart RSMod to load these changes.
 
 For an existing workspace converting from the earlier downloaded checkout,
