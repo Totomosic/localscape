@@ -437,6 +437,14 @@ splashes contribute zero. Healing stops at the caster's base maximum Hitpoints.
 Rune costs and cast XP apply once per cast, regardless of the number of targets.
 Restart RSMod to load it; no cache repack or client rebuild is required.
 
+**Death Charge** is available on the Arceuus spellbook. Casting grants two stacks
+for 60 seconds. Each NPC kill credited to the caster consumes one stack and
+restores 15% special attack energy, capped at 100%. Both stacks share the original
+expiry, and the 60-second cast cooldown continues after both stacks are used.
+The spell uses its normal level and rune requirements, including unlimited runes
+from a rune pouch. Restart RSMod to load it; no cache repack or client rebuild is
+required.
+
 Rebuild with `./dev build-client`, restart RSMod, and launch a new client session
 to load spellbook controls and rune pouch support. No cache repack is required.
 
