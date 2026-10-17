@@ -14,20 +14,27 @@ the RuneLite sidebar opens item search and server controls. On login it also
 writes `Custom RuneLite build active.` to game chat, confirming that RSProx
 launched your build. Edit the Java sources under `client/` to extend it.
 
-A second sidebar panel, **Threatre Controls** (red T icon), provides multiplayer
+A second sidebar panel, **Theatre controls** (red T icon), provides multiplayer
 lobbies for ordinary players:
 
 1. The host clicks **Create lobby** to enter a fresh instance at the Bloat door.
 2. Other players enter the host's player name and click **Join raid**. Names are
    case insensitive and may contain spaces. Parties support up to five players.
-3. The host clicks **Start raid** to open the party HUD and unlock the Bloat door.
+3. The host selects a **Starting wave** from 1–31 (default 1), then clicks **Start raid**
+   to apply the options to the whole party, open the party HUD, and unlock the Bloat door.
    Everyone can then use **Enter** or **Quick-Enter** to reach the Nylocas bridge
    and pass the barrier together.
+
+Options lock when the raid starts. The selected wave is the first to spawn, four ticks
+after confirmed Nylocas entry. Starting at wave 21 or later immediately uses the
+24-nylo cap; earlier starts use 12 until wave 20 has spawned. Create a new lobby to
+change options for another raid. The host's selected starting wave appears in every
+party member's game chat when the raid starts.
 
 Joining closes when the host starts. A host leaving or logging out closes their
 lobby to new joins; creating another lobby starts a fresh instance. Server results
 appear in game chat. The commands are `::theatrecreate`, `::theatrejoin <host name>`,
-and `::theatrestart`, with no admin access required. Rebuild the client with
+and `::theatrestart [starting wave]`, with no admin access required. Rebuild the client with
 `./dev build-client` and restart RSMod to load these controls; no cache repack
 is required.
 

@@ -13,6 +13,8 @@ import net.runelite.api.GameState;
 import net.runelite.api.ItemComposition;
 import net.runelite.api.events.ClientTick;
 import net.runelite.api.events.GameStateChanged;
+import net.runelite.api.events.GameTick;
+import net.runelite.api.gameval.VarbitID;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
@@ -59,7 +61,7 @@ public class LocalDevPlugin extends Plugin
 		clientToolbar.addNavigation(navigation);
 		theatrePanel = new TheatreControlsPanel(this::submit);
 		theatreNavigation = NavigationButton.builder()
-			.tooltip("Threatre Controls")
+			.tooltip("Theatre controls")
 			.icon(createTheatreIcon())
 			.priority(2)
 			.panel(theatrePanel)
@@ -89,6 +91,12 @@ public class LocalDevPlugin extends Plugin
 		{
 			client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Custom RuneLite build active.", "");
 		}
+	}
+
+	@Subscribe
+	public void onGameTick(GameTick event)
+	{
+		updateTheatreRaidState();
 	}
 
 	@Subscribe
@@ -129,6 +137,16 @@ public class LocalDevPlugin extends Plugin
 		}
 		updatePanel(current -> current.setLoggedIn(state == GameState.LOGGED_IN));
 		updateTheatrePanel(current -> current.setLoggedIn(state == GameState.LOGGED_IN));
+		if (state == GameState.LOGGED_IN)
+		{
+			updateTheatreRaidState();
+		}
+	}
+
+	private void updateTheatreRaidState()
+	{
+		boolean started = client.getVarbitValue(VarbitID.TOB_CLIENT_PARTYSTATUS) == 2;
+		updateTheatrePanel(current -> current.setRaidStarted(started));
 	}
 
 	private void resetItems()
