@@ -228,6 +228,32 @@ Sulphur blades, use a shared helper that rolls from zero through the max hit and
 clamps the result to at least one. A rolled zero and a rolled one both deal one
 damage after a successful accuracy check.
 
+The **Necklace of anguish** uses the [Necklace of rupture's combat stats](https://oldschool.runescape.wiki/w/Necklace_of_rupture):
++20 Ranged attack, +8 Ranged strength, and +3 Prayer. **Dragon arrows** use
+[Seeking dragon arrow](https://oldschool.runescape.wiki/w/Seeking_dragon_arrow)
+mechanics: +20 Ranged attack while using a bow, the existing +60 Ranged strength,
+and a minimum successful damage roll of 3. Rolls of 0, 1, and 2 become 3; misses
+and damage restrictions still deal 0. Other weapons gain no arrow accuracy bonus.
+After changing these item stats, run `./gradlew packCache` in `upstream/rsmod`
+with the server stopped, then
+restart RSMod.
+
+Wearing **Lightbearer** restores 10% special attack energy every 25 ticks (15
+seconds), instead of the normal 50 ticks. Equipping it shortens a longer remaining
+wait to 25 ticks and preserves restores already due sooner. Removing it resets
+the wait to 50 ticks. Login and death timer resets respect the equipped ring.
+These rules follow the [Lightbearer mechanics](https://oldschool.runescape.wiki/w/Lightbearer).
+
+The **Amulet of blood fury** gives each positive player melee hitsplat an
+independent 20% chance to heal 30% of that splat, rounded down and capped at base
+Hitpoints. Scythe, Sulphur blades, secondary targets, and melee special attacks
+all use this shared effect, including against players. Healing uses the modified
+damage roll before enemy Hitpoints clamping, matching the other local lifesteal
+effects. Ranged, magic, and thrall hits do not trigger it. This implements the
+[Blood Fury passive healing](https://oldschool.runescape.wiki/w/Amulet_of_blood_fury);
+blood-shard charging and charge depletion are not implemented. Restart RSMod to
+load these equipment effects.
+
 Scythe of vitur attacks use one splat per NPC tile size, up to three, with each
 splat rolling accuracy separately and landing on the same tick. Each successive
 max hit is half the previous one, rounded down (51 becomes 51, 25, 12). This also
