@@ -295,8 +295,9 @@ Accurate and Longrange take three. Range is five tiles, or seven on Longrange.
 The dart sound effect plays at the player's position on the attack tick.
 Shots consume a dart unless Ava's device saves it, and consume a scale two-thirds
 of the time, including on misses. Running out of one resource preserves the other.
-The Toxic Siphon special attack costs 50% energy, doubles accuracy, and increases
-maximum damage by 50%. It heals half the rolled damage, rounded down, before
+The Toxic Siphon special attack uses the regular attack animation for each
+blowpipe cosmetic, costs 50% energy, doubles accuracy, and increases maximum
+damage by 50%. It heals half the rolled damage, rounded down, before
 damage is capped to the target's remaining hitpoints; healing cannot exceed the
 player's maximum hitpoints. Its distinct projectile takes one extra tick to land
 unless the player is adjacent to the target. Both blowpipe cosmetics support it.
