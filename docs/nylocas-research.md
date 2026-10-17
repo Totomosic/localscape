@@ -103,8 +103,8 @@ at source `(3322,4447,0)`, immediately inside the eastern exit of Bloat's region
 with walkable linked floor ending at `x=3322`; no interactive passage exists at
 that exit in the cache. The server adds two native Formidable passage clickboxes
 (`33113`) there, at `y=4447/4448`, with wall shape 0 facing east. Both **Enter**
-and **Quick-Enter** lead to source `(3302,4275,0)` at the start of the Nylocas
-bridge, just inside its cached eastern entrance.
+and **Quick-Enter** lead to source `(3295,4258,0)`, one tile west of the combat
+dummy just outside the Nylocas barrier.
 
 This development route copies both complete source map squares on all four
 levels into one large instance. Bloat occupies instance chunks `(20..27,4..11)`

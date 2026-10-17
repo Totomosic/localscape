@@ -216,6 +216,10 @@ max hit is half the previous one, rounded down (51 becomes 51, 25, 12). This als
 applies to the holy, sanguine, and blighted cosmetics, including all uncharged
 forms. Player targets receive one standard hit.
 
+Scythe and Sulphur blades award combat XP per splat, with each splat capped
+separately to the target's remaining hitpoints at attack time. Two 8s against
+an 8-HP target award XP for 16 damage.
+
 Against a 1x1 NPC in multi-combat, the scythe sweeps the primary target's tile
 and the two tiles beside it, perpendicular to the attack direction. It hits up
 to three eligible 1x1 NPCs overall, including NPCs stacked on the same tile.
@@ -273,6 +277,11 @@ Accurate and Longrange take three. Range is five tiles, or seven on Longrange.
 The dart sound effect plays at the player's position on the attack tick.
 Shots consume a dart unless Ava's device saves it, and consume a scale two-thirds
 of the time, including on misses. Running out of one resource preserves the other.
+The Toxic Siphon special attack costs 50% energy, doubles accuracy, and increases
+maximum damage by 50%. It heals half the rolled damage, rounded down, before
+damage is capped to the target's remaining hitpoints; healing cannot exceed the
+player's maximum hitpoints. Its distinct projectile takes one extra tick to land
+unless the player is adjacent to the target. Both blowpipe cosmetics support it.
 These charging and normal attack mechanics follow the
 [OSRS Wiki](https://oldschool.runescape.wiki/w/Toxic_blowpipe).
 
@@ -429,8 +438,9 @@ use the existing `::tele 0 50 50 22 18` command to return to Lumbridge.
 both Bloat and Nylocas source maps, spaced apart so the client loads the correct
 room's region. The cache supplies the doorway scenery; the server adds the native
 Formidable passage clickboxes at the exit. Traversing the door keeps players in
-the same instance and does not start the Nylocas wave. Bloat combat is not
-implemented.
+the same instance and lands at `(3295,4258)`, one tile west of the combat dummy
+near the Nylocas barrier. Traversal does not start the Nylocas wave. Bloat combat
+is not implemented.
 
 A combat dummy stands on the bridge just outside the Nylocas barrier, at source
 tile `(3296,4258)`. It stays still, never retaliates, and restores its health after
