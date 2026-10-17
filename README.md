@@ -303,7 +303,9 @@ costing 50% energy and using a custom 25% accuracy bonus against crush defence.
 In multi-combat, the primary NPC takes two independently rolled, full-strength
 hits on the same tick. The sweep hits up to ten NPCs total, including the primary,
 within an 11x11 square centred on the player. Other targets must be attackable,
-visible, in multi-combat, and in line of sight. Single-combat and player targets
+visible, in multi-combat, and in line of sight from the player. The primary NPC
+also requires line of sight. Nylocas in the incoming lanes are excluded; only
+Nylocas inside the room can be hit. Single-combat and player targets
 receive one hit. Successful hits drain the highest offensive stats by 5% of their
 current levels, once per target per special; melee drains both Attack and Strength,
 with ties preferring melee, then Ranged, then Magic. Energy, area restrictions,
