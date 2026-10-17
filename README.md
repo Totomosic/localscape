@@ -501,6 +501,16 @@ The spell uses its normal level and rune requirements, including unlimited runes
 from a rune pouch. Restart RSMod to load it; no cache repack or client rebuild is
 required.
 
+**Vengeance** and **Vengeance Other** are available on the Lunar spellbook. They
+grant the caster or selected player a status that reflects `floor(damage * 0.75)`
+back to the next NPC that damages them, then consumes the status. Reflection uses
+the Hitpoints actually lost, including on lethal hits. Zero hits, player attacks,
+and environmental damage leave the status active. The two spells share a
+30-second cooldown per caster, which continues after reflection; receiving
+Vengeance Other does not start the recipient's cast cooldown. Normal level and
+rune requirements apply, including unlimited runes from a rune pouch. Restart
+RSMod to load them; no cache repack or client rebuild is required.
+
 Rebuild with `./dev build-client`, restart RSMod, and launch a new client session
 to load spellbook controls and rune pouch support. No cache repack is required.
 
