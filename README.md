@@ -438,6 +438,33 @@ splashes contribute zero. Healing stops at the caster's base maximum Hitpoints.
 Rune costs and cast XP apply once per cast, regardless of the number of targets.
 Restart RSMod to load it; no cache repack or client rebuild is required.
 
+**Greater thralls** are available on the Arceuus spellbook: **Resurrect Greater
+Zombie** (melee), **Resurrect Greater Skeleton** (ranged), and **Resurrect Greater
+Ghost** (magic). They require level 76 Magic, six Prayer points, and a Book of the
+dead in inventory or equipped, plus ten fire, five blood, and one cosmic rune
+(or a rune pouch). Casting awards 88 Magic XP and preserves the player's existing
+attack cooldown. Resurrection spells share a 16-tick cooldown; a successful recast
+replaces the existing thrall.
+
+Each thrall lasts one tick per current Magic level at casting: **112 ticks / 67.2
+seconds** with the server's permanent Magic boost. This uses the base duration
+without Combat Achievement extensions. Idle thralls wander within two tiles of
+where they were summoned or last fought, taking occasional random steps rather
+than following the player. Thralls attack the owner's last attacked NPC for up to
+12 ticks after the player's last attack, then return to wandering until the
+player attacks again. They attack independently every four ticks, rolling
+**0–3 damage without an accuracy check** and awarding no combat XP. Zombies walk
+into melee range; skeletons and ghosts attack within six tiles with line of sight.
+Ghost projectiles land one tick earlier than skeleton projectiles. Thrall damage grants the owner kill
+credit and respects NPC immunity and Nylocas styles. Wrong-style attacks on
+Nylocas still animate and land as zero hits, which can speed up death through
+overkill without nulling the owner. Thralls cannot take damage, attack players, or
+retaliate. They disappear on expiry, owner death/logout, or moving out of the
+owner's vicinity. The [OSRS Wiki resurrection mechanics](https://oldschool.runescape.wiki/w/Resurrect_Greater_Zombie)
+describe the base duration, damage, costs, and cooldown. The projectile definitions
+require `./gradlew packCache` from `upstream/rsmod` with the server stopped, then
+an RSMod restart. No client rebuild is required.
+
 **Death Charge** is available on the Arceuus spellbook. Casting grants two stacks
 for 60 seconds. Each NPC kill credited to the caster consumes one stack and
 restores 15% special attack energy, capped at 100%. Both stacks share the original
