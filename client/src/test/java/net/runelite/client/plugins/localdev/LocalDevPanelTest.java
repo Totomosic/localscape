@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JList;
 import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
@@ -19,6 +20,38 @@ import static org.junit.Assert.assertFalse;
 
 public class LocalDevPanelTest
 {
+	@Test
+	public void selectsEachSpellbookAndSynchronizesWithoutSubmitting() throws Exception
+	{
+		SwingUtilities.invokeAndWait(() ->
+		{
+			List<String> commands = new ArrayList<>();
+			LocalDevPanel panel = new LocalDevPanel(commands::add);
+			try
+			{
+				JComboBox<?> books = component(panel, JComboBox.class);
+				assertFalse(books.isEnabled());
+				panel.setLoggedIn(true);
+				for (String name : Arrays.asList("Ancient", "Arceuus", "Lunar", "Standard"))
+				{
+					books.setSelectedItem(name);
+				}
+				assertEquals(Arrays.asList("spellbook ancient", "spellbook arceuus", "spellbook lunar", "spellbook standard"), commands);
+				panel.setSpellbook(2);
+				assertEquals("Lunar", books.getSelectedItem());
+				panel.setSpellbook(3);
+				assertEquals("Arceuus", books.getSelectedItem());
+				assertEquals(4, commands.size());
+				panel.setLoggedIn(false);
+				assertFalse(books.isEnabled());
+			}
+			finally
+			{
+				panel.close();
+			}
+		});
+	}
+
 	@Test
 	public void searchesLocalItemsAndSendsSelectedIdWithQuantity() throws Exception
 	{

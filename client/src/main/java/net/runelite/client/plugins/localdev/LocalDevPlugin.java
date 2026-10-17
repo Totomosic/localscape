@@ -24,7 +24,7 @@ import net.runelite.client.ui.NavigationButton;
 
 @PluginDescriptor(
 	name = "Local Development",
-	description = "Search and spawn items, restore skills, and teleport to development rooms on the local server",
+	description = "Search and spawn items, restore skills, switch spellbooks, and teleport to development rooms on the local server",
 	tags = {"local", "development"},
 	enabledByDefault = true
 )
@@ -97,6 +97,7 @@ public class LocalDevPlugin extends Plugin
 	public void onGameTick(GameTick event)
 	{
 		updateTheatreRaidState();
+		updateSpellbook();
 	}
 
 	@Subscribe
@@ -140,7 +141,14 @@ public class LocalDevPlugin extends Plugin
 		if (state == GameState.LOGGED_IN)
 		{
 			updateTheatreRaidState();
+			updateSpellbook();
 		}
+	}
+
+	private void updateSpellbook()
+	{
+		int book = client.getVarbitValue(VarbitID.SPELLBOOK);
+		updatePanel(current -> current.setSpellbook(book));
 	}
 
 	private void updateTheatreRaidState()

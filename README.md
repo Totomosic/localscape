@@ -342,6 +342,9 @@ Open the terminal icon in the RuneLite sidebar while logged into LocalScape:
   reapplies the permanent combat boosts, and refills run and special attack
   energy to 100%.
 - **Clear Inventory** removes all items from your inventory.
+- **Spellbook** switches between Standard, Ancient, Arceuus, and Lunar. The dropdown
+  follows your current book, including after login. Switching books stops combat
+  and clears the current autocast selection.
 - **Teleport to Nylocas** enters a fresh, empty instance of the original Nylocas
   room. Its map and scenery already exist in the revision-233 cache.
 - **Teleport to Nylocas Bridge** lands on the bridge outside the room, at the
@@ -360,9 +363,55 @@ Open the terminal icon in the RuneLite sidebar while logged into LocalScape:
   Broad searches show the first 100 matches; narrow the query to find more.
 
 The item list loads over several client ticks after login. Controls use RSMod's
-`master`, `invclear`, `invadd`, `nylocas`, `nylocasbridge`, `bloatexit`, and
-`starttob` admin commands. Your account needs server admin access; command results
-and inventory-limit messages appear in game chat. Restore Skills preserves earned XP.
+`master`, `invclear`, `invadd`, `nylocas`, `nylocasbridge`, `bloatexit`, `starttob`,
+and `spellbook` admin commands. Your account needs server admin access; command
+results and inventory-limit messages appear in game chat. Restore Skills preserves earned XP.
+
+Carrying a normal, locked, divine, locked divine, or LMS rune pouch supplies
+unlimited runes for spells. Every spell icon lights up, and rune tooltips show
+unlimited quantities. Removing the last pouch restores normal rune checks.
+Pouches and loose runes are not consumed; required staves and other non-rune
+ingredients still apply on the server. This establishes spellbook selection and
+rune availability; individual spell effects are implemented separately.
+
+**Ice Blitz** is available from the Ancient spellbook against a single NPC or
+player. It uses the shared five-tick spell attack cycle, requires level 82 Magic,
+and has a base max hit of 26 before magic damage bonuses. Successful casts freeze
+the target immediately for 24 ticks (14.4 seconds); damage and impact effects
+follow the normal distance-based spell impact delay. Splashes consume runes but
+do not freeze. Existing freezes, the five-tick thaw immunity, and NPC freeze
+resistance are respected. Without a rune pouch, each cast costs three water,
+two blood, and two death runes. Spell stats and the base freeze duration follow
+the [OSRS Wiki](https://oldschool.runescape.wiki/w/Ice_Blitz).
+
+**Ice Barrage** uses the same 3x3 target selection as black chinchompas: the square
+is centred on the primary target's southwest tile, includes stacked targets, and
+checks line of sight from that tile. Targets are selected at cast time. Splash
+requires the caster, primary, and additional targets to be in multi-combat;
+player splash targets must also pass the usual wilderness level checks.
+Each target receives its own accuracy and damage rolls, so a cast can freeze
+some targets and splash on others even when the primary splashes. Both Ice Blitz
+and Ice Barrage apply freeze only after a successful accuracy roll, immediately
+at cast time. Barrage uses a five-tick attack cycle and a 32-tick freeze, with a
+base max hit of 30. It costs six water, two blood, and four death runes once per
+cast, regardless of target count, or uses the rune pouch's unlimited runes.
+The base spell stats follow the [OSRS Wiki](https://oldschool.runescape.wiki/w/Ice_Barrage);
+the target selection deliberately matches this server's chinchompa rules.
+The server overrides the cache's placeholder max-hit values with 30 for Ice
+Barrage and 26 for Ice Blitz before applying prayer and equipment damage bonuses.
+These are base values, so boosted max hits can exceed them.
+
+**Blood Barrage** uses the same area targeting, individual accuracy rolls, and
+five-tick attack cycle as Ice Barrage. Its base max hit is 29 before prayer and
+equipment bonuses. It applies no freeze. At cast time, it heals the caster for
+`floor(total successful damage rolls / 4)`, rounding once across all targets.
+Healing uses the damage rolled before limiting it to the targets' remaining HP;
+splashes contribute zero. Healing stops at the caster's base maximum Hitpoints.
+Rune costs and cast XP apply once per cast, regardless of the number of targets.
+Restart RSMod to load it; no cache repack or client rebuild is required.
+
+Rebuild with `./dev build-client`, restart RSMod, and launch a new client session
+to load spellbook controls and rune pouch support. No cache repack is required.
 
 Nylocas access preserves source region **13122**, plane **0**, and lands at the
 instance equivalent of `(3295, 4248, 0)`. ToB QoL requires an instance with the

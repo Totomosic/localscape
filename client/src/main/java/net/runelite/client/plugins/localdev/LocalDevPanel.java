@@ -8,6 +8,7 @@ import java.util.Locale;
 import java.util.function.Consumer;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
@@ -38,10 +39,12 @@ final class LocalDevPanel extends PluginPanel
 	private final JButton teleportNylocasBridge = new JButton("Teleport to Nylocas Bridge");
 	private final JButton teleportBloatExit = new JButton("Teleport to Bloat Exit");
 	private final JButton startRaid = new JButton("Start Raid");
+	private final JComboBox<String> spellbook = new JComboBox<>(new String[]{"Standard", "Ancient", "Arceuus", "Lunar"});
 	private final Timer searchTimer = new Timer(200, event -> filterItems());
 	private List<LocalItem> items = Collections.emptyList();
 	private boolean loaded;
 	private boolean loggedIn;
+	private boolean updatingSpellbook;
 
 	LocalDevPanel(Consumer<String> submit)
 	{
@@ -53,6 +56,15 @@ final class LocalDevPanel extends PluginPanel
 		clearInventory.addActionListener(event -> submit.accept("invclear"));
 		add(restoreSkills);
 		add(clearInventory);
+		add(new JLabel("Spellbook"));
+		spellbook.addActionListener(event ->
+		{
+			if (loggedIn && !updatingSpellbook)
+			{
+				submit.accept("spellbook " + spellbook.getSelectedItem().toString().toLowerCase(Locale.ROOT));
+			}
+		});
+		add(spellbook);
 		teleportNylocas.setToolTipText("Enter an empty instance of the original Nylocas room.");
 		teleportNylocas.addActionListener(event -> submit.accept("nylocas"));
 		add(teleportNylocas);
@@ -144,6 +156,24 @@ final class LocalDevPanel extends PluginPanel
 		status.setText("<html>" + message + "</html>");
 	}
 
+	void setSpellbook(int book)
+	{
+		// The cache uses Standard=0, Ancient=1, Lunar=2, Arceuus=3.
+		int index = book == 2 ? 3 : book == 3 ? 2 : book;
+		if (index >= 0 && index < spellbook.getItemCount() && spellbook.getSelectedIndex() != index)
+		{
+			updatingSpellbook = true;
+			try
+			{
+				spellbook.setSelectedIndex(index);
+			}
+			finally
+			{
+				updatingSpellbook = false;
+			}
+		}
+	}
+
 	void close()
 	{
 		searchTimer.stop();
@@ -185,6 +215,7 @@ final class LocalDevPanel extends PluginPanel
 	private void updateButtons()
 	{
 		restoreSkills.setEnabled(loggedIn);
+		spellbook.setEnabled(loggedIn);
 		clearInventory.setEnabled(loggedIn);
 		teleportNylocas.setEnabled(loggedIn);
 		teleportNylocasBridge.setEnabled(loggedIn);
