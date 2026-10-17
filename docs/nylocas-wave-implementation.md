@@ -143,13 +143,39 @@ GRADLE_USER_HOME=/home/jordan/osrs/.state/gradle \
 This change implements lane-wave composition, natural timing, style schedules,
 initial destinations, cap admission/retries, natural expiry with provisional
 area damage, and big splitting. Accurate congested routing, pillar damage/collapse,
-style-matched incoming
-damage/nulling, and boss/room completion remain separate encounter work. The
-full-schedule test deliberately avoids player combat and does not certify those
+and boss/room completion remain separate encounter work. The full-schedule test
+deliberately avoids player combat and does not certify those
 mechanics. With no player kills and both generations expiring naturally, the
 full-schedule integration fixture creates 206 NPCs, spawns wave 31 at
 first-wave+572 ticks after 85 four-tick cap stalls, and removes the last child at
 first-wave+671.
+
+Style-matched damage and per-player nulling are implemented separately in
+`NylocasBehaviour` through the combat manager's per-target attack check. Hagios
+accept magic, Toxobolos accept ranged, and Ischyros accept melee. A wrong-style
+attempt records that player's account ID on that NPC and forces all subsequent
+attacks from that player to zero, through flickers and changes of weapon. Other
+players, other NPCs, and split children retain independent state. Encounter
+removal discards the null state with the NPC's other behavior state.
+
+Checks occur when the attack rolls, before accuracy, damage XP, and successful-hit
+effects; matching styles still use normal accuracy. Chinchompas retain their
+single shared accuracy roll but check every victim's style even on a miss.
+Barrage, Dinh's special, and scythe sweeps likewise check each victim. The combat
+scripts' `NylocasDamageTest` covers all twelve small/big incoming/fighting forms,
+powered staves and spells, player/NPC isolation, flickers, split children, and
+mixed-style area attacks. Attack-versus-impact timing at a flicker boundary
+remains a launch-time implementation choice rather than recording-backed evidence.
+
+Attacks on an already-nulled Nylocas play a cancellation warning to the attacker
+and flash the native `tob_nylocas_shielded` orb (spotanim 1558) on the NPC.
+The attack that first nulls that player/NPC pair is silent, including every
+splat on that tick. The [cache sound-name reference](https://gist.github.com/Jire/d8db4e0964feb92c719b95cf4821ab2c)
+identifies the chosen warning sound as `cancel_prayer` (2663); its use here is a
+local feedback choice. The vanilla cache's orb uses sequence 1102, with nine
+two-cycle frames and no embedded sound. The orb uses the combat spotanim slot,
+separate from spell splash/impact effects. Feedback is limited to once per
+player/NPC/tick so multi-hit weapons do not stack the same warning.
 
 All nine Theatre source-map regions are multi-combat across all four levels:
 12611, 12612, 12613, 12867, 12869, 13122, 13123, 13125, and 13379. The list

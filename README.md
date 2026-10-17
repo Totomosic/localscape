@@ -38,6 +38,24 @@ and `::theatrestart [starting wave]`, with no admin access required. Rebuild the
 `./dev build-client` and restart RSMod to load these controls; no cache repack
 is required.
 
+The **Gear setups** sidebar panel (blue shirt icon), provided by the enabled
+**Local Gear Setups** plugin, saves and restores development loadouts:
+
+1. Equip your gear and arrange your inventory, including any empty slots.
+2. Enter a setup name and click **Save current setup**. Saving the same name
+   again updates that setup.
+3. Search by name and click a setup's button to apply its equipment and inventory.
+   **Refresh setups** reloads the saved list.
+
+Applying replaces both containers, including quantities and per-item charge data;
+it does not withdraw from the bank. Setups belong to the logged-in character and
+persist across client/server restarts in RSMod's `.data/gear-presets/<character-id>.json`.
+Names support 1–24 letters, numbers, spaces and basic punctuation, with up to 100
+setups per character. Like the item-spawn controls, this requires server admin
+access. The list starts empty until you save a setup. Rebuild the client with
+`./dev build-client`, restart RSMod, and launch a fresh client session to load the
+panel and server commands; no cache repack is required.
+
 ## First setup
 
 Use a Linux desktop session, including WSLg, with Git and Python 3.12 or newer.
@@ -477,6 +495,17 @@ The room cap starts at 12 and increases to 24 after wave 20 spawns. A due
 wave stalls when the existing count is at or above the cap and retries four
 ticks later. Dying bodies count until removal; an admitted wave spawns in full.
 Three age-26 flicker styles remain unobserved in the research and retain their last confirmed style.
+Nylocas accept damage only from their current style: Hagios from magic,
+Toxobolos from ranged, and Ischyros from melee. A wrong-style attack deals zero
+and permanently nulls that individual Nylocas for that player, even after switching
+to the correct style or a flicker. Teammates and other Nylocas are unaffected.
+Each victim of chinchompas, barrage, Dinh's special, and scythe sweeps is checked
+separately. Nulling is recorded when the attack rolls, before projectile impact;
+blocked hits award no damage XP, freeze, stat drain, or Blood Barrage healing.
+Attacking an already-nulled Nylocas plays a cancellation sound for the attacker
+and flashes the native yellow shield orb around it. The attack that first nulls
+the Nylocas produces neither cue, including any additional splats that tick.
+Subsequent multi-hit attacks produce one cue per target per tick.
 Big Nylocas use their southwest tile for terrain and NPC occupancy checks, while
 retaining their 2×2 footprint for pillar contact and combat reach. Their other
 three tiles can overlap smalls or other bigs. Movement and removal release the
