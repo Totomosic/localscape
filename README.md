@@ -276,6 +276,17 @@ of the time, including on misses. Running out of one resource preserves the othe
 These charging and normal attack mechanics follow the
 [OSRS Wiki](https://oldschool.runescape.wiki/w/Toxic_blowpipe).
 
+Black chinchompas attack from nine tiles, or ten on Longrange. Medium fuse
+(Rapid) takes three ticks; Short and Long fuse take four. In multi-combat,
+each throw selects additional targets in the 3x3 square around the primary
+target's southwest tile, including NPCs stacked on that tile. Only southwest
+tiles count, and splash requires the engine's line of sight from the primary.
+Targets are fixed at launch. One accuracy roll against the primary controls
+the whole throw: a miss deals zero to everyone; a success rolls each target's
+damage independently. Each throw consumes one chinchompa, including misses,
+without Ava's recovery or a ground drop. Quiver bonuses do not apply.
+Restart RSMod to load these changes.
+
 For an existing workspace converting from the earlier downloaded checkout,
 register the prepared submodule from a terminal with write access to `.git`:
 
