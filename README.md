@@ -473,7 +473,8 @@ Zombie** (melee), **Resurrect Greater Skeleton** (ranged), and **Resurrect Great
 Ghost** (magic). They require level 76 Magic, six Prayer points, and a Book of the
 dead in inventory or equipped, plus ten fire, five blood, and one cosmic rune
 (or a rune pouch). Casting awards 88 Magic XP and preserves the player's existing
-attack cooldown. Resurrection spells share a 16-tick cooldown; a successful recast
+attack cooldown, ongoing attacks, and pending actions, including after Spellbook
+Swap. Resurrection spells share a 16-tick cooldown; a successful recast
 replaces the existing thrall.
 
 Each thrall lasts one tick per current Magic level at casting: **112 ticks / 67.2
@@ -499,6 +500,7 @@ an RSMod restart. No client rebuild is required.
 for 60 seconds. Each NPC kill credited to the caster consumes one stack and
 restores 15% special attack energy, capped at 100%. Both stacks share the original
 expiry, and the 60-second cast cooldown continues after both stacks are used.
+Casting preserves ongoing attacks and pending actions, including after Spellbook Swap.
 The spell uses its normal level and rune requirements, including unlimited runes
 from a rune pouch. Restart RSMod to load it; no cache repack or client rebuild is
 required.
