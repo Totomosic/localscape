@@ -320,8 +320,8 @@ hit of `floor(current_magic_level / 3) - 6`, before normal magic damage bonuses.
 It uses its native casting and projectile effects, with the `shadow_cast` sound
 (178), rather than Tumeken's Shadow's firing sound (6410). Its projectile follows
 the [Eye of Ayak hit-delay table](https://oldschool.runescape.wiki/w/Hit_delay#Eye_of_Ayak):
-one tick at distances 1–2 and two ticks at distances 3–8. NPC processing adds one
-tick to those listed delays. Its attack range is six tiles, or eight on Longrange.
+one tick at distances 1–2 and two ticks at distances 3–8, for both NPC and player
+targets. Its attack range is six tiles, or eight on Longrange.
 It holds up to 50,000 charges:
 either two death runes and one chaos rune per charge, or one demon tear. The two
 charge types cannot be mixed. Use charging materials on the staff, or use Charge
@@ -337,6 +337,18 @@ Accurate retains 2 Magic XP per damage. This supplies the Defence XP used by
 [Nylo Death Indicators](https://github.com/InfernoStats/Nylo-Death-Indicators/blob/1b29a76e1799cf813299bfdc75e12251028643ae/src/main/java/com/infernostats/NyloDeathIndicatorsPlugin.java#L293-L327)
 to predict Longrange kills before the projectile lands. Restart RSMod to load
 these changes.
+
+Combat weapon and spell cast sounds play around the attacker so nearby players
+can hear them. Claw specials play all three sound phases, both bulwark variants
+play their bash sound, and ancient spells play one cast sound per cast even when
+they hit multiple targets or splash.
+
+Ranged weapons and specials use their original hit delay: one queue tick plus
+the projectile's client cycles divided by 30, rounded down. Close-range ranged
+hits therefore land one tick after melee. Powered staves, standard and ancient
+spells, and thralls retain their corrected projectile timing, including splashes.
+Two-projectile attacks retain each projectile's individual delay; the blowpipe
+special still takes its extra travel tick outside adjacent range.
 
 Dinh's bulwark and Dinh's blazing bulwark have the Shield Bash special attack,
 costing 50% energy and using a custom 25% accuracy bonus against crush defence.
@@ -375,9 +387,9 @@ These charging and normal attack mechanics follow the
 Charged **Tonalztics of Ralos** (item `28922`) make two independent ranged accuracy
 and damage rolls per attack, each capped at `floor(normal_max_hit * 0.75)`.
 The [Wiki DPS calculator](https://github.com/weirdgloop/osrs-dps-calc/blob/main/src/lib/PlayerVsNPCCalc.ts)
-confirms the independent rolls and 75% cap. Both splats land together at a fixed
-one-tick hit delay at every distance, one tick later than melee; the server's hit
-queue represents this as two processing ticks, compared with one for melee.
+confirms the independent rolls and 75% cap. Both splats land together two
+server ticks after firing at every distance, using the same restored hit delay
+as other ranged attacks with one-tick projectile travel.
 Each splat awards XP separately and respects encounter damage restrictions.
 The weapon uses its charged attack animation and two native projectiles, stays
 equipped, and does not consume quiver ammunition. This implements normal attacks
@@ -533,7 +545,8 @@ dead in inventory or equipped, plus ten fire, five blood, and one cosmic rune
 (or a rune pouch). Casting awards 88 Magic XP and preserves the player's existing
 attack cooldown, ongoing attacks, and pending actions, including after Spellbook
 Swap. Resurrection spells share a 16-tick cooldown; a successful recast
-replaces the existing thrall.
+replaces the existing thrall. Each style plays its own resurrection sound at the
+summoning tile, audible to nearby players; rejected casts remain silent.
 
 Each thrall lasts two ticks per current Magic level at casting: **224 ticks / 134.4
 seconds** with the server's permanent Magic boost. The doubled master Combat
@@ -544,7 +557,8 @@ than following the player. Thralls attack the owner's last attacked NPC for up t
 player attacks again. They attack independently every four ticks, rolling
 **0–3 damage without an accuracy check** and awarding no combat XP. Zombies walk
 into melee range; skeletons and ghosts attack within six tiles with line of sight.
-Ghost projectiles land one tick earlier than skeleton projectiles. Thrall damage grants the owner kill
+Skeleton projectiles release one tick later than ghost projectiles; their hit
+timing follows each projectile's impact tick. Thrall damage grants the owner kill
 credit and respects NPC immunity and Nylocas styles. Wrong-style attacks on
 Nylocas still animate and land as zero hits, which can speed up death through
 overkill without nulling the owner. Thralls cannot take damage, attack players, or
