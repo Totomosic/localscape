@@ -717,7 +717,8 @@ Every small and big wave form plays the native Nylocas defend sound (4020) for
 the attacker on each hit impact, including zero-damage and lethal hits. Each
 splat produces its own sound, including multiple hits in the same tick. Repack
 the cache with the server stopped, then restart RSMod to load this NPC setting.
-Attacking an already-nulled Nylocas plays a louder cancellation sound for the attacker
+Attacking an already-nulled Nylocas plays the native warning/error buzzer
+(`errorsound`, 2394), amplified with two synchronized copies for the attacker,
 and flashes the native yellow shield orb around it. The attack that first nulls
 the Nylocas produces neither cue, including any additional splats that tick.
 Subsequent multi-hit attacks produce one cue per target per tick.
