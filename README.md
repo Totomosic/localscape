@@ -323,9 +323,10 @@ The Eye of ayak is a powered staff with a three-tick attack cycle and a base max
 hit of `floor(current_magic_level / 3) - 6`, before normal magic damage bonuses.
 It uses its native casting and projectile effects, with the `shadow_cast` sound
 (178), rather than Tumeken's Shadow's firing sound (6410). Its projectile follows
-the [Eye of Ayak hit-delay table](https://oldschool.runescape.wiki/w/Hit_delay#Eye_of_Ayak):
-one tick at distances 1–2 and two ticks at distances 3–8, for both NPC and player
-targets. Its attack range is six tiles, or eight on Longrange.
+the [Eye of Ayak hit-delay table](https://oldschool.runescape.wiki/w/Hit_delay#Eye_of_Ayak).
+That table counts waiting ticks before damage processing: actual hits and splashes
+resolve two ticks after casting at distances 1–2 and three ticks at distances 3–8,
+for both NPC and player targets. Its attack range is six tiles, or eight on Longrange.
 It holds up to 50,000 charges:
 either two death runes and one chaos rune per charge, or one demon tear. The two
 charge types cannot be mixed. Use charging materials on the staff, or use Charge
@@ -349,8 +350,11 @@ they hit multiple targets or splash.
 
 Ranged weapons and specials use their original hit delay: one queue tick plus
 the projectile's client cycles divided by 30, rounded down. Close-range ranged
-hits therefore land one tick after melee. Powered staves, standard and ancient
-spells, and thralls retain their corrected projectile timing, including splashes.
+hits therefore land one tick after melee. Powered staves and standard and ancient
+spells also include a queue tick after projectile travel, for hits and splashes.
+The timing conversion is verified against RuneLite's
+[native hit-delay calculation](https://github.com/runelite/runelite/blob/runelite-parent-1.11.19/runelite-client/src/main/java/net/runelite/client/plugins/specialcounter/SpecialWeapon.java).
+Thralls retain their own projectile timing.
 Two-projectile attacks retain each projectile's individual delay; the blowpipe
 special still takes its extra travel tick outside adjacent range.
 
@@ -391,9 +395,9 @@ These charging and normal attack mechanics follow the
 Charged **Tonalztics of Ralos** (item `28922`) make two independent ranged accuracy
 and damage rolls per attack, each capped at `floor(normal_max_hit * 0.75)`.
 The [Wiki DPS calculator](https://github.com/weirdgloop/osrs-dps-calc/blob/main/src/lib/PlayerVsNPCCalc.ts)
-confirms the independent rolls and 75% cap. Both splats land together two
-server ticks after firing at every distance, using the same restored hit delay
-as other ranged attacks with one-tick projectile travel.
+confirms the independent rolls and 75% cap. Both splats land together one
+server tick after firing at every distance, matching their one-tick projectile
+travel.
 Each splat awards XP separately and respects encounter damage restrictions.
 The weapon uses its charged attack animation and two native projectiles, stays
 equipped, and does not consume quiver ammunition. This implements normal attacks
@@ -411,8 +415,9 @@ Targets are fixed at launch. One accuracy roll against the primary controls
 the whole throw: a miss deals zero to everyone; a success rolls each target's
 damage independently. Each throw consumes one chinchompa, including misses,
 without Ava's recovery or a ground drop. Quiver bonuses do not apply.
-Each throw plays a release sound at the thrower, followed by one explosion sound
-at the primary target's tile when the projectile lands, including on misses.
+Each throw plays the shared throwing-weapon release sound (2706) at the thrower,
+followed by one explosion sound (360) at the primary target's tile when the
+projectile lands, including on misses.
 Elite Void preserves its full 12.5% ranged damage bonus: at 112 Ranged with
 Rigour, Medium fuse, and +44 ranged strength, black chinchompas have a max hit of 28.
 Restart RSMod to load these changes.
@@ -454,6 +459,16 @@ hotkey is pressed again; enabling it allows the panel to close. The custom
 client submits the native toggle's resulting value with
 `localscape_sidepanel_hotkeys`, and the server preserves it across keybind
 changes, restoring default keybinds, and logins.
+
+The main in-game settings also save **Transparent inventory** and **Transparent
+chatbox** independently to the account, including when either option is turned
+off. Their native client scripts apply the appearance immediately in supported
+resizable layouts. The hidden plugin captures each toggle's resulting value and
+sends `localscape_transparency inventory <0|1>` or
+`localscape_transparency chatbox <0|1>` to the server. The server updates the
+persistent native varbits, preserves other settings packed into the same varp,
+and synchronizes the saved values on login. These settings require the client
+rebuild and server restart below; no cache repack is needed.
 
 Changes to this feature require both the custom client and the server:
 
@@ -692,6 +707,10 @@ to the correct style or a flicker. Teammates and other Nylocas are unaffected.
 Each victim of chinchompas, barrage, Dinh's special, and scythe sweeps is checked
 separately. Nulling is recorded when the attack rolls, before projectile impact;
 blocked hits award no damage XP, freeze, stat drain, or Blood Barrage healing.
+Every small and big wave form plays the native Nylocas defend sound (4020) for
+the attacker on each hit impact, including zero-damage and lethal hits. Each
+splat produces its own sound, including multiple hits in the same tick. Repack
+the cache with the server stopped, then restart RSMod to load this NPC setting.
 Attacking an already-nulled Nylocas plays a louder cancellation sound for the attacker
 and flashes the native yellow shield orb around it. The attack that first nulls
 the Nylocas produces neither cue, including any additional splats that tick.

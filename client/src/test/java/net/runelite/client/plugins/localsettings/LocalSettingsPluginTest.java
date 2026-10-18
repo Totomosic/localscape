@@ -209,6 +209,50 @@ public class LocalSettingsPluginTest
 	}
 
 	@Test
+	public void savesBothTransparencyTogglesAndCapturesEachQueuedValue()
+	{
+		for (int value : new int[]{1, 0})
+		{
+			when(client.getVarbitValue(4609)).thenReturn(value);
+			plugin.onScriptPostFired(new ScriptPostFired(3976));
+			when(client.getVarbitValue(4608)).thenReturn(value);
+			plugin.onScriptPostFired(new ScriptPostFired(3981));
+		}
+
+		verify(client, never()).runScript(any());
+		assertEquals(4, pending.size());
+		pending.forEach(Runnable::run);
+		verify(client).runScript(49, "localscape_transparency inventory 1");
+		verify(client).runScript(49, "localscape_transparency chatbox 1");
+		verify(client).runScript(49, "localscape_transparency inventory 0");
+		verify(client).runScript(49, "localscape_transparency chatbox 0");
+	}
+
+	@Test
+	public void transparencySyncDoesNotResubmitToggles()
+	{
+		// Native redraws and server varp updates must not create a save loop.
+		for (int script : new int[]{921, 2373, 3848, 3849, 6716})
+		{
+			plugin.onScriptPostFired(new ScriptPostFired(script));
+		}
+		verifyZeroInteractions(clientThread);
+	}
+
+	@Test
+	public void ignoresTransparencyTogglesAndCancelsQueuedSavesOnLogout()
+	{
+		plugin.onScriptPostFired(new ScriptPostFired(3976));
+		plugin.onScriptPostFired(new ScriptPostFired(3981));
+		when(client.getGameState()).thenReturn(GameState.LOGIN_SCREEN);
+		plugin.onScriptPostFired(new ScriptPostFired(3976));
+		plugin.onScriptPostFired(new ScriptPostFired(3981));
+		assertEquals(2, pending.size());
+		pending.forEach(Runnable::run);
+		verify(client, never()).runScript(any());
+	}
+
+	@Test
 	public void submitsSidePanelHotkeyToggle()
 	{
 		when(client.getVarbitValue(4611)).thenReturn(1);

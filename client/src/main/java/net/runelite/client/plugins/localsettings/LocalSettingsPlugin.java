@@ -19,7 +19,7 @@ import net.runelite.client.plugins.PluginDescriptor;
 
 @PluginDescriptor(
 	name = "Local Server Settings",
-	description = "Saves in-game keybind and side-panel settings to the local server",
+	description = "Saves in-game keybind, side-panel and transparency settings to the local server",
 	enabledByDefault = true,
 	hidden = true
 )
@@ -31,6 +31,8 @@ public class LocalSettingsPlugin extends Plugin
 	private static final int SEND_COMMAND = 49;
 	private static final int RESTORE_KEYBINDS = 58;
 	private static final int TOGGLE_SIDE_PANEL_HOTKEYS = 3995;
+	private static final int TOGGLE_TRANSPARENT_INVENTORY = 3976;
+	private static final int TOGGLE_TRANSPARENT_CHATBOX = 3981;
 	private static final int OPEN_DROPDOWN = 3851;
 	private static final int SELECT_DROPDOWN = 3852;
 	private static final int REFRESH_DROPDOWN = 3854;
@@ -92,12 +94,24 @@ public class LocalSettingsPlugin extends Plugin
 	@Subscribe
 	public void onScriptPostFired(ScriptPostFired event)
 	{
-		if (event.getScriptId() == TOGGLE_SIDE_PANEL_HOTKEYS && client.getGameState() == GameState.LOGGED_IN)
+		if (client.getGameState() != GameState.LOGGED_IN)
+		{
+			return;
+		}
+		if (event.getScriptId() == TOGGLE_SIDE_PANEL_HOTKEYS)
 		{
 			// The native script toggles this inverted preference locally. Save its
 			// resulting value so server varp updates and relogging preserve it.
 			int cannotClose = client.getVarbitValue(VarbitID.HOTKEY_CANNOT_CLOSE_SIDEPANEL);
 			submit("localscape_sidepanel_hotkeys " + cannotClose);
+		}
+		else if (event.getScriptId() == TOGGLE_TRANSPARENT_INVENTORY)
+		{
+			submit("localscape_transparency inventory " + client.getVarbitValue(VarbitID.SIDE_TRANSPARENCY));
+		}
+		else if (event.getScriptId() == TOGGLE_TRANSPARENT_CHATBOX)
+		{
+			submit("localscape_transparency chatbox " + client.getVarbitValue(VarbitID.CHATBOX_TRANSPARENCY));
 		}
 	}
 
