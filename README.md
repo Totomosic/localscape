@@ -518,8 +518,11 @@ RSMod to load them; no cache repack or client rebuild is required.
 **Spellbook Swap (SBS)** is available on the Lunar spellbook. Choose Standard,
 Ancient, or Arceuus to play the swap animation and change books three ticks later.
 The 130 Magic XP is awarded when that three-tick stall finishes.
-Existing movement, combat, and other interactions pause during the stall and resume
-automatically afterwards, including commands clicked earlier in the casting tick.
+Red-x targets remain active throughout the stall and the player keeps facing them.
+For a target clicked earlier in the casting tick, movement starts after the stall;
+for an interaction already active on an earlier tick, the player keeps approaching.
+Attacking, passing barriers, and other interactions wait until the stall ends.
+Ordinary ground movement pauses during the stall and resumes afterwards.
 Movement or attack clicks received after SBS starts are ignored during the stall.
 The spell's named menu options cast directly; the generic **Cast** option opens
 the spellbook selection dialogue.
