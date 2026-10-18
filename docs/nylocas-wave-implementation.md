@@ -78,8 +78,10 @@ ordinary or player-aggro, including any split forms. Each counts once regardless
 of HP, and dying/expiring bodies count until removal. The boss and unrelated NPCs
 are excluded. Counting the NPC registry rather than only the behaviour map
 keeps HP-zero bodies in the cap after they leave normal AI processing. Natural
-expiry/removal runs before the wave check at the start of the cycle; ordinary
-deaths removed later in that cycle release capacity for a subsequent check.
+expiry/removal runs at the start of the cycle. Wave admission runs after NPC
+processing, so ordinary deaths completed on a due tick also release capacity
+before that tick's check. See [despawn verification](nylocas-despawn-verification.md)
+for the wave 21 overkill regression.
 
 Natural expiry uses the recorded lifetime, independent of AI timer delays and
 wave progress. Ages below are zero-based (`current tick - spawn tick`):
@@ -212,8 +214,9 @@ queue and walking-arrival delays: removal/splits at lethal+6 when stationary or
 lethal+7 when walking. Natural expiry creates children at parent spawn+55, after
 the three-tick expiry animation. Administrative deletion and instance disposal
 create no children. The parent counts once until removal; both children then
-count independently, including above the room cap. Natural expiry and its splits
-run before the start-of-cycle wave check; queued player deaths run later.
+count independently, including above the room cap. Natural expiry and queued
+player deaths both complete before the wave check; their new splits count in
+that check.
 
 The baseline coordinates are the parent's **final** southwest anchor `(x,z)` and
 `(x+1,z+1)`, in its own instance and plane. Occupied tiles do not suppress or
