@@ -344,9 +344,9 @@ to predict Longrange kills before the projectile lands. Restart RSMod to load
 these changes.
 
 Combat weapon and spell cast sounds play around the attacker so nearby players
-can hear them. Claw specials play all three sound phases, both bulwark variants
-play their bash sound, and ancient spells play one cast sound per cast even when
-they hit multiple targets or splash.
+can hear them. Claw specials play sound phases `1, 2, 3, 3` at 15-client-cycle
+intervals. Both bulwark variants play their bash sound, and ancient spells play
+one cast sound per cast even when they hit multiple targets or splash.
 
 Ranged weapons and specials use their original hit delay: one queue tick plus
 the projectile's client cycles divided by 30, rounded down. Close-range ranged
@@ -592,6 +592,8 @@ for 60 seconds. Each NPC kill credited to the caster consumes one stack and
 restores 15% special attack energy, capped at 100%. Both stacks share the original
 expiry, and the 60-second cast cooldown continues after both stacks are used.
 Casting preserves ongoing attacks and pending actions, including after Spellbook Swap.
+Successful casts play the native Death Charge cast sound around the caster;
+failed or cooldown-blocked casts remain silent.
 The spell uses its normal level and rune requirements, including unlimited runes
 from a rune pouch. Restart RSMod to load it; no cache repack or client rebuild is
 required.
@@ -610,8 +612,10 @@ the Hitpoints actually lost, including on lethal hits. Zero hits, player attacks
 and environmental damage leave the status active. The two spells share a
 30-second cooldown per caster, which continues after reflection; receiving
 Vengeance Other does not start the recipient's cast cooldown. Normal level and
-rune requirements apply, including unlimited runes from a rune pouch. Restart
-RSMod to load them; no cache repack or client rebuild is required.
+rune requirements apply, including unlimited runes from a rune pouch. Successful
+casts play the matching native Vengeance or Vengeance Other sound around the
+recipient; failed or cooldown-blocked casts remain silent. Restart RSMod to load
+them; no cache repack or client rebuild is required.
 
 **Energy Transfer** is available on the Lunar spellbook at level 91 Magic. It
 costs 3 Astral, 2 Law, and 1 Nature rune, all of the caster's special attack
