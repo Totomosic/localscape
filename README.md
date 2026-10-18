@@ -580,6 +580,16 @@ Vengeance Other does not start the recipient's cast cooldown. Normal level and
 rune requirements apply, including unlimited runes from a rune pouch. Restart
 RSMod to load them; no cache repack or client rebuild is required.
 
+**Energy Transfer** is available on the Lunar spellbook at level 91 Magic. It
+costs 3 Astral, 2 Law, and 1 Nature rune, all of the caster's special attack
+energy, and 10 HP; the caster must have more than 10 HP. It restores the
+recipient's special attack and run energy to full and awards 100 Magic XP.
+The recipient must enable Accept Aid. Both players must be in multi-combat
+when inside the Wilderness. Casting interrupts the caster's current action
+without adding an attack delay or resetting an existing attack cooldown.
+Restart RSMod to load it; no cache repack is required. Mechanics follow the
+[Energy Transfer wiki reference](https://oldschool.runescape.wiki/w/Energy_Transfer).
+
 **Spellbook Swap (SBS)** is available on the Lunar spellbook. Choose Standard,
 Ancient, or Arceuus to play the swap animation and change books three ticks later.
 The 130 Magic XP is awarded when that three-tick stall finishes.

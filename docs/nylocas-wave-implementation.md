@@ -33,9 +33,14 @@ east bigs normally use x3309, but wave 30's east big uses x3310. Wave 30's south
 west-slot small starts as magic. Wave 31's west south-slot small flickers from
 ranged to melee at age 5, overriding the guide's magic entry.
 
-Style transformations preserve current/max HP, size, spawn age, assigned
-pillar, and player targeting state. Player attacks use the current style for
-range, accuracy, max hit, animation, and hit type. Ranged/magic aggros have a
+Style transformations preserve current/max HP, size, spawn age, and assigned
+pillar. Fighting Nylocas independently choose a random eligible player in their
+room each tick, with equal chances and consecutive repeats allowed. They only
+attack that tick's chosen player; an out-of-range choice causes a chase even
+when the attack cooldown has elapsed and another player is in reach. Fighting
+Nylocas that flicker to melee at age 26 continue choosing and chasing players
+but cannot attack for the rest of their lifetime. Other attacks use the current
+style for range, accuracy, max hit, animation, and hit type. Ranged/magic aggros have a
 two-tile reach measured from their nearest footprint tile; melee requires
 cardinal contact. This replaces the original unverified four-tile default using
 [recorded approach/hold evidence](nylocas-movement-evidence.md#aggro-ranged-and-magic-reach). Pillar-directed NPCs retain
