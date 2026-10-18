@@ -1,0 +1,40 @@
+{
+  "retrievedAt": "2026-10-18T04:19:18.781512+00:00",
+  "recordings": [
+    {
+      "uuid": "653f90c7-176b-4fd4-a0eb-1cbd818481ce",
+      "mode": 11,
+      "scale": 2,
+      "ticksLost": 0,
+      "url": "https://blert.io/raids/tob/653f90c7-176b-4fd4-a0eb-1cbd818481ce/nylocas",
+      "files": {
+        "raid": {
+          "path": "recordings/653f90c7-176b-4fd4-a0eb-1cbd818481ce.raid.json.gz",
+          "sha256": "f440d34cf29c20539cd0233d3807dbb1beb99ec61a58dca053cab3caed3d89b1",
+          "url": "https://blert.io/api/v1/raids/tob/653f90c7-176b-4fd4-a0eb-1cbd818481ce",
+          "uncompressedBytes": 54765
+        },
+        "events": {
+          "path": "recordings/653f90c7-176b-4fd4-a0eb-1cbd818481ce.events.json.gz",
+          "sha256": "90e8bf2f0c5b2f263170d90e3e842e79850129c3d371a82228bee92a1c3cf6c2",
+          "url": "https://blert.io/api/v1/raids/tob/653f90c7-176b-4fd4-a0eb-1cbd818481ce/events?stage=12",
+          "uncompressedBytes": 991355
+        }
+      }
+    }
+  ],
+  "previousCorpus": {
+    "path": "../research/nylocas/manifest.json",
+    "sha256": "d4b03bdf4dcf759d2cd756a9d5cc53e6b52afad3b0a5bd558a534001e3552003"
+  },
+  "classification": {
+    "path": "../research/nylocas/lane-spawn-targets.csv",
+    "sha256": "829f99d9d53dd0bc1666528e031e21654469f6a35860f88558ae5d12feda4cc6",
+    "meaning": "Prior recording-derived physical fingerprint/initial aggro/pillar assignments; not a server target field."
+  },
+  "sourceRevisions": {
+    "workspace": "07387c2114c287766f2e5a1ab9fa1289a7ff4c54",
+    "rsmod": "bbb4b2a654fcf3813bf127c14682f571cdfb4dd0"
+  },
+  "selection": "Previously pinned six solos and seven duos, plus the task-supplied duo: 14 regular mode recordings, six solo/eight duo. Convenience sample; repeated players, not independent trials."
+}

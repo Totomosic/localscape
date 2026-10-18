@@ -644,8 +644,16 @@ Regular big Nylocas use their southwest tile for terrain and NPC occupancy
 checks, while retaining their 2×2 footprint for pillar contact and combat reach.
 Their other three tiles can overlap smalls or other bigs. Player-targeting big
 Nylocas switch to their full 2×2 movement and occupancy footprint when they
-enter the arena and change to their fighting form. Movement and removal release
-the footprint reserved by that form.
+enter the arena and change to their fighting form. Ordinary pillar attackers
+check NPC collision at the chosen destination, allowing diagonals past occupied
+side tiles while still respecting terrain corners. They approach a geometric
+pillar goal and retry locally when crowded; the retry choice is a provisional
+random policy rather than a recovered server direction algorithm.
+Removing an ordinary big clears NPC collision across its native 2×2 footprint,
+which can leave a stationary neighbour nonblocking and allow a later arrival to
+stack. Split births can reserve those tiles again. Fighting bigs retain full
+movement and removal footprints. Recording comparisons and remaining limits are
+in [pathing verification](docs/nylo-pathing/verification.md).
 After wave 31 and the last wave body or split child disappears, Nylocas Vasilias
 drops 16–19 ticks later, aligned to the room's four-tick wave cycle. It becomes
 attackable in melee two ticks after dropping. The opening melee form lasts nine
