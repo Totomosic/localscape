@@ -343,6 +343,8 @@ damage independently. Each throw consumes one chinchompa, including misses,
 without Ava's recovery or a ground drop. Quiver bonuses do not apply.
 One explosion sound plays at the primary target's tile when the projectile lands,
 including on misses.
+Elite Void preserves its full 12.5% ranged damage bonus: at 112 Ranged with
+Rigour, Medium fuse, and +44 ranged strength, black chinchompas have a max hit of 28.
 Restart RSMod to load these changes.
 
 For an existing workspace converting from the earlier downloaded checkout,
@@ -510,6 +512,21 @@ and environmental damage leave the status active. The two spells share a
 Vengeance Other does not start the recipient's cast cooldown. Normal level and
 rune requirements apply, including unlimited runes from a rune pouch. Restart
 RSMod to load them; no cache repack or client rebuild is required.
+
+**Spellbook Swap (SBS)** is available on the Lunar spellbook. Choose Standard,
+Ancient, or Arceuus to play the swap animation and change books three ticks later.
+The 130 Magic XP is awarded when that three-tick stall finishes.
+Existing movement, combat, and other interactions pause during the stall and resume
+automatically afterwards, including commands clicked earlier in the casting tick.
+Movement or attack clicks received after SBS starts are ignored during the stall.
+The spell's named menu options cast directly; the generic **Cast** option opens
+the spellbook selection dialogue.
+The next successful spell cast returns you to Lunar immediately, including combat
+splashes and Home Teleport; failed casts preserve the swap. The temporary book
+expires after 200 ticks (two minutes) without a cast. Returning clears autocast,
+and logging out also restores Lunar. Normal level and rune requirements apply,
+including unlimited runes from a rune pouch. Restart RSMod to load it; no cache
+repack or client rebuild is required.
 
 Rebuild with `./dev build-client`, restart RSMod, and launch a new client session
 to load spellbook controls and rune pouch support. No cache repack is required.
