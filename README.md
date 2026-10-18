@@ -43,6 +43,8 @@ after confirmed Nylocas entry. Starting at wave 21 or later immediately uses the
 change options for another raid. The host's selected starting wave appears in every
 party member's game chat when the raid starts.
 
+Creating or joining a lobby restores all skill levels, including HP and Prayer, to base,
+and fully refills special attack and run energy.
 Joining closes when the host starts. A host leaving or logging out closes their
 lobby to new joins; creating another lobby starts a fresh instance. Server results
 appear in game chat. The commands are `::theatrecreate`, `::theatrejoin <host name>`,
@@ -61,9 +63,11 @@ The **Gear setups** sidebar panel (blue shirt icon), provided by the enabled
    **Refresh setups** reloads the saved list.
 
 Applying replaces both containers, including quantities and per-item charge data;
-it does not withdraw from the bank. Setups are saved on the server and shared
-with every player, including players who did not create them. They persist across
-client/server restarts in RSMod's `.data/gear-presets/<creator-character-id>.json`.
+it also restores all skill levels, including HP and Prayer, to base, and fully refills
+special attack and run energy. It does not withdraw from the bank. Setups are saved
+on the server and shared with every player, including players who did not create
+them. They persist across client/server restarts in RSMod's
+`.data/gear-presets/<creator-character-id>.json`.
 Existing character files are included in the shared list automatically; resaving
 an older setup adds its creator prefix. Entered names support 1–24 letters,
 numbers, spaces and basic punctuation, with up to 100 setups per creator.
@@ -407,8 +411,8 @@ Targets are fixed at launch. One accuracy roll against the primary controls
 the whole throw: a miss deals zero to everyone; a success rolls each target's
 damage independently. Each throw consumes one chinchompa, including misses,
 without Ava's recovery or a ground drop. Quiver bonuses do not apply.
-One explosion sound plays at the primary target's tile when the projectile lands,
-including on misses.
+Each throw plays a release sound at the thrower, followed by one explosion sound
+at the primary target's tile when the projectile lands, including on misses.
 Elite Void preserves its full 12.5% ranged damage bonus: at 112 Ranged with
 Rigour, Medium fuse, and +44 ranged strength, black chinchompas have a max hit of 28.
 Restart RSMod to load these changes.
@@ -688,7 +692,7 @@ to the correct style or a flicker. Teammates and other Nylocas are unaffected.
 Each victim of chinchompas, barrage, Dinh's special, and scythe sweeps is checked
 separately. Nulling is recorded when the attack rolls, before projectile impact;
 blocked hits award no damage XP, freeze, stat drain, or Blood Barrage healing.
-Attacking an already-nulled Nylocas plays a cancellation sound for the attacker
+Attacking an already-nulled Nylocas plays a louder cancellation sound for the attacker
 and flashes the native yellow shield orb around it. The attack that first nulls
 the Nylocas produces neither cue, including any additional splats that tick.
 Subsequent multi-hit attacks produce one cue per target per tick.
@@ -696,7 +700,8 @@ Regular big Nylocas use their southwest tile for terrain and NPC occupancy
 checks, while retaining their 2×2 footprint for pillar contact and combat reach.
 Their other three tiles can overlap smalls or other bigs. Player-targeting big
 Nylocas switch to their full 2×2 movement and occupancy footprint when they
-enter the arena and change to their fighting form. Ordinary pillar attackers
+enter the arena and change to their fighting form. Pillar-bound Nylocas ignore
+players while fighting Nylocas remain blocked by them. Ordinary pillar attackers
 check NPC collision at the chosen destination, allowing diagonals past occupied
 side tiles while still respecting terrain corners. They approach a geometric
 pillar goal and retry locally when crowded; the retry choice is a provisional
