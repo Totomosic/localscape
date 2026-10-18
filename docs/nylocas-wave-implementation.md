@@ -142,8 +142,9 @@ GRADLE_USER_HOME=/home/jordan/osrs/.state/gradle \
 
 This change implements lane-wave composition, natural timing, style schedules,
 initial destinations, cap admission/retries, natural expiry with provisional
-area damage, and big splitting. Accurate congested routing, pillar damage/collapse,
-and boss/room completion remain separate encounter work. The full-schedule test
+area damage, and big splitting. Accurate congested routing and pillar damage/collapse
+remain separate encounter work. Boss/room completion has since been implemented;
+see [boss evidence and implementation limits](nylocas-boss-evidence.md). The full-schedule test
 deliberately avoids player combat and does not certify those
 mechanics. With no player kills and both generations expiring naturally, the
 full-schedule integration fixture creates 206 NPCs, spawns wave 31 at

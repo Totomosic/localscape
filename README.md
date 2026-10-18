@@ -618,6 +618,18 @@ Big Nylocas use their southwest tile for terrain and NPC occupancy checks, while
 retaining their 2×2 footprint for pillar contact and combat reach. Their other
 three tiles can overlap smalls or other bigs. Movement and removal release the
 southwest reservation without clearing neighbouring Nylocas' flags.
+After wave 31 and the last wave body or split child disappears, Nylocas Vasilias
+drops 16–19 ticks later, aligned to the room's four-tick wave cycle. It becomes
+attackable in melee two ticks after dropping. The opening melee form lasts nine
+ticks; subsequent forms switch to a different random style every ten ticks.
+Matching-style hits damage it. Other styles heal it, capped at maximum HP, and
+reflect the full damage to the attacking player without protection-prayer reduction.
+These checks currently use the form at impact, including projectiles crossing a
+switch; the precise native boundary remains unverified. Boss HP is 1875 for
+1–3 players, 2187 for four, and 2500 for five. Its native attacks respect
+protection prayers, and its death completes the room and clears the progress bar.
+See [boss timing evidence](docs/nylocas-boss-evidence.md) for the replay measurements
+and the remaining attack-timing and visual-effect limitations.
 See [wave implementation details](docs/nylocas-wave-implementation.md) for
 provenance, verification, and the remaining encounter mechanics.
 Starting the raid again does not reset its wave or progress. Leaving the instance
