@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import javax.swing.JButton;
+import javax.swing.AbstractButton;
 import javax.swing.JSpinner;
 import javax.swing.SwingUtilities;
 import org.junit.Test;
@@ -58,6 +59,43 @@ public class TheatreControlsPanelTest
 			assertEquals(Arrays.asList("theatrestart 21"), commands);
 			assertFalse(wave.isEnabled());
 		});
+	}
+
+	@Test
+	public void maxHitModesAreExclusiveAndSubmittedWithPartyHealth() throws Exception
+	{
+		SwingUtilities.invokeAndWait(() ->
+		{
+			List<String> commands = new ArrayList<>();
+			TheatreControlsPanel panel = new TheatreControlsPanel(commands::add);
+			AbstractButton all = option(panel, "Max hit: all weapons");
+			AbstractButton slow = option(panel, "Max hit: 5 ticks or slower");
+			AbstractButton hp = option(panel, "Start everyone at 250 HP");
+			assertFalse(all.isEnabled());
+			assertFalse(hp.isSelected());
+			panel.setLoggedIn(true);
+			all.doClick();
+			slow.doClick();
+			assertFalse(all.isSelected());
+			assertTrue(slow.isSelected());
+			hp.doClick();
+			button(panel, "Start raid").doClick();
+			assertEquals(Arrays.asList("theatrestart 1 maxhit-slow hp250"), commands);
+			assertFalse(all.isEnabled());
+			assertFalse(slow.isEnabled());
+			assertFalse(hp.isEnabled());
+			panel.setRaidStarted(false);
+			all.doClick();
+			assertFalse(slow.isSelected());
+			button(panel, "Start raid").doClick();
+			assertEquals("theatrestart 1 maxhit-all hp250", commands.get(1));
+		});
+	}
+
+	private static AbstractButton option(TheatreControlsPanel panel, String text)
+	{
+		return Arrays.stream(panel.getComponents()).filter(AbstractButton.class::isInstance)
+			.map(AbstractButton.class::cast).filter(button -> button.getText().equals(text)).findFirst().get();
 	}
 
 	static JSpinner wave(TheatreControlsPanel panel)

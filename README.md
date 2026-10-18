@@ -20,10 +20,22 @@ lobbies for ordinary players:
 1. The host clicks **Create lobby** to enter a fresh instance at the Bloat door.
 2. Other players enter the host's player name and click **Join raid**. Names are
    case insensitive and may contain spaces. Parties support up to five players.
-3. The host selects a **Starting wave** from 1–31 (default 1), then clicks **Start raid**
-   to apply the options to the whole party, open the party HUD, and unlock the Bloat door.
+3. The host selects a **Starting wave** from 1–31 (default 1) and raid options,
+   then clicks **Start raid** to apply them to the whole party, open the party HUD,
+   and unlock the Bloat door.
    Everyone can then use **Enter** or **Quick-Enter** to reach the Nylocas bridge
    and pass the barrier together.
+
+The host can choose **Max hit: all weapons** or **Max hit: 5 ticks or slower**
+against correct-style Nylocas. These modes are mutually exclusive; **Normal hits** is
+the default. Eligible attacks always pass accuracy and roll their maximum damage,
+including each splat of multi-hit weapons. The slow mode uses the selected combat
+style's attack speed (including Rapid); spells use their casting speed. Wrong-style
+attacks and previously nulled targets keep their usual damage restrictions. Options
+apply only to party members against Nylocas in their own raid.
+
+**Start everyone at 250 HP** sets every party member's current HP to exactly 250
+once when the raid starts. Base Hitpoints and XP stay unchanged.
 
 Options lock when the raid starts. The selected wave is the first to spawn, four ticks
 after confirmed Nylocas entry. Starting at wave 21 or later immediately uses the
@@ -34,8 +46,8 @@ party member's game chat when the raid starts.
 Joining closes when the host starts. A host leaving or logging out closes their
 lobby to new joins; creating another lobby starts a fresh instance. Server results
 appear in game chat. The commands are `::theatrecreate`, `::theatrejoin <host name>`,
-and `::theatrestart [starting wave]`, with no admin access required. Rebuild the client with
-`./dev build-client` and restart RSMod to load these controls; no cache repack
+and `::theatrestart [starting wave] [maxhit-all|maxhit-slow] [hp250]`, with no
+admin access required. Rebuild the client with `./dev build-client` and restart RSMod to load these controls; no cache repack
 is required.
 
 The **Gear setups** sidebar panel (blue shirt icon), provided by the enabled
