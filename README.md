@@ -348,6 +348,20 @@ unless the player is adjacent to the target. Both blowpipe cosmetics support it.
 These charging and normal attack mechanics follow the
 [OSRS Wiki](https://oldschool.runescape.wiki/w/Toxic_blowpipe).
 
+Charged **Tonalztics of Ralos** (item `28922`) make two independent ranged accuracy
+and damage rolls per attack, each capped at `floor(normal_max_hit * 0.75)`.
+The [Wiki DPS calculator](https://github.com/weirdgloop/osrs-dps-calc/blob/main/src/lib/PlayerVsNPCCalc.ts)
+confirms the independent rolls and 75% cap. Both splats land together at a fixed
+one-tick hit delay at every distance, one tick later than melee; the server's hit
+queue represents this as two processing ticks, compared with one for melee.
+Each splat awards XP separately and respects encounter damage restrictions.
+The weapon uses its charged attack animation and two native projectiles, stays
+equipped, and does not consume quiver ammunition. This implements normal attacks
+for the charged item directly, without Sunfire splinter charging or the special
+attack. Its existing attack speed remains seven ticks, or six on Rapid.
+Run `./gradlew packCache` in `upstream/rsmod` with the server stopped, then restart
+RSMod to load the animation and projectile definitions. No client rebuild is needed.
+
 Black chinchompas attack from nine tiles, or ten on Longrange. Medium fuse
 (Rapid) takes three ticks; Short and Long fuse take four. In multi-combat,
 each throw selects additional targets in the 3x3 square around the primary
