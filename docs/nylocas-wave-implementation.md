@@ -53,8 +53,12 @@ retain their physical lane row through this handoff.
 Unobstructed pillar approaches move diagonally until one axis lines up, then
 straight to the contact tile, matching the
 [recorded first-wave routes](nylocas-movement-evidence.md#diagonal-first-unobstructed-approaches).
-A complete direct approach is checked before using it; blocked approaches
-retain pathfinding, including detours away from the destination.
+This preference now comes from the shared NPC route finder, including player
+chases and blocked approaches that require detours away from the destination.
+It retains validated shortest-path predecessors and chooses cardinal steps
+first while tracing backward from the destination, producing diagonal-first
+forward movement without reversing collision checks or interaction reach.
+Player routes retain their straight-first ordering.
 
 Three flickering spawns lack a positive-HP age-26 observation: wave 18 west big,
 wave 19 east big, and wave 20 south big. Their `styleAt26` is explicitly null;
