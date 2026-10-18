@@ -1,0 +1,15 @@
+[Unit]
+Description=LocalScape client downloads and launch configuration
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=localscape
+Group=localscape
+WorkingDirectory=/opt/localscape
+ExecStart=/opt/localscape/dev serve
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

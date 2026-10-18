@@ -33,6 +33,30 @@ def config():
     return json.loads((ROOT / "project.json").read_text())
 
 
+def server_host(cfg):
+    host = cfg.get("server_host", "127.0.0.1")
+    if not isinstance(host, str) or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9.-]*", host):
+        raise ValueError("server_host must be an IPv4 address or DNS hostname, without a scheme or port.")
+    return host
+
+
+def http_url(value):
+    if not isinstance(value, str):
+        raise ValueError("Use an HTTP(S) URL.")
+    parsed = urllib.parse.urlsplit(value)
+    if (parsed.scheme not in ("http", "https") or not parsed.hostname
+            or parsed.username is not None or parsed.password is not None
+            or parsed.query or parsed.fragment or any(c.isspace() for c in value)):
+        raise ValueError("Use an HTTP(S) URL without credentials, a query, or a fragment.")
+    # Accessing port also rejects malformed port numbers.
+    parsed.port
+    return value.rstrip("/")
+
+
+def public_http_url(cfg):
+    return http_url(cfg.get("http_base_url") or f'http://{server_host(cfg)}:{cfg["http_port"]}')
+
+
 def write_json(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, indent=2) + "\n")
@@ -163,14 +187,17 @@ def initialize_server_submodule():
         run(["git", "submodule", "update", "--init", "--recursive", "--", relative], cwd=ROOT)
 
 
-def checkout_sources():
+def checkout_sources(names=None):
     cfg = config()
     UPSTREAM.mkdir(parents=True, exist_ok=True)
-    initialize_server_submodule()
+    if names is None:
+        initialize_server_submodule()
     locked = json.loads(SOURCE_LOCK.read_text()) if SOURCE_LOCK.exists() else {}
     # RSMod is pinned by the submodule gitlink, rather than this download lock.
     locked.pop("rsmod", None)
     for name, source in cfg["repositories"].items():
+        if names is not None and name not in names:
+            continue
         destination = UPSTREAM / name
         entry = locked.get(name)
         if entry and (entry["url"] != source["url"] or entry["ref"] != source["ref"]):
@@ -194,7 +221,8 @@ def checkout_sources():
             raise ValueError(f"{name} checkout differs from its lock. Existing source changes were preserved.")
         locked[name] = dict(source, commit=commit)
         write_json(SOURCE_LOCK, locked)
-    check_revision()
+    if names is None:
+        check_revision()
 
 
 def check_revision():
@@ -234,9 +262,9 @@ def configure_jav(text, cfg):
         if not values.get(key):
             raise ValueError(f"jav_config template is missing {key}")
     values.update({
-        "codebase": "http://127.0.0.1/",
+        "codebase": f"http://{server_host(cfg)}/",
         "param=12": str(cfg["world"]),
-        "param=17": f'http://127.0.0.1:{cfg["http_port"]}/worldlist.ws',
+        "param=17": f'{public_http_url(cfg)}/worldlist.ws',
         "param=3": "true",
     })
     return "".join(f"{key}={value}\n" for key, value in values.items())
@@ -244,7 +272,7 @@ def configure_jav(text, cfg):
 
 def encode_worldlist(cfg):
     payload = struct.pack(">HHI", 1, cfg["world"], 1)
-    payload += b"127.0.0.1\0" + cfg["name"].encode("cp1252") + b"\0"
+    payload += server_host(cfg).encode("ascii") + b"\0" + cfg["name"].encode("cp1252") + b"\0"
     payload += struct.pack(">Bh", 0, 0)
     return struct.pack(">I", len(payload)) + payload
 
@@ -297,15 +325,18 @@ def configure_target():
     modulus = rsa_modulus(UPSTREAM / "rsmod/.data/client.key")
     target = {
         "name": cfg["name"],
-        "jav_config_url": f'http://127.0.0.1:{cfg["http_port"]}/jav_config.ws',
+        "jav_config_url": f'{public_http_url(cfg)}/jav_config.ws',
         "revision": str(cfg["revision"]),
         "modulus": modulus,
         "game_server_port": cfg["game_port"],
-        "runelite_bootstrap_url": f'http://127.0.0.1:{cfg["http_port"]}/bootstrap.json',
+        "runelite_bootstrap_url": f'{public_http_url(cfg)}/bootstrap.json',
         "binary_folder": cfg["name"],
     }
     # JSON is valid YAML; this avoids a dependency just for configuration generation.
     write_json(RUNTIME_HOME / ".rsprox/proxy-targets.yaml", {"config": [target]})
+    # Only public connection details belong in the directory served to players.
+    write_json(WWW / "proxy-targets.json", {"config": [target]})
+    return target
 
 
 def sync_client():
@@ -340,16 +371,32 @@ def package_client(jar, bootstrap):
         raise ValueError("Expected exactly one client artifact in the pinned bootstrap.")
     clients[0].update({
         "name": name, "hash": checksum, "size": len(content),
-        "path": f'http://127.0.0.1:{cfg["http_port"]}/artifacts/{name}',
     })
     clients[0].pop("diffs", None)
     # RSProx handles client patching; the official launcher's update is unnecessary.
     result["updates"] = []
-    write_json(WWW / "bootstrap.json", result)
+    write_bootstrap(result)
+    print(f"Custom RuneLite packaged: {name}")
+
+
+def write_bootstrap(bootstrap):
+    cfg = config()
+    prefix = f'client-{cfg["runelite_version"]}-local-'
+    for artifact in bootstrap["artifacts"]:
+        if artifact["name"].startswith(prefix):
+            artifact["path"] = f'{public_http_url(cfg)}/artifacts/{artifact["name"]}'
+    write_json(WWW / "bootstrap.json", bootstrap)
     # The RSProx launcher requests this endpoint even for custom manifests. Its
     # custom-manifest path checks artifact hashes but does not verify this as RSA.
     (WWW / "bootstrap.json.sha256").write_text(hashlib.sha256((WWW / "bootstrap.json").read_bytes()).hexdigest() + "\n")
-    print(f"Custom RuneLite packaged: {name}")
+
+
+def configure():
+    configure_http()
+    configure_target()
+    manifest = WWW / "bootstrap.json"
+    if manifest.is_file():
+        write_bootstrap(json.loads(manifest.read_text()))
 
 
 def build_client():
@@ -369,13 +416,60 @@ def build_client():
     package_client(jar, bootstrap)
 
 
+def build_launcher(base_url=None):
+    cfg = config()
+    if base_url is None:
+        candidate = public_http_url(cfg)
+        host = urllib.parse.urlsplit(candidate).hostname
+        # A development build asks for the VPS address on first launch.
+        base_url = "" if host in ("localhost", "0.0.0.0") or host.startswith("127.") else candidate
+    else:
+        base_url = http_url(base_url)
+    gradle("rsprox", ":gui:proxy-tool:shadowJar")
+    proxy_jar = UPSTREAM / "rsprox/gui/proxy-tool/build/libs/rsprox.jar"
+    return package_launcher(proxy_jar, base_url)
+
+
+def package_launcher(proxy_jar, base_url):
+    cfg = config()
+    destination = STATE / "dist/LocalScape.jar"
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(dir=destination.parent) as temporary:
+        temporary = Path(temporary)
+        classes = temporary / "classes"
+        sources = sorted((ROOT / "launcher/src/main/java").rglob("*.java"))
+        run([java_home(21) / "bin/javac", "--release", "11", "-proc:none", "-encoding", "UTF-8",
+             "-cp", proxy_jar, "-d", classes, *sources])
+        staged = temporary / "LocalScape.jar"
+        with zipfile.ZipFile(proxy_jar) as upstream, zipfile.ZipFile(staged, "w", zipfile.ZIP_DEFLATED) as output:
+            for entry in upstream.infolist():
+                name = entry.filename.upper()
+                if name == "META-INF/MANIFEST.MF" or (name.startswith("META-INF/") and name.endswith((".SF", ".RSA", ".DSA"))):
+                    continue
+                output.writestr(entry, upstream.read(entry))
+            output.writestr("META-INF/MANIFEST.MF", "Manifest-Version: 1.0\r\nMain-Class: net.localscape.launcher.Launcher\r\nMulti-Release: true\r\n\r\n")
+            output.writestr("localscape-launcher.json", json.dumps({"server_url": base_url, "revision": str(cfg["revision"])}))
+            output.writestr("META-INF/LICENSE-rsprox.txt", (UPSTREAM / "rsprox/LICENSE").read_bytes())
+            for path in sorted(classes.rglob("*.class")):
+                output.write(path, path.relative_to(classes).as_posix())
+        staged.replace(destination)
+    WWW.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(destination, WWW / destination.name)
+    print(f"Share this file with players: {destination}")
+    print("Players need Java 21 or newer. Run: java -jar LocalScape.jar")
+    if not base_url:
+        print("This build asks for the server URL on first launch; no public address is configured yet.")
+    return destination
+
+
 def serve():
-    required = ["jav_config.ws", "worldlist.ws", "bootstrap.json", "bootstrap.json.sha256"]
+    required = ["jav_config.ws", "worldlist.ws", "bootstrap.json", "bootstrap.json.sha256", "proxy-targets.json"]
     if not all((WWW / name).is_file() for name in required):
-        raise ValueError("Local client/configuration missing. Run ./dev setup.")
+        raise ValueError("Client/configuration missing. Run ./dev setup, or ./dev configure for an existing build.")
     handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(WWW))
-    with http.server.ThreadingHTTPServer(("127.0.0.1", config()["http_port"]), handler) as server:
-        print(f"Serving local configuration and client on http://127.0.0.1:{server.server_port}", flush=True)
+    cfg = config()
+    with http.server.ThreadingHTTPServer((cfg.get("http_bind", "127.0.0.1"), cfg["http_port"]), handler) as server:
+        print(f"Serving configuration and client at {public_http_url(cfg)} (listening on {server.server_address})", flush=True)
         server.serve_forever()
 
 
@@ -415,31 +509,74 @@ def setup():
     print("Ready. Run ./dev serve, ./dev server, and ./dev proxy in three terminals.")
 
 
-def proxy():
+def require_desktop():
     if not os.environ.get("DISPLAY") and not os.environ.get("WAYLAND_DISPLAY"):
         raise ValueError("RSProx needs a desktop session. Run this command from your Linux/WSLg desktop terminal.")
-    configure_target()
+
+
+def launch_proxy(target):
     # Fetch configuration before opening the GUI so a missing HTTP server is clear.
-    base = f'http://127.0.0.1:{config()["http_port"]}'
-    fetch(base + "/bootstrap.json")
-    fetch(base + "/jav_config.ws")
-    print(f"Select target {config()['name']}, client RuneLite, account Default, then Launch Session.")
+    fetch(target["runelite_bootstrap_url"])
+    fetch(target["jav_config_url"])
+    print(f"Select target {target['name']}, client RuneLite, account Default, then Launch Session.")
     gradle("rsprox", "-I", str(ROOT / "tools/rsprox.init.gradle"), "proxy")
+
+
+def proxy():
+    require_desktop()
+    launch_proxy(configure_target())
+
+
+def join(base_url):
+    require_desktop()
+    base_url = http_url(base_url)
+    document = json.loads(fetch(base_url + "/proxy-targets.json"))
+    if not isinstance(document, dict):
+        raise ValueError("Expected a server configuration object in proxy-targets.json.")
+    targets = document.get("config")
+    if not isinstance(targets, list) or len(targets) != 1 or not isinstance(targets[0], dict):
+        raise ValueError("Expected one server in proxy-targets.json.")
+    target = targets[0]
+    if target.get("revision") != str(config()["revision"]):
+        raise ValueError("Remote server revision differs from this workspace.")
+    for field in ("jav_config_url", "runelite_bootstrap_url"):
+        if not isinstance(target.get(field), str):
+            raise ValueError(f"Remote server is missing {field}.")
+        http_url(target[field])
+    if not isinstance(target.get("name"), str) or not target["name"]:
+        raise ValueError("Remote server is missing its name.")
+    if not isinstance(target.get("modulus"), str) or not re.fullmatch(r"[0-9a-fA-F]{128,}", target["modulus"]):
+        raise ValueError("Remote server is missing its public RSA modulus.")
+    port = target.get("game_server_port")
+    if type(port) is not int or not 1 <= port <= 65535:
+        raise ValueError("Remote server has an invalid game port.")
+    # Players need RSProx and Java, but no RSMod data, private key, or client build.
+    install_tools()
+    checkout_sources(names=("rsprox",))
+    write_json(RUNTIME_HOME / ".rsprox/proxy-targets.yaml", document)
+    launch_proxy(target)
 
 
 def main():
     parser = argparse.ArgumentParser(description="Custom RuneLite + RSMod + RSProx development")
     parser.add_argument("command", choices=[
         "doctor", "tools", "setup", "install-server", "build-client", "configure",
-        "serve", "server", "proxy", "test",
+        "serve", "server", "proxy", "join", "build-launcher", "test",
     ])
+    parser.add_argument("url", nargs="?", help="Public HTTP(S) base URL for join or build-launcher")
     args = parser.parse_args()
+    if args.command == "join" and args.url is None:
+        parser.error("Use ./dev join <server-url>.")
+    if args.url is not None and args.command not in ("join", "build-launcher"):
+        parser.error("Only join and build-launcher take a server URL.")
     commands = {
         "doctor": doctor, "tools": install_tools, "setup": setup,
         "install-server": install_server, "build-client": build_client,
-        "configure": lambda: (configure_http(), configure_target()),
+        "configure": configure,
         "serve": serve, "server": lambda: (check_revision(), gradle("rsmod", "run")),
         "proxy": proxy,
+        "join": lambda: join(args.url),
+        "build-launcher": lambda: build_launcher(args.url),
         "test": lambda: run([sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v"]),
     }
     try:

@@ -1,0 +1,17 @@
+[Unit]
+Description=LocalScape RSMod game server
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=localscape
+Group=localscape
+WorkingDirectory=/opt/localscape
+ExecStart=/opt/localscape/dev server
+Restart=on-failure
+RestartSec=5
+KillSignal=SIGINT
+TimeoutStopSec=120
+
+[Install]
+WantedBy=multi-user.target

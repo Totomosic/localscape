@@ -176,10 +176,34 @@ Settings, caches, sockets, and recordings stay in the workspace. The generated
 target file is `.state/home/.rsprox/proxy-targets.yaml`. Plugin Hub plugins can
 load, and the GPU plugin is available to enable in RuneLite's plugin settings.
 
-The HTTP service binds to loopback. RSMod uses its upstream network binding
-defaults; this scaffold does not change its listener configuration. `game_port`
-in `project.json` describes the target port, so changing it also requires changing
-RSMod's listener configuration.
+The HTTP service binds to loopback by default. `server_host`, `http_bind`, and
+`http_base_url` in `project.json` configure hosting for other players. See the
+[VPS hosting guide](docs/hosting.md) for moving server data, opening ports,
+running services after reboot, and distributing a standalone player JAR.
+
+Build the hosted custom client and shareable launcher again with:
+
+```bash
+./tools/build-client.sh
+```
+
+Give friends `.state/dist/LocalScape.jar`. They need Java 21 or newer and can
+double-click it, or run `java -jar LocalScape.jar`; no project checkout, Python,
+or WSL is needed for the JAR on Windows. It downloads your hosted custom client.
+The launcher uses the public address configured in `project.json`; a development
+build with only a loopback address asks for the server URL on first launch.
+You can also embed an explicit address with
+`./tools/build-client.sh http://YOUR_SERVER_IP:8080`.
+
+Players using a source checkout can still run:
+
+```bash
+./dev join http://YOUR_SERVER_IP:8080
+```
+
+RSMod uses its upstream network binding defaults; this scaffold does not change
+its listener configuration. `game_port` describes the target port, so changing it
+also requires changing RSMod's listener configuration.
 
 ## Change the server
 
@@ -720,12 +744,17 @@ supplies that endpoint with a SHA-256 digest, not an official RuneLite signature
 
 ```bash
 ./dev install-server  # Prepare RSMod if cache/key files are missing
-./dev configure       # Regenerate local config after a world/HTTP-port change
+./dev configure       # Refresh connection config and existing manifest URLs
+./dev join <url>      # Install/launch RSProx against a hosted server (desktop)
+./dev build-launcher [url] # Package the standalone player JAR
+./tools/build-client.sh [url] # Rebuild the hosted client and player launcher
 ./dev test            # Offline scaffold tests; no game or Java dependencies
 ```
 
-After changing the HTTP port, rebuild the client manifest as well. `configure`
-does not update previously packaged manifest URLs.
+After changing the server address or HTTP settings, run `./dev configure` and
+restart `./dev serve`. Existing packaged client URLs and the manifest checksum
+are refreshed without recompiling Java. Changes to client sources still require
+`./dev build-client`. Players rerun `./dev join <url>` to refresh their target.
 
 ## Validation status
 

@@ -52,15 +52,119 @@ class DevTests(unittest.TestCase):
         public_key.parent.mkdir(parents=True)
         modulus = "ab" * 128
         public_key.write_text(f"Exponent: 10001\nModulus: {modulus}\n")
-        with patch.object(dev, "UPSTREAM", upstream), patch.object(dev, "RUNTIME_HOME", self.root / "home"):
+        with patch.multiple(dev, UPSTREAM=upstream, RUNTIME_HOME=self.root / "home", WWW=self.root / "www"):
             dev.configure_target()
         target = json.loads((self.root / "home/.rsprox/proxy-targets.yaml").read_text())["config"][0]
         self.assertEqual(target["modulus"], modulus)
         self.assertEqual(target["revision"], "233")
         self.assertEqual(target["runelite_bootstrap_url"], "http://127.0.0.1:8080/bootstrap.json")
+        self.assertEqual(json.loads((self.root / "www/proxy-targets.json").read_text()), {"config": [target]})
         public_key.write_text("Exponent: 3\nModulus: " + modulus)
         with self.assertRaisesRegex(ValueError, "exponent"):
             dev.rsa_modulus(public_key)
+
+    def test_hosted_configuration_updates_all_destinations_and_manifest_hash(self):
+        template = (
+            "codebase=http://oldschool1.runescape.com/\n"
+            "initial_class=client.class\ninitial_jar=gamepack.jar\nparam=25=233\n"
+        )
+        upstream = self.root / "upstream"
+        data = upstream / "rsmod/.data"
+        data.mkdir(parents=True)
+        (data / "client.key").write_text("Exponent: 10001\nModulus: " + "ab" * 128)
+        (data / "game.key").write_text("private key must stay off HTTP")
+        state = self.root / "state"
+        state.mkdir()
+        (state / "jav-config-template.ws").write_text(template)
+        www = state / "www"
+        bootstrap = {
+            "version": "1.11.19", "artifacts": [
+                {"name": "client-1.11.19.jar", "path": "original"},
+                {"name": "runelite-api-1.11.19.jar", "path": "https://upstream.example/api.jar"},
+            ],
+        }
+        jar = self.make_client_jar()
+        with patch.multiple(dev, STATE=state, WWW=www, UPSTREAM=upstream, RUNTIME_HOME=state / "home"):
+            dev.package_client(jar, bootstrap)
+            old_manifest = json.loads((www / "bootstrap.json").read_text())
+            for cfg in (
+                dict(self.cfg, server_host="203.0.113.10", http_base_url=None),
+                dict(self.cfg, server_host="game.example.com", http_base_url="https://assets.example.com/localscape/"),
+            ):
+                base = cfg["http_base_url"].rstrip("/") if cfg["http_base_url"] else "http://203.0.113.10:8080"
+                with self.subTest(base=base), patch.object(dev, "config", return_value=cfg):
+                    dev.configure()
+                    jav = (www / "jav_config.ws").read_text()
+                    self.assertIn(f'codebase=http://{cfg["server_host"]}/\n', jav)
+                    self.assertIn(f"param=17={base}/worldlist.ws\n", jav)
+                    host = (www / "worldlist.ws").read_bytes()[12:].split(b"\0", 1)[0]
+                    self.assertEqual(host.decode(), cfg["server_host"])
+                    target = json.loads((www / "proxy-targets.json").read_text())["config"][0]
+                    self.assertEqual(target["jav_config_url"], base + "/jav_config.ws")
+                    self.assertEqual(target["runelite_bootstrap_url"], base + "/bootstrap.json")
+                    manifest = json.loads((www / "bootstrap.json").read_text())
+                    client = manifest["artifacts"][0]
+                    self.assertEqual(client["path"], base + "/artifacts/" + client["name"])
+                    self.assertEqual(client["hash"], old_manifest["artifacts"][0]["hash"])
+                    self.assertEqual(manifest["artifacts"][1], bootstrap["artifacts"][1])
+                    self.assertEqual(
+                        (www / "bootstrap.json.sha256").read_text().strip(),
+                        hashlib.sha256((www / "bootstrap.json").read_bytes()).hexdigest(),
+                    )
+                    self.assertNotIn("private key", (www / "proxy-targets.json").read_text())
+                    self.assertFalse((www / "game.key").exists())
+
+    def test_network_settings_reject_host_and_url_syntax_that_breaks_generated_files(self):
+        for host in ("http://game.example.com", "game.example.com:43594", "game\x00.example", "::1"):
+            with self.subTest(host=host), self.assertRaises(ValueError):
+                dev.encode_worldlist(dict(self.cfg, server_host=host))
+        for url in ("file:///tmp/server", "http://user:password@example.com", "https://example.com/?x=1", "https://example.com/#fragment", "http://example.com:bad"):
+            with self.subTest(url=url), self.assertRaises(ValueError):
+                dev.public_http_url(dict(self.cfg, http_base_url=url))
+
+    def test_join_installs_only_proxy_and_uses_hosted_public_target(self):
+        target = {
+            "name": "Hosted LocalScape", "revision": "233", "modulus": "ab" * 128,
+            "jav_config_url": "https://assets.example.com/jav_config.ws",
+            "runelite_bootstrap_url": "https://assets.example.com/bootstrap.json",
+            "game_server_port": 43594, "binary_folder": "LocalScape",
+        }
+        document = {"config": [target]}
+        home = self.root / "home"
+        with patch.object(dev, "RUNTIME_HOME", home), patch.object(dev, "require_desktop"), \
+                patch.object(dev, "fetch", return_value=json.dumps(document).encode()) as fetch, \
+                patch.object(dev, "install_tools") as tools, patch.object(dev, "checkout_sources") as sources, \
+                patch.object(dev, "configure_target") as local_target, patch.object(dev, "gradle") as gradle:
+            dev.join("https://assets.example.com/")
+        tools.assert_called_once_with()
+        sources.assert_called_once_with(names=("rsprox",))
+        local_target.assert_not_called()
+        self.assertEqual(json.loads((home / ".rsprox/proxy-targets.yaml").read_text()), document)
+        self.assertEqual([call.args[0] for call in fetch.call_args_list], [
+            "https://assets.example.com/proxy-targets.json",
+            target["runelite_bootstrap_url"], target["jav_config_url"],
+        ])
+        self.assertEqual(gradle.call_args.args[-1], "proxy")
+
+    def test_join_rejects_incompatible_server_before_installing(self):
+        with patch.object(dev, "require_desktop"), \
+                patch.object(dev, "fetch", return_value=b'{"config": [{"revision": "234"}]}'), \
+                patch.object(dev, "install_tools") as tools:
+            with self.assertRaisesRegex(ValueError, "revision"):
+                dev.join("https://assets.example.com")
+        tools.assert_not_called()
+
+    def test_serve_uses_configured_listener_separately_from_public_url(self):
+        www = self.root / "www"
+        www.mkdir()
+        for name in ("jav_config.ws", "worldlist.ws", "bootstrap.json", "bootstrap.json.sha256", "proxy-targets.json"):
+            (www / name).touch()
+        cfg = dict(self.cfg, server_host="game.example.com", http_bind="0.0.0.0")
+        with patch.object(dev, "WWW", www), patch.object(dev, "config", return_value=cfg), \
+                patch.object(dev.http.server, "ThreadingHTTPServer") as server:
+            dev.serve()
+        self.assertEqual(server.call_args.args[0], ("0.0.0.0", 8080))
+        server.return_value.__enter__.return_value.serve_forever.assert_called_once_with()
 
     def make_client_jar(self, name="client.jar", shaded=False, custom=True):
         jar = self.root / name
@@ -150,6 +254,22 @@ class DevTests(unittest.TestCase):
             self.assertEqual(custom.read_text(), "keep this edit")
             self.assertEqual(download_edit.read_text(), "keep this downloaded checkout edit")
             self.assertEqual(lockfile.read_text(), initial_lock)
+
+    def test_player_source_setup_does_not_require_or_initialize_rsmod(self):
+        workspace, remote, commit = self.make_source_workspace()
+        cfg = dict(self.cfg, repositories={"rsprox": {"url": remote.as_uri(), "ref": commit}})
+        upstream = workspace / "upstream"
+        lockfile = workspace / "sources.lock.json"
+        shutil.rmtree(upstream / "rsmod")
+        with patch.object(dev, "config", return_value=cfg), \
+                patch.multiple(dev, ROOT=workspace, UPSTREAM=upstream, SOURCE_LOCK=lockfile), \
+                patch.object(dev, "initialize_server_submodule") as initialize, \
+                patch.object(dev, "check_revision") as revision:
+            dev.checkout_sources(names=("rsprox",))
+        initialize.assert_not_called()
+        revision.assert_not_called()
+        self.assertFalse((upstream / "rsmod").exists())
+        self.assertEqual(json.loads(lockfile.read_text())["rsprox"]["commit"], commit)
 
     def test_server_submodule_initialization_uses_parent_pin(self):
         workspace, remote, commit = self.make_source_workspace()
