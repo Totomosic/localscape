@@ -36,7 +36,7 @@ final class GearPresetsPanel extends PluginPanel
 		this.apply = apply;
 		results.setLayout(new BoxLayout(results, BoxLayout.Y_AXIS));
 		add(new JLabel("Gear setups"));
-		add(new JLabel("<html><body style='width: 150px'>Restore your equipment and exact inventory layout. Server admin access required.</html>"));
+		add(new JLabel("<html><body style='width: 150px'>Shared server setups restore your equipment and exact inventory layout.</html>"));
 		add(new JLabel("Search saved setups"));
 		search.setToolTipText("Filter setups by name.");
 		add(search);
@@ -61,7 +61,7 @@ final class GearPresetsPanel extends PluginPanel
 		});
 		name.addActionListener(event -> save.doClick());
 		add(save);
-		add(new JLabel("<html><body style='width: 150px'>Save the same name to update a setup. Applying replaces your current gear and inventory.</html>"));
+		add(new JLabel("<html><body style='width: 150px'>Saving adds [Your name] for everyone to see. Save the same name to update your setup. Applying replaces your current gear and inventory.</html>"));
 		add(status);
 		search.getDocument().addDocumentListener(new DocumentListener()
 		{
@@ -85,7 +85,7 @@ final class GearPresetsPanel extends PluginPanel
 		updateControls();
 		if (!loggedIn)
 		{
-			setStatus("Log in to use your saved setups.");
+			setStatus("Log in to use shared setups.");
 		}
 	}
 
@@ -126,7 +126,7 @@ final class GearPresetsPanel extends PluginPanel
 			button.setToolTipText("Apply " + preset.name + ": replaces equipment and inventory.");
 			button.addActionListener(event ->
 			{
-				name.setText(preset.name);
+				name.setText(preset.name.replaceFirst("^\\[[^\\]]+\\] ", ""));
 				apply.accept(preset);
 			});
 			results.add(button);

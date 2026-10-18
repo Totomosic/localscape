@@ -210,3 +210,18 @@ cases failed before the correction. The full 31-wave occupancy check now also
 includes supports and checks that the first southwest big reaches contact.
 The earlier movement and expiry checks isolated the wave scripts without
 `NylocasPillars`, so they could not detect the live support's obstruction.
+
+## Fighting-form footprint clarification, 2026-10-18
+
+The user clarified that the southwest-only occupancy rule applies to regular
+big Nylocas. Player-targeting big Nylocas use their full 2×2 footprint once they
+enter the arena and switch to a fighting form. They retain one-tile occupancy
+through their incoming lane approach. Regular pillar attackers keep their
+southwest-only movement and reservation throughout the encounter.
+
+The fighting-form transition replaces the existing reservation immediately.
+Movement, teleportation and removal then use that form's collision footprint.
+Integration coverage checks the transition and reservation lifecycle for melee,
+ranged and magic fighting bigs, alongside the existing regular-big overlap tests.
+This distinction is a user-supplied implementation requirement; the recording
+analysis above does not independently establish fighting-form geometry.

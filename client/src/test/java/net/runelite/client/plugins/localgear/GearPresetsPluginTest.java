@@ -2,6 +2,7 @@ package net.runelite.client.plugins.localgear;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import javax.swing.SwingUtilities;
 import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
@@ -66,9 +67,9 @@ public class GearPresetsPluginTest
 		String request = token();
 		String id = "11111111-2222-3333-4444-555555555555";
 		reply(request, "begin");
-		reply(request, "item " + id + " " + GearPresetsPlugin.encode("Nylo Duo"));
+		reply(request, "item " + id + " " + GearPresetsPlugin.encode("[Alice] Nylo Duo"));
 		reply(request, "end " + GearPresetsPlugin.encode("Ready"));
-		SwingUtilities.invokeAndWait(() -> GearPresetsPanelTest.button(panel, "Nylo Duo").doClick());
+		SwingUtilities.invokeAndWait(() -> GearPresetsPanelTest.button(panel, "[Alice] Nylo Duo").doClick());
 		assertEquals(1, commands.size());
 		drain();
 		assertTrue(commands.get(1).matches("gearsetups load [0-9a-f]{8} " + id));
@@ -81,6 +82,28 @@ public class GearPresetsPluginTest
 		drain();
 		String payload = commands.get(2).split(" ")[3];
 		assertEquals("Nylo Solo", GearPresetsPlugin.decode(payload.toLowerCase()));
+	}
+
+	@Test
+	public void acceptsSharedListsBeyondOnePlayersLimitAndFullLengthPrefixedNames() throws Exception
+	{
+		String request = token();
+		reply(request, "begin");
+		for (int i = 0; i < 101; i++)
+		{
+			reply(request, "item " + UUID.randomUUID() + " " + GearPresetsPlugin.encode("[Bob] Shared " + i));
+		}
+		String fullName = "[Player123456] 123456789012345678901234";
+		reply(request, "item " + UUID.randomUUID() + " " + GearPresetsPlugin.encode(fullName));
+		reply(request, "end " + GearPresetsPlugin.encode("Ready"));
+		flush();
+		assertEquals(1, GearPresetsPanelTest.buttons(panel, "[Bob] Shared 100").size());
+		assertEquals(1, GearPresetsPanelTest.buttons(panel, fullName).size());
+		SwingUtilities.invokeAndWait(() ->
+		{
+			GearPresetsPanelTest.button(panel, fullName).doClick();
+			assertEquals("123456789012345678901234", GearPresetsPanelTest.fields(panel).get(1).getText());
+		});
 	}
 
 	@Test

@@ -54,17 +54,21 @@ The **Gear setups** sidebar panel (blue shirt icon), provided by the enabled
 **Local Gear Setups** plugin, saves and restores development loadouts:
 
 1. Equip your gear and arrange your inventory, including any empty slots.
-2. Enter a setup name and click **Save current setup**. Saving the same name
-   again updates that setup.
+2. Enter a setup name and click **Save current setup**. The server prefixes it
+   with your player's name, for example `[Jordan] Nylo Duo`. Saving the same
+   name again updates your setup.
 3. Search by name and click a setup's button to apply its equipment and inventory.
    **Refresh setups** reloads the saved list.
 
 Applying replaces both containers, including quantities and per-item charge data;
-it does not withdraw from the bank. Setups belong to the logged-in character and
-persist across client/server restarts in RSMod's `.data/gear-presets/<character-id>.json`.
-Names support 1–24 letters, numbers, spaces and basic punctuation, with up to 100
-setups per character. Like the item-spawn controls, this requires server admin
-access. The list starts empty until you save a setup. Rebuild the client with
+it does not withdraw from the bank. Setups are saved on the server and shared
+with every player, including players who did not create them. They persist across
+client/server restarts in RSMod's `.data/gear-presets/<creator-character-id>.json`.
+Existing character files are included in the shared list automatically; resaving
+an older setup adds its creator prefix. Entered names support 1–24 letters,
+numbers, spaces and basic punctuation, with up to 100 setups per creator.
+Search matches both creator and setup names. All players can save, list and apply
+setups; saving cannot overwrite another player's setup. Rebuild the client with
 `./dev build-client`, restart RSMod, and launch a fresh client session to load the
 panel and server commands; no cache repack is required.
 
@@ -489,9 +493,9 @@ attack cooldown, ongoing attacks, and pending actions, including after Spellbook
 Swap. Resurrection spells share a 16-tick cooldown; a successful recast
 replaces the existing thrall.
 
-Each thrall lasts one tick per current Magic level at casting: **112 ticks / 67.2
-seconds** with the server's permanent Magic boost. This uses the base duration
-without Combat Achievement extensions. Idle thralls wander within two tiles of
+Each thrall lasts two ticks per current Magic level at casting: **224 ticks / 134.4
+seconds** with the server's permanent Magic boost. The doubled master Combat
+Achievements duration applies to every player. Idle thralls wander within two tiles of
 where they were summoned or last fought, taking occasional random steps rather
 than following the player. Thralls attack the owner's last attacked NPC for up to
 12 ticks after the player's last attack, then return to wandering until the
@@ -516,6 +520,13 @@ Casting preserves ongoing attacks and pending actions, including after Spellbook
 The spell uses its normal level and rune requirements, including unlimited runes
 from a rune pouch. Restart RSMod to load it; no cache repack or client rebuild is
 required.
+
+**Mark of Darkness** is castable on the Arceuus spellbook without a target. It
+checks the normal level and rune requirements and awards cast XP, but applies no
+buff or combat effect. After swapping from Lunar to Arceuus with Spellbook Swap,
+casting it immediately returns you to Lunar. Failed casts preserve the swap.
+Casting leaves attack cooldowns, ongoing attacks, and the player's current target intact.
+Restart RSMod to load it; no cache repack or client rebuild is required.
 
 **Vengeance** and **Vengeance Other** are available on the Lunar spellbook. They
 grant the caster or selected player a status that reflects `floor(damage * 0.75)`
@@ -615,10 +626,12 @@ Attacking an already-nulled Nylocas plays a cancellation sound for the attacker
 and flashes the native yellow shield orb around it. The attack that first nulls
 the Nylocas produces neither cue, including any additional splats that tick.
 Subsequent multi-hit attacks produce one cue per target per tick.
-Big Nylocas use their southwest tile for terrain and NPC occupancy checks, while
-retaining their 2×2 footprint for pillar contact and combat reach. Their other
-three tiles can overlap smalls or other bigs. Movement and removal release the
-southwest reservation without clearing neighbouring Nylocas' flags.
+Regular big Nylocas use their southwest tile for terrain and NPC occupancy
+checks, while retaining their 2×2 footprint for pillar contact and combat reach.
+Their other three tiles can overlap smalls or other bigs. Player-targeting big
+Nylocas switch to their full 2×2 movement and occupancy footprint when they
+enter the arena and change to their fighting form. Movement and removal release
+the footprint reserved by that form.
 After wave 31 and the last wave body or split child disappears, Nylocas Vasilias
 drops 16–19 ticks later, aligned to the room's four-tick wave cycle. It becomes
 attackable in melee two ticks after dropping. The opening melee form lasts nine

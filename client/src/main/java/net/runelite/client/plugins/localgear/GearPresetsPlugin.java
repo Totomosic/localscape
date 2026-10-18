@@ -138,13 +138,13 @@ public class GearPresetsPlugin extends Plugin
 					incoming = new ArrayList<>();
 					break;
 				case "item":
-					if (incoming == null || parts.length != 5 || incoming.size() >= 100)
+					if (incoming == null || parts.length != 5)
 					{
 						throw new IllegalArgumentException();
 					}
 					String id = UUID.fromString(parts[3]).toString();
 					String name = decode(parts[4]);
-					if (!name.matches("[A-Za-z0-9 ._()'-]{1,24}") || name.trim().isEmpty())
+					if (!name.matches("(?:\\[[A-Za-z0-9 _-]{1,12}\\] )?[A-Za-z0-9 ._()'-]{1,24}") || name.trim().isEmpty())
 					{
 						throw new IllegalArgumentException();
 					}
