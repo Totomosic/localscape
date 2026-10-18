@@ -365,8 +365,10 @@ hits on the same tick. The sweep hits up to ten NPCs total, including the primar
 within an 11x11 square centred on the player. Other targets must be attackable,
 visible, in multi-combat, and in line of sight from the player. The primary NPC
 also requires line of sight. Nylocas in the incoming lanes are excluded; only
-Nylocas inside the room can be hit. Single-combat and player targets
-receive one hit. Successful hits drain the highest offensive stats by 5% of their
+Nylocas inside the room can be hit. If a large incoming Nylo is already in melee
+reach, the special stays armed until its southwest tile enters the room, without
+spending energy or starting an attack delay early. Single-combat and player
+targets receive one hit. Successful hits drain the highest offensive stats by 5% of their
 current levels, once per target per special; melee drains both Attack and Strength,
 with ties preferring melee, then Ranged, then Magic. Energy, area restrictions,
 and stat drain follow the [Wiki special attack rules](https://osrsindex.com/wiki/special-attacks?site=osrs_wiki)
