@@ -3,10 +3,15 @@ package net.runelite.client.plugins.localsettings;
 import javax.inject.Inject;
 import net.runelite.api.Client;
 import net.runelite.api.GameState;
+import net.runelite.api.ParamID;
 import net.runelite.api.ScriptEvent;
 import net.runelite.api.events.ScriptPostFired;
 import net.runelite.api.events.ScriptPreFired;
+import net.runelite.api.events.VarbitChanged;
+import net.runelite.api.gameval.InterfaceID;
 import net.runelite.api.gameval.VarbitID;
+import net.runelite.api.gameval.VarPlayerID;
+import net.runelite.api.widgets.Widget;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
@@ -26,6 +31,12 @@ public class LocalSettingsPlugin extends Plugin
 	private static final int SEND_COMMAND = 49;
 	private static final int RESTORE_KEYBINDS = 58;
 	private static final int TOGGLE_SIDE_PANEL_HOTKEYS = 3995;
+	private static final int OPEN_DROPDOWN = 3851;
+	private static final int SELECT_DROPDOWN = 3852;
+	private static final int REFRESH_DROPDOWN = 3854;
+	private static final int KEYBIND_DROPDOWN = 3;
+
+	private boolean refreshPending;
 
 	@Inject
 	private Client client;
@@ -41,12 +52,23 @@ public class LocalSettingsPlugin extends Plugin
 			return;
 		}
 
-		if (event.getScriptId() == SET_KEYBIND)
+		if (event.getScriptId() == SELECT_DROPDOWN && event.getScriptEvent() != null)
+		{
+			Object[] args = event.getScriptEvent().getArguments();
+			// Server-controlled dropdowns set the final flag to 1. Their native
+			// click script updates the label but skips the SET_KEYBIND proc entirely.
+			if (args != null && args.length == 15 && Integer.valueOf(KEYBIND_DROPDOWN).equals(args[1])
+				&& Integer.valueOf(1).equals(args[14]) && args[4] instanceof Integer && args[12] instanceof Integer)
+			{
+				submitKeybind((Integer) args[12], (Integer) args[4]);
+			}
+		}
+		else if (event.getScriptId() == SET_KEYBIND)
 		{
 			int[] args = intArguments(event, 2);
-			if (args != null && args[0] >= 16 && args[0] <= 29 && args[1] >= 0 && args[1] <= 13)
+			if (args != null)
 			{
-				submit("localscape_keybind " + args[0] + " " + args[1]);
+				submitKeybind(args[0], args[1]);
 			}
 		}
 		else if (event.getScriptId() == CLICK_SETTING_BUTTON)
@@ -59,6 +81,14 @@ public class LocalSettingsPlugin extends Plugin
 		}
 	}
 
+	private void submitKeybind(int setting, int key)
+	{
+		if (setting >= 16 && setting <= 29 && key >= 0 && key <= 13)
+		{
+			submit("localscape_keybind " + setting + " " + key);
+		}
+	}
+
 	@Subscribe
 	public void onScriptPostFired(ScriptPostFired event)
 	{
@@ -68,6 +98,52 @@ public class LocalSettingsPlugin extends Plugin
 			// resulting value so server varp updates and relogging preserve it.
 			int cannotClose = client.getVarbitValue(VarbitID.HOTKEY_CANNOT_CLOSE_SIDEPANEL);
 			submit("localscape_sidepanel_hotkeys " + cannotClose);
+		}
+	}
+
+	@Subscribe
+	public void onVarbitChanged(VarbitChanged event)
+	{
+		int varp = event.getVarpId();
+		if (varp < VarPlayerID.SIDESTONE_KEYBINDINGS_1 || varp > VarPlayerID.SIDESTONE_KEYBINDINGS_3
+			|| client.getGameState() != GameState.LOGGED_IN || refreshPending)
+		{
+			return;
+		}
+		refreshPending = true;
+		clientThread.invokeLater(() ->
+		{
+			refreshPending = false;
+			if (client.getGameState() == GameState.LOGGED_IN)
+			{
+				refreshKeybindDropdowns();
+			}
+		});
+	}
+
+	private void refreshKeybindDropdowns()
+	{
+		Widget clickzone = client.getWidget(InterfaceID.Settings.SETTINGS_CLICKZONE);
+		if (clickzone == null)
+		{
+			return;
+		}
+		// The native dropdown only redraws the clicked label. Refresh the other
+		// labels too, so a displaced binding displays None as soon as it is synced.
+		for (Widget child : clickzone.getDynamicChildren())
+		{
+			Object[] args = child == null ? null : child.getOnOpListener();
+			if (args == null || args.length < 6 || !Integer.valueOf(OPEN_DROPDOWN).equals(args[0])
+				|| !Integer.valueOf(KEYBIND_DROPDOWN).equals(args[1]))
+			{
+				continue;
+			}
+			int setting = client.getStructComposition((Integer) args[2]).getIntValue(ParamID.SETTING_ID);
+			if (setting >= 16 && setting <= 29)
+			{
+				// Use the dropdown's own parent, label index and enum, just as its timer does.
+				client.runScript(REFRESH_DROPDOWN, 35, args[4], args[3], args[5], setting, KEYBIND_DROPDOWN);
+			}
 		}
 	}
 

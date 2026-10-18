@@ -416,17 +416,21 @@ Publish the fix commit to your fork before others clone the workspace.
 The in-game settings can assign F1-F12 or Escape to the side panels. Choosing
 None removes a binding. Assigning a key to a different panel clears its previous
 assignment, and Restore default keybinds restores the starter's F1-F12 layout.
+All visible keybind dropdowns refresh when the server confirms a change, so
+displaced bindings immediately display None.
 Bindings are saved to the account and synchronized again at login. New accounts
 receive defaults; saved bindings, including deliberately unbound panels, are
 preserved.
 
-The revision-233 dropdown only changes its displayed text and does not submit
-the selected binding. The custom client's hidden **Local Server Settings** plugin
-captures the settings script's arguments and submits them through the existing
+The revision-233 server-controlled dropdown only changes its displayed text and
+skips the native keybind setter. The custom client's hidden **Local Server Settings**
+plugin captures the dropdown click's arguments (with the native setter as a
+fallback for client-controlled dropdowns) and submits them through the existing
 `ClientCheat` packet (`localscape_keybind` or `localscape_keybind_reset`). RSMod
-accepts only the supported setting IDs and keys while the settings overlay is
-open, updates the persistent keybinding varps, and sends their values back to the
-client. The native client handles the actual F-key presses.
+accepts only the supported setting IDs and keys, updates the persistent
+keybinding varps, and sends their values back to the client. Queued binding
+changes and Restore defaults still save if Settings closes before delivery.
+The native client handles the actual F-key presses.
 
 The **Modern Layout – Side panel can be closed by the hotkeys** checkbox is
 also saved to the account. Disabling it keeps the current panel open when its

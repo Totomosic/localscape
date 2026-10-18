@@ -5,9 +5,14 @@ import java.util.List;
 import net.runelite.api.Client;
 import net.runelite.api.GameState;
 import net.runelite.api.ScriptEvent;
+import net.runelite.api.StructComposition;
 import net.runelite.api.events.ScriptPostFired;
 import net.runelite.api.events.ScriptPreFired;
+import net.runelite.api.events.VarbitChanged;
+import net.runelite.api.gameval.InterfaceID;
+import net.runelite.api.widgets.Widget;
 import net.runelite.client.callback.ClientThread;
+import net.runelite.client.eventbus.EventBus;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -35,17 +40,129 @@ public class LocalSettingsPluginTest
 	private LocalSettingsPlugin plugin;
 
 	private final List<Runnable> pending = new ArrayList<>();
+	private final EventBus eventBus = new EventBus();
 
 	@Before
 	public void setUp()
 	{
 		MockitoAnnotations.initMocks(this);
+		eventBus.register(plugin);
 		when(client.getGameState()).thenReturn(GameState.LOGGED_IN);
 		doAnswer(invocation ->
 		{
 			pending.add(invocation.getArgument(0));
 			return null;
 		}).when(clientThread).invokeLater(any(Runnable.class));
+	}
+
+	@Test
+	public void savesServerControlledDropdownSelection()
+	{
+		// Captured from the live revision-233 Controls tab: the last argument is 1,
+		// which makes 3852 skip the 3968 proc watched by the original bridge.
+		ScriptEvent input = mock(ScriptEvent.class);
+		when(input.getArguments()).thenReturn(new Object[]{3852, 3, "F2", 36, 2,
+			8781843, 8781851, 8781850, 8781853, 8781854, 8781847, 3506, 19, 35, 1});
+		ScriptPreFired event = new ScriptPreFired(3852);
+		event.setScriptEvent(input);
+		plugin.onScriptPreFired(event);
+
+		assertEquals(1, pending.size());
+		pending.get(0).run();
+		verify(client).runScript(49, "localscape_keybind 19 2");
+	}
+
+	@Test
+	public void clientControlledDropdownSavesOnceThroughNativeProc()
+	{
+		ScriptEvent input = mock(ScriptEvent.class);
+		when(input.getArguments()).thenReturn(new Object[]{3852, 3, "F2", 36, 2,
+			8781843, 8781851, 8781850, 8781853, 8781854, 8781847, 3506, 19, 35, 0});
+		ScriptPreFired event = new ScriptPreFired(3852);
+		event.setScriptEvent(input);
+		plugin.onScriptPreFired(event);
+		assertEquals(0, pending.size());
+		when(client.getIntStack()).thenReturn(new int[]{19, 2});
+		when(client.getIntStackSize()).thenReturn(2);
+		plugin.onScriptPreFired(new ScriptPreFired(3968));
+		assertEquals(1, pending.size());
+	}
+
+	@Test
+	public void serverControlledDropdownSupportsNoneAndRejectsOtherSettings()
+	{
+		Object[] args = {3852, 3, "None", 36, 0, 8781843, 8781851, 8781850,
+			8781853, 8781854, 8781847, 3506, 19, 35, 1};
+		ScriptEvent input = mock(ScriptEvent.class);
+		when(input.getArguments()).thenReturn(args);
+		ScriptPreFired event = new ScriptPreFired(3852);
+		event.setScriptEvent(input);
+		plugin.onScriptPreFired(event);
+		args[12] = 238;
+		plugin.onScriptPreFired(event);
+		args[12] = 19;
+		args[4] = 14;
+		plugin.onScriptPreFired(event);
+		args[4] = 0;
+		args[1] = 2;
+		plugin.onScriptPreFired(event);
+		assertEquals(1, pending.size());
+		pending.get(0).run();
+		verify(client).runScript(49, "localscape_keybind 19 0");
+	}
+
+	@Test
+	public void refreshesAllKeybindDropdownsAfterServerUpdates()
+	{
+		Widget clickzone = mock(Widget.class);
+		Widget inventory = dropdown(100, 25, 10);
+		Widget stats = dropdown(101, 19, 20);
+		Widget music = dropdown(102, 27, 30);
+		Widget unrelated = mock(Widget.class);
+		when(unrelated.getOnOpListener()).thenReturn(new Object[]{3851, 2});
+		when(clickzone.getDynamicChildren()).thenReturn(new Widget[]{inventory, null, stats, music, unrelated});
+		when(client.getWidget(InterfaceID.Settings.SETTINGS_CLICKZONE)).thenReturn(clickzone);
+
+		for (int varp : new int[]{1224, 1225, 1226})
+		{
+			VarbitChanged event = new VarbitChanged();
+			event.setVarpId(varp);
+			eventBus.post(event);
+		}
+		assertEquals(1, pending.size());
+		verify(client, never()).runScript(any());
+		pending.get(0).run();
+		// The native redraw reads the authoritative binding, including None, from varps.
+		// Script 3854 takes the label index before the parent component id.
+		verify(client).runScript(3854, 35, 10, InterfaceID.Settings.SETTINGS_CONTENT, 1164, 25, 3);
+		verify(client).runScript(3854, 35, 20, InterfaceID.Settings.SETTINGS_CONTENT, 1164, 19, 3);
+		verify(client).runScript(3854, 35, 30, InterfaceID.Settings.SETTINGS_CONTENT, 1164, 27, 3);
+	}
+
+	@Test
+	public void ignoresUnrelatedVarpsAndClosedSettings()
+	{
+		VarbitChanged event = new VarbitChanged();
+		event.setVarpId(100);
+		eventBus.post(event);
+		verifyZeroInteractions(clientThread);
+		event.setVarpId(1224);
+		eventBus.post(event);
+		pending.forEach(Runnable::run);
+		verify(client, never()).runScript(any());
+	}
+
+	private Widget dropdown(int structId, int setting, int label)
+	{
+		Widget widget = mock(Widget.class);
+		// Revision 233's settings keybind dropdown installs this 3851 listener.
+		when(widget.getOnOpListener()).thenReturn(new Object[]{3851, 3, structId,
+			InterfaceID.Settings.SETTINGS_CONTENT, label, 1164, 100, 20, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 0});
+		StructComposition struct = mock(StructComposition.class);
+		when(client.getStructComposition(structId)).thenReturn(struct);
+		when(struct.getIntValue(1077)).thenReturn(setting);
+		return widget;
 	}
 
 	@Test
