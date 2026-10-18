@@ -532,7 +532,8 @@ Ancient, or Arceuus to play the swap animation and change books three ticks late
 The 130 Magic XP is awarded when that three-tick stall finishes.
 Red-x targets remain active throughout the stall and the player keeps facing them.
 For a target clicked earlier in the casting tick, movement starts after the stall;
-for an interaction already active on an earlier tick, the player keeps approaching.
+for an interaction already active on an earlier tick, an approach in progress continues.
+Ranged attacks already within weapon range stay stationary throughout the stall.
 Attacking, passing barriers, and other interactions wait until the stall ends.
 Ordinary ground movement pauses during the stall and resumes afterwards.
 Movement or attack clicks received after SBS starts are ignored during the stall.
