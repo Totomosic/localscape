@@ -23,13 +23,15 @@ public class LocalToolsPanelTest
 			LocalDevPanel debug = new LocalDevPanel(command -> { });
 			try
 			{
-				LocalToolsPanel panel = new LocalToolsPanel(theatre, gear, debug);
+				NylocasWavesPanel waves = new NylocasWavesPanel();
+				LocalToolsPanel panel = new LocalToolsPanel(theatre, gear, debug, waves);
 				JToggleButton theatreHeader = header(panel, 0);
 				JToggleButton gearHeader = header(panel, 1);
 				JToggleButton debugHeader = header(panel, 2);
 				assertEquals("▼ Theatre controls", theatreHeader.getText());
 				assertEquals("▶ Gear setups", gearHeader.getText());
 				assertEquals("▶ Debug tools", debugHeader.getText());
+				assertEquals("▶ Nylocas waves", header(panel, 3).getText());
 				assertTrue(theatre.isVisible());
 				assertFalse(gear.isVisible());
 				assertFalse(debug.isVisible());

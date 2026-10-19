@@ -9,11 +9,12 @@ import net.runelite.client.ui.PluginPanel;
 
 final class LocalToolsPanel extends PluginPanel
 {
-	LocalToolsPanel(PluginPanel theatre, PluginPanel gear, PluginPanel debug)
+	LocalToolsPanel(PluginPanel theatre, PluginPanel gear, PluginPanel debug, PluginPanel waves)
 	{
 		addSection("Theatre controls", theatre, true);
 		addSection("Gear setups", gear, false);
 		addSection("Debug tools", debug, false);
+		addSection("Nylocas waves", waves, false);
 	}
 
 	private void addSection(String title, PluginPanel content, boolean expanded)

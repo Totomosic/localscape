@@ -49,6 +49,7 @@ public class LocalDevPlugin extends Plugin
 	private volatile LocalDevPanel panel;
 	private NavigationButton navigation;
 	private volatile TheatreControlsPanel theatrePanel;
+	private volatile NylocasWavesPanel wavesPanel;
 	private volatile int session;
 	private int nextItemId;
 	private boolean itemsLoaded;
@@ -59,7 +60,8 @@ public class LocalDevPlugin extends Plugin
 		panel = new LocalDevPanel(this::submit);
 		theatrePanel = new TheatreControlsPanel(this::submit);
 		PluginPanel gearPanel = gearPresets.startUp();
-		LocalToolsPanel toolsPanel = new LocalToolsPanel(theatrePanel, gearPanel, panel);
+		wavesPanel = new NylocasWavesPanel();
+		LocalToolsPanel toolsPanel = new LocalToolsPanel(theatrePanel, gearPanel, panel, wavesPanel);
 		navigation = NavigationButton.builder()
 			.tooltip("Local Development")
 			.icon(createIcon())
@@ -77,6 +79,7 @@ public class LocalDevPlugin extends Plugin
 		clientToolbar.removeNavigation(navigation);
 		gearPresets.shutDown();
 		theatrePanel = null;
+		wavesPanel = null;
 		LocalDevPanel oldPanel = panel;
 		panel = null;
 		SwingUtilities.invokeLater(oldPanel::close);
@@ -106,6 +109,21 @@ public class LocalDevPlugin extends Plugin
 	public void onChatMessage(ChatMessage event)
 	{
 		gearPresets.onChatMessage(event);
+		if (event.getType() == ChatMessageType.CONSOLE)
+		{
+			NylocasWaveSnapshot report = NylocasWaveSnapshot.parse(event.getMessage());
+			NylocasWavesPanel current = wavesPanel;
+			if (report != null && current != null)
+			{
+				SwingUtilities.invokeLater(() ->
+				{
+					if (wavesPanel == current)
+					{
+						current.update(report);
+					}
+				});
+			}
+		}
 	}
 
 	@Subscribe

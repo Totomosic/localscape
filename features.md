@@ -6,9 +6,9 @@ Gameplay, sidebar controls, and encounter behavior for LocalScape. See the
 ## Local Development sidebar
 
 The custom client includes a **Local Development** plugin. Its terminal icon in
-the RuneLite sidebar opens three independently collapsible sections, in order:
-**Theatre controls**, **Gear setups**, and **Debug tools**. Theatre controls starts
-expanded; gear setups and debug tools start collapsed. Section contents and inputs
+the RuneLite sidebar opens four independently collapsible sections, in order:
+**Theatre controls**, **Gear setups**, **Debug tools**, and **Nylocas waves**. Theatre controls starts
+expanded; the other sections start collapsed. Section contents and inputs
 are preserved when collapsed. On login it also
 writes `Custom RuneLite build active.` to game chat, confirming that RSProx
 launched your build. Edit the Java sources under `client/` to extend it.
@@ -120,6 +120,35 @@ Search matches both creator and setup names. All players can save, list and appl
 setups; saving cannot overwrite another player's setup. Rebuild the client with
 `./dev build-client`, restart RSMod, and launch a fresh client session to load the
 panel and server commands; no cache repack is required.
+
+## Nylocas waves report
+
+Expand **Nylocas waves** in Local Development for live party statistics. Recording
+begins when the room starts at the entrance barrier. The last report survives room
+completion, leaving, logging out, and creating another lobby; entering the next
+room replaces it. Closing the client or disabling Local Development discards it.
+
+- **One shot kills**, separately for smalls and bigs: combat kills from one damaging
+  hitsplat, divided by combat kills of that size. Misses are ignored; multi-hit
+  weapons count each damaging splat. Natural expiries are excluded.
+- **Overkilled by Nylo style**: combat kills receiving another hitsplat on the lethal
+  tick, divided by kills of that style at death. Zero extra splats count, including
+  thralls; multiple extra splats count once per Nylo.
+- **Stalls saved**: successful wave admission checks that would have stalled if
+  overkilled bodies had remained for one extra tick. The calculation accounts for
+  bigs delaying their two split children as well as their own removal. This counts
+  immediate cap checks, rather than simulating a whole alternative room timeline.
+  **Cap stalls** also shows actual four-tick cap retries.
+- **Thrall kills**: Nylos whose lethal hit came from any party member's thrall.
+- **Split children by style**: each phase's share of all split births, plus
+  melee/ranged/magic counts and percentages within each birth phase: waves 1–20, waves 21–30, and cleanup after wave 31 spawns.
+  Children from naturally expired bigs are included. The birth tick determines
+  the phase, regardless of the parent's original wave.
+
+The panel shows counts beside percentages and a dash when no denominator exists.
+Updates come from authoritative server events over console messages without filling
+game chat. Rebuild the client with `./dev build-client`, restart RSMod, and launch
+a fresh client session; no cache repack is required.
 
 ## In-game keybinds
 
