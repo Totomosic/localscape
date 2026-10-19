@@ -8,10 +8,11 @@ final class NylocasWaveSnapshot
 {
 	final String room;
 	final String status;
-	// LNW2 counters: wave, population, stalls, saved, thrall kills;
+	// LNW2/LNW3 counters: wave, population, stalls, saved, thrall kills;
 	// small kills/one shots, big kills/one shots; kills and overkills by style;
 	// split children by phase then style; luck attempts/actual/expected (millionths)
-	// for pre small/big, post small/big; unmeasured first hits. Style order is melee, ranged, magic.
+	// for pre small/big, post small/big; unmeasured first attacks. LNW3 appends the
+	// whole-room luck percentile in millionths. Style order is melee, ranged, magic.
 	private final long[] values;
 
 	private NylocasWaveSnapshot(String room, String status, long[] values)
@@ -23,19 +24,20 @@ final class NylocasWaveSnapshot
 
 	static NylocasWaveSnapshot parse(String message)
 	{
-		if (message == null || !message.startsWith("LNW2 "))
+		if (message == null || !(message.startsWith("LNW2 ") || message.startsWith("LNW3 ")))
 		{
 			return null;
 		}
 		String[] parts = message.split(" ");
-		if (parts.length != 40 || !Arrays.asList("starting", "waves", "cleanup", "complete").contains(parts[2]))
+		int counters = message.startsWith("LNW3 ") ? 38 : 37;
+		if (parts.length != counters + 3 || !Arrays.asList("starting", "waves", "cleanup", "complete").contains(parts[2]))
 		{
 			return null;
 		}
 		try
 		{
 			String room = UUID.fromString(parts[1]).toString();
-			long[] values = new long[37];
+			long[] values = new long[counters];
 			for (int i = 0; i < values.length; i++)
 			{
 				values[i] = Long.parseLong(parts[i + 3]);
@@ -65,6 +67,10 @@ final class NylocasWaveSnapshot
 					return null;
 				}
 			}
+			if (counters == 38 && values[37] > 1000000)
+			{
+				return null;
+			}
 			return new NylocasWaveSnapshot(room, parts[2], values);
 		}
 		catch (IllegalArgumentException exception)
@@ -76,5 +82,10 @@ final class NylocasWaveSnapshot
 	long value(int index)
 	{
 		return values[index];
+	}
+
+	boolean hasLuckPercentile()
+	{
+		return values.length == 38;
 	}
 }

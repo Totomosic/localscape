@@ -134,18 +134,28 @@ begins when the room starts at the entrance barrier. The last report survives ro
 completion, leaving, logging out, and creating another lobby; entering the next
 room replaces it. Closing the client or disabling Nylocas Waves discards it.
 
-- **One shot kills**, separately for smalls and bigs: combat kills from one damaging
-  hitsplat, divided by combat kills of that size. Misses are ignored; multi-hit
-  weapons count each damaging splat. Natural expiries are excluded.
+- **One shot kills**, separately for smalls and bigs: combat kills from one attack,
+  divided by combat kills of that size. Every splat from that attack counts
+  together, including scythe and sulphur blade hits. Separate attacks and players
+  cannot combine into a one-shot, even on the same tick. Misses are ignored;
+  natural expiries are excluded.
 - **% luck**: actual one-shots divided by expected one-shots; 100% means expected
   results. The server captures each attack's damage range with its gear, boosts,
   prayer, and modifiers when it rolls, before impact or HP clipping. Each Nylo's
-  first damaging splat contributes one opportunity, including Nylos that survive
-  or later expire. Misses are ignored, matching the one-shot definition. Hover the
+  first damaging attack contributes one opportunity, including Nylos that survive
+  or later expire. The expectation combines all of that attack's damage rolls
+  against the Nylo's HP before impact, conditioned on the attack dealing damage.
+  Accuracy misses are ignored, matching the one-shot definition. Hover the
   value or label for pre/post-cap totals and small/big breakdowns, including the
-  four phase/size combinations. Cleanup counts as post-cap. Thrall-first hits and
-  custom damage rolls without distribution metadata are excluded and counted in
-  the tooltip. No measured expected one-shots displays a dash.
+  four phase/size combinations. The luck tooltip stays visible while hovered.
+  Cleanup counts as post-cap. Thrall-first attacks and custom damage rolls without
+  distribution metadata are excluded and counted in the tooltip. No measured
+  expected one-shots displays a dash.
+- **Luck percentile**: the exact distribution of one-attack kills for the measured
+  attacks' individual probabilities. Higher is luckier; 50 is typical. It counts
+  outcomes below the observed result plus half of equal outcomes, so guaranteed
+  results rank at 50. No measured attacks displays a dash. The percentile
+  describes this room's measured opportunities.
 - **Wave-check timeline**: every natural check and every four-tick retry, with
   room tick, incoming wave, retry number, and population/cap before spawning.
   Green population values mean the wave spawned; red means it stalled. Hover a
@@ -161,14 +171,14 @@ room replaces it. Closing the client or disabling Nylocas Waves discards it.
   immediate cap checks, rather than simulating a whole alternative room timeline.
   **Cap stalls** also shows actual four-tick cap retries.
 - **Thrall kills**: Nylos whose lethal hit came from any party member's thrall.
-- **Split children by style**: each phase's share of all split births, plus
-  melee/ranged/magic counts and percentages within each birth phase: waves 1–20, waves 21–30, and cleanup after wave 31 spawns.
+- **Split children by style**: raw melee/ranged/magic counts within each birth
+  phase: waves 1–20, waves 21–28, and cleanup after wave 29 spawns.
   Children from naturally expired bigs are included. The birth tick determines
   the phase, regardless of the parent's original wave.
 
-The panel shows counts beside percentages and a dash when no denominator exists.
-Updates come from authoritative server events over console messages without filling
-game chat. Rebuild the client with `./dev build-client`, restart RSMod, and launch
+One-shot and overkill rates show counts beside percentages and a dash when no
+denominator exists. Updates come from authoritative server events over console
+messages without filling game chat. Rebuild the client with `./dev build-client`, restart RSMod, and launch
 a fresh client session; no cache repack is required.
 
 ## In-game keybinds

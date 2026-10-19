@@ -6,10 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JLabel;
 import javax.swing.JTable;
+import javax.swing.JToolTip;
+import javax.swing.LookAndFeel;
 import javax.swing.SwingUtilities;
+import javax.swing.ToolTipManager;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import net.runelite.client.ui.FontManager;
+import net.runelite.client.ui.laf.RuneLiteLAF;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
@@ -45,7 +53,10 @@ public class NylocasWavesPanelTest
 			assertTrue(labels.contains("61.5%"));
 			assertTrue(labels.contains("100.0% (1/1)"));
 			assertTrue(labels.stream().anyMatch(text -> text.contains("Waves complete")));
-			assertTrue(labels.stream().anyMatch(text -> text.contains("Melee 50.0% (1/2)")));
+			assertTrue(labels.contains("<html>Melee 1<br>Ranged 1<br>Magic 0</html>"));
+			assertTrue(labels.contains("<html>Melee 0<br>Ranged 0<br>Magic 1</html>"));
+			assertTrue(labels.contains("<html>Melee 0<br>Ranged 1<br>Magic 1</html>"));
+			assertFalse(labels.stream().anyMatch(text -> text.contains("of all splits")));
 			panel.setVisible(false);
 			panel.setVisible(true);
 			assertTrue(labels(panel).contains("50.0% (1/2)"));
@@ -53,6 +64,113 @@ public class NylocasWavesPanelTest
 				+ "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"));
 			assertTrue(labels(panel).contains("— (0/0)"));
 			assertTrue(labels(panel).stream().anyMatch(text -> text.contains("Starting room")));
+			assertEquals(3, labels(panel).stream().filter(text -> text.equals("<html>Melee 0<br>Ranged 0<br>Magic 0</html>")).count());
+		});
+	}
+
+	@Test
+	public void validatesAndDisplaysAttackLuckPercentileAndSplitBoundaries() throws Exception
+	{
+		assertNull(NylocasWaveSnapshot.parse("LNW3 " + ROOM + " complete " + COUNTS));
+		assertNull(NylocasWaveSnapshot.parse("LNW3 " + ROOM + " complete " + COUNTS + " -1"));
+		assertNull(NylocasWaveSnapshot.parse("LNW3 " + ROOM + " complete " + COUNTS + " 1000001"));
+		assertFalse(NylocasWaveSnapshot.parse("LNW2 " + ROOM + " complete " + COUNTS).hasLuckPercentile());
+		SwingUtilities.invokeAndWait(() ->
+		{
+			NylocasWavesPanel panel = new NylocasWavesPanel();
+			for (int rank : new int[]{0, 500000, 955000, 1000000})
+			{
+				panel.update(NylocasWaveSnapshot.parse("LNW3 " + ROOM + " complete " + COUNTS + " " + rank));
+				assertTrue(labels(panel).contains(String.format(java.util.Locale.ROOT, "%.1f", rank / 10000.0)));
+			}
+			assertTrue(labels(panel).contains("Luck percentile"));
+			assertTrue(labels(panel).contains("Post cap · waves 21–28"));
+			assertTrue(labels(panel).contains("Cleanup · wave 29 onward"));
+			assertTrue(tooltips(panel).stream().anyMatch(text -> text.contains("including all its splats")));
+			panel.update(NylocasWaveSnapshot.parse("LNW2 " + ROOM + " complete " + COUNTS));
+			List<String> labels = labels(panel);
+			assertEquals("—", labels.get(labels.indexOf("Luck percentile") + 1));
+			String empty = "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0";
+			panel.update(NylocasWaveSnapshot.parse("LNW3 " + ROOM + " starting " + empty));
+			labels = labels(panel);
+			assertEquals("—", labels.get(labels.indexOf("Luck percentile") + 1));
+		});
+	}
+
+	@Test
+	public void usesScalableFontsWithRuneLiteLookAndFeel() throws Exception
+	{
+		SwingUtilities.invokeAndWait(() ->
+		{
+			LookAndFeel previous = UIManager.getLookAndFeel();
+			try
+			{
+				UIManager.setLookAndFeel(new RuneLiteLAF());
+				NylocasWavesPanel panel = new NylocasWavesPanel();
+				panel.setSize(225, panel.getPreferredSize().height);
+				layout(panel);
+				for (JLabel label : labelComponents(panel))
+				{
+					assertTrue(label.getText(), label.getPreferredSize().width <= label.getWidth());
+					assertEquals(label.getText(), FontManager.getDefaultFont().getFamily(), label.getFont().getFamily());
+					assertEquals(FontManager.getDefaultFont().getFamily(), label.createToolTip().getFont().getFamily());
+				}
+				assertEquals(FontManager.getDefaultFont().getFamily(), table(panel).getFont().getFamily());
+				assertEquals(FontManager.getDefaultFont().getFamily(), table(panel).getTableHeader().getFont().getFamily());
+			}
+			catch (UnsupportedLookAndFeelException e)
+			{
+				throw new AssertionError(e);
+			}
+			finally
+			{
+				try
+				{
+					UIManager.setLookAndFeel(previous);
+				}
+				catch (UnsupportedLookAndFeelException e)
+				{
+					throw new AssertionError(e);
+				}
+			}
+		});
+	}
+
+	@Test
+	public void luckTooltipRemainsAvailableWhileShownAndRestoresNormalTimeout() throws Exception
+	{
+		SwingUtilities.invokeAndWait(() ->
+		{
+			NylocasWavesPanel panel = new NylocasWavesPanel();
+			NylocasWaveSnapshot report = NylocasWaveSnapshot.parse("LNW2 " + ROOM + " complete " + COUNTS);
+			panel.update(report);
+			ToolTipManager manager = ToolTipManager.sharedInstance();
+			int previousDelay = manager.getDismissDelay();
+			try
+			{
+				for (JLabel label : labelComponents(panel))
+				{
+					if (!label.getText().equals("% luck") && !label.getText().equals("61.5%")) continue;
+					JToolTip tooltip = label.createToolTip();
+					tooltip.setTipText(label.getToolTipText());
+					tooltip.addNotify();
+					try
+					{
+						assertEquals(Integer.MAX_VALUE, manager.getDismissDelay());
+						panel.update(report);
+						assertTrue(tooltip.getTipText().contains("Whole room"));
+					}
+					finally
+					{
+						tooltip.removeNotify();
+					}
+					assertEquals(previousDelay, manager.getDismissDelay());
+				}
+			}
+			finally
+			{
+				manager.setDismissDelay(previousDelay);
+			}
 		});
 	}
 
@@ -89,6 +207,26 @@ public class NylocasWavesPanelTest
 		assertNull(NylocasWaveCheck.parse("LNC1 " + ROOM + " 1 -1 20 0 12 12"));
 		assertNull(NylocasWaveSnapshot.parse("LNW2 " + ROOM + " complete " + COUNTS.replace("2 1 1000000", "2 3 1000000")));
 		assertNull(NylocasWaveSnapshot.parse("LNW2 " + ROOM + " complete " + COUNTS.replace("2 1 1000000", "2 1 3000000")));
+	}
+
+	private static void layout(Container container)
+	{
+		container.doLayout();
+		for (Component child : container.getComponents())
+		{
+			if (child instanceof Container) layout((Container) child);
+		}
+	}
+
+	private static List<JLabel> labelComponents(Container container)
+	{
+		List<JLabel> result = new ArrayList<>();
+		for (Component child : container.getComponents())
+		{
+			if (child instanceof JLabel) result.add((JLabel) child);
+			if (child instanceof Container) result.addAll(labelComponents((Container) child));
+		}
+		return result;
 	}
 
 	private static JTable table(Container container)
