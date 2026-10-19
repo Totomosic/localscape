@@ -9,7 +9,8 @@ Spawn positions, sizes, initial styles, and destinations come from
 [lane-spawn-targets.csv](research/nylocas/lane-spawn-targets.csv). Style stages
 come from the positive-HP observations in
 [lifecycle-waves.csv](research/nylocas/lifecycle-waves.csv), at zero-based ages
-0, 5, 7, and 26. The frozen guide reference supplies the natural delay **after**
+0, 5, 7, and 26, supplemented by the three user-confirmed age-26 styles below.
+The frozen guide reference supplies the natural delay **after**
 each wave; the server stores that delay **before the next** wave. With no cap
 stalls, wave 31 is 232 ticks after wave 1.
 
@@ -65,10 +66,11 @@ first while tracing backward from the destination, producing diagonal-first
 forward movement without reversing collision checks or interaction reach.
 Player routes retain their straight-first ordering.
 
-Three flickering spawns lack a positive-HP age-26 observation: wave 18 west big,
-wave 19 east big, and wave 20 south big. Their `styleAt26` is explicitly null;
-they retain the age-7 style. This is an evidence gap, so those three late styles
-are not claimed as verified.
+The three flickering spawns without positive-HP age-26 observations in the pinned
+corpus now use user-confirmed styles: wave 18 west big switches to **magic**,
+wave 19 east big to **melee**, and wave 20 south big to **ranged**. The server table
+and integration fixture include these values; the raw recording observation CSV
+remains unchanged so its sample counts retain their original provenance.
 
 The room cap is 12 until wave 20 has spawned, then 24. The admission check for
 wave 20 still uses 12; wave 21 and later use 24. On a due tick, an existing
@@ -91,7 +93,7 @@ for the wave 21 overkill regression.
 Natural expiry uses the recorded lifetime, independent of AI timer delays and
 wave progress. Ages below are zero-based (`current tick - spawn tick`):
 
-| Size | Animation starts | Removal and blast |
+| Size | Animation starts and blast damage | Removal |
 | --- | --- | --- |
 | Small | 51 | 52 |
 | Big | 52 | 55 |
@@ -120,14 +122,16 @@ These timings follow the [lifecycle evidence](nylocas-lifecycle-evidence.md) and
 
 Area damage is **provisional**, explicitly selected for this implementation
 while the precise live-game blast rules remain unmeasured. Each explosion
-hits eligible players once, at removal, within one tile of the NPC's footprint,
+hits eligible players once, on the tick the expiry death animation starts, within
+one tile of the NPC's footprint,
 including diagonals (3×3 for smalls, 4×4 for bigs). Targets must be alive, inside
 the arena, on the same plane and in the same instance. Each gets an independent
 uniform integer roll of 0–18 for a small or 0–21 for a big. Damage is typeless,
 ignores protection prayers, and has no distance falloff or line-of-sight check.
-The size-dependent timing is recording-backed; the radius, damage distribution,
-impact tick, and prayer behavior are a tunable gameplay contract, not a claim
-of verified OSRS parity. The general area-damage behavior is described by the
+The size-dependent animation/removal timing is recording-backed; blast damage
+on the animation-start tick is user-confirmed and applies only to natural expiry,
+never player kills. The radius, damage distribution, and prayer behavior remain
+a tunable gameplay contract rather than verified OSRS parity. The general area-damage behavior is described by the
 [mechanics guide](https://blert.io/guides/tob/nylocas/mechanics#behavior).
 
 The integration resource `nylocas-waves.csv` freezes all 120 research rows with

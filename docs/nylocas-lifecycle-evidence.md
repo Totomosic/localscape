@@ -47,6 +47,11 @@ Specific independently inspectable examples in the [user-supplied recording](htt
 
 Classification caveat: absence of observed zero HP is an operational filter, not a server-supplied cause-of-death label. Its exact age concentration, across both sizes and both scales, supports the expiry interpretation. Some kills near expiry have zero HP and the same final age; they are intentionally excluded from this table.
 
+User-confirmed blast timing: natural-expiry explosion damage lands on the tick
+the death animation starts (zero-based age 51 for smalls, 52 for bigs), before
+removal. Player kills cause no explosion damage. This confirmation supplements
+the recorded animation/removal observations.
+
 Implementation tests should distinguish the expiry action from actual removal; verify the small and big removal snapshots independently; give each split a fresh age counter; and retain a big in the cap population through its expiry animation.
 
 ## Lethal damage does not immediately remove an NPC or always stop its next step
@@ -176,7 +181,9 @@ Sister bigs 43047 and 43048 independently show the same three changes at those t
 
 Across positive-HP samples, each observed slot's style at ages 0/5/7/26 is consistent across recordings. The fourth style need not equal the first or second. For example, wave 26 south big's positive-HP sequence is melee → magic → melee → ranged. [lifecycle-waves.csv](research/nylocas/lifecycle-waves.csv) records these values without inventing unobserved fourth states. Seventeen slots lack positive-HP age-26 observations, including three flickering slots: wave 18 west big, wave 19 east big, and wave 20 south big. Samples from dying bodies sometimes retain an earlier style, which is why the table separates positive-HP and all-sample counts.
 
-Tests should include the fourth change where directly observed; preserve uncertainty for unobserved slots; and distinguish style transformations from aggressive-form ID changes. Do not infer damage vulnerability during death animation from a visible style alone.
+The user subsequently confirmed the three missing flicker styles at age 26: **wave 18 west big → magic; wave 19 east big → melee; wave 20 south big → ranged**. These values supplement the pinned corpus in the server table and integration fixture; they are not additional recording samples in `lifecycle-waves.csv`.
+
+Tests should include the fourth change where directly observed or user-confirmed; preserve uncertainty for other unobserved slots; and distinguish style transformations from aggressive-form ID changes. Do not infer damage vulnerability during death animation from a visible style alone.
 
 ### Wave 9 west spawns share an anchor
 
@@ -210,7 +217,7 @@ the positive-HP lifecycle matrix.
 - The exact server phase behind 1-tick versus 2-tick first-zero-to-removal delays for smalls, and a complete stationary/walking classifier for big death delays. Replay HP and anchors do not expose the necessary internal state.
 - The collision and update-order rule selecting shifted split birth tiles. Parent metadata is conditioned on a known six-position acceptance rule.
 - Exact split-style probabilities or independence. Both duplicate and mixed pairs are established.
-- Fourth styles for flickering spawn slots killed in every sampled recording before that state can be observed.
+- Independent recording corroboration of the three user-confirmed fourth styles for flickering spawn slots killed before age 26 in the pinned corpus.
 - Server ordering when a cap check, despawn, and split/wave birth share a tick. End-of-tick counts constrain the result but do not identify every intermediate decision.
 - Changes outside regular solo/duo mode, including hard-mode princes. Those require a different corpus.
 
