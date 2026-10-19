@@ -1,8 +1,5 @@
 package net.runelite.client.plugins.localgear;
 
-import java.awt.Color;
-import java.awt.Graphics2D;
-import java.awt.image.BufferedImage;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,52 +14,41 @@ import net.runelite.api.events.ChatMessage;
 import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.GameTick;
 import net.runelite.client.callback.ClientThread;
-import net.runelite.client.eventbus.Subscribe;
-import net.runelite.client.plugins.Plugin;
-import net.runelite.client.plugins.PluginDescriptor;
-import net.runelite.client.ui.ClientToolbar;
-import net.runelite.client.ui.NavigationButton;
+import net.runelite.client.ui.PluginPanel;
 
-@PluginDescriptor(
-	name = "Local Gear Setups",
-	description = "Save, search and restore equipment and inventory setups on the local server",
-	tags = {"local", "gear", "presets", "setups"},
-	enabledByDefault = true
-)
-public class GearPresetsPlugin extends Plugin
+// Gear setup protocol and state, hosted by the Local Development plugin.
+public class GearPresetsPlugin
 {
 	@Inject private Client client;
 	@Inject private ClientThread clientThread;
-	@Inject private ClientToolbar clientToolbar;
 	private volatile GearPresetsPanel panel;
-	private NavigationButton navigation;
 	private volatile int session;
 	private String request;
 	private List<GearPreset> incoming;
+	private String incomingDefaultId;
+	private String defaultPresetId;
 	private int waitingTicks;
 	private boolean requestedList;
 
-	@Override
-	protected void startUp()
+	public PluginPanel startUp()
 	{
-		panel = new GearPresetsPanel(name -> submit("save", encode(name)), preset -> submit("load", preset.id), () -> submit("list", null));
-		navigation = NavigationButton.builder().tooltip("Gear setups").icon(icon()).priority(3).panel(panel).build();
-		clientToolbar.addNavigation(navigation);
+		panel = new GearPresetsPanel(name -> submit("save", encode(name)), preset -> submit("load", preset.id),
+			() -> submit("list", null), preset -> submit("default", preset.id == null ? "none" : preset.id));
 		clientThread.invokeLater(() -> updateLogin(client.getGameState()));
+		return panel;
 	}
 
-	@Override
-	protected void shutDown()
+	public void shutDown()
 	{
 		session++;
-		clientToolbar.removeNavigation(navigation);
 		panel = null;
 		request = null;
 		incoming = null;
+		incomingDefaultId = null;
+		defaultPresetId = null;
 		requestedList = false;
 	}
 
-	@Subscribe
 	public void onGameStateChanged(GameStateChanged event)
 	{
 		updateLogin(event.getGameState());
@@ -75,6 +61,8 @@ public class GearPresetsPlugin extends Plugin
 			session++;
 			request = null;
 			incoming = null;
+			incomingDefaultId = null;
+			defaultPresetId = null;
 			requestedList = false;
 			update(GearPresetsPanel::reset);
 			return;
@@ -102,13 +90,13 @@ public class GearPresetsPlugin extends Plugin
 			update(current ->
 			{
 				current.setBusy(true);
-				current.setStatus("list".equals(action) ? "Loading setups…" : "save".equals(action) ? "Saving setup…" : "Applying setup…");
+				current.setStatus("list".equals(action) ? "Loading setups…" : "save".equals(action) ? "Saving setup…"
+					: "default".equals(action) ? "Saving default setup…" : "Applying setup…");
 			});
 			client.runScript(49, "gearsetups " + action + " " + request + (argument == null ? "" : " " + argument));
 		});
 	}
 
-	@Subscribe
 	public void onGameTick(GameTick event)
 	{
 		if (request != null && ++waitingTicks >= 10)
@@ -117,7 +105,6 @@ public class GearPresetsPlugin extends Plugin
 		}
 	}
 
-	@Subscribe
 	public void onChatMessage(ChatMessage event)
 	{
 		// Console messages carry panel data without filling the player's game chat.
@@ -136,6 +123,14 @@ public class GearPresetsPlugin extends Plugin
 			{
 				case "begin":
 					incoming = new ArrayList<>();
+					incomingDefaultId = null;
+					break;
+				case "default":
+					if (incoming == null || parts.length != 4)
+					{
+						throw new IllegalArgumentException();
+					}
+					incomingDefaultId = "none".equals(parts[3]) ? null : UUID.fromString(parts[3]).toString();
 					break;
 				case "item":
 					if (incoming == null || parts.length != 5)
@@ -177,14 +172,21 @@ public class GearPresetsPlugin extends Plugin
 
 	private void finish(String message, List<GearPreset> presets)
 	{
+		if (presets != null)
+		{
+			defaultPresetId = incomingDefaultId;
+		}
+		String selectedDefault = defaultPresetId;
 		request = null;
 		incoming = null;
+		incomingDefaultId = null;
 		update(current ->
 		{
 			if (presets != null)
 			{
 				current.setPresets(presets);
 			}
+			current.setDefaultPreset(selectedDefault);
 			current.setBusy(false);
 			current.setStatus(message);
 		});
@@ -232,18 +234,5 @@ public class GearPresetsPlugin extends Plugin
 			bytes[i] = (byte) ((high << 4) | low);
 		}
 		return new String(bytes, StandardCharsets.UTF_8);
-	}
-
-	private static BufferedImage icon()
-	{
-		BufferedImage image = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
-		Graphics2D graphics = image.createGraphics();
-		graphics.setColor(new Color(95, 185, 210));
-		graphics.fillPolygon(new int[]{1, 5, 6, 10, 11, 15, 12, 11, 5, 4}, new int[]{4, 2, 4, 4, 2, 4, 8, 7, 7, 8}, 10);
-		graphics.fillRoundRect(5, 5, 7, 10, 2, 2);
-		graphics.setColor(Color.WHITE);
-		graphics.drawLine(8, 7, 8, 12);
-		graphics.dispose();
-		return image;
 	}
 }

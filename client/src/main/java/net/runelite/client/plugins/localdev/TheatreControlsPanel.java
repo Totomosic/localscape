@@ -28,7 +28,6 @@ final class TheatreControlsPanel extends PluginPanel
 
 	TheatreControlsPanel(Consumer<String> submit)
 	{
-		add(new JLabel("Theatre controls"));
 		add(new JLabel("<html>Create a lobby at the Bloat door. Up to five players can raid together.</html>"));
 		createLobby.addActionListener(event -> submit.accept("theatrecreate"));
 		add(createLobby);

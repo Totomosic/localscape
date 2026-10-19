@@ -11,6 +11,7 @@ import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
 import net.runelite.api.GameState;
 import net.runelite.api.ItemComposition;
+import net.runelite.api.events.ChatMessage;
 import net.runelite.api.events.ClientTick;
 import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.GameTick;
@@ -19,13 +20,15 @@ import net.runelite.client.callback.ClientThread;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
+import net.runelite.client.plugins.localgear.GearPresetsPlugin;
 import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
+import net.runelite.client.ui.PluginPanel;
 
 @PluginDescriptor(
 	name = "Local Development",
-	description = "Search and spawn items, restore skills, switch spellbooks, and teleport to development rooms on the local server",
-	tags = {"local", "development"},
+	description = "Theatre controls, shared gear setups, and debug tools for the local server",
+	tags = {"local", "development", "theatre", "gear", "debug"},
 	enabledByDefault = true
 )
 public class LocalDevPlugin extends Plugin
@@ -39,11 +42,13 @@ public class LocalDevPlugin extends Plugin
 	@Inject
 	private ClientToolbar clientToolbar;
 
+	@Inject
+	private GearPresetsPlugin gearPresets;
+
 	private final List<LocalItem> items = new ArrayList<>();
 	private volatile LocalDevPanel panel;
 	private NavigationButton navigation;
 	private volatile TheatreControlsPanel theatrePanel;
-	private NavigationButton theatreNavigation;
 	private volatile int session;
 	private int nextItemId;
 	private boolean itemsLoaded;
@@ -52,21 +57,16 @@ public class LocalDevPlugin extends Plugin
 	protected void startUp()
 	{
 		panel = new LocalDevPanel(this::submit);
+		theatrePanel = new TheatreControlsPanel(this::submit);
+		PluginPanel gearPanel = gearPresets.startUp();
+		LocalToolsPanel toolsPanel = new LocalToolsPanel(theatrePanel, gearPanel, panel);
 		navigation = NavigationButton.builder()
 			.tooltip("Local Development")
 			.icon(createIcon())
 			.priority(1)
-			.panel(panel)
+			.panel(toolsPanel)
 			.build();
 		clientToolbar.addNavigation(navigation);
-		theatrePanel = new TheatreControlsPanel(this::submit);
-		theatreNavigation = NavigationButton.builder()
-			.tooltip("Theatre controls")
-			.icon(createTheatreIcon())
-			.priority(2)
-			.panel(theatrePanel)
-			.build();
-		clientToolbar.addNavigation(theatreNavigation);
 		clientThread.invokeLater(() -> updateLoginState(client.getGameState()));
 	}
 
@@ -75,7 +75,7 @@ public class LocalDevPlugin extends Plugin
 	{
 		session++;
 		clientToolbar.removeNavigation(navigation);
-		clientToolbar.removeNavigation(theatreNavigation);
+		gearPresets.shutDown();
 		theatrePanel = null;
 		LocalDevPanel oldPanel = panel;
 		panel = null;
@@ -86,6 +86,7 @@ public class LocalDevPlugin extends Plugin
 	@Subscribe
 	public void onGameStateChanged(GameStateChanged event)
 	{
+		gearPresets.onGameStateChanged(event);
 		updateLoginState(event.getGameState());
 		if (event.getGameState() == GameState.LOGGED_IN)
 		{
@@ -96,8 +97,15 @@ public class LocalDevPlugin extends Plugin
 	@Subscribe
 	public void onGameTick(GameTick event)
 	{
+		gearPresets.onGameTick(event);
 		updateTheatreRaidState();
 		updateSpellbook();
+	}
+
+	@Subscribe
+	public void onChatMessage(ChatMessage event)
+	{
+		gearPresets.onChatMessage(event);
 	}
 
 	@Subscribe
@@ -200,19 +208,6 @@ public class LocalDevPlugin extends Plugin
 				update.accept(current);
 			}
 		});
-	}
-
-	private static BufferedImage createTheatreIcon()
-	{
-		BufferedImage icon = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
-		Graphics2D graphics = icon.createGraphics();
-		graphics.setColor(new Color(200, 65, 75));
-		graphics.fillRoundRect(1, 1, 14, 14, 4, 4);
-		graphics.setColor(Color.WHITE);
-		graphics.drawLine(4, 5, 11, 5);
-		graphics.drawLine(8, 5, 8, 12);
-		graphics.dispose();
-		return icon;
 	}
 
 	private static BufferedImage createIcon()

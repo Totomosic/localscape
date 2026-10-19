@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -19,6 +20,9 @@ import net.runelite.client.ui.PluginPanel;
 
 final class GearPresetsPanel extends PluginPanel
 {
+	private static final GearPreset NONE = new GearPreset(null, "None");
+	private final JComboBox<GearPreset> defaultSetup = new JComboBox<>();
+	private boolean updatingDefault;
 	private final JTextField search = new JTextField();
 	private final JTextField name = new JTextField();
 	private final JButton save = new JButton("Save current setup");
@@ -31,12 +35,27 @@ final class GearPresetsPanel extends PluginPanel
 	private boolean loggedIn;
 	private boolean busy;
 
-	GearPresetsPanel(Consumer<String> saveSetup, Consumer<GearPreset> apply, Runnable reload)
+	GearPresetsPanel(Consumer<String> saveSetup, Consumer<GearPreset> apply, Runnable reload, Consumer<GearPreset> saveDefault)
 	{
 		this.apply = apply;
 		results.setLayout(new BoxLayout(results, BoxLayout.Y_AXIS));
-		add(new JLabel("Gear setups"));
 		add(new JLabel("<html><body style='width: 150px'>Shared server setups restore your equipment and exact inventory layout.</html>"));
+		add(new JLabel("Default raid setup"));
+		defaultSetup.addItem(NONE);
+		defaultSetup.setToolTipText("Automatically apply this setup when creating or joining a raid. Choose None to keep your current gear.");
+		defaultSetup.addActionListener(event ->
+		{
+			if (!updatingDefault && loggedIn && !busy)
+			{
+				GearPreset selected = (GearPreset) defaultSetup.getSelectedItem();
+				if (selected != null)
+				{
+					saveDefault.accept(selected);
+				}
+			}
+		});
+		add(defaultSetup);
+		add(new JLabel("<html><body style='width: 150px'>Your default applies when you create or join a raid. Choose None to keep your current gear.</html>"));
 		add(new JLabel("Search saved setups"));
 		search.setToolTipText("Filter setups by name.");
 		add(search);
@@ -75,8 +94,45 @@ final class GearPresetsPanel extends PluginPanel
 
 	void setPresets(List<GearPreset> presets)
 	{
+		GearPreset selected = (GearPreset) defaultSetup.getSelectedItem();
 		this.presets = new ArrayList<>(presets);
+		updatingDefault = true;
+		try
+		{
+			defaultSetup.removeAllItems();
+			defaultSetup.addItem(NONE);
+			for (GearPreset preset : presets)
+			{
+				defaultSetup.addItem(preset);
+			}
+		}
+		finally
+		{
+			updatingDefault = false;
+		}
+		setDefaultPreset(selected == null ? null : selected.id);
 		filter();
+	}
+
+	void setDefaultPreset(String id)
+	{
+		updatingDefault = true;
+		try
+		{
+			defaultSetup.setSelectedItem(NONE);
+			for (GearPreset preset : presets)
+			{
+				if (preset.id.equals(id))
+				{
+					defaultSetup.setSelectedItem(preset);
+					break;
+				}
+			}
+		}
+		finally
+		{
+			updatingDefault = false;
+		}
 	}
 
 	void setLoggedIn(boolean loggedIn)
@@ -145,6 +201,7 @@ final class GearPresetsPanel extends PluginPanel
 		save.setEnabled(enabled);
 		refresh.setEnabled(enabled);
 		name.setEnabled(enabled);
+		defaultSetup.setEnabled(enabled);
 		for (java.awt.Component component : results.getComponents())
 		{
 			component.setEnabled(enabled);

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import org.junit.Test;
@@ -23,7 +24,7 @@ public class GearPresetsPanelTest
 		{
 			List<String> saved = new ArrayList<>();
 			List<GearPreset> applied = new ArrayList<>();
-			GearPresetsPanel panel = new GearPresetsPanel(saved::add, applied::add, () -> { });
+			GearPresetsPanel panel = new GearPresetsPanel(saved::add, applied::add, () -> { }, preset -> { });
 			assertFalse(button(panel, "Save current setup").isEnabled());
 			panel.setLoggedIn(true);
 			GearPreset nylo = new GearPreset("one", "[Alice] Nylo Duo");
@@ -47,6 +48,48 @@ public class GearPresetsPanelTest
 			assertEquals("", fields(panel).get(1).getText());
 			assertFalse(button(panel, "Save current setup").isEnabled());
 		});
+	}
+
+	@Test
+	public void defaultDropdownIncludesAllSetupsAndPreservesSelectionWithoutSendingDuringRefresh() throws Exception
+	{
+		SwingUtilities.invokeAndWait(() ->
+		{
+			List<GearPreset> defaults = new ArrayList<>();
+			GearPresetsPanel panel = new GearPresetsPanel(name -> { }, preset -> { }, () -> { }, defaults::add);
+			JComboBox<?> dropdown = dropdown(panel);
+			assertFalse(dropdown.isEnabled());
+			assertEquals("None", dropdown.getSelectedItem().toString());
+			panel.setLoggedIn(true);
+			GearPreset nylo = new GearPreset("one", "[Alice] Nylo Duo");
+			GearPreset melee = new GearPreset("two", "[Bob] Melee");
+			panel.setPresets(Arrays.asList(nylo, melee));
+			panel.setDefaultPreset(nylo.id);
+			assertTrue(defaults.isEmpty());
+			assertEquals(nylo, dropdown.getSelectedItem());
+			fields(panel).get(0).setText("ALICE");
+			assertEquals(3, dropdown.getItemCount());
+			dropdown.setSelectedIndex(2);
+			assertEquals(Arrays.asList(melee), defaults);
+			panel.setPresets(Arrays.asList(new GearPreset("one", "Updated"), new GearPreset("two", "Shared")));
+			assertEquals("Shared", dropdown.getSelectedItem().toString());
+			assertEquals(1, defaults.size());
+			dropdown.setSelectedIndex(0);
+			assertEquals(null, defaults.get(1).id);
+			panel.setBusy(true);
+			assertFalse(dropdown.isEnabled());
+			panel.reset();
+			assertFalse(dropdown.isEnabled());
+			assertEquals(1, dropdown.getItemCount());
+			assertEquals("None", dropdown.getSelectedItem().toString());
+			assertEquals(2, defaults.size());
+		});
+	}
+
+	static JComboBox<?> dropdown(GearPresetsPanel panel)
+	{
+		return Arrays.stream(panel.getComponents()).filter(JComboBox.class::isInstance)
+			.map(JComboBox.class::cast).findFirst().get();
 	}
 
 	static JButton button(Container parent, String text)

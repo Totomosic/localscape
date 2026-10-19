@@ -1,16 +1,21 @@
 package net.runelite.client.plugins.localdev;
 
+import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import net.runelite.api.Client;
 import net.runelite.api.GameState;
+import net.runelite.api.events.ChatMessage;
 import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.GameTick;
 import net.runelite.api.gameval.VarbitID;
 import net.runelite.client.callback.ClientThread;
+import net.runelite.client.plugins.localgear.GearPresetsPlugin;
 import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
+import net.runelite.client.ui.PluginPanel;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,12 +24,12 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -36,6 +41,8 @@ public class LocalDevPluginTest
 	private ClientThread clientThread;
 	@Mock
 	private ClientToolbar clientToolbar;
+	@Mock
+	private GearPresetsPlugin gearPresets;
 	@InjectMocks
 	private LocalDevPlugin plugin;
 	private final List<Runnable> pending = new ArrayList<>();
@@ -50,7 +57,11 @@ public class LocalDevPluginTest
 			pending.add(invocation.getArgument(0));
 			return null;
 		}).when(clientThread).invokeLater(any(Runnable.class));
-		SwingUtilities.invokeAndWait(plugin::startUp);
+		SwingUtilities.invokeAndWait(() ->
+		{
+			when(gearPresets.startUp()).thenReturn(new PluginPanel() { });
+			plugin.startUp();
+		});
 		pending.clear();
 	}
 
@@ -64,8 +75,10 @@ public class LocalDevPluginTest
 	public void raidStateLocksOptionsForPartyMembersAndUnlocksForANewLobby() throws Exception
 	{
 		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
-		verify(clientToolbar, times(2)).addNavigation(navigation.capture());
-		TheatreControlsPanel theatre = (TheatreControlsPanel) navigation.getAllValues().get(1).getPanel();
+		verify(clientToolbar).addNavigation(navigation.capture());
+		LocalToolsPanel tools = (LocalToolsPanel) navigation.getValue().getPanel();
+		JPanel section = (JPanel) tools.getComponent(0);
+		TheatreControlsPanel theatre = (TheatreControlsPanel) ((BorderLayout) section.getLayout()).getLayoutComponent(BorderLayout.CENTER);
 		GameStateChanged login = new GameStateChanged();
 		login.setGameState(GameState.LOGGED_IN);
 		when(client.getVarbitValue(VarbitID.TOB_CLIENT_PARTYSTATUS)).thenReturn(2);
@@ -74,6 +87,24 @@ public class LocalDevPluginTest
 		when(client.getVarbitValue(VarbitID.TOB_CLIENT_PARTYSTATUS)).thenReturn(0);
 		plugin.onGameTick(new GameTick());
 		SwingUtilities.invokeAndWait(() -> assertTrue(TheatreControlsPanelTest.wave(theatre).isEnabled()));
+	}
+
+	@Test
+	public void hostsOneSidebarAndForwardsGearEvents() throws Exception
+	{
+		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
+		verify(clientToolbar).addNavigation(navigation.capture());
+		assertEquals(3, navigation.getValue().getPanel().getComponentCount());
+		GameStateChanged state = new GameStateChanged();
+		state.setGameState(GameState.LOGIN_SCREEN);
+		GameTick tick = new GameTick();
+		ChatMessage chat = new ChatMessage();
+		plugin.onGameStateChanged(state);
+		plugin.onGameTick(tick);
+		plugin.onChatMessage(chat);
+		verify(gearPresets).onGameStateChanged(state);
+		verify(gearPresets).onGameTick(tick);
+		verify(gearPresets).onChatMessage(chat);
 	}
 
 	@Test

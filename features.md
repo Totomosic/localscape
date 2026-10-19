@@ -6,11 +6,14 @@ Gameplay, sidebar controls, and encounter behavior for LocalScape. See the
 ## Local Development sidebar
 
 The custom client includes a **Local Development** plugin. Its terminal icon in
-the RuneLite sidebar opens item search and server controls. On login it also
+the RuneLite sidebar opens three independently collapsible sections, in order:
+**Theatre controls**, **Gear setups**, and **Debug tools**. Theatre controls starts
+expanded; gear setups and debug tools start collapsed. Section contents and inputs
+are preserved when collapsed. On login it also
 writes `Custom RuneLite build active.` to game chat, confirming that RSProx
 launched your build. Edit the Java sources under `client/` to extend it.
 
-Open the terminal icon in the RuneLite sidebar while logged into LocalScape:
+Open the terminal icon and expand **Debug tools** while logged into LocalScape:
 
 - **Restore Skills** restores all skills, including Hitpoints and Prayer, to 99,
   reapplies the permanent combat boosts, and refills run and special attack
@@ -43,7 +46,7 @@ results and inventory-limit messages appear in game chat. Restore Skills preserv
 
 ## Theatre controls and multiplayer lobbies
 
-The **Theatre controls** sidebar panel (red T icon) provides multiplayer lobbies
+The **Theatre controls** section in Local Development provides multiplayer lobbies
 for ordinary players:
 
 1. The host clicks **Create lobby** to enter a fresh instance at the Bloat door.
@@ -83,8 +86,8 @@ is required.
 
 ## Gear setups
 
-The **Gear setups** sidebar panel (blue shirt icon), provided by the enabled
-**Local Gear Setups** plugin, saves and restores development loadouts:
+The **Gear setups** section in Local Development saves and restores development
+loadouts:
 
 1. Equip your gear and arrange your inventory, including any empty slots.
 2. Enter a setup name and click **Save current setup**. The server prefixes it
@@ -92,13 +95,24 @@ The **Gear setups** sidebar panel (blue shirt icon), provided by the enabled
    name again updates your setup.
 3. Search by name and click a setup's button to apply its equipment and inventory.
    **Refresh setups** reloads the saved list.
+4. Choose a **Default raid setup** from the dropdown, or **None** to keep your
+   current equipment and inventory. The choice is saved per character on the
+   server and restored on login. Any shared setup can be your default.
+
+Creating or successfully joining a Theatre lobby automatically applies your
+selected default to your player. Failed joins leave your gear unchanged. Starting
+an existing lobby does not apply it again, so gear changes made before starting
+are preserved. If a default setup is missing or invalid, you still enter the lobby
+with your current gear and see a message in game chat.
 
 Applying replaces both containers, including quantities and per-item charge data;
 it also restores all skill levels, including HP and Prayer, to base, and fully refills
 special attack and run energy. It does not withdraw from the bank. Setups are saved
 on the server and shared with every player, including players who did not create
 them. They persist across client/server restarts in RSMod's
-`.data/gear-presets/<creator-character-id>.json`.
+`.data/gear-presets/<creator-character-id>.json`. Each character's default setup
+ID is stored in their own file alongside their saved setups; choosing a shared
+setup does not change its creator's preference.
 Existing character files are included in the shared list automatically; resaving
 an older setup adds its creator prefix. Entered names support 1–24 letters,
 numbers, spaces and basic punctuation, with up to 100 setups per creator.

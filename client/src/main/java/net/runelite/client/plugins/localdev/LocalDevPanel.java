@@ -48,7 +48,6 @@ final class LocalDevPanel extends PluginPanel
 
 	LocalDevPanel(Consumer<String> submit)
 	{
-		add(new JLabel("Local Development"));
 		add(new JLabel("Server admin access required."));
 		restoreSkills.setToolTipText("Restore combat stats to their boosted levels, other skills to level 99, and run and special attack energy to 100%.");
 		restoreSkills.addActionListener(event -> submit.accept("master"));
