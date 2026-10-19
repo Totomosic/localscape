@@ -1,9 +1,9 @@
 # Nylocas despawn timing verification
 
-Verified 2026-10-18 against the simulator's game loop and combat handlers.
+Verified 2026-10-19 against the simulator's game loop and combat handlers.
 The requested overkill mechanic means an additional hitsplat after lethal
 damage, including a hitsplat clamped to zero. A single large hit is not the
-trigger. Moving smalls retain their extra arrival tick, as clarified by the user.
+trigger. Small deaths ignore walking; only bigs retain their extra arrival tick.
 
 ## Death timing
 
@@ -12,20 +12,24 @@ trigger. Moving smalls retain their extra arrival tick, as clarified by the user
 | Size | Moving before death | Ordinary removal after impact | With an extra hitsplat |
 | --- | --- | ---: | ---: |
 | Small | No | 2 ticks | 1 tick |
-| Small | Yes | 3 ticks | 2 ticks |
+| Small | Yes | 2 ticks | 1 tick |
 | Big | No | 6 ticks | 5 ticks |
 | Big | Yes | 7 ticks | 6 ticks |
 
-The existing NPC queue processor already provides the one-tick speedup. No death
-animation duration or arrival delay was changed.
+The existing NPC queue processor provides the one-tick overkill speedup. Small
+Nylocas skip the shared movement arrival delay; animation durations remain one
+tick for smalls and five ticks for bigs.
 
 ## Wave 21 regression
 
 `NylocasDamageTest` starts the real encounter at wave 21 and casts Ice Blitz on
 its west-north mage at spawn+1. It uses the real five-tick spell cooldown, then
-attacks an adjacent stationary small at spawn+6. The melee target represents a
-survivor from an earlier wave; it has the correct solo HP of 8. Sulphur blades
-provide two hits; a scythe's single hit against a small provides the control.
+attacks an adjacent small at spawn+6. The test covers both stationary targets
+and targets walking north into melee range on the attack tick. It asserts actual
+movement before the attack and on the cycle preceding lethal impact. The melee
+target represents a survivor from an earlier wave; it has the correct solo HP
+of 8. Sulphur blades provide two hits; a scythe's single hit against a small
+provides the control.
 Maximum-hit mode makes the kill deterministic. The fixture includes enough
 survivors to fill the 24-NPC cap while the melee target remains at the due check.
 
@@ -49,9 +53,11 @@ the actual wave-spawn event and checks that the melee target is already removed,
 rather than comparing only end-of-tick snapshots.
 
 “Before wave 22” here means earlier within the same server tick. It does not
-mean despawn at spawn+7. A moving small takes the extra tick shown in the matrix;
-this particular spell-to-melee sequence needs a stationary target to beat the
-spawn+8 check.
+mean despawn at spawn+7. Walking does not change the small's removal timing, so
+the overkill target can be moving or stationary and still beat the spawn+8 check.
+Temporarily restoring the arrival delay for melee targets makes exactly the two
+walking cases fail: removal slips from 8 to 9 with overkill, and from 9 to 10
+without overkill. The stationary cases still pass.
 
 Run the focused coverage from `upstream/rsmod`:
 
@@ -62,7 +68,6 @@ GRADLE_USER_HOME=/home/jordan/osrs/.state/gradle \
   :content:areas:dungeons:nylocas:integration --tests '*NylocasDeathsTest' --offline
 ```
 
-The complete Nylocas suite (296 tests) and combat-script suite (108 tests) pass.
-The broader game-process suite has 11 movement/facing failures out of 88 tests.
-Disabling the new event publication reproduces the exact same 11 failures and
-messages, establishing that they predate this ordering change.
+Current validation passes all 332 Nylocas room tests, 54 Nylocas combat tests,
+and four shared NPC death/drop queue tests. Formatting checks pass for the
+changed Kotlin files.

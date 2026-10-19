@@ -566,6 +566,9 @@ Attacking an already-nulled Nylocas plays the native warning/error buzzer
 and flashes the native yellow shield orb around it. The attack that first nulls
 the Nylocas produces neither cue, including any additional splats that tick.
 Subsequent multi-hit attacks produce one cue per target per tick.
+Small Nylocas die two ticks after lethal impact, or one tick after an additional
+hitsplat, whether walking or stationary. Walking adds an arrival tick only to
+big Nylocas deaths.
 Regular big Nylocas use their southwest tile for terrain and NPC occupancy
 checks, while retaining their 2×2 footprint for pillar contact and combat reach.
 Their other three tiles can overlap smalls or other bigs. Player-targeting big
