@@ -344,7 +344,7 @@ and stat drain follow the [Wiki special attack rules](https://osrsindex.com/wiki
 and [stat drain rules](https://osrsindex.com/wiki/temporary-skill-drain?site=osrs_wiki),
 with the requested accuracy bonus and primary-plus-sweep behavior.
 
-Normal toxic blowpipe attacks, including the blazing cosmetic, require stored
+Normal toxic blowpipe attacks require stored
 Zulrah's scales and unpoisoned darts. Use either material on the blowpipe to load
 up to 16,383 of each; unload its darts before changing dart type. Check reports
 the contents, and Unload lets you recover just the darts or all darts and scales.
@@ -359,9 +359,25 @@ blowpipe cosmetic, costs 50% energy, doubles accuracy, and increases maximum
 damage by 50%. It heals half the rolled damage, rounded down, before
 damage is capped to the target's remaining hitpoints; healing cannot exceed the
 player's maximum hitpoints. Its distinct projectile takes one extra tick to land
-unless the player is adjacent to the target. Both blowpipe cosmetics support it.
+unless the player is adjacent to the target. The regular toxic blowpipe supports it.
 These charging and normal attack mechanics follow the
 [OSRS Wiki](https://oldschool.runescape.wiki/w/Toxic_blowpipe).
+
+**Ascension crossbows** reuse the blazing blowpipe model and animation (loaded item
+`28688`, empty item `28687`). They share the blowpipe's scale/dart loading,
+unloading, capacity, ammo saving, and consumption mechanics. With dragon darts,
+their total bonuses are +34 Ranged accuracy and +58 Ranged strength: +23 from the
+weapon and +35 from the darts. Other unpoisoned darts remain loadable and contribute
+their own strength. Rapid attacks take two ticks; Accurate and Longrange take three.
+Range is six tiles, or eight on Longrange. A charged or blessed Dizana's quiver,
+including the max cape variants, adds its conditional +10 accuracy and +1 strength
+on top of its normal cape stats while darts are loaded. Quiver-slot ammunition
+adds no stats and is never consumed. Uncharged quivers provide only their normal
+cape stats. Ascension crossbows have no special attack; their native special bar
+and orb are disabled through the transmitted energy-requirement enum.
+Repack with `./gradlew packCache` in `upstream/rsmod`, then restart the server and
+relaunch the client to pick up the names, stats, range, and special UI changes.
+No RuneLite client rebuild is required.
 
 Charged **Tonalztics of Ralos** (item `28922`) make two independent ranged accuracy
 and damage rolls per attack, each capped at `floor(normal_max_hit * 0.75)`.
