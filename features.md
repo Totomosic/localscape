@@ -6,8 +6,8 @@ Gameplay, sidebar controls, and encounter behavior for LocalScape. See the
 ## Local Development sidebar
 
 The custom client includes a **Local Development** plugin. Its terminal icon in
-the RuneLite sidebar opens four independently collapsible sections, in order:
-**Theatre controls**, **Gear setups**, **Debug tools**, and **Nylocas waves**. Theatre controls starts
+the RuneLite sidebar opens three independently collapsible sections, in order:
+**Theatre controls**, **Gear setups**, and **Debug tools**. Theatre controls starts
 expanded; the other sections start collapsed. Section contents and inputs
 are preserved when collapsed. On login it also
 writes `Custom RuneLite build active.` to game chat, confirming that RSProx
@@ -129,14 +129,29 @@ panel and server commands; no cache repack is required.
 
 ## Nylocas waves report
 
-Expand **Nylocas waves** in Local Development for live party statistics. Recording
+Open the dedicated **Nylocas Waves** sidebar plugin (the teal chart icon) for live party statistics. Recording
 begins when the room starts at the entrance barrier. The last report survives room
 completion, leaving, logging out, and creating another lobby; entering the next
-room replaces it. Closing the client or disabling Local Development discards it.
+room replaces it. Closing the client or disabling Nylocas Waves discards it.
 
 - **One shot kills**, separately for smalls and bigs: combat kills from one damaging
   hitsplat, divided by combat kills of that size. Misses are ignored; multi-hit
   weapons count each damaging splat. Natural expiries are excluded.
+- **% luck**: actual one-shots divided by expected one-shots; 100% means expected
+  results. The server captures each attack's damage range with its gear, boosts,
+  prayer, and modifiers when it rolls, before impact or HP clipping. Each Nylo's
+  first damaging splat contributes one opportunity, including Nylos that survive
+  or later expire. Misses are ignored, matching the one-shot definition. Hover the
+  value or label for pre/post-cap totals and small/big breakdowns, including the
+  four phase/size combinations. Cleanup counts as post-cap. Thrall-first hits and
+  custom damage rolls without distribution metadata are excluded and counted in
+  the tooltip. No measured expected one-shots displays a dash.
+- **Wave-check timeline**: every natural check and every four-tick retry, with
+  room tick, incoming wave, retry number, and population/cap before spawning.
+  Green population values mean the wave spawned; red means it stalled. Hover a
+  row for the outcome and exact check details. Occupancy includes dying bodies
+  until removal, matching the actual cap gate. The timeline records while the
+  plugin is enabled and retains the final room alongside the report.
 - **Overkilled by Nylo style**: combat kills receiving another hitsplat on the lethal
   tick, divided by kills of that style at death. Zero extra splats count, including
   thralls; multiple extra splats count once per Nylo.

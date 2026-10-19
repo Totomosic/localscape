@@ -8,12 +8,13 @@ final class NylocasWaveSnapshot
 {
 	final String room;
 	final String status;
-	// LNW1 counters: wave, population, stalls, saved, thrall kills;
+	// LNW2 counters: wave, population, stalls, saved, thrall kills;
 	// small kills/one shots, big kills/one shots; kills and overkills by style;
-	// split children by phase then style. Style order is melee, ranged, magic.
-	private final int[] values;
+	// split children by phase then style; luck attempts/actual/expected (millionths)
+	// for pre small/big, post small/big; unmeasured first hits. Style order is melee, ranged, magic.
+	private final long[] values;
 
-	private NylocasWaveSnapshot(String room, String status, int[] values)
+	private NylocasWaveSnapshot(String room, String status, long[] values)
 	{
 		this.room = room;
 		this.status = status;
@@ -22,36 +23,44 @@ final class NylocasWaveSnapshot
 
 	static NylocasWaveSnapshot parse(String message)
 	{
-		if (message == null || !message.startsWith("LNW1 "))
+		if (message == null || !message.startsWith("LNW2 "))
 		{
 			return null;
 		}
 		String[] parts = message.split(" ");
-		if (parts.length != 27 || !Arrays.asList("starting", "waves", "cleanup", "complete").contains(parts[2]))
+		if (parts.length != 40 || !Arrays.asList("starting", "waves", "cleanup", "complete").contains(parts[2]))
 		{
 			return null;
 		}
 		try
 		{
 			String room = UUID.fromString(parts[1]).toString();
-			int[] values = new int[24];
+			long[] values = new long[37];
 			for (int i = 0; i < values.length; i++)
 			{
-				values[i] = Integer.parseInt(parts[i + 3]);
-				if (values[i] < 0)
+				values[i] = Long.parseLong(parts[i + 3]);
+				if (values[i] < 0 || (i < 24 || i == 36 || (i - 24) % 3 != 2) && values[i] > Integer.MAX_VALUE)
 				{
 					return null;
 				}
 			}
 			if (values[0] > 31 || values[6] > values[5] || values[8] > values[7]
-				|| (long) values[4] > (long) values[5] + values[7]
-				|| (long) values[9] + values[10] + values[11] != (long) values[5] + values[7])
+				|| values[4] > values[5] + values[7]
+				|| values[9] + values[10] + values[11] != values[5] + values[7])
 			{
 				return null;
 			}
 			for (int style = 0; style < 3; style++)
 			{
 				if (values[12 + style] > values[9 + style])
+				{
+					return null;
+				}
+			}
+			for (int group = 0; group < 4; group++)
+			{
+				int offset = 24 + group * 3;
+				if (values[offset + 1] > values[offset] || values[offset + 2] / 1000000.0 > values[offset])
 				{
 					return null;
 				}
@@ -64,7 +73,7 @@ final class NylocasWaveSnapshot
 		}
 	}
 
-	int value(int index)
+	long value(int index)
 	{
 		return values[index];
 	}

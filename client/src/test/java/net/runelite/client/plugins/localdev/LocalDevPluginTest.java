@@ -98,7 +98,7 @@ public class LocalDevPluginTest
 	{
 		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
 		verify(clientToolbar).addNavigation(navigation.capture());
-		assertEquals(4, navigation.getValue().getPanel().getComponentCount());
+		assertEquals(3, navigation.getValue().getPanel().getComponentCount());
 		GameStateChanged state = new GameStateChanged();
 		state.setGameState(GameState.LOGIN_SCREEN);
 		GameTick tick = new GameTick();
