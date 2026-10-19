@@ -501,7 +501,7 @@ them; no cache repack or client rebuild is required.
 **Energy Transfer** is available on the Lunar spellbook at level 91 Magic. It
 costs 3 Astral, 2 Law, and 1 Nature rune, all of the caster's special attack
 energy, and 10 HP; the caster must have more than 10 HP. It restores the
-recipient's special attack and run energy to full three ticks after casting,
+recipient's special attack and run energy to full four ticks after casting,
 with the receiving visual effect arriving at the same time. The native Energy
 Transfer sound plays around the caster immediately. Costs are paid and 100 Magic
 XP is awarded when casting. Delivery continues through subsequent actions and
