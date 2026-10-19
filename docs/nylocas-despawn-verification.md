@@ -1,24 +1,42 @@
 # Nylocas despawn timing verification
 
 Verified 2026-10-19 against the simulator's game loop and combat handlers.
-The requested overkill mechanic means an additional hitsplat after lethal
-damage, including a hitsplat clamped to zero. A single large hit is not the
-trigger. Small deaths ignore walking; only bigs retain their extra arrival tick.
+Overkill requires an actual positive-damage hit clamped to zero after the NPC
+has been killed by a player attack. That hit must land on the lethal tick or
+during the death animation. A single large hit, a natural zero/miss, and a
+future hit that never impacts do not qualify. A thrall's clamped hit can qualify
+after a player kill; a thrall delivering the lethal damage cannot. Small deaths
+ignore walking; only bigs retain their extra arrival tick.
+
+The [independent source and recording review](nylocas-death-timing-review.md)
+distinguishes these simulator measurements from externally verified mechanics.
+In particular, stationary big removal at impact+5 with an extra hitsplat is
+not corroborated by the pinned recordings or explicitly specified by the guide.
 
 ## Death timing
 
 `NylocasDeathsTest` measures impact and removal on the same server clock:
 
-| Size | Moving before death | Ordinary removal after impact | With an extra hitsplat |
+| Size | Moving before death | Ordinary removal after impact | With a qualifying zero-clamped hitsplat |
 | --- | --- | ---: | ---: |
 | Small | No | 2 ticks | 1 tick |
 | Small | Yes | 2 ticks | 1 tick |
 | Big | No | 6 ticks | 5 ticks |
 | Big | Yes | 7 ticks | 6 ticks |
 
-The existing NPC queue processor provides the one-tick overkill speedup. Small
-Nylocas skip the shared movement arrival delay; animation durations remain one
-tick for smalls and five ticks for bigs.
+These rows cover stationary targets and targets already walking continuously.
+The NPC queue processor permits early death-queue execution only after a
+qualifying zero-clamped impact on the lethal tick. Hits already in flight can
+also land during the animation and shorten its remaining delay once, without
+restarting it. A merely queued future hit cannot change the death timing. For
+bigs beginning or finishing movement around impact, the earlier
+queue execution changes which previous-cycle movement flag is sampled: the
+measured speedup can be two ticks or zero ticks. See the independent review's
+boundary cases. Small Nylocas skip the shared movement arrival delay; animation
+durations remain one tick for smalls and five ticks for bigs.
+Those animation durations apply to ordinary and lethal-tick-overkill deaths;
+overkill arriving during an already running animation shortens its remaining
+delay by one tick. Multiple qualifying impacts do not stack speedups.
 
 ## Wave 21 regression
 
@@ -64,10 +82,32 @@ Run the focused coverage from `upstream/rsmod`:
 ```bash
 JAVA_HOME=/home/jordan/osrs/.state/tools/jdk-21 \
 GRADLE_USER_HOME=/home/jordan/osrs/.state/gradle \
-./gradlew :api:combat:combat-scripts:integration --tests '*NylocasDamageTest.wave 21*' \
-  :content:areas:dungeons:nylocas:integration --tests '*NylocasDeathsTest' --offline
+./gradlew :content:areas:dungeons:nylocas:integration \
+  :api:combat:combat-scripts:integration --tests '*Nylocas*' \
+  :api:game-process:integration --tests '*NpcQueueProcessorTest' \
+  --tests '*NpcDeathDropsTest' --offline --console=plain
 ```
 
-Current validation passes all 332 Nylocas room tests, 54 Nylocas combat tests,
-and four shared NPC death/drop queue tests. Formatting checks pass for the
-changed Kotlin files.
+Current validation passes all 622 Nylocas room tests, 55 Nylocas combat tests,
+and five shared NPC death/drop queue tests: 682 tests, with no failures or skips.
+The 57 dedicated overkill cases cover player/thrall lethal-hit order, genuine
+zero-clamping versus natural zeros, future hits, impacts during the animation,
+the moving big's pre-animation arrival delay, multiple impacts on the same or
+different ticks, and hits on the last animation tick. Animation assertions
+ensure that late impacts do not restart the sequence. The real summoned-thrall
+regression checks matching-style positive damage clamped after the player kill
+against a wrong-style natural zero. The hit-order review adds a lethal final
+hit clamped to positive HP, which must not qualify as zero-clamped overkill.
+
+The root cause was queue-list shape implicitly deciding when death could start.
+The shared processor now records player-kill eligibility and a qualifying
+impact explicitly. Death-animation hits reuse the running death access rather
+than launching a replacement coroutine; an HP-zero hit cannot queue a second
+death. Formatting checks passed for the changed Kotlin files.
+
+The broader shared game-process suite has 11 player movement/routing failures
+across `PlayerMovementMapFlagTest`, `PlayerMovementProcessorTest`,
+`PlayerRouteRequestTest`, and `PlayerFaceSquareProcessorTest`. All 11 reproduced
+with the seven modified production files temporarily replaced by their unchanged
+`HEAD` versions. The overkill sources were then restored byte-for-byte and the
+682 targeted tests passed again. These existing failures remain outside this fix.

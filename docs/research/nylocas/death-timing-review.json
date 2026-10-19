@@ -1,0 +1,1325 @@
+{
+  "counts": {
+    "attack_previous_tick:big:weapon=22325": {
+      "6": 7,
+      "7": 1
+    },
+    "attack_previous_tick:big:weapon=25736": {
+      "6": 6
+    },
+    "attack_previous_tick:big:weapon=25739": {
+      "6": 37,
+      "7": 19
+    },
+    "attack_previous_tick:big:weapon=29084": {
+      "6": 2
+    },
+    "attack_previous_tick:small:weapon=22325": {
+      "2": 19
+    },
+    "attack_previous_tick:small:weapon=25736": {
+      "2": 4
+    },
+    "attack_previous_tick:small:weapon=25739": {
+      "2": 24
+    },
+    "attack_previous_tick:small:weapon=29084": {
+      "1": 72,
+      "2": 19
+    },
+    "big:moved_on_zero=False:moved_after_zero=False": {
+      "6": 85,
+      "7": 153
+    },
+    "big:moved_on_zero=False:moved_after_zero=True": {
+      "7": 1
+    },
+    "big:moved_on_zero=True:moved_after_zero=False": {
+      "6": 23,
+      "7": 58
+    },
+    "big:moved_on_zero=True:moved_after_zero=True": {
+      "7": 73
+    },
+    "births": {
+      "big": 559,
+      "small": 2119
+    },
+    "later_steps_big": {
+      "0": 319,
+      "1": 74
+    },
+    "later_steps_small": {
+      "0": 999,
+      "1": 342
+    },
+    "no_recorded_zero_removal_age_big": {
+      "55": 166
+    },
+    "no_recorded_zero_removal_age_small": {
+      "52": 778
+    },
+    "recordings": {
+      "total": 13
+    },
+    "small:moved_on_zero=False:moved_after_zero=False": {
+      "1": 133,
+      "2": 668
+    },
+    "small:moved_on_zero=True:moved_after_zero=False": {
+      "1": 104,
+      "2": 94
+    },
+    "small:moved_on_zero=True:moved_after_zero=True": {
+      "2": 342
+    },
+    "zero_to_removal_big": {
+      "6": 108,
+      "7": 285
+    },
+    "zero_to_removal_small": {
+      "1": 237,
+      "2": 1104
+    }
+  },
+  "examples": {
+    "big:moved_on_zero=False:moved_after_zero=False:delay=6": {
+      "delay": 6,
+      "removal_tick": 74,
+      "room_id": 61438,
+      "samples": [
+        {
+          "hp": 10,
+          "tick": 64,
+          "x": 3289,
+          "y": 4248
+        },
+        {
+          "hp": 10,
+          "tick": 65,
+          "x": 3290,
+          "y": 4248
+        },
+        {
+          "hp": 6,
+          "tick": 66,
+          "x": 3290,
+          "y": 4248
+        },
+        {
+          "hp": 4,
+          "tick": 67,
+          "x": 3290,
+          "y": 4248
+        },
+        {
+          "hp": 0,
+          "tick": 68,
+          "x": 3290,
+          "y": 4248
+        },
+        {
+          "hp": 0,
+          "tick": 69,
+          "x": 3290,
+          "y": 4248
+        }
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "zero_tick": 68
+    },
+    "big:moved_on_zero=False:moved_after_zero=False:delay=7": {
+      "delay": 7,
+      "removal_tick": 169,
+      "room_id": 62782,
+      "samples": [
+        {
+          "hp": 16,
+          "tick": 158,
+          "x": 3292,
+          "y": 4243
+        },
+        {
+          "hp": 16,
+          "tick": 159,
+          "x": 3292,
+          "y": 4243
+        },
+        {
+          "hp": 16,
+          "tick": 160,
+          "x": 3292,
+          "y": 4243
+        },
+        {
+          "hp": 16,
+          "tick": 161,
+          "x": 3292,
+          "y": 4243
+        },
+        {
+          "hp": 0,
+          "tick": 162,
+          "x": 3292,
+          "y": 4243
+        },
+        {
+          "hp": 0,
+          "tick": 163,
+          "x": 3292,
+          "y": 4243
+        }
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "zero_tick": 162
+    },
+    "big:moved_on_zero=False:moved_after_zero=True:delay=7": {
+      "delay": 7,
+      "removal_tick": 165,
+      "room_id": 61626,
+      "samples": [
+        {
+          "hp": 12,
+          "tick": 154,
+          "x": 3295,
+          "y": 4243
+        },
+        {
+          "hp": 12,
+          "tick": 155,
+          "x": 3294,
+          "y": 4243
+        },
+        {
+          "hp": 12,
+          "tick": 156,
+          "x": 3293,
+          "y": 4243
+        },
+        {
+          "hp": 12,
+          "tick": 157,
+          "x": 3293,
+          "y": 4243
+        },
+        {
+          "hp": 0,
+          "tick": 158,
+          "x": 3293,
+          "y": 4243
+        },
+        {
+          "hp": 0,
+          "tick": 159,
+          "x": 3292,
+          "y": 4244
+        }
+      ],
+      "url": "https://blert.io/raids/tob/bef6ad10-3ef3-48b7-97a5-d019cf9ba303/nylocas",
+      "uuid": "bef6ad10-3ef3-48b7-97a5-d019cf9ba303",
+      "zero_tick": 158
+    },
+    "big:moved_on_zero=True:moved_after_zero=False:delay=6": {
+      "delay": 6,
+      "removal_tick": 28,
+      "room_id": 60849,
+      "samples": [
+        {
+          "hp": 16,
+          "tick": 18,
+          "x": 3295,
+          "y": 4235
+        },
+        {
+          "hp": 16,
+          "tick": 19,
+          "x": 3295,
+          "y": 4236
+        },
+        {
+          "hp": 16,
+          "tick": 20,
+          "x": 3295,
+          "y": 4237
+        },
+        {
+          "hp": 16,
+          "tick": 21,
+          "x": 3295,
+          "y": 4238
+        },
+        {
+          "hp": 0,
+          "tick": 22,
+          "x": 3295,
+          "y": 4239
+        },
+        {
+          "hp": 0,
+          "tick": 23,
+          "x": 3295,
+          "y": 4239
+        }
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "zero_tick": 22
+    },
+    "big:moved_on_zero=True:moved_after_zero=False:delay=7": {
+      "delay": 7,
+      "removal_tick": 96,
+      "room_id": 61703,
+      "samples": [
+        {
+          "hp": 16,
+          "tick": 85,
+          "x": 3290,
+          "y": 4248
+        },
+        {
+          "hp": 16,
+          "tick": 86,
+          "x": 3290,
+          "y": 4248
+        },
+        {
+          "hp": 16,
+          "tick": 87,
+          "x": 3291,
+          "y": 4249
+        },
+        {
+          "hp": 16,
+          "tick": 88,
+          "x": 3291,
+          "y": 4249
+        },
+        {
+          "hp": 0,
+          "tick": 89,
+          "x": 3292,
+          "y": 4249
+        },
+        {
+          "hp": 0,
+          "tick": 90,
+          "x": 3292,
+          "y": 4249
+        }
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "zero_tick": 89
+    },
+    "big:moved_on_zero=True:moved_after_zero=True:delay=7": {
+      "delay": 7,
+      "removal_tick": 51,
+      "room_id": 61126,
+      "samples": [
+        {
+          "hp": 16,
+          "tick": 40,
+          "x": 3295,
+          "y": 4233
+        },
+        {
+          "hp": 16,
+          "tick": 41,
+          "x": 3295,
+          "y": 4234
+        },
+        {
+          "hp": 16,
+          "tick": 42,
+          "x": 3295,
+          "y": 4235
+        },
+        {
+          "hp": 16,
+          "tick": 43,
+          "x": 3295,
+          "y": 4236
+        },
+        {
+          "hp": 0,
+          "tick": 44,
+          "x": 3295,
+          "y": 4237
+        },
+        {
+          "hp": 0,
+          "tick": 45,
+          "x": 3295,
+          "y": 4238
+        }
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "zero_tick": 44
+    },
+    "small:moved_on_zero=False:moved_after_zero=False:delay=1": {
+      "delay": 1,
+      "removal_tick": 44,
+      "room_id": 61045,
+      "samples": [
+        {
+          "hp": 8,
+          "tick": 39,
+          "x": 3290,
+          "y": 4245
+        },
+        {
+          "hp": 8,
+          "tick": 40,
+          "x": 3290,
+          "y": 4245
+        },
+        {
+          "hp": 8,
+          "tick": 41,
+          "x": 3290,
+          "y": 4245
+        },
+        {
+          "hp": 8,
+          "tick": 42,
+          "x": 3290,
+          "y": 4245
+        },
+        {
+          "hp": 0,
+          "tick": 43,
+          "x": 3290,
+          "y": 4245
+        }
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "zero_tick": 43
+    },
+    "small:moved_on_zero=False:moved_after_zero=False:delay=2": {
+      "delay": 2,
+      "removal_tick": 94,
+      "room_id": 61362,
+      "samples": [
+        {
+          "hp": 4,
+          "tick": 88,
+          "x": 3301,
+          "y": 4245
+        },
+        {
+          "hp": 4,
+          "tick": 89,
+          "x": 3301,
+          "y": 4245
+        },
+        {
+          "hp": 4,
+          "tick": 90,
+          "x": 3301,
+          "y": 4245
+        },
+        {
+          "hp": 4,
+          "tick": 91,
+          "x": 3301,
+          "y": 4245
+        },
+        {
+          "hp": 0,
+          "tick": 92,
+          "x": 3301,
+          "y": 4245
+        },
+        {
+          "hp": 0,
+          "tick": 93,
+          "x": 3301,
+          "y": 4245
+        }
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "zero_tick": 92
+    },
+    "small:moved_on_zero=True:moved_after_zero=False:delay=1": {
+      "delay": 1,
+      "removal_tick": 10,
+      "room_id": 60647,
+      "samples": [
+        {
+          "hp": 8,
+          "tick": 5,
+          "x": 3282,
+          "y": 4248
+        },
+        {
+          "hp": 8,
+          "tick": 6,
+          "x": 3283,
+          "y": 4248
+        },
+        {
+          "hp": 8,
+          "tick": 7,
+          "x": 3284,
+          "y": 4248
+        },
+        {
+          "hp": 8,
+          "tick": 8,
+          "x": 3285,
+          "y": 4248
+        },
+        {
+          "hp": 0,
+          "tick": 9,
+          "x": 3286,
+          "y": 4248
+        }
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "zero_tick": 9
+    },
+    "small:moved_on_zero=True:moved_after_zero=False:delay=2": {
+      "delay": 2,
+      "removal_tick": 43,
+      "room_id": 60691,
+      "samples": [
+        {
+          "hp": 6,
+          "tick": 37,
+          "x": 3295,
+          "y": 4243
+        },
+        {
+          "hp": 6,
+          "tick": 38,
+          "x": 3294,
+          "y": 4244
+        },
+        {
+          "hp": 6,
+          "tick": 39,
+          "x": 3295,
+          "y": 4243
+        },
+        {
+          "hp": 6,
+          "tick": 40,
+          "x": 3295,
+          "y": 4243
+        },
+        {
+          "hp": 0,
+          "tick": 41,
+          "x": 3294,
+          "y": 4244
+        },
+        {
+          "hp": 0,
+          "tick": 42,
+          "x": 3294,
+          "y": 4244
+        }
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "zero_tick": 41
+    },
+    "small:moved_on_zero=True:moved_after_zero=True:delay=2": {
+      "delay": 2,
+      "removal_tick": 12,
+      "room_id": 60648,
+      "samples": [
+        {
+          "hp": 8,
+          "tick": 6,
+          "x": 3296,
+          "y": 4235
+        },
+        {
+          "hp": 8,
+          "tick": 7,
+          "x": 3296,
+          "y": 4236
+        },
+        {
+          "hp": 8,
+          "tick": 8,
+          "x": 3296,
+          "y": 4237
+        },
+        {
+          "hp": 8,
+          "tick": 9,
+          "x": 3296,
+          "y": 4238
+        },
+        {
+          "hp": 0,
+          "tick": 10,
+          "x": 3296,
+          "y": 4239
+        },
+        {
+          "hp": 0,
+          "tick": 11,
+          "x": 3296,
+          "y": 4240
+        }
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "zero_tick": 10
+    }
+  },
+  "limitations": [
+    "First recorded zero HP need not be the lethal server tick.",
+    "Five unchanged anchors do not expose the server walking flag.",
+    "Multi-hit weapon use does not prove lethal-first hit order.",
+    "No individual hitsplat event or death animation event is saved here."
+  ],
+  "method": "Independently summarize death timing in the checksum-pinned Blert corpus.\n\nThis does not use the simulator or the existing lifecycle analysis. Recorded\nzero HP is a client estimate. Coordinates are observations, not walking flags;\nan attack event does not expose its individual hitsplats or which one killed.",
+  "stationary_multihit_bigs": [
+    {
+      "attack_tick": 273,
+      "delay": 6,
+      "hp_before": 1,
+      "removal_tick": 280,
+      "room_id": 64483,
+      "samples": [
+        {
+          "hp": 1,
+          "tick": 270,
+          "x": 3298,
+          "y": 4243
+        },
+        {
+          "hp": 1,
+          "tick": 271,
+          "x": 3298,
+          "y": 4243
+        },
+        {
+          "hp": 1,
+          "tick": 272,
+          "x": 3298,
+          "y": 4243
+        },
+        {
+          "hp": 1,
+          "tick": 273,
+          "x": 3298,
+          "y": 4243
+        },
+        {
+          "hp": 0,
+          "tick": 274,
+          "x": 3298,
+          "y": 4243
+        },
+        {
+          "hp": 0,
+          "tick": 275,
+          "x": 3298,
+          "y": 4243
+        }
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "weapon_id": 29084,
+      "zero_tick": 274
+    },
+    {
+      "attack_tick": 64,
+      "delay": 6,
+      "hp_before": 2,
+      "removal_tick": 71,
+      "room_id": 47925,
+      "samples": [
+        {
+          "hp": 2,
+          "tick": 61,
+          "x": 3300,
+          "y": 4245
+        },
+        {
+          "hp": 2,
+          "tick": 62,
+          "x": 3300,
+          "y": 4245
+        },
+        {
+          "hp": 2,
+          "tick": 63,
+          "x": 3300,
+          "y": 4245
+        },
+        {
+          "hp": 2,
+          "tick": 64,
+          "x": 3300,
+          "y": 4245
+        },
+        {
+          "hp": 0,
+          "tick": 65,
+          "x": 3300,
+          "y": 4245
+        },
+        {
+          "hp": 0,
+          "tick": 66,
+          "x": 3300,
+          "y": 4245
+        }
+      ],
+      "url": "https://blert.io/raids/tob/65c9f142-f240-4284-9384-d32fa313067e/nylocas",
+      "uuid": "65c9f142-f240-4284-9384-d32fa313067e",
+      "weapon_id": 25739,
+      "zero_tick": 65
+    },
+    {
+      "attack_tick": 375,
+      "delay": 7,
+      "hp_before": 16,
+      "removal_tick": 383,
+      "room_id": 52682,
+      "samples": [
+        {
+          "hp": 16,
+          "tick": 372,
+          "x": 3296,
+          "y": 4252
+        },
+        {
+          "hp": 16,
+          "tick": 373,
+          "x": 3296,
+          "y": 4252
+        },
+        {
+          "hp": 16,
+          "tick": 374,
+          "x": 3296,
+          "y": 4252
+        },
+        {
+          "hp": 16,
+          "tick": 375,
+          "x": 3296,
+          "y": 4252
+        },
+        {
+          "hp": 0,
+          "tick": 376,
+          "x": 3296,
+          "y": 4252
+        },
+        {
+          "hp": 0,
+          "tick": 377,
+          "x": 3296,
+          "y": 4252
+        }
+      ],
+      "url": "https://blert.io/raids/tob/65c9f142-f240-4284-9384-d32fa313067e/nylocas",
+      "uuid": "65c9f142-f240-4284-9384-d32fa313067e",
+      "weapon_id": 25739,
+      "zero_tick": 376
+    },
+    {
+      "attack_tick": 244,
+      "delay": 6,
+      "hp_before": 12,
+      "removal_tick": 251,
+      "room_id": 62501,
+      "samples": [
+        {
+          "hp": 12,
+          "tick": 241,
+          "x": 3295,
+          "y": 4248
+        },
+        {
+          "hp": 12,
+          "tick": 242,
+          "x": 3295,
+          "y": 4248
+        },
+        {
+          "hp": 12,
+          "tick": 243,
+          "x": 3295,
+          "y": 4248
+        },
+        {
+          "hp": 12,
+          "tick": 244,
+          "x": 3295,
+          "y": 4248
+        },
+        {
+          "hp": 0,
+          "tick": 245,
+          "x": 3295,
+          "y": 4248
+        },
+        {
+          "hp": 0,
+          "tick": 246,
+          "x": 3295,
+          "y": 4248
+        }
+      ],
+      "url": "https://blert.io/raids/tob/9ac3826e-aa64-4f5a-b00f-4208f97f0307/nylocas",
+      "uuid": "9ac3826e-aa64-4f5a-b00f-4208f97f0307",
+      "weapon_id": 25739,
+      "zero_tick": 245
+    },
+    {
+      "attack_tick": 140,
+      "delay": 6,
+      "hp_before": 6,
+      "removal_tick": 147,
+      "room_id": 48723,
+      "samples": [
+        {
+          "hp": 6,
+          "tick": 137,
+          "x": 3292,
+          "y": 4244
+        },
+        {
+          "hp": 6,
+          "tick": 138,
+          "x": 3292,
+          "y": 4244
+        },
+        {
+          "hp": 6,
+          "tick": 139,
+          "x": 3292,
+          "y": 4244
+        },
+        {
+          "hp": 6,
+          "tick": 140,
+          "x": 3292,
+          "y": 4244
+        },
+        {
+          "hp": 0,
+          "tick": 141,
+          "x": 3292,
+          "y": 4244
+        },
+        {
+          "hp": 0,
+          "tick": 142,
+          "x": 3292,
+          "y": 4244
+        }
+      ],
+      "url": "https://blert.io/raids/tob/9f8f1a77-a528-454f-bfac-8251dec9de32/nylocas",
+      "uuid": "9f8f1a77-a528-454f-bfac-8251dec9de32",
+      "weapon_id": 22325,
+      "zero_tick": 141
+    },
+    {
+      "attack_tick": 314,
+      "delay": 7,
+      "hp_before": 16,
+      "removal_tick": 322,
+      "room_id": 33637,
+      "samples": [
+        {
+          "hp": 16,
+          "tick": 311,
+          "x": 3290,
+          "y": 4246
+        },
+        {
+          "hp": 16,
+          "tick": 312,
+          "x": 3290,
+          "y": 4246
+        },
+        {
+          "hp": 16,
+          "tick": 313,
+          "x": 3290,
+          "y": 4246
+        },
+        {
+          "hp": 16,
+          "tick": 314,
+          "x": 3290,
+          "y": 4246
+        },
+        {
+          "hp": 0,
+          "tick": 315,
+          "x": 3290,
+          "y": 4246
+        },
+        {
+          "hp": 0,
+          "tick": 316,
+          "x": 3290,
+          "y": 4246
+        }
+      ],
+      "url": "https://blert.io/raids/tob/a37210fe-5737-480f-8fca-518e56205e9b/nylocas",
+      "uuid": "a37210fe-5737-480f-8fca-518e56205e9b",
+      "weapon_id": 25739,
+      "zero_tick": 315
+    },
+    {
+      "attack_tick": 344,
+      "delay": 6,
+      "hp_before": 16,
+      "removal_tick": 351,
+      "room_id": 34341,
+      "samples": [
+        {
+          "hp": 16,
+          "tick": 341,
+          "x": 3295,
+          "y": 4252
+        },
+        {
+          "hp": 16,
+          "tick": 342,
+          "x": 3295,
+          "y": 4252
+        },
+        {
+          "hp": 16,
+          "tick": 343,
+          "x": 3295,
+          "y": 4252
+        },
+        {
+          "hp": 16,
+          "tick": 344,
+          "x": 3295,
+          "y": 4252
+        },
+        {
+          "hp": 0,
+          "tick": 345,
+          "x": 3295,
+          "y": 4252
+        },
+        {
+          "hp": 0,
+          "tick": 346,
+          "x": 3295,
+          "y": 4252
+        }
+      ],
+      "url": "https://blert.io/raids/tob/a37210fe-5737-480f-8fca-518e56205e9b/nylocas",
+      "uuid": "a37210fe-5737-480f-8fca-518e56205e9b",
+      "weapon_id": 25739,
+      "zero_tick": 345
+    },
+    {
+      "attack_tick": 356,
+      "delay": 6,
+      "hp_before": 16,
+      "removal_tick": 363,
+      "room_id": 34730,
+      "samples": [
+        {
+          "hp": 16,
+          "tick": 353,
+          "x": 3293,
+          "y": 4253
+        },
+        {
+          "hp": 16,
+          "tick": 354,
+          "x": 3293,
+          "y": 4253
+        },
+        {
+          "hp": 16,
+          "tick": 355,
+          "x": 3293,
+          "y": 4253
+        },
+        {
+          "hp": 16,
+          "tick": 356,
+          "x": 3293,
+          "y": 4253
+        },
+        {
+          "hp": 0,
+          "tick": 357,
+          "x": 3293,
+          "y": 4253
+        },
+        {
+          "hp": 0,
+          "tick": 358,
+          "x": 3293,
+          "y": 4253
+        }
+      ],
+      "url": "https://blert.io/raids/tob/a37210fe-5737-480f-8fca-518e56205e9b/nylocas",
+      "uuid": "a37210fe-5737-480f-8fca-518e56205e9b",
+      "weapon_id": 25739,
+      "zero_tick": 357
+    },
+    {
+      "attack_tick": 158,
+      "delay": 6,
+      "hp_before": 16,
+      "removal_tick": 165,
+      "room_id": 60338,
+      "samples": [
+        {
+          "hp": 16,
+          "tick": 155,
+          "x": 3298,
+          "y": 4245
+        },
+        {
+          "hp": 16,
+          "tick": 156,
+          "x": 3298,
+          "y": 4245
+        },
+        {
+          "hp": 16,
+          "tick": 157,
+          "x": 3298,
+          "y": 4245
+        },
+        {
+          "hp": 16,
+          "tick": 158,
+          "x": 3298,
+          "y": 4245
+        },
+        {
+          "hp": 0,
+          "tick": 159,
+          "x": 3298,
+          "y": 4245
+        },
+        {
+          "hp": 0,
+          "tick": 160,
+          "x": 3298,
+          "y": 4245
+        }
+      ],
+      "url": "https://blert.io/raids/tob/a37210fe-5737-480f-8fca-518e56205e9b/nylocas",
+      "uuid": "a37210fe-5737-480f-8fca-518e56205e9b",
+      "weapon_id": 25739,
+      "zero_tick": 159
+    },
+    {
+      "attack_tick": 293,
+      "delay": 7,
+      "hp_before": 16,
+      "removal_tick": 301,
+      "room_id": 65324,
+      "samples": [
+        {
+          "hp": 16,
+          "tick": 290,
+          "x": 3300,
+          "y": 4251
+        },
+        {
+          "hp": 16,
+          "tick": 291,
+          "x": 3300,
+          "y": 4251
+        },
+        {
+          "hp": 16,
+          "tick": 292,
+          "x": 3300,
+          "y": 4251
+        },
+        {
+          "hp": 16,
+          "tick": 293,
+          "x": 3300,
+          "y": 4251
+        },
+        {
+          "hp": 0,
+          "tick": 294,
+          "x": 3300,
+          "y": 4251
+        },
+        {
+          "hp": 0,
+          "tick": 295,
+          "x": 3300,
+          "y": 4251
+        }
+      ],
+      "url": "https://blert.io/raids/tob/a37210fe-5737-480f-8fca-518e56205e9b/nylocas",
+      "uuid": "a37210fe-5737-480f-8fca-518e56205e9b",
+      "weapon_id": 25739,
+      "zero_tick": 294
+    },
+    {
+      "attack_tick": 110,
+      "delay": 6,
+      "hp_before": 5,
+      "removal_tick": 117,
+      "room_id": 58751,
+      "samples": [
+        {
+          "hp": 5,
+          "tick": 107,
+          "x": 3292,
+          "y": 4244
+        },
+        {
+          "hp": 5,
+          "tick": 108,
+          "x": 3292,
+          "y": 4244
+        },
+        {
+          "hp": 5,
+          "tick": 109,
+          "x": 3292,
+          "y": 4244
+        },
+        {
+          "hp": 5,
+          "tick": 110,
+          "x": 3292,
+          "y": 4244
+        },
+        {
+          "hp": 0,
+          "tick": 111,
+          "x": 3292,
+          "y": 4244
+        },
+        {
+          "hp": 0,
+          "tick": 112,
+          "x": 3292,
+          "y": 4244
+        }
+      ],
+      "url": "https://blert.io/raids/tob/bbd10de2-8831-4b53-9872-970d547d3a5d/nylocas",
+      "uuid": "bbd10de2-8831-4b53-9872-970d547d3a5d",
+      "weapon_id": 25736,
+      "zero_tick": 111
+    },
+    {
+      "attack_tick": 376,
+      "delay": 6,
+      "hp_before": 3,
+      "removal_tick": 383,
+      "room_id": 64165,
+      "samples": [
+        {
+          "hp": 3,
+          "tick": 373,
+          "x": 3298,
+          "y": 4243
+        },
+        {
+          "hp": 3,
+          "tick": 374,
+          "x": 3298,
+          "y": 4243
+        },
+        {
+          "hp": 3,
+          "tick": 375,
+          "x": 3298,
+          "y": 4243
+        },
+        {
+          "hp": 3,
+          "tick": 376,
+          "x": 3298,
+          "y": 4243
+        },
+        {
+          "hp": 0,
+          "tick": 377,
+          "x": 3298,
+          "y": 4243
+        },
+        {
+          "hp": 0,
+          "tick": 378,
+          "x": 3298,
+          "y": 4243
+        }
+      ],
+      "url": "https://blert.io/raids/tob/bef6ad10-3ef3-48b7-97a5-d019cf9ba303/nylocas",
+      "uuid": "bef6ad10-3ef3-48b7-97a5-d019cf9ba303",
+      "weapon_id": 22325,
+      "zero_tick": 377
+    },
+    {
+      "attack_tick": 284,
+      "delay": 6,
+      "hp_before": 16,
+      "removal_tick": 291,
+      "room_id": 35486,
+      "samples": [
+        {
+          "hp": 16,
+          "tick": 281,
+          "x": 3290,
+          "y": 4251
+        },
+        {
+          "hp": 16,
+          "tick": 282,
+          "x": 3290,
+          "y": 4251
+        },
+        {
+          "hp": 16,
+          "tick": 283,
+          "x": 3290,
+          "y": 4251
+        },
+        {
+          "hp": 16,
+          "tick": 284,
+          "x": 3290,
+          "y": 4251
+        },
+        {
+          "hp": 0,
+          "tick": 285,
+          "x": 3290,
+          "y": 4251
+        },
+        {
+          "hp": 0,
+          "tick": 286,
+          "x": 3290,
+          "y": 4251
+        }
+      ],
+      "url": "https://blert.io/raids/tob/eb3793f3-ce4a-4fcf-8ef9-e2098d39914a/nylocas",
+      "uuid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "weapon_id": 25739,
+      "zero_tick": 285
+    },
+    {
+      "attack_tick": 339,
+      "delay": 6,
+      "hp_before": 1,
+      "removal_tick": 346,
+      "room_id": 35937,
+      "samples": [
+        {
+          "hp": 1,
+          "tick": 336,
+          "x": 3294,
+          "y": 4252
+        },
+        {
+          "hp": 1,
+          "tick": 337,
+          "x": 3294,
+          "y": 4252
+        },
+        {
+          "hp": 1,
+          "tick": 338,
+          "x": 3294,
+          "y": 4252
+        },
+        {
+          "hp": 1,
+          "tick": 339,
+          "x": 3294,
+          "y": 4252
+        },
+        {
+          "hp": 0,
+          "tick": 340,
+          "x": 3294,
+          "y": 4252
+        },
+        {
+          "hp": 0,
+          "tick": 341,
+          "x": 3294,
+          "y": 4252
+        }
+      ],
+      "url": "https://blert.io/raids/tob/eb3793f3-ce4a-4fcf-8ef9-e2098d39914a/nylocas",
+      "uuid": "eb3793f3-ce4a-4fcf-8ef9-e2098d39914a",
+      "weapon_id": 25739,
+      "zero_tick": 340
+    },
+    {
+      "attack_tick": 142,
+      "delay": 6,
+      "hp_before": 16,
+      "removal_tick": 149,
+      "room_id": 36213,
+      "samples": [
+        {
+          "hp": 16,
+          "tick": 139,
+          "x": 3292,
+          "y": 4243
+        },
+        {
+          "hp": 16,
+          "tick": 140,
+          "x": 3292,
+          "y": 4243
+        },
+        {
+          "hp": 16,
+          "tick": 141,
+          "x": 3292,
+          "y": 4243
+        },
+        {
+          "hp": 16,
+          "tick": 142,
+          "x": 3292,
+          "y": 4243
+        },
+        {
+          "hp": 0,
+          "tick": 143,
+          "x": 3292,
+          "y": 4243
+        },
+        {
+          "hp": 0,
+          "tick": 144,
+          "x": 3292,
+          "y": 4243
+        }
+      ],
+      "url": "https://blert.io/raids/tob/fc7d6eaa-eaec-43e5-ae66-6be8364ad312/nylocas",
+      "uuid": "fc7d6eaa-eaec-43e5-ae66-6be8364ad312",
+      "weapon_id": 25739,
+      "zero_tick": 143
+    }
+  ]
+}

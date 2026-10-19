@@ -48,9 +48,15 @@ cmp /tmp/nylocas-occupancy-summary.json docs/research/nylocas/occupancy-summary.
 python tools/research/nylocas_targets.py
 python tools/research/nylocas_lifecycle.py
 python tools/research/nylocas_entry_contact.py
+python tools/research/nylocas_death_timing_review.py
 ```
 
-The latter three commands regenerate their CSV/JSON outputs in this directory. All four use checksum verification of the pinned raw responses before analysis. See each script's module documentation for its filters and limitations. None executes simulator code, contacts the website, or changes the server.
+The latter four commands regenerate their CSV/JSON outputs in this directory. All five use checksum verification of the pinned raw responses before analysis. See each script's module documentation for its filters and limitations. None executes simulator code, contacts the website, or changes the server.
+
+The [independent death-timing review](../../nylocas-death-timing-review.md)
+compares the guide, these raw recordings and live simulator timing probes. Its
+[JSON output](death-timing-review.json) preserves movement/HP traces and
+stationary multi-hit big candidates without assuming their lethal splat order.
 
 The entry/contact follow-up records [entry pause evidence](../../nylocas-entry-timing-evidence.md)
 and [big arrivals below occupied north-pillar faces](../../nylocas-occupancy-evidence.md#follow-up-big-arrives-below-a-small-already-at-a-north-pillar).
