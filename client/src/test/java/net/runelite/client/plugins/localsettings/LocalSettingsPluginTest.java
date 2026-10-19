@@ -73,6 +73,70 @@ public class LocalSettingsPluginTest
 	}
 
 	@Test
+	public void savesBothChatboxScrollbarPositionsFromServerControlledDropdown()
+	{
+		ScriptEvent input = mock(ScriptEvent.class);
+		ScriptPreFired event = new ScriptPreFired(3852);
+		event.setScriptEvent(input);
+		for (int position : new int[]{1, 0})
+		{
+			when(input.getArguments()).thenReturn(new Object[]{3852, 2,
+				position == 0 ? "Right" : "Left", 36, position, 8781843, 8781851,
+				8781850, 8781853, 8781854, 8781847, 3505, 1, 35, 1});
+			plugin.onScriptPreFired(event);
+		}
+
+		verify(client, never()).runScript(any());
+		assertEquals(2, pending.size());
+		pending.forEach(Runnable::run);
+		verify(client).runScript(49, "localscape_scrollbar_position 1");
+		verify(client).runScript(49, "localscape_scrollbar_position 0");
+	}
+
+	@Test
+	public void scrollbarDropdownRejectsOtherSettingsAndInvalidPositions()
+	{
+		Object[] args = {3852, 2, "Right", 36, 0, 8781843, 8781851,
+			8781850, 8781853, 8781854, 8781847, 3505, 1, 35, 1};
+		ScriptEvent input = mock(ScriptEvent.class);
+		when(input.getArguments()).thenReturn(args);
+		ScriptPreFired event = new ScriptPreFired(3852);
+		event.setScriptEvent(input);
+		args[12] = 238;
+		plugin.onScriptPreFired(event);
+		args[12] = 1;
+		for (int position : new int[]{-1, 2})
+		{
+			args[4] = position;
+			plugin.onScriptPreFired(event);
+		}
+		args[4] = 0;
+		args[1] = 3;
+		plugin.onScriptPreFired(event);
+		args[1] = 2;
+		args[14] = 0;
+		plugin.onScriptPreFired(event);
+		assertEquals(0, pending.size());
+	}
+
+	@Test
+	public void scrollbarSelectionDoesNotSendAfterLogout()
+	{
+		ScriptEvent input = mock(ScriptEvent.class);
+		when(input.getArguments()).thenReturn(new Object[]{3852, 2, "Left", 36, 1,
+			8781843, 8781851, 8781850, 8781853, 8781854, 8781847, 3505, 1, 35, 1});
+		ScriptPreFired event = new ScriptPreFired(3852);
+		event.setScriptEvent(input);
+		plugin.onScriptPreFired(event);
+		assertEquals(1, pending.size());
+		when(client.getGameState()).thenReturn(GameState.LOGIN_SCREEN);
+		plugin.onScriptPreFired(event);
+		assertEquals(1, pending.size());
+		pending.forEach(Runnable::run);
+		verify(client, never()).runScript(any());
+	}
+
+	@Test
 	public void clientControlledDropdownSavesOnceThroughNativeProc()
 	{
 		ScriptEvent input = mock(ScriptEvent.class);

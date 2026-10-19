@@ -19,7 +19,7 @@ import net.runelite.client.plugins.PluginDescriptor;
 
 @PluginDescriptor(
 	name = "Local Server Settings",
-	description = "Saves in-game keybind, side-panel and transparency settings to the local server",
+	description = "Saves in-game keybind, side-panel, transparency and chatbox scrollbar settings to the local server",
 	enabledByDefault = true,
 	hidden = true
 )
@@ -37,6 +37,8 @@ public class LocalSettingsPlugin extends Plugin
 	private static final int SELECT_DROPDOWN = 3852;
 	private static final int REFRESH_DROPDOWN = 3854;
 	private static final int KEYBIND_DROPDOWN = 3;
+	private static final int SETTING_DROPDOWN = 2;
+	private static final int CHATBOX_SCROLLBAR_POSITION = 1;
 
 	private boolean refreshPending;
 
@@ -57,12 +59,21 @@ public class LocalSettingsPlugin extends Plugin
 		if (event.getScriptId() == SELECT_DROPDOWN && event.getScriptEvent() != null)
 		{
 			Object[] args = event.getScriptEvent().getArguments();
-			// Server-controlled dropdowns set the final flag to 1. Their native
-			// click script updates the label but skips the SET_KEYBIND proc entirely.
-			if (args != null && args.length == 15 && Integer.valueOf(KEYBIND_DROPDOWN).equals(args[1])
-				&& Integer.valueOf(1).equals(args[14]) && args[4] instanceof Integer && args[12] instanceof Integer)
+			// Server-controlled dropdowns update their label but skip the native setter.
+			if (args != null && args.length == 15 && Integer.valueOf(1).equals(args[14])
+				&& args[4] instanceof Integer && args[12] instanceof Integer)
 			{
-				submitKeybind((Integer) args[12], (Integer) args[4]);
+				int setting = (Integer) args[12];
+				int value = (Integer) args[4];
+				if (Integer.valueOf(KEYBIND_DROPDOWN).equals(args[1]))
+				{
+					submitKeybind(setting, value);
+				}
+				else if (Integer.valueOf(SETTING_DROPDOWN).equals(args[1])
+					&& setting == CHATBOX_SCROLLBAR_POSITION && value >= 0 && value <= 1)
+				{
+					submit("localscape_scrollbar_position " + value);
+				}
 			}
 		}
 		else if (event.getScriptId() == SET_KEYBIND)

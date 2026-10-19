@@ -159,6 +159,14 @@ persistent native varbits, preserves other settings packed into the same varp,
 and synchronizes the saved values on login. These settings require the client
 rebuild and server restart below; no cache repack is needed.
 
+The main settings' **Chat box scrollbar position** dropdown switches between
+**Left** and **Right** in resizable mode. The native client places the scrollbar;
+the hidden plugin sends the selection with `localscape_scrollbar_position <0|1>`
+(Right is 0, Left is 1). RSMod saves the preference to the account and restores it
+on login without changing chatbox transparency or neighboring settings. Queued
+selections still save if Settings closes before delivery. This uses the same
+client rebuild and server restart below; no cache repack is needed.
+
 Changes to this feature require both the custom client and the server:
 
 ```bash
