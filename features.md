@@ -310,8 +310,11 @@ to predict Longrange kills before the projectile lands. Restart RSMod to load
 these changes.
 
 Combat weapon and spell cast sounds play around the attacker so nearby players
-can hear them. Claw specials play sound phases `1, 2, 3, 3` at 15-client-cycle
-intervals. Both bulwark variants play their bash sound, and ancient spells play
+can hear them. Dragon claw specials play sound phases `1, 2, 3, 3` privately for
+the attacker, including the ornamented variant. The sounds start at approximately
+0, 0.38, 0.64, and 1.00 seconds, matching the pause after the first sound in the
+[Wiki recording](https://oldschool.runescape.wiki/w/Dragon_claws#Special_attack).
+Both bulwark variants play their bash sound, and ancient spells play
 one cast sound per cast even when they hit multiple targets or splash.
 
 Ranged weapons and specials use their original hit delay: one queue tick plus
@@ -363,9 +366,9 @@ These charging and normal attack mechanics follow the
 Charged **Tonalztics of Ralos** (item `28922`) make two independent ranged accuracy
 and damage rolls per attack, each capped at `floor(normal_max_hit * 0.75)`.
 The [Wiki DPS calculator](https://github.com/weirdgloop/osrs-dps-calc/blob/main/src/lib/PlayerVsNPCCalc.ts)
-confirms the independent rolls and 75% cap. Both splats land together one
-server tick after firing at every distance, matching their one-tick projectile
-travel.
+confirms the independent rolls and 75% cap. Both splats land together two
+server ticks after firing at every distance. Projectile timing matches a twisted
+bow fired from one tile (51 client cycles), with no increase over distance.
 Each splat awards XP separately and respects encounter damage restrictions.
 The weapon uses its charged attack animation and two native projectiles, stays
 equipped, and does not consume quiver ammunition. This implements normal attacks
@@ -383,9 +386,9 @@ Targets are fixed at launch. One accuracy roll against the primary controls
 the whole throw: a miss deals zero to everyone; a success rolls each target's
 damage independently. Each throw consumes one chinchompa, including misses,
 without Ava's recovery or a ground drop. Quiver bonuses do not apply.
-Each throw plays the shared throwing-weapon release sound (2706) at the thrower,
-followed by one explosion sound (360) at the primary target's tile when the
-projectile lands, including on misses.
+Each throw plays the shared throwing-weapon release sound (2706), followed by
+one explosion sound (360) when the projectile lands, including on misses.
+Both sounds play privately for the thrower; targets and nearby players cannot hear them.
 Elite Void preserves its full 12.5% ranged damage bonus: at 112 Ranged with
 Rigour, Medium fuse, and +44 ranged strength, black chinchompas have a max hit of 28.
 Restart RSMod to load these changes.
