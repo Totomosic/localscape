@@ -66,6 +66,11 @@ style's attack speed (including Rapid); spells use their casting speed. Wrong-st
 attacks and previously nulled targets keep their usual damage restrictions. Options
 apply only to party members against Nylocas in their own raid.
 
+**Replace Piety with Zeal** upgrades Piety for every party member during the raid:
++25% Attack, +28% Strength, and +25% Defence, with Piety’s prayer drain rate.
+Zeal uses Piety’s icon, requirements, and quick-prayer selection. Leaving the raid
+restores ordinary Piety. This option is off by default.
+
 **Start everyone at 250 HP** sets every party member's current HP to exactly 250
 once when the raid starts. Base Hitpoints and XP stay unchanged.
 
@@ -80,9 +85,10 @@ and fully refills special attack and run energy.
 Joining closes when the host starts. A host leaving or logging out closes their
 lobby to new joins; creating another lobby starts a fresh instance. Server results
 appear in game chat. The commands are `::theatrecreate`, `::theatrejoin <host name>`,
-and `::theatrestart [starting wave] [maxhit-all|maxhit-slow] [hp250]`, with no
-admin access required. Rebuild the client with `./dev build-client` and restart RSMod to load these controls; no cache repack
-is required.
+and `::theatrestart [starting wave] [maxhit-all|maxhit-slow] [hp250] [zeal]`, with no
+admin access required. Rebuild the client with `./dev build-client`. With RSMod
+stopped, run `./gradlew packCache` from `upstream/rsmod`, then restart it to load
+these controls and Zeal’s temporary setting.
 
 ## Gear setups
 

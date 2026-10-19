@@ -5,12 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
 import net.runelite.api.GameState;
 import net.runelite.api.events.ChatMessage;
 import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.GameTick;
+import net.runelite.api.gameval.InterfaceID;
 import net.runelite.api.gameval.VarbitID;
+import net.runelite.api.widgets.Widget;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.plugins.localgear.GearPresetsPlugin;
 import net.runelite.client.ui.ClientToolbar;
@@ -29,6 +32,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doAnswer;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -94,7 +98,7 @@ public class LocalDevPluginTest
 	{
 		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
 		verify(clientToolbar).addNavigation(navigation.capture());
-		assertEquals(3, navigation.getValue().getPanel().getComponentCount());
+		assertEquals(4, navigation.getValue().getPanel().getComponentCount());
 		GameStateChanged state = new GameStateChanged();
 		state.setGameState(GameState.LOGIN_SCREEN);
 		GameTick tick = new GameTick();
@@ -105,6 +109,27 @@ public class LocalDevPluginTest
 		verify(gearPresets).onGameStateChanged(state);
 		verify(gearPresets).onGameTick(tick);
 		verify(gearPresets).onChatMessage(chat);
+	}
+
+	@Test
+	public void zealDisplayFollowsServerStateAndResetsOnLogout()
+	{
+		Widget prayer = mock(Widget.class);
+		when(client.getWidget(InterfaceID.Prayerbook.CONTAINER)).thenReturn(prayer);
+		when(prayer.getName()).thenReturn("Piety");
+		ChatMessage state = new ChatMessage();
+		state.setType(ChatMessageType.PUBLICCHAT);
+		state.setMessage("localscape:zeal:1");
+		plugin.onChatMessage(state);
+		verify(prayer, never()).setName("Zeal");
+		state.setType(ChatMessageType.CONSOLE);
+		plugin.onChatMessage(state);
+		verify(prayer).setName("Zeal");
+		when(prayer.getName()).thenReturn("Zeal");
+		GameStateChanged logout = new GameStateChanged();
+		logout.setGameState(GameState.LOGIN_SCREEN);
+		plugin.onGameStateChanged(logout);
+		verify(prayer).setName("Piety");
 	}
 
 	@Test

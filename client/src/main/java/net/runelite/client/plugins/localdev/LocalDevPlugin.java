@@ -45,6 +45,7 @@ public class LocalDevPlugin extends Plugin
 	@Inject
 	private GearPresetsPlugin gearPresets;
 
+	private final ZealPrayer zealPrayer = new ZealPrayer();
 	private final List<LocalItem> items = new ArrayList<>();
 	private volatile LocalDevPanel panel;
 	private NavigationButton navigation;
@@ -83,7 +84,12 @@ public class LocalDevPlugin extends Plugin
 		LocalDevPanel oldPanel = panel;
 		panel = null;
 		SwingUtilities.invokeLater(oldPanel::close);
-		clientThread.invokeLater(this::resetItems);
+		clientThread.invokeLater(() ->
+		{
+			resetItems();
+			zealPrayer.setEnabled(false);
+			zealPrayer.update(client);
+		});
 	}
 
 	@Subscribe
@@ -111,6 +117,12 @@ public class LocalDevPlugin extends Plugin
 		gearPresets.onChatMessage(event);
 		if (event.getType() == ChatMessageType.CONSOLE)
 		{
+			if ("localscape:zeal:1".equals(event.getMessage()) || "localscape:zeal:0".equals(event.getMessage()))
+			{
+				zealPrayer.setEnabled("localscape:zeal:1".equals(event.getMessage()));
+				zealPrayer.update(client);
+				return;
+			}
 			NylocasWaveSnapshot report = NylocasWaveSnapshot.parse(event.getMessage());
 			NylocasWavesPanel current = wavesPanel;
 			if (report != null && current != null)
@@ -129,6 +141,10 @@ public class LocalDevPlugin extends Plugin
 	@Subscribe
 	public void onClientTick(ClientTick event)
 	{
+		if (client.getGameState() == GameState.LOGGED_IN)
+		{
+			zealPrayer.update(client);
+		}
 		if (panel == null || itemsLoaded || client.getGameState() != GameState.LOGGED_IN)
 		{
 			return;
@@ -160,6 +176,8 @@ public class LocalDevPlugin extends Plugin
 		{
 			session++;
 			resetItems();
+			zealPrayer.setEnabled(false);
+			zealPrayer.update(client);
 			updatePanel(current -> current.setItems(null));
 		}
 		updatePanel(current -> current.setLoggedIn(state == GameState.LOGGED_IN));

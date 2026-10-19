@@ -20,6 +20,7 @@ final class TheatreControlsPanel extends PluginPanel
 	private final JRadioButton maxHitAll = new JRadioButton("Max hit: all weapons");
 	private final JRadioButton maxHitSlow = new JRadioButton("Max hit: 5 ticks or slower");
 	private final JCheckBox hitpoints250 = new JCheckBox("Start everyone at 250 HP");
+	private final JCheckBox zeal = new JCheckBox("Replace Piety with Zeal");
 	private final JTextField hostName = new JTextField();
 	private final JButton joinRaid = new JButton("Join raid");
 	private final JLabel status = new JLabel();
@@ -45,6 +46,8 @@ final class TheatreControlsPanel extends PluginPanel
 		maxHitSlow.setToolTipText("Uses attack speed with the selected combat style, including Rapid.");
 		hitpoints250.setToolTipText("Sets every party member's current HP to 250 when the raid starts.");
 		add(hitpoints250);
+		zeal.setToolTipText("Piety becomes Zeal for everyone: +25% Attack, +28% Strength, +25% Defence, with the same prayer drain.");
+		add(zeal);
 		startRaid.addActionListener(event ->
 		{
 			int wave;
@@ -68,6 +71,10 @@ final class TheatreControlsPanel extends PluginPanel
 			if (hitpoints250.isSelected())
 			{
 				options += " hp250";
+			}
+			if (zeal.isSelected())
+			{
+				options += " zeal";
 			}
 			submit.accept("theatrestart " + wave + options);
 		});
@@ -119,6 +126,7 @@ final class TheatreControlsPanel extends PluginPanel
 		maxHitAll.setEnabled(loggedIn && !raidStarted);
 		maxHitSlow.setEnabled(loggedIn && !raidStarted);
 		hitpoints250.setEnabled(loggedIn && !raidStarted);
+		zeal.setEnabled(loggedIn && !raidStarted);
 		hostName.setEnabled(loggedIn);
 		joinRaid.setEnabled(loggedIn);
 	}
