@@ -109,6 +109,13 @@ For 553 parents with two associated children, the birth pairs are:
 
 The common southwest/northeast pair is therefore a default observation, not a universal placement rule. In the [user-supplied recording](https://blert.io/raids/tob/c77441a7-3caf-4d9d-a482-8ffe8d7f293d/nylocas), big 41551 despawns at tick 32 at (3287,4248); children 41694 and 41695 appear that tick at (3288,4248) and (3289,4249), offsets (1,0) and (2,1). The latter lies outside the parent's recorded 2×2 footprint.
 
+Follow-up: the [lane split placement verification](nylocas-split-placement-verification.md)
+localizes all 26 nondefault complete pairs to horizontal lanes and the east
+entrance. Their first observed positions are consistent with one child step
+toward the lane entry, stopping at the entry column. All 20 south-lane pairs
+retain SW/NE offsets. This narrows the discrepancy without establishing whether
+it originates at creation or during movement on the birth tick.
+
 Important limitation: these six offset positions are also explicitly accepted by Blert's matching heuristic. The metadata-conditioned frequency table cannot prove other positions impossible. It does prove that an implementation restricting every split birth to exactly (0,0)/(1,1), or even strictly within the dead parent's four displayed tiles, would fail identified replay cases. Determining *why* a pair shifts needs a separate collision/order study; these observations alone do not establish a nearest-free-tile algorithm.
 
 Both equal-style and mixed-style split pairs occur. Among the 553 complete associated pairs, there are 66 melee/melee, 57 ranged/ranged, 55 magic/magic, and 375 mixed pairs. This rules out forcing two different styles. It does not establish random-generator independence or exact probabilities.

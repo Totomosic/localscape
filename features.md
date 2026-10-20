@@ -178,8 +178,10 @@ room replaces it. Closing the client or disabling Nylocas Waves discards it.
 
 One-shot and overkill rates show counts beside percentages and a dash when no
 denominator exists. Updates come from authoritative server events over console
-messages without filling game chat. Rebuild the client with `./dev build-client`, restart RSMod, and launch
-a fresh client session; no cache repack is required.
+messages. The plugin hides raw `LNW2`, `LNW3`, and `LNC1` console messages from
+chat while continuing to read them for sidebar updates. Rebuild the client with
+`./dev build-client`, restart RSMod, and launch a fresh client session; no cache
+repack is required.
 
 ## In-game keybinds
 
@@ -651,8 +653,8 @@ Every small and big wave form plays the native Nylocas defend sound (4020) for
 the attacker on each hit impact, including zero-damage and lethal hits. Each
 splat produces its own sound, including multiple hits in the same tick. Repack
 the cache with the server stopped, then restart RSMod to load this NPC setting.
-Attacking an already-nulled Nylocas plays the native warning/error buzzer
-(`errorsound`, 2394), amplified with two synchronized copies for the attacker,
+Attacking an already-nulled Nylocas plays the native incorrect-answer buzzer
+(`interface_wrong`, 2268), amplified with two synchronized copies for the attacker,
 and flashes the native yellow shield orb around it. The attack that first nulls
 the Nylocas produces neither cue, including any additional splats that tick.
 Subsequent multi-hit attacks produce one cue per target per tick.

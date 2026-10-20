@@ -6,7 +6,9 @@ import java.awt.image.BufferedImage;
 import javax.inject.Inject;
 import javax.swing.SwingUtilities;
 import net.runelite.api.ChatMessageType;
+import net.runelite.api.Client;
 import net.runelite.api.events.ChatMessage;
+import net.runelite.api.events.ScriptCallbackEvent;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
@@ -21,6 +23,9 @@ import net.runelite.client.ui.NavigationButton;
 )
 public class NylocasWavesPlugin extends Plugin
 {
+	@Inject
+	private Client client;
+
 	@Inject
 	private ClientToolbar clientToolbar;
 
@@ -45,6 +50,27 @@ public class NylocasWavesPlugin extends Plugin
 	{
 		panel = null;
 		clientToolbar.removeNavigation(navigation);
+	}
+
+	@Subscribe
+	public void onScriptCallbackEvent(ScriptCallbackEvent event)
+	{
+		if (!"chatFilterCheck".equals(event.getEventName()))
+		{
+			return;
+		}
+		int[] intStack = client.getIntStack();
+		int size = client.getIntStackSize();
+		if (intStack[size - 2] != ChatMessageType.CONSOLE.getType())
+		{
+			return;
+		}
+		String message = (String) client.getObjectStack()[client.getObjectStackSize() - 1];
+		if (message.startsWith("LNW2 ") || message.startsWith("LNW3 ") || message.startsWith("LNC1 "))
+		{
+			// Hide only the rendered line; ChatMessage still delivers the original payload.
+			intStack[size - 3] = 0;
+		}
 	}
 
 	@Subscribe

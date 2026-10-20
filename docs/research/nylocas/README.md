@@ -49,9 +49,17 @@ python tools/research/nylocas_targets.py
 python tools/research/nylocas_lifecycle.py
 python tools/research/nylocas_entry_contact.py
 python tools/research/nylocas_death_timing_review.py
+python tools/research/nylocas_split_placement.py
 ```
 
-The latter four commands regenerate their CSV/JSON outputs in this directory. All five use checksum verification of the pinned raw responses before analysis. See each script's module documentation for its filters and limitations. None executes simulator code, contacts the website, or changes the server.
+The latter five commands regenerate their CSV/JSON outputs in this directory. All six use checksum verification of the pinned raw responses before analysis. See each script's module documentation for its filters and limitations. None executes simulator code, contacts the website, or changes the server.
+
+The [lane split placement verification](../../nylocas-split-placement-verification.md)
+compares first-observed child anchors with the simulator's fixed SW/NE strategy
+at the parent's final tile. Its [JSON output](split-placement-observations.json)
+preserves every lane control and every mismatching pair. Horizontal-lane shifts
+remain after accounting for the parent's last step; birth-tick child movement
+versus internal creation placement is unresolved.
 
 The [independent death-timing review](../../nylocas-death-timing-review.md)
 compares the guide, these raw recordings and live simulator timing probes. Its

@@ -1,0 +1,7485 @@
+{
+  "counts": {
+    "arena:bigs": 518,
+    "arena:matches": 507,
+    "arena:mismatches": 5,
+    "bigs": 559,
+    "complete_pairs": 553,
+    "east_lane:bigs": 3,
+    "east_lane:mismatches": 3,
+    "incomplete_parent_associations": 6,
+    "matching_pairs": 527,
+    "mismatching_pairs": 26,
+    "recordings": 13,
+    "south_lane:bigs": 20,
+    "south_lane:matches": 20,
+    "west_lane:bigs": 18,
+    "west_lane:mismatches": 18
+  },
+  "limitations": [
+    "Selected 13-recording normal-mode solo/duo corpus; not all modes or scales.",
+    "Parent IDs are inferred; simultaneous nearby big deaths can be ambiguous.",
+    "First recorded child anchor can include movement during its birth tick.",
+    "Recorded zero HP does not identify the exact lethal server phase.",
+    "The fixed-pair baseline is a strategy comparison, not simulator execution."
+  ],
+  "method": "Compare recorded split birth anchors with a fixed SW/NE pair.\n\nUses checksum-pinned Blert responses, independently of simulator execution.\nThe baseline is NylocasBehaviour.split's parent+(0,0)/(1,1) strategy. Compare\nagainst the FINAL parent anchor, so a parent's last step cannot explain a\nremaining discrepancy. Birth coordinates are first observations, not proof of\nthe internal creation tile. Parent IDs are recorder inferences.",
+  "observations": [
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4239
+            ],
+            "hp": 8,
+            "tick": 28
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4240
+            ],
+            "hp": 8,
+            "tick": 29
+          },
+          "room_id": 60964
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4240
+            ],
+            "hp": 8,
+            "tick": 28
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4241
+            ],
+            "hp": 8,
+            "tick": 29
+          },
+          "room_id": 60965
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4239
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4237
+          ],
+          "hp": 16,
+          "tick": 20
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 16,
+          "tick": 21
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 22
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 23
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 24
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 25
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 26
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 27
+        }
+      ],
+      "removal_tick": 28,
+      "room_id": 60849,
+      "simultaneous_big_removals": [
+        60849
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "wave": 4,
+      "zero_tick": 22
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4248
+            ],
+            "hp": 8,
+            "tick": 34
+          },
+          "next_sample": {
+            "anchor": [
+              3291,
+              4249
+            ],
+            "hp": 8,
+            "tick": 35
+          },
+          "room_id": 61044
+        },
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4249
+            ],
+            "hp": 8,
+            "tick": 34
+          },
+          "next_sample": {
+            "anchor": [
+              3290,
+              4248
+            ],
+            "hp": 8,
+            "tick": 35
+          },
+          "room_id": 61045
+        }
+      ],
+      "expected_pair": [
+        [
+          3289,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3289,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3290,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 4,
+          "tick": 26
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 4,
+          "tick": 27
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 28
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 29
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 30
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 31
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 32
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 33
+        }
+      ],
+      "removal_tick": 34,
+      "room_id": 60886,
+      "simultaneous_big_removals": [
+        60886
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "wave": 5,
+      "zero_tick": 28
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4238
+            ],
+            "hp": 8,
+            "tick": 51
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4239
+            ],
+            "hp": 8,
+            "tick": 52
+          },
+          "room_id": 61309
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4239
+            ],
+            "hp": 8,
+            "tick": 51
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4240
+            ],
+            "hp": 8,
+            "tick": 52
+          },
+          "room_id": 61310
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4238
+        ],
+        [
+          3296,
+          4239
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4238
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4238
+        ],
+        [
+          3296,
+          4239
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4235
+          ],
+          "hp": 16,
+          "tick": 42
+        },
+        {
+          "anchor": [
+            3295,
+            4236
+          ],
+          "hp": 16,
+          "tick": 43
+        },
+        {
+          "anchor": [
+            3295,
+            4237
+          ],
+          "hp": 0,
+          "tick": 44
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 45
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 46
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 47
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 48
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 49
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 50
+        }
+      ],
+      "removal_tick": 51,
+      "room_id": 61126,
+      "simultaneous_big_removals": [
+        61126
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "wave": 7,
+      "zero_tick": 44
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3286,
+              4248
+            ],
+            "hp": 8,
+            "tick": 62
+          },
+          "next_sample": {
+            "anchor": [
+              3287,
+              4248
+            ],
+            "hp": 8,
+            "tick": 63
+          },
+          "room_id": 61523
+        },
+        {
+          "birth": {
+            "anchor": [
+              3287,
+              4249
+            ],
+            "hp": 8,
+            "tick": 62
+          },
+          "next_sample": {
+            "anchor": [
+              3288,
+              4249
+            ],
+            "hp": 8,
+            "tick": 63
+          },
+          "room_id": 61524
+        }
+      ],
+      "expected_pair": [
+        [
+          3285,
+          4248
+        ],
+        [
+          3286,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3285,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3286,
+          4248
+        ],
+        [
+          3287,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3283,
+            4248
+          ],
+          "hp": 16,
+          "tick": 54
+        },
+        {
+          "anchor": [
+            3284,
+            4248
+          ],
+          "hp": 16,
+          "tick": 55
+        },
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 0,
+          "tick": 56
+        },
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 0,
+          "tick": 57
+        },
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 0,
+          "tick": 58
+        },
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 0,
+          "tick": 59
+        },
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 0,
+          "tick": 60
+        },
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 0,
+          "tick": 61
+        }
+      ],
+      "removal_tick": 62,
+      "room_id": 61360,
+      "simultaneous_big_removals": [
+        61360
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "wave": 8,
+      "zero_tick": 56
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4239
+            ],
+            "hp": 8,
+            "tick": 176
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4240
+            ],
+            "hp": 8,
+            "tick": 177
+          },
+          "room_id": 63348
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4240
+            ],
+            "hp": 8,
+            "tick": 176
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4241
+            ],
+            "hp": 8,
+            "tick": 177
+          },
+          "room_id": 63349
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4239
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4236
+          ],
+          "hp": 16,
+          "tick": 167
+        },
+        {
+          "anchor": [
+            3295,
+            4237
+          ],
+          "hp": 16,
+          "tick": 168
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 169
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 170
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 171
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 172
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 173
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 174
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 175
+        }
+      ],
+      "removal_tick": 176,
+      "room_id": 63182,
+      "simultaneous_big_removals": [
+        63182
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "wave": 20,
+      "zero_tick": 169
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4239
+            ],
+            "hp": 8,
+            "tick": 212
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4240
+            ],
+            "hp": 8,
+            "tick": 213
+          },
+          "room_id": 63905
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4240
+            ],
+            "hp": 8,
+            "tick": 212
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4241
+            ],
+            "hp": 8,
+            "tick": 213
+          },
+          "room_id": 63906
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4239
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4236
+          ],
+          "hp": 16,
+          "tick": 203
+        },
+        {
+          "anchor": [
+            3295,
+            4237
+          ],
+          "hp": 16,
+          "tick": 204
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 205
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 206
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 207
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 208
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 209
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 210
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 211
+        }
+      ],
+      "removal_tick": 212,
+      "room_id": 63726,
+      "simultaneous_big_removals": [
+        63726
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "wave": 23,
+      "zero_tick": 205
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3289,
+              4248
+            ],
+            "hp": 8,
+            "tick": 221
+          },
+          "next_sample": {
+            "anchor": [
+              3290,
+              4248
+            ],
+            "hp": 8,
+            "tick": 222
+          },
+          "room_id": 64001
+        },
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4249
+            ],
+            "hp": 8,
+            "tick": 221
+          },
+          "next_sample": {
+            "anchor": [
+              3291,
+              4248
+            ],
+            "hp": 8,
+            "tick": 222
+          },
+          "room_id": 64002
+        }
+      ],
+      "expected_pair": [
+        [
+          3288,
+          4248
+        ],
+        [
+          3289,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3288,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3289,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 16,
+          "tick": 212
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 16,
+          "tick": 213
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 214
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 215
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 216
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 217
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 218
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 219
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 220
+        }
+      ],
+      "removal_tick": 221,
+      "room_id": 63847,
+      "simultaneous_big_removals": [
+        63847
+      ],
+      "url": "https://blert.io/raids/tob/1073635f-5326-4bac-a147-8fdf6299f761/nylocas",
+      "uuid": "1073635f-5326-4bac-a147-8fdf6299f761",
+      "wave": 24,
+      "zero_tick": 214
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4239
+            ],
+            "hp": 8,
+            "tick": 28
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4240
+            ],
+            "hp": 8,
+            "tick": 29
+          },
+          "room_id": 33534
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4240
+            ],
+            "hp": 8,
+            "tick": 28
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4241
+            ],
+            "hp": 8,
+            "tick": 29
+          },
+          "room_id": 33535
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4239
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4236
+          ],
+          "hp": 16,
+          "tick": 19
+        },
+        {
+          "anchor": [
+            3295,
+            4237
+          ],
+          "hp": 16,
+          "tick": 20
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 21
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 22
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 23
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 24
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 25
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 26
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 27
+        }
+      ],
+      "removal_tick": 28,
+      "room_id": 33197,
+      "simultaneous_big_removals": [
+        33197
+      ],
+      "url": "https://blert.io/raids/tob/4ed0a471-7c3a-46d7-8f9c-e807f0275be3/nylocas",
+      "uuid": "4ed0a471-7c3a-46d7-8f9c-e807f0275be3",
+      "wave": 4,
+      "zero_tick": 21
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4248
+            ],
+            "hp": 8,
+            "tick": 34
+          },
+          "next_sample": {
+            "anchor": [
+              3290,
+              4247
+            ],
+            "hp": 8,
+            "tick": 35
+          },
+          "room_id": 33738
+        },
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4249
+            ],
+            "hp": 8,
+            "tick": 34
+          },
+          "next_sample": {
+            "anchor": [
+              3291,
+              4250
+            ],
+            "hp": 8,
+            "tick": 35
+          },
+          "room_id": 33739
+        }
+      ],
+      "expected_pair": [
+        [
+          3289,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3289,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3290,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 16,
+          "tick": 25
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 16,
+          "tick": 26
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 27
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 28
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 29
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 30
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 31
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 32
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 33
+        }
+      ],
+      "removal_tick": 34,
+      "room_id": 33296,
+      "simultaneous_big_removals": [
+        33296
+      ],
+      "url": "https://blert.io/raids/tob/4ed0a471-7c3a-46d7-8f9c-e807f0275be3/nylocas",
+      "uuid": "4ed0a471-7c3a-46d7-8f9c-e807f0275be3",
+      "wave": 5,
+      "zero_tick": 27
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4248
+            ],
+            "hp": 8,
+            "tick": 66
+          },
+          "next_sample": {
+            "anchor": [
+              3291,
+              4247
+            ],
+            "hp": 8,
+            "tick": 67
+          },
+          "room_id": 34676
+        },
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4249
+            ],
+            "hp": 8,
+            "tick": 66
+          },
+          "next_sample": {
+            "anchor": [
+              3290,
+              4250
+            ],
+            "hp": 8,
+            "tick": 67
+          },
+          "room_id": 34677
+        }
+      ],
+      "expected_pair": [
+        [
+          3289,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3289,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3290,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 16,
+          "tick": 57
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 16,
+          "tick": 58
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 59
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 60
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 61
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 62
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 63
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 64
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 65
+        }
+      ],
+      "removal_tick": 66,
+      "room_id": 34267,
+      "simultaneous_big_removals": [
+        34267
+      ],
+      "url": "https://blert.io/raids/tob/4ed0a471-7c3a-46d7-8f9c-e807f0275be3/nylocas",
+      "uuid": "4ed0a471-7c3a-46d7-8f9c-e807f0275be3",
+      "wave": 8,
+      "zero_tick": 59
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3301,
+              4248
+            ],
+            "hp": 8,
+            "tick": 170
+          },
+          "next_sample": {
+            "anchor": [
+              3301,
+              4247
+            ],
+            "hp": 8,
+            "tick": 171
+          },
+          "room_id": 37022
+        },
+        {
+          "birth": {
+            "anchor": [
+              3301,
+              4249
+            ],
+            "hp": 8,
+            "tick": 170
+          },
+          "next_sample": {
+            "anchor": [
+              3301,
+              4248
+            ],
+            "hp": 8,
+            "tick": 171
+          },
+          "room_id": 37023
+        }
+      ],
+      "expected_pair": [
+        [
+          3301,
+          4248
+        ],
+        [
+          3302,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3301,
+        4248
+      ],
+      "final_location": "arena",
+      "matches": false,
+      "observed_pair": [
+        [
+          3301,
+          4248
+        ],
+        [
+          3301,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "origin_lane": 3,
+      "parent_samples": [
+        {
+          "anchor": [
+            3304,
+            4248
+          ],
+          "hp": 16,
+          "tick": 161
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 16,
+          "tick": 162
+        },
+        {
+          "anchor": [
+            3302,
+            4248
+          ],
+          "hp": 0,
+          "tick": 163
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 164
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 165
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 166
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 167
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 168
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 169
+        }
+      ],
+      "removal_tick": 170,
+      "room_id": 36662,
+      "simultaneous_big_removals": [
+        36467,
+        36662
+      ],
+      "url": "https://blert.io/raids/tob/4ed0a471-7c3a-46d7-8f9c-e807f0275be3/nylocas",
+      "uuid": "4ed0a471-7c3a-46d7-8f9c-e807f0275be3",
+      "wave": 19,
+      "zero_tick": 163
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4238
+            ],
+            "hp": 8,
+            "tick": 179
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4239
+            ],
+            "hp": 8,
+            "tick": 180
+          },
+          "room_id": 37293
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4239
+            ],
+            "hp": 8,
+            "tick": 179
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4240
+            ],
+            "hp": 8,
+            "tick": 180
+          },
+          "room_id": 37294
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4238
+        ],
+        [
+          3296,
+          4239
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4238
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4238
+        ],
+        [
+          3296,
+          4239
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4235
+          ],
+          "hp": 16,
+          "tick": 170
+        },
+        {
+          "anchor": [
+            3295,
+            4236
+          ],
+          "hp": 16,
+          "tick": 171
+        },
+        {
+          "anchor": [
+            3295,
+            4237
+          ],
+          "hp": 0,
+          "tick": 172
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 173
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 174
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 175
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 176
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 177
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 178
+        }
+      ],
+      "removal_tick": 179,
+      "room_id": 36970,
+      "simultaneous_big_removals": [
+        35810,
+        36970
+      ],
+      "url": "https://blert.io/raids/tob/4ed0a471-7c3a-46d7-8f9c-e807f0275be3/nylocas",
+      "uuid": "4ed0a471-7c3a-46d7-8f9c-e807f0275be3",
+      "wave": 20,
+      "zero_tick": 172
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4239
+            ],
+            "hp": 8,
+            "tick": 216
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4240
+            ],
+            "hp": 8,
+            "tick": 217
+          },
+          "room_id": 38130
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4240
+            ],
+            "hp": 8,
+            "tick": 216
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4241
+            ],
+            "hp": 8,
+            "tick": 217
+          },
+          "room_id": 38131
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4239
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4236
+          ],
+          "hp": 16,
+          "tick": 207
+        },
+        {
+          "anchor": [
+            3295,
+            4237
+          ],
+          "hp": 16,
+          "tick": 208
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 209
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 210
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 211
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 212
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 213
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 214
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 215
+        }
+      ],
+      "removal_tick": 216,
+      "room_id": 37792,
+      "simultaneous_big_removals": [
+        37792
+      ],
+      "url": "https://blert.io/raids/tob/4ed0a471-7c3a-46d7-8f9c-e807f0275be3/nylocas",
+      "uuid": "4ed0a471-7c3a-46d7-8f9c-e807f0275be3",
+      "wave": 23,
+      "zero_tick": 209
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4248
+            ],
+            "hp": 8,
+            "tick": 233
+          },
+          "next_sample": {
+            "anchor": [
+              3290,
+              4247
+            ],
+            "hp": 8,
+            "tick": 234
+          },
+          "room_id": 51098
+        },
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4249
+            ],
+            "hp": 8,
+            "tick": 233
+          },
+          "next_sample": {
+            "anchor": [
+              3291,
+              4250
+            ],
+            "hp": 8,
+            "tick": 234
+          },
+          "room_id": 51099
+        }
+      ],
+      "expected_pair": [
+        [
+          3289,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3289,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3290,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 16,
+          "tick": 224
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 16,
+          "tick": 225
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 226
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 227
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 228
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 229
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 230
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 231
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 232
+        }
+      ],
+      "removal_tick": 233,
+      "room_id": 50843,
+      "simultaneous_big_removals": [
+        50843
+      ],
+      "url": "https://blert.io/raids/tob/65c9f142-f240-4284-9384-d32fa313067e/nylocas",
+      "uuid": "65c9f142-f240-4284-9384-d32fa313067e",
+      "wave": 17,
+      "zero_tick": 226
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4239
+            ],
+            "hp": 8,
+            "tick": 28
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4240
+            ],
+            "hp": 8,
+            "tick": 29
+          },
+          "room_id": 59206
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4240
+            ],
+            "hp": 8,
+            "tick": 28
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4241
+            ],
+            "hp": 8,
+            "tick": 29
+          },
+          "room_id": 59207
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4239
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4236
+          ],
+          "hp": 16,
+          "tick": 19
+        },
+        {
+          "anchor": [
+            3295,
+            4237
+          ],
+          "hp": 16,
+          "tick": 20
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 21
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 22
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 23
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 24
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 25
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 26
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 27
+        }
+      ],
+      "removal_tick": 28,
+      "room_id": 59054,
+      "simultaneous_big_removals": [
+        59054
+      ],
+      "url": "https://blert.io/raids/tob/9ac3826e-aa64-4f5a-b00f-4208f97f0307/nylocas",
+      "uuid": "9ac3826e-aa64-4f5a-b00f-4208f97f0307",
+      "wave": 4,
+      "zero_tick": 21
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3288,
+              4248
+            ],
+            "hp": 8,
+            "tick": 64
+          },
+          "next_sample": {
+            "anchor": [
+              3289,
+              4248
+            ],
+            "hp": 8,
+            "tick": 65
+          },
+          "room_id": 59823
+        },
+        {
+          "birth": {
+            "anchor": [
+              3289,
+              4249
+            ],
+            "hp": 8,
+            "tick": 64
+          },
+          "next_sample": {
+            "anchor": [
+              3290,
+              4249
+            ],
+            "hp": 8,
+            "tick": 65
+          },
+          "room_id": 59824
+        }
+      ],
+      "expected_pair": [
+        [
+          3287,
+          4248
+        ],
+        [
+          3288,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3287,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3288,
+          4248
+        ],
+        [
+          3289,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3284,
+            4248
+          ],
+          "hp": 16,
+          "tick": 55
+        },
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 16,
+          "tick": 56
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 57
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 58
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 59
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 60
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 61
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 62
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 63
+        }
+      ],
+      "removal_tick": 64,
+      "room_id": 59648,
+      "simultaneous_big_removals": [
+        59648
+      ],
+      "url": "https://blert.io/raids/tob/9ac3826e-aa64-4f5a-b00f-4208f97f0307/nylocas",
+      "uuid": "9ac3826e-aa64-4f5a-b00f-4208f97f0307",
+      "wave": 8,
+      "zero_tick": 57
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4248
+            ],
+            "hp": 8,
+            "tick": 166
+          },
+          "next_sample": {
+            "anchor": [
+              3291,
+              4249
+            ],
+            "hp": 8,
+            "tick": 167
+          },
+          "room_id": 61559
+        },
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4249
+            ],
+            "hp": 8,
+            "tick": 166
+          },
+          "next_sample": {
+            "anchor": [
+              3291,
+              4248
+            ],
+            "hp": 8,
+            "tick": 167
+          },
+          "room_id": 61560
+        }
+      ],
+      "expected_pair": [
+        [
+          3289,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3289,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3290,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 16,
+          "tick": 157
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 16,
+          "tick": 158
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 159
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 160
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 161
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 162
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 163
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 164
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 165
+        }
+      ],
+      "removal_tick": 166,
+      "room_id": 61330,
+      "simultaneous_big_removals": [
+        61330
+      ],
+      "url": "https://blert.io/raids/tob/9ac3826e-aa64-4f5a-b00f-4208f97f0307/nylocas",
+      "uuid": "9ac3826e-aa64-4f5a-b00f-4208f97f0307",
+      "wave": 18,
+      "zero_tick": 159
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4241
+            ],
+            "hp": 8,
+            "tick": 190
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4242
+            ],
+            "hp": 8,
+            "tick": 191
+          },
+          "room_id": 61946
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4242
+            ],
+            "hp": 8,
+            "tick": 190
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4243
+            ],
+            "hp": 8,
+            "tick": 191
+          },
+          "room_id": 61947
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4241
+        ],
+        [
+          3296,
+          4242
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4241
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4241
+        ],
+        [
+          3296,
+          4242
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 16,
+          "tick": 181
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 16,
+          "tick": 182
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 183
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 184
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 185
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 186
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 187
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 188
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 189
+        }
+      ],
+      "removal_tick": 190,
+      "room_id": 61688,
+      "simultaneous_big_removals": [
+        61688
+      ],
+      "url": "https://blert.io/raids/tob/9ac3826e-aa64-4f5a-b00f-4208f97f0307/nylocas",
+      "uuid": "9ac3826e-aa64-4f5a-b00f-4208f97f0307",
+      "wave": 20,
+      "zero_tick": 183
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4241
+            ],
+            "hp": 8,
+            "tick": 226
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4242
+            ],
+            "hp": 8,
+            "tick": 227
+          },
+          "room_id": 62587
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4242
+            ],
+            "hp": 8,
+            "tick": 226
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4243
+            ],
+            "hp": 8,
+            "tick": 227
+          },
+          "room_id": 62588
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4241
+        ],
+        [
+          3296,
+          4242
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4241
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4241
+        ],
+        [
+          3296,
+          4242
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 16,
+          "tick": 217
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 16,
+          "tick": 218
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 219
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 220
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 221
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 222
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 223
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 224
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 225
+        }
+      ],
+      "removal_tick": 226,
+      "room_id": 62331,
+      "simultaneous_big_removals": [
+        62331
+      ],
+      "url": "https://blert.io/raids/tob/9ac3826e-aa64-4f5a-b00f-4208f97f0307/nylocas",
+      "uuid": "9ac3826e-aa64-4f5a-b00f-4208f97f0307",
+      "wave": 23,
+      "zero_tick": 219
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4240
+            ],
+            "hp": 8,
+            "tick": 233
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4241
+            ],
+            "hp": 8,
+            "tick": 234
+          },
+          "room_id": 62714
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4241
+            ],
+            "hp": 8,
+            "tick": 233
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4242
+            ],
+            "hp": 8,
+            "tick": 234
+          },
+          "room_id": 62715
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4240
+        ],
+        [
+          3296,
+          4241
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4240
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4240
+        ],
+        [
+          3296,
+          4241
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4237
+          ],
+          "hp": 16,
+          "tick": 224
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 16,
+          "tick": 225
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 226
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 227
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 228
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 229
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 230
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 231
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 232
+        }
+      ],
+      "removal_tick": 233,
+      "room_id": 62499,
+      "simultaneous_big_removals": [
+        62499
+      ],
+      "url": "https://blert.io/raids/tob/9ac3826e-aa64-4f5a-b00f-4208f97f0307/nylocas",
+      "uuid": "9ac3826e-aa64-4f5a-b00f-4208f97f0307",
+      "wave": 24,
+      "zero_tick": 226
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3301,
+              4248
+            ],
+            "hp": 8,
+            "tick": 123
+          },
+          "next_sample": {
+            "anchor": [
+              3300,
+              4249
+            ],
+            "hp": 8,
+            "tick": 124
+          },
+          "room_id": 49146
+        },
+        {
+          "birth": {
+            "anchor": [
+              3301,
+              4249
+            ],
+            "hp": 8,
+            "tick": 123
+          },
+          "next_sample": {
+            "anchor": [
+              3300,
+              4250
+            ],
+            "hp": 8,
+            "tick": 124
+          },
+          "room_id": 49147
+        }
+      ],
+      "expected_pair": [
+        [
+          3301,
+          4248
+        ],
+        [
+          3302,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3301,
+        4248
+      ],
+      "final_location": "arena",
+      "matches": false,
+      "observed_pair": [
+        [
+          3301,
+          4248
+        ],
+        [
+          3301,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "origin_lane": 3,
+      "parent_samples": [
+        {
+          "anchor": [
+            3302,
+            4248
+          ],
+          "hp": 16,
+          "tick": 115
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 16,
+          "tick": 116
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 117
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 118
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 119
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 120
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 121
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 122
+        }
+      ],
+      "removal_tick": 123,
+      "room_id": 48841,
+      "simultaneous_big_removals": [
+        48841
+      ],
+      "url": "https://blert.io/raids/tob/9f8f1a77-a528-454f-bfac-8251dec9de32/nylocas",
+      "uuid": "9f8f1a77-a528-454f-bfac-8251dec9de32",
+      "wave": 13,
+      "zero_tick": 117
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3288,
+              4248
+            ],
+            "hp": 8,
+            "tick": 184
+          },
+          "next_sample": {
+            "anchor": [
+              3289,
+              4248
+            ],
+            "hp": 8,
+            "tick": 185
+          },
+          "room_id": 50094
+        },
+        {
+          "birth": {
+            "anchor": [
+              3289,
+              4249
+            ],
+            "hp": 8,
+            "tick": 184
+          },
+          "next_sample": {
+            "anchor": [
+              3290,
+              4249
+            ],
+            "hp": 8,
+            "tick": 185
+          },
+          "room_id": 50095
+        }
+      ],
+      "expected_pair": [
+        [
+          3287,
+          4248
+        ],
+        [
+          3288,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3287,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3288,
+          4248
+        ],
+        [
+          3289,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3284,
+            4248
+          ],
+          "hp": 16,
+          "tick": 175
+        },
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 16,
+          "tick": 176
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 177
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 178
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 179
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 180
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 181
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 182
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 183
+        }
+      ],
+      "removal_tick": 184,
+      "room_id": 49915,
+      "simultaneous_big_removals": [
+        49915
+      ],
+      "url": "https://blert.io/raids/tob/9f8f1a77-a528-454f-bfac-8251dec9de32/nylocas",
+      "uuid": "9f8f1a77-a528-454f-bfac-8251dec9de32",
+      "wave": 18,
+      "zero_tick": 177
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3302,
+              4248
+            ],
+            "hp": 8,
+            "tick": 204
+          },
+          "next_sample": {
+            "anchor": [
+              3301,
+              4248
+            ],
+            "hp": 8,
+            "tick": 205
+          },
+          "room_id": 50378
+        },
+        {
+          "birth": {
+            "anchor": [
+              3303,
+              4249
+            ],
+            "hp": 8,
+            "tick": 204
+          },
+          "next_sample": {
+            "anchor": [
+              3302,
+              4249
+            ],
+            "hp": 8,
+            "tick": 205
+          },
+          "room_id": 50379
+        }
+      ],
+      "expected_pair": [
+        [
+          3303,
+          4248
+        ],
+        [
+          3304,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3303,
+        4248
+      ],
+      "final_location": "east_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3302,
+          4248
+        ],
+        [
+          3303,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "origin_lane": 3,
+      "parent_samples": [
+        {
+          "anchor": [
+            3306,
+            4248
+          ],
+          "hp": 16,
+          "tick": 195
+        },
+        {
+          "anchor": [
+            3305,
+            4248
+          ],
+          "hp": 16,
+          "tick": 196
+        },
+        {
+          "anchor": [
+            3304,
+            4248
+          ],
+          "hp": 0,
+          "tick": 197
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 0,
+          "tick": 198
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 0,
+          "tick": 199
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 0,
+          "tick": 200
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 0,
+          "tick": 201
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 0,
+          "tick": 202
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 0,
+          "tick": 203
+        }
+      ],
+      "removal_tick": 204,
+      "room_id": 50208,
+      "simultaneous_big_removals": [
+        50208
+      ],
+      "url": "https://blert.io/raids/tob/9f8f1a77-a528-454f-bfac-8251dec9de32/nylocas",
+      "uuid": "9f8f1a77-a528-454f-bfac-8251dec9de32",
+      "wave": 19,
+      "zero_tick": 197
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3288,
+              4248
+            ],
+            "hp": 8,
+            "tick": 32
+          },
+          "next_sample": {
+            "anchor": [
+              3289,
+              4248
+            ],
+            "hp": 8,
+            "tick": 33
+          },
+          "room_id": 57903
+        },
+        {
+          "birth": {
+            "anchor": [
+              3289,
+              4249
+            ],
+            "hp": 8,
+            "tick": 32
+          },
+          "next_sample": {
+            "anchor": [
+              3290,
+              4249
+            ],
+            "hp": 8,
+            "tick": 33
+          },
+          "room_id": 57904
+        }
+      ],
+      "expected_pair": [
+        [
+          3287,
+          4248
+        ],
+        [
+          3288,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3287,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3288,
+          4248
+        ],
+        [
+          3289,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3284,
+            4248
+          ],
+          "hp": 16,
+          "tick": 23
+        },
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 16,
+          "tick": 24
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 25
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 26
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 27
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 28
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 29
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 30
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 31
+        }
+      ],
+      "removal_tick": 32,
+      "room_id": 57724,
+      "simultaneous_big_removals": [
+        57724
+      ],
+      "url": "https://blert.io/raids/tob/bbd10de2-8831-4b53-9872-970d547d3a5d/nylocas",
+      "uuid": "bbd10de2-8831-4b53-9872-970d547d3a5d",
+      "wave": 5,
+      "zero_tick": 25
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4240
+            ],
+            "hp": 8,
+            "tick": 53
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4241
+            ],
+            "hp": 8,
+            "tick": 54
+          },
+          "room_id": 58241
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4241
+            ],
+            "hp": 8,
+            "tick": 53
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4242
+            ],
+            "hp": 8,
+            "tick": 54
+          },
+          "room_id": 58242
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4240
+        ],
+        [
+          3296,
+          4241
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4240
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4240
+        ],
+        [
+          3296,
+          4241
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 16,
+          "tick": 45
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 16,
+          "tick": 46
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 47
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 48
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 49
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 50
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 51
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 52
+        }
+      ],
+      "removal_tick": 53,
+      "room_id": 58058,
+      "simultaneous_big_removals": [
+        58058
+      ],
+      "url": "https://blert.io/raids/tob/bbd10de2-8831-4b53-9872-970d547d3a5d/nylocas",
+      "uuid": "bbd10de2-8831-4b53-9872-970d547d3a5d",
+      "wave": 7,
+      "zero_tick": 47
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3301,
+              4248
+            ],
+            "hp": 8,
+            "tick": 82
+          },
+          "next_sample": {
+            "anchor": [
+              3300,
+              4247
+            ],
+            "hp": 8,
+            "tick": 83
+          },
+          "room_id": 58647
+        },
+        {
+          "birth": {
+            "anchor": [
+              3301,
+              4249
+            ],
+            "hp": 8,
+            "tick": 82
+          },
+          "next_sample": {
+            "anchor": [
+              3300,
+              4248
+            ],
+            "hp": 8,
+            "tick": 83
+          },
+          "room_id": 58648
+        }
+      ],
+      "expected_pair": [
+        [
+          3301,
+          4248
+        ],
+        [
+          3302,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3301,
+        4248
+      ],
+      "final_location": "arena",
+      "matches": false,
+      "observed_pair": [
+        [
+          3301,
+          4248
+        ],
+        [
+          3301,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "origin_lane": 3,
+      "parent_samples": [
+        {
+          "anchor": [
+            3304,
+            4248
+          ],
+          "hp": 16,
+          "tick": 73
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 16,
+          "tick": 74
+        },
+        {
+          "anchor": [
+            3302,
+            4248
+          ],
+          "hp": 0,
+          "tick": 75
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 76
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 77
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 78
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 79
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 80
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 81
+        }
+      ],
+      "removal_tick": 82,
+      "room_id": 58431,
+      "simultaneous_big_removals": [
+        58431
+      ],
+      "url": "https://blert.io/raids/tob/bbd10de2-8831-4b53-9872-970d547d3a5d/nylocas",
+      "uuid": "bbd10de2-8831-4b53-9872-970d547d3a5d",
+      "wave": 10,
+      "zero_tick": 75
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3287,
+              4248
+            ],
+            "hp": 8,
+            "tick": 171
+          },
+          "next_sample": {
+            "anchor": [
+              3288,
+              4248
+            ],
+            "hp": 8,
+            "tick": 172
+          },
+          "room_id": 59943
+        },
+        {
+          "birth": {
+            "anchor": [
+              3288,
+              4249
+            ],
+            "hp": 8,
+            "tick": 171
+          },
+          "next_sample": {
+            "anchor": [
+              3289,
+              4249
+            ],
+            "hp": 8,
+            "tick": 172
+          },
+          "room_id": 59944
+        }
+      ],
+      "expected_pair": [
+        [
+          3286,
+          4248
+        ],
+        [
+          3287,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3286,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3287,
+          4248
+        ],
+        [
+          3288,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3284,
+            4248
+          ],
+          "hp": 16,
+          "tick": 163
+        },
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 16,
+          "tick": 164
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 165
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 166
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 167
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 168
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 169
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 170
+        }
+      ],
+      "removal_tick": 171,
+      "room_id": 59735,
+      "simultaneous_big_removals": [
+        59735
+      ],
+      "url": "https://blert.io/raids/tob/bbd10de2-8831-4b53-9872-970d547d3a5d/nylocas",
+      "uuid": "bbd10de2-8831-4b53-9872-970d547d3a5d",
+      "wave": 18,
+      "zero_tick": 165
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4248
+            ],
+            "hp": 8,
+            "tick": 262
+          },
+          "next_sample": {
+            "anchor": [
+              3291,
+              4249
+            ],
+            "hp": 8,
+            "tick": 263
+          },
+          "room_id": 61509
+        },
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4249
+            ],
+            "hp": 8,
+            "tick": 262
+          },
+          "next_sample": {
+            "anchor": [
+              3291,
+              4250
+            ],
+            "hp": 8,
+            "tick": 263
+          },
+          "room_id": 61510
+        }
+      ],
+      "expected_pair": [
+        [
+          3289,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3289,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3290,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 16,
+          "tick": 254
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 16,
+          "tick": 255
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 256
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 257
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 258
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 259
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 260
+        },
+        {
+          "anchor": [
+            3289,
+            4248
+          ],
+          "hp": 0,
+          "tick": 261
+        }
+      ],
+      "removal_tick": 262,
+      "room_id": 61356,
+      "simultaneous_big_removals": [
+        61356
+      ],
+      "url": "https://blert.io/raids/tob/bbd10de2-8831-4b53-9872-970d547d3a5d/nylocas",
+      "uuid": "bbd10de2-8831-4b53-9872-970d547d3a5d",
+      "wave": 25,
+      "zero_tick": 256
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4242
+            ],
+            "hp": 8,
+            "tick": 55
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4243
+            ],
+            "hp": 8,
+            "tick": 56
+          },
+          "room_id": 60350
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4243
+            ],
+            "hp": 8,
+            "tick": 55
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4244
+            ],
+            "hp": 8,
+            "tick": 56
+          },
+          "room_id": 60351
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4242
+        ],
+        [
+          3296,
+          4243
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4242
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4242
+        ],
+        [
+          3296,
+          4243
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 12,
+          "tick": 46
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 12,
+          "tick": 47
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 48
+        },
+        {
+          "anchor": [
+            3295,
+            4242
+          ],
+          "hp": 0,
+          "tick": 49
+        },
+        {
+          "anchor": [
+            3295,
+            4242
+          ],
+          "hp": 0,
+          "tick": 50
+        },
+        {
+          "anchor": [
+            3295,
+            4242
+          ],
+          "hp": 0,
+          "tick": 51
+        },
+        {
+          "anchor": [
+            3295,
+            4242
+          ],
+          "hp": 0,
+          "tick": 52
+        },
+        {
+          "anchor": [
+            3295,
+            4242
+          ],
+          "hp": 0,
+          "tick": 53
+        },
+        {
+          "anchor": [
+            3295,
+            4242
+          ],
+          "hp": 0,
+          "tick": 54
+        }
+      ],
+      "removal_tick": 55,
+      "room_id": 60091,
+      "simultaneous_big_removals": [
+        60091
+      ],
+      "url": "https://blert.io/raids/tob/bef6ad10-3ef3-48b7-97a5-d019cf9ba303/nylocas",
+      "uuid": "bef6ad10-3ef3-48b7-97a5-d019cf9ba303",
+      "wave": 7,
+      "zero_tick": 48
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3289,
+              4248
+            ],
+            "hp": 8,
+            "tick": 65
+          },
+          "next_sample": {
+            "anchor": [
+              3290,
+              4248
+            ],
+            "hp": 8,
+            "tick": 66
+          },
+          "room_id": 60516
+        },
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4249
+            ],
+            "hp": 8,
+            "tick": 65
+          },
+          "next_sample": {
+            "anchor": [
+              3291,
+              4248
+            ],
+            "hp": 8,
+            "tick": 66
+          },
+          "room_id": 60517
+        }
+      ],
+      "expected_pair": [
+        [
+          3288,
+          4248
+        ],
+        [
+          3289,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3288,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3289,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 16,
+          "tick": 56
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 16,
+          "tick": 57
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 58
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 59
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 60
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 61
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 62
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 63
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 64
+        }
+      ],
+      "removal_tick": 65,
+      "room_id": 60309,
+      "simultaneous_big_removals": [
+        60309
+      ],
+      "url": "https://blert.io/raids/tob/bef6ad10-3ef3-48b7-97a5-d019cf9ba303/nylocas",
+      "uuid": "bef6ad10-3ef3-48b7-97a5-d019cf9ba303",
+      "wave": 8,
+      "zero_tick": 58
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3288,
+              4248
+            ],
+            "hp": 8,
+            "tick": 188
+          },
+          "next_sample": {
+            "anchor": [
+              3289,
+              4248
+            ],
+            "hp": 8,
+            "tick": 189
+          },
+          "room_id": 62216
+        },
+        {
+          "birth": {
+            "anchor": [
+              3289,
+              4249
+            ],
+            "hp": 8,
+            "tick": 188
+          },
+          "next_sample": {
+            "anchor": [
+              3290,
+              4249
+            ],
+            "hp": 8,
+            "tick": 189
+          },
+          "room_id": 62217
+        }
+      ],
+      "expected_pair": [
+        [
+          3287,
+          4248
+        ],
+        [
+          3288,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3287,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3288,
+          4248
+        ],
+        [
+          3289,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3284,
+            4248
+          ],
+          "hp": 16,
+          "tick": 179
+        },
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 16,
+          "tick": 180
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 181
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 182
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 183
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 184
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 185
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 186
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 187
+        }
+      ],
+      "removal_tick": 188,
+      "room_id": 62036,
+      "simultaneous_big_removals": [
+        62036
+      ],
+      "url": "https://blert.io/raids/tob/bef6ad10-3ef3-48b7-97a5-d019cf9ba303/nylocas",
+      "uuid": "bef6ad10-3ef3-48b7-97a5-d019cf9ba303",
+      "wave": 18,
+      "zero_tick": 181
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3302,
+              4248
+            ],
+            "hp": 8,
+            "tick": 196
+          },
+          "next_sample": {
+            "anchor": [
+              3301,
+              4248
+            ],
+            "hp": 8,
+            "tick": 197
+          },
+          "room_id": 62351
+        },
+        {
+          "birth": {
+            "anchor": [
+              3303,
+              4249
+            ],
+            "hp": 8,
+            "tick": 196
+          },
+          "next_sample": {
+            "anchor": [
+              3302,
+              4249
+            ],
+            "hp": 8,
+            "tick": 197
+          },
+          "room_id": 62352
+        }
+      ],
+      "expected_pair": [
+        [
+          3303,
+          4248
+        ],
+        [
+          3304,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3303,
+        4248
+      ],
+      "final_location": "east_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3302,
+          4248
+        ],
+        [
+          3303,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "origin_lane": 3,
+      "parent_samples": [
+        {
+          "anchor": [
+            3306,
+            4248
+          ],
+          "hp": 16,
+          "tick": 187
+        },
+        {
+          "anchor": [
+            3305,
+            4248
+          ],
+          "hp": 16,
+          "tick": 188
+        },
+        {
+          "anchor": [
+            3304,
+            4248
+          ],
+          "hp": 0,
+          "tick": 189
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 0,
+          "tick": 190
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 0,
+          "tick": 191
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 0,
+          "tick": 192
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 0,
+          "tick": 193
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 0,
+          "tick": 194
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 0,
+          "tick": 195
+        }
+      ],
+      "removal_tick": 196,
+      "room_id": 62147,
+      "simultaneous_big_removals": [
+        62037,
+        62147
+      ],
+      "url": "https://blert.io/raids/tob/bef6ad10-3ef3-48b7-97a5-d019cf9ba303/nylocas",
+      "uuid": "bef6ad10-3ef3-48b7-97a5-d019cf9ba303",
+      "wave": 19,
+      "zero_tick": 189
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3288,
+              4248
+            ],
+            "hp": 8,
+            "tick": 32
+          },
+          "next_sample": {
+            "anchor": [
+              3289,
+              4248
+            ],
+            "hp": 8,
+            "tick": 33
+          },
+          "room_id": 41694
+        },
+        {
+          "birth": {
+            "anchor": [
+              3289,
+              4249
+            ],
+            "hp": 8,
+            "tick": 32
+          },
+          "next_sample": {
+            "anchor": [
+              3290,
+              4249
+            ],
+            "hp": 8,
+            "tick": 33
+          },
+          "room_id": 41695
+        }
+      ],
+      "expected_pair": [
+        [
+          3287,
+          4248
+        ],
+        [
+          3288,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3287,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3288,
+          4248
+        ],
+        [
+          3289,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3284,
+            4248
+          ],
+          "hp": 16,
+          "tick": 23
+        },
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 16,
+          "tick": 24
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 25
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 26
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 27
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 28
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 29
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 30
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 31
+        }
+      ],
+      "removal_tick": 32,
+      "room_id": 41551,
+      "simultaneous_big_removals": [
+        41508,
+        41551
+      ],
+      "url": "https://blert.io/raids/tob/c77441a7-3caf-4d9d-a482-8ffe8d7f293d/nylocas",
+      "uuid": "c77441a7-3caf-4d9d-a482-8ffe8d7f293d",
+      "wave": 5,
+      "zero_tick": 25
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4238
+            ],
+            "hp": 8,
+            "tick": 51
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4239
+            ],
+            "hp": 8,
+            "tick": 52
+          },
+          "room_id": 41924
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4239
+            ],
+            "hp": 8,
+            "tick": 51
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4240
+            ],
+            "hp": 8,
+            "tick": 52
+          },
+          "room_id": 41925
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4238
+        ],
+        [
+          3296,
+          4239
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4238
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4238
+        ],
+        [
+          3296,
+          4239
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4236
+          ],
+          "hp": 16,
+          "tick": 43
+        },
+        {
+          "anchor": [
+            3295,
+            4237
+          ],
+          "hp": 16,
+          "tick": 44
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 45
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 46
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 47
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 48
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 49
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 50
+        }
+      ],
+      "removal_tick": 51,
+      "room_id": 41821,
+      "simultaneous_big_removals": [
+        41821
+      ],
+      "url": "https://blert.io/raids/tob/c77441a7-3caf-4d9d-a482-8ffe8d7f293d/nylocas",
+      "uuid": "c77441a7-3caf-4d9d-a482-8ffe8d7f293d",
+      "wave": 7,
+      "zero_tick": 45
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3287,
+              4248
+            ],
+            "hp": 8,
+            "tick": 63
+          },
+          "next_sample": {
+            "anchor": [
+              3288,
+              4248
+            ],
+            "hp": 8,
+            "tick": 64
+          },
+          "room_id": 42091
+        },
+        {
+          "birth": {
+            "anchor": [
+              3288,
+              4249
+            ],
+            "hp": 8,
+            "tick": 63
+          },
+          "next_sample": {
+            "anchor": [
+              3289,
+              4249
+            ],
+            "hp": 8,
+            "tick": 64
+          },
+          "room_id": 42092
+        }
+      ],
+      "expected_pair": [
+        [
+          3286,
+          4248
+        ],
+        [
+          3287,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3286,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3287,
+          4248
+        ],
+        [
+          3288,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3283,
+            4248
+          ],
+          "hp": 16,
+          "tick": 54
+        },
+        {
+          "anchor": [
+            3284,
+            4248
+          ],
+          "hp": 16,
+          "tick": 55
+        },
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 0,
+          "tick": 56
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 57
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 58
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 59
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 60
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 61
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 0,
+          "tick": 62
+        }
+      ],
+      "removal_tick": 63,
+      "room_id": 41938,
+      "simultaneous_big_removals": [
+        41938
+      ],
+      "url": "https://blert.io/raids/tob/c77441a7-3caf-4d9d-a482-8ffe8d7f293d/nylocas",
+      "uuid": "c77441a7-3caf-4d9d-a482-8ffe8d7f293d",
+      "wave": 8,
+      "zero_tick": 56
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3289,
+              4248
+            ],
+            "hp": 8,
+            "tick": 149
+          },
+          "next_sample": {
+            "anchor": [
+              3290,
+              4248
+            ],
+            "hp": 8,
+            "tick": 150
+          },
+          "room_id": 43388
+        },
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4249
+            ],
+            "hp": 8,
+            "tick": 149
+          },
+          "next_sample": {
+            "anchor": [
+              3291,
+              4248
+            ],
+            "hp": 8,
+            "tick": 150
+          },
+          "room_id": 43389
+        }
+      ],
+      "expected_pair": [
+        [
+          3288,
+          4248
+        ],
+        [
+          3289,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3288,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3289,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3285,
+            4248
+          ],
+          "hp": 16,
+          "tick": 140
+        },
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 16,
+          "tick": 141
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 0,
+          "tick": 142
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 143
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 144
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 145
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 146
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 147
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 148
+        }
+      ],
+      "removal_tick": 149,
+      "room_id": 43216,
+      "simultaneous_big_removals": [
+        43216
+      ],
+      "url": "https://blert.io/raids/tob/c77441a7-3caf-4d9d-a482-8ffe8d7f293d/nylocas",
+      "uuid": "c77441a7-3caf-4d9d-a482-8ffe8d7f293d",
+      "wave": 18,
+      "zero_tick": 142
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4240
+            ],
+            "hp": 8,
+            "tick": 169
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4241
+            ],
+            "hp": 8,
+            "tick": 170
+          },
+          "room_id": 43691
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4241
+            ],
+            "hp": 8,
+            "tick": 169
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4242
+            ],
+            "hp": 8,
+            "tick": 170
+          },
+          "room_id": 43692
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4240
+        ],
+        [
+          3296,
+          4241
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4240
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4240
+        ],
+        [
+          3296,
+          4241
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4237
+          ],
+          "hp": 16,
+          "tick": 160
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 16,
+          "tick": 161
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 162
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 163
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 164
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 165
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 166
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 167
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 168
+        }
+      ],
+      "removal_tick": 169,
+      "room_id": 43491,
+      "simultaneous_big_removals": [
+        43491
+      ],
+      "url": "https://blert.io/raids/tob/c77441a7-3caf-4d9d-a482-8ffe8d7f293d/nylocas",
+      "uuid": "c77441a7-3caf-4d9d-a482-8ffe8d7f293d",
+      "wave": 20,
+      "zero_tick": 162
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4239
+            ],
+            "hp": 8,
+            "tick": 204
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4240
+            ],
+            "hp": 8,
+            "tick": 205
+          },
+          "room_id": 44172
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4240
+            ],
+            "hp": 8,
+            "tick": 204
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4241
+            ],
+            "hp": 8,
+            "tick": 205
+          },
+          "room_id": 44173
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4239
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4236
+          ],
+          "hp": 16,
+          "tick": 195
+        },
+        {
+          "anchor": [
+            3295,
+            4237
+          ],
+          "hp": 16,
+          "tick": 196
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 197
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 198
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 199
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 200
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 201
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 202
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 203
+        }
+      ],
+      "removal_tick": 204,
+      "room_id": 43986,
+      "simultaneous_big_removals": [
+        43986
+      ],
+      "url": "https://blert.io/raids/tob/c77441a7-3caf-4d9d-a482-8ffe8d7f293d/nylocas",
+      "uuid": "c77441a7-3caf-4d9d-a482-8ffe8d7f293d",
+      "wave": 23,
+      "zero_tick": 197
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4239
+            ],
+            "hp": 8,
+            "tick": 212
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4240
+            ],
+            "hp": 8,
+            "tick": 213
+          },
+          "room_id": 44263
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4240
+            ],
+            "hp": 8,
+            "tick": 212
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4241
+            ],
+            "hp": 8,
+            "tick": 213
+          },
+          "room_id": 44264
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4239
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4239
+        ],
+        [
+          3296,
+          4240
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4236
+          ],
+          "hp": 16,
+          "tick": 203
+        },
+        {
+          "anchor": [
+            3295,
+            4237
+          ],
+          "hp": 16,
+          "tick": 204
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 0,
+          "tick": 205
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 206
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 207
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 208
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 209
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 210
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 211
+        }
+      ],
+      "removal_tick": 212,
+      "room_id": 44125,
+      "simultaneous_big_removals": [
+        44125
+      ],
+      "url": "https://blert.io/raids/tob/c77441a7-3caf-4d9d-a482-8ffe8d7f293d/nylocas",
+      "uuid": "c77441a7-3caf-4d9d-a482-8ffe8d7f293d",
+      "wave": 24,
+      "zero_tick": 205
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4242
+            ],
+            "hp": 8,
+            "tick": 303
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4243
+            ],
+            "hp": 8,
+            "tick": 304
+          },
+          "room_id": 60153
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4243
+            ],
+            "hp": 8,
+            "tick": 303
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4244
+            ],
+            "hp": 8,
+            "tick": 304
+          },
+          "room_id": 60154
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4242
+        ],
+        [
+          3296,
+          4243
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4242
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4242
+        ],
+        [
+          3296,
+          4243
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 16,
+          "tick": 294
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 16,
+          "tick": 295
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 296
+        },
+        {
+          "anchor": [
+            3295,
+            4242
+          ],
+          "hp": 0,
+          "tick": 297
+        },
+        {
+          "anchor": [
+            3295,
+            4242
+          ],
+          "hp": 0,
+          "tick": 298
+        },
+        {
+          "anchor": [
+            3295,
+            4242
+          ],
+          "hp": 0,
+          "tick": 299
+        },
+        {
+          "anchor": [
+            3295,
+            4242
+          ],
+          "hp": 0,
+          "tick": 300
+        },
+        {
+          "anchor": [
+            3295,
+            4242
+          ],
+          "hp": 0,
+          "tick": 301
+        },
+        {
+          "anchor": [
+            3295,
+            4242
+          ],
+          "hp": 0,
+          "tick": 302
+        }
+      ],
+      "removal_tick": 303,
+      "room_id": 60000,
+      "simultaneous_big_removals": [
+        60000
+      ],
+      "url": "https://blert.io/raids/tob/df03c4dc-1e1d-4f57-8e6c-403803205659/nylocas",
+      "uuid": "df03c4dc-1e1d-4f57-8e6c-403803205659",
+      "wave": 24,
+      "zero_tick": 296
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3301,
+              4248
+            ],
+            "hp": 8,
+            "tick": 363
+          },
+          "next_sample": {
+            "anchor": [
+              3300,
+              4249
+            ],
+            "hp": 8,
+            "tick": 364
+          },
+          "room_id": 60920
+        },
+        {
+          "birth": {
+            "anchor": [
+              3301,
+              4249
+            ],
+            "hp": 8,
+            "tick": 363
+          },
+          "next_sample": {
+            "anchor": [
+              3301,
+              4250
+            ],
+            "hp": 8,
+            "tick": 364
+          },
+          "room_id": 60921
+        }
+      ],
+      "expected_pair": [
+        [
+          3301,
+          4248
+        ],
+        [
+          3302,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3301,
+        4248
+      ],
+      "final_location": "arena",
+      "matches": false,
+      "observed_pair": [
+        [
+          3301,
+          4248
+        ],
+        [
+          3301,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "origin_lane": 3,
+      "parent_samples": [
+        {
+          "anchor": [
+            3304,
+            4248
+          ],
+          "hp": 16,
+          "tick": 354
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 16,
+          "tick": 355
+        },
+        {
+          "anchor": [
+            3302,
+            4248
+          ],
+          "hp": 0,
+          "tick": 356
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 357
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 358
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 359
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 360
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 361
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 362
+        }
+      ],
+      "removal_tick": 363,
+      "room_id": 60710,
+      "simultaneous_big_removals": [
+        60209,
+        60210,
+        60710
+      ],
+      "url": "https://blert.io/raids/tob/df03c4dc-1e1d-4f57-8e6c-403803205659/nylocas",
+      "uuid": "df03c4dc-1e1d-4f57-8e6c-403803205659",
+      "wave": 30,
+      "zero_tick": 356
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4241
+            ],
+            "hp": 8,
+            "tick": 30
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4242
+            ],
+            "hp": 8,
+            "tick": 31
+          },
+          "room_id": 39826
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4242
+            ],
+            "hp": 8,
+            "tick": 30
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4243
+            ],
+            "hp": 8,
+            "tick": 31
+          },
+          "room_id": 39827
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4241
+        ],
+        [
+          3296,
+          4242
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4241
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4241
+        ],
+        [
+          3296,
+          4242
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 16,
+          "tick": 22
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 16,
+          "tick": 23
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 24
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 25
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 26
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 27
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 28
+        },
+        {
+          "anchor": [
+            3295,
+            4241
+          ],
+          "hp": 0,
+          "tick": 29
+        }
+      ],
+      "removal_tick": 30,
+      "room_id": 39639,
+      "simultaneous_big_removals": [
+        39639
+      ],
+      "url": "https://blert.io/raids/tob/ebaeaf20-9862-4548-af9f-1a37c52b020a/nylocas",
+      "uuid": "ebaeaf20-9862-4548-af9f-1a37c52b020a",
+      "wave": 4,
+      "zero_tick": 24
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3289,
+              4248
+            ],
+            "hp": 8,
+            "tick": 65
+          },
+          "next_sample": {
+            "anchor": [
+              3290,
+              4248
+            ],
+            "hp": 8,
+            "tick": 66
+          },
+          "room_id": 40460
+        },
+        {
+          "birth": {
+            "anchor": [
+              3290,
+              4249
+            ],
+            "hp": 8,
+            "tick": 65
+          },
+          "next_sample": {
+            "anchor": [
+              3291,
+              4248
+            ],
+            "hp": 8,
+            "tick": 66
+          },
+          "room_id": 40461
+        }
+      ],
+      "expected_pair": [
+        [
+          3288,
+          4248
+        ],
+        [
+          3289,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3288,
+        4248
+      ],
+      "final_location": "west_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3289,
+          4248
+        ],
+        [
+          3290,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "origin_lane": 1,
+      "parent_samples": [
+        {
+          "anchor": [
+            3286,
+            4248
+          ],
+          "hp": 16,
+          "tick": 57
+        },
+        {
+          "anchor": [
+            3287,
+            4248
+          ],
+          "hp": 16,
+          "tick": 58
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 59
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 60
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 61
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 62
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 63
+        },
+        {
+          "anchor": [
+            3288,
+            4248
+          ],
+          "hp": 0,
+          "tick": 64
+        }
+      ],
+      "removal_tick": 65,
+      "room_id": 40122,
+      "simultaneous_big_removals": [
+        40122
+      ],
+      "url": "https://blert.io/raids/tob/ebaeaf20-9862-4548-af9f-1a37c52b020a/nylocas",
+      "uuid": "ebaeaf20-9862-4548-af9f-1a37c52b020a",
+      "wave": 8,
+      "zero_tick": 59
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3301,
+              4248
+            ],
+            "hp": 8,
+            "tick": 205
+          },
+          "next_sample": {
+            "anchor": [
+              3301,
+              4249
+            ],
+            "hp": 8,
+            "tick": 206
+          },
+          "room_id": 43250
+        },
+        {
+          "birth": {
+            "anchor": [
+              3302,
+              4249
+            ],
+            "hp": 8,
+            "tick": 205
+          },
+          "next_sample": {
+            "anchor": [
+              3301,
+              4249
+            ],
+            "hp": 8,
+            "tick": 206
+          },
+          "room_id": 43251
+        }
+      ],
+      "expected_pair": [
+        [
+          3302,
+          4248
+        ],
+        [
+          3303,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3302,
+        4248
+      ],
+      "final_location": "east_lane",
+      "matches": false,
+      "observed_pair": [
+        [
+          3301,
+          4248
+        ],
+        [
+          3302,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "origin_lane": 3,
+      "parent_samples": [
+        {
+          "anchor": [
+            3305,
+            4248
+          ],
+          "hp": 16,
+          "tick": 196
+        },
+        {
+          "anchor": [
+            3304,
+            4248
+          ],
+          "hp": 16,
+          "tick": 197
+        },
+        {
+          "anchor": [
+            3303,
+            4248
+          ],
+          "hp": 0,
+          "tick": 198
+        },
+        {
+          "anchor": [
+            3302,
+            4248
+          ],
+          "hp": 0,
+          "tick": 199
+        },
+        {
+          "anchor": [
+            3302,
+            4248
+          ],
+          "hp": 0,
+          "tick": 200
+        },
+        {
+          "anchor": [
+            3302,
+            4248
+          ],
+          "hp": 0,
+          "tick": 201
+        },
+        {
+          "anchor": [
+            3302,
+            4248
+          ],
+          "hp": 0,
+          "tick": 202
+        },
+        {
+          "anchor": [
+            3302,
+            4248
+          ],
+          "hp": 0,
+          "tick": 203
+        },
+        {
+          "anchor": [
+            3302,
+            4248
+          ],
+          "hp": 0,
+          "tick": 204
+        }
+      ],
+      "removal_tick": 205,
+      "room_id": 42930,
+      "simultaneous_big_removals": [
+        42930
+      ],
+      "url": "https://blert.io/raids/tob/ebaeaf20-9862-4548-af9f-1a37c52b020a/nylocas",
+      "uuid": "ebaeaf20-9862-4548-af9f-1a37c52b020a",
+      "wave": 19,
+      "zero_tick": 198
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3295,
+              4240
+            ],
+            "hp": 8,
+            "tick": 217
+          },
+          "next_sample": {
+            "anchor": [
+              3295,
+              4241
+            ],
+            "hp": 8,
+            "tick": 218
+          },
+          "room_id": 43508
+        },
+        {
+          "birth": {
+            "anchor": [
+              3296,
+              4241
+            ],
+            "hp": 8,
+            "tick": 217
+          },
+          "next_sample": {
+            "anchor": [
+              3296,
+              4242
+            ],
+            "hp": 8,
+            "tick": 218
+          },
+          "room_id": 43509
+        }
+      ],
+      "expected_pair": [
+        [
+          3295,
+          4240
+        ],
+        [
+          3296,
+          4241
+        ]
+      ],
+      "final_anchor": [
+        3295,
+        4240
+      ],
+      "final_location": "south_lane",
+      "matches": true,
+      "observed_pair": [
+        [
+          3295,
+          4240
+        ],
+        [
+          3296,
+          4241
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "origin_lane": 2,
+      "parent_samples": [
+        {
+          "anchor": [
+            3295,
+            4237
+          ],
+          "hp": 16,
+          "tick": 208
+        },
+        {
+          "anchor": [
+            3295,
+            4238
+          ],
+          "hp": 16,
+          "tick": 209
+        },
+        {
+          "anchor": [
+            3295,
+            4239
+          ],
+          "hp": 0,
+          "tick": 210
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 211
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 212
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 213
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 214
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 215
+        },
+        {
+          "anchor": [
+            3295,
+            4240
+          ],
+          "hp": 0,
+          "tick": 216
+        }
+      ],
+      "removal_tick": 217,
+      "room_id": 43210,
+      "simultaneous_big_removals": [
+        43210
+      ],
+      "url": "https://blert.io/raids/tob/ebaeaf20-9862-4548-af9f-1a37c52b020a/nylocas",
+      "uuid": "ebaeaf20-9862-4548-af9f-1a37c52b020a",
+      "wave": 20,
+      "zero_tick": 210
+    },
+    {
+      "children": [
+        {
+          "birth": {
+            "anchor": [
+              3301,
+              4248
+            ],
+            "hp": 8,
+            "tick": 352
+          },
+          "next_sample": {
+            "anchor": [
+              3300,
+              4247
+            ],
+            "hp": 8,
+            "tick": 353
+          },
+          "room_id": 46250
+        },
+        {
+          "birth": {
+            "anchor": [
+              3301,
+              4249
+            ],
+            "hp": 8,
+            "tick": 352
+          },
+          "next_sample": {
+            "anchor": [
+              3301,
+              4248
+            ],
+            "hp": 8,
+            "tick": 353
+          },
+          "room_id": 46251
+        }
+      ],
+      "expected_pair": [
+        [
+          3301,
+          4248
+        ],
+        [
+          3302,
+          4249
+        ]
+      ],
+      "final_anchor": [
+        3301,
+        4248
+      ],
+      "final_location": "arena",
+      "matches": false,
+      "observed_pair": [
+        [
+          3301,
+          4248
+        ],
+        [
+          3301,
+          4249
+        ]
+      ],
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "origin_lane": 3,
+      "parent_samples": [
+        {
+          "anchor": [
+            3302,
+            4248
+          ],
+          "hp": 16,
+          "tick": 344
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 16,
+          "tick": 345
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 346
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 347
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 348
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 349
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 350
+        },
+        {
+          "anchor": [
+            3301,
+            4248
+          ],
+          "hp": 0,
+          "tick": 351
+        }
+      ],
+      "removal_tick": 352,
+      "room_id": 45835,
+      "simultaneous_big_removals": [
+        45835
+      ],
+      "url": "https://blert.io/raids/tob/ebaeaf20-9862-4548-af9f-1a37c52b020a/nylocas",
+      "uuid": "ebaeaf20-9862-4548-af9f-1a37c52b020a",
+      "wave": 30,
+      "zero_tick": 346
+    }
+  ],
+  "pair_offsets": [
+    {
+      "location": "arena",
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "parents": 5
+    },
+    {
+      "location": "arena",
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "parents": 507
+    },
+    {
+      "location": "east_lane",
+      "offsets": [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "parents": 3
+    },
+    {
+      "location": "south_lane",
+      "offsets": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "parents": 20
+    },
+    {
+      "location": "west_lane",
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "parents": 6
+    },
+    {
+      "location": "west_lane",
+      "offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "parents": 12
+    }
+  ]
+}
