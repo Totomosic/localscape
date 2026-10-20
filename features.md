@@ -541,6 +541,14 @@ casting it immediately returns you to Lunar. Failed casts preserve the swap.
 Casting leaves attack cooldowns, ongoing attacks, and the player's current target intact.
 Restart RSMod to load it; no cache repack or client rebuild is required.
 
+**Shadow Veil** is castable on the Arceuus spellbook without a target, with its
+native cast animation, visual effect, and [cast sound](https://oldschool.runescape.wiki/w/File:Shadow_Veil.ogg).
+It checks the normal level and rune requirements and awards 58 Magic XP, but
+applies no buff or cooldown. Like Mark of Darkness, it immediately returns you
+to Lunar after Spellbook Swap while preserving attack cooldowns, movement, and
+the player's current target. Failed casts preserve the swap and remain silent.
+Restart RSMod to load it; no cache repack or client rebuild is required.
+
 **Vengeance** and **Vengeance Other** are available on the Lunar spellbook. They
 grant the caster or selected player a status that reflects `floor(damage * 0.75)`
 back to the next NPC that damages them, then consumes the status. Reflection uses
