@@ -27,7 +27,7 @@ public class TheatreControlsPanelTest
 			assertFalse(wave.isEnabled());
 			panel.setLoggedIn(true);
 			button(panel, "Start raid").doClick();
-			assertEquals(Arrays.asList("theatrestart 1"), commands);
+			assertEquals(Arrays.asList("theatrestart 1 zeal"), commands);
 			assertFalse(wave.isEnabled());
 			assertFalse(button(panel, "Start raid").isEnabled());
 			assertTrue(button(panel, "Create lobby").isEnabled());
@@ -56,7 +56,7 @@ public class TheatreControlsPanelTest
 			}
 			((JSpinner.DefaultEditor) wave.getEditor()).getTextField().setText("21");
 			button(panel, "Start raid").doClick();
-			assertEquals(Arrays.asList("theatrestart 21"), commands);
+			assertEquals(Arrays.asList("theatrestart 21 zeal"), commands);
 			assertFalse(wave.isEnabled());
 		});
 	}
@@ -72,7 +72,7 @@ public class TheatreControlsPanelTest
 			AbstractButton slow = option(panel, "Max hit: 5 ticks or slower");
 			AbstractButton hp = option(panel, "Start everyone at 250 HP");
 			AbstractButton zeal = option(panel, "Replace Piety with Zeal");
-			assertFalse(zeal.isSelected());
+			assertTrue(zeal.isSelected());
 			assertFalse(zeal.isEnabled());
 			assertFalse(all.isEnabled());
 			assertFalse(hp.isSelected());
@@ -82,7 +82,6 @@ public class TheatreControlsPanelTest
 			assertFalse(all.isSelected());
 			assertTrue(slow.isSelected());
 			hp.doClick();
-			zeal.doClick();
 			button(panel, "Start raid").doClick();
 			assertEquals(Arrays.asList("theatrestart 1 maxhit-slow hp250 zeal"), commands);
 			assertFalse(all.isEnabled());
@@ -92,8 +91,9 @@ public class TheatreControlsPanelTest
 			panel.setRaidStarted(false);
 			all.doClick();
 			assertFalse(slow.isSelected());
+			zeal.doClick();
 			button(panel, "Start raid").doClick();
-			assertEquals("theatrestart 1 maxhit-all hp250 zeal", commands.get(1));
+			assertEquals("theatrestart 1 maxhit-all hp250", commands.get(1));
 		});
 	}
 

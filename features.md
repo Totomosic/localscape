@@ -69,7 +69,7 @@ apply only to party members against Nylocas in their own raid.
 **Replace Piety with Zeal** upgrades Piety for every party member during the raid:
 +25% Attack, +28% Strength, and +25% Defence, with Piety’s prayer drain rate.
 Zeal uses Piety’s icon, requirements, and quick-prayer selection. Leaving the raid
-restores ordinary Piety. This option is off by default.
+restores ordinary Piety. This option is selected by default in the Theatre controls.
 
 **Start everyone at 250 HP** sets every party member's current HP to exactly 250
 once when the raid starts. Base Hitpoints and XP stay unchanged.
@@ -364,10 +364,9 @@ In multi-combat, the primary NPC takes two independently rolled, full-strength
 hits on the same tick. The sweep hits up to ten NPCs total, including the primary,
 within an 11x11 square centred on the player. Other targets must be attackable,
 visible, in multi-combat, and in line of sight from the player. The primary NPC
-also requires line of sight. Nylocas in the incoming lanes are excluded; only
-Nylocas inside the room can be hit. If a large incoming Nylo is already in melee
-reach, the special stays armed until its southwest tile enters the room, without
-spending energy or starting an attack delay early. Single-combat and player
+uses normal melee reach without an additional line-of-sight check. Incoming
+Nylocas are eligible; a large Nylo can be hit as soon as its footprint is in
+melee reach, before its southwest tile enters the room. Single-combat and player
 targets receive one hit. Successful hits drain the highest offensive stats by 5% of their
 current levels, once per target per special; melee drains both Attack and Strength,
 with ties preferring melee, then Ranged, then Magic. Energy, area restrictions,

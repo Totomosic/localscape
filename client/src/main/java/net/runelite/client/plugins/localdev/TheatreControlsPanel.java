@@ -20,7 +20,7 @@ final class TheatreControlsPanel extends PluginPanel
 	private final JRadioButton maxHitAll = new JRadioButton("Max hit: all weapons");
 	private final JRadioButton maxHitSlow = new JRadioButton("Max hit: 5 ticks or slower");
 	private final JCheckBox hitpoints250 = new JCheckBox("Start everyone at 250 HP");
-	private final JCheckBox zeal = new JCheckBox("Replace Piety with Zeal");
+	private final JCheckBox zeal = new JCheckBox("Replace Piety with Zeal", true);
 	private final JTextField hostName = new JTextField();
 	private final JButton joinRaid = new JButton("Join raid");
 	private final JLabel status = new JLabel();
