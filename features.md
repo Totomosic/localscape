@@ -90,6 +90,24 @@ admin access required. Rebuild the client with `./dev build-client`. With RSMod
 stopped, run `./gradlew packCache` from `upstream/rsmod`, then restart it to load
 these controls and Zeal’s temporary setting.
 
+## Ver Sinhaza lobby
+
+Use `::sinhaza` to visit the small raid lobby in Ver Sinhaza's courtyard at
+`(3660, 3222, 0)`. A nearby bank chest provides normal banking. Talk to the
+**Mysterious Stranger** beside it to:
+
+- **Start a solo raid** in a fresh instance at the Bloat exit, with the party HUD
+  active and the route to Nylocas unlocked. This starts at wave 1 with normal hits.
+- **Create a party lobby** or **Join a party lobby** by the host's player name.
+  The host can then choose raid options and start through Theatre controls.
+- **Change my appearance**, reopening the full character creator for body type,
+  hair, clothing, colours, and pronouns.
+
+Raid creation and joining restore resources and apply your saved default gear
+setup, just like the Theatre controls. Appearance changes preserve your equipment
+and inventory. All account roles can use the lobby. Restart RSMod to load it;
+no cache repack or client rebuild is required.
+
 ## Gear setups
 
 The **Gear setups** section in Local Development saves and restores development
