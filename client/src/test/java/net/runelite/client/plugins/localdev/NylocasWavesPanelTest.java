@@ -2,7 +2,9 @@ package net.runelite.client.plugins.localdev;
 
 import java.awt.Component;
 import java.awt.Container;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 import javax.swing.JLabel;
 import javax.swing.JTable;
@@ -26,6 +28,64 @@ public class NylocasWavesPanelTest
 {
 	private static final String ROOM = "e9f61c86-97d0-4be3-823f-c990f342cbee";
 	private static final String COUNTS = "31 0 2 1 1 2 1 1 1 1 1 1 1 0 0 1 1 0 0 0 1 0 1 1 2 1 1000000 1 1 500000 3 0 1500000 1 0 250000 0";
+	private static final String FIRST_LUCK = "1 1 500000 0 0 0 0 0 0 0 0 0 0 750000";
+	private static final String SECOND_LUCK = "1 0 500000 0 0 0 0 0 0 0 0 0 0 250000";
+	private static final String EMPTY_LUCK = "0 0 0 0 0 0 0 0 0 0 0 0 0 0";
+
+	@Test
+	public void displaysSeparateNamedLuckRowsWithIndividualBreakdownsAndResetsRoster() throws Exception
+	{
+		SwingUtilities.invokeAndWait(() ->
+		{
+			NylocasWavesPanel panel = new NylocasWavesPanel();
+			String report = "LNW4 " + ROOM + " complete " + COUNTS + " 500000 3 "
+				+ player("First Raider", FIRST_LUCK) + " " + player("Second", SECOND_LUCK) + " " + player("Idle", EMPTY_LUCK);
+			panel.update(NylocasWaveSnapshot.parse(report));
+			panel.setSize(225, panel.getPreferredSize().height);
+			layout(panel);
+			List<JLabel> components = labelComponents(panel);
+			for (String[] expected : new String[][]{{"First Raider", "200.0%", "75.0"}, {"Second", "0.0%", "25.0"}, {"Idle", "—", "—"}})
+			{
+				JLabel name = components.stream().filter(label -> expected[0].equals(label.getText())).findFirst().get();
+				assertTrue(name.isVisible());
+				assertTrue(name.getPreferredSize().width <= name.getWidth());
+				JLabel value = (JLabel) name.getParent().getComponent(1);
+				assertTrue(value.getPreferredSize().width <= value.getWidth());
+				assertEquals(expected[1], ((JLabel) name.getParent().getComponent(1)).getText());
+				assertTrue(name.getToolTipText().contains("Luck percentile: " + expected[2]));
+				assertTrue(name.getToolTipText().contains("Pre cap"));
+			}
+			panel.update(NylocasWaveSnapshot.parse(report.replace(FIRST_LUCK, SECOND_LUCK)));
+			JLabel first = components.stream().filter(label -> "First Raider".equals(label.getText())).findFirst().get();
+			assertEquals("0.0%", ((JLabel) first.getParent().getComponent(1)).getText());
+			panel.addCheck(NylocasWaveCheck.parse("LNC1 6a24f9d1-7ae2-4eb3-b916-f590ca2e4da2 1 4 1 0 0 12"));
+			assertFalse(labels(panel).contains("First Raider"));
+			panel.update(NylocasWaveSnapshot.parse("LNW4 6a24f9d1-7ae2-4eb3-b916-f590ca2e4da2 starting "
+				+ String.join(" ", java.util.Collections.nCopies(38, "0")) + " 1 " + player("New Raider", EMPTY_LUCK)));
+			assertTrue(labels(panel).contains("New Raider"));
+			assertFalse(labels(panel).contains("Second"));
+		});
+	}
+
+	@Test
+	public void rejectsMalformedPlayerLuckWithoutReplacingTheSnapshot()
+	{
+		String header = "LNW4 " + ROOM + " complete " + COUNTS + " 500000";
+		assertNull(NylocasWaveSnapshot.parse(header));
+		assertNull(NylocasWaveSnapshot.parse(header + " 1"));
+		assertNull(NylocasWaveSnapshot.parse(header + " -1"));
+		assertNull(NylocasWaveSnapshot.parse(header + " 6"));
+		assertNull(NylocasWaveSnapshot.parse(header + " 1 %%% " + FIRST_LUCK));
+		assertNull(NylocasWaveSnapshot.parse(header + " 1 " + player("First Raider", FIRST_LUCK.replace("750000", "1000001"))));
+		assertNull(NylocasWaveSnapshot.parse(header + " 1 " + player("First Raider", FIRST_LUCK.replace("1 1 500000", "1 2 500000"))));
+		assertNull(NylocasWaveSnapshot.parse(header + " 2 " + player("Same", FIRST_LUCK) + " " + player("Same", SECOND_LUCK)));
+		assertNotNull(NylocasWaveSnapshot.parse(header + " 0"));
+	}
+
+	private static String player(String name, String luck)
+	{
+		return Base64.getUrlEncoder().withoutPadding().encodeToString(name.getBytes(StandardCharsets.UTF_8)) + " " + luck;
+	}
 
 	@Test
 	public void rejectsIncompleteInvalidAndUnrelatedSnapshots()

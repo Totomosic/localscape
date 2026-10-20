@@ -6,8 +6,10 @@ import java.awt.Component;
 import java.awt.Font;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import javax.swing.BorderFactory;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
@@ -32,6 +34,10 @@ final class NylocasWavesPanel extends PluginPanel
 	private final JLabel remaining = label("Party report · updates live");
 	private final JLabel luck = luckLabel("—");
 	private final JLabel luckTitle = luckLabel("% luck");
+	private final JPanel playerLuckRows = new JPanel(new DynamicGridLayout(0, 1, 0, 7));
+	private final Map<String, LuckRow> playerLuck = new LinkedHashMap<>();
+	private final JPanel partyLuckRow;
+	private final JLabel percentileTitle = label("Luck percentile");
 	private final JLabel percentile;
 	private final JLabel smalls;
 	private final JLabel bigs;
@@ -61,10 +67,13 @@ final class NylocasWavesPanel extends PluginPanel
 		remaining.setForeground(MUTED);
 		header.add(remaining);
 		JPanel performance = section("One-shot performance");
-		row(performance, luckTitle, luck);
+		partyLuckRow = row(performance, luckTitle, luck);
 		luck.setFont(luck.getFont().deriveFont(Font.BOLD, 20f));
 		luck.setForeground(ACCENT);
-		percentile = row(performance, label("Luck percentile"));
+		playerLuckRows.setOpaque(false);
+		playerLuckRows.setVisible(false);
+		performance.add(playerLuckRows);
+		percentile = row(performance, percentileTitle);
 		percentile.setToolTipText("<html>0–100: higher is luckier; 50 is typical.<br>Exact distribution of one-attack kills using each measured attack's chance.<br>Counts outcomes below yours plus half of ties. Accuracy misses are ignored.</html>");
 		smalls = row(performance, label("Smalls"));
 		bigs = row(performance, label("Bigs"));
@@ -140,7 +149,7 @@ final class NylocasWavesPanel extends PluginPanel
 		});
 		timeline.add(table.getTableHeader());
 		timeline.add(table);
-		add(note("Party totals. Report stays until the next room starts. Splits count every child at birth."));
+		add(note("Luck is per player; other stats are party totals. Report stays until the next room starts. Splits count every child at birth."));
 	}
 
 	void update(NylocasWaveSnapshot report)
@@ -196,17 +205,54 @@ final class NylocasWavesPanel extends PluginPanel
 			checks.clear();
 			checksModel.setRowCount(0);
 			checksTitle.setText("Wave-check timeline");
+			playerLuck.clear();
+			playerLuckRows.removeAll();
+			playerLuckRows.setVisible(false);
+			partyLuckRow.setVisible(true);
 		}
 	}
 
 	private void updateLuck(NylocasWaveSnapshot report)
 	{
-		luck.setText(luckPercent(report, 0, 1, 2, 3));
+		updateLuck(report.luck(), luckTitle, luck);
+		boolean perPlayer = !report.players.isEmpty();
+		partyLuckRow.setVisible(!perPlayer);
+		playerLuckRows.setVisible(perPlayer);
+		percentileTitle.setText(perPlayer ? "Party luck percentile" : "Luck percentile");
+		List<String> names = new ArrayList<>();
+		for (NylocasWaveSnapshot.PlayerLuck player : report.players) names.add(player.name);
+		if (!names.equals(new ArrayList<>(playerLuck.keySet())))
+		{
+			playerLuck.clear();
+			playerLuckRows.removeAll();
+			playerLuckRows.add(label("% luck"));
+			for (String name : names)
+			{
+				LuckRow entry = new LuckRow(name);
+				playerLuck.put(name, entry);
+				row(playerLuckRows, entry.title, entry.value);
+			}
+		}
+		for (NylocasWaveSnapshot.PlayerLuck player : report.players)
+		{
+			LuckRow entry = playerLuck.get(player.name);
+			updateLuck(player.luck, entry.title, entry.value);
+		}
+		percentile.setText(luckRank(report.luck()));
+	}
+
+	private static String luckRank(NylocasWaveSnapshot.Luck report)
+	{
 		long attempts = 0;
-		for (int group = 0; group < 4; group++) attempts += report.value(24 + group * 3);
-		String rank = report.hasLuckPercentile() && attempts > 0
-			? String.format(Locale.ROOT, "%.1f", report.value(37) / 10000.0) : "—";
-		percentile.setText(rank);
+		for (int group = 0; group < 4; group++) attempts += report.value(group * 3);
+		return report.hasPercentile() && attempts > 0
+			? String.format(Locale.ROOT, "%.1f", report.value(13) / 10000.0) : "—";
+	}
+
+	private static void updateLuck(NylocasWaveSnapshot.Luck report, JLabel title, JLabel value)
+	{
+		value.setText(luckPercent(report, 0, 1, 2, 3));
+		String rank = luckRank(report);
 		String tooltip = "<html><b>One-shot luck · 100% = expected</b><br>Actual / expected one-shots, using each attack's gear and damage range.<br>"
 			+ "First damaging attack per Nylo, including all its splats; misses ignored. Cleanup is post cap.<br>"
 			+ "Luck percentile: " + rank + " (0–100; higher is luckier; ties split equally).<br><br>"
@@ -214,30 +260,30 @@ final class NylocasWavesPanel extends PluginPanel
 			+ "<tr><td>Pre cap</td><td>" + luckPercent(report, 0, 1) + "</td><td>" + luckPercent(report, 0) + "</td><td>" + luckPercent(report, 1) + "</td></tr>"
 			+ "<tr><td>Post cap</td><td>" + luckPercent(report, 2, 3) + "</td><td>" + luckPercent(report, 2) + "</td><td>" + luckPercent(report, 3) + "</td></tr>"
 			+ "<tr><td>Whole room</td><td>" + luckPercent(report, 0, 1, 2, 3) + "</td><td>" + luckPercent(report, 0, 2) + "</td><td>" + luckPercent(report, 1, 3) + "</td></tr></table><br>"
-			+ luckCounts(report) + "<br>Thrall-first attacks and untracked damage rolls excluded: " + report.value(36) + "</html>";
-		luck.setToolTipText(tooltip);
-		luckTitle.setToolTipText(tooltip);
+			+ luckCounts(report) + "<br>Thrall-first attacks and untracked damage rolls excluded: " + report.value(12) + "</html>";
+		value.setToolTipText(tooltip);
+		title.setToolTipText(tooltip);
 	}
 
-	private static String luckCounts(NylocasWaveSnapshot report)
+	private static String luckCounts(NylocasWaveSnapshot.Luck report)
 	{
 		long attempts = 0, actual = 0, expected = 0;
 		for (int group = 0; group < 4; group++)
 		{
-			attempts += report.value(24 + group * 3);
-			actual += report.value(25 + group * 3);
-			expected += report.value(26 + group * 3);
+			attempts += report.value(group * 3);
+			actual += report.value(1 + group * 3);
+			expected += report.value(2 + group * 3);
 		}
 		return String.format(Locale.ROOT, "%d measured Nylos · %d actual / %.2f expected one-shots", attempts, actual, expected / 1000000.0);
 	}
 
-	private static String luckPercent(NylocasWaveSnapshot report, int... groups)
+	private static String luckPercent(NylocasWaveSnapshot.Luck report, int... groups)
 	{
 		long actual = 0, expected = 0;
 		for (int group : groups)
 		{
-			actual += report.value(25 + group * 3);
-			expected += report.value(26 + group * 3);
+			actual += report.value(1 + group * 3);
+			expected += report.value(2 + group * 3);
 		}
 		return expected == 0 ? "—" : String.format(Locale.ROOT, "%.1f%%", 100000000.0 * actual / expected);
 	}
@@ -272,13 +318,27 @@ final class NylocasWavesPanel extends PluginPanel
 		return value;
 	}
 
-	private static void row(JPanel parent, JLabel title, JLabel value)
+	private static JPanel row(JPanel parent, JLabel title, JLabel value)
 	{
 		JPanel row = new JPanel(new BorderLayout(4, 0));
 		row.setOpaque(false);
 		row.add(title, BorderLayout.WEST);
 		row.add(value, BorderLayout.EAST);
 		parent.add(row);
+		return row;
+	}
+
+	private static final class LuckRow
+	{
+		private final JLabel title;
+		private final JLabel value = luckLabel("—");
+
+		private LuckRow(String name)
+		{
+			title = luckLabel(name);
+			value.setFont(value.getFont().deriveFont(Font.BOLD, 16f));
+			value.setForeground(ACCENT);
+		}
 	}
 
 	private static JLabel label(String text)

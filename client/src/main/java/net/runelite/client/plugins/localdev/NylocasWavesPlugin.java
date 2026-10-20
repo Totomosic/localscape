@@ -66,7 +66,7 @@ public class NylocasWavesPlugin extends Plugin
 			return;
 		}
 		String message = (String) client.getObjectStack()[client.getObjectStackSize() - 1];
-		if (message.startsWith("LNW2 ") || message.startsWith("LNW3 ") || message.startsWith("LNC1 "))
+		if (message.startsWith("LNW2 ") || message.startsWith("LNW3 ") || message.startsWith("LNW4 ") || message.startsWith("LNC1 "))
 		{
 			// Hide only the rendered line; ChatMessage still delivers the original payload.
 			intStack[size - 3] = 0;

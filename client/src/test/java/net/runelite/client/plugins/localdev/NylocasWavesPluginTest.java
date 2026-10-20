@@ -43,10 +43,11 @@ public class NylocasWavesPluginTest
 			plugin.startUp();
 			verify(toolbar).addNavigation(navigation.capture());
 		});
-		for (String prefix : new String[]{"LNW2", "LNW3"})
+		for (String prefix : new String[]{"LNW2", "LNW3", "LNW4"})
 		{
 			String message = prefix + " e9f61c86-97d0-4be3-823f-c990f342cbee waves 1 "
-				+ String.join(" ", java.util.Collections.nCopies(prefix.equals("LNW3") ? 37 : 36, "0"));
+				+ String.join(" ", java.util.Collections.nCopies(prefix.equals("LNW2") ? 36 : 37, "0"))
+				+ (prefix.equals("LNW4") ? " 0" : "");
 			ChatMessage event = check(ChatMessageType.CONSOLE);
 			event.setMessage(message);
 			plugin.onChatMessage(event);
@@ -74,7 +75,7 @@ public class NylocasWavesPluginTest
 		verifyNoInteractions(client);
 		assertEquals(1, visibility(ChatMessageType.CONSOLE, "A normal console message", 1));
 		assertEquals(1, visibility(ChatMessageType.CONSOLE, "LNW3ish text", 1));
-		for (String message : new String[]{"LNW2 payload", "LNW3 payload", "LNC1 payload"})
+		for (String message : new String[]{"LNW2 payload", "LNW3 payload", "LNW4 payload", "LNC1 payload"})
 		{
 			assertEquals(1, visibility(ChatMessageType.GAMEMESSAGE, message, 1));
 			assertEquals(1, visibility(ChatMessageType.PUBLICCHAT, message, 1));

@@ -176,9 +176,16 @@ room replaces it. Closing the client or disabling Nylocas Waves discards it.
   Children from naturally expired bigs are included. The birth tick determines
   the phase, regardless of the parent's original wave.
 
+The `% luck` stat has one named row per room member, using only that player's
+first damaging attacks and one-attack kills. Players without measured attacks
+show a dash. Hover a name or percentage for that player's phase/size breakdown
+and luck percentile; the separately labeled party percentile remains a room total.
+When another player finishes a Nylo, its initial attempt stays with the first
+attacker and does not become a one-shot for either player.
+
 One-shot and overkill rates show counts beside percentages and a dash when no
 denominator exists. Updates come from authoritative server events over console
-messages. The plugin hides raw `LNW2`, `LNW3`, and `LNC1` console messages from
+messages. The plugin hides raw `LNW2`, `LNW3`, `LNW4`, and `LNC1` console messages from
 chat while continuing to read them for sidebar updates. Rebuild the client with
 `./dev build-client`, restart RSMod, and launch a fresh client session; no cache
 repack is required.
