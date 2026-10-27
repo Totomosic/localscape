@@ -81,7 +81,7 @@ public class LocalDevPluginTest
 		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
 		verify(clientToolbar).addNavigation(navigation.capture());
 		LocalToolsPanel tools = (LocalToolsPanel) navigation.getValue().getPanel();
-		JPanel section = (JPanel) tools.getComponent(0);
+		JPanel section = (JPanel) tools.getComponent(1);
 		TheatreControlsPanel theatre = (TheatreControlsPanel) ((BorderLayout) section.getLayout()).getLayoutComponent(BorderLayout.CENTER);
 		GameStateChanged login = new GameStateChanged();
 		login.setGameState(GameState.LOGGED_IN);
@@ -98,7 +98,7 @@ public class LocalDevPluginTest
 	{
 		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
 		verify(clientToolbar).addNavigation(navigation.capture());
-		assertEquals(3, navigation.getValue().getPanel().getComponentCount());
+		assertEquals(4, navigation.getValue().getPanel().getComponentCount());
 		GameStateChanged state = new GameStateChanged();
 		state.setGameState(GameState.LOGIN_SCREEN);
 		GameTick tick = new GameTick();

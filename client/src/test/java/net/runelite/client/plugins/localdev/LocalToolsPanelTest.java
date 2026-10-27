@@ -23,14 +23,14 @@ public class LocalToolsPanelTest
 			LocalDevPanel debug = new LocalDevPanel(command -> { });
 			try
 			{
-				LocalToolsPanel panel = new LocalToolsPanel(theatre, gear, debug);
+				LocalToolsPanel panel = new LocalToolsPanel(command -> { }, theatre, gear, debug);
 				JToggleButton theatreHeader = header(panel, 0);
 				JToggleButton gearHeader = header(panel, 1);
 				JToggleButton debugHeader = header(panel, 2);
 				assertEquals("▼ Theatre controls", theatreHeader.getText());
 				assertEquals("▶ Gear setups", gearHeader.getText());
 				assertEquals("▶ Debug tools", debugHeader.getText());
-				assertEquals(3, panel.getComponentCount());
+				assertEquals(4, panel.getComponentCount());
 				assertTrue(theatre.isVisible());
 				assertFalse(gear.isVisible());
 				assertFalse(debug.isVisible());
@@ -59,7 +59,7 @@ public class LocalToolsPanelTest
 
 	private static JToggleButton header(LocalToolsPanel panel, int index)
 	{
-		JPanel section = (JPanel) panel.getComponent(index);
+		JPanel section = (JPanel) panel.getComponent(index + 1);
 		return (JToggleButton) ((BorderLayout) section.getLayout()).getLayoutComponent(BorderLayout.NORTH);
 	}
 }

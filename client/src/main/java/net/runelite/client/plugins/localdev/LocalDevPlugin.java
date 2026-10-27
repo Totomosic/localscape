@@ -50,6 +50,7 @@ public class LocalDevPlugin extends Plugin
 	private volatile LocalDevPanel panel;
 	private NavigationButton navigation;
 	private volatile TheatreControlsPanel theatrePanel;
+	private volatile LocalToolsPanel toolsPanel;
 	private volatile int session;
 	private int nextItemId;
 	private boolean itemsLoaded;
@@ -60,7 +61,7 @@ public class LocalDevPlugin extends Plugin
 		panel = new LocalDevPanel(this::submit);
 		theatrePanel = new TheatreControlsPanel(this::submit);
 		PluginPanel gearPanel = gearPresets.startUp();
-		LocalToolsPanel toolsPanel = new LocalToolsPanel(theatrePanel, gearPanel, panel);
+		toolsPanel = new LocalToolsPanel(this::submit, theatrePanel, gearPanel, panel);
 		navigation = NavigationButton.builder()
 			.tooltip("Local Development")
 			.icon(createIcon())
@@ -77,6 +78,7 @@ public class LocalDevPlugin extends Plugin
 		session++;
 		clientToolbar.removeNavigation(navigation);
 		gearPresets.shutDown();
+		toolsPanel = null;
 		theatrePanel = null;
 		LocalDevPanel oldPanel = panel;
 		panel = null;
@@ -168,6 +170,14 @@ public class LocalDevPlugin extends Plugin
 		}
 		updatePanel(current -> current.setLoggedIn(state == GameState.LOGGED_IN));
 		updateTheatrePanel(current -> current.setLoggedIn(state == GameState.LOGGED_IN));
+		LocalToolsPanel currentTools = toolsPanel;
+		SwingUtilities.invokeLater(() ->
+		{
+			if (currentTools != null && toolsPanel == currentTools)
+			{
+				currentTools.setLoggedIn(state == GameState.LOGGED_IN);
+			}
+		});
 		if (state == GameState.LOGGED_IN)
 		{
 			updateTheatreRaidState();

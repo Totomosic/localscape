@@ -6,7 +6,8 @@ Gameplay, sidebar controls, and encounter behavior for LocalScape. See the
 ## Local Development sidebar
 
 The custom client includes a **Local Development** plugin. Its terminal icon in
-the RuneLite sidebar opens three independently collapsible sections, in order:
+the RuneLite sidebar opens a **Teleport to lobby** button for Ver Sinhaza above
+three independently collapsible sections, in order:
 **Theatre controls**, **Gear setups**, and **Debug tools**. Theatre controls starts
 expanded; the other sections start collapsed. Section contents and inputs
 are preserved when collapsed. On login it also
@@ -92,8 +93,10 @@ these controls and Zeal’s temporary setting.
 
 ## Ver Sinhaza lobby
 
-Use `::sinhaza` to visit the small raid lobby in Ver Sinhaza's courtyard at
-`(3660, 3222, 0)`. A nearby bank chest provides normal banking. Talk to the
+Every login places new and returning characters in Ver Sinhaza's courtyard at
+`(3660, 3222, 0)`, regardless of where they logged out, including raid instances.
+The **Teleport to lobby** button or `::sinhaza` returns you there while playing.
+A nearby bank chest provides normal banking. Talk to the
 **Mysterious Stranger** beside it to:
 
 - **Start a solo raid** in a fresh instance at the Bloat exit, with the party HUD
