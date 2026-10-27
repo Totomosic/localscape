@@ -1,0 +1,381 @@
+package net.runelite.client.plugins.nyloranger;
+
+import java.awt.Component;
+import java.awt.Container;
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import javax.swing.SwingUtilities;
+import net.runelite.api.Client;
+import net.runelite.api.GameObject;
+import net.runelite.api.GameState;
+import net.runelite.api.InventoryID;
+import net.runelite.api.Item;
+import net.runelite.api.ItemContainer;
+import net.runelite.api.ItemComposition;
+import net.runelite.api.MenuAction;
+import net.runelite.api.NPC;
+import net.runelite.api.NPCComposition;
+import net.runelite.api.ObjectComposition;
+import net.runelite.api.Player;
+import net.runelite.api.Point;
+import net.runelite.api.Scene;
+import net.runelite.api.ScriptID;
+import net.runelite.api.Skill;
+import net.runelite.api.Tile;
+import net.runelite.api.WorldView;
+import net.runelite.api.coords.LocalPoint;
+import net.runelite.api.coords.WorldArea;
+import net.runelite.api.coords.WorldPoint;
+import net.runelite.api.events.GameTick;
+import net.runelite.api.events.NpcSpawned;
+import net.runelite.api.gameval.VarbitID;
+import net.runelite.api.gameval.VarClientID;
+import net.runelite.api.gameval.InterfaceID;
+import net.runelite.api.widgets.Widget;
+import net.runelite.client.callback.ClientThread;
+import net.runelite.client.config.ConfigManager;
+import net.runelite.client.ui.ClientToolbar;
+import net.runelite.client.ui.NavigationButton;
+import org.junit.Before;
+import org.junit.Test;
+import org.mockito.InjectMocks;
+import org.mockito.ArgumentCaptor;
+import org.mockito.InOrder;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+
+import static org.mockito.ArgumentMatchers.*;
+import static org.mockito.Mockito.*;
+import static org.junit.Assert.*;
+
+public class NylocasRangerPluginTest
+{
+	@Mock private Client client;
+	@Mock private ClientThread clientThread;
+	@Mock private ClientToolbar toolbar;
+	@Mock private ConfigManager manager;
+	@Mock private RangerConfig config;
+	@InjectMocks private NylocasRangerPlugin plugin;
+
+	@Before
+	public void setup()
+	{
+		MockitoAnnotations.initMocks(this);
+		doAnswer(call -> { ((Runnable) call.getArgument(0)).run(); return null; }).when(clientThread).invokeLater(any(Runnable.class));
+		when(client.getGameState()).thenReturn(GameState.LOGGED_IN);
+		when(client.getBoostedSkillLevel(Skill.HITPOINTS)).thenReturn(99);
+		Player player = mock(Player.class);
+		when(client.getLocalPlayer()).thenReturn(player);
+		when(player.getHealthRatio()).thenReturn(-1);
+		when(player.getLocalLocation()).thenReturn(new LocalPoint(15 * 128 + 64, 32 * 128 + 64));
+		when(player.getWorldLocation()).thenReturn(new WorldPoint(3295, 4256, 0));
+		WorldView view = mock(WorldView.class);
+		when(client.getWorldView(-1)).thenReturn(view);
+		when(client.getTopLevelWorldView()).thenReturn(view);
+		when(view.getBaseX()).thenReturn(3280);
+		when(view.getBaseY()).thenReturn(4224);
+		when(view.getId()).thenReturn(-1);
+		when(view.getSizeX()).thenReturn(104);
+		when(view.getSizeY()).thenReturn(104);
+		Scene scene = mock(Scene.class);
+		when(view.getScene()).thenReturn(scene);
+		Tile[][][] tiles = new Tile[4][104][104];
+		when(scene.getTiles()).thenReturn(tiles);
+		Tile tile = mock(Tile.class);
+		tiles[0][15][31] = tile;
+		GameObject barrier = mock(GameObject.class);
+		when(tile.getGameObjects()).thenReturn(new GameObject[]{barrier});
+		when(barrier.getLocalLocation()).thenReturn(new LocalPoint(15 * 128 + 64, 31 * 128 + 64));
+		when(barrier.getSceneMinLocation()).thenReturn(new Point(15, 31));
+		when(barrier.getId()).thenReturn(32755);
+		ObjectComposition object = mock(ObjectComposition.class);
+		when(client.getObjectDefinition(32755)).thenReturn(object);
+		when(object.getActions()).thenReturn(new String[]{"Pass-through"});
+		ItemContainer inventory = mock(ItemContainer.class);
+		when(client.getItemContainer(InventoryID.INVENTORY)).thenReturn(inventory);
+		when(inventory.contains(anyInt())).thenReturn(true);
+		ItemContainer equipment = mock(ItemContainer.class);
+		when(client.getItemContainer(InventoryID.EQUIPMENT)).thenReturn(equipment);
+		when(equipment.contains(20997)).thenReturn(true);
+		when(equipment.getItem(3)).thenReturn(new Item(20997, 1));
+	}
+
+	@Test
+	public void clicksBarrierEveryGameTickButNeverConfirmsEntry() throws Exception
+	{
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		for (int tick = 0; tick < 4; tick++)
+		{
+			when(client.getTickCount()).thenReturn(tick);
+			plugin.onGameTick(new GameTick());
+			plugin.onGameTick(new GameTick()); // Duplicate callback must not double click.
+		}
+		verify(client, times(4)).menuAction(15, 31, MenuAction.GAME_OBJECT_FIRST_OPTION, 32755, -1, "Pass-through", "Nylocas barrier");
+		verify(client, never()).menuAction(anyInt(), anyInt(), eq(MenuAction.WIDGET_CONTINUE), anyInt(), anyInt(), anyString(), anyString());
+		verify(client, times(1)).runScript(ScriptID.CAMERA_DO_ZOOM, 128, 128);
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+		when(client.getTickCount()).thenReturn(5);
+		plugin.onGameTick(new GameTick());
+		verify(client, times(4)).menuAction(15, 31, MenuAction.GAME_OBJECT_FIRST_OPTION, 32755, -1, "Pass-through", "Nylocas barrier");
+	}
+
+	@Test
+	public void setsCameraBeforeBarrierClickWithoutRepeatingWhileWaiting() throws Exception
+	{
+		when(client.getVarcIntValue(VarClientID.CAMERA_ZOOM_SMALL)).thenReturn(512);
+		when(client.getVarcIntValue(VarClientID.CAMERA_ZOOM_BIG)).thenReturn(256);
+		when(client.getCameraPitchTarget()).thenReturn(128);
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		plugin.onGameTick(new GameTick());
+		InOrder order = inOrder(client);
+		order.verify(client).runScript(ScriptID.CAMERA_DO_ZOOM, 128, 128);
+		order.verify(client).setCameraPitchTarget(383);
+		order.verify(client).menuAction(15, 31, MenuAction.GAME_OBJECT_FIRST_OPTION, 32755, -1, "Pass-through", "Nylocas barrier");
+		when(client.getVarcIntValue(VarClientID.CAMERA_ZOOM_SMALL)).thenReturn(-272);
+		when(client.getVarcIntValue(VarClientID.CAMERA_ZOOM_BIG)).thenReturn(-272);
+		when(client.getCameraPitchTarget()).thenReturn(383);
+		when(client.getTickCount()).thenReturn(1);
+		plugin.onGameTick(new GameTick());
+		verify(client, times(1)).runScript(ScriptID.CAMERA_DO_ZOOM, 128, 128);
+		verify(client, times(1)).setCameraPitchTarget(383);
+		// Camera readback changes or manual adjustments must not trigger another reset.
+		when(client.getVarcIntValue(VarClientID.CAMERA_ZOOM_BIG)).thenReturn(512);
+		when(client.getCameraPitchTarget()).thenReturn(128);
+		when(client.getTickCount()).thenReturn(2);
+		plugin.onGameTick(new GameTick());
+		verify(client, times(1)).runScript(ScriptID.CAMERA_DO_ZOOM, 128, 128);
+		verify(client, times(1)).setCameraPitchTarget(383);
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test
+	public void preservesPreparedCameraAndDoesNotAdjustCameraAfterEntry() throws Exception
+	{
+		when(client.getVarcIntValue(VarClientID.CAMERA_ZOOM_SMALL)).thenReturn(128);
+		when(client.getVarcIntValue(VarClientID.CAMERA_ZOOM_BIG)).thenReturn(128);
+		when(client.getCameraPitchTarget()).thenReturn(512);
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		plugin.onGameTick(new GameTick());
+		Player player = client.getLocalPlayer();
+		when(player.getWorldLocation()).thenReturn(new WorldPoint(3292, 4249, 0));
+		when(player.getLocalLocation()).thenReturn(new LocalPoint(12 * 128 + 64, 25 * 128 + 64));
+		when(client.getVarcIntValue(VarClientID.CAMERA_ZOOM_SMALL)).thenReturn(512);
+		when(client.getVarcIntValue(VarClientID.CAMERA_ZOOM_BIG)).thenReturn(512);
+		when(client.getCameraPitchTarget()).thenReturn(128);
+		when(client.getTickCount()).thenReturn(1);
+		plugin.onGameTick(new GameTick());
+		verify(client, never()).runScript(anyInt(), any(), any());
+		verify(client, never()).setCameraPitchTarget(anyInt());
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test
+	public void partnerEntryAndRealSpawnTriggerOpeningAttackThenBossStopsController() throws Exception
+	{
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		Player player = client.getLocalPlayer();
+		when(player.getLocalLocation()).thenReturn(new LocalPoint(12 * 128 + 64, 25 * 128 + 64));
+		when(player.getWorldLocation()).thenReturn(new WorldPoint(3292, 4249, 0));
+		WorldArea area = mock(WorldArea.class);
+		when(player.getWorldArea()).thenReturn(area);
+		when(area.hasLineOfSightTo(any(WorldView.class), any(WorldArea.class))).thenReturn(true);
+		when(client.getTickCount()).thenReturn(4);
+		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(1);
+		NPC npc = mock(NPC.class);
+		when(npc.getId()).thenReturn(8343);
+		when(npc.getIndex()).thenReturn(42);
+		when(npc.getName()).thenReturn("Nylocas Toxobolos");
+		when(npc.getHealthRatio()).thenReturn(8);
+		when(npc.getLocalLocation()).thenReturn(new LocalPoint(1 * 128 + 64, 24 * 128 + 64));
+		when(npc.getWorldLocation()).thenReturn(new WorldPoint(3281, 4248, 0));
+		when(npc.getWorldArea()).thenReturn(new WorldPoint(3281, 4248, 0).toWorldArea());
+		NPCComposition composition = mock(NPCComposition.class);
+		when(npc.getTransformedComposition()).thenReturn(composition);
+		when(composition.getActions()).thenReturn(new String[]{null, "Attack"});
+		when(client.getNpcs()).thenReturn(java.util.Collections.singletonList(npc));
+		plugin.onNpcSpawned(new NpcSpawned(npc));
+		plugin.onGameTick(new GameTick());
+		verify(client).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylocas Toxobolos");
+		NPC boss = mock(NPC.class);
+		when(boss.getId()).thenReturn(8354);
+		when(client.getNpcs()).thenReturn(java.util.Collections.singletonList(boss));
+		when(client.getTickCount()).thenReturn(5);
+		plugin.onGameTick(new GameTick());
+		when(client.getTickCount()).thenReturn(6);
+		plugin.onGameTick(new GameTick());
+		verify(client, times(1)).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylocas Toxobolos");
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test
+	public void bigPrefireUsesServerSouthwestAnchorInsteadOfModelCenter() throws Exception
+	{
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		Player player = client.getLocalPlayer();
+		when(player.getWorldLocation()).thenReturn(new WorldPoint(3293, 4248, 0));
+		when(player.getLocalLocation()).thenReturn(new LocalPoint(13 * 128 + 64, 24 * 128 + 64));
+		WorldArea area = mock(WorldArea.class);
+		when(player.getWorldArea()).thenReturn(area);
+		when(area.hasLineOfSightTo(any(WorldView.class), any(WorldArea.class))).thenReturn(true);
+		when(client.getTickCount()).thenReturn(100);
+		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(20);
+		NPC npc = mock(NPC.class);
+		when(npc.getId()).thenReturn(8345);
+		when(npc.getIndex()).thenReturn(77);
+		when(npc.getName()).thenReturn("Nylocas Ischyros");
+		when(npc.getHealthRatio()).thenReturn(16);
+		when(npc.getWorldLocation()).thenReturn(new WorldPoint(3281, 4248, 0));
+		// Its center differs from the southwest birth anchor and is not a valid lane spawn.
+		when(npc.getLocalLocation()).thenReturn(new LocalPoint(2 * 128 + 64, 25 * 128 + 64));
+		NPCComposition composition = mock(NPCComposition.class);
+		when(npc.getTransformedComposition()).thenReturn(composition);
+		when(composition.getActions()).thenReturn(new String[]{null, "Attack"});
+		when(client.getNpcs()).thenReturn(java.util.Collections.singletonList(npc));
+		plugin.onNpcSpawned(new NpcSpawned(npc));
+		plugin.onGameTick(new GameTick());
+		when(client.getTickCount()).thenReturn(105);
+		when(npc.getId()).thenReturn(8346);
+		when(npc.getName()).thenReturn("Nylocas Toxobolos");
+		when(npc.getWorldLocation()).thenReturn(new WorldPoint(3286, 4248, 0));
+		when(npc.getWorldArea()).thenReturn(new WorldArea(3286, 4248, 2, 2, 0));
+		plugin.onGameTick(new GameTick());
+		verify(client).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 77, -1, "Attack", "Nylocas Toxobolos");
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test
+	public void restartingAfterRespawnRechecksHitpointsInsteadOfCachedDeathFlags() throws Exception
+	{
+		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		verify(toolbar).addNavigation(navigation.capture());
+		plugin.onGameTick(new GameTick());
+		when(client.getTickCount()).thenReturn(1);
+		when(client.getBoostedSkillLevel(Skill.HITPOINTS)).thenReturn(0);
+		when(client.getLocalPlayer().isDead()).thenReturn(true);
+		when(client.getLocalPlayer().getHealthRatio()).thenReturn(0);
+		plugin.onGameTick(new GameTick());
+		// The same player object and health bar can retain death state after respawn.
+		when(client.getBoostedSkillLevel(Skill.HITPOINTS)).thenReturn(99);
+		SwingUtilities.invokeAndWait(() -> find(navigation.getValue().getPanel(), JButton.class, "Start ranger").doClick());
+		when(client.getTickCount()).thenReturn(2);
+		plugin.onGameTick(new GameTick());
+		verify(client, times(2)).menuAction(15, 31, MenuAction.GAME_OBJECT_FIRST_OPTION, 32755, -1, "Pass-through", "Nylocas barrier");
+		verify(client, times(2)).runScript(ScriptID.CAMERA_DO_ZOOM, 128, 128);
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test
+	public void startChecksCurrentDeathImmediatelyAndCannotArmWithZeroHitpoints() throws Exception
+	{
+		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		verify(toolbar).addNavigation(navigation.capture());
+		when(client.getBoostedSkillLevel(Skill.HITPOINTS)).thenReturn(0);
+		SwingUtilities.invokeAndWait(() -> find(navigation.getValue().getPanel(), JButton.class, "Start ranger").doClick());
+		SwingUtilities.invokeAndWait(() -> assertEquals("Stopped: player died.",
+			find(navigation.getValue().getPanel(), JTextArea.class, null).getText()));
+		// Healing alone must not silently restart an attempt rejected while dead.
+		when(client.getBoostedSkillLevel(Skill.HITPOINTS)).thenReturn(99);
+		when(client.getTickCount()).thenReturn(1);
+		plugin.onGameTick(new GameTick());
+		verify(client, never()).menuAction(15, 31, MenuAction.GAME_OBJECT_FIRST_OPTION, 32755, -1, "Pass-through", "Nylocas barrier");
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test
+	public void deathDuringAnAttemptUsesCurrentHitpointsEvenWithNoDeadFlagOrHealthBar() throws Exception
+	{
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		plugin.onGameTick(new GameTick());
+		when(client.getBoostedSkillLevel(Skill.HITPOINTS)).thenReturn(0);
+		when(client.getTickCount()).thenReturn(1);
+		plugin.onGameTick(new GameTick());
+		verify(client, times(1)).menuAction(15, 31, MenuAction.GAME_OBJECT_FIRST_OPTION, 32755, -1, "Pass-through", "Nylocas barrier");
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test
+	public void lowPrayerAndBigAttackerAreHandledWithoutReplacingOpeningPrefire() throws Exception
+	{
+		when(config.prayers()).thenReturn(true);
+		when(config.protectionPrayers()).thenReturn(true);
+		when(config.restorePrayer()).thenReturn(true);
+		when(config.prayerThreshold()).thenReturn(20);
+		when(client.getRealSkillLevel(Skill.PRAYER)).thenReturn(99);
+		when(client.getBoostedSkillLevel(Skill.PRAYER)).thenReturn(20);
+		when(client.getItemContainer(InventoryID.INVENTORY).getItems()).thenReturn(new Item[]{new Item(143, 1)});
+		ItemComposition dose = mock(ItemComposition.class);
+		when(dose.getInventoryActions()).thenReturn(new String[]{"Drink"});
+		when(client.getItemDefinition(143)).thenReturn(dose);
+		Widget prayers = mock(Widget.class);
+		Widget magic = prayerWidget(2000, "Protect from Magic");
+		Widget rigour = prayerWidget(2001, "Rigour");
+		when(prayers.getStaticChildren()).thenReturn(new Widget[]{magic, rigour});
+		when(client.getWidget(InterfaceID.Prayerbook.CONTAINER)).thenReturn(prayers);
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		Player player = client.getLocalPlayer();
+		when(player.getWorldLocation()).thenReturn(new WorldPoint(3292, 4249, 0));
+		WorldArea area = mock(WorldArea.class);
+		when(player.getWorldArea()).thenReturn(area);
+		when(area.hasLineOfSightTo(any(WorldView.class), any(WorldArea.class))).thenReturn(true);
+		when(client.getTickCount()).thenReturn(4);
+		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(1);
+		NPC ranged = mock(NPC.class);
+		when(ranged.getId()).thenReturn(8343);
+		when(ranged.getIndex()).thenReturn(42);
+		when(ranged.getName()).thenReturn("Nylocas Toxobolos");
+		when(ranged.getHealthRatio()).thenReturn(8);
+		when(ranged.getWorldLocation()).thenReturn(new WorldPoint(3281, 4248, 0));
+		when(ranged.getWorldArea()).thenReturn(new WorldPoint(3281, 4248, 0).toWorldArea());
+		NPCComposition composition = mock(NPCComposition.class);
+		when(ranged.getTransformedComposition()).thenReturn(composition);
+		when(composition.getActions()).thenReturn(new String[]{null, "Attack"});
+		NPC big = mock(NPC.class);
+		when(big.getId()).thenReturn(8353);
+		when(big.getHealthRatio()).thenReturn(16);
+		when(big.getInteracting()).thenReturn(player);
+		when(big.getWorldLocation()).thenReturn(new WorldPoint(3293, 4250, 0));
+		WorldArea threat = mock(WorldArea.class);
+		when(big.getWorldArea()).thenReturn(threat);
+		when(threat.distanceTo(area)).thenReturn(2);
+		when(threat.hasLineOfSightTo(client.getTopLevelWorldView(), area)).thenReturn(true);
+		when(client.getNpcs()).thenReturn(java.util.Arrays.asList(ranged, big));
+		plugin.onNpcSpawned(new NpcSpawned(ranged));
+		plugin.onNpcSpawned(new NpcSpawned(big));
+		plugin.onGameTick(new GameTick());
+		InOrder order = inOrder(client);
+		order.verify(client).menuAction(0, InterfaceID.Inventory.ITEMS, MenuAction.ITEM_FIRST_OPTION, 143, 143, "Drink", "");
+		order.verify(client).menuAction(-1, 2000, MenuAction.CC_OP, 1, -1, "Activate", "");
+		order.verify(client).menuAction(-1, 2001, MenuAction.CC_OP, 1, -1, "Activate", "");
+		order.verify(client).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylocas Toxobolos");
+		verify(client, times(1)).menuAction(-1, 2001, MenuAction.CC_OP, 1, -1, "Activate", "");
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	private Widget prayerWidget(int id, String name)
+	{
+		Widget widget = mock(Widget.class);
+		when(widget.getId()).thenReturn(id);
+		when(widget.getIndex()).thenReturn(-1);
+		when(widget.isIf3()).thenReturn(true);
+		when(widget.getName()).thenReturn(name);
+		when(widget.getActions()).thenReturn(new String[]{"Activate"});
+		return widget;
+	}
+
+	private static <T extends Component> T find(Container parent, Class<T> type, String text)
+	{
+		for (Component child : parent.getComponents())
+		{
+			if (type.isInstance(child) && (text == null || child instanceof JButton && text.equals(((JButton) child).getText())))
+				return type.cast(child);
+			if (child instanceof Container)
+			{
+				T found = find((Container) child, type, text);
+				if (found != null) return found;
+			}
+		}
+		return null;
+	}
+}

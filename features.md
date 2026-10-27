@@ -206,7 +206,11 @@ attacker and does not become a one-shot for either player.
 
 One-shot and overkill rates show counts beside percentages and a dash when no
 denominator exists. Updates come from authoritative server events over console
-messages. The plugin hides raw `LNW2`, `LNW3`, `LNW4`, and `LNC1` console messages from
+messages. Long snapshots use bounded `LNF1` fragments; the client reassembles a
+complete snapshot before updating the panel. Each console packet stays within
+the 255-byte protocol limit, including its three framing bytes. Incomplete,
+conflicting, and expired fragment sets never replace the current report.
+The plugin hides raw `LNW2`, `LNW3`, `LNW4`, `LNF1`, and `LNC1` console messages from
 chat while continuing to read them for sidebar updates. Rebuild the client with
 `./dev build-client`, restart RSMod, and launch a fresh client session; no cache
 repack is required.

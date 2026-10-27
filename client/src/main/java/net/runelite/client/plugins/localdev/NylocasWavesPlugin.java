@@ -7,7 +7,10 @@ import javax.inject.Inject;
 import javax.swing.SwingUtilities;
 import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
+import net.runelite.api.GameState;
 import net.runelite.api.events.ChatMessage;
+import net.runelite.api.events.GameStateChanged;
+import net.runelite.api.events.GameTick;
 import net.runelite.api.events.ScriptCallbackEvent;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
@@ -31,10 +34,12 @@ public class NylocasWavesPlugin extends Plugin
 
 	private volatile NylocasWavesPanel panel;
 	private NavigationButton navigation;
+	private final NylocasReportMessages reports = new NylocasReportMessages();
 
 	@Override
 	protected void startUp()
 	{
+		reports.reset();
 		panel = new NylocasWavesPanel();
 		navigation = NavigationButton.builder()
 			.tooltip("Nylocas Waves")
@@ -48,6 +53,7 @@ public class NylocasWavesPlugin extends Plugin
 	@Override
 	protected void shutDown()
 	{
+		reports.reset();
 		panel = null;
 		clientToolbar.removeNavigation(navigation);
 	}
@@ -66,7 +72,8 @@ public class NylocasWavesPlugin extends Plugin
 			return;
 		}
 		String message = (String) client.getObjectStack()[client.getObjectStackSize() - 1];
-		if (message.startsWith("LNW2 ") || message.startsWith("LNW3 ") || message.startsWith("LNW4 ") || message.startsWith("LNC1 "))
+		if (message.startsWith("LNW2 ") || message.startsWith("LNW3 ") || message.startsWith("LNW4 ")
+			|| message.startsWith("LNF1 ") || message.startsWith("LNC1 "))
 		{
 			// Hide only the rendered line; ChatMessage still delivers the original payload.
 			intStack[size - 3] = 0;
@@ -80,8 +87,9 @@ public class NylocasWavesPlugin extends Plugin
 		{
 			return;
 		}
-		NylocasWaveSnapshot report = NylocasWaveSnapshot.parse(event.getMessage());
-		NylocasWaveCheck check = NylocasWaveCheck.parse(event.getMessage());
+		String message = reports.accept(event.getMessage(), client.getTickCount());
+		NylocasWaveSnapshot report = NylocasWaveSnapshot.parse(message);
+		NylocasWaveCheck check = NylocasWaveCheck.parse(message);
 		NylocasWavesPanel current = panel;
 		if (current != null && (report != null || check != null))
 		{
@@ -100,6 +108,19 @@ public class NylocasWavesPlugin extends Plugin
 				}
 			});
 		}
+	}
+
+	@Subscribe
+	public void onGameTick(GameTick event)
+	{
+		reports.expire(client.getTickCount());
+	}
+
+	@Subscribe
+	public void onGameStateChanged(GameStateChanged event)
+	{
+		if (event.getGameState() == GameState.LOGIN_SCREEN || event.getGameState() == GameState.HOPPING
+			|| event.getGameState() == GameState.CONNECTION_LOST) reports.reset();
 	}
 
 	private static BufferedImage createIcon()

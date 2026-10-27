@@ -1,5 +1,10 @@
 # Nylocas research corpus
 
+The separate [Cutely meows ranger corpus](ranger/README.md) contains 93 qualifying
+duo rooms for the [ranger hierarchy](../../nylocas-duo-ranger-strategy.md) and
+[wave rotation](../../nylocas-duo-ranger-waves.md). It is independent of the
+13-room mechanics corpus described below.
+
 Collected 2026-10-16 for the [accuracy report](../../nylocas-simulation-accuracy-report.md). The manifest pins13 public normal-mode completions: the user-provided duo plus six recent completed solos and six recent completed duos returned by Blert's API. There are repeated players and partners; this is not a random sample. All rooms report `ticksLost=0`, which does not guarantee every client observation is authoritative server state.
 
 ## Inputs and provenance

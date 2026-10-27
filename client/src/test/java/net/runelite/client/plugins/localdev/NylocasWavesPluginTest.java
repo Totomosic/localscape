@@ -19,6 +19,7 @@ import org.mockito.MockitoAnnotations;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoInteractions;
@@ -26,6 +27,11 @@ import static org.mockito.Mockito.when;
 
 public class NylocasWavesPluginTest
 {
+	private static final String LONG_REPORT = "LNW4 62105b94-b7ee-47ba-bc30-b43e2586783b waves "
+		+ "28 26 17 1 0 69 60 15 9 23 34 27 15 2 4 9 18 7 5 10 7 0 0 0 "
+		+ "69 60 54011924 14 7 8103637 0 0 0 0 0 0 4 902663 2 "
+		+ "QQ 33 31 27694478 8 5 5041096 0 0 0 0 0 0 3 911442 "
+		+ "Qg 36 29 26317446 6 2 3062542 0 0 0 0 0 0 1 704350";
 	@Mock
 	private Client client;
 	@Mock
@@ -75,8 +81,9 @@ public class NylocasWavesPluginTest
 		verifyNoInteractions(client);
 		assertEquals(1, visibility(ChatMessageType.CONSOLE, "A normal console message", 1));
 		assertEquals(1, visibility(ChatMessageType.CONSOLE, "LNW3ish text", 1));
-		for (String message : new String[]{"LNW2 payload", "LNW3 payload", "LNW4 payload", "LNC1 payload"})
+		for (String message : new String[]{"LNW2 payload", "LNW3 payload", "LNW4 payload", "LNF1 payload", "LNC1 payload"})
 		{
+			assertEquals(0, visibility(ChatMessageType.CONSOLE, message, 1));
 			assertEquals(1, visibility(ChatMessageType.GAMEMESSAGE, message, 1));
 			assertEquals(1, visibility(ChatMessageType.PUBLICCHAT, message, 1));
 		}
@@ -142,6 +149,30 @@ public class NylocasWavesPluginTest
 		SwingUtilities.invokeAndWait(() ->
 		{
 			assertEquals(1, table(navigation.getValue().getPanel()).getRowCount());
+			plugin.shutDown();
+		});
+	}
+
+	@Test
+	public void reassemblesOversizedWave28ReportBeforeUpdatingSidebar() throws Exception
+	{
+		MockitoAnnotations.initMocks(this);
+		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
+		SwingUtilities.invokeAndWait(() ->
+		{
+			plugin.startUp();
+			verify(toolbar).addNavigation(navigation.capture());
+		});
+		String header = "LNF1 62105b94-b7ee-47ba-bc30-b43e2586783b 1 ";
+		ChatMessage event = check(ChatMessageType.CONSOLE);
+		event.setMessage(header + "0 2 " + LONG_REPORT.substring(0, 180));
+		plugin.onChatMessage(event);
+		SwingUtilities.invokeAndWait(() -> assertFalse(hasLabel(navigation.getValue().getPanel(), "Wave 28 / 31")));
+		event.setMessage(header + "1 2 " + LONG_REPORT.substring(180));
+		plugin.onChatMessage(event);
+		SwingUtilities.invokeAndWait(() ->
+		{
+			assertTrue(hasLabel(navigation.getValue().getPanel(), "Wave 28 / 31"));
 			plugin.shutDown();
 		});
 	}
