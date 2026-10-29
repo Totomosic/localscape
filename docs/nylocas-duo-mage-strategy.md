@@ -1,5 +1,7 @@
 # Duo Nylocas mage: basic strategy hierarchy
 
+Implementation update: the mage now prioritizes its rotation and ranger ownership over idle reduction, favors newer eligible birth waves, and excludes targets more than four waves old. Wave-29 births are excluded only after wave 31 spawns. Earlier filler and blanket-cutoff descriptions below are historical research proposals; see the [current mage policy](nylocas-mage-plugin.md) and [validation results](nylocas-agent-planning.md) for implemented behavior.
+
 The mage is the team's **timed melee/AoE and magic-clear player**, following Drummie's normal-mode duo role. Build the policy around selected lane packets, melee smalls and fresh magic splits, while the ranger clears ranged lanes. A universal “magic first” rule misses much of the mage's work and opens bigs that the recordings deliberately leave alive.
 
 The objective is fast wave-29 admission, then a short young tail. Read the [priorities by last-spawned wave](nylocas-duo-mage-waves.md) for the route and named targets. This is a proposed basic hierarchy inferred from observations and the user's explicit timing requirements; it has not been executed as an agent or shown experimentally optimal.

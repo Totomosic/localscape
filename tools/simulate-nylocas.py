@@ -6,6 +6,7 @@ import csv
 from datetime import datetime, timezone
 import hashlib
 import json
+import math
 from pathlib import Path
 import statistics
 import subprocess
@@ -14,12 +15,21 @@ import time
 import dev
 
 
+STALL_METRICS = {
+    "pre_cap_stalls": "Pre-cap stalls (waves 1–20)",
+    "post_cap_stalls": "Post-cap stalls (waves 21–31)",
+    "pre_29_stalls": "Pre-29 stalls (waves 1–28)",
+    "wave_29_stalls": "Wave-29 stalls",
+}
+
+
 def distribution(values):
     return {
         "mean": statistics.mean(values) if values else None,
         "median": statistics.median(values) if values else None,
         "min": min(values) if values else None,
         "max": max(values) if values else None,
+        "p95": sorted(values)[math.ceil(len(values) * 0.95) - 1] if values else None,
     }
 
 
@@ -38,6 +48,15 @@ def summarize(rows):
         "completion_game_seconds": distribution([tick * 0.6 for tick in ticks]),
         "trial_wall_seconds": seconds,
         "trials_per_second": len(rows) / seconds if seconds else None,
+        "completed_ready_idle": {
+            role: {
+                **distribution([int(row[f"{role}_ready_idle_ticks"]) for row in completed]),
+                "under_20": sum(int(row[f"{role}_ready_idle_ticks"]) < 20 for row in completed),
+                "trials": len(completed),
+                "under_20_rate": sum(int(row[f"{role}_ready_idle_ticks"]) < 20 for row in completed) / len(completed) if completed else None,
+            }
+            for role in ("mage", "ranger")
+        },
         "metrics_all_trials": {
             metric: distribution([int(row[metric]) for row in rows])
             for metric in (
@@ -45,6 +64,9 @@ def summarize(rows):
                 "ranger_ready_idle_ticks", "mage_ready_idle_ticks", "same_tick_double_ups",
                 "shared_targets", "positive_damage_rolls",
             )
+        } | {
+            metric: distribution([int(row[metric]) for row in rows if row.get(metric) not in (None, "")])
+            for metric in STALL_METRICS
         },
     }
 
@@ -65,18 +87,26 @@ def write_report(csv_path, output, metadata):
         f"Endpoint: {report['endpoint']}.", "",
         f"Trials: {report['trials']}; completed: {report['completed']}; deaths: {report['deaths']}; timeouts: {report['timeouts']}.", "",
         f"Completion ticks (successful trials): mean **{fmt(completion['mean'])}**, median **{fmt(completion['median'])}**.", "",
+        "Average stalls per trial: " + "; ".join(
+            f"{STALL_METRICS[metric]} **{fmt(report['metrics_all_trials'][metric]['mean'])}**"
+            for metric in STALL_METRICS
+        ) + ".", "",
         f"Throughput including per-trial setup: **{fmt(report['trials_per_second'])} trials/s**. Cache startup and Gradle build excluded.", "",
         "| Metric (all trials) | Mean | Median | Min | Max |",
         "| --- | ---: | ---: | ---: | ---: |",
     ]
     for metric, stats in report["metrics_all_trials"].items():
-        lines.append(f"| {metric} | " + " | ".join(fmt(stats[key]) for key in ("mean", "median", "min", "max")) + " |")
-    lines += ["", "Idle ticks count ticks without a confirmed primary attack, including cooldown and movement. Ready idle ticks exclude policy cooldown.", "",
+        lines.append(f"| {STALL_METRICS.get(metric, metric)} | " + " | ".join(fmt(stats[key]) for key in ("mean", "median", "min", "max")) + " |")
+    for role, stats in report["completed_ready_idle"].items():
+        lines.append("")
+        lines.append(f"{role.capitalize()} completed trials with fewer than 20 ready-idle ticks: **{stats['under_20']}/{stats['trials']}**; 95th percentile **{fmt(stats['p95'])}**.")
+    lines += ["", "Idle ticks count ticks without a confirmed primary attack, including cooldown and movement. Ready idle ticks exclude policy cooldown. Current simulations count from each role's first confirmed attack through the final living nylo's death, excluding entrance and terminal death-animation/boss waits. Older reports used the entire encounter; check the run metadata before comparing.", "",
+              "Stalls count failed population-cap admission checks, each delaying the incoming wave by four ticks. Pre-cap covers incoming waves 1–20; post-cap covers 21–31. Pre-29 covers 1–28; wave-29 counts delays admitting wave 29. Averages include failed and timed-out trials. Legacy CSVs without stall counters show n/a; missing values are excluded from stall statistics.", "",
               "Same-tick double ups count both agents launching a primary attack at the same NPC on one tick. Shared targets count distinct NPC lifetimes attacked by both agents at any time; this can include useful follow-up hits.", "",
               "Positive damage rolls include secondary AoE targets and multiple splats; they measure rolled damage before impact, not kills. Completion can include natural NPC expiry.", "",
               "Fixed equipment and 99 base stats are defined in the server adapter. Reports cover server model behavior; see docs/nylocas-simulations.md for assumptions.", ""]
     (output / "report.md").write_text("\n".join(lines))
-    print("\n".join(lines[:10]))
+    print("\n".join(lines[:12]))
     print(f"Reports: {output}")
     return report
 
@@ -89,6 +119,7 @@ def main():
     parser.add_argument("--output", type=Path)
     parser.add_argument("--report-only", type=Path, metavar="CSV", help="Regenerate reports without running the server")
     parser.add_argument("--offline", action="store_true", help="Use only cached Gradle dependencies")
+    parser.add_argument("--trace", action="store_true", help="Log per-tick agent decisions and observations to server.log")
     args = parser.parse_args()
     if args.trials <= 0 or args.max_ticks <= 0:
         parser.error("--trials and --max-ticks must be positive")
@@ -106,6 +137,8 @@ def main():
         command.append("--offline")
     command += [":api:combat:combat-scripts:simulateNylocas", f"-Pnylo.trials={args.trials}",
                 f"-Pnylo.seed={args.seed}", f"-Pnylo.maxTicks={args.max_ticks}", f"-Pnylo.output={csv_path}"]
+    if args.trace:
+        command.append("-Pnylo.trace=true")
     print(f"Running {args.trials} trials, seeds {args.seed}..{args.seed + args.trials - 1}. Log: {output / 'server.log'}", flush=True)
     started = time.monotonic()
     with (output / "server.log").open("w") as log:
@@ -117,6 +150,7 @@ def main():
               for path in sorted(source_root.rglob("*.java"))}
     report = write_report(csv_path, output, {
         "seed": args.seed, "max_ticks": args.max_ticks,
+        "idle_window": "each role's first confirmed attack through the final living nylo's death",
         "invocation_seconds": time.monotonic() - started, "policy_sha256": hashes,
         "fixture": {"base_stats": 99, "starting_hitpoints": 250,
                     "prayer_potions_four_dose_per_player": 4, "prayer_threshold": 25,

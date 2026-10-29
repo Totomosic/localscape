@@ -1,5 +1,7 @@
 # Duo Nylocas mage: priorities by last-spawned wave
 
+Implementation update: the mage now prioritizes its rotation and ranger ownership over idle reduction, favors newer eligible birth waves, and excludes targets more than four waves old. Wave-29 births are excluded only after wave 31 spawns. Earlier filler and blanket-cutoff descriptions below are historical research proposals; see the [current mage policy](nylocas-mage-plugin.md) and [validation results](nylocas-agent-planning.md) for implemented behavior.
+
 **Wave 1: ayak or shadow the wave 1 south mage small.**
 
 Run south from the entry toward `(3296,4244)` and hit the south east-slot magic small, then move west during cooldown. Every qualifying replay opens with **shadow at `s1+2`** from that tile. Ayak is the user's permitted alternative; its shorter cooldown would change the following timing and is not an observed opening variant in this corpus.

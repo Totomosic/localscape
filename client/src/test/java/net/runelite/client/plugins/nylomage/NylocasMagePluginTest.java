@@ -9,6 +9,8 @@ import net.runelite.api.Client;
 import net.runelite.api.GameObject;
 import net.runelite.api.GameState;
 import net.runelite.api.InventoryID;
+import net.runelite.api.Hitsplat;
+import net.runelite.api.HitsplatID;
 import net.runelite.api.Item;
 import net.runelite.api.ItemContainer;
 import net.runelite.api.ItemComposition;
@@ -27,6 +29,7 @@ import net.runelite.api.coords.LocalPoint;
 import net.runelite.api.coords.WorldArea;
 import net.runelite.api.coords.WorldPoint;
 import net.runelite.api.events.GameTick;
+import net.runelite.api.events.HitsplatApplied;
 import net.runelite.api.events.AnimationChanged;
 import net.runelite.api.events.NpcSpawned;
 import net.runelite.api.gameval.VarbitID;
@@ -215,7 +218,54 @@ public class NylocasMagePluginTest
 		SwingUtilities.invokeAndWait(plugin::shutDown);
 	}
 
-	@Test public void cutoffDiscardsAnUnacknowledgedOldAttackAndAllowsNew30Child() throws Exception
+	@Test public void nativeApproachKeepsRequestingAndDoesNotAcknowledgeAStaleAnimation() throws Exception
+	{
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		Player player = client.getLocalPlayer();
+		when(player.getWorldLocation()).thenReturn(new WorldPoint(3295, 4248, 0));
+		WorldArea area = mock(WorldArea.class); when(player.getWorldArea()).thenReturn(area);
+		when(area.hasLineOfSightTo(any(WorldView.class), any(WorldArea.class))).thenReturn(true);
+		when(client.getItemContainer(InventoryID.EQUIPMENT).contains(anyInt())).thenReturn(true);
+		when(client.getItemContainer(InventoryID.EQUIPMENT).getItem(3)).thenReturn(new Item(29084, 1));
+		NPC target = small(42, 8342, 3301, 4252);
+		when(client.getNpcs()).thenReturn(java.util.Collections.singletonList(target));
+		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(3);
+		when(client.getTickCount()).thenReturn(100);
+		plugin.onNpcSpawned(new NpcSpawned(target)); plugin.onGameTick(new GameTick());
+		verify(client).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylo");
+		// A previous sulphur animation while still outside reach is not a confirmed launch.
+		when(player.getInteracting()).thenReturn(target);
+		when(player.getAnimation()).thenReturn(2068);
+		when(client.getTickCount()).thenReturn(101); plugin.onGameTick(new GameTick());
+		verify(client, times(2)).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylo");
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test public void doesNotRetryQueuedApproachAfterFourWaveBoundary() throws Exception
+	{
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		Player player = client.getLocalPlayer(); when(player.getWorldLocation()).thenReturn(new WorldPoint(3295, 4248, 0));
+		WorldArea area = mock(WorldArea.class); when(player.getWorldArea()).thenReturn(area);
+		when(area.hasLineOfSightTo(any(WorldView.class), any(WorldArea.class))).thenReturn(true);
+		when(client.getItemContainer(InventoryID.EQUIPMENT).contains(anyInt())).thenReturn(true);
+		NPC old = small(42, 8342, 3301, 4252);
+		when(client.getNpcs()).thenReturn(java.util.Collections.singletonList(old));
+		when(client.getTickCount()).thenReturn(100);
+		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(18);
+		plugin.onNpcSpawned(new NpcSpawned(old)); plugin.onGameTick(new GameTick());
+		verify(client).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylo");
+		when(client.getTickCount()).thenReturn(101);
+		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(23);
+		when(player.getInteracting()).thenReturn(old);
+		plugin.onGameTick(new GameTick());
+		verify(client, times(1)).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylo");
+		java.lang.reflect.Field pending = NylocasMagePlugin.class.getDeclaredField("pending");
+		pending.setAccessible(true);
+		assertNull(pending.get(plugin));
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test public void onlyTheFinalWaveDiscardsWave29AndAllowsAFreshChild() throws Exception
 	{
 		SwingUtilities.invokeAndWait(plugin::startUp);
 		Player player = client.getLocalPlayer(); when(player.getWorldLocation()).thenReturn(new WorldPoint(3295, 4248, 0));
@@ -225,19 +275,19 @@ public class NylocasMagePluginTest
 		NPC old = small(42, 8344, 3295, 4247);
 		when(client.getNpcs()).thenReturn(java.util.Collections.singletonList(old));
 		when(client.getTickCount()).thenReturn(228);
-		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(28);
+		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(29);
 		plugin.onNpcSpawned(new NpcSpawned(old)); plugin.onGameTick(new GameTick());
 		verify(client).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylo");
 		when(client.getTickCount()).thenReturn(229);
-		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(29);
+		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(30);
 		plugin.onGameTick(new GameTick());
 		NPC child = small(43, 8344, 3295, 4249);
 		when(client.getTickCount()).thenReturn(232);
-		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(30);
+		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(31);
 		when(client.getNpcs()).thenReturn(java.util.Arrays.asList(old, child));
 		plugin.onNpcSpawned(new NpcSpawned(child)); plugin.onGameTick(new GameTick());
 		verify(client).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 43, -1, "Attack", "Nylo");
-		verify(client, times(1)).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylo");
+		verify(client, times(2)).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylo");
 		SwingUtilities.invokeAndWait(plugin::shutDown);
 	}
 
@@ -263,6 +313,13 @@ public class NylocasMagePluginTest
 			when(client.getTickCount()).thenReturn(tick);
 			// First request fails; later launches are observed one tick after each request.
 			boolean launched = tick >= 102 && (tick - 102) % 3 == 0;
+			if (tick >= 103 && (tick - 103) % 3 == 0)
+			{
+				HitsplatApplied hit = new HitsplatApplied();
+				hit.setActor(target);
+				hit.setHitsplat(new Hitsplat(HitsplatID.BLOCK_ME, 0, 0));
+				plugin.onHitsplatApplied(hit);
+			}
 			when(player.getInteracting()).thenReturn(launched ? target : null);
 			when(player.getAnimation()).thenReturn(launched ? 12397 : -1);
 			plugin.onGameTick(new GameTick());

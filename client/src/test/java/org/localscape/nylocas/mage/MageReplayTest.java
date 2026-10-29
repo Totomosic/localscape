@@ -120,7 +120,7 @@ public class MageReplayTest
 		assertPacket(raid, events, 189, 3295, 4244, "22 south Dinh");
 		assertPacket(raid, events, 236, 3293, 4245, "26 Dinh on 28");
 		MageStrategy.Room after29 = frame(raid, events, 240, 3295, 4243);
-		assertNull(new MageStrategy().decide(after29, 240).target);
+		assertNotNull(new MageStrategy().decide(after29, 240).target);
 	}
 
 	private void assertPacket(JsonObject raid, JsonArray events, int tick, int x, int y, String name)
@@ -184,6 +184,7 @@ public class MageReplayTest
 			case SHADOW: return attack == 40;
 			case SCYTHE: return attack == 38;
 			case SULPHUR: return attack == 101;
+			case DARTS: return attack == 74;
 			case BARRAGE: return attack == 1 || attack == 37;
 			default: return false;
 		}

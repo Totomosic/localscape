@@ -40,10 +40,25 @@ ticks and game seconds (0.6 seconds per tick). Throughput includes per-trial
 setup but excludes compilation and the initial cache load. The invocation time
 in JSON includes those startup costs.
 
-Idle ticks count ticks without a confirmed primary attack, including cooldown,
-movement, and the entrance countdown. Ready idle ticks count the subset where
-the policy cooldown had elapsed. These are descriptive metrics, not necessarily
-mistakes: a strategy may deliberately hold an attack for a future packet.
+Stall averages, medians, minima and maxima are included in JSON and Markdown,
+with per-trial counts in CSV. Each failed population-cap admission check counts
+as one stall (four ticks of delay), including repeated failures for the same
+incoming wave. Pre-cap covers incoming waves 1–20 (cap 12), post-cap covers
+21–31 (cap 24), pre-29 covers 1–28, and wave-29 stalls specifically delay
+admission to wave 29. Averages include every trial, including partial counts
+from deaths and timeouts. Old CSVs without these counters show `n/a`; missing
+values are excluded from stall statistics.
+
+Idle ticks count ticks without a confirmed primary attack, including cooldown
+and movement, from each role's first confirmed attack through the final living
+nylo's death. Entrance time, terminal death animations and the final boss wait
+are excluded. A temporary gap while a dying big produces children remains in
+the window. Ready idle ticks count the subset where policy cooldown had elapsed.
+Reports also give the fraction of completed trials below 20 ready-idle ticks
+and their 95th percentile; deaths cannot improve that fraction by ending early.
+Required packet holds still count. Reports made before this window change
+included the entrance and boss wait, so their idle counters are not directly
+comparable. New summaries record the window in run metadata.
 
 Same-tick double ups count both agents launching primary attacks at the same NPC
 on the same tick. Shared targets count distinct NPC lifetimes attacked by both

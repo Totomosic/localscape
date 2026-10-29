@@ -20,6 +20,7 @@ import net.runelite.api.coords.WorldPoint;
 import net.runelite.api.events.AnimationChanged;
 import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.GameTick;
+import net.runelite.api.events.HitsplatApplied;
 import net.runelite.api.events.NpcDespawned;
 import net.runelite.api.events.NpcSpawned;
 import net.runelite.api.gameval.VarbitID;
@@ -199,6 +200,13 @@ public class NylocasRangerPlugin extends Plugin
 	}
 
 	@Subscribe
+	public void onHitsplatApplied(HitsplatApplied event)
+	{
+		Crab crab = tracked.get(event.getActor());
+		if (crab != null && event.getHitsplat().isMine()) crab.ownHitUntil = 0;
+	}
+
+	@Subscribe
 	public void onAnimationChanged(AnimationChanged event)
 	{
 		if (!running || !entered || !(event.getActor() instanceof Player)) return;
@@ -263,6 +271,7 @@ public class NylocasRangerPlugin extends Plugin
 			room.ready = tick;
 		}
 		room.player = tile(point);
+		int previousWave = room.wave;
 		int wave = client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL);
 		if (wave >= 1 && wave <= 31 && wave > room.wave)
 		{
@@ -302,16 +311,14 @@ public class NylocasRangerPlugin extends Plugin
 		room.crabs.clear();
 		room.crabs.addAll(tracked.values());
 		room.obstructed.clear();
-		if (room.wave < 20)
-		{
-			for (Map.Entry<NPC, Crab> entry : tracked.entrySet())
-				if (!player.getWorldArea().hasLineOfSightTo(client.getTopLevelWorldView(), entry.getKey().getWorldArea()))
-					room.obstructed.add(entry.getValue().key);
-		}
+		for (Map.Entry<NPC, Crab> entry : tracked.entrySet())
+			if (!player.getWorldArea().hasLineOfSightTo(client.getTopLevelWorldView(), entry.getKey().getWorldArea()))
+				room.obstructed.add(entry.getValue().key);
 		room.specialEnergy = client.getVarpValue(300);
 		prayers.tick(tracked, tick);
 		actions.controls();
-		if (room.wave >= 20 && pending != null && pending.target.big && pending.target.wave < 20)
+		if (pending != null && (room.wave >= 20 && previousWave < 20 && pending.target.big && pending.target.wave < 20
+			|| room.wave == 31 && pending.target.wave == 29))
 		{
 			// Discard unacknowledged pre-cap work at the phase change; preserve the possible cooldown.
 			actions.stopAttacking();
@@ -320,7 +327,7 @@ public class NylocasRangerPlugin extends Plugin
 		if (pending != null)
 		{
 			// Blowpipe/Eye animations can be continuous, without AnimationChanged.
-			if (tick > requestedTick && player.getInteracting() instanceof NPC
+			if (!pending.pathToTarget && tick > requestedTick && player.getInteracting() instanceof NPC
 				&& tracked.get((NPC) player.getInteracting()) == pending.target
 				&& actions.equippedWeapon() == pending.weapon.itemId && weaponAnimation(pending.weapon, player.getAnimation()))
 			{
@@ -352,8 +359,8 @@ public class NylocasRangerPlugin extends Plugin
 			NPC target = npc(decision.target);
 			if (target == null) return;
 			int incomingStep = decision.target.lane != Lane.SPLIT && tick - decision.target.born < 9 ? 1 : 0;
-			if (decision.target.distance(tile(point)) > decision.weapon.range + incomingStep
-				|| !player.getWorldArea().hasLineOfSightTo(client.getTopLevelWorldView(), target.getWorldArea()))
+			if (!decision.pathToTarget && (decision.target.distance(tile(point)) > decision.weapon.range + incomingStep
+				|| !player.getWorldArea().hasLineOfSightTo(client.getTopLevelWorldView(), target.getWorldArea())))
 			{
 				if (!actions.prepare(decision.weapon)) { stop(actions.error()); return; }
 				actions.approach(target, decision.weapon.range, world(decision.tile));

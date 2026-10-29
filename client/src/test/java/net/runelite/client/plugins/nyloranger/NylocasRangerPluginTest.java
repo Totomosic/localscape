@@ -9,6 +9,8 @@ import net.runelite.api.Client;
 import net.runelite.api.GameObject;
 import net.runelite.api.GameState;
 import net.runelite.api.InventoryID;
+import net.runelite.api.Hitsplat;
+import net.runelite.api.HitsplatID;
 import net.runelite.api.Item;
 import net.runelite.api.ItemContainer;
 import net.runelite.api.ItemComposition;
@@ -27,6 +29,7 @@ import net.runelite.api.coords.LocalPoint;
 import net.runelite.api.coords.WorldArea;
 import net.runelite.api.coords.WorldPoint;
 import net.runelite.api.events.GameTick;
+import net.runelite.api.events.HitsplatApplied;
 import net.runelite.api.events.AnimationChanged;
 import net.runelite.api.events.NpcSpawned;
 import net.runelite.api.gameval.VarbitID;
@@ -350,6 +353,13 @@ public class NylocasRangerPluginTest
 			when(client.getTickCount()).thenReturn(tick);
 			// First request fails; later launches are observed one tick after each request.
 			boolean launched = tick >= 102 && (tick - 102) % 2 == 0;
+			if (tick >= 103 && (tick - 103) % 2 == 0)
+			{
+				HitsplatApplied hit = new HitsplatApplied();
+				hit.setActor(target);
+				hit.setHitsplat(new Hitsplat(HitsplatID.BLOCK_ME, 0, 0));
+				plugin.onHitsplatApplied(hit);
+			}
 			when(player.getInteracting()).thenReturn(launched ? target : null);
 			when(player.getAnimation()).thenReturn(launched ? 5061 : -1);
 			plugin.onGameTick(new GameTick());

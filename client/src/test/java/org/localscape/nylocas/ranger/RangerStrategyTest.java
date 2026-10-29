@@ -114,6 +114,75 @@ public class RangerStrategyTest
 	}
 
 	@Test
+	public void approachKeepsFirstShotWhenANewSpawnOnlyImprovesTheScore()
+	{
+		Room room = room(12, 100); room.ready = 105;
+		Crab original = crab(room, 12, 100, Lane.SPLIT, (char) 0, false, Style.RANGE);
+		original.point = RangerStrategy.tile(3303, 4248);
+		assertSame(original, strategy.decide(room, 100).approach);
+		room.player = RangerStrategy.tile(3297, 4248);
+		Crab fresh = crab(room, 12, 101, Lane.SPLIT, (char) 0, false, Style.RANGE);
+		fresh.point = RangerStrategy.tile(3290, 4248); fresh.hp = 2;
+		assertSame(original, strategy.decide(room, 101).approach);
+		room.player = RangerStrategy.tile(3299, 4248);
+		assertSame(original, strategy.decide(room, 105).target);
+	}
+
+	@Test
+	public void postCapCooldownAlsoKeepsAnApproachAcrossSpawns()
+	{
+		Room room = room(22, 100); room.ready = 105;
+		Crab original = crab(room, 22, 100, Lane.SPLIT, (char) 0, false, Style.RANGE);
+		original.point = RangerStrategy.tile(3303, 4248);
+		assertSame(original, strategy.decide(room, 100).approach);
+		room.player = RangerStrategy.tile(3297, 4248);
+		Crab fresh = crab(room, 22, 101, Lane.SPLIT, (char) 0, false, Style.RANGE);
+		fresh.point = RangerStrategy.tile(3290, 4248);
+		assertSame(original, strategy.decide(room, 101).approach);
+		room.player = RangerStrategy.tile(3299, 4248);
+		assertSame(original, strategy.decide(room, 105).target);
+	}
+
+	@Test
+	public void claimsDeathAndEarlierAttacksReleaseTheRangerApproach()
+	{
+		for (int wave : new int[]{12, 22})
+		{
+			for (int invalidation = 0; invalidation < 3; invalidation++)
+			{
+				strategy.reset();
+				Room room = room(wave, 100); room.ready = 105;
+				Crab original = crab(room, wave, 100, Lane.SPLIT, (char) 0, false, Style.RANGE);
+				original.point = RangerStrategy.tile(3303, 4248);
+				assertSame(original, strategy.decide(room, 100).approach);
+				Crab local = crab(room, wave, 101, Lane.SPLIT, (char) 0, false, Style.RANGE);
+				local.point = RangerStrategy.tile(3291, 4248);
+				if (invalidation == 0) original.dying = true;
+				if (invalidation == 1) original.claimedUntil = 120;
+				if (invalidation == 2) room.ready = 101;
+				Decision decision = strategy.decide(room, 101);
+				assertSame(local, decision.target != null ? decision.target : decision.approach);
+			}
+		}
+	}
+
+	@Test
+	public void newHardPacketCanInterruptTheCommittedFirstShot()
+	{
+		Room room = room(9, 102); room.ready = 109;
+		Crab original = crab(room, 9, 107, Lane.SPLIT, (char) 0, false, Style.RANGE);
+		original.point = RangerStrategy.tile(3303, 4248);
+		assertSame(original, strategy.decide(room, 107).approach);
+		room.wave = 10; room.spawns[10] = 114; room.ready = 114;
+		room.player = RangerStrategy.tile(3291, 4248);
+		Crab west = crab(room, 10, 114, Lane.WEST, 'S', false, Style.RANGE);
+		west.point = RangerStrategy.tile(3281, 4248);
+		Decision packet = strategy.decide(room, 114);
+		assertSame(west, packet.target);
+		assertEquals("West chin 10", packet.rule);
+	}
+
+	@Test
 	public void cooldownPlansForRangedFlickerRatherThanCurrentMelee()
 	{
 		Room room = room(16, 100);
@@ -212,6 +281,19 @@ public class RangerStrategyTest
 	}
 
 	@Test
+	public void blockedLineOfSightUsesARepositionInBothPhases()
+	{
+		for (int wave : new int[]{12, 22})
+		{
+			strategy.reset(); Room room = room(wave, 100);
+			Crab blocked = crab(room, wave, 100, Lane.SPLIT, (char) 0, false, Style.RANGE);
+			room.obstructed.add(blocked.key);
+			Decision decision = strategy.decide(room, 100);
+			assertNull(decision.target); assertSame(blocked, decision.approach); assertFalse(decision.pathToTarget);
+		}
+	}
+
+	@Test
 	public void dyingBodiesStillCountAgainstOpeningBigs()
 	{
 		Room room = room(18, 100);
@@ -273,8 +355,10 @@ public class RangerStrategyTest
 		for (int i = 0; i < 10; i++)
 			crab(room, 16, 118, Lane.SPLIT, (char) 0, false, Style.RANGE);
 		room.ready = 118;
-		// A miss keeps full HP; acknowledging the packet does not mean this big died.
-		assertSame(big, strategy.decide(room, 118).target);
+		// Full HP before projectile impact does not establish a miss. Spend this tick elsewhere.
+		assertNotSame(big, strategy.decide(room, 118).target);
+		// Once the projectile window passes, a miss still keeps finish priority.
+		assertSame(big, strategy.decide(room, 120).target);
 		big.hp = 4;
 		assertSame(big, strategy.decide(room, 120).target);
 		big.dying = true;
@@ -592,17 +676,17 @@ public class RangerStrategyTest
 	}
 
 	@Test
-	public void finalCleanupIgnoresOldCrabsButKeepsFreshChildOfOldParent()
+	public void finalCleanupIgnoresOnlyWave29AndKeepsOlderSurvivorsAndFreshChildren()
 	{
 		Room room = room(31, 100);
 		crab(room, 29, 95, Lane.WEST, 'S', false, Style.RANGE);
-		crab(room, 25, 90, Lane.SOUTH, 'W', true, Style.RANGE);
+		Crab older = crab(room, 25, 90, Lane.SOUTH, 'W', true, Style.RANGE);
 		// No lineage filter: this split's own birth wave is 31 even if its parent was 25.
 		Crab child = crab(room, 31, 119, Lane.SPLIT, (char) 0, false, Style.RANGE);
 		assertSame(child, strategy.decide(room, 121).target);
 		assertTrue(room.cleanup);
 		room.crabs.remove(child);
-		assertNull(strategy.decide(room, 122).target);
+		assertSame(older, strategy.decide(room, 122).target);
 	}
 
 	@Test

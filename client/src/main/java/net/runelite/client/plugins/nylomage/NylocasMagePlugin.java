@@ -20,6 +20,7 @@ import net.runelite.api.coords.WorldPoint;
 import net.runelite.api.events.AnimationChanged;
 import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.GameTick;
+import net.runelite.api.events.HitsplatApplied;
 import net.runelite.api.events.NpcDespawned;
 import net.runelite.api.events.NpcSpawned;
 import net.runelite.api.gameval.VarbitID;
@@ -202,6 +203,13 @@ public class NylocasMagePlugin extends Plugin
 	}
 
 	@Subscribe
+	public void onHitsplatApplied(HitsplatApplied event)
+	{
+		Crab crab = tracked.get(event.getActor());
+		if (crab != null && event.getHitsplat().isMine()) crab.ownHitUntil = 0;
+	}
+
+	@Subscribe
 	public void onAnimationChanged(AnimationChanged event)
 	{
 		if (!running || !entered || !(event.getActor() instanceof Player)) return;
@@ -313,16 +321,17 @@ public class NylocasMagePlugin extends Plugin
 		room.shadowOpening = config.shadowOpening();
 		prayers.tick(tracked, tick);
 		actions.controls();
-		if (room.wave >= 29 && pending != null && pending.target.wave <= 29)
+		if (pending != null && (room.wave - pending.target.wave > MageStrategy.MAX_WAVE_AGE
+			|| room.wave == 31 && pending.target.wave == 29))
 		{
-			// The mage cutoff is immediate, including unfinished old lane packets.
+			// Cancel native queued approaches before an obsolete target can launch.
 			actions.stopAttacking();
 			pending = null;
 		}
 		if (pending != null)
 		{
 			// Ayak animations can be continuous, without AnimationChanged.
-			if (tick > requestedTick && player.getInteracting() instanceof NPC
+			if (!pending.pathToTarget && tick > requestedTick && player.getInteracting() instanceof NPC
 				&& tracked.get((NPC) player.getInteracting()) == pending.target
 				&& actions.equippedWeapon() == actions.itemId(pending.weapon) && weaponAnimation(pending.weapon, player.getAnimation()))
 			{
@@ -354,8 +363,8 @@ public class NylocasMagePlugin extends Plugin
 			NPC target = npc(decision.target);
 			if (target == null) return;
 			int incomingStep = decision.target.lane != Lane.SPLIT && tick - decision.target.born < 9 ? 1 : 0;
-			if (decision.target.distance(tile(point)) > decision.weapon.range + incomingStep
-				|| !player.getWorldArea().hasLineOfSightTo(client.getTopLevelWorldView(), target.getWorldArea()))
+			if (!decision.pathToTarget && (decision.target.distance(tile(point)) > decision.weapon.range + incomingStep
+				|| !player.getWorldArea().hasLineOfSightTo(client.getTopLevelWorldView(), target.getWorldArea())))
 			{
 				if (!actions.prepare(decision.weapon)) { stop(actions.error()); return; }
 				actions.approach(target, decision.weapon.range, world(decision.tile));
@@ -372,7 +381,7 @@ public class NylocasMagePlugin extends Plugin
 			requestedTick = tick;
 			room.ready = tick + decision.weapon.cooldown;
 		}
-		status("Wave " + room.wave + (room.wave >= 29 ? " · young tail only" : "") + "\n" + decision.reason
+		status("Wave " + room.wave + (room.wave == 31 ? " · final cleanup" : "") + "\n" + decision.reason
 			+ (actions.error() == null ? "" : "\n" + actions.error()));
 	}
 
