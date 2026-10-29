@@ -27,6 +27,7 @@ import net.runelite.api.coords.LocalPoint;
 import net.runelite.api.coords.WorldArea;
 import net.runelite.api.coords.WorldPoint;
 import net.runelite.api.events.GameTick;
+import net.runelite.api.events.AnimationChanged;
 import net.runelite.api.events.NpcSpawned;
 import net.runelite.api.gameval.VarbitID;
 import net.runelite.api.gameval.VarClientID;
@@ -204,6 +205,106 @@ public class NylocasRangerPluginTest
 		when(client.getTickCount()).thenReturn(6);
 		plugin.onGameTick(new GameTick());
 		verify(client, times(1)).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylocas Toxobolos");
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test
+	public void liveHpUpdateFinishesSurvivorOnNextReadyTick() throws Exception
+	{
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		Player player = client.getLocalPlayer();
+		when(player.getWorldLocation()).thenReturn(new WorldPoint(3295, 4248, 0));
+		WorldArea area = mock(WorldArea.class);
+		when(player.getWorldArea()).thenReturn(area);
+		when(area.hasLineOfSightTo(any(WorldView.class), any(WorldArea.class))).thenReturn(true);
+		when(client.getTickCount()).thenReturn(100);
+		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(12);
+		when(client.getItemContainer(InventoryID.EQUIPMENT).getItem(3)).thenReturn(new Item(12926, 1));
+		when(client.getItemContainer(InventoryID.EQUIPMENT).contains(12926)).thenReturn(true);
+		NPC survivor = rangedSmall(42, 3292);
+		when(client.getNpcs()).thenReturn(java.util.Collections.singletonList(survivor));
+		plugin.onNpcSpawned(new NpcSpawned(survivor));
+		plugin.onGameTick(new GameTick());
+		verify(client).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylocas Toxobolos");
+		when(client.getTickCount()).thenReturn(101);
+		when(player.getInteracting()).thenReturn(survivor);
+		when(player.getAnimation()).thenReturn(5061);
+		AnimationChanged launch = new AnimationChanged();
+		launch.setActor(player);
+		plugin.onAnimationChanged(launch);
+		when(client.getTickCount()).thenReturn(102);
+		when(survivor.getHealthRatio()).thenReturn(2);
+		NPC fresh = rangedSmall(43, 3298);
+		when(client.getNpcs()).thenReturn(java.util.Arrays.asList(survivor, fresh));
+		plugin.onNpcSpawned(new NpcSpawned(fresh));
+		plugin.onGameTick(new GameTick());
+		verify(client, times(2)).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylocas Toxobolos");
+		verify(client, never()).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 43, -1, "Attack", "Nylocas Toxobolos");
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	private NPC rangedSmall(int index, int x)
+	{
+		NPC npc = mock(NPC.class);
+		when(npc.getId()).thenReturn(8343);
+		when(npc.getIndex()).thenReturn(index);
+		when(npc.getName()).thenReturn("Nylocas Toxobolos");
+		when(npc.getHealthScale()).thenReturn(8);
+		when(npc.getHealthRatio()).thenReturn(8);
+		WorldPoint point = new WorldPoint(x, 4248, 0);
+		when(npc.getWorldLocation()).thenReturn(point);
+		when(npc.getWorldArea()).thenReturn(point.toWorldArea());
+		NPCComposition composition = mock(NPCComposition.class);
+		when(npc.getTransformedComposition()).thenReturn(composition);
+		when(composition.getActions()).thenReturn(new String[]{null, "Attack"});
+		return npc;
+	}
+
+	@Test
+	public void wave20DropsPendingPreCapBigAndStartsItsOwnFlickerPacket() throws Exception
+	{
+		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		verify(toolbar).addNavigation(navigation.capture());
+		Player player = client.getLocalPlayer();
+		when(player.getWorldLocation()).thenReturn(new WorldPoint(3293, 4248, 0));
+		WorldArea area = mock(WorldArea.class);
+		when(player.getWorldArea()).thenReturn(area);
+		when(area.hasLineOfSightTo(any(WorldView.class), any(WorldArea.class))).thenReturn(true);
+		when(client.getItemContainer(InventoryID.EQUIPMENT).contains(anyInt())).thenReturn(true);
+		when(client.getTickCount()).thenReturn(100);
+		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(18);
+		NPC old = rangedSmall(42, 3281);
+		when(old.getId()).thenReturn(8346);
+		when(client.getNpcs()).thenReturn(java.util.Collections.singletonList(old));
+		plugin.onNpcSpawned(new NpcSpawned(old));
+		plugin.onGameTick(new GameTick()); // In its lane: cannot prefire, even with no smalls.
+		verify(client, never()).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylocas Toxobolos");
+		when(client.getTickCount()).thenReturn(110);
+		when(old.getWorldLocation()).thenReturn(new WorldPoint(3290, 4248, 0));
+		when(old.getWorldArea()).thenReturn(new WorldArea(3290, 4248, 2, 2, 0));
+		plugin.onGameTick(new GameTick()); // Empty-small-room west exception; request stays unacknowledged.
+		verify(client).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylocas Toxobolos");
+		when(client.getTickCount()).thenReturn(111);
+		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(20);
+		NPC current = rangedSmall(43, 3281);
+		when(current.getId()).thenReturn(8345);
+		when(client.getNpcs()).thenReturn(java.util.Arrays.asList(old, current));
+		plugin.onNpcSpawned(new NpcSpawned(current));
+		plugin.onGameTick(new GameTick());
+		SwingUtilities.invokeAndWait(() ->
+		{
+			String status = find(navigation.getValue().getPanel(), JTextArea.class, null).getText();
+			assertTrue(status.contains("Wave 20"));
+			assertFalse(status.contains("Waiting for attack acknowledgement"));
+		});
+		when(client.getTickCount()).thenReturn(116);
+		when(current.getId()).thenReturn(8346);
+		when(current.getWorldLocation()).thenReturn(new WorldPoint(3286, 4248, 0));
+		when(current.getWorldArea()).thenReturn(new WorldArea(3286, 4248, 2, 2, 0));
+		plugin.onGameTick(new GameTick());
+		verify(client, times(1)).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylocas Toxobolos");
+		verify(client).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 43, -1, "Attack", "Nylocas Toxobolos");
 		SwingUtilities.invokeAndWait(plugin::shutDown);
 	}
 

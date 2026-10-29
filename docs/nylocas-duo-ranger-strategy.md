@@ -2,7 +2,7 @@
 
 This is a recording-derived baseline for an agent playing **Cutely meows' ranger role in normal-mode duos**, through the wave room and boss spawn. Its objective is to get wave 29 admitted quickly, complete the fresh lane rotation, then clear only the young tail that would otherwise delay cleanup. It assumes a complementary mage, not two independent players both attacking every available crab.
 
-Read the [wave-by-wave rotation](nylocas-duo-ranger-waves.md) alongside this hierarchy. The rotation defines the reserved attacks; this document decides what to do between them. The priorities below are inferred from repeated actions, rather than a claim to know the player's private decision process or to have proved an optimal policy.
+Read the [wave-by-wave rotation](nylocas-duo-ranger-waves.md) alongside this hierarchy. Early rotation entries provide route and ownership guidance; the requested pre-cap policy below supersedes their attack ordering and timing. From wave 20, the rotation defines the reserved attacks. The priorities below are inferred from repeated actions, rather than a claim to know the player's private decision process or to have proved an optimal policy.
 
 ## Evidence and timing conventions
 
@@ -12,13 +12,43 @@ The analysis joins actual attack targets to NPC births, current styles and playe
 
 Write `s23` for the actual spawn tick of wave 23, including any stalls. Offsets such as `s23+1` below are **Blert observation ticks**. Immediate opening/prefire attacks are commonly recorded one tick after NPC birth. The agent should act as soon as the correct target is actionable; it should not add an extra tick of delay merely to imitate the recorder. Flicker windows are also confirmed against the target's current style.
 
-The room uses a four-tick cycle; normal-mode cap is 12 before the wave-20 phase and 24 afterwards. Smalls expire after roughly 52 ticks, while big removal/splitting is later. Dying NPCs continue to occupy cap until removal, and a big replaces itself with two fresh smalls. These lifecycle distinctions matter more than a nominal HP-zero counter. See the [primary-source mechanics audit](nylocas-mechanics-source-audit.md) and [measured lifecycle evidence](nylocas-lifecycle-evidence.md).
+The room uses a four-tick cycle; normal-mode admission cap is 12 through wave 20 and 24 from wave 21. The ranger switches to its post-cap strategy as soon as wave 20 actually spawns. Smalls expire after roughly 52 ticks, while big removal/splitting is later. Dying NPCs continue to occupy cap until removal, and a big replaces itself with two fresh smalls. These lifecycle distinctions matter more than a nominal HP-zero counter. See the [primary-source mechanics audit](nylocas-mechanics-source-audit.md) and [measured lifecycle evidence](nylocas-lifecycle-evidence.md).
 
 ## The hierarchy
 
-### 1. Protect the next assigned lane attack
+### Pre-cap: plan kills and keep attacking
 
-The highest routine priority is a **short-lived assigned opportunity**, not whichever crab is nearest. Move into range ahead of the packet, reserve attack cooldown, attack the specified current style, then resume room clearing. Important anchors are:
+Through wave 19, attack whenever cooldown permits useful, unclaimed work. Early bows, south shots, scratches and paired assignments are flexible opportunities: do not idle, protect an untouched target, or reject an available attack just to reproduce observed offsets. Wave 10's west/east/south chin packet still reserves cooldown and staging time. Preserve the wave-20 west ranged flicker when handing over to the later rotation.
+
+Plan several attacks ahead, accounting for travel, weapon cooldown, current HP, partner projectiles, clusters and upcoming color changes. During cooldown, prepare the next weapon and approach the planned target. With no useful live target, stage for the next wave's assigned lane. When ready, prefer an attack available now over travelling or waiting for a higher-value target, except for the retained hard windows.
+
+Finish damaged smalls, especially ranged survivors, ahead of comparable full-HP targets. An observed attack is not a kill: recheck HP and death state and favour another hit after its projectile can resolve. A useful chin cluster can outweigh an isolated finish. Age breaks ties between comparable targets; it should not erase the advantage of finishing a damaged crab. Near-expiry targets, partner claims, wrong colors and death animations still matter.
+
+Keep complementary role assignments for magic and bigs. Small kills relieve cap; dying bodies continue occupying it, while dead bigs produce children. Prefer small clearing over opening extra bigs when population is high, including dying bodies in that population. Assigned bigs have completion goals and must not be starved by a continuous supply of smalls. As a goal approaches, prioritize that big over ordinary small clearing; after the first observed attack, retain finish priority through misses and nonlethal hits while pre-cap. Use cooldown to approach it and keep attacking available targets while ready. When wave 20 spawns, leave all surviving bigs born before wave 20 alive, including damaged or previously opened assignments; do not carry their finish priority forward. Partner claims, live colors and the retained hard windows still apply. Simulated attacks and a completed named attack packet never count as an observed big kill.
+
+The service goals below use each big's own age. They guide priority rather than reserve a precise prefire or guarantee a kill despite damage rolls. Urgency starts early enough to budget estimated remaining attacks and movement; overlapping urgent assignments use the earliest completion goal.
+
+| Assigned big | Eligible age | Completion goal age |
+| --- | --- | --- |
+| Wave 5 west | 2 | 8 |
+| Wave 6 east claw special | 9 | 15 |
+| Wave 7 south | 0 | 6 |
+| Wave 9 west | 5 | 13 |
+| **Wave 14 east** | **8** | **16** |
+
+In particular, start the wave-14 east big during the wave-15 east-side work when useful. By age 10 it needs service even if smalls remain, and age 16 is the finish goal. Do not leave it untouched until age 15 or release it after one attack.
+
+**Waves 18–20 use a separate team policy.** The team aims to kill all three wave-18 bigs, all three wave-19 bigs and two of the three wave-20 bigs, with **zero wave-20 admission retries**. Small clearing before the late big kills keeps population below the old cap. Big HP-zero is not cap relief: the body remains until removal, when two children replace it.
+
+Wait until each wave-18 big's observed southwest anchor is inside the room; never prefire it in a lane or assume a projected incoming step has entered. Normally hold all three until the **actual wave-19 spawn plus five ticks**, using its lane melee flicker as the timing guide. Then prioritize the ranged wave-18 bigs over ordinary clearing and finish them before their **age-26** mage change. This timing aims to move their split births until after wave 20 admission. Do not move the guide forward using nominal spawn times through a stall. The west wave-18 big alone may be killed earlier if it is already inside and **no small nylos remain in the room**, including dying bodies. South and east have no early exception.
+
+The wave-19 west mage is shared with the partner. Eye it only when no other useful attack is available; a nonlethal hit never turns it into a mandatory finish. The partner handles the other wave-19 mage work and helps on west. At actual wave 20, drop every surviving pre-cap big and begin the post-cap rotation: ranger west ranged flicker, partner south, with east left alive. Young children born after the phase change remain eligible on their own birth wave. The team objective depends on partner actions and damage rolls; the controller does not claim a guaranteed stall-free result from a target selection alone.
+
+The client compares up to three attacks across twelve ticks, retains six candidate sequences, and replans from observations every tick. Projected damage and lane movement are ranking heuristics; they neither mutate observed HP nor complete a packet. The sidebar displays the proposed target/weapon sequence. Actual damage, splits, claims, color changes and movement can replace it immediately. This is the requested policy, not an optimality result inferred from the recordings.
+
+### 1. From wave 20, protect the next assigned lane attack
+
+From wave 20, the highest routine priority is a **short-lived assigned opportunity**. The early rows below remain recording evidence and route guidance, subject to the flexible pre-cap policy above. Move into range ahead of the packet, reserve attack cooldown, attack the specified current style, then resume room clearing. Important anchors are:
 
 | Packet | Ranger action | Typical recorded timing |
 | --- | --- | --- |
@@ -35,11 +65,11 @@ The highest routine priority is a **short-lived assigned opportunity**, not whic
 
 Other early chin opportunities and the wave-13/14/15 paired assignments are described in the wave guide. They are less rigid than wave 20 or 23. Do not invent a mandatory attack on every wave.
 
-**Cooldown rule:** before taking a filler attack, require that its cooldown and the travel needed for the next reservation fit before the reservation. Blowpipe is 2 ticks, black chin 3, Eye of Ayak 3, claw scratch/spec 4, twisted bow 5 according to the [pinned attack definitions](https://github.com/blert-io/protos/blob/3c5bc5cfc315ff4266128601829e66615f3ef83d/attack_definitions.json). A five-tick bow does not naturally stay aligned to a four-tick room cycle. Use short attacks or an intentional idle tick to recover the correct phase; never fill a gap merely because an attack is currently available. Recalculate the deadline if the wave stalls.
+**Cooldown rule for hard reservations:** before wave 20, only wave 10 and the coming wave-20 flicker reserve cooldown. Before taking a filler attack, require that its cooldown and the travel needed for the next reservation fit before the reservation. Blowpipe is 2 ticks, black chin 3, Eye of Ayak 3, claw scratch/spec 4, twisted bow 5 according to the [pinned attack definitions](https://github.com/blert-io/protos/blob/3c5bc5cfc315ff4266128601829e66615f3ef83d/attack_definitions.json). A five-tick bow does not naturally stay aligned to a four-tick room cycle. Use short attacks or an intentional idle tick when needed for a hard reservation. Other pre-cap offsets do not justify an idle tick. Recalculate the deadline if the wave stalls.
 
 ### 2. Clear recent ranged smalls and useful ranged clusters
 
-Between reservations, blowpipe **fresh, unclaimed ranged smalls**: recent lane arrivals and new splits. Prefer the youngest useful target, then the one that can be finished with least travel/attacks. Chins are especially valuable on lane pairs and fresh clusters when the splash can clear multiple matching targets. An attack's recorded primary target does not prove how many were hit.
+Between reservations, blowpipe **fresh, unclaimed ranged smalls**: recent lane arrivals and new splits. Before cap, favour damaged targets with better finish odds and low travel, then younger comparable targets. From wave 20 the existing young-target preference applies. Chins are especially valuable on lane pairs and fresh clusters when the splash can clear multiple matching targets. An attack's recorded primary target does not prove how many were hit.
 
 An old small close to its natural expiry usually frees its slot without help. Do not spend several attacks chasing it while fresh targets will remain for another lifetime. This is a tie-break within viable, role-appropriate work: it does not override a reserved flicker, a nearly completed assigned packet, or the need to handle a selected big. The recordings explicitly contain older-target finishes, including deferred wave-14 and wave-18 bigs; “newest first” is not an absolute global sort.
 
@@ -47,17 +77,17 @@ Predict **removals at the next admission check**, rather than counting attack an
 
 ### 3. Accelerate selected bigs, according to room phase
 
-**Before cap increases:** use the named big assignments instead of indiscriminately opening every big. The core ranger route is west wave 5, south wave 7, west wave 9, the east melee big from wave 6 with a claw special, then the deferred ranged big from wave 14. The early claw special is deliberate burst on an assigned big, not the low-priority claw scratch described below.
+**Before cap increases:** use the named big assignments instead of indiscriminately opening every big. The core ranger route is west wave 5, south wave 7, west wave 9, the east melee big from wave 6 with a claw special, then the wave-14 east ranged big, now eligible at age 8 with a finish goal of age 16. The early claw special is deliberate burst on an assigned big, not the low-priority claw scratch described below.
 
-Wave 18 is a planned exception to “avoid extra bigs”: the ranger works through its ranged bigs, often west first and south/east later while wave 19 or 20 is current. Wave-19 west magic big is a repeated Eye assignment. Budget the resulting splits together with the mage's actions. Do not interpret a simple no-bigs rule as the pre-cap strategy.
+Wave 18 follows the room-entry and wave-19-melee timing guide above, with an age-26 finish goal and only the empty-small-room early west exception. Wave-19 west magic is shared fallback work. These late bigs do not inherit the ordinary early-big deadlines or mandatory finish policy.
 
-**From wave 20 onward:** the larger cap allows faster big-to-split conversion. Preserve the wave-20 west, wave-23 south, wave-24 west, wave-25 south and wave-27 south opportunities, and attack fresh ranged splits between them. Wave-25 south big is often finished in wave 26 or 27; it is not a universal first-tick prefire. The mage handles many complementary magic/melee bigs. A ranger should not chase those bigs merely because the room cap has increased.
+**From wave 20 onward:** switch immediately to the later rotation and leave all surviving pre-cap bigs alive. The larger admission cap starts with wave 21. Preserve the wave-20 west, wave-23 south, wave-24 west, wave-25 south and wave-27 south opportunities, and attack fresh ranged splits between them. Wave-25 south big is often finished in wave 26 or 27; it is not a universal first-tick prefire. The mage handles many complementary magic/melee bigs. A ranger should not chase those bigs merely because the room cap has increased.
 
 **During wave 28:** work to admit wave 29, rather than spending cooldowns on old crabs solely to make every earlier wave stall-free. Two or three retries can be acceptable under the requested strategy. Keep the scheduled south flickers and clear young splits that are holding population up. This is a policy tradeoff, not a claim that every recording has exactly that stall count or that a stall should be deliberately created.
 
 ### 4. Cover assigned magic and fresh magic splits with the Eye
 
-“Ranger” is an ownership role, not a ban on magic. Eye of Ayak attacks are a substantial part of the observed workload. In particular, the ranger often covers the west wave-13 magic small, south wave-14 magic small, east wave-15 magic small, and west wave-19 magic big. Handle these within the local lane packet; there is no reason to wait for the mage to cross the room to do it.
+“Ranger” is an ownership role, not a ban on magic. Eye of Ayak attacks are a substantial part of the observed workload. In particular, the ranger often covers the west wave-13 magic small, south wave-14 magic small, east wave-15 magic small, and occasional help on the shared west wave-19 magic big. Wave 19 west is strictly fallback; handle the other targets within the local lane packet; there is no reason to wait for the mage to cross the room to do it.
 
 Outside those packets, use the Eye on young magic splits when there is no better ranged work and its three-tick cooldown fits the next reservation. If a flicker is about to expose the target to ranged, waiting for the correct planned shot can be better than starting an off-style cooldown. Read the current style and the known spawn identity; initial color alone is insufficient.
 
@@ -83,7 +113,7 @@ Treat the following as complementary defaults, subject to visible misses, change
 | Wave-5 west ranged big | Wave-4 south magic big and wave-5 east magic small |
 | Wave-7 south ranged big | South magic small and other off-style work |
 | Wave-14 south pair; wave-15 east pair | Wave-14 west magic; wave-15 west-side work |
-| Wave-19 west big; wave-20 west ranged flicker | Wave-19 east/south work; wave-20 south big |
+| Wave-18 bigs after entry and the wave-19 melee guide; optional west-19 help; wave-20 west flicker | Wave-19 mage work including shared west; wave-20 south big |
 | Wave-23 south big then west pair | Complementary bigs and splits |
 
 Do not double up on a target already expected to die from the partner's in-flight attack. Re-evaluate if it survives, the partner changes task, or room state requires help. Parent links can inform split ownership but are inferred and sometimes missing; they must not be the sole way to identify a fresh split.
@@ -115,6 +145,6 @@ The recordings support the fresh lane packets strongly but also contain occasion
 
 Track actual last-spawned wave and its tick; room-cycle phase; next lane reservation; attack-ready tick; player position; teammate target/in-flight work; every crab's stable identity, birth tick, birth wave, current style, size, lane/split origin, estimated HP and removal state; and whether the final lane packet is complete. Also track current prayer points, the last offensive prayer, selected protection style, fighting nylocas' player targets and reachability, and the next permitted potion dose tick.
 
-On each decision: discard removed, wrong-style, already-lethally-covered and cleanup-ineligible targets; execute a due reservation; otherwise consider recent ranged smalls/clusters, phase-appropriate assigned bigs, Eye work, then local scratches. For every optional action, reject it if it would miss the next reservation after movement. A reserved target already killed by the partner should be skipped, not waited on or attacked by stale identity.
+On each decision: discard removed, wrong-style, already-lethally-covered and cleanup-ineligible targets. Before wave 20, compare short attack sequences, prefer immediate useful work and damaged ranged finishes, and use cooldown to stage for the next target. From wave 20, execute a due reservation; otherwise consider recent ranged smalls/clusters, phase-appropriate assigned bigs, Eye work, then local scratches. Reject optional actions that would miss a hard reservation after movement. A reserved target already killed by the partner should be skipped, not waited on or attacked by stale identity.
 
 This is enough to implement the first policy without encoding an exact human tick script. The corpus validates that its rotation anchors and staging tiles were used; it does not establish counterfactual room times, exact target-value weights, or optimal choices under every random split/partner outcome.

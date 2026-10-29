@@ -84,6 +84,7 @@ final class RangerStrategy
 		int specialEnergy;
 		boolean cleanup;
 		WorldPoint player;
+		final Set<Integer> obstructed = new HashSet<>();
 
 		Room() { Arrays.fill(spawns, -1); }
 	}
@@ -96,6 +97,7 @@ final class RangerStrategy
 		final boolean special;
 		final String rule;
 		final String reason;
+		Crab approach;
 
 		Decision(Crab target, Weapon weapon, WorldPoint tile, boolean special, String rule, String reason)
 		{
@@ -112,6 +114,37 @@ final class RangerStrategy
 	// Delay after the given wave, independently of cap retries.
 	private static final int[] DELAYS = {0, 4, 4, 4, 4, 16, 4, 12, 4, 12, 8, 8, 8, 8, 8, 8, 4,
 		12, 8, 12, 16, 8, 12, 8, 8, 8, 4, 8, 4, 4, 4, 0};
+
+	// Service windows are policy goals, not hard prefires or proof of a successful kill.
+	private enum BigAssignment
+	{
+		WEST_5(5, Lane.WEST, 2, 8),
+		EAST_6(6, Lane.EAST, 9, 15),
+		SOUTH_7(7, Lane.SOUTH, 0, 6),
+		WEST_9(9, Lane.WEST, 5, 13),
+		EAST_14(14, Lane.EAST, 8, 16);
+
+		final int wave;
+		final Lane lane;
+		final int first;
+		final int due;
+
+		BigAssignment(int wave, Lane lane, int first, int due)
+		{
+			this.wave = wave;
+			this.lane = lane;
+			this.first = first;
+			this.due = due;
+		}
+
+		static BigAssignment of(Crab crab)
+		{
+			if (crab.big)
+				for (BigAssignment assignment : values())
+					if (assignment.wave == crab.wave && assignment.lane == crab.lane) return assignment;
+			return null;
+		}
+	}
 
 	static final class Rule
 	{
@@ -214,6 +247,7 @@ final class RangerStrategy
 
 	private final Set<String> completed = new HashSet<>();
 	private final Set<Integer> opened = new HashSet<>();
+	private final RangerPreCapPlanner preCap = new RangerPreCapPlanner(this);
 
 	void reset()
 	{
@@ -234,6 +268,7 @@ final class RangerStrategy
 		if (room.wave == 0) return prepare(Weapon.BOW, tile(3292, 4249), "Opening setup");
 		if (room.wave == 31 && finalPacketFinished(room, tick)) room.cleanup = true;
 		Reservation next = reservation(room, tick);
+		if (room.wave < 20) return preCap.decide(room, tick, next);
 		if (tick < room.ready) return staging(room, next, "Attack cooldown");
 
 		Decision best = null;
@@ -242,7 +277,7 @@ final class RangerStrategy
 		{
 			int age = tick - crab.born;
 			if (crab.dying || crab.claimedUntil > tick || (!crab.big && crab.ownHitUntil > tick)
-				|| age >= 49 || (room.cleanup && crab.wave <= 29)) continue;
+				|| age >= 49 || crab.big && crab.wave < 20 || (room.cleanup && crab.wave <= 29)) continue;
 			for (Rule rule : RULES)
 			{
 				if (completed.contains(rule.name) || !rule.matches(crab) || age < rule.first || age > rule.last
@@ -274,7 +309,7 @@ final class RangerStrategy
 			else if (crab.big && assignedBig(crab, room, age))
 			{
 				weapon = crab.style == Style.RANGE ? Weapon.PIPE : crab.style == Style.MAGIC ? Weapon.EYE
-					: crab.wave == 6 && opened.contains(crab.key) ? Weapon.CLAWS : null;
+					: crab.wave == 6 ? Weapon.CLAWS : null;
 				score = (room.cleanup ? 16000 : opened.contains(crab.key) && age < 14 ? 14000 : 6800) - age * 40;
 			}
 			else if (!crab.big && crab.style == Style.MAGIC && (crab.lane == Lane.SPLIT || assignedMagic(crab)))
@@ -311,19 +346,60 @@ final class RangerStrategy
 			|| tick > room.spawns[r.wave] + r.last || room.crabs.stream().noneMatch(c -> r.matches(c) && !c.dying));
 	}
 
-	private boolean assignedBig(Crab c, Room room, int age)
+	boolean assignedBig(Crab c, Room room, int age)
 	{
-		if (c.wave == 6) return c.lane == Lane.EAST && age >= 9 && opened.contains(c.key);
-		if (c.wave == 5 || c.wave == 9 || c.wave == 24 || c.wave == 30) return c.lane == Lane.WEST;
-		if (c.wave == 7 || c.wave == 25 || c.wave == 27) return c.lane == Lane.SOUTH;
-		if (c.wave == 14) return c.lane == Lane.EAST && age >= 15;
-		if (c.wave == 18) return age >= 7;
-		if (c.wave == 19) return c.lane == Lane.WEST && c.style == Style.MAGIC;
+		if (room.wave >= 20 && c.wave < 20) return false;
+		BigAssignment assignment = BigAssignment.of(c);
+		if (assignment != null) return age >= assignment.first && (c.wave != 19 || c.style == Style.MAGIC);
+		if (c.wave == 18) return wave18Available(c, room, c.born + age);
+		if (c.wave == 19) return c.lane == Lane.WEST && c.style == Style.MAGIC && enteredRoom(c);
+		if (c.wave == 24 || c.wave == 30) return c.lane == Lane.WEST;
+		if (c.wave == 25 || c.wave == 27) return c.lane == Lane.SOUTH;
 		if (c.wave == 20) return c.lane == Lane.WEST && (opened.contains(c.key) || age >= 7);
 		return c.wave == 23 && c.lane == Lane.SOUTH;
 	}
 
-	private static boolean assignedMagic(Crab c)
+	int bigServiceDeadline(Crab crab, Room room, int tick, Weapon weapon)
+	{
+		if (room.wave >= 20) return Integer.MAX_VALUE;
+		if (crab.big && crab.wave == 18 && wave18Available(crab, room, tick)) return crab.born + 26;
+		BigAssignment assignment = BigAssignment.of(crab);
+		if (assignment == null || tick - crab.born < assignment.first || crab.claimedUntil > tick)
+			return Integer.MAX_VALUE;
+		int attacks = Math.max(1, (crab.hp + 7) / 8);
+		int cooldown = weapon.style == Style.RANGE ? Weapon.PIPE.cooldown : weapon.cooldown;
+		int deadline = crab.born + assignment.due;
+		return opened.contains(crab.key) || tick + attacks * cooldown + 2 >= deadline
+			? deadline : Integer.MAX_VALUE;
+	}
+
+	int bigCompletionDeadline(Crab crab)
+	{
+		if (crab.big && crab.wave == 18) return crab.born + 26;
+		BigAssignment assignment = BigAssignment.of(crab);
+		return assignment == null ? Integer.MAX_VALUE : crab.born + assignment.due;
+	}
+
+	static boolean enteredRoom(Crab crab)
+	{
+		// Use the observed southwest anchor, never a projected incoming step or model centre.
+		return crab.point.getX() >= 3290 && crab.point.getX() <= 3301
+			&& crab.point.getY() >= 4243 && crab.point.getY() <= 4254;
+	}
+
+	static boolean wave18Released(Room room, int tick)
+	{
+		// Actual wave-19 birth includes stalls. Its age-five melee flicker is the timing guide.
+		return room.wave == 19 && room.spawns[19] >= 0 && tick >= room.spawns[19] + 5;
+	}
+
+	static boolean wave18Available(Crab crab, Room room, int tick)
+	{
+		if (room.wave >= 20 || !enteredRoom(crab) || tick - crab.born >= 26) return false;
+		return wave18Released(room, tick) || crab.lane == Lane.WEST && room.crabs.stream().noneMatch(c -> !c.big);
+	}
+
+	static boolean assignedMagic(Crab c)
 	{
 		return c.wave == 5 && c.lane == Lane.EAST || c.wave == 9 && c.lane == Lane.EAST
 			|| c.wave == 11 && c.lane == Lane.SOUTH && c.slot == 'E'
@@ -331,7 +407,7 @@ final class RangerStrategy
 			|| c.wave == 15 && c.lane == Lane.EAST;
 	}
 
-	private static final class Reservation
+	static final class Reservation
 	{
 		final Rule rule;
 		final int due;
@@ -343,7 +419,8 @@ final class RangerStrategy
 		List<Reservation> reservations = new ArrayList<>();
 		for (Rule rule : RULES)
 		{
-			if (rule.priority != 0 || completed.contains(rule.name)) continue;
+			if (rule.priority != 0 || completed.contains(rule.name)
+				|| room.wave < 20 && rule.wave != 10 && rule.wave != 20) continue;
 			if (rule.wave <= room.wave)
 			{
 				Crab crab = room.crabs.stream().filter(c -> rule.matches(c) && !c.dying).findFirst().orElse(null);
@@ -368,9 +445,15 @@ final class RangerStrategy
 		return tick + approach + Math.max(action.weapon.cooldown, reposition) <= next.due;
 	}
 
-	private static Decision staging(Room room, Reservation next, String reason)
+	static Decision staging(Room room, Reservation next, String reason)
 	{
 		if (next != null) return prepare(next.rule.weapon, next.rule.stage, reason + ": " + next.rule.name);
+		if (room.wave < 20)
+		{
+			Rule upcoming = RULES.stream().filter(r -> r.wave == room.wave + 1)
+				.min(Comparator.comparingInt(r -> r.first)).orElse(null);
+			if (upcoming != null) return prepare(upcoming.weapon, upcoming.stage, reason + ": prepare " + upcoming.name);
+		}
 		WorldPoint stage = room.wave >= 18 && room.wave <= 20 || room.wave >= 29 ? tile(3293, 4248) : CENTER;
 		return prepare(Weapon.PIPE, stage, reason);
 	}
@@ -379,6 +462,9 @@ final class RangerStrategy
 	{
 		return new Decision(null, weapon, tile, false, null, reason);
 	}
+
+	boolean completed(Rule rule) { return completed.contains(rule.name); }
+	boolean opened(Crab crab) { return opened.contains(crab.key); }
 
 	static WorldPoint tile(int x, int y) { return new WorldPoint(x, y, 0); }
 }

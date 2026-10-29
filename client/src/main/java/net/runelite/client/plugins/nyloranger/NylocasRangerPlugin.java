@@ -268,9 +268,22 @@ public class NylocasRangerPlugin extends Plugin
 		births.clear();
 		room.crabs.clear();
 		room.crabs.addAll(tracked.values());
+		room.obstructed.clear();
+		if (room.wave < 20)
+		{
+			for (Map.Entry<NPC, Crab> entry : tracked.entrySet())
+				if (!player.getWorldArea().hasLineOfSightTo(client.getTopLevelWorldView(), entry.getKey().getWorldArea()))
+					room.obstructed.add(entry.getValue().key);
+		}
 		room.specialEnergy = client.getVarpValue(300);
 		prayers.tick(tracked, tick);
 		actions.controls();
+		if (room.wave >= 20 && pending != null && pending.target.big && pending.target.wave < 20)
+		{
+			// Discard unacknowledged pre-cap work at the phase change; preserve the possible cooldown.
+			actions.stopAttacking();
+			pending = null;
+		}
 		if (pending != null)
 		{
 			// Blowpipe/Eye animations can be continuous, without AnimationChanged.
@@ -291,7 +304,14 @@ public class NylocasRangerPlugin extends Plugin
 		if (decision.target == null)
 		{
 			if (!actions.prepare(decision.weapon)) { stop(actions.error()); return; }
-			if (!point.equals(decision.tile) || player.getInteracting() != null) actions.walk(decision.tile);
+			NPC approach = decision.approach == null ? null : npc(decision.approach);
+			if (approach != null && (decision.approach.distance(point) > decision.weapon.range
+				|| room.obstructed.contains(decision.approach.key)))
+			{
+				// An incoming lane crab may not have a reachable attack tile yet.
+				if (!actions.approach(approach, decision.weapon.range, decision.tile)) actions.walk(decision.tile);
+			}
+			else if (!point.equals(decision.tile) || player.getInteracting() != null) actions.walk(decision.tile);
 		}
 		else
 		{

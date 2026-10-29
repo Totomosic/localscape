@@ -4,7 +4,7 @@
 
 Start from `(3292,4249)`, shoot the west small, then move east during cooldown. The normal recorded shot is `s1+1`. The mage handles south magic. This is the first action of the rotation; the detailed continuation follows below.
 
-This guide implements the [strategy hierarchy](nylocas-duo-ranger-strategy.md). `sN` means the **actual** spawn tick of wave N, including stalls. “Wave N” in an entry means N was the last wave to spawn; “wave-X target” identifies that crab's birth wave. North/south distinguish horizontal-lane smalls; west/east distinguish south-lane smalls. Big anchors are southwest tiles and do not identify two separate bigs.
+This guide supplies target ownership and recorded routes for the [strategy hierarchy](nylocas-duo-ranger-strategy.md). **Before wave 20, the throughput policy takes precedence over the recorded ordering and offsets below:** attack whenever ready, plan follow-ups during cooldown, and usually finish a damaged ranged small before opening a full-HP one. Wave 10's chin packet remains reserved; the wave-20 west flicker begins the later timed rotation. Other early bow/chin/scratch entries are flexible work, not deadlines. `sN` means the **actual** spawn tick of wave N, including stalls. “Wave N” in an entry means N was the last wave to spawn; “wave-X target” identifies that crab's birth wave. North/south distinguish horizontal-lane smalls; west/east distinguish south-lane smalls. Big anchors are southwest tiles and do not identify two separate bigs.
 
 Timings are replay observation offsets, not additional delays to insert after seeing a spawn. “Immediate” attacks usually appear at birth+1 in Blert. Read current style before attacking flickers. A pending attack follows its target timer when the next wave appears; it is not cancelled or reset by a new wave. Flexible clearing follows the hierarchy and need not occur in exactly the same order in every recording.
 
@@ -12,23 +12,23 @@ Throughout all waves, apply the [prayer upkeep and protection policy](nylocas-du
 
 ## Wave 2: twisted bow east range small
 
-Move across toward `(3298,4249)` and bow the wave-2 east south-slot ranged small, normally `s2+3`. The opening bow's five-tick cooldown prevents a second immediate shot on a wave only four ticks later. Continue south; mage owns west magic. Do not add an unnecessary filler attack before the south packet.
+Move across toward `(3298,4249)` and bow the wave-2 east south-slot ranged small, normally `s2+3`. The opening bow's five-tick cooldown prevents a second immediate shot on a wave only four ticks later. Continue south; mage owns west magic. Take useful attacks while ready; the south packet does not reserve cooldown.
 
 ## Wave 3: move south and prepare the wave-3 ranged small
 
-Move toward `(3295–3296,4243–4244)`. Usually there is no attack while wave 3 remains current: the next action is a black chin at the wave-3 south east-slot ranged small around its age four, when wave 4 has just spawned. A few recordings chin one tick earlier. Do not label this an immediate wave-3 prefire.
+Move toward `(3295–3296,4243–4244)`. In the recordings there is usually no attack while wave 3 remains current, but the planner should fill available attack ticks: the next action is a black chin at the wave-3 south east-slot ranged small around its age four, when wave 4 has just spawned. A few recordings chin one tick earlier. Do not label this an immediate wave-3 prefire.
 
 ## Wave 4: chin wave-3 south range; scratch wave-2 south melee
 
-Chin the arriving wave-3 south ranged small, usually `s4+0`, then ordinary claw scratch the wave-2 south west-slot melee small at `s4+3`. Stay around the south mouth. The mage handles the wave-4 south magic big. The wave-4 west ranged small is carried into the wave-5 packet; do not delay the wave-5 west big to chase it first.
+Chin the arriving wave-3 south ranged small, usually `s4+0`, then ordinary claw scratch the wave-2 south west-slot melee small at `s4+3`. Stay around the south mouth. The mage handles the wave-4 south magic big. The recordings carry the wave-4 west ranged small into the wave-5 packet. Under the pre-cap policy, kill it sooner if useful; the wave-5 big is not a hard deadline.
 
 ## Wave 5: blowpipe west ranged big, then the recent west ranged small
 
 Move west and open on the wave-5 west big from about `(3290,4248)`, commonly `s5+3`. Continue if needed, then clear the wave-4 west north-slot ranged small. Use the long interval before wave 6 for fresh ranged splits and useful Eye work, sometimes the wave-5 east magic small if the mage has not finished it. Move back toward south before wave 6/7. Neither the number of blowpipe hits on the big nor the split colors are fixed.
 
-## Wave 6: south ranged small if available; reserve wave-7 south big
+## Wave 6: south ranged small and useful follow-ups
 
-Chin the wave-6 south west-slot ranged small as it comes down the lane, often `s6+1…3`; otherwise finish it with the blowpipe when it arrives. Fresh wave-5 split work may come first. Stage at the south mouth and avoid a filler that would block the next south bow. The wave-6 east melee big is deliberately saved for the upcoming claw special.
+Chin the wave-6 south west-slot ranged small as it comes down the lane, often `s6+1…3`; otherwise finish it with the blowpipe when it arrives. Fresh wave-5 split work may come first. Use free attack ticks, and stage at the south mouth during cooldown when it serves the next useful attack. The next south bow is flexible. The wave-6 east melee big is deliberately saved for the upcoming claw special.
 
 ## Wave 7: south ranged big, then claw special the wave-6 east melee big
 
@@ -48,7 +48,7 @@ Use black chins on the ranged groups. A common route is west around `s10+1`, eas
 
 ## Wave 11: finish the wave-10 ranged workload
 
-Continue the wave-10 south chin if pending, then blowpipe its remaining smalls, ranged splits and surviving east ranged big when useful. Favor fresh smalls over an old isolated target. Hold central tiles around `(3295,4248)`. The all-magic wave-11 arrivals are mainly the mage's packet; the ranger's recurrent off-style contribution is the south east-slot magic small, often attacked in wave 12.
+Continue the wave-10 south chin if pending, then blowpipe its remaining smalls, ranged splits and surviving east ranged big when useful. Favor damaged ranged finishes, then younger comparable smalls, over low-value near-expiry targets. Hold central tiles around `(3295,4248)`. The all-magic wave-11 arrivals are mainly the mage's packet; the ranger's recurrent off-style contribution is the south east-slot magic small, often attacked in wave 12.
 
 ## Wave 12: Eye recent magic targets; clear fresh ranged splits
 
@@ -60,31 +60,35 @@ Eye the wave-13 west south-slot magic small when unclaimed, and blowpipe the wes
 
 ## Wave 14: south work, retaining the wave-13 south ranged target
 
-Finish the wave-13 south ranged small and take the wave-14 south west-slot ranged small. Eye the wave-14 south east-slot magic small if available; this often extends into wave 15. The mage works on west magic. The wave-14 east ranged big is frequently **deferred** to waves 16–17, rather than opened immediately. Keep this assigned big in the pending-work set while moving toward the east pair.
+Finish the wave-13 south ranged small and take the wave-14 south west-slot ranged small. Eye the wave-14 south east-slot magic small if available; this often extends into wave 15. The mage works on west magic. The recordings often defer the wave-14 east ranged big to waves 16–17. The current policy brings it forward: it becomes eligible at age 8 during wave-15 east-side work, needs priority by age 10, and has an age-16 finish goal. Keep it in the pending-work set until observed dead.
 
 ## Wave 15: east magic/ranged pair
 
-Move east toward `(3300–3301,4248–4249)`, Eye the east north-slot magic small and blowpipe the east south-slot ranged small. Either can come first depending on unfinished south work and partner coverage. The wave-15 west south-slot ranged small is often finished later from center. Leave the south magic big to the mage's normal work. Avoid extending eastward travel after the pair is handled.
+Move east toward `(3300–3301,4248–4249)`, Eye the east north-slot magic small and blowpipe the east south-slot ranged small. Either can come first depending on unfinished south work and partner coverage. The wave-15 west south-slot ranged small is often finished later from center. Leave the south magic big to the mage's normal work. Work on the wave-14 east big while on this side; once attacked, finish it through misses and nonlethal hits. Avoid extending eastward travel after the east work is handled.
 
 ## Wave 16: finish the east packet and prepare the wave-16 flickers
 
-Finish the wave-15 east pair if needed, and blowpipe the deferred wave-14 east ranged big. Take the wave-15 west ranged small when convenient during the return to center. A wave-16 west ranged small can be chinned early, but this is not universal. The main wave-16 packet is usually attacked **after wave 17 spawns**, once its three smalls have passed through the lane flickers and are ranged. Do not shoot their initial colors indiscriminately.
+Finish the wave-14 east ranged big if it survived its age-16 goal, ahead of ordinary small clearing. Complete remaining wave-15 east work when its finish priority permits. Take the wave-15 west ranged small when convenient during the return to center. A wave-16 west ranged small can be chinned early, but this is not universal. The main wave-16 packet is usually attacked **after wave 17 spawns**, once its three smalls have passed through the lane flickers and are ranged. Do not shoot their initial colors indiscriminately.
 
 ## Wave 17: blowpipe wave-16 ranged smalls; finish the deferred big
 
 Finish the wave-14 east ranged big if still useful, then blowpipe the wave-16 east, south and west smalls when currently ranged, normally ages roughly 8–14. Their initial colors differ, so identify them by spawn lane/slot as well as current state. Order is flexible; recent useful splits can interleave. The newly arrived wave-17 magic bigs are predominantly the mage's work, not a fresh mandatory ranger big packet. Return toward `(3293,4248)`.
 
-## Wave 18: fresh splits and west big's matching window
+## Wave 18: clear smalls and hold the ranged bigs until safe
 
-Clear recent ranged/magic splits while holding west center. Start the wave-18 west ranged big when useful: some runs bow it early, others Eye its intermediate magic flicker or blowpipe after it returns ranged. This is a variable part of the rotation. Do not force three initial big attacks; the very consistent south/east ranged-big work normally happens in wave 19 or early 20.
+Keep clearing smalls while the three wave-18 ranged bigs enter. Never attack these bigs in the lanes, even from bow range; verify their observed anchors are inside the room. Normally wait for the wave-19 lane bigs to flicker melee at `s19+5` before starting their kills. The **west** wave-18 big may be killed earlier only after entering and only when there are no small nylos left, including dying bodies. South/east have no early exception. Their final mage change at age 26 is the finish deadline, not their brief age-5 mage flicker.
 
-## Wave 19: wave-18 ranged bigs, with west wave-19 Eye coverage
+## Wave 19: release wave-18 ranged bigs at the melee flicker; west mage is fallback
 
-From `(3293,4248)`, finish the west wave-18 big and blowpipe the south/east wave-18 bigs when ranged. Eye the wave-19 west magic big when it is available and its timing fits. The mage works on complementary east/south magic targets. Mix in recent ranged splits where they matter for admission. Some finishes extend into wave 20; reserve the coming west flicker rather than pursuing a low-value finish through its deadline.
+Use the actual wave-19 spawn, including any stalls. At `s19+5`, the lane bigs flicker melee: use this as the guide to kill the in-room wave-18 ranged bigs, generally from west/center. This late kill timing aims to defer their split births until after wave 20 is admitted. Keep attacking on cooldown and prefer finishing damaged ranged bigs; partner claims still apply.
 
-## Wave 20: reserve `s20+6` for the west big's ranged flicker
+Only Eye the shared wave-19 west mage if there is no other useful attack. The partner helps with it and handles complementary mage bigs. A hit on west does not commit the ranger to finishing it over ranged or small work. The team objective is all three wave-18 bigs, all three wave-19 bigs and two of the wave-20 bigs, with **zero wave-20 retries**. Do not count dying bodies as free cap slots.
 
-The wave-20 west big **starts melee**. Finish suitable wave-18 ranged work or the wave-19 west magic target before its ranged opportunity, then twisted bow this west big at the ranged flicker, typically recorded at `s20+6`. The south big belongs to the mage's packet. After the bow, clear fresh ranged splits and reposition east for wave 21. `(3293,4248)` is the dominant staging tile here. This is one of the strongest cooldown-reservation rules in the corpus.
+## Wave 20: drop surviving pre-cap bigs and reserve the west ranged flicker
+
+As soon as wave 20 actually spawns, leave every surviving big born before wave 20 alive, including previously hit wave-14/18/19 bigs. Discard pending pre-cap work and use the post-cap rotation. New children have their own birth wave and remain eligible for clearing.
+
+The wave-20 west big **starts melee**. Twisted bow it during its ranged flicker, typically recorded at `s20+6` (requested at age five). The partner handles south; leave east alive for the two-of-three team policy. After the west shot, clear fresh ranged splits and reposition east for wave 21. `(3293,4248)` remains the usual west/central base. The old cap applies to admitting wave 20; the larger admission cap starts at wave 21.
 
 ## Wave 21: immediate east chin, then fresh ranged splits
 
