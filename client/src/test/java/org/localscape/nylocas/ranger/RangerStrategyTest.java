@@ -1,12 +1,14 @@
-package net.runelite.client.plugins.nyloranger;
+package org.localscape.nylocas.ranger;
 
-import net.runelite.api.coords.WorldPoint;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Crab;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Decision;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Lane;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Room;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Style;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Weapon;
+import org.localscape.nylocas.ranger.RangerFlickers;
+import net.runelite.client.plugins.nyloranger.NylocasRangerPlugin;
+import org.localscape.nylocas.Tile;
+import org.localscape.nylocas.ranger.RangerStrategy.Crab;
+import org.localscape.nylocas.ranger.RangerStrategy.Decision;
+import org.localscape.nylocas.ranger.RangerStrategy.Lane;
+import org.localscape.nylocas.ranger.RangerStrategy.Room;
+import org.localscape.nylocas.ranger.RangerStrategy.Style;
+import org.localscape.nylocas.ranger.RangerStrategy.Weapon;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -392,8 +394,8 @@ public class RangerStrategyTest
 	public void wave18CannotBeAttackedUntilObservedInsideRoom()
 	{
 		Lane[] lanes = {Lane.WEST, Lane.SOUTH, Lane.EAST};
-		WorldPoint[] outside = {RangerStrategy.tile(3289, 4248), RangerStrategy.tile(3295, 4242), RangerStrategy.tile(3302, 4248)};
-		WorldPoint[] inside = {RangerStrategy.tile(3290, 4248), RangerStrategy.tile(3295, 4243), RangerStrategy.tile(3301, 4248)};
+		Tile[] outside = {RangerStrategy.tile(3289, 4248), RangerStrategy.tile(3295, 4242), RangerStrategy.tile(3302, 4248)};
+		Tile[] inside = {RangerStrategy.tile(3290, 4248), RangerStrategy.tile(3295, 4243), RangerStrategy.tile(3301, 4248)};
 		for (int i = 0; i < lanes.length; i++)
 		{
 			Room room = room(19, 108);
@@ -654,9 +656,9 @@ public class RangerStrategyTest
 	@Test
 	public void classifiesOnlyTrueLaneAnchorsAsLaneBirths()
 	{
-		assertEquals(Lane.WEST, NylocasRangerPlugin.lane(new WorldPoint(3281, 4249, 0)));
-		assertEquals(Lane.EAST, NylocasRangerPlugin.lane(new WorldPoint(3309, 4248, 0)));
-		assertEquals(Lane.SOUTH, NylocasRangerPlugin.lane(new WorldPoint(3296, 4233, 0)));
-		assertEquals(Lane.SPLIT, NylocasRangerPlugin.lane(new WorldPoint(3295, 4248, 0)));
+		assertEquals(Lane.WEST, NylocasRangerPlugin.lane(new net.runelite.api.coords.WorldPoint(3281, 4249, 0)));
+		assertEquals(Lane.EAST, NylocasRangerPlugin.lane(new net.runelite.api.coords.WorldPoint(3309, 4248, 0)));
+		assertEquals(Lane.SOUTH, NylocasRangerPlugin.lane(new net.runelite.api.coords.WorldPoint(3296, 4233, 0)));
+		assertEquals(Lane.SPLIT, NylocasRangerPlugin.lane(new net.runelite.api.coords.WorldPoint(3295, 4248, 0)));
 	}
 }

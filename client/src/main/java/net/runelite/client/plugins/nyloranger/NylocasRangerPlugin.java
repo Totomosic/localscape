@@ -1,5 +1,7 @@
 package net.runelite.client.plugins.nyloranger;
 
+import org.localscape.nylocas.Tile;
+import org.localscape.nylocas.ranger.RangerStrategy;
 import com.google.inject.Provides;
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -27,12 +29,12 @@ import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Crab;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Decision;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Lane;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Room;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Style;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Weapon;
+import org.localscape.nylocas.ranger.RangerStrategy.Crab;
+import org.localscape.nylocas.ranger.RangerStrategy.Decision;
+import org.localscape.nylocas.ranger.RangerStrategy.Lane;
+import org.localscape.nylocas.ranger.RangerStrategy.Room;
+import org.localscape.nylocas.ranger.RangerStrategy.Style;
+import org.localscape.nylocas.ranger.RangerStrategy.Weapon;
 import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
 
@@ -66,6 +68,8 @@ public class NylocasRangerPlugin extends Plugin
 	private boolean entered;
 	private boolean validated;
 	private boolean cameraPrepared;
+	private boolean roomStartRequested;
+	private boolean roomStartSubmitted;
 
 	@Provides
 	RangerConfig provideConfig(ConfigManager manager) { return manager.getConfig(RangerConfig.class); }
@@ -77,6 +81,7 @@ public class NylocasRangerPlugin extends Plugin
 		prayers = new RangerPrayers(client, config, actions);
 		panel = new RangerPanel(() -> clientThread.invokeLater(this::start),
 			() -> clientThread.invokeLater(() -> stop("Stopped")),
+			() -> clientThread.invokeLater(this::startRoom),
 			style -> clientThread.invokeLater(() -> capture(style)));
 		BufferedImage image = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
 		Graphics2D graphics = image.createGraphics();
@@ -119,6 +124,24 @@ public class NylocasRangerPlugin extends Plugin
 		status("Armed. Waiting at the Nylocas barrier for the partner.");
 	}
 
+	private void startRoom()
+	{
+		if (!running || client.getGameState() != GameState.LOGGED_IN || client.getLocalPlayer() == null)
+		{
+			status("Start the agent at the barrier before starting the room.");
+			return;
+		}
+		WorldPoint point = actions.normalize(client.getLocalPlayer().getWorldLocation());
+		if (entered || !nearRoom(point) || point.getY() < 4255 || isPlayerDead())
+		{
+			status("Start room is available while waiting outside the Nylocas barrier.");
+			return;
+		}
+		roomStartRequested = true;
+		roomStartSubmitted = false;
+		status("Room start requested. Waiting for the Nylocas entry confirmation.");
+	}
+
 	private void stop(String reason)
 	{
 		running = false;
@@ -139,6 +162,8 @@ public class NylocasRangerPlugin extends Plugin
 		entered = false;
 		validated = false;
 		cameraPrepared = false;
+		roomStartRequested = false;
+		roomStartSubmitted = false;
 		lastTick = -1;
 	}
 
@@ -220,16 +245,24 @@ public class NylocasRangerPlugin extends Plugin
 			}
 			if (!actions.prepareWaiting()) { stop(actions.error()); return; }
 			actions.controls();
-			status(actions.barrier() ? "Clicking barrier; waiting for partner. Enter is never selected."
+			if (roomStartRequested && !roomStartSubmitted && actions.confirmRoomStart()) roomStartSubmitted = true;
+			if (roomStartSubmitted)
+			{
+				status("Room start confirmed. Waiting to enter Nylocas.");
+				return;
+			}
+			status(actions.barrier() ? "Clicking barrier; waiting. Press Start room to enter."
 				: "Waiting for Nylocas barrier to load.");
 			return;
 		}
 		if (!entered)
 		{
 			entered = true;
+			roomStartRequested = false;
+			roomStartSubmitted = false;
 			room.ready = tick;
 		}
-		room.player = point;
+		room.player = tile(point);
 		int wave = client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL);
 		if (wave >= 1 && wave <= 31 && wave > room.wave)
 		{
@@ -255,10 +288,10 @@ public class NylocasRangerPlugin extends Plugin
 				char slot = lane == Lane.SOUTH ? (position.getX() == 3295 ? 'W' : 'E')
 					: lane == Lane.WEST || lane == Lane.EAST ? (position.getY() == 4249 ? 'N' : 'S') : 0;
 				crab = new Crab(++serial, npc.getIndex(), births.getOrDefault(npc, tick), room.wave, lane,
-					slot, big(npc), style(npc), position);
+					slot, big(npc), style(npc), tile(position));
 				tracked.put(npc, crab);
 			}
-			crab.point = position;
+			crab.point = tile(position);
 			crab.style = style(npc);
 			int scale = npc.getHealthScale();
 			if (scale > 0 && npc.getHealthRatio() >= 0)
@@ -293,36 +326,37 @@ public class NylocasRangerPlugin extends Plugin
 			{
 				confirm(tick);
 			}
-			else if (tick - requestedTick >= 3 || !tracked.containsValue(pending.target))
+			else
 			{
 				pending = null;
-				room.ready = tick; // Failed request is not a completed rotation task.
+				// A request is not a launch. Reconsider it on the next tick,
+				// without sending movement that could cancel an attack still in flight.
+				room.ready = tick;
 			}
-			else { actions.stopAttacking(); status("Waiting for attack acknowledgement"); return; }
 		}
 		Decision decision = strategy.decide(room, tick);
 		if (decision.target == null)
 		{
 			if (!actions.prepare(decision.weapon)) { stop(actions.error()); return; }
 			NPC approach = decision.approach == null ? null : npc(decision.approach);
-			if (approach != null && (decision.approach.distance(point) > decision.weapon.range
+			if (approach != null && (decision.approach.distance(tile(point)) > decision.weapon.range
 				|| room.obstructed.contains(decision.approach.key)))
 			{
 				// An incoming lane crab may not have a reachable attack tile yet.
-				if (!actions.approach(approach, decision.weapon.range, decision.tile)) actions.walk(decision.tile);
+				if (!actions.approach(approach, decision.weapon.range, world(decision.tile))) actions.walk(world(decision.tile));
 			}
-			else if (!point.equals(decision.tile) || player.getInteracting() != null) actions.walk(decision.tile);
+			else if (!point.equals(world(decision.tile)) || player.getInteracting() != null) actions.walk(world(decision.tile));
 		}
 		else
 		{
 			NPC target = npc(decision.target);
 			if (target == null) return;
 			int incomingStep = decision.target.lane != Lane.SPLIT && tick - decision.target.born < 9 ? 1 : 0;
-			if (decision.target.distance(point) > decision.weapon.range + incomingStep
+			if (decision.target.distance(tile(point)) > decision.weapon.range + incomingStep
 				|| !player.getWorldArea().hasLineOfSightTo(client.getTopLevelWorldView(), target.getWorldArea()))
 			{
 				if (!actions.prepare(decision.weapon)) { stop(actions.error()); return; }
-				actions.approach(target, decision.weapon.range, decision.tile);
+				actions.approach(target, decision.weapon.range, world(decision.tile));
 				status("Wave " + room.wave + "\nApproach: " + decision.reason);
 				return;
 			}
@@ -368,7 +402,7 @@ public class NylocasRangerPlugin extends Plugin
 		SwingUtilities.invokeLater(() -> { if (panel == current && current != null) current.status(displayed); });
 	}
 
-	static Lane lane(WorldPoint point)
+	public static Lane lane(WorldPoint point)
 	{
 		if (point.getX() == 3281 && (point.getY() == 4248 || point.getY() == 4249)) return Lane.WEST;
 		if ((point.getX() == 3309 || point.getX() == 3310) && (point.getY() == 4248 || point.getY() == 4249)) return Lane.EAST;
@@ -403,7 +437,8 @@ public class NylocasRangerPlugin extends Plugin
 	private static boolean attackAnimation(int animation)
 	{
 		for (Weapon weapon : Weapon.values()) if (weaponAnimation(weapon, animation)) return true;
-		return animation == 1167 || animation == 1162 || animation == 1979 || animation == 8056 || animation == 9493;
+		return animation == 1167 || animation == 1162 || animation == 1979 || animation == 8056 || animation == 9493
+			|| animation == 10092 || animation == 2068 || animation == 7511 || animation == 7554;
 	}
 
 	static boolean dying(NPC npc)
@@ -417,4 +452,7 @@ public class NylocasRangerPlugin extends Plugin
 			|| animation == AnimationID.TOP_SPIDER_RANGED_DEATH || animation == AnimationID.TOP_SPIDER_RANGED_DEATH_DETONATE
 			|| animation == AnimationID.TOP_SPIDER_MELEE_DEATH || animation == AnimationID.TOP_SPIDER_MELEE_DEATH_DETONATE;
 	}
+
+	private static Tile tile(WorldPoint point) { return new Tile(point.getX(), point.getY(), point.getPlane()); }
+	private static WorldPoint world(Tile point) { return new WorldPoint(point.getX(), point.getY(), point.getPlane()); }
 }

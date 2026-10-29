@@ -104,6 +104,7 @@ public class NylocasRangerPluginTest
 	@Test
 	public void clicksBarrierEveryGameTickButNeverConfirmsEntry() throws Exception
 	{
+		entryDialogue("Start the Nylocas encounter?");
 		SwingUtilities.invokeAndWait(plugin::startUp);
 		for (int tick = 0; tick < 4; tick++)
 		{
@@ -118,6 +119,73 @@ public class NylocasRangerPluginTest
 		when(client.getTickCount()).thenReturn(5);
 		plugin.onGameTick(new GameTick());
 		verify(client, times(4)).menuAction(15, 31, MenuAction.GAME_OBJECT_FIRST_OPTION, 32755, -1, "Pass-through", "Nylocas barrier");
+	}
+
+
+	@Test public void startRoomButtonConfirmsOnceAndStopsReclickingBarrier() throws Exception
+	{
+		entryDialogue("Start the Nylocas encounter?");
+		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		verify(toolbar).addNavigation(navigation.capture());
+		plugin.onGameTick(new GameTick());
+		verify(client, never()).menuAction(anyInt(), anyInt(), eq(MenuAction.WIDGET_CONTINUE), anyInt(), anyInt(), anyString(), anyString());
+		JButton button = find(navigation.getValue().getPanel(), JButton.class, "Start room");
+		assertNotNull(button);
+		SwingUtilities.invokeAndWait(button::doClick);
+		for (int tick = 1; tick <= 3; tick++)
+		{
+			when(client.getTickCount()).thenReturn(tick);
+			plugin.onGameTick(new GameTick());
+		}
+		verify(client, times(1)).menuAction(1, InterfaceID.Chatmenu.OPTIONS, MenuAction.WIDGET_CONTINUE, 0, -1, "Enter", "");
+		verify(client, times(1)).menuAction(15, 31, MenuAction.GAME_OBJECT_FIRST_OPTION, 32755, -1, "Pass-through", "Nylocas barrier");
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test public void roomStartCanWaitForDialogueButStopCancelsTheRequest() throws Exception
+	{
+		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		verify(toolbar).addNavigation(navigation.capture());
+		JButton enter = find(navigation.getValue().getPanel(), JButton.class, "Start room");
+		SwingUtilities.invokeAndWait(enter::doClick);
+		plugin.onGameTick(new GameTick()); // No dialogue yet: still click barrier.
+		verify(client).menuAction(15, 31, MenuAction.GAME_OBJECT_FIRST_OPTION, 32755, -1, "Pass-through", "Nylocas barrier");
+		entryDialogue("Start the Nylocas encounter?");
+		SwingUtilities.invokeAndWait(find(navigation.getValue().getPanel(), JButton.class, "Stop ranger")::doClick);
+		SwingUtilities.invokeAndWait(find(navigation.getValue().getPanel(), JButton.class, "Start ranger")::doClick);
+		when(client.getTickCount()).thenReturn(1); plugin.onGameTick(new GameTick());
+		verify(client, never()).menuAction(anyInt(), anyInt(), eq(MenuAction.WIDGET_CONTINUE), anyInt(), anyInt(), anyString(), anyString());
+		SwingUtilities.invokeAndWait(enter::doClick);
+		when(client.getTickCount()).thenReturn(2); plugin.onGameTick(new GameTick());
+		verify(client).menuAction(1, InterfaceID.Chatmenu.OPTIONS, MenuAction.WIDGET_CONTINUE, 0, -1, "Enter", "");
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test public void startRoomRejectsUnrelatedOrHiddenDialogue() throws Exception
+	{
+		Widget options = entryDialogue("Enter another encounter?");
+		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
+		SwingUtilities.invokeAndWait(plugin::startUp); verify(toolbar).addNavigation(navigation.capture());
+		SwingUtilities.invokeAndWait(find(navigation.getValue().getPanel(), JButton.class, "Start room")::doClick);
+		plugin.onGameTick(new GameTick());
+		options = entryDialogue("Start the Nylocas encounter?"); when(options.isHidden()).thenReturn(true);
+		when(client.getTickCount()).thenReturn(1); plugin.onGameTick(new GameTick());
+		verify(client, never()).menuAction(anyInt(), anyInt(), eq(MenuAction.WIDGET_CONTINUE), anyInt(), anyInt(), anyString(), anyString());
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	private Widget entryDialogue(String title)
+	{
+		Widget options = mock(Widget.class), heading = mock(Widget.class), enter = mock(Widget.class), cancel = mock(Widget.class);
+		when(client.getWidget(InterfaceID.Chatmenu.OPTIONS)).thenReturn(options);
+		when(options.getId()).thenReturn(InterfaceID.Chatmenu.OPTIONS);
+		when(options.getDynamicChildren()).thenReturn(new Widget[]{heading, enter, cancel});
+		when(heading.getText()).thenReturn(title);
+		when(enter.getText()).thenReturn("<col=ffffff>Enter</col>"); when(enter.getIndex()).thenReturn(1);
+		when(cancel.getText()).thenReturn("Cancel"); when(cancel.getIndex()).thenReturn(2);
+		return options;
 	}
 
 	@Test
@@ -258,6 +326,94 @@ public class NylocasRangerPluginTest
 		when(npc.getTransformedComposition()).thenReturn(composition);
 		when(composition.getActions()).thenReturn(new String[]{null, "Attack"});
 		return npc;
+	}
+
+
+	@Test
+	public void acknowledgedAttacksResumeOnEveryWeaponCooldownAfterRetry() throws Exception
+	{
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		Player player = client.getLocalPlayer();
+		when(player.getWorldLocation()).thenReturn(new WorldPoint(3295, 4248, 0));
+		WorldArea area = mock(WorldArea.class);
+		when(player.getWorldArea()).thenReturn(area);
+		when(area.hasLineOfSightTo(any(WorldView.class), any(WorldArea.class))).thenReturn(true);
+		when(client.getItemContainer(InventoryID.EQUIPMENT).contains(anyInt())).thenReturn(true);
+		when(client.getItemContainer(InventoryID.EQUIPMENT).getItem(3)).thenReturn(new Item(12926, 1));
+		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(2);
+		NPC target = rangedSmall(42, 3292);
+		when(client.getNpcs()).thenReturn(java.util.Collections.singletonList(target));
+		when(client.getTickCount()).thenReturn(100);
+		plugin.onNpcSpawned(new NpcSpawned(target));
+		for (int tick = 100; tick <= 106; tick++)
+		{
+			when(client.getTickCount()).thenReturn(tick);
+			// First request fails; later launches are observed one tick after each request.
+			boolean launched = tick >= 102 && (tick - 102) % 2 == 0;
+			when(player.getInteracting()).thenReturn(launched ? target : null);
+			when(player.getAnimation()).thenReturn(launched ? 5061 : -1);
+			plugin.onGameTick(new GameTick());
+			int requests = tick == 100 ? 1 : 2 + (tick - 101) / 2;
+			verify(client, times(requests)).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylocas Toxobolos");
+		}
+		when(player.getInteracting()).thenReturn(null);
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test
+	public void unlaunchedAttackIsRetriedOnEveryTick() throws Exception
+	{
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		Player player = client.getLocalPlayer();
+		when(player.getWorldLocation()).thenReturn(new WorldPoint(3295, 4248, 0));
+		WorldArea area = mock(WorldArea.class);
+		when(player.getWorldArea()).thenReturn(area);
+		when(area.hasLineOfSightTo(any(WorldView.class), any(WorldArea.class))).thenReturn(true);
+		when(client.getItemContainer(InventoryID.EQUIPMENT).contains(anyInt())).thenReturn(true);
+		when(client.getItemContainer(InventoryID.EQUIPMENT).getItem(3)).thenReturn(new Item(12926, 1));
+		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(1);
+		NPC target = rangedSmall(42, 3292);
+		when(client.getNpcs()).thenReturn(java.util.Collections.singletonList(target));
+		when(client.getTickCount()).thenReturn(100);
+		plugin.onNpcSpawned(new NpcSpawned(target));
+		// The server can set the interaction before an attack animation arrives.
+		when(player.getInteracting()).thenReturn(target);
+		for (int tick = 100; tick <= 102; tick++)
+		{
+			when(client.getTickCount()).thenReturn(tick);
+			plugin.onGameTick(new GameTick());
+			verify(client, times(tick - 99)).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, 42, -1, "Attack", "Nylocas Toxobolos");
+		}
+		verify(client, never()).getWidget(net.runelite.api.widgets.WidgetInfo.FIXED_VIEWPORT_MINIMAP_DRAW_AREA);
+		when(player.getInteracting()).thenReturn(null);
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test
+	public void dyingUnacknowledgedTargetDoesNotDelayNextAttack() throws Exception
+	{
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		Player player = client.getLocalPlayer();
+		when(player.getWorldLocation()).thenReturn(new WorldPoint(3295, 4248, 0));
+		WorldArea area = mock(WorldArea.class);
+		when(player.getWorldArea()).thenReturn(area);
+		when(area.hasLineOfSightTo(any(WorldView.class), any(WorldArea.class))).thenReturn(true);
+		when(client.getItemContainer(InventoryID.EQUIPMENT).contains(anyInt())).thenReturn(true);
+		when(client.getVarbitValue(VarbitID.TOB_CLIENT_WAVEPROGRESS_VAL)).thenReturn(1);
+		NPC target = rangedSmall(42, 3292), replacement = rangedSmall(43, 3298);
+		when(client.getNpcs()).thenReturn(java.util.Arrays.asList(target, replacement));
+		when(client.getTickCount()).thenReturn(100);
+		plugin.onNpcSpawned(new NpcSpawned(target));
+		plugin.onNpcSpawned(new NpcSpawned(replacement));
+		plugin.onGameTick(new GameTick());
+		ArgumentCaptor<Integer> attacked = ArgumentCaptor.forClass(Integer.class);
+		verify(client).menuAction(eq(0), eq(0), eq(MenuAction.NPC_SECOND_OPTION), attacked.capture(), eq(-1), eq("Attack"), anyString());
+		NPC first = attacked.getValue() == 42 ? target : replacement;
+		when(first.getHealthRatio()).thenReturn(0);
+		when(client.getTickCount()).thenReturn(101);
+		plugin.onGameTick(new GameTick());
+		verify(client).menuAction(0, 0, MenuAction.NPC_SECOND_OPTION, attacked.getValue() == 42 ? 43 : 42, -1, "Attack", "Nylocas Toxobolos");
+		SwingUtilities.invokeAndWait(plugin::shutDown);
 	}
 
 	@Test

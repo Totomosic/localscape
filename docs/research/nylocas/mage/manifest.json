@@ -1,0 +1,2390 @@
+{
+  "retrievedDate": "2026-10-29",
+  "selectionUrl": "https://blert.io/search/challenges?party=Drummie&scale=2&mode=11&type=1&startTime=%3E%3D1788192000000&stage=ge12&split%3A42=ge0&sort=%2Bsplits%3A42%2C-startTime",
+  "query": "type=1&mode=11&scale=2&party=Drummie&stage=ge12&startTime=ge1788192000000&split%3A42=le326&sort=%2Bsplits%3A42%2C-startTime&extraFields=splits%3A42&limit=100",
+  "cutoffTicks": 326,
+  "startTimeMillis": 1788192000000,
+  "attackDefinitions": {
+    "path": "attack-definitions.json",
+    "url": "https://raw.githubusercontent.com/blert-io/protos/3c5bc5cfc315ff4266128601829e66615f3ef83d/attack_definitions.json",
+    "commit": "3c5bc5cfc315ff4266128601829e66615f3ef83d",
+    "sha256": "70b3403639d6b5dc813adefcba45a32e2451487e7deb553e7793c3011942f167"
+  },
+  "recordings": [
+    {
+      "uuid": "0c25e13d-045e-4362-a7e3-e4cf83f229a8",
+      "startTime": "2026-10-25T09:24:30.212Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 308,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/0c25e13d-045e-4362-a7e3-e4cf83f229a8.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/0c25e13d-045e-4362-a7e3-e4cf83f229a8",
+          "sha256": "4cfc412b357a31f9b7f91276a46bf25aa3c61c3f12cbd07d74dcce0da63c3be5",
+          "uncompressedBytes": 54628
+        },
+        "events": {
+          "path": "recordings/0c25e13d-045e-4362-a7e3-e4cf83f229a8.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/0c25e13d-045e-4362-a7e3-e4cf83f229a8/events?stage=12",
+          "sha256": "96f7d40b56fe139117d7a0c688e8ba3fb8af2c581bf679f3da143258ddef51dd",
+          "uncompressedBytes": 825982
+        }
+      }
+    },
+    {
+      "uuid": "18b55b89-579b-4e7a-bb84-0d340fcceb2d",
+      "startTime": "2026-09-07T04:19:44.350Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            13,
+            15
+          ]
+        },
+        {
+          "username": "Lacking S19",
+          "currentUsername": "Lacking S19",
+          "primaryGear": 5,
+          "deaths": [
+            15
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 308,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/18b55b89-579b-4e7a-bb84-0d340fcceb2d.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/18b55b89-579b-4e7a-bb84-0d340fcceb2d",
+          "sha256": "ecbc29ad84204b231a058e1e18a3ae7679109b8d48ae0f263ffe887760690fcc",
+          "uncompressedBytes": 54544
+        },
+        "events": {
+          "path": "recordings/18b55b89-579b-4e7a-bb84-0d340fcceb2d.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/18b55b89-579b-4e7a-bb84-0d340fcceb2d/events?stage=12",
+          "sha256": "08e77a9dc082556235f71c60c44a4c60346439c164c2746d3c16eeeecff7e703",
+          "uncompressedBytes": 880104
+        }
+      }
+    },
+    {
+      "uuid": "747b0a15-bdf7-4f83-aa41-6d2d4b214734",
+      "startTime": "2026-10-05T06:44:10.425Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            10
+          ]
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 312,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/747b0a15-bdf7-4f83-aa41-6d2d4b214734.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/747b0a15-bdf7-4f83-aa41-6d2d4b214734",
+          "sha256": "1af0122ea67bbda95616274368314be4ecf0021c7d3df2a89a3b4410d8715996",
+          "uncompressedBytes": 50409
+        },
+        "events": {
+          "path": "recordings/747b0a15-bdf7-4f83-aa41-6d2d4b214734.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/747b0a15-bdf7-4f83-aa41-6d2d4b214734/events?stage=12",
+          "sha256": "4d5cf6ecc08b0162fdcedf184365e0d64dd3ef548b48963552f7bd26e7e6a471",
+          "uncompressedBytes": 891963
+        }
+      }
+    },
+    {
+      "uuid": "934cff40-3524-4711-b02e-86e029798465",
+      "startTime": "2026-09-20T02:25:43.692Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            15
+          ]
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 312,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/934cff40-3524-4711-b02e-86e029798465.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/934cff40-3524-4711-b02e-86e029798465",
+          "sha256": "aab9e81a125c8063195db5b225857ae9e867685da0a35aad45e6f3c5ad9728a9",
+          "uncompressedBytes": 54619
+        },
+        "events": {
+          "path": "recordings/934cff40-3524-4711-b02e-86e029798465.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/934cff40-3524-4711-b02e-86e029798465/events?stage=12",
+          "sha256": "c38df05def21e90b3dce387624c8e3916664889ecda1376f771a820756afa55b",
+          "uncompressedBytes": 852978
+        }
+      }
+    },
+    {
+      "uuid": "3dce9472-ae63-4abb-a5f5-6218fdb47191",
+      "startTime": "2026-10-29T05:06:24.128Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            15
+          ]
+        },
+        {
+          "username": "eres un amor",
+          "currentUsername": "Eres Un Amor",
+          "primaryGear": 5,
+          "deaths": [
+            15
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 316,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/3dce9472-ae63-4abb-a5f5-6218fdb47191.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/3dce9472-ae63-4abb-a5f5-6218fdb47191",
+          "sha256": "65b40536e2ce9d4ea73445d5dd98073e7120069b314fe3fb97079925f5000b22",
+          "uncompressedBytes": 54829
+        },
+        "events": {
+          "path": "recordings/3dce9472-ae63-4abb-a5f5-6218fdb47191.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/3dce9472-ae63-4abb-a5f5-6218fdb47191/events?stage=12",
+          "sha256": "0030cead2c9362f7924f7619d998f442394ec29d16a71e03fd9dcb28e4aba42c",
+          "uncompressedBytes": 859863
+        }
+      }
+    },
+    {
+      "uuid": "378cf375-2692-4a32-b48c-8bd12333df81",
+      "startTime": "2026-10-29T03:10:21.561Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "eres un amor",
+          "currentUsername": "Eres Un Amor",
+          "primaryGear": 5,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 316,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/378cf375-2692-4a32-b48c-8bd12333df81.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/378cf375-2692-4a32-b48c-8bd12333df81",
+          "sha256": "1a0b1226b3c5ffbb73fe108a8add6a78018a17d16be6bc080ce904e7698b0b41",
+          "uncompressedBytes": 54130
+        },
+        "events": {
+          "path": "recordings/378cf375-2692-4a32-b48c-8bd12333df81.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/378cf375-2692-4a32-b48c-8bd12333df81/events?stage=12",
+          "sha256": "6c4c063db0d36411a74795cbd97216d0f6c6090f6e30fb8454b20c0aa4143b47",
+          "uncompressedBytes": 902917
+        }
+      }
+    },
+    {
+      "uuid": "c3f1e4ec-347d-411f-96bf-e5e2ed397d7d",
+      "startTime": "2026-10-28T02:37:31.982Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            15
+          ]
+        },
+        {
+          "username": "eres un amor",
+          "currentUsername": "Eres Un Amor",
+          "primaryGear": 5,
+          "deaths": [
+            15
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 316,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/c3f1e4ec-347d-411f-96bf-e5e2ed397d7d.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/c3f1e4ec-347d-411f-96bf-e5e2ed397d7d",
+          "sha256": "eda68b8b4576c286ede8d767a3a95cc773bf8cfc3cb63d108a86b43f8294f720",
+          "uncompressedBytes": 54300
+        },
+        "events": {
+          "path": "recordings/c3f1e4ec-347d-411f-96bf-e5e2ed397d7d.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/c3f1e4ec-347d-411f-96bf-e5e2ed397d7d/events?stage=12",
+          "sha256": "d8de982082981620ecd13a78157df1e1132a10bd8dddde37895207275c0a55c8",
+          "uncompressedBytes": 897723
+        }
+      }
+    },
+    {
+      "uuid": "7dd836cc-c62c-4272-8cd7-b6e2014d7092",
+      "startTime": "2026-10-27T03:58:37.946Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "eres un amor",
+          "currentUsername": "Eres Un Amor",
+          "primaryGear": 5,
+          "deaths": [
+            14
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 316,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/7dd836cc-c62c-4272-8cd7-b6e2014d7092.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/7dd836cc-c62c-4272-8cd7-b6e2014d7092",
+          "sha256": "4a5fda889e3540235fd4e2a951ec74578db6fd6e815b1fef60ae473d348e2f95",
+          "uncompressedBytes": 54627
+        },
+        "events": {
+          "path": "recordings/7dd836cc-c62c-4272-8cd7-b6e2014d7092.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/7dd836cc-c62c-4272-8cd7-b6e2014d7092/events?stage=12",
+          "sha256": "3e850546dac4f658d0aadb1929569878a363e8699d61494c79864bd6e89908e8",
+          "uncompressedBytes": 892559
+        }
+      }
+    },
+    {
+      "uuid": "fc3ae6ed-cc38-4901-898e-8facd01cb9fc",
+      "startTime": "2026-10-25T09:55:22.012Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            11
+          ]
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 316,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/fc3ae6ed-cc38-4901-898e-8facd01cb9fc.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/fc3ae6ed-cc38-4901-898e-8facd01cb9fc",
+          "sha256": "7a687998518b29a90e8667d53b7bfa039d21af259e1b2c71a69d2e8d682e218f",
+          "uncompressedBytes": 50565
+        },
+        "events": {
+          "path": "recordings/fc3ae6ed-cc38-4901-898e-8facd01cb9fc.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/fc3ae6ed-cc38-4901-898e-8facd01cb9fc/events?stage=12",
+          "sha256": "e7c1f85ce6c4efb4b3b892f27fafb655063378068269dfe15075857b8a74c87a",
+          "uncompressedBytes": 873481
+        }
+      }
+    },
+    {
+      "uuid": "86ed2f0a-4ed9-4c81-a3d9-e244cc9c8564",
+      "startTime": "2026-10-18T08:58:05.839Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "Selssul",
+          "currentUsername": "Selssul",
+          "primaryGear": 6,
+          "deaths": [
+            10,
+            14
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 316,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/86ed2f0a-4ed9-4c81-a3d9-e244cc9c8564.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/86ed2f0a-4ed9-4c81-a3d9-e244cc9c8564",
+          "sha256": "3287917dc378e331842f29cd48bf55bb8603a2328a04f43b08b0f30fa285a047",
+          "uncompressedBytes": 54463
+        },
+        "events": {
+          "path": "recordings/86ed2f0a-4ed9-4c81-a3d9-e244cc9c8564.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/86ed2f0a-4ed9-4c81-a3d9-e244cc9c8564/events?stage=12",
+          "sha256": "df4067e0ae17e6492329b1a5e44a05ea5e0fa3af0b3d9bc5ee515376ca79c15d",
+          "uncompressedBytes": 905740
+        }
+      }
+    },
+    {
+      "uuid": "7b81bb5a-2c03-49c7-a556-cd202d0cf6da",
+      "startTime": "2026-10-09T02:27:34.261Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            15
+          ]
+        },
+        {
+          "username": "lmperatrice",
+          "currentUsername": "lmperatrice",
+          "primaryGear": 5,
+          "deaths": [
+            15
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 316,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/7b81bb5a-2c03-49c7-a556-cd202d0cf6da.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/7b81bb5a-2c03-49c7-a556-cd202d0cf6da",
+          "sha256": "72f1adc6617f31209c26e05e2848ae6e6af1bd930fd9c51b157e68f349d98a3a",
+          "uncompressedBytes": 54955
+        },
+        "events": {
+          "path": "recordings/7b81bb5a-2c03-49c7-a556-cd202d0cf6da.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/7b81bb5a-2c03-49c7-a556-cd202d0cf6da/events?stage=12",
+          "sha256": "b538c08444da889d285af9805980083a26fad1ea5c3005a4235a7ccddb172a0d",
+          "uncompressedBytes": 879081
+        }
+      }
+    },
+    {
+      "uuid": "0783d870-5e9e-4227-98bf-3a2d495cd66e",
+      "startTime": "2026-10-05T07:30:53.382Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 316,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/0783d870-5e9e-4227-98bf-3a2d495cd66e.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/0783d870-5e9e-4227-98bf-3a2d495cd66e",
+          "sha256": "e05257613a12f2074e0ee1c58bfd779775e612eff6ebc7db3a3045e60dcb55d2",
+          "uncompressedBytes": 54260
+        },
+        "events": {
+          "path": "recordings/0783d870-5e9e-4227-98bf-3a2d495cd66e.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/0783d870-5e9e-4227-98bf-3a2d495cd66e/events?stage=12",
+          "sha256": "0972db9c4500c85c251c844c339453fdcda01d389dc26a3de2fc80ed857d375b",
+          "uncompressedBytes": 873080
+        }
+      }
+    },
+    {
+      "uuid": "bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14",
+      "startTime": "2026-10-04T02:32:17.853Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            11
+          ]
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": [
+            11
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 316,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14",
+          "sha256": "a5297f718a631be1cc324b1e60fe48a38fb7d5bded5f5402af4406ec8ca4467a",
+          "uncompressedBytes": 50413
+        },
+        "events": {
+          "path": "recordings/bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14/events?stage=12",
+          "sha256": "c2e09333755bc0f60f2645d15ba6ff77a8164736b40db003774b52e08adcd8f6",
+          "uncompressedBytes": 890439
+        }
+      }
+    },
+    {
+      "uuid": "9e8cc96f-e369-45f0-bb1d-c8256f839b53",
+      "startTime": "2026-09-29T10:56:50.810Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            13
+          ]
+        },
+        {
+          "username": "Unluckers",
+          "currentUsername": "Unluckers",
+          "primaryGear": 6,
+          "deaths": [
+            11,
+            13
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 316,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/9e8cc96f-e369-45f0-bb1d-c8256f839b53.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/9e8cc96f-e369-45f0-bb1d-c8256f839b53",
+          "sha256": "59e0210f0dc7c82eced3fe8df655fc955c177d0104832600016c518f6e4faa17",
+          "uncompressedBytes": 54627
+        },
+        "events": {
+          "path": "recordings/9e8cc96f-e369-45f0-bb1d-c8256f839b53.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/9e8cc96f-e369-45f0-bb1d-c8256f839b53/events?stage=12",
+          "sha256": "3d4685e812c3227671d9313096eb567615f3edb863b5428508cb6b29eebea0e9",
+          "uncompressedBytes": 905234
+        }
+      }
+    },
+    {
+      "uuid": "82b37d8a-030f-40b1-85f1-14ef639f2787",
+      "startTime": "2026-09-23T03:14:15.941Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            13
+          ]
+        },
+        {
+          "username": "Lacking S19",
+          "currentUsername": "Lacking S19",
+          "primaryGear": 5,
+          "deaths": [
+            13
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 316,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/82b37d8a-030f-40b1-85f1-14ef639f2787.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/82b37d8a-030f-40b1-85f1-14ef639f2787",
+          "sha256": "5e78532c01089e4223c2bb6ba54719c0a4294df3d4b972898d7828e4e3958644",
+          "uncompressedBytes": 51049
+        },
+        "events": {
+          "path": "recordings/82b37d8a-030f-40b1-85f1-14ef639f2787.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/82b37d8a-030f-40b1-85f1-14ef639f2787/events?stage=12",
+          "sha256": "7a8e25aa53d362a4f53a0469e225fe999c44ee202c5503ed8a33df33b86bcf65",
+          "uncompressedBytes": 870555
+        }
+      }
+    },
+    {
+      "uuid": "efa27528-eecf-48ba-8253-4815ef976eb7",
+      "startTime": "2026-09-20T03:19:44.082Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": [
+            11
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 316,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/efa27528-eecf-48ba-8253-4815ef976eb7.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/efa27528-eecf-48ba-8253-4815ef976eb7",
+          "sha256": "2099201557194a69acfb38ed01ebc157284816d25ada26066ff1c4c60e76a25a",
+          "uncompressedBytes": 54844
+        },
+        "events": {
+          "path": "recordings/efa27528-eecf-48ba-8253-4815ef976eb7.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/efa27528-eecf-48ba-8253-4815ef976eb7/events?stage=12",
+          "sha256": "c14e8c23085613195e3bb5d4afead88cf3975e46f1c2e5ff4fa7a86d7cd6c26c",
+          "uncompressedBytes": 908052
+        }
+      }
+    },
+    {
+      "uuid": "c112f942-5558-4ed3-af57-2118458aea8a",
+      "startTime": "2026-09-10T08:55:26.381Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            11,
+            15
+          ]
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": [
+            11
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 316,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/c112f942-5558-4ed3-af57-2118458aea8a.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/c112f942-5558-4ed3-af57-2118458aea8a",
+          "sha256": "45c93bd8eda6f1109025e0e3e8ab81b4fdf77e24b69717dd3573f9a763f551be",
+          "uncompressedBytes": 54591
+        },
+        "events": {
+          "path": "recordings/c112f942-5558-4ed3-af57-2118458aea8a.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/c112f942-5558-4ed3-af57-2118458aea8a/events?stage=12",
+          "sha256": "f147a899a0e6476bbceeabc324a0e3d1bdf3c4a0e8f6661724c7a8bf07c86060",
+          "uncompressedBytes": 889374
+        }
+      }
+    },
+    {
+      "uuid": "4195844f-b13e-451f-916a-9b8ffd17b009",
+      "startTime": "2026-09-09T10:25:00.117Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            11,
+            13
+          ]
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": [
+            11,
+            13
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 316,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/4195844f-b13e-451f-916a-9b8ffd17b009.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/4195844f-b13e-451f-916a-9b8ffd17b009",
+          "sha256": "52373ba6533bad97ea29fee80b9c4a50b7e10a16b9ebe5a7ef4c09427c12e89f",
+          "uncompressedBytes": 50669
+        },
+        "events": {
+          "path": "recordings/4195844f-b13e-451f-916a-9b8ffd17b009.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/4195844f-b13e-451f-916a-9b8ffd17b009/events?stage=12",
+          "sha256": "525a2384ff50972fcf29b33a8671922472fdfe3f334160ec8887da7147c504f2",
+          "uncompressedBytes": 894001
+        }
+      }
+    },
+    {
+      "uuid": "7aae7cc1-113d-4215-98e8-3df6912d99fe",
+      "startTime": "2026-10-28T03:31:51.991Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "eres un amor",
+          "currentUsername": "Eres Un Amor",
+          "primaryGear": 5,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/7aae7cc1-113d-4215-98e8-3df6912d99fe.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/7aae7cc1-113d-4215-98e8-3df6912d99fe",
+          "sha256": "36e1492bca087955979a980fc1a2dcd48e01c659faa3e6016ad78e8403780f12",
+          "uncompressedBytes": 54637
+        },
+        "events": {
+          "path": "recordings/7aae7cc1-113d-4215-98e8-3df6912d99fe.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/7aae7cc1-113d-4215-98e8-3df6912d99fe/events?stage=12",
+          "sha256": "2bcc657b0017a4d58d9b94c448a10579c0252579b0daa408467340e0fdbe333d",
+          "uncompressedBytes": 883156
+        }
+      }
+    },
+    {
+      "uuid": "e6e5e3fc-1218-4910-b488-383df243a8bf",
+      "startTime": "2026-10-28T02:09:02.161Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "eres un amor",
+          "currentUsername": "Eres Un Amor",
+          "primaryGear": 5,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/e6e5e3fc-1218-4910-b488-383df243a8bf.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/e6e5e3fc-1218-4910-b488-383df243a8bf",
+          "sha256": "31fad68fb86b14bb8f9681a43e48964e02b58b4814bc42269282709489f8ec00",
+          "uncompressedBytes": 54784
+        },
+        "events": {
+          "path": "recordings/e6e5e3fc-1218-4910-b488-383df243a8bf.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/e6e5e3fc-1218-4910-b488-383df243a8bf/events?stage=12",
+          "sha256": "0e2dd717e6550aae910fe3dd88b2df14528b334e11e528dc29661088c8ca5eff",
+          "uncompressedBytes": 871085
+        }
+      }
+    },
+    {
+      "uuid": "6293ac0f-925c-4ffa-9f57-9489bed6ab37",
+      "startTime": "2026-10-27T03:00:26.190Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "eres un amor",
+          "currentUsername": "Eres Un Amor",
+          "primaryGear": 5,
+          "deaths": [
+            14
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/6293ac0f-925c-4ffa-9f57-9489bed6ab37.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/6293ac0f-925c-4ffa-9f57-9489bed6ab37",
+          "sha256": "1ac7db27f26f2f68402a194ae16b33af41baa3ab74fe7f32d082580ddb45710f",
+          "uncompressedBytes": 54745
+        },
+        "events": {
+          "path": "recordings/6293ac0f-925c-4ffa-9f57-9489bed6ab37.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/6293ac0f-925c-4ffa-9f57-9489bed6ab37/events?stage=12",
+          "sha256": "54c320c79b7b029c676101488b5485656d05a17d0e3f1379bd58189f5304df0c",
+          "uncompressedBytes": 901932
+        }
+      }
+    },
+    {
+      "uuid": "f5aab638-bf14-4511-8a83-026ea46cc37f",
+      "startTime": "2026-10-25T10:33:34.881Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            13
+          ]
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": [
+            13
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/f5aab638-bf14-4511-8a83-026ea46cc37f.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/f5aab638-bf14-4511-8a83-026ea46cc37f",
+          "sha256": "a5be28d35fab11cb3513018b9196db30f5ad2111f001017c3de7f6627d691f97",
+          "uncompressedBytes": 50733
+        },
+        "events": {
+          "path": "recordings/f5aab638-bf14-4511-8a83-026ea46cc37f.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/f5aab638-bf14-4511-8a83-026ea46cc37f/events?stage=12",
+          "sha256": "87a8ca3b509bfd0af27c12c60ed9d1eb0440abfc57d65736a2f4d5e9ebc78cbc",
+          "uncompressedBytes": 907852
+        }
+      }
+    },
+    {
+      "uuid": "c77441a7-3caf-4d9d-a482-8ffe8d7f293d",
+      "startTime": "2026-10-16T03:25:45.598Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "B asher",
+          "currentUsername": "B asher",
+          "primaryGear": 6,
+          "deaths": [
+            13,
+            15
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/c77441a7-3caf-4d9d-a482-8ffe8d7f293d.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/c77441a7-3caf-4d9d-a482-8ffe8d7f293d",
+          "sha256": "7883676f3957137b5f8f31e5adb339a1a808a5dccb302f462b836bda8206fda2",
+          "uncompressedBytes": 54680
+        },
+        "events": {
+          "path": "recordings/c77441a7-3caf-4d9d-a482-8ffe8d7f293d.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/c77441a7-3caf-4d9d-a482-8ffe8d7f293d/events?stage=12",
+          "sha256": "9e06c1596d41b37ba63cce72576417e2234722ea3e2272e35c726269301ec4b9",
+          "uncompressedBytes": 906560
+        }
+      }
+    },
+    {
+      "uuid": "7c5d2999-85db-46aa-912e-5fe3a7b0904f",
+      "startTime": "2026-10-16T01:45:27.031Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "lmperatrice",
+          "currentUsername": "lmperatrice",
+          "primaryGear": 5,
+          "deaths": [
+            10
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/7c5d2999-85db-46aa-912e-5fe3a7b0904f.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/7c5d2999-85db-46aa-912e-5fe3a7b0904f",
+          "sha256": "e6e9c743d3bdadbe8f05c8355da3b2e250d409667844e7823e58698908b72509",
+          "uncompressedBytes": 54615
+        },
+        "events": {
+          "path": "recordings/7c5d2999-85db-46aa-912e-5fe3a7b0904f.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/7c5d2999-85db-46aa-912e-5fe3a7b0904f/events?stage=12",
+          "sha256": "e03c7b92cd574dae4f2c88ba88e3d817bb410664cffc7b91ad614ef177799860",
+          "uncompressedBytes": 877220
+        }
+      }
+    },
+    {
+      "uuid": "fe01a37b-1ca3-4b44-9793-a16e803c9a8a",
+      "startTime": "2026-10-15T05:33:13.437Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "lmperatrice",
+          "currentUsername": "lmperatrice",
+          "primaryGear": 5,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/fe01a37b-1ca3-4b44-9793-a16e803c9a8a.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/fe01a37b-1ca3-4b44-9793-a16e803c9a8a",
+          "sha256": "6f18bc47248394dfc4a8cf89327d254e6aea7ea8c030aa6f6d46b69436689f56",
+          "uncompressedBytes": 50393
+        },
+        "events": {
+          "path": "recordings/fe01a37b-1ca3-4b44-9793-a16e803c9a8a.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/fe01a37b-1ca3-4b44-9793-a16e803c9a8a/events?stage=12",
+          "sha256": "975e8ed1f5e6ac00e3a600b41b6b51460ba6f3714c1182ef2fd6ebb4de621da8",
+          "uncompressedBytes": 891697
+        }
+      }
+    },
+    {
+      "uuid": "c185aab9-2859-4198-a1a9-68ac8c9a74e3",
+      "startTime": "2026-10-15T02:51:30.565Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "B asher",
+          "currentUsername": "B asher",
+          "primaryGear": 6,
+          "deaths": [
+            11
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/c185aab9-2859-4198-a1a9-68ac8c9a74e3.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/c185aab9-2859-4198-a1a9-68ac8c9a74e3",
+          "sha256": "dd31804313dfbda77f5b47ed4d01750ffe268338b0de685166681788a9801595",
+          "uncompressedBytes": 55116
+        },
+        "events": {
+          "path": "recordings/c185aab9-2859-4198-a1a9-68ac8c9a74e3.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/c185aab9-2859-4198-a1a9-68ac8c9a74e3/events?stage=12",
+          "sha256": "4d2a7172704e451497d95d82c8505c7f7e09a0d36e2a0dbb88a799250222cf27",
+          "uncompressedBytes": 889262
+        }
+      }
+    },
+    {
+      "uuid": "ee0853e5-9652-467b-8606-c19f17f1768e",
+      "startTime": "2026-10-09T01:35:06.892Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "lmperatrice",
+          "currentUsername": "lmperatrice",
+          "primaryGear": 5,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/ee0853e5-9652-467b-8606-c19f17f1768e.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/ee0853e5-9652-467b-8606-c19f17f1768e",
+          "sha256": "f53a7664d930d79818744df515e5f056a0674095f7bc741a94e266e2e62dd1fd",
+          "uncompressedBytes": 54482
+        },
+        "events": {
+          "path": "recordings/ee0853e5-9652-467b-8606-c19f17f1768e.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/ee0853e5-9652-467b-8606-c19f17f1768e/events?stage=12",
+          "sha256": "b4dca74c225928074650fb4d18e28d4b0c9f58fc42ae31dbd9faba652845801c",
+          "uncompressedBytes": 890408
+        }
+      }
+    },
+    {
+      "uuid": "697c58b5-647b-4204-a039-30249ac4f04a",
+      "startTime": "2026-10-05T09:29:54.249Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "lmperatrice",
+          "currentUsername": "lmperatrice",
+          "primaryGear": 5,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/697c58b5-647b-4204-a039-30249ac4f04a.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/697c58b5-647b-4204-a039-30249ac4f04a",
+          "sha256": "e78d609bc86bf525960691dab84c2726e1c4c280719fd15e332a9837502185f8",
+          "uncompressedBytes": 54811
+        },
+        "events": {
+          "path": "recordings/697c58b5-647b-4204-a039-30249ac4f04a.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/697c58b5-647b-4204-a039-30249ac4f04a/events?stage=12",
+          "sha256": "6dfa5f0d2ca3afa13cbd48e5012f5c87e9876122a45a1905a7a8dd9fbd726f3c",
+          "uncompressedBytes": 918387
+        }
+      }
+    },
+    {
+      "uuid": "4374381d-f598-4d96-90b6-e5204385bc46",
+      "startTime": "2026-10-05T07:18:37.107Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/4374381d-f598-4d96-90b6-e5204385bc46.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/4374381d-f598-4d96-90b6-e5204385bc46",
+          "sha256": "3a7fb6c261b841a41a84a0ba426425d03be0e4ad1cb26cbc02c0ef9e73bd3060",
+          "uncompressedBytes": 50253
+        },
+        "events": {
+          "path": "recordings/4374381d-f598-4d96-90b6-e5204385bc46.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/4374381d-f598-4d96-90b6-e5204385bc46/events?stage=12",
+          "sha256": "d956f4b83b0d872f6635255e1685b3b23bc8771885f1ff38ad09aaf9c2187b3f",
+          "uncompressedBytes": 866827
+        }
+      }
+    },
+    {
+      "uuid": "07de682e-7716-405f-a94f-14c2601a6480",
+      "startTime": "2026-10-03T12:47:22.742Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            13
+          ]
+        },
+        {
+          "username": "A rsh",
+          "currentUsername": "A rsh",
+          "primaryGear": 5,
+          "deaths": [
+            13
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/07de682e-7716-405f-a94f-14c2601a6480.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/07de682e-7716-405f-a94f-14c2601a6480",
+          "sha256": "389ddd9e1b00f83cf3bf5554770c3f087d125838912a0fc09d09c9cc5fbf4cc9",
+          "uncompressedBytes": 50861
+        },
+        "events": {
+          "path": "recordings/07de682e-7716-405f-a94f-14c2601a6480.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/07de682e-7716-405f-a94f-14c2601a6480/events?stage=12",
+          "sha256": "6c4c2c4ff2f36cff5e556ec20e3e6f12fa632d5215e81036f8ec5a4ba80d9c0b",
+          "uncompressedBytes": 896950
+        }
+      }
+    },
+    {
+      "uuid": "0984071b-92ac-4bb7-aa3f-a1615bbca5e3",
+      "startTime": "2026-10-01T03:44:12.062Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            15
+          ]
+        },
+        {
+          "username": "lmperatrice",
+          "currentUsername": "lmperatrice",
+          "primaryGear": 5,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/0984071b-92ac-4bb7-aa3f-a1615bbca5e3.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/0984071b-92ac-4bb7-aa3f-a1615bbca5e3",
+          "sha256": "18bd3424bfeefb00146be37fc62ab503231a218a9c8dd7150611e8345d1f5702",
+          "uncompressedBytes": 55545
+        },
+        "events": {
+          "path": "recordings/0984071b-92ac-4bb7-aa3f-a1615bbca5e3.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/0984071b-92ac-4bb7-aa3f-a1615bbca5e3/events?stage=12",
+          "sha256": "b5018a861889a7e35065b49b11eed0c493789b0a95851d404846189c197bf491",
+          "uncompressedBytes": 908632
+        }
+      }
+    },
+    {
+      "uuid": "3f180e70-43b8-4dbf-aab5-73de891f85bf",
+      "startTime": "2026-09-30T03:06:45.061Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            12,
+            13
+          ]
+        },
+        {
+          "username": "lmperatrice",
+          "currentUsername": "lmperatrice",
+          "primaryGear": 5,
+          "deaths": [
+            14
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/3f180e70-43b8-4dbf-aab5-73de891f85bf.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/3f180e70-43b8-4dbf-aab5-73de891f85bf",
+          "sha256": "5204c4d3dfc46b62f26d27e534f58ee06e500fb79f496ec725eb5bb616b40502",
+          "uncompressedBytes": 54302
+        },
+        "events": {
+          "path": "recordings/3f180e70-43b8-4dbf-aab5-73de891f85bf.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/3f180e70-43b8-4dbf-aab5-73de891f85bf/events?stage=12",
+          "sha256": "e037452ff83e46017ae4c81dd7f565460aa21440b77bba08a24f742b46defb02",
+          "uncompressedBytes": 948401
+        }
+      }
+    },
+    {
+      "uuid": "99bb6fb3-029d-4aa8-baa0-aa74c4eddee4",
+      "startTime": "2026-09-27T06:12:08.335Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            13
+          ]
+        },
+        {
+          "username": "B asher",
+          "currentUsername": "B asher",
+          "primaryGear": 6,
+          "deaths": [
+            13
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/99bb6fb3-029d-4aa8-baa0-aa74c4eddee4.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/99bb6fb3-029d-4aa8-baa0-aa74c4eddee4",
+          "sha256": "77f6591a2ea2892e2d5ad550d12946b9afac6930d216a6c31603978b94c47ca9",
+          "uncompressedBytes": 50942
+        },
+        "events": {
+          "path": "recordings/99bb6fb3-029d-4aa8-baa0-aa74c4eddee4.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/99bb6fb3-029d-4aa8-baa0-aa74c4eddee4/events?stage=12",
+          "sha256": "cd7f9ad6c39b4c5638c921fd7ef1b3871b7da0c6c34a10396d76eccc3053977a",
+          "uncompressedBytes": 921284
+        }
+      }
+    },
+    {
+      "uuid": "8d74a5a9-7c2d-44da-b5ee-c520a4b07659",
+      "startTime": "2026-09-24T09:59:03.963Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            13
+          ]
+        },
+        {
+          "username": "Unluckers",
+          "currentUsername": "Unluckers",
+          "primaryGear": 6,
+          "deaths": [
+            13
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/8d74a5a9-7c2d-44da-b5ee-c520a4b07659.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/8d74a5a9-7c2d-44da-b5ee-c520a4b07659",
+          "sha256": "b84859b3f51ba7130f2e0602871d4a26d58e8b0f8cb017a09854583688d5dfcb",
+          "uncompressedBytes": 50885
+        },
+        "events": {
+          "path": "recordings/8d74a5a9-7c2d-44da-b5ee-c520a4b07659.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/8d74a5a9-7c2d-44da-b5ee-c520a4b07659/events?stage=12",
+          "sha256": "c9444d15f1d90a2a9324389d79fee60f8757e5a0b0e2b98bf0c1dc7bb42f0f57",
+          "uncompressedBytes": 930000
+        }
+      }
+    },
+    {
+      "uuid": "fd1f3c04-9543-4d6c-aeed-721c5b22e14a",
+      "startTime": "2026-09-23T02:39:24.582Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "Lacking S19",
+          "currentUsername": "Lacking S19",
+          "primaryGear": 5,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/fd1f3c04-9543-4d6c-aeed-721c5b22e14a.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/fd1f3c04-9543-4d6c-aeed-721c5b22e14a",
+          "sha256": "40ab5ee8b88cc2ad0460ab24d9d406406e15ac362f2c05325fe9aa23327fcbf2",
+          "uncompressedBytes": 54458
+        },
+        "events": {
+          "path": "recordings/fd1f3c04-9543-4d6c-aeed-721c5b22e14a.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/fd1f3c04-9543-4d6c-aeed-721c5b22e14a/events?stage=12",
+          "sha256": "67cebb009070e81a842f4630560e9f340fd7d4a6b4388f8295d889677ddbe465",
+          "uncompressedBytes": 906511
+        }
+      }
+    },
+    {
+      "uuid": "0504667e-16dc-4796-b8bc-b37cb8c82509",
+      "startTime": "2026-09-22T03:07:55.036Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "Unluckers",
+          "currentUsername": "Unluckers",
+          "primaryGear": 6,
+          "deaths": [
+            11
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/0504667e-16dc-4796-b8bc-b37cb8c82509.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/0504667e-16dc-4796-b8bc-b37cb8c82509",
+          "sha256": "c3d3bf3aa658211e1fcf01d82fe70f90311e6983eaf7bf230c5288da46cbf33d",
+          "uncompressedBytes": 55581
+        },
+        "events": {
+          "path": "recordings/0504667e-16dc-4796-b8bc-b37cb8c82509.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/0504667e-16dc-4796-b8bc-b37cb8c82509/events?stage=12",
+          "sha256": "12cc850ceb15fd04f7fbf659fb61022e6204f05a3e3d2235ef514db6558dd3c7",
+          "uncompressedBytes": 889416
+        }
+      }
+    },
+    {
+      "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+      "startTime": "2026-09-20T10:34:26.508Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": [
+            11
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/ff40985c-663c-4119-8070-9434283cb671.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/ff40985c-663c-4119-8070-9434283cb671",
+          "sha256": "a9de2a1e79b61bafea6488af6e556134d5e4392a49dd7dbfdd396a88d1e05624",
+          "uncompressedBytes": 54656
+        },
+        "events": {
+          "path": "recordings/ff40985c-663c-4119-8070-9434283cb671.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/ff40985c-663c-4119-8070-9434283cb671/events?stage=12",
+          "sha256": "958852d1d0b2b1b777e9999adec7607c0b4aa0d65c0831f1833f5f88187e86d9",
+          "uncompressedBytes": 887119
+        }
+      }
+    },
+    {
+      "uuid": "6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92",
+      "startTime": "2026-09-20T10:19:28.142Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            13
+          ]
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": [
+            13
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92",
+          "sha256": "30b8929a5d1d2801825a549d03b1ad1dc3670fbdeb5c5ce4af5c1d401e874098",
+          "uncompressedBytes": 50653
+        },
+        "events": {
+          "path": "recordings/6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92/events?stage=12",
+          "sha256": "59420479b7addcb5df5f2b86d1a90264dded3acc623b4e0dc01a45359ccf7fe0",
+          "uncompressedBytes": 894911
+        }
+      }
+    },
+    {
+      "uuid": "73687cf8-5599-4f4d-a92c-d663a3e9e78a",
+      "startTime": "2026-09-20T09:52:51.945Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": [
+            13
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 320,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/73687cf8-5599-4f4d-a92c-d663a3e9e78a.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/73687cf8-5599-4f4d-a92c-d663a3e9e78a",
+          "sha256": "347379a228ddf367c893cbe5baa3f4091fe21044ba7fb490b6b0befff97c93bf",
+          "uncompressedBytes": 54830
+        },
+        "events": {
+          "path": "recordings/73687cf8-5599-4f4d-a92c-d663a3e9e78a.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/73687cf8-5599-4f4d-a92c-d663a3e9e78a/events?stage=12",
+          "sha256": "326ff36a30fca7b5cc62d1f37f82dc72e7f5fa0161c682376efb3d1af563d667",
+          "uncompressedBytes": 905847
+        }
+      }
+    },
+    {
+      "uuid": "3650ae9e-8234-4d76-b1a7-4bb879d7aa70",
+      "startTime": "2026-10-26T05:52:35.030Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/3650ae9e-8234-4d76-b1a7-4bb879d7aa70.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/3650ae9e-8234-4d76-b1a7-4bb879d7aa70",
+          "sha256": "bdd6d13b0746e37393af7c3bbe83dcd77b124aadb38cafa2fc1c9e6c510074ef",
+          "uncompressedBytes": 50408
+        },
+        "events": {
+          "path": "recordings/3650ae9e-8234-4d76-b1a7-4bb879d7aa70.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/3650ae9e-8234-4d76-b1a7-4bb879d7aa70/events?stage=12",
+          "sha256": "9eab8593d14f289494d45c9c597dbb5fecf971947a82ce2bad02ffe0eca32251",
+          "uncompressedBytes": 923977
+        }
+      }
+    },
+    {
+      "uuid": "307224ee-7a6a-4246-8e56-e6bf85eaf701",
+      "startTime": "2026-10-20T06:36:58.691Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            12
+          ]
+        },
+        {
+          "username": "lmperatrice",
+          "currentUsername": "lmperatrice",
+          "primaryGear": 5,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/307224ee-7a6a-4246-8e56-e6bf85eaf701.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/307224ee-7a6a-4246-8e56-e6bf85eaf701",
+          "sha256": "3a91129203c529ecaba05701b971f716f6d5566c67d220feda8c806e9a909d17",
+          "uncompressedBytes": 54501
+        },
+        "events": {
+          "path": "recordings/307224ee-7a6a-4246-8e56-e6bf85eaf701.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/307224ee-7a6a-4246-8e56-e6bf85eaf701/events?stage=12",
+          "sha256": "406bea0ae7d7e278adea7048c1b1bc4265d84ba4143039e415d62d8046ed9e1f",
+          "uncompressedBytes": 920885
+        }
+      }
+    },
+    {
+      "uuid": "1a0af441-a721-49d9-a579-d769c918cb69",
+      "startTime": "2026-10-18T10:59:30.817Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            15
+          ]
+        },
+        {
+          "username": "lmperatrice",
+          "currentUsername": "lmperatrice",
+          "primaryGear": 5,
+          "deaths": [
+            15
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/1a0af441-a721-49d9-a579-d769c918cb69.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/1a0af441-a721-49d9-a579-d769c918cb69",
+          "sha256": "6892272e7563615dc4a823f7f614412f331334b99b10fd7ce379a10c8a235d3f",
+          "uncompressedBytes": 54458
+        },
+        "events": {
+          "path": "recordings/1a0af441-a721-49d9-a579-d769c918cb69.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/1a0af441-a721-49d9-a579-d769c918cb69/events?stage=12",
+          "sha256": "c7cc59fc204fee09fdf64414dfc3e683d5484a015d141ed1dc48479c8b9b9913",
+          "uncompressedBytes": 902071
+        }
+      }
+    },
+    {
+      "uuid": "d36e3cfd-4d16-4255-b23d-9ab7d8ce07cc",
+      "startTime": "2026-10-15T03:25:23.591Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "B asher",
+          "currentUsername": "B asher",
+          "primaryGear": 6,
+          "deaths": [
+            11
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/d36e3cfd-4d16-4255-b23d-9ab7d8ce07cc.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/d36e3cfd-4d16-4255-b23d-9ab7d8ce07cc",
+          "sha256": "840057beedbb564bd963b6c919c37e0c7ff79ab8bcfc90e2920c0cb20c318151",
+          "uncompressedBytes": 54949
+        },
+        "events": {
+          "path": "recordings/d36e3cfd-4d16-4255-b23d-9ab7d8ce07cc.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/d36e3cfd-4d16-4255-b23d-9ab7d8ce07cc/events?stage=12",
+          "sha256": "489309c0d609a286ae2fc994cd6701c4d4066dc26c7a23e92df682fcf8313394",
+          "uncompressedBytes": 914451
+        }
+      }
+    },
+    {
+      "uuid": "c052bfe0-61a9-45a6-8544-435ef6592bcd",
+      "startTime": "2026-10-14T08:13:35.538Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            11
+          ]
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": [
+            11
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/c052bfe0-61a9-45a6-8544-435ef6592bcd.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/c052bfe0-61a9-45a6-8544-435ef6592bcd",
+          "sha256": "218709fb05efca8edd481ad32b765b5264c50de44805ee16baa76fa352dc2e69",
+          "uncompressedBytes": 50278
+        },
+        "events": {
+          "path": "recordings/c052bfe0-61a9-45a6-8544-435ef6592bcd.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/c052bfe0-61a9-45a6-8544-435ef6592bcd/events?stage=12",
+          "sha256": "29bddb551f859310f3e18a1d95ce9910c1e75ef242ff93d3213876fb98e843d0",
+          "uncompressedBytes": 934283
+        }
+      }
+    },
+    {
+      "uuid": "93acd8c7-85fb-4eb7-987e-44ad81636976",
+      "startTime": "2026-10-05T08:34:22.015Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            13
+          ]
+        },
+        {
+          "username": "lmperatrice",
+          "currentUsername": "lmperatrice",
+          "primaryGear": 5,
+          "deaths": [
+            11
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/93acd8c7-85fb-4eb7-987e-44ad81636976.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/93acd8c7-85fb-4eb7-987e-44ad81636976",
+          "sha256": "0b867072fbb39d723b000b126788ff8d81f878e47b74df02bed5f32e9f463484",
+          "uncompressedBytes": 50820
+        },
+        "events": {
+          "path": "recordings/93acd8c7-85fb-4eb7-987e-44ad81636976.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/93acd8c7-85fb-4eb7-987e-44ad81636976/events?stage=12",
+          "sha256": "e8651d9657a3d3a86beefa49781dfed223c700298f8f610554a88e34e745ee8d",
+          "uncompressedBytes": 916013
+        }
+      }
+    },
+    {
+      "uuid": "22255ca7-66a2-4f72-9fcb-e1dd397a5e1e",
+      "startTime": "2026-10-04T07:24:37.839Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "A rsh",
+          "currentUsername": "A rsh",
+          "primaryGear": 5,
+          "deaths": [
+            12
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/22255ca7-66a2-4f72-9fcb-e1dd397a5e1e.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/22255ca7-66a2-4f72-9fcb-e1dd397a5e1e",
+          "sha256": "5dbbd74b5188f37bc57069fcc430da7755e20395994671d1c0b1436342dc98b4",
+          "uncompressedBytes": 50231
+        },
+        "events": {
+          "path": "recordings/22255ca7-66a2-4f72-9fcb-e1dd397a5e1e.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/22255ca7-66a2-4f72-9fcb-e1dd397a5e1e/events?stage=12",
+          "sha256": "2119586d46975e47544199bd6104ca7ebf39d90cc6a901c662577f711fa753d6",
+          "uncompressedBytes": 932524
+        }
+      }
+    },
+    {
+      "uuid": "36e9d7cf-3953-4beb-b06d-7d04ec4fad58",
+      "startTime": "2026-10-04T02:58:48.074Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/36e9d7cf-3953-4beb-b06d-7d04ec4fad58.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/36e9d7cf-3953-4beb-b06d-7d04ec4fad58",
+          "sha256": "d667acdd81afe713c0bb6aae5ef72c902311a23d3b1cddb9a5c7880ee6ebe219",
+          "uncompressedBytes": 50253
+        },
+        "events": {
+          "path": "recordings/36e9d7cf-3953-4beb-b06d-7d04ec4fad58.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/36e9d7cf-3953-4beb-b06d-7d04ec4fad58/events?stage=12",
+          "sha256": "d459c68edeccaa42670736a7a9d117793c1803fea139386fe97f94ff76c16003",
+          "uncompressedBytes": 925983
+        }
+      }
+    },
+    {
+      "uuid": "97778429-1912-47db-a6b0-45c0be484ca1",
+      "startTime": "2026-10-04T02:04:12.833Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": [
+            11
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/97778429-1912-47db-a6b0-45c0be484ca1.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/97778429-1912-47db-a6b0-45c0be484ca1",
+          "sha256": "bed499a35f8dd812865df0065c6e557d94a2be6ff10d17e3cdfbaebdce8c53d0",
+          "uncompressedBytes": 54622
+        },
+        "events": {
+          "path": "recordings/97778429-1912-47db-a6b0-45c0be484ca1.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/97778429-1912-47db-a6b0-45c0be484ca1/events?stage=12",
+          "sha256": "153829b90b9b84ed6d21e5880a20a5cf98c823048a828d824cf005e144921a22",
+          "uncompressedBytes": 902219
+        }
+      }
+    },
+    {
+      "uuid": "fe97da07-8197-4625-bf23-31538d7e64fa",
+      "startTime": "2026-10-01T04:20:58.630Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            15
+          ]
+        },
+        {
+          "username": "lmperatrice",
+          "currentUsername": "lmperatrice",
+          "primaryGear": 5,
+          "deaths": [
+            15
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/fe97da07-8197-4625-bf23-31538d7e64fa.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/fe97da07-8197-4625-bf23-31538d7e64fa",
+          "sha256": "3641cc31235a1549452553342c50557835208f58d8db3ef64eca15e190c3537b",
+          "uncompressedBytes": 54311
+        },
+        "events": {
+          "path": "recordings/fe97da07-8197-4625-bf23-31538d7e64fa.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/fe97da07-8197-4625-bf23-31538d7e64fa/events?stage=12",
+          "sha256": "a5104fb3636ddcd9935b5e8600f547d1490f9f67baf789f29e8fe9db0dd25153",
+          "uncompressedBytes": 891140
+        }
+      }
+    },
+    {
+      "uuid": "75fce07a-55c9-47ba-bc08-698c608dbd54",
+      "startTime": "2026-09-29T11:47:02.507Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            15
+          ]
+        },
+        {
+          "username": "Unluckers",
+          "currentUsername": "Unluckers",
+          "primaryGear": 6,
+          "deaths": [
+            15
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/75fce07a-55c9-47ba-bc08-698c608dbd54.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/75fce07a-55c9-47ba-bc08-698c608dbd54",
+          "sha256": "12fd80df18c6b6d0d96a0740a780a82c845717968550f944183e299609a71e5f",
+          "uncompressedBytes": 53786
+        },
+        "events": {
+          "path": "recordings/75fce07a-55c9-47ba-bc08-698c608dbd54.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/75fce07a-55c9-47ba-bc08-698c608dbd54/events?stage=12",
+          "sha256": "9d83747b9653e8d4f4ccfd8df89b6ed0c497f51dab1caeeac00429881c49ba11",
+          "uncompressedBytes": 892896
+        }
+      }
+    },
+    {
+      "uuid": "457702cb-4ac3-481c-aaa2-2afc5cd5d8c6",
+      "startTime": "2026-09-29T11:31:46.811Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            13
+          ]
+        },
+        {
+          "username": "Unluckers",
+          "currentUsername": "Unluckers",
+          "primaryGear": 6,
+          "deaths": [
+            13
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/457702cb-4ac3-481c-aaa2-2afc5cd5d8c6.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/457702cb-4ac3-481c-aaa2-2afc5cd5d8c6",
+          "sha256": "962e593988ddef602ddfaa01255e5ab462e21bee01581f864a106fcfcd1b6771",
+          "uncompressedBytes": 50573
+        },
+        "events": {
+          "path": "recordings/457702cb-4ac3-481c-aaa2-2afc5cd5d8c6.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/457702cb-4ac3-481c-aaa2-2afc5cd5d8c6/events?stage=12",
+          "sha256": "6dc4e3c85c094b14180521ac6ebd0ee8f8d2ef44998c48897acd7691455a5190",
+          "uncompressedBytes": 882607
+        }
+      }
+    },
+    {
+      "uuid": "fe612bd5-cb4b-4943-89e5-1f6ca4af63a2",
+      "startTime": "2026-09-26T23:55:54.526Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            15
+          ]
+        },
+        {
+          "username": "lmperatrice",
+          "currentUsername": "lmperatrice",
+          "primaryGear": 5,
+          "deaths": [
+            15
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/fe612bd5-cb4b-4943-89e5-1f6ca4af63a2.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/fe612bd5-cb4b-4943-89e5-1f6ca4af63a2",
+          "sha256": "6e76a3127559020c66b71933f175f321b8aa159f41b07c4f28e520a3728c793f",
+          "uncompressedBytes": 54262
+        },
+        "events": {
+          "path": "recordings/fe612bd5-cb4b-4943-89e5-1f6ca4af63a2.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/fe612bd5-cb4b-4943-89e5-1f6ca4af63a2/events?stage=12",
+          "sha256": "7548e3ff3d40c9052c2a510087868b7fd65f6dabe275e769986faec04fe5d6f0",
+          "uncompressedBytes": 947987
+        }
+      }
+    },
+    {
+      "uuid": "8d1f397b-2cf3-4540-8351-d945e33a0965",
+      "startTime": "2026-09-26T23:27:53.142Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "lmperatrice",
+          "currentUsername": "lmperatrice",
+          "primaryGear": 5,
+          "deaths": [
+            13,
+            15
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/8d1f397b-2cf3-4540-8351-d945e33a0965.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/8d1f397b-2cf3-4540-8351-d945e33a0965",
+          "sha256": "13e8a5c603bf7d7cd3dd4a3113fae2dbc0d63f3737bc443c6e249ac848b0d805",
+          "uncompressedBytes": 54983
+        },
+        "events": {
+          "path": "recordings/8d1f397b-2cf3-4540-8351-d945e33a0965.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/8d1f397b-2cf3-4540-8351-d945e33a0965/events?stage=12",
+          "sha256": "a80ebd396ee615f9db2dc6fdf09e8b7c29c7dbd4e962060d05a498f14deacd73",
+          "uncompressedBytes": 922340
+        }
+      }
+    },
+    {
+      "uuid": "78022d9f-8084-4816-98b1-36c3877184bf",
+      "startTime": "2026-09-24T10:16:38.322Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            11
+          ]
+        },
+        {
+          "username": "Unluckers",
+          "currentUsername": "Unluckers",
+          "primaryGear": 6,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/78022d9f-8084-4816-98b1-36c3877184bf.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/78022d9f-8084-4816-98b1-36c3877184bf",
+          "sha256": "fffd734741491abfd1ceb2c878ba93cc843d31ee51546697501756a3d7eda3c2",
+          "uncompressedBytes": 54280
+        },
+        "events": {
+          "path": "recordings/78022d9f-8084-4816-98b1-36c3877184bf.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/78022d9f-8084-4816-98b1-36c3877184bf/events?stage=12",
+          "sha256": "ed4539c653153f44fa00a81e8172ba4d8272958ec889c32b77d1ae1e12be4c18",
+          "uncompressedBytes": 916531
+        }
+      }
+    },
+    {
+      "uuid": "0fa47fed-bf91-4754-8f52-47647dc7056c",
+      "startTime": "2026-09-24T08:30:51.860Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "Unluckers",
+          "currentUsername": "Unluckers",
+          "primaryGear": 6,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/0fa47fed-bf91-4754-8f52-47647dc7056c.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/0fa47fed-bf91-4754-8f52-47647dc7056c",
+          "sha256": "20588d03fc967aeb2aa9655d09ca25b1dada1e656c654a10d0f47de0e99463da",
+          "uncompressedBytes": 54458
+        },
+        "events": {
+          "path": "recordings/0fa47fed-bf91-4754-8f52-47647dc7056c.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/0fa47fed-bf91-4754-8f52-47647dc7056c/events?stage=12",
+          "sha256": "858736bc18226afaf4e0fd85d055bc50b9376e1d7ff421a3944f9a2614440c91",
+          "uncompressedBytes": 884430
+        }
+      }
+    },
+    {
+      "uuid": "623998ef-2966-4233-b23c-5f7148ca1d5d",
+      "startTime": "2026-09-24T07:36:01.887Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "Unluckers",
+          "currentUsername": "Unluckers",
+          "primaryGear": 6,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/623998ef-2966-4233-b23c-5f7148ca1d5d.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/623998ef-2966-4233-b23c-5f7148ca1d5d",
+          "sha256": "03ff58ece7ee608231a33e5a07d02dfc0c0a8a47ccb76019d5c982a6607a3d35",
+          "uncompressedBytes": 54785
+        },
+        "events": {
+          "path": "recordings/623998ef-2966-4233-b23c-5f7148ca1d5d.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/623998ef-2966-4233-b23c-5f7148ca1d5d/events?stage=12",
+          "sha256": "3f4d0eee30c000ada8142bd1d958d50d3d16dd47555dc839a039a852f41555aa",
+          "uncompressedBytes": 893249
+        }
+      }
+    },
+    {
+      "uuid": "8a5b5f0c-57ef-4f4d-b554-a0d6f0c96e77",
+      "startTime": "2026-09-23T03:42:10.105Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "Lacking S19",
+          "currentUsername": "Lacking S19",
+          "primaryGear": 5,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/8a5b5f0c-57ef-4f4d-b554-a0d6f0c96e77.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/8a5b5f0c-57ef-4f4d-b554-a0d6f0c96e77",
+          "sha256": "c7133bbe2b77ff9ed02ae9a29732733d9ea1a9019ac5eb3c35fa8f96c334c0d3",
+          "uncompressedBytes": 54775
+        },
+        "events": {
+          "path": "recordings/8a5b5f0c-57ef-4f4d-b554-a0d6f0c96e77.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/8a5b5f0c-57ef-4f4d-b554-a0d6f0c96e77/events?stage=12",
+          "sha256": "dda1da49ff39450bee1038b1e3f11df83bc9957b58bcb0d7200b5242882fbfe0",
+          "uncompressedBytes": 901482
+        }
+      }
+    },
+    {
+      "uuid": "f5cd51b6-7834-41b9-9861-14f03fbf2cf5",
+      "startTime": "2026-09-23T00:31:11.059Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": [
+            11
+          ]
+        },
+        {
+          "username": "Lacking S19",
+          "currentUsername": "Lacking S19",
+          "primaryGear": 5,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/f5cd51b6-7834-41b9-9861-14f03fbf2cf5.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/f5cd51b6-7834-41b9-9861-14f03fbf2cf5",
+          "sha256": "a6e1ebd1510a66f1634160d1dd13616d04bdc2ed79a077c8b5e32e74a6f3dba3",
+          "uncompressedBytes": 54294
+        },
+        "events": {
+          "path": "recordings/f5cd51b6-7834-41b9-9861-14f03fbf2cf5.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/f5cd51b6-7834-41b9-9861-14f03fbf2cf5/events?stage=12",
+          "sha256": "42a63fbdf04aaca33c7a099504905138fb40109e762dba3e6385874c14fa00dc",
+          "uncompressedBytes": 892724
+        }
+      }
+    },
+    {
+      "uuid": "16732a46-4067-47f9-8c18-c4d60056726e",
+      "startTime": "2026-09-22T08:35:07.499Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "cutely meows",
+          "currentUsername": "cutely meows",
+          "primaryGear": 6,
+          "deaths": [
+            10
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/16732a46-4067-47f9-8c18-c4d60056726e.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/16732a46-4067-47f9-8c18-c4d60056726e",
+          "sha256": "9fa196b0ddb88d94ae2973f2300ba1f69007cc371bb1d131ec5b264b721d888d",
+          "uncompressedBytes": 54145
+        },
+        "events": {
+          "path": "recordings/16732a46-4067-47f9-8c18-c4d60056726e.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/16732a46-4067-47f9-8c18-c4d60056726e/events?stage=12",
+          "sha256": "063fac1fdf643f2aab4cbd16ca31e1c1a74a75fbc7d187cc5c699470360de5df",
+          "uncompressedBytes": 920970
+        }
+      }
+    },
+    {
+      "uuid": "8ad57d05-e365-4e4f-a2da-7dc2cc2f2730",
+      "startTime": "2026-09-21T10:20:58.695Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "Lacking S19",
+          "currentUsername": "Lacking S19",
+          "primaryGear": 5,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/8ad57d05-e365-4e4f-a2da-7dc2cc2f2730.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/8ad57d05-e365-4e4f-a2da-7dc2cc2f2730",
+          "sha256": "f856142f013a6c72a4b3085169dbc1b86400a1eedba266609149865407fd9ef3",
+          "uncompressedBytes": 53968
+        },
+        "events": {
+          "path": "recordings/8ad57d05-e365-4e4f-a2da-7dc2cc2f2730.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/8ad57d05-e365-4e4f-a2da-7dc2cc2f2730/events?stage=12",
+          "sha256": "7c4f505b7ab4cecf7aac010a4173846e930d7ced6fa9c43ee96c73388cd3c470",
+          "uncompressedBytes": 898567
+        }
+      }
+    },
+    {
+      "uuid": "282af10b-fa84-41fa-b021-14c0efbec5bc",
+      "startTime": "2026-09-21T09:53:27.861Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "Lacking S19",
+          "currentUsername": "Lacking S19",
+          "primaryGear": 5,
+          "deaths": [
+            11
+          ]
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/282af10b-fa84-41fa-b021-14c0efbec5bc.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/282af10b-fa84-41fa-b021-14c0efbec5bc",
+          "sha256": "33c9e9aae4b41485a17fd5e732e9ecdb853a849662aa8e86242db22ca8b3a3f5",
+          "uncompressedBytes": 54329
+        },
+        "events": {
+          "path": "recordings/282af10b-fa84-41fa-b021-14c0efbec5bc.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/282af10b-fa84-41fa-b021-14c0efbec5bc/events?stage=12",
+          "sha256": "1c8bb67d18db5ce6f2a992b57b4c4cd95dc43ef55b8de0eaadd0c9e603c8238b",
+          "uncompressedBytes": 897240
+        }
+      }
+    },
+    {
+      "uuid": "e2b81099-36cd-44a5-9b52-5a2a713b8b5e",
+      "startTime": "2026-09-05T06:15:18.619Z",
+      "party": [
+        {
+          "username": "Drummie",
+          "currentUsername": "Drummie",
+          "primaryGear": 6,
+          "deaths": []
+        },
+        {
+          "username": "B asher",
+          "currentUsername": "B asher",
+          "primaryGear": 6,
+          "deaths": []
+        }
+      ],
+      "bossSpawn": {
+        "ticks": 324,
+        "accurate": true
+      },
+      "files": {
+        "raid": {
+          "path": "recordings/e2b81099-36cd-44a5-9b52-5a2a713b8b5e.raid.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/e2b81099-36cd-44a5-9b52-5a2a713b8b5e",
+          "sha256": "2bd61e91d825218089621688031a502115796abf45474cff21493de8a2e29bc0",
+          "uncompressedBytes": 54394
+        },
+        "events": {
+          "path": "recordings/e2b81099-36cd-44a5-9b52-5a2a713b8b5e.events.json.gz",
+          "url": "https://blert.io/api/v1/raids/tob/e2b81099-36cd-44a5-9b52-5a2a713b8b5e/events?stage=12",
+          "sha256": "e10e7721125c37a326076e692afa5e7ab51f6612b299e6d0869ae77c3c3f56ea",
+          "uncompressedBytes": 920904
+        }
+      }
+    }
+  ]
+}

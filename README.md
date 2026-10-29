@@ -205,6 +205,20 @@ recording-derived ranger rotation, including native client actions and waiting
 for the partner at the entrance barrier. The guide covers equipment capture,
 starting/stopping, and verification.
 
+The [Duo Nylocas Mage plugin](docs/nylocas-mage-plugin.md) implements the
+complementary mage role, with reserved scythe/barrage/bulwark packets, captured
+equipment sets and the immediate wave-29 cutoff. Use one role per player client.
+
+Both roles also run without a client through the
+[headless Nylocas simulation runner](docs/nylocas-simulations.md):
+
+```bash
+python3 tools/simulate-nylocas.py --trials 1000 --seed 1 --offline
+```
+
+It advances the real server without tick delays and writes per-trial CSV plus
+JSON/Markdown reports for completion times, idle ticks, attack overlap, and failures.
+
 ```bash
 # Edit client/src/main/java/... or the upstream RuneLite checkout, then:
 ./dev build-client

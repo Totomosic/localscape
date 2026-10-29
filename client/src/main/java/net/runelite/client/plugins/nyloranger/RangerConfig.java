@@ -6,7 +6,7 @@ import net.runelite.client.config.ConfigItem;
 import net.runelite.client.config.Range;
 
 @ConfigGroup(RangerConfig.GROUP)
-public interface RangerConfig extends Config
+public interface RangerConfig extends Config, net.runelite.client.plugins.nylocommon.NylocasPrayers.Settings
 {
 	String GROUP = "nyloranger";
 

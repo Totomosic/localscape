@@ -1,5 +1,6 @@
 package net.runelite.client.plugins.nyloranger;
 
+import org.localscape.nylocas.ranger.RangerStrategy;
 import java.util.Arrays;
 import net.runelite.api.Client;
 import net.runelite.api.InventoryID;
@@ -13,8 +14,8 @@ import net.runelite.api.ScriptID;
 import net.runelite.api.gameval.VarClientID;
 import net.runelite.api.gameval.InterfaceID;
 import net.runelite.api.widgets.Widget;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Style;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Weapon;
+import org.localscape.nylocas.ranger.RangerStrategy.Style;
+import org.localscape.nylocas.ranger.RangerStrategy.Weapon;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InOrder;

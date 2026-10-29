@@ -1,5 +1,7 @@
-package net.runelite.client.plugins.nyloranger;
+package org.localscape.nylocas.ranger;
 
+import org.localscape.nylocas.ranger.RangerFlickers;
+import org.localscape.nylocas.ranger.RangerStrategy;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -13,11 +15,11 @@ import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.zip.GZIPInputStream;
-import net.runelite.api.coords.WorldPoint;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Crab;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Lane;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Rule;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Style;
+import org.localscape.nylocas.Tile;
+import org.localscape.nylocas.ranger.RangerStrategy.Crab;
+import org.localscape.nylocas.ranger.RangerStrategy.Lane;
+import org.localscape.nylocas.ranger.RangerStrategy.Rule;
+import org.localscape.nylocas.ranger.RangerStrategy.Style;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -62,7 +64,7 @@ public class RangerReplayTest
 				char slot = lane == Lane.SOUTH ? (x == 3295 ? 'W' : 'E') : (y == 4249 ? 'N' : 'S');
 				int rid = Integer.parseInt(entry.getKey());
 				crabs.put(rid, new Crab(rid, rid, npc.get("spawnTick").getAsInt(), nylo.get("wave").getAsInt(),
-					lane, slot, nylo.get("big").getAsBoolean(), Style.values()[(id - 8342) % 3], new WorldPoint(x, y, 0)));
+					lane, slot, nylo.get("big").getAsBoolean(), Style.values()[(id - 8342) % 3], new Tile(x, y, 0)));
 			}
 			for (JsonElement raw : events)
 			{

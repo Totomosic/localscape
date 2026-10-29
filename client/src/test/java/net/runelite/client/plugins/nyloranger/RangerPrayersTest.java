@@ -1,5 +1,6 @@
 package net.runelite.client.plugins.nyloranger;
 
+import org.localscape.nylocas.ranger.RangerStrategy;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import net.runelite.api.Client;
@@ -16,9 +17,9 @@ import net.runelite.api.WorldView;
 import net.runelite.api.coords.WorldArea;
 import net.runelite.api.gameval.InterfaceID;
 import net.runelite.api.widgets.Widget;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Crab;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Lane;
-import net.runelite.client.plugins.nyloranger.RangerStrategy.Style;
+import org.localscape.nylocas.ranger.RangerStrategy.Crab;
+import org.localscape.nylocas.ranger.RangerStrategy.Lane;
+import org.localscape.nylocas.ranger.RangerStrategy.Style;
 import org.junit.Before;
 import org.junit.Test;
 

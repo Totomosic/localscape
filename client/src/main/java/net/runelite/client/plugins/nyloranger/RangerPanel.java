@@ -1,5 +1,6 @@
 package net.runelite.client.plugins.nyloranger;
 
+import org.localscape.nylocas.ranger.RangerStrategy;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.util.function.Consumer;
@@ -13,7 +14,7 @@ final class RangerPanel extends PluginPanel
 {
 	private final JTextArea status = new JTextArea("Waiting for login");
 
-	RangerPanel(Runnable start, Runnable stop, Consumer<RangerStrategy.Style> capture)
+	RangerPanel(Runnable start, Runnable stop, Runnable startRoom, Consumer<RangerStrategy.Style> capture)
 	{
 		setLayout(new BorderLayout(0, 8));
 		add(new JLabel("Duo Nylocas Ranger"), BorderLayout.NORTH);
@@ -26,6 +27,9 @@ final class RangerPanel extends PluginPanel
 		JButton run = new JButton("Start ranger");
 		run.addActionListener(event -> start.run());
 		buttons.add(run);
+		JButton enter = new JButton("Start room");
+		enter.addActionListener(event -> startRoom.run());
+		buttons.add(enter);
 		JButton pause = new JButton("Stop ranger");
 		pause.addActionListener(event -> stop.run());
 		buttons.add(pause);
