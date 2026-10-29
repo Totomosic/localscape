@@ -22,7 +22,7 @@ final class MageActions extends NylocasActions
 	{
 		super(client, config, active, Arrays.stream(Weapon.values())
 			.filter(w -> w != Weapon.SHADOW || config.shadowOpening()).mapToInt(w -> id(config, w)).toArray(),
-			config.shadowOpening() ? 27275 : 31113, 2, config.shadowOpening() ? 0 : 3);
+			config.shadowOpening() ? 27275 : 31113, 2, config.shadowOpening() ? Weapon.SHADOW.stance : Weapon.EYE.stance);
 		this.config = config;
 	}
 

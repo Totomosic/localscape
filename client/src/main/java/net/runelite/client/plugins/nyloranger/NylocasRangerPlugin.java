@@ -70,7 +70,7 @@ public class NylocasRangerPlugin extends Plugin
 	private boolean validated;
 	private boolean cameraPrepared;
 	private boolean roomStartRequested;
-	private boolean roomStartSubmitted;
+	private int roomStartSubmittedTick = -1;
 
 	@Provides
 	RangerConfig provideConfig(ConfigManager manager) { return manager.getConfig(RangerConfig.class); }
@@ -139,7 +139,7 @@ public class NylocasRangerPlugin extends Plugin
 			return;
 		}
 		roomStartRequested = true;
-		roomStartSubmitted = false;
+		roomStartSubmittedTick = -1;
 		status("Room start requested. Waiting for the Nylocas entry confirmation.");
 	}
 
@@ -164,7 +164,7 @@ public class NylocasRangerPlugin extends Plugin
 		validated = false;
 		cameraPrepared = false;
 		roomStartRequested = false;
-		roomStartSubmitted = false;
+		roomStartSubmittedTick = -1;
 		lastTick = -1;
 	}
 
@@ -251,14 +251,32 @@ public class NylocasRangerPlugin extends Plugin
 				actions.prepareRoomCamera();
 				cameraPrepared = true;
 			}
-			if (!actions.prepareWaiting()) { stop(actions.error()); return; }
-			actions.controls();
-			if (roomStartRequested && !roomStartSubmitted && actions.confirmRoomStart()) roomStartSubmitted = true;
-			if (roomStartSubmitted)
+			// Equipment, stance, run and barrier clicks can close the modal and cancel
+			// the server's suspended entry script. Keep them out of the handshake.
+			if (roomStartSubmittedTick >= 0)
 			{
-				status("Room start confirmed. Waiting to enter Nylocas.");
+				if (tick - roomStartSubmittedTick < 4)
+				{
+					status("Room start sent. Waiting for server entry.");
+					return;
+				}
+				roomStartSubmittedTick = -1;
+				actions.barrier();
+				status("Entry not confirmed. Reopening the entry prompt to retry.");
 				return;
 			}
+			if (actions.roomStartPrompt())
+			{
+				if (roomStartRequested && actions.confirmRoomStart())
+				{
+					roomStartSubmittedTick = tick;
+					status("Room start sent. Waiting for server entry.");
+				}
+				else status("Waiting at the entry prompt. Press Start room to enter.");
+				return;
+			}
+			if (!actions.prepareWaiting()) { stop(actions.error()); return; }
+			actions.controls();
 			status(actions.barrier() ? "Clicking barrier; waiting. Press Start room to enter."
 				: "Waiting for Nylocas barrier to load.");
 			return;
@@ -267,7 +285,7 @@ public class NylocasRangerPlugin extends Plugin
 		{
 			entered = true;
 			roomStartRequested = false;
-			roomStartSubmitted = false;
+			roomStartSubmittedTick = -1;
 			room.ready = tick;
 		}
 		room.player = tile(point);

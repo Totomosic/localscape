@@ -45,6 +45,8 @@ public class NylocasActions
 
 	private static final int ROOM_ZOOM = 128;
 	private static final int ROOM_PITCH = 383;
+	private static final int[] STANCE_BUTTONS = {InterfaceID.CombatInterface._0, InterfaceID.CombatInterface._1,
+		InterfaceID.CombatInterface._2, InterfaceID.CombatInterface._3};
 	protected final Client client;
 	private final Equipment config;
 	private final int[] weapons;
@@ -129,7 +131,7 @@ public class NylocasActions
 			// after every weapon change, even if the old weapon already displayed it.
 			if (changingWeapon || client.getVarpValue(43) != stance)
 			{
-				clickWidget(stance == 3 ? InterfaceID.CombatInterface._3 : InterfaceID.CombatInterface._1);
+				clickWidget(STANCE_BUTTONS[stance]);
 			}
 			error = null;
 			return true;
@@ -297,13 +299,14 @@ public class NylocasActions
 		return false;
 	}
 
-	/** Only called after an explicit Start room request, never by ordinary barrier waiting. */
-	public boolean confirmRoomStart()
+	public boolean roomStartPrompt() { return roomStartOption() != null; }
+
+	private Widget roomStartOption()
 	{
 		Widget options = client.getWidget(InterfaceID.Chatmenu.OPTIONS);
-		if (options == null || options.isHidden()) return false;
+		if (options == null || options.isHidden()) return null;
 		Widget[] children = options.getDynamicChildren();
-		if (children == null) return false;
+		if (children == null) return null;
 		boolean nylocas = false;
 		Widget enter = null;
 		for (Widget child : children)
@@ -315,9 +318,16 @@ public class NylocasActions
 			if (text.equalsIgnoreCase("Start the Nylocas encounter?")) nylocas = true;
 			if (text.equalsIgnoreCase("Enter") && !child.isHidden()) enter = child;
 		}
-		if (!nylocas || enter == null) return false;
+		return nylocas ? enter : null;
+	}
+
+	/** Only called after an explicit Start room request, never by ordinary barrier waiting. */
+	public boolean confirmRoomStart()
+	{
+		Widget enter = roomStartOption();
+		if (enter == null) return false;
 		cancelQueuedInput();
-		client.menuAction(enter.getIndex(), options.getId(), MenuAction.WIDGET_CONTINUE, 0, -1, "Enter", "");
+		client.menuAction(enter.getIndex(), InterfaceID.Chatmenu.OPTIONS, MenuAction.WIDGET_CONTINUE, 0, -1, "Enter", "");
 		return true;
 	}
 

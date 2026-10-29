@@ -54,7 +54,23 @@ including already-attacked survivors. Other births still obey the four-wave
 limit. Pending native approaches are cancelled at either boundary. Predictions
 never fabricate an actual wave through a population-cap retry.
 
-## Current rotation validation
+## Attack-style correction
+
+Powered magic weapons now use longrange, including the Shadow opener and its
+pre-room setup. Ranged weapons use rapid; scythe, sulphur blades and claws use
+aggressive/strength. Dinh's remains on Pummel because Block prevents attacks,
+and barrage uses the spell's fixed ten-tile range. The shared client action
+adapter now maps all four stance values to their matching combat buttons;
+previously stance 0 incorrectly clicked stance 1.
+
+Validation passes **153 client tests** and **30 server style/interaction tests**.
+The style tests resolve each weapon against the actual server weapon category.
+A ten-room smoke run (seeds 1–10) completed eight rooms with two deaths and no
+timeouts; artifacts are in `.state/simulations/attack-styles/`. This small run
+does not establish that the previously measured survival regression is fixed.
+The rebuilt client is `client-1.11.19-local-683f77f49e49.jar`.
+
+## Rotation validation before attack-style correction
 
 The client build passes **151 strategy, replay, action, plugin and movement
 tests**, including the unchanged ranger suite. Mage replay validation checks

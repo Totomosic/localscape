@@ -107,7 +107,6 @@ public class NylocasRangerPluginTest
 	@Test
 	public void clicksBarrierEveryGameTickButNeverConfirmsEntry() throws Exception
 	{
-		entryDialogue("Start the Nylocas encounter?");
 		SwingUtilities.invokeAndWait(plugin::startUp);
 		for (int tick = 0; tick < 4; tick++)
 		{
@@ -124,6 +123,36 @@ public class NylocasRangerPluginTest
 		verify(client, times(4)).menuAction(15, 31, MenuAction.GAME_OBJECT_FIRST_OPTION, 32755, -1, "Pass-through", "Nylocas barrier");
 	}
 
+
+	@Test public void startRoomConfirmsBeforeSetupClicksCanCancelTheDialogue() throws Exception
+	{
+		entryDialogue("Start the Nylocas encounter?");
+		Widget stance = mock(Widget.class);
+		when(stance.getId()).thenReturn(InterfaceID.CombatInterface._1);
+		when(stance.isIf3()).thenReturn(true);
+		when(client.getWidget(InterfaceID.CombatInterface._1)).thenReturn(stance);
+		when(client.getVarpValue(43)).thenReturn(0);
+		java.util.concurrent.atomic.AtomicBoolean dialogueActive = new java.util.concurrent.atomic.AtomicBoolean(true);
+		java.util.concurrent.atomic.AtomicBoolean roomStarted = new java.util.concurrent.atomic.AtomicBoolean();
+		// Server combat-tab clicks close the modal and cancel its suspended entry script.
+		doAnswer(call ->
+		{
+			MenuAction action = call.getArgument(2);
+			int widget = call.getArgument(1);
+			if (action == MenuAction.CC_OP && widget == InterfaceID.CombatInterface._1) dialogueActive.set(false);
+			if (action == MenuAction.WIDGET_CONTINUE) roomStarted.set(dialogueActive.get());
+			return null;
+		}).when(client).menuAction(anyInt(), anyInt(), any(MenuAction.class), anyInt(), anyInt(), anyString(), anyString());
+		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		verify(toolbar).addNavigation(navigation.capture());
+		SwingUtilities.invokeAndWait(find(navigation.getValue().getPanel(), JButton.class, "Start room")::doClick);
+		plugin.onGameTick(new GameTick());
+		assertTrue("Enter must reach the server while the entry coroutine is still active", roomStarted.get());
+		when(client.getTickCount()).thenReturn(1); plugin.onGameTick(new GameTick());
+		verify(client, never()).getWidget(InterfaceID.CombatInterface._1);
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
 
 	@Test public void startRoomButtonConfirmsOnceAndStopsReclickingBarrier() throws Exception
 	{
@@ -142,7 +171,41 @@ public class NylocasRangerPluginTest
 			plugin.onGameTick(new GameTick());
 		}
 		verify(client, times(1)).menuAction(1, InterfaceID.Chatmenu.OPTIONS, MenuAction.WIDGET_CONTINUE, 0, -1, "Enter", "");
-		verify(client, times(1)).menuAction(15, 31, MenuAction.GAME_OBJECT_FIRST_OPTION, 32755, -1, "Pass-through", "Nylocas barrier");
+		verify(client, never()).menuAction(15, 31, MenuAction.GAME_OBJECT_FIRST_OPTION, 32755, -1, "Pass-through", "Nylocas barrier");
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test public void waitingAtTheEntryPromptDoesNotCancelThePartnerHandshake() throws Exception
+	{
+		entryDialogue("Start the Nylocas encounter?");
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		for (int tick = 0; tick < 3; tick++)
+		{
+			when(client.getTickCount()).thenReturn(tick);
+			plugin.onGameTick(new GameTick());
+		}
+		verify(client, never()).menuAction(anyInt(), anyInt(), any(MenuAction.class), anyInt(), anyInt(), anyString(), anyString());
+		SwingUtilities.invokeAndWait(plugin::shutDown);
+	}
+
+	@Test public void roomStartRetriesAnUnacknowledgedEntryWithAFreshPrompt() throws Exception
+	{
+		entryDialogue("Start the Nylocas encounter?");
+		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
+		SwingUtilities.invokeAndWait(plugin::startUp);
+		verify(toolbar).addNavigation(navigation.capture());
+		SwingUtilities.invokeAndWait(find(navigation.getValue().getPanel(), JButton.class, "Start room")::doClick);
+		for (int tick = 0; tick < 4; tick++)
+		{
+			when(client.getTickCount()).thenReturn(tick);
+			plugin.onGameTick(new GameTick());
+		}
+		verify(client, times(1)).menuAction(1, InterfaceID.Chatmenu.OPTIONS, MenuAction.WIDGET_CONTINUE, 0, -1, "Enter", "");
+		verify(client, never()).menuAction(15, 31, MenuAction.GAME_OBJECT_FIRST_OPTION, 32755, -1, "Pass-through", "Nylocas barrier");
+		when(client.getTickCount()).thenReturn(4); plugin.onGameTick(new GameTick());
+		verify(client).menuAction(15, 31, MenuAction.GAME_OBJECT_FIRST_OPTION, 32755, -1, "Pass-through", "Nylocas barrier");
+		when(client.getTickCount()).thenReturn(5); plugin.onGameTick(new GameTick());
+		verify(client, times(2)).menuAction(1, InterfaceID.Chatmenu.OPTIONS, MenuAction.WIDGET_CONTINUE, 0, -1, "Enter", "");
 		SwingUtilities.invokeAndWait(plugin::shutDown);
 	}
 

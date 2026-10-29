@@ -75,4 +75,31 @@ public class MageActionsTest
 		when(client.getVarbitValue(VarbitID.SPELLBOOK)).thenReturn(1); when(equipment.contains(29084)).thenReturn(false);
 		assertFalse(actions.validate()); assertTrue(actions.error().contains("29084"));
 	}
+	@Test public void selectsTheRequestedCombatButtonForEveryStance()
+	{
+		int[] buttons = {InterfaceID.CombatInterface._0, InterfaceID.CombatInterface._1,
+			InterfaceID.CombatInterface._2, InterfaceID.CombatInterface._3};
+		for (int stance = 0; stance < buttons.length; stance++)
+		{
+			clearInvocations(client);
+			when(client.getVarpValue(43)).thenReturn((stance + 1) % buttons.length);
+			Widget button = mock(Widget.class);
+			when(button.getId()).thenReturn(buttons[stance]);
+			when(button.getIndex()).thenReturn(-1);
+			when(button.isIf3()).thenReturn(true);
+			when(client.getWidget(buttons[stance])).thenReturn(button);
+			assertTrue(actions.prepare(27624, 2, stance));
+			verify(client).menuAction(-1, buttons[stance], MenuAction.CC_OP, 1, -1, "Activate", "");
+		}
+	}
+	@Test public void preparesShadowInLongrangeBeforeTheRoomStarts()
+	{
+		Widget button = mock(Widget.class);
+		when(button.getId()).thenReturn(InterfaceID.CombatInterface._3);
+		when(button.getIndex()).thenReturn(-1);
+		when(button.isIf3()).thenReturn(true);
+		when(client.getWidget(InterfaceID.CombatInterface._3)).thenReturn(button);
+		assertTrue(actions.prepareWaiting());
+		verify(client).menuAction(-1, InterfaceID.CombatInterface._3, MenuAction.CC_OP, 1, -1, "Activate", "");
+	}
 }

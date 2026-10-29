@@ -128,6 +128,14 @@ server's maximum-hit option. Prayer selection and potion thresholds use the
 shared policy; activation, drain, and consumption run through server scripts.
 It does not add food or restore HP between ticks.
 
+Both roles use longrange on powered magic weapons (Ayak and Shadow), rapid on
+ranged weapons, and aggressive/strength on scythe, sulphur blades and claws.
+Dinh's stays on Pummel because it has no strength attack style; Block prevents
+attacks. Ice Barrage uses the spell's fixed ten-tile range, independent of the
+Ancient sceptre's melee stance. These stances are shared with the client agents;
+server regression tests resolve every applicable weapon against its actual
+weapon category.
+
 The initial fixture is deliberately independent of saved client equipment.
 Change the explicit fixture in `NylocasServerAgents.kt` and trial setup when
 comparing gear/supply conditions. Keep seeds, source hashes, and conditions with
