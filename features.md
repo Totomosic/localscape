@@ -350,6 +350,44 @@ confirms the arc and damage progression but does not assign damage to either
 side. See the [research note](docs/research/scythe-aoe.md). Restart RSMod to load
 the change; no cache repack is required.
 
+[Zorya's tome](https://oldschool.runescape.wiki/w/Zorya%27s_tome) is a two-handed
+powered weapon requiring 85 Magic. It reuses the Sanguinesti staff's model,
+stance, casting animation, graphics and sound. Normal casts take three ticks,
+with base max hit `floor(current_magic_level / 3) - 10`, +15% magic damage and
+seven-tile range (nine on Longrange). Both inventory forms cast without charges.
+
+Zorya's flow costs 50% special energy and grants +150% accuracy and +60% damage.
+A successful special empowers the next three casts with those bonuses and a
+two-tick cycle. Existing empowerment also applies to another special: the bonuses
+add to +300% accuracy/+120% damage, consuming one buff charge before granting
+three more, up to five stored. Buffs survive weapon switches, expire after 50
+idle ticks, refresh when consumed, and clear on teleport. The local combat dummy
+grants all three empowered casts for practice. The tome currently rejects player targets.
+
+[Obligator](https://oldschool.runescape.wiki/w/Obligator#Charged) requires 85 Attack
+and uses the swift blade's model. The combat tab offers accurate/aggressive
+**Thrust** (five ticks, swift blade stab animation) and aggressive **Smash**
+(three ticks, swift blade slash animation), all using crush accuracy. Thrust can
+hit up to three enemies on a three-tile line, including stacked targets, in
+multi-combat; Protect from Melee on the primary target prevents piercing.
+Thrust rolls damage twice, plus once for each stab/slash defence higher
+than crush, retaining the highest roll after one accuracy check. It adds 20%/40%
+damage when the line crosses two/three NPC tiles. Both inventory forms receive
+these effects. Smash has one normal damage roll and one target.
+
+Spawn item IDs **34725/34727** for Zorya's tome and **34715/34717** for
+Obligator. All weapons are treated as fully charged immediately, including legacy
+uncharged forms. No charging materials are required and stored charge values are
+ignored. Charge, Uncharge, Load and Unload menus have been removed from the
+implemented charge weapons; Check explains their unlimited state. Special-attack
+energy and the tome's temporary buff counter still follow their normal rules.
+Repack the cache and restart RSMod to load the weapon definitions. The custom
+client supplies Obligator's style labels and tooltips for the older combat tab.
+Its hidden compatibility plugin registers the tome and Obligator's three-tick
+Smash style with the installed Nylo Death Indicators plugin. Thrust predictions
+are deliberately excluded because their combined XP can cover several targets.
+Rebuild and restart the custom client to load the compatibility change.
+
 The Eye of ayak is a powered staff with a three-tick attack cycle and a base max
 hit of `floor(current_magic_level / 3) - 6`, before normal magic damage bonuses.
 It uses its native casting and projectile effects, with the `shadow_cast` sound
@@ -358,13 +396,9 @@ the [Eye of Ayak hit-delay table](https://oldschool.runescape.wiki/w/Hit_delay#E
 That table counts waiting ticks before damage processing: actual hits and splashes
 resolve two ticks after casting at distances 1–2 and three ticks at distances 3–8,
 for both NPC and player targets. Its attack range is six tiles, or eight on Longrange.
-It holds up to 50,000 charges:
-either two death runes and one chaos rune per charge, or one demon tear. The two
-charge types cannot be mixed. Use charging materials on the staff, or use Charge
-on the uncharged item; Check reports the remaining charges, and Uncharge refunds
-the original materials. Each cast consumes one charge, including splashes, and
-the last charge turns it back into the uncharged item. Charging costs follow the
-[OSRS rules](https://osrsindex.com/wiki/eye-of-ayak?site=osrs_wiki).
+Both Eye of ayak and Tumeken's shadow cast immediately in their charged or
+uncharged inventory forms. Neither consumes charges or runes. Shadow's equipment
+multipliers also apply to its uncharged form.
 
 Eye of ayak and all ancient sceptre variants use upright staff animations while
 idle, turning, walking, and running. Powered staves, including Eye of ayak and
@@ -408,31 +442,27 @@ and stat drain follow the [Wiki special attack rules](https://osrsindex.com/wiki
 and [stat drain rules](https://osrsindex.com/wiki/temporary-skill-drain?site=osrs_wiki),
 with the requested accuracy bonus and primary-plus-sweep behavior.
 
-Normal toxic blowpipe attacks require stored
-Zulrah's scales and unpoisoned darts. Use either material on the blowpipe to load
-up to 16,383 of each; unload its darts before changing dart type. Check reports
-the contents, and Unload lets you recover just the darts or all darts and scales.
-The blowpipe adds +20 Ranged strength to its loaded dart's strength and uses +30
-Ranged accuracy, ignoring quiver ammunition. Rapid attacks take two ticks;
+Toxic blowpipes always have unlimited Zulrah's scales and dragon darts,
+including the empty item and weapons with older saved ammunition values. Their
+bonuses are +30 Ranged accuracy and +55 Ranged strength (+20 from the weapon,
++35 from dragon darts), ignoring quiver ammunition. Rapid attacks take two ticks;
 Accurate and Longrange take three. Range is five tiles, or seven on Longrange.
-The dart sound effect plays at the player's position on the attack tick.
-Shots consume a dart unless Ava's device saves it, and consume a scale two-thirds
-of the time, including on misses. Running out of one resource preserves the other.
+The dragon-dart projectile and dart sound play on every shot. Attacks consume
+no scales or darts and never create ground drops from the automatic ammunition.
 The Toxic Siphon special attack uses the regular attack animation for each
 blowpipe cosmetic, costs 50% energy, doubles accuracy, and increases maximum
 damage by 50%. It heals half the rolled damage, rounded down, before
 damage is capped to the target's remaining hitpoints; healing cannot exceed the
 player's maximum hitpoints. Its distinct projectile takes one extra tick to land
 unless the player is adjacent to the target. The regular toxic blowpipe supports it.
-These charging and normal attack mechanics follow the
-[OSRS Wiki](https://oldschool.runescape.wiki/w/Toxic_blowpipe).
+Attack timing and special effects follow the
+[OSRS Wiki](https://oldschool.runescape.wiki/w/Toxic_blowpipe), with unlimited ammunition locally.
 
 **Ascension crossbows** reuse the blazing blowpipe model and animation (loaded item
-`28688`, empty item `28687`). They share the blowpipe's scale/dart loading,
-unloading, capacity, ammo saving, and consumption mechanics. With dragon darts,
-their total bonuses are +34 Ranged accuracy and +58 Ranged strength: +23 from the
-weapon and +35 from the darts. Other unpoisoned darts remain loadable and contribute
-their own strength. Rapid attacks take two ticks; Accurate and Longrange take three.
+`28688`, empty item `28687`). Both forms use unlimited dragon darts and scales.
+Their total bonuses are +34 Ranged accuracy and +58 Ranged strength: +23 from the
+weapon and +35 from dragon darts. Rapid attacks take two ticks; Accurate and
+Longrange take three.
 Range is six tiles, or eight on Longrange. A charged or blessed Dizana's quiver,
 including the max cape variants, adds its conditional +10 accuracy and +1 strength
 on top of its normal cape stats while darts are loaded. Quiver-slot ammunition
@@ -443,7 +473,7 @@ Repack with `./gradlew packCache` in `upstream/rsmod`, then restart the server a
 relaunch the client to pick up the names, stats, range, and special UI changes.
 No RuneLite client rebuild is required.
 
-Charged **Tonalztics of Ralos** (item `28922`) make two independent ranged accuracy
+**Tonalztics of Ralos** (items `28922` and `28919`) make two independent ranged accuracy
 and damage rolls per attack, each capped at `floor(normal_max_hit * 0.75)`.
 The [Wiki DPS calculator](https://github.com/weirdgloop/osrs-dps-calc/blob/main/src/lib/PlayerVsNPCCalc.ts)
 confirms the independent rolls and 75% cap. Both splats land together two
@@ -452,8 +482,8 @@ bow fired from one tile (51 client cycles), with no increase over distance.
 Each splat awards XP separately and respects encounter damage restrictions.
 The weapon uses its charged attack animation and two native projectiles, stays
 equipped, and does not consume quiver ammunition. This implements normal attacks
-for the charged item directly, without Sunfire splinter charging or the special
-attack. Its existing attack speed remains seven ticks, or six on Rapid.
+for both inventory forms without Sunfire splinter charging. The special attack
+is not implemented. Its existing attack speed remains seven ticks, or six on Rapid.
 Run `./gradlew packCache` in `upstream/rsmod` with the server stopped, then restart
 RSMod to load the animation and projectile definitions. No client rebuild is needed.
 
@@ -648,7 +678,13 @@ A combat dummy stands on the bridge just outside the Nylocas barrier, at source
 tile `(3296,4258)`. It stays still, never retaliates, and restores its health after
 each hitsplat. Melee, ranged, spells, powered staves, and special attacks always
 land at their maximum damage; weapon multipliers and multi-hit splits still apply.
-It is available before starting the raid.
+It is available before starting the raid. Five ordinary training NPCs stand
+farther north: three 1×1 goblins at `(3297,4260–4262)`, a 2×2 giant at
+`(3296,4265)`, and a 3×3 giant at `(3295,4270)`. They stay still, never retaliate,
+and heal after every impact, but retain normal accuracy and damage rolls. Stand
+at `(3297,4259)` and Thrust north to hit all three goblins. The west edge of the
+bridge remains open. These targets appear in each visited room instance and
+are removed with the instance. Repack the cache and restart RSMod to load them.
 
 To start the first Nylocas wave, teleport to the Bloat exit or Nylocas bridge,
 click **Start Raid** (or use `::starttob`), walk to the barrier, and click **Pass**.
