@@ -1,7 +1,6 @@
 package org.localscape.nylocas.ranger;
 
 import org.localscape.nylocas.ranger.RangerFlickers;
-import net.runelite.client.plugins.nyloranger.NylocasRangerPlugin;
 import org.localscape.nylocas.Tile;
 import org.localscape.nylocas.ranger.RangerStrategy.Crab;
 import org.localscape.nylocas.ranger.RangerStrategy.Decision;
@@ -737,12 +736,4 @@ public class RangerStrategyTest
 		assertEquals(Style.MELEE, RangerFlickers.at(split, 26));
 	}
 
-	@Test
-	public void classifiesOnlyTrueLaneAnchorsAsLaneBirths()
-	{
-		assertEquals(Lane.WEST, NylocasRangerPlugin.lane(new net.runelite.api.coords.WorldPoint(3281, 4249, 0)));
-		assertEquals(Lane.EAST, NylocasRangerPlugin.lane(new net.runelite.api.coords.WorldPoint(3309, 4248, 0)));
-		assertEquals(Lane.SOUTH, NylocasRangerPlugin.lane(new net.runelite.api.coords.WorldPoint(3296, 4233, 0)));
-		assertEquals(Lane.SPLIT, NylocasRangerPlugin.lane(new net.runelite.api.coords.WorldPoint(3295, 4248, 0)));
-	}
 }

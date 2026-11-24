@@ -349,23 +349,23 @@ def sync_client():
             target = destination_root / kind / "java" / source.relative_to(sources)
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source, target)
-    # The server and visual client compile the same dependency-free decision policies.
+    # Purge retired agent plugins from previous overlay builds, including stale bytecode.
+    client_root = destination_root.parent
+    for package in ("nylomage", "nyloranger", "nylocommon"):
+        relative = Path("net/runelite/client/plugins") / package
+        for kind in ("main", "test"):
+            shutil.rmtree(destination_root / kind / "java" / relative, ignore_errors=True)
+        for output in ("classes", "test-classes"):
+            shutil.rmtree(client_root / "target" / output / relative, ignore_errors=True)
+    shared_package = Path("org/localscape/nylocas")
+    shutil.rmtree(destination_root / "main/java" / shared_package, ignore_errors=True)
+    shutil.rmtree(client_root / "target/classes" / shared_package, ignore_errors=True)
+    # Retain policy coverage using the canonical server library as test sources only.
     shared = UPSTREAM / "rsmod/api/nylocas-agents/src/main/java"
     for source in shared.rglob("*.java"):
-        target = destination_root / "main/java" / source.relative_to(shared)
+        target = destination_root / "test/java" / source.relative_to(shared)
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, target)
-    # Remove policies copied by older builds, otherwise their package-local names shadow imports.
-    for package, names in {
-        "nyloranger": ("RangerStrategy", "RangerPreCapPlanner", "RangerFlickers"),
-        "nylomage": ("MageStrategy",),
-        "nylocommon": ("NylocasFlickers",),
-    }.items():
-        for name in names:
-            (destination_root / f"main/java/net/runelite/client/plugins/{package}/{name}.java").unlink(missing_ok=True)
-    for role, name in (("nyloranger", "Ranger"), ("nylomage", "Mage")):
-        for kind in ("Strategy", "Replay"):
-            (destination_root / f"test/java/net/runelite/client/plugins/{role}/{name}{kind}Test.java").unlink(missing_ok=True)
 
 
 def package_client(jar, bootstrap):

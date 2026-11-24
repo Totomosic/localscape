@@ -69,7 +69,7 @@ With no useful eligible attack, move toward the next staging tile during cooldow
 
 ## Pairing with the existing ranger implementation
 
-The [ranger strategy](nylocas-duo-ranger-strategy.md) and [controller](../client/src/main/java/net/runelite/client/plugins/nyloranger/RangerStrategy.java) are comparison material, not mage evidence. The recordings support these complementary assignments:
+The [ranger strategy](nylocas-duo-ranger-strategy.md) and [controller](../upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/ranger/RangerStrategy.java) are comparison material, not mage evidence. The recordings support these complementary assignments:
 
 | Workload | Mage | Ranger |
 | --- | --- | --- |

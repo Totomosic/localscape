@@ -200,16 +200,7 @@ Publish the fix commit to your fork before others clone the workspace.
 
 ## Change the custom client
 
-The [Duo Nylocas Ranger plugin](docs/nylocas-ranger-plugin.md) implements the
-recording-derived ranger rotation, including native client actions and waiting
-for the partner at the entrance barrier. The guide covers equipment capture,
-starting/stopping, and verification.
-
-The [Duo Nylocas Mage plugin](docs/nylocas-mage-plugin.md) implements the
-complementary mage role, with reserved scythe/barrage/bulwark packets, captured
-equipment sets and the immediate wave-29 cutoff. Use one role per player client.
-
-Both roles also run without a client through the
+The mage and ranger strategies run through the
 [headless Nylocas simulation runner](docs/nylocas-simulations.md):
 
 ```bash

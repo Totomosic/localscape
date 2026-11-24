@@ -90,22 +90,39 @@ class SimulationReportTests(unittest.TestCase):
                 self.assertEqual(report["metrics_all_trials"][metric]["mean"], 2)
                 self.assertIn(f"{label} **2.00**", markdown)
 
-    def test_client_sync_copies_shared_policy_and_removes_shadowing_legacy_source(self):
+    def test_client_sync_keeps_policy_tests_and_purges_retired_agent_plugins(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             upstream = root / "upstream"
-            target = upstream / "runelite/runelite-client/src/main/java"
+            client_root = upstream / "runelite/runelite-client"
+            target = client_root / "src/main/java"
             target.mkdir(parents=True)
             shared = upstream / "rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas"
             shared.mkdir(parents=True)
             (shared / "Tile.java").write_text("shared policy")
-            old = target / "net/runelite/client/plugins/nyloranger/RangerStrategy.java"
-            old.parent.mkdir(parents=True)
-            old.write_text("obsolete policy")
+            stale = []
+            for package in ("nyloranger", "nylomage", "nylocommon"):
+                for folder, suffix in (("src/main/java", "java"), ("src/test/java", "java"),
+                                       ("target/classes", "class"), ("target/test-classes", "class")):
+                    old = client_root / folder / "net/runelite/client/plugins" / package / f"Old.{suffix}"
+                    old.parent.mkdir(parents=True, exist_ok=True)
+                    old.write_text("retired plugin")
+                    stale.append(old)
+            for folder, suffix in (("src/main/java", "java"), ("target/classes", "class")):
+                old = client_root / folder / "org/localscape/nylocas" / f"Tile.{suffix}"
+                old.parent.mkdir(parents=True, exist_ok=True)
+                old.write_text("old shipped policy")
+                stale.append(old)
+            keep = target / "net/runelite/client/plugins/localdev/LocalDevPlugin.java"
+            keep.parent.mkdir(parents=True)
+            keep.write_text("keep plugin")
             with patch.object(dev, "ROOT", root), patch.object(dev, "UPSTREAM", upstream):
                 dev.sync_client()
-            self.assertEqual((target / "org/localscape/nylocas/Tile.java").read_text(), "shared policy")
-            self.assertFalse(old.exists())
+            policy = client_root / "src/test/java/org/localscape/nylocas/Tile.java"
+            self.assertEqual(policy.read_text(), "shared policy")
+            self.assertEqual(keep.read_text(), "keep plugin")
+            for old in stale:
+                self.assertFalse(old.exists(), old)
 
 
 if __name__ == "__main__":

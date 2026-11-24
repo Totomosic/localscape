@@ -19,8 +19,8 @@ use the server implementations. Trial seeds control combat/encounter randomness,
 the core RNG, and shuffled player processing order. The simulation uses the live
 shuffle interval rather than the integration harness's usual fixed RNG.
 
-The endpoint is **boss spawn after wave 31 and cleanup**. Both existing client
-agents stop there too. Boss combat is outside these policies. A completed trial
+The endpoint is **boss spawn after wave 31 and cleanup**. Boss combat is outside
+these policies. A completed trial
 can include NPCs that expire naturally; it does not mean every NPC was killed.
 Deaths and tick-limit timeouts are reported separately. Setup errors abort the
 batch instead of producing misleading performance results.
@@ -95,10 +95,10 @@ completes a rotation rule. A rejected request or movement does not complete it.
 Ticks follow the existing policies' request/next-observation convention.
 Create fresh strategies and rooms, or reset both, between encounters.
 
-`./dev build-client` copies the shared library into the RuneLite source tree.
-The client plugins retain their event subscriptions, UI, instance normalization,
-native input, equipment capture, and client acknowledgements. The headless
-adapter in `api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/`
+The custom client has retired its mage and ranger plugins. The build copies the
+canonical library into test sources to retain policy and replay coverage; it is
+excluded from the packaged client. The headless adapter in
+`api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/`
 feeds the same policies from authoritative server snapshots. It submits attacks,
 movement, prayers, and supplies through the server's real input handlers,
 acknowledges server attack events,
@@ -132,9 +132,8 @@ Both roles use longrange on powered magic weapons (Ayak and Shadow), rapid on
 ranged weapons, and aggressive/strength on scythe, sulphur blades and claws.
 Dinh's stays on Pummel because it has no strength attack style; Block prevents
 attacks. Ice Barrage uses the spell's fixed ten-tile range, independent of the
-Ancient sceptre's melee stance. These stances are shared with the client agents;
-server regression tests resolve every applicable weapon against its actual
-weapon category.
+Ancient sceptre's melee stance. Server regression tests resolve every applicable
+weapon against its actual weapon category.
 
 The initial fixture is deliberately independent of saved client equipment.
 Change the explicit fixture in `NylocasServerAgents.kt` and trial setup when
