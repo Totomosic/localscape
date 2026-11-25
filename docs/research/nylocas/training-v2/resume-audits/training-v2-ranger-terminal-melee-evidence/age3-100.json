@@ -1,0 +1,1765 @@
+{
+  "run": ".state/simulations/training-v2-flight-mage-19-age3-100",
+  "semantics": "Find terminal closed-work melee assistance during Ranger ready/empty cleanup decisions.\n\nClaims/own leases use previous after-cycle snapshots. HP/style/positions use current\npre-cycle copied fields. Mage-ready same-target plans conservatively exclude\nprovisional claims. Native current LOS and remaining final-rule completion are not\nin this trace; candidates require policy replay/native confirmation.\n",
+  "trials": 100,
+  "opportunityRooms": 8,
+  "frames": 35,
+  "terminalFreshRooms": 8,
+  "freshOutlastsOldRooms": 7,
+  "terminalFreshAfterOldRooms": 7,
+  "framesAfterAllOldGone": 27,
+  "rooms": [
+    {
+      "seed": 143,
+      "windows": [
+        {
+          "tick": 299,
+          "position": "3295,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 185,
+              "wave": 30,
+              "age": 40,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3291,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 307,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 182,
+            "weapon": "EYE",
+            "reason": "Plan EYE #188 @300: Fresh MAGIC small"
+          }
+        },
+        {
+          "tick": 300,
+          "position": "3295,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 185,
+              "wave": 30,
+              "age": 41,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3291,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 307,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 182,
+            "weapon": "EYE",
+            "reason": "Fresh MAGIC small"
+          }
+        },
+        {
+          "tick": 301,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 185,
+              "wave": 30,
+              "age": 42,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3291,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 307,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 185,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #191 @304: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 302,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 185,
+              "wave": 30,
+              "age": 43,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3291,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 307,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 185,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #191 @304: Fresh MELEE small"
+          }
+        }
+      ],
+      "lastFreshPresent": 307,
+      "lastOldPresent": 302,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 153,
+      "windows": [
+        {
+          "tick": 318,
+          "position": "3294,4247,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 187,
+              "wave": 30,
+              "age": 47,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3292,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 322,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 188,
+              "wave": 30,
+              "age": 47,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 6,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 322,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 185,
+            "weapon": "SULPHUR",
+            "reason": "Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 319,
+          "position": "3294,4247,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 187,
+              "wave": 30,
+              "age": 48,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3292,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 322,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 188,
+              "wave": 30,
+              "age": 48,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 6,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 322,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": -1,
+            "weapon": "EYE",
+            "reason": "Clear wave 30 and 31 survivors"
+          }
+        }
+      ],
+      "lastFreshPresent": 322,
+      "lastOldPresent": 307,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 167,
+      "windows": [
+        {
+          "tick": 304,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 189,
+              "wave": 31,
+              "age": 40,
+              "style": "MELEE",
+              "big": false,
+              "hp": 7,
+              "x": 3292,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 5,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 310,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 192,
+            "weapon": "SULPHUR",
+            "reason": "Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 305,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 189,
+              "wave": 31,
+              "age": 41,
+              "style": "MELEE",
+              "big": false,
+              "hp": 7,
+              "x": 3292,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 5,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 310,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 189,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #196 @308: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 306,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 189,
+              "wave": 31,
+              "age": 42,
+              "style": "MELEE",
+              "big": false,
+              "hp": 7,
+              "x": 3292,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 5,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 310,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 189,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #196 @308: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 307,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 189,
+              "wave": 31,
+              "age": 43,
+              "style": "MELEE",
+              "big": false,
+              "hp": 7,
+              "x": 3292,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 5,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 310,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 189,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #196 @308: Fresh MELEE small"
+          }
+        }
+      ],
+      "lastFreshPresent": 310,
+      "lastOldPresent": 303,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 173,
+      "windows": [
+        {
+          "tick": 315,
+          "position": "3295,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 30,
+              "age": 30,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3290,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 5,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 323,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 187,
+            "weapon": "EYE",
+            "reason": "Fresh MAGIC small"
+          }
+        },
+        {
+          "tick": 316,
+          "position": "3295,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 30,
+              "age": 31,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3290,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 5,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 323,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 193,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #200 @319: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 317,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 30,
+              "age": 32,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3290,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 323,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 193,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #200 @319: Fresh MELEE small"
+          }
+        }
+      ],
+      "lastFreshPresent": 323,
+      "lastOldPresent": 322,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 184,
+      "windows": [
+        {
+          "tick": 319,
+          "position": "3296,4247,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 190,
+              "wave": 30,
+              "age": 36,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3292,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 323,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 190,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #197 @321: Fresh MELEE small"
+          }
+        }
+      ],
+      "lastFreshPresent": 323,
+      "lastOldPresent": 323,
+      "freshOutlastsOld": false
+    },
+    {
+      "seed": 190,
+      "windows": [
+        {
+          "tick": 330,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 190,
+              "wave": 30,
+              "age": 47,
+              "style": "MELEE",
+              "big": false,
+              "hp": 2,
+              "x": 3292,
+              "y": 4254,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 6,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 334,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": -1,
+            "weapon": "EYE",
+            "reason": "Clear wave 30 and 31 survivors"
+          }
+        },
+        {
+          "tick": 331,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 190,
+              "wave": 30,
+              "age": 48,
+              "style": "MELEE",
+              "big": false,
+              "hp": 2,
+              "x": 3292,
+              "y": 4254,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 6,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 334,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": -1,
+            "weapon": "EYE",
+            "reason": "Clear wave 30 and 31 survivors"
+          }
+        }
+      ],
+      "lastFreshPresent": 334,
+      "lastOldPresent": 326,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 191,
+      "windows": [
+        {
+          "tick": 331,
+          "position": "3297,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 38,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3299,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 5,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 194,
+              "wave": 31,
+              "age": 38,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 200,
+              "wave": 31,
+              "age": 28,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3292,
+              "y": 4244,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 5,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 343,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 200,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #207 @333: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 332,
+          "position": "3295,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 39,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3299,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 5,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 194,
+              "wave": 31,
+              "age": 39,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 5,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 200,
+              "wave": 31,
+              "age": 29,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3292,
+              "y": 4244,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 343,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 200,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #207 @333: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 333,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 40,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3299,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 6,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 194,
+              "wave": 31,
+              "age": 40,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 7,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 200,
+            "weapon": "SULPHUR",
+            "reason": "Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 334,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 41,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3299,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 6,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 194,
+              "wave": 31,
+              "age": 41,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 7,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 202,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #209 @337: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 335,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 42,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3299,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 6,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 194,
+              "wave": 31,
+              "age": 42,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 7,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 200,
+              "wave": 31,
+              "age": 32,
+              "style": "MELEE",
+              "big": false,
+              "hp": 1,
+              "x": 3292,
+              "y": 4244,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 343,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 202,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #209 @337: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 336,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 43,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3299,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 6,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 194,
+              "wave": 31,
+              "age": 43,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 7,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 200,
+              "wave": 31,
+              "age": 33,
+              "style": "MELEE",
+              "big": false,
+              "hp": 1,
+              "x": 3292,
+              "y": 4244,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 343,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 202,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #209 @337: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 337,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 44,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3299,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 6,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 194,
+              "wave": 31,
+              "age": 44,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 7,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 200,
+              "wave": 31,
+              "age": 34,
+              "style": "MELEE",
+              "big": false,
+              "hp": 1,
+              "x": 3292,
+              "y": 4244,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 343,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 202,
+            "weapon": "SULPHUR",
+            "reason": "Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 338,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 45,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3299,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 6,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 194,
+              "wave": 31,
+              "age": 45,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 7,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 200,
+              "wave": 31,
+              "age": 35,
+              "style": "MELEE",
+              "big": false,
+              "hp": 1,
+              "x": 3292,
+              "y": 4244,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 343,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 200,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #207 @341: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 339,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 46,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3299,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 6,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 194,
+              "wave": 31,
+              "age": 46,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 7,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 200,
+              "wave": 31,
+              "age": 36,
+              "style": "MELEE",
+              "big": false,
+              "hp": 1,
+              "x": 3292,
+              "y": 4244,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 343,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 200,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #207 @341: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 340,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 47,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3299,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 6,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 194,
+              "wave": 31,
+              "age": 47,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 7,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 200,
+              "wave": 31,
+              "age": 37,
+              "style": "MELEE",
+              "big": false,
+              "hp": 1,
+              "x": 3292,
+              "y": 4244,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 343,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 200,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #207 @341: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 341,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 48,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3299,
+              "y": 4243,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 6,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 194,
+              "wave": 31,
+              "age": 48,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 7,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 344,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 200,
+            "weapon": "SULPHUR",
+            "reason": "Fresh MELEE small"
+          }
+        }
+      ],
+      "lastFreshPresent": 344,
+      "lastOldPresent": 330,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 217,
+      "windows": [
+        {
+          "tick": 316,
+          "position": "3296,4249,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 187,
+              "wave": 30,
+              "age": 41,
+              "style": "MELEE",
+              "big": false,
+              "hp": 2,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 4,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 326,
+              "afterAllOldGone": true
+            },
+            {
+              "key": 197,
+              "wave": 31,
+              "age": 33,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3290,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 6,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 320,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 197,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #204 @317: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 317,
+          "position": "3294,4249,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 187,
+              "wave": 30,
+              "age": 42,
+              "style": "MELEE",
+              "big": false,
+              "hp": 2,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 6,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 326,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": false,
+            "target": 197,
+            "weapon": "SULPHUR",
+            "reason": "Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 318,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 187,
+              "wave": 30,
+              "age": 43,
+              "style": "MELEE",
+              "big": false,
+              "hp": 2,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 7,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 326,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 197,
+            "weapon": "SULPHUR",
+            "reason": "Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 319,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 187,
+              "wave": 30,
+              "age": 44,
+              "style": "MELEE",
+              "big": false,
+              "hp": 2,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 7,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 326,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 198,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #205 @322: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 320,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 187,
+              "wave": 30,
+              "age": 45,
+              "style": "MELEE",
+              "big": false,
+              "hp": 2,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 7,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 326,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 198,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #205 @322: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 321,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 187,
+              "wave": 30,
+              "age": 46,
+              "style": "MELEE",
+              "big": false,
+              "hp": 2,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 7,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 326,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 198,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #205 @322: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 322,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 187,
+              "wave": 30,
+              "age": 47,
+              "style": "MELEE",
+              "big": false,
+              "hp": 2,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 7,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 326,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 198,
+            "weapon": "SULPHUR",
+            "reason": "Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 323,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 187,
+              "wave": 30,
+              "age": 48,
+              "style": "MELEE",
+              "big": false,
+              "hp": 2,
+              "x": 3300,
+              "y": 4252,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 7,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 326,
+              "afterAllOldGone": true
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": -1,
+            "weapon": "EYE",
+            "reason": "Clear wave 30 and 31 survivors"
+          }
+        }
+      ],
+      "lastFreshPresent": 326,
+      "lastOldPresent": 315,
+      "freshOutlastsOld": true
+    }
+  ],
+  "sourceLogSha256": "3a568d614cacc9d0b9f3fa86dd202874f5ffd7435ce653d6f2306b7711cce717"
+}

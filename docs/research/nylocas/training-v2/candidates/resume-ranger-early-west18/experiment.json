@@ -1,0 +1,32 @@
+{
+  "status": "isolated first-West18-service candidate; unpromoted; no simulation by ranger agent",
+  "baseline": "CURRENT pure-guidance ranger + retained Mage idlePIPE canonical Java and all current role test sources, copied at creation",
+  "policyDelta": [
+    "policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java"
+  ],
+  "semantics": "Only earliest feasible first-shot choices: prefer unopenedWest18 big. Existing pipe-vs-bow same-cycle suppression, current eligibility and actual reservations remain authoritative. After confirmed first attack and on deeper hypothetical beam shots, normal logic remains.",
+  "tests": {
+    "candidatePassed": 199,
+    "baselineCandidateTestFailures": 4,
+    "newBehaviorTests": 8,
+    "revisedExistingTest": "earlyWestAvailabilityDoesNotDisplaceImmediateSmallClearing -> firstWest18ServiceDisplacesOrdinaryImmediateSmallClearing"
+  },
+  "safetyAndScope": "No resource or damage change, claim release, NULL override, forced future real wave birth, South/East18 guide change, West19 packet change or West20bow change. Current actual reservations tested. Future19 feasibility before actual spawn can still change with earlier weapon choice and requires packet coverage measurement.",
+  "evidence": ".state/simulations/training-v2-ranger-early-west18-evidence/evidence.json",
+  "evidenceSummary": {
+    "nativeCurrentPIPE300FirstWest18RequestMean": 5.833333333333333,
+    "nativeCurrentPIPE300FirstWest18Median": 7,
+    "nativeCurrentPIPE300FirstRequestAtLeast12": 37,
+    "nativeExactChildPairsObserved": 296,
+    "nativeChildBirthRelative19Mean": 10.79054054054054,
+    "nativeChildBirthRelative19Median": 9,
+    "nativeChildBirthAtLeast19Plus15": 98,
+    "humanRanger42FirstRequestMean": 6.214285714285714,
+    "humanRanger42ChildBirthRelative19Mean": 9.69047619047619,
+    "humanMage46RangerObservedFirstRequestMean": 5.434782608695652,
+    "humanMage46ChildBirthRelative19Mean": 9.130434782608695,
+    "interpretation": "No broad mean first-service delay proven; native late child-birth tail motivates bounded experiment. Human corpora overlap; never pooled."
+  },
+  "reproduce": "python3 .state/simulations/training-v2-candidate-ranger-early-west18/run-check.py; --baseline checks current canonical against candidate behavior tests",
+  "limits": "No performance claim. Compare actual packet coverage, child birth tails, transition goal, cap stall distributions and boss timings; earlier big opening can also increase immediate cap occupancy."
+}

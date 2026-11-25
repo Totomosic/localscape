@@ -1,0 +1,937 @@
+{
+  "scope": "Guidance session; per-run immutable conditions; intermediate cohorts are not pooled",
+  "retained_policy_benchmark": "training-v3-south20-coherent-pooled-500",
+  "runs": [
+    {
+      "run": "training-v3-asap-followup-random-200",
+      "damage": "randomized",
+      "trials": 200,
+      "completed": 200,
+      "boss_ticks": {
+        "mean": 332.28,
+        "median": 332.0,
+        "min": 312,
+        "max": 368,
+        "p95": 348
+      },
+      "files": [
+        {
+          "path": "training-v3-asap-followup-random-200/summary.json",
+          "sha256": "b59a5d43b890cc2b14cac1ebefcf986d380d089d8254042e1fc401a782e2cfdb"
+        },
+        {
+          "path": "training-v3-asap-followup-random-200/trials.csv",
+          "sha256": "1b8b86b0eb284b53f8c0a08c2872902bce24ebca6f5467f4e25bbf93bed880aa"
+        },
+        {
+          "path": "training-v3-asap-followup-random-200/training-audit.json",
+          "sha256": "1fd2ee9808f888641ed3387af1ae35cf74b1aeb8aeeba750641d7314dc27fd95"
+        },
+        {
+          "path": "training-v3-asap-followup-random-200/primary-attribution-audit.json",
+          "sha256": "43dcfeed510f2fb22930439ea806c8e851233ed08e0b6961eb57e6212d753bb5"
+        },
+        {
+          "path": "training-v3-asap-followup-random-200/mage-guidance-audit.json",
+          "sha256": "8e8e2f30e383480a560093e7c9b29845092d0331c0e4ad2b87a0389be4874732"
+        },
+        {
+          "path": "training-v3-asap-followup-random-200/utility-guidance-audit.json",
+          "sha256": "0dc2b8244f78465ca76d3dadba32987bc12e30b833a9744737d7087009596a71"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-both-followups-random-200",
+      "damage": "randomized",
+      "trials": 200,
+      "completed": 200,
+      "boss_ticks": {
+        "mean": 332.14,
+        "median": 328.0,
+        "min": 312,
+        "max": 372,
+        "p95": 356
+      },
+      "files": [
+        {
+          "path": "training-v3-both-followups-random-200/summary.json",
+          "sha256": "e74cd6ff92802fc5753cb242f8bc287f0de7b02092b54cb65f33de7d15f2fd53"
+        },
+        {
+          "path": "training-v3-both-followups-random-200/trials.csv",
+          "sha256": "2c2a8a1f4d287109b8db9e6bd945589f8de92ef91d7ff7ca6e7ab98975c177b3"
+        },
+        {
+          "path": "training-v3-both-followups-random-200/training-audit.json",
+          "sha256": "7f369c747e46b8c0f360cad39de032813eaf1ff7bfeedc279450ed3f88d09d57"
+        },
+        {
+          "path": "training-v3-both-followups-random-200/primary-attribution-audit.json",
+          "sha256": "22692ebaeead8030e19a736c3d681f77d9b3c811004a9eb97d5ce9bb1d32faff"
+        },
+        {
+          "path": "training-v3-both-followups-random-200/ranger-guidance-audit.json",
+          "sha256": "a4b7f877e2b8b5fde1f7d18ebf7d598c3fc4e7bbeb1e9af5d92728b1c3f3fedc"
+        },
+        {
+          "path": "training-v3-both-followups-random-200/utility-guidance-audit.json",
+          "sha256": "b4b02bc5ab91ce7b17e3923d2c08686d2e3bae3e23193c7e35329f38f5a9e439"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-combined-close-random-100",
+      "damage": "randomized",
+      "trials": 100,
+      "completed": 100,
+      "boss_ticks": {
+        "mean": 337.2,
+        "median": 336.0,
+        "min": 320,
+        "max": 372,
+        "p95": 356
+      },
+      "files": [
+        {
+          "path": "training-v3-combined-close-random-100/summary.json",
+          "sha256": "e7b7abe57d7c8551790d567267a5311dd514ed7507f5ad03d6f9fd61df46f2e2"
+        },
+        {
+          "path": "training-v3-combined-close-random-100/trials.csv",
+          "sha256": "c37e29af0fafc7c3665714b7e294443e5c589226942e5cfc6cf205a2c7749251"
+        },
+        {
+          "path": "training-v3-combined-close-random-100/training-audit.json",
+          "sha256": "9f373c7262ed6e4e9d483e9a7f63739595b0527ee88c4d44f70adb43598bfe9e"
+        },
+        {
+          "path": "training-v3-combined-close-random-100/ranger-guidance-audit.json",
+          "sha256": "f7c828fd0b45b89dd341cf213ddd37ac038dcd3860ff669bc8a2ca5343173083"
+        },
+        {
+          "path": "training-v3-combined-close-random-100/mage-guidance-audit.json",
+          "sha256": "91e32e8c7dcca0d30c67a5279e9a91b22d8c0749fcc666ef8ca346815f7aca9e"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-combined-guidance-maxhit-diagnostic-100",
+      "damage": "always-max-hit diagnostic",
+      "trials": 100,
+      "completed": 100,
+      "boss_ticks": {
+        "mean": 304.36,
+        "median": 304.0,
+        "min": 296,
+        "max": 312,
+        "p95": 308
+      },
+      "files": [
+        {
+          "path": "training-v3-combined-guidance-maxhit-diagnostic-100/summary.json",
+          "sha256": "f1fe68b7851d86511253cb1c5db758611a502176b2e512cd9695d625486d4c47"
+        },
+        {
+          "path": "training-v3-combined-guidance-maxhit-diagnostic-100/trials.csv",
+          "sha256": "918c6c37ca95b6a84390b88a784327df26055b7a29cbe77f1da5c4bce9167dc3"
+        },
+        {
+          "path": "training-v3-combined-guidance-maxhit-diagnostic-100/ranger-guidance-audit.json",
+          "sha256": "6eaf153a9cf0b1369c5e183c1c40d90575a5064864c051cdb6943f9c58e2bf6c"
+        },
+        {
+          "path": "training-v3-combined-guidance-maxhit-diagnostic-100/utility-guidance-audit.json",
+          "sha256": "1a848e1380d62da3a4e24ba105c746cd639e122d83295f6ba4d2fbb8f424383a"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-combined-guidance-random-100",
+      "damage": "randomized",
+      "trials": 100,
+      "completed": 100,
+      "boss_ticks": {
+        "mean": 332.28,
+        "median": 332.0,
+        "min": 312,
+        "max": 360,
+        "p95": 352
+      },
+      "files": [
+        {
+          "path": "training-v3-combined-guidance-random-100/summary.json",
+          "sha256": "3446681ad5f3e30b03996bdbc475f32f314ea9a6029adcc956a46c68e10285f6"
+        },
+        {
+          "path": "training-v3-combined-guidance-random-100/trials.csv",
+          "sha256": "bb55725145ee737d9f5ee1259f4f8d84d50ea2473943fc0728046ce3b2ab9ddf"
+        },
+        {
+          "path": "training-v3-combined-guidance-random-100/training-audit.json",
+          "sha256": "3ff8830681c7fcb2e3d0a4dad1c371db7488aa871baf12827d548547fc520289"
+        },
+        {
+          "path": "training-v3-combined-guidance-random-100/primary-attribution-audit.json",
+          "sha256": "fbe62f2b8161a51db1be1fa7dbda7a54b03263730211660a7ee8e5932652f6b5"
+        },
+        {
+          "path": "training-v3-combined-guidance-random-100/ranger-guidance-audit.json",
+          "sha256": "5be03a4efc82a4e6efe1b1a598c9d8a48ecab7913347ab03705dfb389311c324"
+        },
+        {
+          "path": "training-v3-combined-guidance-random-100/mage-guidance-audit.json",
+          "sha256": "6c867965bdbf0063972016a9eced537eb0348406c22d48393587a3f2a6eb45e6"
+        },
+        {
+          "path": "training-v3-combined-guidance-random-100/utility-guidance-audit.json",
+          "sha256": "73e1e101b2496270f9ca821d185a97ef7ab2b978cf87b2a0009d6ac424423550"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-combined-recovery-random-200",
+      "damage": "randomized",
+      "trials": 200,
+      "completed": 200,
+      "boss_ticks": {
+        "mean": 336.76,
+        "median": 336.0,
+        "min": 316,
+        "max": 368,
+        "p95": 356
+      },
+      "files": [
+        {
+          "path": "training-v3-combined-recovery-random-200/summary.json",
+          "sha256": "e1e9c09380efc254de0d265e2da599bcc164cfd9cd837c34346c1a4ac1dbdf36"
+        },
+        {
+          "path": "training-v3-combined-recovery-random-200/trials.csv",
+          "sha256": "e9d2c5a25998084e7cdf0ccc054cd63feff32fcd72b22df6b78b87a8294ee578"
+        },
+        {
+          "path": "training-v3-combined-recovery-random-200/training-audit.json",
+          "sha256": "13ad9b147799ccb9a788fc0a5a0c07d26439e67f28607d28919f28bcb1f69b45"
+        },
+        {
+          "path": "training-v3-combined-recovery-random-200/ranger-guidance-audit.json",
+          "sha256": "50c3a9abd924b7a0f3fab2a9ec86f044bcbdcd24a2309e8ebad3166a900ab584"
+        },
+        {
+          "path": "training-v3-combined-recovery-random-200/mage-guidance-audit.json",
+          "sha256": "c3c2885583f100420b120d3553edce821b4207f3f0c34d502fc6237b7f973b33"
+        },
+        {
+          "path": "training-v3-combined-recovery-random-200/utility-guidance-audit.json",
+          "sha256": "27bde532b2ded10846ba1c9be9cc1280257a4bfa971e2114c4668fdb1cf3651c"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-control-631-100-retry",
+      "damage": "randomized",
+      "trials": 100,
+      "completed": 100,
+      "boss_ticks": {
+        "mean": 336.28,
+        "median": 336.0,
+        "min": 316,
+        "max": 364,
+        "p95": 352
+      },
+      "files": [
+        {
+          "path": "training-v3-control-631-100-retry/summary.json",
+          "sha256": "ef45b4a39625b80ab762d44dd831fc6c722f22b64f96fda3f365c376f641ee48"
+        },
+        {
+          "path": "training-v3-control-631-100-retry/trials.csv",
+          "sha256": "3ec275cdc3c1f1a32b06eb940ef3e1755c9c5bf2713865d0a6ec66444b6ba1cc"
+        },
+        {
+          "path": "training-v3-control-631-100-retry/training-audit.json",
+          "sha256": "030540430fabe49c4981f3e9cd2b5971f1f85737b676e3c49a52bba8f87b7fda"
+        },
+        {
+          "path": "training-v3-control-631-100-retry/utility-guidance-audit.json",
+          "sha256": "bde6e2485c1a0a36cb331de2690f1217bcf00321e5161847a10633fe50b9ef52"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-control-maxhit-diagnostic-100",
+      "damage": "always-max-hit diagnostic",
+      "trials": 100,
+      "completed": 100,
+      "boss_ticks": {
+        "mean": 304.36,
+        "median": 304.0,
+        "min": 296,
+        "max": 316,
+        "p95": 312
+      },
+      "files": [
+        {
+          "path": "training-v3-control-maxhit-diagnostic-100/summary.json",
+          "sha256": "ba623f91b91b7cc82efa7723bb97f1f0e17c2c3d535ed3fc65a96fc02fcfe180"
+        },
+        {
+          "path": "training-v3-control-maxhit-diagnostic-100/trials.csv",
+          "sha256": "835988b244f36e2a2561ba13cc0e05bbc0942d627038151e91866b45bb3fb446"
+        },
+        {
+          "path": "training-v3-control-maxhit-diagnostic-100/ranger-guidance-audit.json",
+          "sha256": "3892ce5019ceabca0415c2fcc5c2fab96b0c119da3add31bc302cfc8d939d9b5"
+        },
+        {
+          "path": "training-v3-control-maxhit-diagnostic-100/mage-guidance-audit.json",
+          "sha256": "4fe486678238ccf0ffe9dad57a56d7aa57929b7986431ccd88080a715a4383bf"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-fresh-control-current-utilities-random-200",
+      "damage": "randomized",
+      "trials": 200,
+      "completed": 200,
+      "boss_ticks": {
+        "mean": 333.5,
+        "median": 332.0,
+        "min": 312,
+        "max": 368,
+        "p95": 352
+      },
+      "files": [
+        {
+          "path": "training-v3-fresh-control-current-utilities-random-200/summary.json",
+          "sha256": "c7d81d58c042a65cdd17e9de582ab98685c263c191224d718f0cd808e600f49b"
+        },
+        {
+          "path": "training-v3-fresh-control-current-utilities-random-200/trials.csv",
+          "sha256": "39419631b518b5126851ad012ce2067c55a6bf8a595d0de6bfc083dbd084a80e"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-guidance-release-random-500",
+      "damage": "randomized",
+      "trials": 500,
+      "completed": 500,
+      "boss_ticks": {
+        "mean": 332.768,
+        "median": 332.0,
+        "min": 308,
+        "max": 372,
+        "p95": 352
+      },
+      "files": [
+        {
+          "path": "training-v3-guidance-release-random-500/summary.json",
+          "sha256": "3375dc6880be0f91a802bea36bf699387de1af01838877167e6dc614f4bd1e7b"
+        },
+        {
+          "path": "training-v3-guidance-release-random-500/trials.csv",
+          "sha256": "e94292fb6a790c98b9159995c1b6a7bcdb65972a8fbccfd2a0ac2d1551deeca7"
+        },
+        {
+          "path": "training-v3-guidance-release-random-500/training-audit.json",
+          "sha256": "d12946f354379bdb05a69b363c24181cf798fe89b972f8c8cdb76baf4b918009"
+        },
+        {
+          "path": "training-v3-guidance-release-random-500/primary-attribution-audit.json",
+          "sha256": "4cad1b0814510669a4e2a1504a3fd7abd3456204a53259729359f76750859bdc"
+        },
+        {
+          "path": "training-v3-guidance-release-random-500/ranger-guidance-audit.json",
+          "sha256": "95c043dd49ebf5ce82a49890575848cb20cc0f86a4e03542c8b471b4261c859d"
+        },
+        {
+          "path": "training-v3-guidance-release-random-500/mage-guidance-audit.json",
+          "sha256": "17627c2cc9eca47426e1a8c12b68f77c60c75acd5de0b6b8e3976657081c310e"
+        },
+        {
+          "path": "training-v3-guidance-release-random-500/utility-guidance-audit.json",
+          "sha256": "593f315ba34c2919e30323d54b32f7e8d3f1ba54ee42a90b94ad53ec5491226b"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-ranger-guidance-random-505139299904-100",
+      "damage": "randomized",
+      "trials": 100,
+      "completed": 100,
+      "boss_ticks": {
+        "mean": 332.04,
+        "median": 332.0,
+        "min": 312,
+        "max": 356,
+        "p95": 348
+      },
+      "files": [
+        {
+          "path": "training-v3-ranger-guidance-random-505139299904-100/summary.json",
+          "sha256": "29d93f807324095085c65b9613e00fc077a51f37c78ac313f291c4c6fc098fd7"
+        },
+        {
+          "path": "training-v3-ranger-guidance-random-505139299904-100/trials.csv",
+          "sha256": "34f91494f264af7e7c132bd592dcf223705ec38df34e429a6eb7d9a6af500718"
+        },
+        {
+          "path": "training-v3-ranger-guidance-random-505139299904-100/primary-attribution-audit.json",
+          "sha256": "ee660369a36e1f0e4b6e45b47a6beffe757013481199471e6d6f09ba32440991"
+        },
+        {
+          "path": "training-v3-ranger-guidance-random-505139299904-100/ranger-guidance-audit.json",
+          "sha256": "b9f96eb801bd940514eef42be411715b3818576e3a5775dedd0312fee975c85f"
+        },
+        {
+          "path": "training-v3-ranger-guidance-random-505139299904-100/mage-guidance-audit.json",
+          "sha256": "c6da2f0451570c774ef63479761ce31b6216021b60550bfa5bc334d6ce6b9d34"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-required-close-fixed-utilities-random-100",
+      "damage": "randomized",
+      "trials": 100,
+      "completed": 100,
+      "boss_ticks": {
+        "mean": 333.56,
+        "median": 332.0,
+        "min": 320,
+        "max": 368,
+        "p95": 352
+      },
+      "files": [
+        {
+          "path": "training-v3-required-close-fixed-utilities-random-100/summary.json",
+          "sha256": "ec407d58cd52233f47442c466170e6e06a0b805364c2bed91f819c397fd903fc"
+        },
+        {
+          "path": "training-v3-required-close-fixed-utilities-random-100/trials.csv",
+          "sha256": "8adeeed4865fe4741704a46de7b17bef21fd1a2406e52a93ad8eacd45d21e79a"
+        },
+        {
+          "path": "training-v3-required-close-fixed-utilities-random-100/training-audit.json",
+          "sha256": "ed5c00d2cd733f5f3fa01865996a0dde6fd93ecb4b5ff987a79c8dbc6bb85e42"
+        },
+        {
+          "path": "training-v3-required-close-fixed-utilities-random-100/primary-attribution-audit.json",
+          "sha256": "54e7c892171524e16391c4a2679398b1a2fdbeefc218ec22264164c191eead2c"
+        },
+        {
+          "path": "training-v3-required-close-fixed-utilities-random-100/ranger-guidance-audit.json",
+          "sha256": "1ce0fa5c1905972ccf9274569997cbbf8097551e0f28bd48b1a6269615e43fb2"
+        },
+        {
+          "path": "training-v3-required-close-fixed-utilities-random-100/mage-guidance-audit.json",
+          "sha256": "f2c758fc1cabb1b310fb41ee42ce6b4ca5f2d130d391c6e2ae88abaf144961a9"
+        },
+        {
+          "path": "training-v3-required-close-fixed-utilities-random-100/utility-guidance-audit.json",
+          "sha256": "5f21652ee8506ba561b0d6b45dcc5d9a5b358ba9d730421899a8e4de5ad849e4"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-retained-guidance-maxhit-diagnostic-100",
+      "damage": "always-max-hit diagnostic",
+      "trials": 100,
+      "completed": 100,
+      "boss_ticks": {
+        "mean": 304.32,
+        "median": 304.0,
+        "min": 296,
+        "max": 320,
+        "p95": 308
+      },
+      "files": [
+        {
+          "path": "training-v3-retained-guidance-maxhit-diagnostic-100/summary.json",
+          "sha256": "d8974346aab6a99315ec99388ffab7ba2aac280be2c2ee9e4fb48a1bb573e59b"
+        },
+        {
+          "path": "training-v3-retained-guidance-maxhit-diagnostic-100/trials.csv",
+          "sha256": "540d2a9b4fe767034c6140ead7d246a6313b43f82a09b947ba2c4f7a3d7c2283"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-forecast-guidance-refined-random-200",
+      "damage": "randomized",
+      "trials": 200,
+      "completed": 200,
+      "boss_ticks": {
+        "mean": 328.96,
+        "median": 328.0,
+        "min": 312,
+        "max": 364,
+        "p95": 348
+      },
+      "files": [
+        {
+          "path": "training-v3-forecast-guidance-refined-random-200/summary.json",
+          "sha256": "85fd25c3e3085441190d3900ae8b565b4f0b1457b2c5697baf80b5f7ad655366"
+        },
+        {
+          "path": "training-v3-forecast-guidance-refined-random-200/trials.csv",
+          "sha256": "9e7df286fb75c4ec1b1c8c0a0ef73e841f7ce26d99310446ed2f4502b931a665"
+        },
+        {
+          "path": "training-v3-forecast-guidance-refined-random-200/training-audit.json",
+          "sha256": "d4acd7790b8b925a78650855ef040f203bb3ae2df82726815d9bc4e8e49e07a9"
+        },
+        {
+          "path": "training-v3-forecast-guidance-refined-random-200/primary-attribution-audit.json",
+          "sha256": "6f06055e40ac8ee38a58e9aaffe85055b4c183eb561c3b25a3e23f5467c9cf70"
+        },
+        {
+          "path": "training-v3-forecast-guidance-refined-random-200/mage-guidance-audit.json",
+          "sha256": "0431de5370465b9e34d36c8d1f1571009539d7c7e4eefc3fb5e3b0309c2c4cb2"
+        },
+        {
+          "path": "training-v3-forecast-guidance-refined-random-200/ranger-guidance-audit.json",
+          "sha256": "44d612050f23aa486cdf9b0a023a50b23f2b8d0b1edd220623685d30da5a0dde"
+        },
+        {
+          "path": "training-v3-forecast-guidance-refined-random-200/utility-guidance-audit.json",
+          "sha256": "8622df667cb4e9a843005a1da55a2f179893a2026e357d38243475ddace06292"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-forecast-guidance-refined-fresh-300",
+      "damage": "randomized",
+      "trials": 300,
+      "completed": 300,
+      "boss_ticks": {
+        "mean": 330.29333333333335,
+        "median": 328.0,
+        "min": 308,
+        "max": 368,
+        "p95": 348
+      },
+      "files": [
+        {
+          "path": "training-v3-forecast-guidance-refined-fresh-300/summary.json",
+          "sha256": "a2d76831d5bdd36013b2f8dabe9b18e36f856fad5b8149c87894f3d298946072"
+        },
+        {
+          "path": "training-v3-forecast-guidance-refined-fresh-300/trials.csv",
+          "sha256": "9729c7d98eed36b696fa43f6277d3c5d657eab02dfdc48c70766f7e723eb44cd"
+        },
+        {
+          "path": "training-v3-forecast-guidance-refined-fresh-300/training-audit.json",
+          "sha256": "a91c66e03c92d30c1533b20421a46bcb0054c53054aec183e2bc1e2402f48cdf"
+        },
+        {
+          "path": "training-v3-forecast-guidance-refined-fresh-300/primary-attribution-audit.json",
+          "sha256": "ad4073e7f1e659ff084595ce92f4e85adf647eadd6e7f46a34dafb1a715a4928"
+        },
+        {
+          "path": "training-v3-forecast-guidance-refined-fresh-300/mage-guidance-audit.json",
+          "sha256": "8ec428e1f9ad3ea9c766e58e68bfee6f815c163dbf533200f1510cbd4fc2a6b0"
+        },
+        {
+          "path": "training-v3-forecast-guidance-refined-fresh-300/ranger-guidance-audit.json",
+          "sha256": "9e786cb852e5fe999386b3fe768cdab4da0496735bb1f2e3de2684f35039683e"
+        },
+        {
+          "path": "training-v3-forecast-guidance-refined-fresh-300/utility-guidance-audit.json",
+          "sha256": "fa9321c5f85948422f31925c02c3d4e6659ac73ad7f2fcd4d2e9a55b5bc05841"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-deferred13-age29-random-200",
+      "damage": "randomized",
+      "trials": 200,
+      "completed": 200,
+      "boss_ticks": {
+        "mean": 328.38,
+        "median": 328.0,
+        "min": 312,
+        "max": 368,
+        "p95": 344
+      },
+      "files": [
+        {
+          "path": "training-v3-deferred13-age29-random-200/summary.json",
+          "sha256": "db7a2eae0d27d1c8b5d3ac8d11075ac0d92b9aa3a7423996529d8f0609a9319b"
+        },
+        {
+          "path": "training-v3-deferred13-age29-random-200/trials.csv",
+          "sha256": "eab8a307de28a5827277ee866ce5efa9cef507dbe236794eb6184337fa528e5a"
+        },
+        {
+          "path": "training-v3-deferred13-age29-random-200/training-audit.json",
+          "sha256": "7f575f7db47ab3058060459d43aeca16e0e9a7b7135234461316aa324656b1f3"
+        },
+        {
+          "path": "training-v3-deferred13-age29-random-200/mage-guidance-audit.json",
+          "sha256": "db0e6b842735929b7f2014ff2edc51001d14c81290ce6f9ebfb6f3bcbc46c280"
+        },
+        {
+          "path": "training-v3-deferred13-age29-random-200/ranger-guidance-audit.json",
+          "sha256": "29e59993b885f79b31f5dee3124df9f7da4cd9d74a9fd230219aa7de980d3652"
+        },
+        {
+          "path": "training-v3-deferred13-age29-random-200/utility-guidance-audit.json",
+          "sha256": "86335657e52928fe7aebc8bc2144d47614c26f5906e4c6862a12f6218e743d11"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-deferred13-age29-fresh-300",
+      "damage": "randomized",
+      "trials": 300,
+      "completed": 300,
+      "boss_ticks": {
+        "mean": 329.56,
+        "median": 328.0,
+        "min": 308,
+        "max": 364,
+        "p95": 348
+      },
+      "files": [
+        {
+          "path": "training-v3-deferred13-age29-fresh-300/summary.json",
+          "sha256": "c7b8471745d4813c78d130d9e2cf800b099ac0763b707592c0df71a99f5c82b4"
+        },
+        {
+          "path": "training-v3-deferred13-age29-fresh-300/trials.csv",
+          "sha256": "6f502cec2c48097590857ea8046744ac125c897b056953513b0747f9b9fc1e7d"
+        },
+        {
+          "path": "training-v3-deferred13-age29-fresh-300/training-audit.json",
+          "sha256": "05e83de648d0d0596388e129d0e2b9e165cec24dbe248fec9a256360da33771d"
+        },
+        {
+          "path": "training-v3-deferred13-age29-fresh-300/mage-guidance-audit.json",
+          "sha256": "3a48410265028a3f9d6f686884acba85e19f76044a4dec24f5b1ec6c964c4994"
+        },
+        {
+          "path": "training-v3-deferred13-age29-fresh-300/ranger-guidance-audit.json",
+          "sha256": "815000e497762bf186fc8be13abc818d8f57493a92149645e885029f1e19dc3b"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-deferred13-age30-random-200",
+      "damage": "randomized",
+      "trials": 200,
+      "completed": 200,
+      "boss_ticks": {
+        "mean": 330.04,
+        "median": 328.0,
+        "min": 312,
+        "max": 356,
+        "p95": 348
+      },
+      "files": [
+        {
+          "path": "training-v3-deferred13-age30-random-200/summary.json",
+          "sha256": "8832db29a95c37bf506d838be3a9fae85d6a8236233465ce0b335aa3a48401ad"
+        },
+        {
+          "path": "training-v3-deferred13-age30-random-200/trials.csv",
+          "sha256": "2b5f84463676510b9e61aab75e14b697ee09f62b7fcda7110fc3957b3baa04bc"
+        },
+        {
+          "path": "training-v3-deferred13-age30-random-200/training-audit.json",
+          "sha256": "e926e15db9a7adb108a0cb8a6509771ffd98f67cb4b29cb489a55e10fbe8ee08"
+        },
+        {
+          "path": "training-v3-deferred13-age30-random-200/mage-guidance-audit.json",
+          "sha256": "f70badae4714a039a9e3d5e20974fda422c0c942f58b8b7d54c40803c99df358"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-south20-followup-intent-random-200",
+      "damage": "randomized",
+      "trials": 200,
+      "completed": 200,
+      "boss_ticks": {
+        "mean": 328.44,
+        "median": 328.0,
+        "min": 312,
+        "max": 368,
+        "p95": 344
+      },
+      "files": [
+        {
+          "path": "training-v3-south20-followup-intent-random-200/summary.json",
+          "sha256": "a7aab922df6d793d68fc1d3d89193fe586350d0fc568d3c1411a76f88eed6da2"
+        },
+        {
+          "path": "training-v3-south20-followup-intent-random-200/trials.csv",
+          "sha256": "4e521876636c61211a1c4d586a6a3c652e9aa89e88653b9cd91e44d0bc721261"
+        },
+        {
+          "path": "training-v3-south20-followup-intent-random-200/training-audit.json",
+          "sha256": "d3f77facb0de27dd89ac7f4cfa52ff5199279ab729434cc2e552c86a38ec40d8"
+        },
+        {
+          "path": "training-v3-south20-followup-intent-random-200/primary-attribution-audit.json",
+          "sha256": "3ee1822f4b1453db306c71919abd23d725e1c55e82d5f350f0300177348d25d5"
+        },
+        {
+          "path": "training-v3-south20-followup-intent-random-200/mage-guidance-audit.json",
+          "sha256": "879d220b1d46d306cf206383c60c6c62e03876e4d4d98d42cd1b09c1567a4b1e"
+        },
+        {
+          "path": "training-v3-south20-followup-intent-random-200/ranger-guidance-audit.json",
+          "sha256": "357bb7692d72577e4343030e6f67486eb245ac0f3fb59ed10436140f8f52b6d6"
+        },
+        {
+          "path": "training-v3-south20-followup-intent-random-200/utility-guidance-audit.json",
+          "sha256": "1de2ef0df47f2f2db2455a6344c3a07ebf16254703dd648a43a7d0410817c315"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-south20-opening-recovery-random-200",
+      "damage": "randomized",
+      "trials": 200,
+      "completed": 200,
+      "boss_ticks": {
+        "mean": 329.32,
+        "median": 328.0,
+        "min": 308,
+        "max": 356,
+        "p95": 344
+      },
+      "files": [
+        {
+          "path": "training-v3-south20-opening-recovery-random-200/summary.json",
+          "sha256": "d665835e2e25c22f467dc3fa5761f3a0da5ab174ab924688dbeee36f87909e2e"
+        },
+        {
+          "path": "training-v3-south20-opening-recovery-random-200/trials.csv",
+          "sha256": "52f9c7d06b77a64c272ac8aeae81edc2f365a5d0a45775c2e987966fa7cf6b79"
+        },
+        {
+          "path": "training-v3-south20-opening-recovery-random-200/mage-guidance-audit.json",
+          "sha256": "f8a101654a17d7f417c9fe59b7c04aecdbe16f1230b586a408dae40b37e7b4ae"
+        },
+        {
+          "path": "training-v3-south20-opening-recovery-random-200/ranger-guidance-audit.json",
+          "sha256": "f41be9ff94ecf1c45baf3da9dbc8110c8cebe3d011788e023cb5ad89b8d5e749"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-age29-maxhit-diagnostic-100",
+      "damage": "always-max-hit diagnostic",
+      "trials": 100,
+      "completed": 100,
+      "boss_ticks": {
+        "mean": 303.12,
+        "median": 304.0,
+        "min": 296,
+        "max": 312,
+        "p95": 308
+      },
+      "files": [
+        {
+          "path": "training-v3-age29-maxhit-diagnostic-100/summary.json",
+          "sha256": "3857da7e05894be4dd2415d48c6f647136c7a72c7e9210384a1a50e2482abfe2"
+        },
+        {
+          "path": "training-v3-age29-maxhit-diagnostic-100/trials.csv",
+          "sha256": "997de9c1cad3198fbf54fc94286b883cda25663b8105bde3ab1ff87bac722e3a"
+        },
+        {
+          "path": "training-v3-age29-maxhit-diagnostic-100/training-audit.json",
+          "sha256": "bbdebb77fef6bc5abbc2534594e5f398ce1428a7c8c1f771d25b02321ba87181"
+        },
+        {
+          "path": "training-v3-age29-maxhit-diagnostic-100/ranger-guidance-audit.json",
+          "sha256": "4fc35d0225d2cb969e42e2246536b08ed483185133677d5bc2eb7e439be97449"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-south20-coherent-random-200",
+      "damage": "randomized",
+      "trials": 200,
+      "completed": 200,
+      "boss_ticks": {
+        "mean": 327.24,
+        "median": 326.0,
+        "min": 316,
+        "max": 356,
+        "p95": 340
+      },
+      "files": [
+        {
+          "path": "training-v3-south20-coherent-random-200/mage-transition-audit.json",
+          "sha256": "34669f6aaf6d8ccc0717420f827966f8c06c1b840dd8c78d61776afdaee22507"
+        },
+        {
+          "path": "training-v3-south20-coherent-random-200/summary.json",
+          "sha256": "3722927ed4d02d4ecde26a4161f6b1734000126b2ca5f26b212ac339e72329cb"
+        },
+        {
+          "path": "training-v3-south20-coherent-random-200/mage-guidance-audit.json",
+          "sha256": "59045964d4291476ba394910fab6f38fe310234bc46d3865a8970aab1ac4fcc8"
+        },
+        {
+          "path": "training-v3-south20-coherent-random-200/trials.csv",
+          "sha256": "6525a924a42ce8c9913c5a39cdcd9559d2eb583c2d8687d51d9cb00971fc2ee0"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-south20-coherent-fresh-300",
+      "damage": "randomized",
+      "trials": 300,
+      "completed": 300,
+      "boss_ticks": {
+        "mean": 328.24,
+        "median": 328.0,
+        "min": 308,
+        "max": 364,
+        "p95": 344
+      },
+      "files": [
+        {
+          "path": "training-v3-south20-coherent-fresh-300/training-audit.json",
+          "sha256": "5acc8a17661378ca13ea58a4dd71ac5ba859c8e15aecc79112674fade4cfed64"
+        },
+        {
+          "path": "training-v3-south20-coherent-fresh-300/mage-transition-audit.json",
+          "sha256": "ac3cbfdda971e09ffa376eb3d6852b81c2a43ae4697db08a2db1fb0c6a6bf6c5"
+        },
+        {
+          "path": "training-v3-south20-coherent-fresh-300/summary.json",
+          "sha256": "a277c5b5bab31afa3e55c45dfa98a958f972fa63a4141745e26625d063fb2a14"
+        },
+        {
+          "path": "training-v3-south20-coherent-fresh-300/primary-attribution-audit.json",
+          "sha256": "4b44e418ebe6814d67016e42a7b93fab0fbf4af96a724200159692066dc600c9"
+        },
+        {
+          "path": "training-v3-south20-coherent-fresh-300/mage-guidance-audit.json",
+          "sha256": "26229699e19f47be59bab8d693bf80447559dcb93707c9d8f3991a5241691c55"
+        },
+        {
+          "path": "training-v3-south20-coherent-fresh-300/ranger-guidance-audit.json",
+          "sha256": "dca44a7b16eb81214d55ff93892954aed2807d079a85b1794fb01010ff3ea8f3"
+        },
+        {
+          "path": "training-v3-south20-coherent-fresh-300/trials.csv",
+          "sha256": "fa7704390931ee2e786562d701108a4d1442bdb18961fa7650bc3e15203858e2"
+        },
+        {
+          "path": "training-v3-south20-coherent-fresh-300/utility-guidance-audit.json",
+          "sha256": "81240d7b4351d9ab8a96cbe72efab4cb1e07ee0fcdeb7fb8c704ce31069b66c7"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-south20-coherent-pooled-500",
+      "damage": "randomized",
+      "trials": 500,
+      "completed": 500,
+      "boss_ticks": {
+        "mean": 327.84,
+        "median": 328.0,
+        "min": 308,
+        "max": 364,
+        "p95": 344
+      },
+      "files": [
+        {
+          "path": "training-v3-south20-coherent-pooled-500/summary.json",
+          "sha256": "becd046713db939a710fd0b36a538c9207f4ba4466e7d924126ad5b69c71c643"
+        },
+        {
+          "path": "training-v3-south20-coherent-pooled-500/trials.csv",
+          "sha256": "d1796367fe13b0db3fd69ed97820fc59f288a7cef002b828d1ff3fe533219f3f"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-guidance-movement-random-200",
+      "damage": "randomized",
+      "trials": 200,
+      "completed": 200,
+      "boss_ticks": {
+        "mean": 328.18,
+        "median": 328.0,
+        "min": 312,
+        "max": 372,
+        "p95": 344
+      },
+      "files": [
+        {
+          "path": "training-v3-guidance-movement-random-200/training-audit.json",
+          "sha256": "8265481228219101243be770be89d60bca2e5cfb729019a1e007406a240359f2"
+        },
+        {
+          "path": "training-v3-guidance-movement-random-200/summary.json",
+          "sha256": "1150528b2b6d5ae63d22a17dc321327398ce53169f16e9bd11324ce3a1af4b31"
+        },
+        {
+          "path": "training-v3-guidance-movement-random-200/primary-attribution-audit.json",
+          "sha256": "7d49f57cb92e701b9736f052deb070f1a4c396d6e97f6bf811dbe7484834a048"
+        },
+        {
+          "path": "training-v3-guidance-movement-random-200/mage-guidance-audit.json",
+          "sha256": "2d51c1088c5814b2dd797254a8a4d039a9f5a671757768a10d5f1560b995d141"
+        },
+        {
+          "path": "training-v3-guidance-movement-random-200/ranger-guidance-audit.json",
+          "sha256": "ca19283e641d51eef0faa7c4f96f99b056d640c22894967edef463db184c40c3"
+        },
+        {
+          "path": "training-v3-guidance-movement-random-200/trials.csv",
+          "sha256": "db5f0286b9c25662df7c1c6ca7da5a9380909681981d6252df6dcf36e47335fa"
+        },
+        {
+          "path": "training-v3-guidance-movement-random-200/utility-guidance-audit.json",
+          "sha256": "e86837c35d504e7d0e174eed786b51aac80b61b2a9feba575585436b322ddb17"
+        }
+      ]
+    },
+    {
+      "run": "training-v3-guidance-movement-fresh-300",
+      "damage": "randomized",
+      "trials": 300,
+      "completed": 300,
+      "boss_ticks": {
+        "mean": 327.9866666666667,
+        "median": 328.0,
+        "min": 312,
+        "max": 360,
+        "p95": 344
+      },
+      "files": [
+        {
+          "path": "training-v3-guidance-movement-fresh-300/training-audit.json",
+          "sha256": "586197ea7dc20f52f79128f18b172c61bda1abf27b5ce2d3dccdd84b4d8d828b"
+        },
+        {
+          "path": "training-v3-guidance-movement-fresh-300/summary.json",
+          "sha256": "ba328e9d052ba67353fffe7d30a9db429e6ab113e7fd4fbf14ecb954bfc95701"
+        },
+        {
+          "path": "training-v3-guidance-movement-fresh-300/mage-guidance-audit.json",
+          "sha256": "ed1d0bce7072ad1500aa69c8a3b92cfb6d1e7071515ae09431360bf4d016791f"
+        },
+        {
+          "path": "training-v3-guidance-movement-fresh-300/ranger-guidance-audit.json",
+          "sha256": "72f7b437035da9fe7c4c826bb9e24cbc3f2355b83ab486630eb822ca24b14e7a"
+        },
+        {
+          "path": "training-v3-guidance-movement-fresh-300/trials.csv",
+          "sha256": "6dd2c6872f54d1bbaf8b8392b3c6d1035a90e0f410c236d04553c11ce3276e52"
+        }
+      ]
+    }
+  ],
+  "retained_policy_checkpoint": ".state/simulations/training-v3-retained-south20-checkpoint"
+}

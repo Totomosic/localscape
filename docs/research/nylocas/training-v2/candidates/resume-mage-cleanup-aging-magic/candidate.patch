@@ -1,0 +1,30 @@
+--- upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java
++++ upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java
+@@ -411,7 +411,11 @@
+ 			if (c.style == Style.MELEE && c.big) weapon = Weapon.SCYTHE;
+ 			if (!c.big && c.style == Style.MELEE && cluster(room, c, tick) >= 2) { weapon = Weapon.SCYTHE; score += 2200; }
+ 			if (!c.big) score += Math.max(0, 8 - c.hp) * 40;
+-			if (room.wave == 31 && c.wave >= 30 && c.lane == Lane.SPLIT && !c.big && c.style == Style.MAGIC && c.partnerNulled) score += 5000;
++			if (room.wave == 31 && c.wave >= 30 && c.lane == Lane.SPLIT && !c.big && c.style == Style.MAGIC)
++			{
++				if (c.partnerNulled) score += 5000;
++				else if (age >= 10 && rangerHasFreshRangeWork(room, tick)) score += 4000;
++			}
+ 			Decision d = new Decision(c, weapon, c.point, false, null, "Fresh " + c.style + (c.big ? " assigned big" : " small"));
+ 			add(candidates, room, next, d, score, tick, tick, c.born + 48);
+ 		}
+@@ -564,6 +568,14 @@
+ 			|| c.wave == 23 && c.lane == Lane.SOUTH && c.style == Style.MELEE && c.hp < 16;
+ 	}
+ 
++	private static boolean rangerHasFreshRangeWork(Room room, int tick)
++	{
++		// NULL is attacker-specific: only the ranger's NULL flag matters for its ranged work.
++		return room.crabs.stream().anyMatch(c -> c.wave >= 30 && !c.dying && c.hp > 0 && !c.partnerNulled
++			&& tick - c.born < 49 && c.claimedUntil <= tick && !c.awaitingHit(tick)
++			&& matchesNext(c, Style.RANGE, tick));
++	}
++
+ 	private static int cluster(Room room, Crab target, int tick)
+ 	{
+ 		return (int) room.crabs.stream().filter(c -> !c.big && eligible(room, c, tick) && matchesNext(c, Style.MELEE, tick)

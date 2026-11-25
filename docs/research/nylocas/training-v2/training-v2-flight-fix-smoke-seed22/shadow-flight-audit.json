@@ -1,0 +1,196 @@
+{
+  "run": ".state/simulations/training-v2-flight-fix-smoke-seed22",
+  "semantics": "HP snapshots are planning observations. Partner launches before first observed HP change prove overlapping primary flights; they do not by themselves prove wasted damage.",
+  "trials": 1,
+  "roomsWithPartnerLaunchBeforeHpChange": 0,
+  "firstHpChangeRemainingHp": {
+    "0": 1
+  },
+  "openingThrallHits": 0,
+  "rooms": [
+    {
+      "trial": 0,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 38,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 38,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 38,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 38,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 38,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 38,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 0,
+        "ownHitUntil": 0,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": []
+    }
+  ],
+  "sourceSha256": "e0015cd57a6437f04a796ba153be7c32099c504784c39fd8b267371abcff90fa"
+}

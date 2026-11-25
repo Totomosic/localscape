@@ -1,0 +1,20 @@
+--- .state/simulations/training-v3-forecast-guidance-refined-fresh-300/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 19:02:43.963391532 +0800
++++ .state/simulations/training-v3-candidate-mage-dinh12-food-recovery/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 19:12:46.171329172 +0800
+@@ -235,7 +235,7 @@
+ 		{
+ 			result.add(new Window("12 east scythe", s12 + 7, s12 + 9, Weapon.SCYTHE, 3301, 4249));
+ 			int due = scythe12 < 0 ? s12 + 12 : scythe12 + 5;
+-			result.add(new Window("12 west Dinh", due, due + 1, Weapon.DINH, 3293, 4249));
++			result.add(new Window("12 west Dinh", due, due + 3, Weapon.DINH, 3293, 4249));
+ 		}
+ 		if (s21 >= 0 && room.wave < 29)
+ 		{
+@@ -539,7 +539,7 @@
+ 		if (c.wave == 29 && c.lane == Lane.SOUTH && c.big && room.wave < 30) return true;
+ 		if (c.wave == 26 && c.lane == Lane.SOUTH && c.big && room.wave < 29) return true;
+ 		if (c.wave == 12 && !c.big && (c.lane == Lane.EAST && !completed.contains("12 east scythe") && tick - c.born <= 9
+-			|| c.lane == Lane.WEST && c.slot == 'S' && !completed.contains("12 west Dinh") && tick - c.born <= (scythe12 < 0 ? 13 : scythe12 + 6 - c.born))) return true;
++			|| c.lane == Lane.WEST && c.slot == 'S' && !completed.contains("12 west Dinh") && tick - c.born <= (scythe12 < 0 ? 15 : scythe12 + 8 - c.born))) return true;
+ 		if (c.wave == 21 && c.lane == Lane.WEST && !c.big && !completed.contains("21 west barrage") && tick - c.born < 3) return true;
+ 		if (c.wave == 22 && c.lane == Lane.SOUTH && c.slot == 'W' && !c.big && !completed.contains("22 south Dinh") && tick - c.born <= 10) return true;
+ 		return false;

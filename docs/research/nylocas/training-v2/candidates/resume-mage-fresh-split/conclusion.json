@@ -1,0 +1,17 @@
+{
+  "decision": "rejected; not promoted",
+  "reason": "Survival regression and slower successful-room mean; failures excluded from successful-room timing.",
+  "run": ".state/simulations/training-v2-flight-mage-fresh-split-100",
+  "trials": 100,
+  "completed": 99,
+  "deaths": 1,
+  "timeouts": 0,
+  "completedMeanTicks": 337.93939393939394,
+  "completedMeanSeconds": 202.76363636363635,
+  "allTrialMeanPreCapStalls": 4.71,
+  "baselineRun": ".state/simulations/training-v2-flight-fix-fresh-100",
+  "baselineCompletedMeanTicks": 336.36,
+  "failedSeeds": [
+    160
+  ]
+}

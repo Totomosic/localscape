@@ -1,0 +1,808 @@
+{
+  "limitations": [
+    "Native state/impact instrumentation was absent in eighth batch. Four-frame SBS windows estimate active policy-ready target holds, not counterfactual confirmed attack losses.",
+    "Clock minus24 equals room tick in these thirty fixed-preparation fixtures (verified by later native state trace)."
+  ],
+  "trials": [
+    {
+      "seed": 1,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            53
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 6,
+          "swap4frameReadyTargetHolds": 3,
+          "heldTicks": [
+            207,
+            112,
+            213
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            50,
+            311
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            112,
+            208
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 3,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            50
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            212,
+            110
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 4,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            50
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            108
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 5,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            51
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            112,
+            217
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 6,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            53
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 3,
+          "heldTicks": [
+            115,
+            216,
+            105
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 7,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            50
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            108
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 8,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            52
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            114
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 9,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 3,
+          "heldTicks": [
+            279,
+            280,
+            50
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 3,
+          "heldTicks": [
+            209,
+            116,
+            217
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 10,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            318,
+            50
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            116,
+            228
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 4,
+          "heldTicks": [
+            241,
+            49,
+            242,
+            240
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 3,
+          "heldTicks": [
+            243,
+            112,
+            105
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 12,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            50
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            108,
+            235
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 13,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            50
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 6,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            113,
+            215
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 14,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 4,
+          "heldTicks": [
+            213,
+            212,
+            53,
+            214
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 6,
+          "swap4frameReadyTargetHolds": 3,
+          "heldTicks": [
+            227,
+            233,
+            107
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 3
+        }
+      ]
+    },
+    {
+      "seed": 15,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            50
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            220,
+            116
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 16,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            50
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            116,
+            219
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 17,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            50
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            109,
+            120
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 18,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            53
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            116,
+            206
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 19,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            50
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            111
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 20,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            220,
+            51
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 6,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            112,
+            237
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 21,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            307,
+            50
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 3,
+          "heldTicks": [
+            207,
+            222,
+            116
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 22,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            52
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            181,
+            180
+          ],
+          "thrallRequests": 1,
+          "deathChargeRequests": 0
+        }
+      ]
+    },
+    {
+      "seed": 23,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            50,
+            320
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 3,
+          "heldTicks": [
+            121,
+            109,
+            219
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 24,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            51
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            222,
+            116
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 25,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            51
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 3,
+          "heldTicks": [
+            115,
+            225,
+            219
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 26,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            50
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            210,
+            107
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 27,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            53
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 3,
+          "heldTicks": [
+            227,
+            211,
+            118
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 28,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            51
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 2,
+          "heldTicks": [
+            112,
+            217
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 29,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            49
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 5,
+          "swap4frameReadyTargetHolds": 3,
+          "heldTicks": [
+            214,
+            220,
+            120
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    },
+    {
+      "seed": 30,
+      "roles": [
+        {
+          "role": 0,
+          "swaps": 2,
+          "swap4frameReadyTargetHolds": 3,
+          "heldTicks": [
+            49,
+            319,
+            320
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 1
+        },
+        {
+          "role": 1,
+          "swaps": 6,
+          "swap4frameReadyTargetHolds": 1,
+          "heldTicks": [
+            112
+          ],
+          "thrallRequests": 2,
+          "deathChargeRequests": 2
+        }
+      ]
+    }
+  ]
+}

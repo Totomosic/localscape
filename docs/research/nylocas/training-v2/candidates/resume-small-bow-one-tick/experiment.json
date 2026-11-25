@@ -1,0 +1,22 @@
+{
+  "status": "rebased isolated candidate; not promoted; no simulation",
+  "baseline": "current canonical Java and role tests captured on resume, after final saved-wave-12 protection; independent of ranger-guidance candidate",
+  "historicalDelta": "docs/research/nylocas/training-v2/candidates/small-bow-one-tick/policy.patch",
+  "scope": "Suppress only unnamed pre-cap small BOW when PIPE can launch one tick later with projected position/style, current clear LOS, lifetime, claims, own-flight wait and complete reservation return budget.",
+  "changedFiles": [
+    "policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java",
+    "test-source/org/localscape/nylocas/ranger/RangerStrategyTest.java"
+  ],
+  "preserved": "All other current Java policies, typed fields, Mage cleanup rescue, ranger west19 handoff and saved-wave12-primary guard; latest saved12 regression tests remain present.",
+  "tests": {
+    "candidate": 175,
+    "passed": 175,
+    "ranger": 98,
+    "mage": 77,
+    "baselineWithCandidateTests": 175,
+    "expectedFailuresOnBaseline": 2
+  },
+  "reproduction": "python3 .state/simulations/training-v2-candidate-small-bow-one-tick-rebased-current/run-check.py; add --baseline for expected red comparison",
+  "limitations": "No native controller/Gradle run or simulation; current clear LOS is required but future LOS is not predicted; native adapter remains authoritative.",
+  "historicalPatchSha256": "168dbfb36cd1641e2844a1ad44ac0fa02c1e06b172105ff0885550681d33e56b"
+}

@@ -1,0 +1,30 @@
+--- a/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ b/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -159,7 +159,8 @@
+ 					Rule rule = rule(crab, weapon, age);
+ 					// Keep deliberate bow packets and range advantages; otherwise spend two ticks, not five.
+ 					if (weapon == Weapon.BOW && rule == null
+-						&& pipeCanFireAt(from, target, crab.big, moveFrom, at, reservation)) continue;
++						&& (pipeCanFireAt(from, target, crab.big, moveFrom, at, reservation)
++							|| !crab.big && pipeOneTickLater(room, crab, now, from, moveFrom, at, reservation))) continue;
+ 					boolean hard = rule != null && rule.wave == 10;
+ 					// Wave-10 primaries/pairs are the one protected early packet.
+ 					if (crab.wave == 10 && crab.lane != Lane.SPLIT && !hard
+@@ -218,6 +219,17 @@
+ 			(destination.distanceTo(reservation.rule.stage) + 1) / 2) <= reservation.due;
+ 	}
+ 
++	private boolean pipeOneTickLater(Room room, Crab crab, int now, Tile from, int moveFrom, int bowAt, Reservation reservation)
++	{
++		int at = bowAt + 1;
++		int age = at - crab.born;
++		if (at > now + HORIZON || age >= 49 || crab.claimedUntil > at || crab.awaitingHit(at)
++			|| room.obstructed.contains(crab.key) || !allowed(room, crab, Weapon.PIPE, age)
++			|| predictedStyle(crab, now, at) != Style.RANGE || predictedStyle(crab, now, at + 1) != Style.RANGE) return false;
++		Tile target = position(crab, now, at + 1);
++		return pipeCanFireAt(from, target, false, moveFrom, at, reservation);
++	}
++
+ 	private boolean allowed(Room room, Crab crab, Weapon weapon, int age)
+ 	{
+ 		if (RangerStrategy.savedMagePrimary(crab, crab.born + age)) return false;

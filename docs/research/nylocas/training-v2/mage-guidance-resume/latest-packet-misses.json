@@ -1,0 +1,5538 @@
+[
+  {
+    "seed": "157530312394749",
+    "rule": "22 south Dinh",
+    "spawn": 192,
+    "frames": [
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3295,4244,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 199,
+        "targets": [
+          {
+            "key": 123,
+            "wave": 22,
+            "lane": "south",
+            "slot": "W",
+            "age": 7,
+            "style": "MELEE",
+            "big": false,
+            "hp": 0,
+            "x": 3295,
+            "y": 4240,
+            "claim": 0,
+            "flight": 0,
+            "dying": true
+          },
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 7,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3302,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,0",
+          "8,null",
+          "3294,4245,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,99"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3295,4244,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 200,
+        "targets": [
+          {
+            "key": 123,
+            "wave": 22,
+            "lane": "south",
+            "slot": "W",
+            "age": 8,
+            "style": "MELEE",
+            "big": false,
+            "hp": 0,
+            "x": 3295,
+            "y": 4240,
+            "claim": 0,
+            "flight": 0,
+            "dying": true
+          },
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 8,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3301,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-1",
+          "8,null",
+          "3294,4245,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "88,99"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3295,4244,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 201,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 9,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3300,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-2",
+          "8,null",
+          "3294,4245,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "88,99"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3295,4244,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 202,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 10,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3299,
+            "y": 4246,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,-3",
+          "null,null",
+          "3295,4244,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "88,99"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3295,4244,0",
+        "weapon": "SULPHUR",
+        "target": "124",
+        "rule": "null",
+        "reason": "Fresh MELEE small",
+        "tick": 203,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 11,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3298,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-4",
+          "null,8",
+          "3295,4244,0,3297,4243,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "74,99"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3297,4243,0",
+        "weapon": "SCYTHE",
+        "target": "122",
+        "rule": "null",
+        "reason": "Plan SCYTHE #128 @207: Fresh MELEE assigned big",
+        "tick": 204,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 12,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3297,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,3",
+          "16,16",
+          "3295,4244,0,3295,4243,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "74,99"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3295,4243,0",
+        "weapon": "SCYTHE",
+        "target": "122",
+        "rule": "null",
+        "reason": "Plan SCYTHE #128 @207: Fresh MELEE assigned big",
+        "tick": 205,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 13,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3297,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "4,2",
+          "null,16",
+          "3293,4246,0,3293,4243,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "74,99"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4243,0",
+        "weapon": "SCYTHE",
+        "target": "122",
+        "rule": "null",
+        "reason": "Plan SCYTHE #128 @207: Fresh MELEE assigned big",
+        "tick": 206,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 14,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3296,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "3,1",
+          "null,16",
+          "3291,4248,0,3292,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "74,99"
+      },
+      {
+        "wave": 23,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3292,4244,0",
+        "weapon": "SCYTHE",
+        "target": "122",
+        "rule": "null",
+        "reason": "Fresh MELEE assigned big",
+        "tick": 207,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 15,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3295,
+            "y": 4243,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,0",
+          "null,16",
+          "3291,4248,0,3292,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "74,99"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3292,4245,0",
+        "weapon": "SCYTHE",
+        "target": "125",
+        "rule": "null",
+        "reason": "Plan SCYTHE #131 @212: Fresh MELEE assigned big",
+        "tick": 208,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 16,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3294,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,4",
+          "null,16",
+          "3291,4248,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "74,99"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "SCYTHE",
+        "target": "125",
+        "rule": "null",
+        "reason": "Plan SCYTHE #131 @212: Fresh MELEE assigned big",
+        "tick": 209,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 17,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3293,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,3",
+          "8,16",
+          "3291,4248,0,3292,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "74,99"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3292,4244,0",
+        "weapon": "SCYTHE",
+        "target": "125",
+        "rule": "null",
+        "reason": "Plan SCYTHE #131 @212: Fresh MELEE assigned big",
+        "tick": 210,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 18,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,2",
+          "null,16",
+          "3291,4248,0,3292,4243,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "74,99"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3292,4243,0",
+        "weapon": "SCYTHE",
+        "target": "125",
+        "rule": "null",
+        "reason": "Plan SCYTHE #131 @212: Fresh MELEE assigned big",
+        "tick": 211,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 19,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3291,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,1",
+          "8,16",
+          "3291,4248,0,3292,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "74,99"
+      },
+      {
+        "wave": 24,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3292,4244,0",
+        "weapon": "EYE",
+        "target": "133",
+        "rule": "South big 24",
+        "reason": "South big 24",
+        "tick": 212,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 20,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3291,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,0",
+          "8,16",
+          "3293,4248,0,3294,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "74,75"
+      }
+    ]
+  },
+  {
+    "seed": "157530312394763",
+    "rule": "22 south Dinh",
+    "spawn": 184,
+    "frames": [
+      {
+        "wave": 22,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3291,4249,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 191,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "south",
+            "slot": "W",
+            "age": 7,
+            "style": "MELEE",
+            "big": false,
+            "hp": 0,
+            "x": 3295,
+            "y": 4240,
+            "claim": 0,
+            "flight": 0,
+            "dying": true
+          },
+          {
+            "key": 129,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 7,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3302,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,1",
+          "8,null",
+          "3299,4245,0,3292,4247,0"
+        ],
+        "utility": [
+          "2",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "99,81"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3292,4247,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 192,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "south",
+            "slot": "W",
+            "age": 8,
+            "style": "MELEE",
+            "big": false,
+            "hp": 0,
+            "x": 3295,
+            "y": 4240,
+            "claim": 0,
+            "flight": 0,
+            "dying": true
+          },
+          {
+            "key": 129,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 8,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3301,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,0",
+          "8,null",
+          "3299,4245,0,3294,4245,0"
+        ],
+        "utility": [
+          "2",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "99,81"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3294,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 193,
+        "targets": [
+          {
+            "key": 129,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 9,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3300,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-1",
+          "8,null",
+          "3299,4245,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,81"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3295,4244,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 194,
+        "targets": [
+          {
+            "key": 129,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 10,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3299,
+            "y": 4246,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,-2",
+          "null,null",
+          "3297,4245,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,81"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3295,4244,0",
+        "weapon": "SULPHUR",
+        "target": "128",
+        "rule": "null",
+        "reason": "Fresh MELEE small",
+        "tick": 195,
+        "targets": [
+          {
+            "key": 129,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 11,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3299,
+            "y": 4246,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-3",
+          "null,8",
+          "3295,4244,0,3297,4243,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,81"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3297,4243,0",
+        "weapon": "SCYTHE",
+        "target": "126",
+        "rule": "null",
+        "reason": "Plan SCYTHE #132 @199: Fresh MELEE assigned big",
+        "tick": 196,
+        "targets": [
+          {
+            "key": 129,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 12,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3298,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,3",
+          "16,16",
+          "3295,4244,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,81"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3295,4244,0",
+        "weapon": "SCYTHE",
+        "target": "126",
+        "rule": "null",
+        "reason": "Plan SCYTHE #132 @199: Fresh MELEE assigned big",
+        "tick": 197,
+        "targets": [
+          {
+            "key": 129,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 13,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3297,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "4,2",
+          "null,16",
+          "3293,4246,0,3293,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,81"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4244,0",
+        "weapon": "SCYTHE",
+        "target": "126",
+        "rule": "null",
+        "reason": "Plan SCYTHE #132 @199: Fresh MELEE assigned big",
+        "tick": 198,
+        "targets": [
+          {
+            "key": 129,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 14,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3296,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "3,1",
+          "null,16",
+          "3291,4248,0,3293,4246,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,81"
+      },
+      {
+        "wave": 23,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3293,4246,0",
+        "weapon": "SCYTHE",
+        "target": "126",
+        "rule": "null",
+        "reason": "Fresh MELEE assigned big",
+        "tick": 199,
+        "targets": [
+          {
+            "key": 129,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 15,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3295,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,0",
+          "null,16",
+          "3291,4248,0,3293,4246,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,87"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4246,0",
+        "weapon": "SCYTHE",
+        "target": "129",
+        "rule": "null",
+        "reason": "Plan SCYTHE #135 @204: Fresh MELEE assigned big",
+        "tick": 200,
+        "targets": [
+          {
+            "key": 129,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 16,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3294,
+            "y": 4246,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,4",
+          "null,16",
+          "3291,4248,0,3293,4246,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,87"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4246,0",
+        "weapon": "SCYTHE",
+        "target": "129",
+        "rule": "null",
+        "reason": "Plan SCYTHE #135 @204: Fresh MELEE assigned big",
+        "tick": 201,
+        "targets": [
+          {
+            "key": 129,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 17,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3293,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,3",
+          "8,16",
+          "3291,4248,0,3293,4246,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,87"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4246,0",
+        "weapon": "SCYTHE",
+        "target": "129",
+        "rule": "null",
+        "reason": "Plan SCYTHE #135 @204: Fresh MELEE assigned big",
+        "tick": 202,
+        "targets": [
+          {
+            "key": 129,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 18,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3293,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,2",
+          "null,16",
+          "3291,4248,0,3293,4246,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,87"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4246,0",
+        "weapon": "SCYTHE",
+        "target": "129",
+        "rule": "null",
+        "reason": "Plan SCYTHE #135 @204: Fresh MELEE assigned big",
+        "tick": 203,
+        "targets": [
+          {
+            "key": 129,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 19,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3293,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,1",
+          "8,16",
+          "3291,4248,0,3293,4246,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,87"
+      },
+      {
+        "wave": 24,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3293,4246,0",
+        "weapon": "SCYTHE",
+        "target": "129",
+        "rule": "null",
+        "reason": "Fresh MELEE assigned big",
+        "tick": 204,
+        "targets": [
+          {
+            "key": 129,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 20,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3293,
+            "y": 4247,
+            "claim": 0,
+            "flight": 236,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,0",
+          "8,16",
+          "3291,4248,0,3293,4246,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,87"
+      }
+    ]
+  },
+  {
+    "seed": "157530312394792",
+    "rule": "26 Dinh on 28",
+    "spawn": 240,
+    "frames": [
+      {
+        "wave": 28,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 246,
+        "targets": [
+          {
+            "key": 147,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 18,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3293,
+            "y": 4243,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,5",
+          "null,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "332",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "79,84"
+      },
+      {
+        "wave": 28,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 247,
+        "targets": [
+          {
+            "key": 147,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 19,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3294,
+            "y": 4243,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,4",
+          "8,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "332",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "79,84"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "147",
+        "rule": "26 Dinh on 28",
+        "reason": "26 Dinh on 28",
+        "tick": 248,
+        "targets": [
+          {
+            "key": 147,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 20,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3293,
+            "y": 4243,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,3",
+          "8,16",
+          "3296,4246,0,3294,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "332",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "79,84"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3294,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 249,
+        "targets": [
+          {
+            "key": 147,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 21,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3294,
+            "y": 4243,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,2",
+          "8,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "332",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "79,84"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 250,
+        "targets": [
+          {
+            "key": 147,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 22,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3293,
+            "y": 4243,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,1",
+          "8,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "332",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "79,84"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3293,4245,0",
+        "weapon": "SCYTHE",
+        "target": "141",
+        "rule": "null",
+        "reason": "Fresh MELEE assigned big",
+        "tick": 251,
+        "targets": [
+          {
+            "key": 147,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 23,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3293,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,0",
+          "8,8",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "332",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "79,84"
+      }
+    ]
+  },
+  {
+    "seed": "157530312394794",
+    "rule": "22 south Dinh",
+    "spawn": 216,
+    "frames": [
+      {
+        "wave": 22,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3295,4244,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 223,
+        "targets": [
+          {
+            "key": 123,
+            "wave": 22,
+            "lane": "south",
+            "slot": "W",
+            "age": 7,
+            "style": "MELEE",
+            "big": false,
+            "hp": 0,
+            "x": 3295,
+            "y": 4240,
+            "claim": 0,
+            "flight": 0,
+            "dying": true
+          },
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 7,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3302,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,1",
+          "8,null",
+          "3294,4246,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "99,99"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3295,4244,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 224,
+        "targets": [
+          {
+            "key": 123,
+            "wave": 22,
+            "lane": "south",
+            "slot": "W",
+            "age": 8,
+            "style": "MELEE",
+            "big": false,
+            "hp": 0,
+            "x": 3295,
+            "y": 4240,
+            "claim": 0,
+            "flight": 0,
+            "dying": true
+          },
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 8,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3301,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,0",
+          "8,null",
+          "3294,4246,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "85,99"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3295,4244,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 225,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 9,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3300,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "3,-1",
+          "null,null",
+          "3295,4244,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "85,99"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3295,4244,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 226,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 10,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3299,
+            "y": 4246,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,-2",
+          "null,null",
+          "3295,4244,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "85,99"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3295,4244,0",
+        "weapon": "SULPHUR",
+        "target": "98",
+        "rule": "null",
+        "reason": "Fresh MELEE small",
+        "tick": 227,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 11,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3298,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-3",
+          "null,8",
+          "3295,4244,0,3293,4244,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "85,99"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4244,0",
+        "weapon": "SCYTHE",
+        "target": "122",
+        "rule": "null",
+        "reason": "Plan SCYTHE #128 @231: Fresh MELEE assigned big",
+        "tick": 228,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 12,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3297,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,3",
+          "16,16",
+          "3295,4244,0,3292,4244,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "85,99"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3292,4244,0",
+        "weapon": "SCYTHE",
+        "target": "122",
+        "rule": "null",
+        "reason": "Plan SCYTHE #128 @231: Fresh MELEE assigned big",
+        "tick": 229,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 13,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3296,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "4,2",
+          "null,16",
+          "3293,4246,0,3292,4244,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "85,99"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3292,4244,0",
+        "weapon": "SCYTHE",
+        "target": "122",
+        "rule": "null",
+        "reason": "Plan SCYTHE #128 @231: Fresh MELEE assigned big",
+        "tick": 230,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 14,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3296,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "3,1",
+          "null,16",
+          "3291,4248,0,3292,4244,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "85,99"
+      },
+      {
+        "wave": 23,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3292,4244,0",
+        "weapon": "SCYTHE",
+        "target": "122",
+        "rule": "null",
+        "reason": "Fresh MELEE assigned big",
+        "tick": 231,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 15,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3295,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,0",
+          "null,16",
+          "3291,4248,0,3292,4245,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "85,89"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3292,4245,0",
+        "weapon": "SULPHUR",
+        "target": "131",
+        "rule": "null",
+        "reason": "Plan SULPHUR #137 @236: Fresh MELEE small",
+        "tick": 232,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 16,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3294,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,4",
+          "null,8",
+          "3291,4248,0,3292,4247,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "85,89"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3292,4247,0",
+        "weapon": "SCYTHE",
+        "target": "125",
+        "rule": "null",
+        "reason": "Plan SCYTHE #131 @236: Fresh MELEE assigned big",
+        "tick": 233,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 17,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3293,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,3",
+          "8,16",
+          "3291,4248,0,3292,4246,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "85,89"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3292,4246,0",
+        "weapon": "SCYTHE",
+        "target": "125",
+        "rule": "null",
+        "reason": "Plan SCYTHE #131 @236: Fresh MELEE assigned big",
+        "tick": 234,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 18,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,2",
+          "null,16",
+          "3291,4248,0,3291,4245,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "85,89"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3291,4245,0",
+        "weapon": "SCYTHE",
+        "target": "128",
+        "rule": "null",
+        "reason": "Plan SCYTHE #134 @236: Fresh MELEE assigned big",
+        "tick": 235,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 19,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3291,
+            "y": 4246,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,1",
+          "8,4",
+          "3291,4248,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "85,89"
+      },
+      {
+        "wave": 24,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3293,4245,0",
+        "weapon": "EYE",
+        "target": "133",
+        "rule": "South big 24",
+        "reason": "South big 24",
+        "tick": 236,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 20,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3291,
+            "y": 4246,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,0",
+          "null,16",
+          "3291,4248,0,3295,4243,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "85,89"
+      }
+    ]
+  },
+  {
+    "seed": "157530312394794",
+    "rule": "26 Dinh on 28",
+    "spawn": 280,
+    "frames": [
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 286,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 34,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,0",
+          "null,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "316"
+        ],
+        "hp": "86,90"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 287,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 35,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-1",
+          "8,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "316"
+        ],
+        "hp": "86,90"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 288,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 36,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-2",
+          "8,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "316"
+        ],
+        "hp": "86,90"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 289,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 37,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-3",
+          "8,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "316"
+        ],
+        "hp": "86,90"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 290,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 38,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-4",
+          "1,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "316"
+        ],
+        "hp": "86,90"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "SULPHUR",
+        "target": "174",
+        "rule": "null",
+        "reason": "Fresh MELEE small",
+        "tick": 291,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 39,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-5",
+          "1,8",
+          "3296,4246,0,3291,4246,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "316"
+        ],
+        "hp": "86,90"
+      }
+    ]
+  },
+  {
+    "seed": "157530312394810",
+    "rule": "26 Dinh on 28",
+    "spawn": 240,
+    "frames": [
+      {
+        "wave": 29,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 246,
+        "targets": [
+          {
+            "key": 153,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 26,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4243,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,1",
+          "null,null",
+          "3296,4245,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "320",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "99,75"
+      },
+      {
+        "wave": 29,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 247,
+        "targets": [
+          {
+            "key": 153,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 27,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4243,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,0",
+          "8,null",
+          "3296,4245,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "320",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "99,75"
+      },
+      {
+        "wave": 29,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 248,
+        "targets": [
+          {
+            "key": 153,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 28,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4243,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-1",
+          "null,null",
+          "3294,4245,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "320",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "99,75"
+      },
+      {
+        "wave": 29,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 249,
+        "targets": [
+          {
+            "key": 153,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 29,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4243,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-2",
+          "8,null",
+          "3292,4247,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "320",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "99,75"
+      },
+      {
+        "wave": 29,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 250,
+        "targets": [
+          {
+            "key": 153,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 30,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4243,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-3",
+          "8,null",
+          "3292,4249,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "320",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "99,75"
+      },
+      {
+        "wave": 29,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3293,4245,0",
+        "weapon": "EYE",
+        "target": "177",
+        "rule": "null",
+        "reason": "Fresh MAGIC small",
+        "tick": 251,
+        "targets": [
+          {
+            "key": 153,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 31,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4243,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-4",
+          "8,8",
+          "3292,4249,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "320",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "99,75"
+      }
+    ]
+  },
+  {
+    "seed": "157530312394818",
+    "rule": "26 Dinh on 28",
+    "spawn": 252,
+    "frames": [
+      {
+        "wave": 28,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3299,4248,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 258,
+        "targets": [
+          {
+            "key": 147,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 34,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,2",
+          "null,null",
+          "3296,4246,0,3297,4248,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "336",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "77,77"
+      },
+      {
+        "wave": 28,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3297,4248,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 259,
+        "targets": [
+          {
+            "key": 147,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 35,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,1",
+          "8,null",
+          "3296,4246,0,3295,4247,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "336",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "77,77"
+      },
+      {
+        "wave": 29,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3295,4247,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 260,
+        "targets": [
+          {
+            "key": 147,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 36,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,0",
+          "null,null",
+          "3294,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "336",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "77,77"
+      },
+      {
+        "wave": 29,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 261,
+        "targets": [
+          {
+            "key": 147,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 37,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-1",
+          "8,null",
+          "3294,4248,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "336",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "77,77"
+      },
+      {
+        "wave": 29,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 262,
+        "targets": [
+          {
+            "key": 147,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 38,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-2",
+          "null,null",
+          "3292,4248,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "336",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "77,77"
+      },
+      {
+        "wave": 29,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3293,4245,0",
+        "weapon": "SULPHUR",
+        "target": "167",
+        "rule": "null",
+        "reason": "Fresh MELEE small",
+        "tick": 263,
+        "targets": [
+          {
+            "key": 147,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 39,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-3",
+          "8,8",
+          "3290,4248,0,3294,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "336",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "77,82"
+      }
+    ]
+  },
+  {
+    "seed": "157530312394823",
+    "rule": "26 Dinh on 28",
+    "spawn": 252,
+    "frames": [
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 258,
+        "targets": [
+          {
+            "key": 151,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 26,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,0",
+          "null,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "339",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "97,96"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 259,
+        "targets": [
+          {
+            "key": 151,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 27,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-1",
+          "8,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "339",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "97,96"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 260,
+        "targets": [
+          {
+            "key": 151,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 28,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-2",
+          "8,null",
+          "3295,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "339",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "97,96"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 261,
+        "targets": [
+          {
+            "key": 151,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 29,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-3",
+          "8,null",
+          "3295,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "339",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "97,96"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 262,
+        "targets": [
+          {
+            "key": 151,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 30,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-4",
+          "4,null",
+          "3295,4248,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "339",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "97,96"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3293,4245,0",
+        "weapon": "SULPHUR",
+        "target": "157",
+        "rule": "null",
+        "reason": "Fresh MELEE small",
+        "tick": 263,
+        "targets": [
+          {
+            "key": 151,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 31,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-5",
+          "4,8",
+          "3295,4248,0,3292,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "339",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "97,89"
+      }
+    ]
+  },
+  {
+    "seed": "157530312394831",
+    "rule": "26 Dinh on 28",
+    "spawn": 240,
+    "frames": [
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3300,4251,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 246,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 22,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,0",
+          "null,null",
+          "3296,4246,0,3298,4250,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "328",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "99,79"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3298,4250,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 247,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 23,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-1",
+          "8,null",
+          "3296,4246,0,3296,4248,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "328",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "99,79"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3296,4248,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 248,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 24,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-2",
+          "8,null",
+          "3296,4246,0,3294,4246,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "328",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "99,79"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3294,4246,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 249,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 25,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-3",
+          "8,null",
+          "3294,4247,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "328",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "99,79"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 250,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 26,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-4",
+          "8,null",
+          "3294,4247,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "328",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "99,79"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3293,4245,0",
+        "weapon": "SULPHUR",
+        "target": "171",
+        "rule": "null",
+        "reason": "Fresh MELEE small",
+        "tick": 251,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 27,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-5",
+          "8,8",
+          "3294,4247,0,3292,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "328",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "99,79"
+      }
+    ]
+  },
+  {
+    "seed": "157530312394838",
+    "rule": "22 south Dinh",
+    "spawn": 204,
+    "frames": [
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3292,4249,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 211,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "south",
+            "slot": "W",
+            "age": 7,
+            "style": "RANGE",
+            "big": false,
+            "hp": 0,
+            "x": 3295,
+            "y": 4239,
+            "claim": 0,
+            "flight": 0,
+            "dying": true
+          },
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 7,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3302,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,0",
+          "8,null",
+          "3296,4246,0,3292,4247,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "67,83"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3292,4247,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 212,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 8,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3301,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,-1",
+          "null,null",
+          "3295,4244,0,3294,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "67,83"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3294,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 213,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 9,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3300,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-2",
+          "null,null",
+          "3295,4244,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "67,83"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3295,4244,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 214,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 10,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3299,
+            "y": 4246,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-3",
+          "null,null",
+          "3295,4244,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "67,83"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3295,4244,0",
+        "weapon": "SULPHUR",
+        "target": "126",
+        "rule": "null",
+        "reason": "Fresh MELEE small",
+        "tick": 215,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 11,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3298,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "-1,-4",
+          "null,8",
+          "3295,4244,0,3297,4243,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "67,83"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3297,4243,0",
+        "weapon": "SCYTHE",
+        "target": "124",
+        "rule": "null",
+        "reason": "Plan SCYTHE #130 @219: Fresh MELEE assigned big",
+        "tick": 216,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 12,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3297,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "-2,3",
+          "16,16",
+          "3295,4244,0,3295,4243,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "67,83"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3295,4243,0",
+        "weapon": "SCYTHE",
+        "target": "124",
+        "rule": "null",
+        "reason": "Plan SCYTHE #130 @219: Fresh MELEE assigned big",
+        "tick": 217,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 13,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3297,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "4,2",
+          "null,16",
+          "3293,4246,0,3293,4243,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "67,83"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4243,0",
+        "weapon": "SCYTHE",
+        "target": "124",
+        "rule": "null",
+        "reason": "Plan SCYTHE #130 @219: Fresh MELEE assigned big",
+        "tick": 218,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 14,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3297,
+            "y": 4243,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "3,1",
+          "null,16",
+          "3291,4248,0,3292,4244,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "266"
+        ],
+        "hp": "67,83"
+      },
+      {
+        "wave": 23,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3292,4244,0",
+        "weapon": "SCYTHE",
+        "target": "124",
+        "rule": "null",
+        "reason": "Fresh MELEE assigned big",
+        "tick": 219,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 15,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3296,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,0",
+          "null,16",
+          "3291,4248,0,3292,4245,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "266"
+        ],
+        "hp": "67,96"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3292,4245,0",
+        "weapon": "SCYTHE",
+        "target": "127",
+        "rule": "null",
+        "reason": "Plan SCYTHE #133 @224: Fresh MELEE assigned big",
+        "tick": 220,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 16,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3296,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,4",
+          "null,16",
+          "3291,4248,0,3294,4245,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "266"
+        ],
+        "hp": "67,96"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3294,4245,0",
+        "weapon": "SCYTHE",
+        "target": "127",
+        "rule": "null",
+        "reason": "Plan SCYTHE #133 @224: Fresh MELEE assigned big",
+        "tick": 221,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 17,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3296,
+            "y": 4246,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,3",
+          "8,16",
+          "3291,4248,0,3295,4245,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "67,96"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3295,4245,0",
+        "weapon": "SCYTHE",
+        "target": "127",
+        "rule": "null",
+        "reason": "Plan SCYTHE #133 @224: Fresh MELEE assigned big",
+        "tick": 222,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 18,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3295,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,2",
+          "null,16",
+          "3291,4248,0,3295,4246,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "67,96"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3295,4246,0",
+        "weapon": "SCYTHE",
+        "target": "130",
+        "rule": "null",
+        "reason": "Plan SCYTHE #136 @224: Fresh MELEE assigned big",
+        "tick": 223,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 19,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3295,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,1",
+          "8,8",
+          "3291,4248,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "67,96"
+      },
+      {
+        "wave": 24,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3295,4244,0",
+        "weapon": "EYE",
+        "target": "133",
+        "rule": "South big 24",
+        "reason": "South big 24",
+        "tick": 224,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 20,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3295,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,0",
+          "8,16",
+          "3291,4248,0,3295,4243,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "266"
+        ],
+        "hp": "67,96"
+      }
+    ]
+  },
+  {
+    "seed": "157530312394843",
+    "rule": "26 Dinh on 28",
+    "spawn": 240,
+    "frames": [
+      {
+        "wave": 28,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 246,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 26,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,2",
+          "null,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "345",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "86,99"
+      },
+      {
+        "wave": 28,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 247,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 27,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,1",
+          "8,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "345",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "86,99"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 248,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 28,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,0",
+          "8,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "345",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "86,99"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 249,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 29,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-1",
+          "8,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "345",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "86,99"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 250,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 30,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-2",
+          "3,null",
+          "3296,4247,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "345",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "86,99"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3293,4245,0",
+        "weapon": "SULPHUR",
+        "target": "159",
+        "rule": "null",
+        "reason": "Fresh MELEE small",
+        "tick": 251,
+        "targets": [
+          {
+            "key": 149,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 31,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3292,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-3",
+          "3,2",
+          "3296,4247,0,3292,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "345",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "86,99"
+      }
+    ]
+  },
+  {
+    "seed": "157530312394844",
+    "rule": "22 south Dinh",
+    "spawn": 196,
+    "frames": [
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3297,4246,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 203,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "south",
+            "slot": "W",
+            "age": 7,
+            "style": "MELEE",
+            "big": false,
+            "hp": 0,
+            "x": 3295,
+            "y": 4240,
+            "claim": 0,
+            "flight": 0,
+            "dying": true
+          },
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 7,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3302,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,0",
+          "8,null",
+          "3295,4246,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,73"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3295,4244,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 204,
+        "targets": [
+          {
+            "key": 125,
+            "wave": 22,
+            "lane": "south",
+            "slot": "W",
+            "age": 8,
+            "style": "MELEE",
+            "big": false,
+            "hp": 0,
+            "x": 3295,
+            "y": 4240,
+            "claim": 0,
+            "flight": 0,
+            "dying": true
+          },
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 8,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3301,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-1",
+          "8,null",
+          "3295,4246,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,73"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3295,4244,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 205,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 9,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3300,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-2",
+          "8,null",
+          "3295,4246,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,73"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3295,4244,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 22 south Dinh",
+        "tick": 206,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 10,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3299,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,-3",
+          "null,null",
+          "3295,4244,0,3295,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,73"
+      },
+      {
+        "wave": 22,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3295,4244,0",
+        "weapon": "SULPHUR",
+        "target": "126",
+        "rule": "null",
+        "reason": "Fresh MELEE small",
+        "tick": 207,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 11,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3298,
+            "y": 4246,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-4",
+          "null,8",
+          "3295,4244,0,3297,4243,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,73"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3297,4243,0",
+        "weapon": "SCYTHE",
+        "target": "124",
+        "rule": "null",
+        "reason": "Plan SCYTHE #130 @211: Fresh MELEE assigned big",
+        "tick": 208,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 12,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3297,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,3",
+          "16,16",
+          "3295,4244,0,3295,4243,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,73"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3295,4243,0",
+        "weapon": "SCYTHE",
+        "target": "124",
+        "rule": "null",
+        "reason": "Plan SCYTHE #130 @211: Fresh MELEE assigned big",
+        "tick": 209,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 13,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3297,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "4,2",
+          "null,16",
+          "3293,4246,0,3293,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,73"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4244,0",
+        "weapon": "SCYTHE",
+        "target": "124",
+        "rule": "null",
+        "reason": "Plan SCYTHE #130 @211: Fresh MELEE assigned big",
+        "tick": 210,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 14,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3296,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "3,1",
+          "null,16",
+          "3291,4248,0,3293,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,73"
+      },
+      {
+        "wave": 23,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3293,4244,0",
+        "weapon": "SCYTHE",
+        "target": "124",
+        "rule": "null",
+        "reason": "Fresh MELEE assigned big",
+        "tick": 211,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 15,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3295,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,0",
+          "null,16",
+          "3291,4248,0,3292,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,76"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3292,4244,0",
+        "weapon": "SCYTHE",
+        "target": "127",
+        "rule": "null",
+        "reason": "Plan SCYTHE #133 @216: Fresh MELEE assigned big",
+        "tick": 212,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 16,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3294,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,4",
+          "null,16",
+          "3291,4248,0,3293,4244,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,76"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4244,0",
+        "weapon": "SCYTHE",
+        "target": "127",
+        "rule": "null",
+        "reason": "Plan SCYTHE #133 @216: Fresh MELEE assigned big",
+        "tick": 213,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 17,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3293,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,3",
+          "8,16",
+          "3291,4248,0,3292,4243,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,76"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3292,4243,0",
+        "weapon": "SCYTHE",
+        "target": "127",
+        "rule": "null",
+        "reason": "Plan SCYTHE #133 @216: Fresh MELEE assigned big",
+        "tick": 214,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 18,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3294,
+            "y": 4244,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,2",
+          "null,16",
+          "3291,4248,0,3293,4243,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "99,76"
+      },
+      {
+        "wave": 23,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3293,4243,0",
+        "weapon": "SCYTHE",
+        "target": "127",
+        "rule": "null",
+        "reason": "Plan SCYTHE #133 @216: Fresh MELEE assigned big",
+        "tick": 215,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 19,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3293,
+            "y": 4243,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,1",
+          "8,16",
+          "3291,4248,0,3292,4243,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "94,76"
+      },
+      {
+        "wave": 24,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3292,4243,0",
+        "weapon": "EYE",
+        "target": "133",
+        "rule": "South big 24",
+        "reason": "South big 24",
+        "tick": 216,
+        "targets": [
+          {
+            "key": 127,
+            "wave": 22,
+            "lane": "east",
+            "slot": "E",
+            "age": 20,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3294,
+            "y": 4243,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,0",
+          "8,16",
+          "3291,4248,0,3292,4243,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "241"
+        ],
+        "hp": "94,76"
+      }
+    ]
+  },
+  {
+    "seed": "157530312394846",
+    "rule": "26 Dinh on 28",
+    "spawn": 240,
+    "frames": [
+      {
+        "wave": 28,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3296,4248,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 246,
+        "targets": [
+          {
+            "key": 153,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 26,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3291,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,1",
+          "null,null",
+          "3296,4246,0,3294,4246,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "327",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "82,99"
+      },
+      {
+        "wave": 28,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3294,4246,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 247,
+        "targets": [
+          {
+            "key": 153,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 27,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3291,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,0",
+          "8,null",
+          "3296,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "327",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "82,99"
+      },
+      {
+        "wave": 29,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 248,
+        "targets": [
+          {
+            "key": 153,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 28,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3291,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-1",
+          "8,null",
+          "3295,4246,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "327",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "82,99"
+      },
+      {
+        "wave": 29,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 249,
+        "targets": [
+          {
+            "key": 153,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 29,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3291,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-2",
+          "8,null",
+          "3293,4247,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "327",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "82,99"
+      },
+      {
+        "wave": 29,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4245,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 26 Dinh on 28",
+        "tick": 250,
+        "targets": [
+          {
+            "key": 153,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 30,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3291,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,-3",
+          "null,null",
+          "3291,4248,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "327",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "82,99"
+      },
+      {
+        "wave": 29,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3293,4245,0",
+        "weapon": "EYE",
+        "target": "179",
+        "rule": "null",
+        "reason": "Fresh MAGIC small",
+        "tick": 251,
+        "targets": [
+          {
+            "key": 153,
+            "wave": 26,
+            "lane": "south",
+            "slot": "W",
+            "age": 31,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3291,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,-4",
+          "8,8",
+          "3290,4248,0,3293,4245,0"
+        ],
+        "utility": [
+          "2",
+          "900",
+          "327",
+          "0",
+          "1",
+          "0",
+          "0",
+          "291"
+        ],
+        "hp": "82,99"
+      }
+    ]
+  }
+]

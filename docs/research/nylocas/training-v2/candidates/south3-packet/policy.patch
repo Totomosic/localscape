@@ -1,0 +1,38 @@
+--- a/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ b/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -160,6 +160,8 @@
+ 					if (moveFrom + Math.max(0, travel - 1) > at
+ 						|| previous == null && at == now && room.obstructed.contains(crab.key)) continue;
+ 					Rule rule = rule(crab, weapon, age);
++					if (reservation != null && "South chin 3".equals(reservation.rule.name)
++						&& reservation.rule.matches(crab) && weapon != Weapon.CHIN) continue;
+ 					// Keep deliberate bow packets and range advantages; otherwise spend two ticks, not five.
+ 					if (weapon == Weapon.BOW && rule == null
+ 						&& pipeCanFireAt(from, target, crab.big, moveFrom, at, reservation)) continue;
+--- a/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -494,6 +494,24 @@
+ 		List<Reservation> reservations = new ArrayList<>();
+ 		for (Rule rule : RULES)
+ 		{
++			if ("South chin 3".equals(rule.name))
++			{
++				if (room.wave != 3 || completed.contains(rule.name)) continue;
++				Crab crab = room.crabs.stream().filter(c -> rule.matches(c) && !c.dying && !c.nulled
++					&& c.claimedUntil <= tick && !c.awaitingHit(tick)).findFirst().orElse(null);
++				if (crab == null || crab.style != Style.RANGE) continue;
++				for (int at = Math.max(Math.max(tick, room.ready), crab.born + rule.first); at <= crab.born + rule.last; at++)
++				{
++					Tile target = AttackTiming.position(crab.point, crab.lane.ordinal(), tick - crab.born, at + 1 - tick);
++					Tile position = AttackTiming.attackTile(room.player, target, false, Weapon.CHIN.range);
++					int travel = Math.max(0, (room.player.distanceTo(position) + 1) / 2 - 1);
++					if (room.obstructed.contains(crab.key)) travel = Math.max(1, travel);
++					if (tick + travel > at || AttackTiming.distance(position, target, false) > Weapon.CHIN.range) continue;
++					reservations.add(new Reservation(rule, at));
++					break;
++				}
++				continue;
++			}
+ 			if (room.wave == 31 && rule.wave <= 29) continue;
+ 			if (rule.priority != 0 || completed.contains(rule.name)
+ 				|| room.wave < 20 && rule.wave != 10 && rule.wave != 20) continue;

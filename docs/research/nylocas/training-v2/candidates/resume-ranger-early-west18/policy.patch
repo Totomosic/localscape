@@ -1,0 +1,39 @@
+--- a/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ b/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -63,7 +63,7 @@
+ 				{
+ 					Shot previous = plan.shots.isEmpty() ? null : plan.shots.get(plan.shots.size() - 1);
+ 					prioritize(extensions, room, previous == null ? tick : previous.tick + 1,
+-						previous == null ? room.ready : previous.tick + previous.decision.weapon.cooldown);
++						previous == null ? room.ready : previous.tick + previous.decision.weapon.cooldown, previous == null);
+ 					if (previous == null && extensions.stream().anyMatch(p -> strategy.committed(last(p), tick)))
+ 						extensions.removeIf(p -> !strategy.committed(last(p), tick));
+ 				}
+@@ -101,10 +101,13 @@
+ 		choices.removeIf(p -> p.shots.get(p.shots.size() - 1).tick != earliest);
+ 	}
+ 
+-	private void prioritize(List<Plan> choices, Room room, int tick, int ready)
++	private void prioritize(List<Plan> choices, Room room, int tick, int ready, boolean firstShot)
+ 	{
+ 		// Keep attacking while ready; use cooldown to reach a big that needs service.
+ 		if (tick >= ready) keepEarliest(choices);
++		// First West18 service competes at the earliest feasible launch, before ordinary clearing.
++		if (firstShot && choices.stream().anyMatch(p -> firstWest18(last(p))))
++			choices.removeIf(p -> !firstWest18(last(p)));
+ 		// Spend the first feasible opening bow tick before ordinary clearing.
+ 		if (choices.stream().anyMatch(p -> openingBow(last(p))))
+ 			choices.removeIf(p -> !openingBow(last(p)));
+@@ -118,6 +121,12 @@
+ 		int lane = choices.stream().mapToInt(p -> RangerStrategy.transitionLane(last(p).target)).min().getAsInt();
+ 		if (lane != Integer.MAX_VALUE) choices.removeIf(p -> RangerStrategy.transitionLane(last(p).target) != Integer.MAX_VALUE
+ 			&& RangerStrategy.transitionLane(last(p).target) > lane);
++	}
++
++	private boolean firstWest18(Decision decision)
++	{
++		Crab crab = decision.target;
++		return crab.big && crab.wave == 18 && crab.lane == Lane.WEST && !strategy.opened(crab);
+ 	}
+ 
+ 	private static boolean openingBow(Decision decision)

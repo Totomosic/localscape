@@ -1,0 +1,23 @@
+--- .state/simulations/training-v3-candidate-mage-barrage21-recovery/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:35:23.177649248 +0800
++++ .state/simulations/training-v3-candidate-mage-south29-stage/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:47:40.752152383 +0800
+@@ -238,6 +238,12 @@
+ 		}
+ 		if (s22 >= 0 && room.wave < 29) result.add(new Window("22 south Dinh", s22 + 9, s22 + 19, Weapon.DINH, 3295, 4244));
+ 		if (s28 >= 0 && room.wave < 31) result.add(new Window("26 Dinh on 28", s28 + 8, s28 + 10, Weapon.DINH, 3293, 4245));
++		// Reserve the south return during the late Dinh cooldown. Prediction
++		// stages movement only; it never permits opening 29 before actual 30.
++		int s30 = spawn(room, 30, tick);
++		if (room.wave == 29 && s30 >= 0 && room.crabs.stream().anyMatch(c ->
++			c.wave == 29 && c.lane == Lane.SOUTH && c.big && !c.dying && !c.nulled && tick - c.born < 49))
++			result.add(new Window("29 south stage", s30 + 3, s30 + 3, Weapon.SCYTHE, 3295, 4243));
+ 		if (room.wave == 30 && room.spawns[30] >= 0 && room.crabs.stream().anyMatch(c ->
+ 			c.wave == 29 && c.lane == Lane.SOUTH && c.big && !c.dying && !c.nulled && tick - c.born < 49))
+ 			result.add(new Window("South big 29", room.spawns[30] + 3, room.spawns[30] + 3, Weapon.SCYTHE, 3295, 4243));
+@@ -256,6 +262,7 @@
+ 			boolean identity;
+ 			switch (window.name)
+ 			{
++				case "29 south stage":
+ 				case "South big 29": identity = c.wave == 29 && c.lane == Lane.SOUTH && c.big; break;
+ 				case "East barrage 11": identity = c.wave == 11 && c.lane == Lane.EAST && !c.big; break;
+ 				case "12 east scythe": identity = c.wave == 12 && c.lane == Lane.EAST && !c.big; break;

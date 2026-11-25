@@ -1,0 +1,5508 @@
+{
+  "casts": 48,
+  "rooms": 45,
+  "counts": {
+    "inradius_melee_big_w26_south": 41,
+    "large_drop_without_other_primary_w26_south": 36,
+    "27East_current_magic": 39,
+    "inradius_melee_big_w25_east": 3,
+    "large_drop_without_other_primary_w25_east": 2,
+    "inradius_melee_big_w25_west": 3,
+    "inradius_melee_big_w27_east": 1,
+    "27East_current_melee": 2,
+    "inradius_melee_big_w24_east": 1,
+    "large_drop_without_other_primary_w24_east": 1
+  },
+  "cases": [
+    {
+      "uuid": "0c25e13d-045e-4362-a7e3-e4cf83f229a8",
+      "tick": 237,
+      "cast": {
+        "uuid": "0c25e13d-045e-4362-a7e3-e4cf83f229a8",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "237",
+        "wave": "28",
+        "offset": "9",
+        "x": "3293",
+        "y": "4245",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "47701",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3293",
+        "target_y": "4243",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "245"
+      },
+      "victims": [
+        {
+          "key": "46920",
+          "wave": 23,
+          "lane": "east",
+          "age": 45,
+          "style": "range",
+          "hp_before": 2,
+          "hp_after2": 2,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "47413",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "47701",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3293,
+            4243
+          ]
+        },
+        {
+          "key": "47703",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "18b55b89-579b-4e7a-bb84-0d340fcceb2d",
+      "tick": 237,
+      "cast": {
+        "uuid": "18b55b89-579b-4e7a-bb84-0d340fcceb2d",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "237",
+        "wave": "29",
+        "offset": "1",
+        "x": "3293",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "43543",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "272"
+      },
+      "victims": [
+        {
+          "key": "43225",
+          "wave": 23,
+          "lane": "east",
+          "age": 49,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "43414",
+          "wave": 25,
+          "lane": "east",
+          "age": 33,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "43543",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 11,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "43545",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "43615",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4247
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "747b0a15-bdf7-4f83-aa41-6d2d4b214734",
+      "tick": 234,
+      "cast": {
+        "uuid": "747b0a15-bdf7-4f83-aa41-6d2d4b214734",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "234",
+        "wave": "28",
+        "offset": "10",
+        "x": "3293",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "43359",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "212",
+        "age": "22",
+        "since_arena_anchor_entry": "12",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "242"
+      },
+      "victims": [
+        {
+          "key": "43228",
+          "wave": 25,
+          "lane": "east",
+          "age": 30,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "43359",
+          "wave": 26,
+          "lane": "south",
+          "age": 22,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "43361",
+          "wave": 26,
+          "lane": "east",
+          "age": 22,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "43428",
+          "wave": 27,
+          "lane": "east",
+          "age": 18,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "934cff40-3524-4711-b02e-86e029798465",
+      "tick": 239,
+      "cast": {
+        "uuid": "934cff40-3524-4711-b02e-86e029798465",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "239",
+        "wave": "28",
+        "offset": "7",
+        "x": "3293",
+        "y": "4245",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "43206",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "23",
+        "since_arena_anchor_entry": "13",
+        "parent": "0",
+        "target_x": "3293",
+        "target_y": "4243",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "246"
+      },
+      "victims": [
+        {
+          "key": "42904",
+          "wave": 23,
+          "lane": "east",
+          "age": 47,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "43092",
+          "wave": 25,
+          "lane": "east",
+          "age": 31,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "43206",
+          "wave": 26,
+          "lane": "south",
+          "age": 23,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3293,
+            4243
+          ]
+        },
+        {
+          "key": "43208",
+          "wave": 26,
+          "lane": "east",
+          "age": 23,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "43259",
+          "wave": 27,
+          "lane": "east",
+          "age": 19,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "3dce9472-ae63-4abb-a5f5-6218fdb47191",
+      "tick": 237,
+      "cast": {
+        "uuid": "3dce9472-ae63-4abb-a5f5-6218fdb47191",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "237",
+        "wave": "28",
+        "offset": "9",
+        "x": "3293",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "51898",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "245"
+      },
+      "victims": [
+        {
+          "key": "51590",
+          "wave": 23,
+          "lane": "east",
+          "age": 45,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "51826",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "51898",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "51900",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "378cf375-2692-4a32-b48c-8bd12333df81",
+      "tick": 240,
+      "cast": {
+        "uuid": "378cf375-2692-4a32-b48c-8bd12333df81",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "240",
+        "wave": "28",
+        "offset": "8",
+        "x": "3293",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "33474",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "24",
+        "since_arena_anchor_entry": "14",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "247"
+      },
+      "victims": [
+        {
+          "key": "33236",
+          "wave": 23,
+          "lane": "east",
+          "age": 48,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "33415",
+          "wave": 25,
+          "lane": "east",
+          "age": 32,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "33474",
+          "wave": 26,
+          "lane": "south",
+          "age": 24,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "33476",
+          "wave": 26,
+          "lane": "east",
+          "age": 24,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "33502",
+          "wave": 27,
+          "lane": "east",
+          "age": 20,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3301,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "c3f1e4ec-347d-411f-96bf-e5e2ed397d7d",
+      "tick": 237,
+      "cast": {
+        "uuid": "c3f1e4ec-347d-411f-96bf-e5e2ed397d7d",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "237",
+        "wave": "28",
+        "offset": "9",
+        "x": "3292",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "52077",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "244"
+      },
+      "victims": [
+        {
+          "key": "51648",
+          "wave": 23,
+          "lane": "east",
+          "age": 45,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "51953",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "52077",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "52079",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "52154",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "7dd836cc-c62c-4272-8cd7-b6e2014d7092",
+      "tick": 236,
+      "cast": {
+        "uuid": "7dd836cc-c62c-4272-8cd7-b6e2014d7092",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "236",
+        "wave": "28",
+        "offset": "8",
+        "x": "3293",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "41823",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "20",
+        "since_arena_anchor_entry": "10",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "244"
+      },
+      "victims": [
+        {
+          "key": "41461",
+          "wave": 23,
+          "lane": "east",
+          "age": 48,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "41659",
+          "wave": 25,
+          "lane": "east",
+          "age": 32,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "41823",
+          "wave": 26,
+          "lane": "south",
+          "age": 20,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "41825",
+          "wave": 26,
+          "lane": "east",
+          "age": 20,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "fc3ae6ed-cc38-4901-898e-8facd01cb9fc",
+      "tick": 244,
+      "cast": {
+        "uuid": "fc3ae6ed-cc38-4901-898e-8facd01cb9fc",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "244",
+        "wave": "28",
+        "offset": "12",
+        "x": "3294",
+        "y": "4245",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "48731",
+        "target": "w28 split small melee",
+        "target_wave": "28",
+        "lane": "split",
+        "slot": "",
+        "big": "False",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8342",
+        "spawn_tick": "239",
+        "age": "5",
+        "since_arena_anchor_entry": "5",
+        "parent": "48334",
+        "target_x": "3295",
+        "target_y": "4245",
+        "hp": "8",
+        "distance": "1",
+        "death_tick": "247"
+      },
+      "victims": [
+        {
+          "key": "48007",
+          "wave": 25,
+          "lane": "east",
+          "age": 36,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 5,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "48156",
+          "wave": 26,
+          "lane": "south",
+          "age": 28,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "48158",
+          "wave": 26,
+          "lane": "east",
+          "age": 28,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "7b81bb5a-2c03-49c7-a556-cd202d0cf6da",
+      "tick": 237,
+      "cast": {
+        "uuid": "7b81bb5a-2c03-49c7-a556-cd202d0cf6da",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "237",
+        "wave": "28",
+        "offset": "9",
+        "x": "3292",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "43235",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "244"
+      },
+      "victims": [
+        {
+          "key": "42886",
+          "wave": 23,
+          "lane": "east",
+          "age": 45,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "43153",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "43235",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "43237",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "43321",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "0783d870-5e9e-4227-98bf-3a2d495cd66e",
+      "tick": 237,
+      "cast": {
+        "uuid": "0783d870-5e9e-4227-98bf-3a2d495cd66e",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "237",
+        "wave": "28",
+        "offset": "9",
+        "x": "3292",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "47871",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "212",
+        "age": "25",
+        "since_arena_anchor_entry": "15",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "244"
+      },
+      "victims": [
+        {
+          "key": "47208",
+          "wave": 23,
+          "lane": "east",
+          "age": 49,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "47682",
+          "wave": 25,
+          "lane": "east",
+          "age": 33,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "47871",
+          "wave": 26,
+          "lane": "south",
+          "age": 25,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "47873",
+          "wave": 26,
+          "lane": "east",
+          "age": 25,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "47948",
+          "wave": 27,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14",
+      "tick": 241,
+      "cast": {
+        "uuid": "bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "241",
+        "wave": "28",
+        "offset": "9",
+        "x": "3293",
+        "y": "4245",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "50166",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "220",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4243",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "248"
+      },
+      "victims": [
+        {
+          "key": "50048",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "50166",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4243
+          ]
+        },
+        {
+          "key": "50168",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "50252",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "82b37d8a-030f-40b1-85f1-14ef639f2787",
+      "tick": 236,
+      "cast": {
+        "uuid": "82b37d8a-030f-40b1-85f1-14ef639f2787",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "236",
+        "wave": "28",
+        "offset": "8",
+        "x": "3293",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "36436",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "20",
+        "since_arena_anchor_entry": "10",
+        "parent": "0",
+        "target_x": "3293",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "244"
+      },
+      "victims": [
+        {
+          "key": "35941",
+          "wave": 23,
+          "lane": "east",
+          "age": 44,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "36248",
+          "wave": 25,
+          "lane": "east",
+          "age": 28,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "36436",
+          "wave": 26,
+          "lane": "south",
+          "age": 20,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3293,
+            4244
+          ]
+        },
+        {
+          "key": "36438",
+          "wave": 26,
+          "lane": "east",
+          "age": 20,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "36489",
+          "wave": 27,
+          "lane": "east",
+          "age": 16,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "efa27528-eecf-48ba-8253-4815ef976eb7",
+      "tick": 241,
+      "cast": {
+        "uuid": "efa27528-eecf-48ba-8253-4815ef976eb7",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "241",
+        "wave": "28",
+        "offset": "9",
+        "x": "3293",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "53780",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "220",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "248"
+      },
+      "victims": [
+        {
+          "key": "53373",
+          "wave": 23,
+          "lane": "east",
+          "age": 53,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "53663",
+          "wave": 25,
+          "lane": "west",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 1,
+          "hp_after2": 0,
+          "anchor_distance": 1,
+          "other_primaries": [],
+          "position": [
+            3294,
+            4245
+          ]
+        },
+        {
+          "key": "53664",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "53780",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "53782",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "53849",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "c112f942-5558-4ed3-af57-2118458aea8a",
+      "tick": 236,
+      "cast": {
+        "uuid": "c112f942-5558-4ed3-af57-2118458aea8a",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "236",
+        "wave": "28",
+        "offset": "8",
+        "x": "3293",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "46088",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "20",
+        "since_arena_anchor_entry": "10",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "243"
+      },
+      "victims": [
+        {
+          "key": "45556",
+          "wave": 23,
+          "lane": "east",
+          "age": 44,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "45892",
+          "wave": 25,
+          "lane": "east",
+          "age": 28,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "46088",
+          "wave": 26,
+          "lane": "south",
+          "age": 20,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "46090",
+          "wave": 26,
+          "lane": "east",
+          "age": 20,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "46205",
+          "wave": 27,
+          "lane": "east",
+          "age": 16,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3301,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "4195844f-b13e-451f-916a-9b8ffd17b009",
+      "tick": 247,
+      "cast": {
+        "uuid": "4195844f-b13e-451f-916a-9b8ffd17b009",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "247",
+        "wave": "29",
+        "offset": "7",
+        "x": "3292",
+        "y": "4245",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "40202",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "224",
+        "age": "23",
+        "since_arena_anchor_entry": "13",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4243",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "254"
+      },
+      "victims": [
+        {
+          "key": "40202",
+          "wave": 26,
+          "lane": "south",
+          "age": 23,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4243
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "e6e5e3fc-1218-4910-b488-383df243a8bf",
+      "tick": 237,
+      "cast": {
+        "uuid": "e6e5e3fc-1218-4910-b488-383df243a8bf",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "237",
+        "wave": "28",
+        "offset": "9",
+        "x": "3292",
+        "y": "4245",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "49056",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4243",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "244"
+      },
+      "victims": [
+        {
+          "key": "48574",
+          "wave": 23,
+          "lane": "east",
+          "age": 45,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "48929",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "49056",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4243
+          ]
+        },
+        {
+          "key": "49058",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "49250",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "6293ac0f-925c-4ffa-9f57-9489bed6ab37",
+      "tick": 247,
+      "cast": {
+        "uuid": "6293ac0f-925c-4ffa-9f57-9489bed6ab37",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "247",
+        "wave": "28",
+        "offset": "7",
+        "x": "3292",
+        "y": "4244",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "39367",
+        "target": "w27 split small melee",
+        "target_wave": "27",
+        "lane": "split",
+        "slot": "",
+        "big": "False",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8342",
+        "spawn_tick": "234",
+        "age": "13",
+        "since_arena_anchor_entry": "13",
+        "parent": "39220",
+        "target_x": "3293",
+        "target_y": "4244",
+        "hp": "8",
+        "distance": "1",
+        "death_tick": "249"
+      },
+      "victims": [
+        {
+          "key": "38940",
+          "wave": 23,
+          "lane": "east",
+          "age": 51,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "39138",
+          "wave": 25,
+          "lane": "east",
+          "age": 35,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "39219",
+          "wave": 26,
+          "lane": "south",
+          "age": 27,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 1,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4243
+          ]
+        },
+        {
+          "key": "39221",
+          "wave": 26,
+          "lane": "east",
+          "age": 27,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "f5aab638-bf14-4511-8a83-026ea46cc37f",
+      "tick": 245,
+      "cast": {
+        "uuid": "f5aab638-bf14-4511-8a83-026ea46cc37f",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "245",
+        "wave": "28",
+        "offset": "9",
+        "x": "3292",
+        "y": "4245",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "65212",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "224",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4243",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "252"
+      },
+      "victims": [
+        {
+          "key": "64487",
+          "wave": 23,
+          "lane": "east",
+          "age": 45,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "65065",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "65212",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4243
+          ]
+        },
+        {
+          "key": "65214",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "65383",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 9,
+          "other_primaries": [],
+          "position": [
+            3301,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "7c5d2999-85db-46aa-912e-5fe3a7b0904f",
+      "tick": 245,
+      "cast": {
+        "uuid": "7c5d2999-85db-46aa-912e-5fe3a7b0904f",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "245",
+        "wave": "29",
+        "offset": "5",
+        "x": "3293",
+        "y": "4245",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "58477",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "224",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4243",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "252"
+      },
+      "victims": [
+        {
+          "key": "58073",
+          "wave": 23,
+          "lane": "east",
+          "age": 45,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "58311",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "58477",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4243
+          ]
+        },
+        {
+          "key": "58479",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "58541",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "fe01a37b-1ca3-4b44-9793-a16e803c9a8a",
+      "tick": 240,
+      "cast": {
+        "uuid": "fe01a37b-1ca3-4b44-9793-a16e803c9a8a",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "240",
+        "wave": "28",
+        "offset": "8",
+        "x": "3292",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "38369",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "24",
+        "since_arena_anchor_entry": "14",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "247"
+      },
+      "victims": [
+        {
+          "key": "37811",
+          "wave": 23,
+          "lane": "east",
+          "age": 48,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "38212",
+          "wave": 25,
+          "lane": "east",
+          "age": 32,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "38369",
+          "wave": 26,
+          "lane": "south",
+          "age": 24,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "38371",
+          "wave": 26,
+          "lane": "east",
+          "age": 24,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "38480",
+          "wave": 27,
+          "lane": "east",
+          "age": 16,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 9,
+          "other_primaries": [],
+          "position": [
+            3301,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "ee0853e5-9652-467b-8606-c19f17f1768e",
+      "tick": 241,
+      "cast": {
+        "uuid": "ee0853e5-9652-467b-8606-c19f17f1768e",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "241",
+        "wave": "28",
+        "offset": "9",
+        "x": "3293",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "63274",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "220",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "249"
+      },
+      "victims": [
+        {
+          "key": "62892",
+          "wave": 23,
+          "lane": "east",
+          "age": 49,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "63151",
+          "wave": 25,
+          "lane": "east",
+          "age": 33,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "63274",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "63276",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "63314",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3301,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "697c58b5-647b-4204-a039-30249ac4f04a",
+      "tick": 242,
+      "cast": {
+        "uuid": "697c58b5-647b-4204-a039-30249ac4f04a",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "242",
+        "wave": "28",
+        "offset": "10",
+        "x": "3293",
+        "y": "4245",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "34841",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "220",
+        "age": "22",
+        "since_arena_anchor_entry": "12",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4243",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "250"
+      },
+      "victims": [
+        {
+          "key": "34202",
+          "wave": 23,
+          "lane": "east",
+          "age": 46,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "34668",
+          "wave": 25,
+          "lane": "east",
+          "age": 30,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "34841",
+          "wave": 26,
+          "lane": "south",
+          "age": 22,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4243
+          ]
+        },
+        {
+          "key": "34843",
+          "wave": 26,
+          "lane": "east",
+          "age": 22,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "34933",
+          "wave": 27,
+          "lane": "east",
+          "age": 18,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "4374381d-f598-4d96-90b6-e5204385bc46",
+      "tick": 241,
+      "cast": {
+        "uuid": "4374381d-f598-4d96-90b6-e5204385bc46",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "241",
+        "wave": "29",
+        "offset": "5",
+        "x": "3292",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "52924",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "220",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "248"
+      },
+      "victims": [
+        {
+          "key": "52324",
+          "wave": 23,
+          "lane": "east",
+          "age": 45,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "52751",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "52924",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "52926",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "52998",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "4374381d-f598-4d96-90b6-e5204385bc46",
+      "tick": 262,
+      "cast": {
+        "uuid": "4374381d-f598-4d96-90b6-e5204385bc46",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "262",
+        "wave": "30",
+        "offset": "2",
+        "x": "3301",
+        "y": "4247",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "53144",
+        "target": "w28 east-S small range",
+        "target_wave": "28",
+        "lane": "east",
+        "slot": "S",
+        "big": "False",
+        "initial_style": "range",
+        "current_style": "range",
+        "current_npc_id": "8343",
+        "spawn_tick": "232",
+        "age": "30",
+        "since_arena_anchor_entry": "21",
+        "parent": "0",
+        "target_x": "3301",
+        "target_y": "4246",
+        "hp": "8",
+        "distance": "1",
+        "death_tick": "284"
+      },
+      "victims": [
+        {
+          "key": "52751",
+          "wave": 25,
+          "lane": "east",
+          "age": 50,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "52926",
+          "wave": 26,
+          "lane": "east",
+          "age": 42,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 4,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "52998",
+          "wave": 27,
+          "lane": "east",
+          "age": 38,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "0984071b-92ac-4bb7-aa3f-a1615bbca5e3",
+      "tick": 243,
+      "cast": {
+        "uuid": "0984071b-92ac-4bb7-aa3f-a1615bbca5e3",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "243",
+        "wave": "28",
+        "offset": "3",
+        "x": "3294",
+        "y": "4248",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "50080",
+        "target": "w24 east-S big melee",
+        "target_wave": "24",
+        "lane": "east",
+        "slot": "S",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8351",
+        "spawn_tick": "200",
+        "age": "43",
+        "since_arena_anchor_entry": "35",
+        "parent": "0",
+        "target_x": "3294",
+        "target_y": "4246",
+        "hp": "4",
+        "distance": "1",
+        "death_tick": "251"
+      },
+      "victims": [
+        {
+          "key": "49955",
+          "wave": 23,
+          "lane": "east",
+          "age": 51,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "50080",
+          "wave": 24,
+          "lane": "east",
+          "age": 43,
+          "style": "melee",
+          "hp_before": 4,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3294,
+            4246
+          ]
+        },
+        {
+          "key": "50193",
+          "wave": 25,
+          "lane": "east",
+          "age": 35,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 5,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "50293",
+          "wave": 26,
+          "lane": "south",
+          "age": 27,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 4,
+          "other_primaries": [
+            {
+              "uuid": "0984071b-92ac-4bb7-aa3f-a1615bbca5e3",
+              "player": "lmperatrice",
+              "role": "ranger",
+              "tick": "244",
+              "wave": "28",
+              "offset": "4",
+              "x": "3295",
+              "y": "4244",
+              "attack_type": "12",
+              "attack_name": "BLOWPIPE",
+              "attack_category": "RANGED",
+              "weapon": "28688",
+              "target_id": "50293",
+              "target": "w26 south-W big melee",
+              "target_wave": "26",
+              "lane": "south",
+              "slot": "W",
+              "big": "True",
+              "initial_style": "melee",
+              "current_style": "range",
+              "current_npc_id": "8346",
+              "spawn_tick": "216",
+              "age": "28",
+              "since_arena_anchor_entry": "18",
+              "parent": "0",
+              "target_x": "3292",
+              "target_y": "4244",
+              "hp": "16",
+              "distance": "2",
+              "death_tick": "271"
+            }
+          ],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "50295",
+          "wave": 26,
+          "lane": "east",
+          "age": 27,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 5,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "50344",
+          "wave": 27,
+          "lane": "east",
+          "age": 23,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3301,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "3f180e70-43b8-4dbf-aab5-73de891f85bf",
+      "tick": 241,
+      "cast": {
+        "uuid": "3f180e70-43b8-4dbf-aab5-73de891f85bf",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "241",
+        "wave": "29",
+        "offset": "1",
+        "x": "3292",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "63325",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "220",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "248"
+      },
+      "victims": [
+        {
+          "key": "62813",
+          "wave": 23,
+          "lane": "east",
+          "age": 45,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "63161",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "63325",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "63328",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "63415",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "fd1f3c04-9543-4d6c-aeed-721c5b22e14a",
+      "tick": 245,
+      "cast": {
+        "uuid": "fd1f3c04-9543-4d6c-aeed-721c5b22e14a",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "245",
+        "wave": "28",
+        "offset": "9",
+        "x": "3293",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "61445",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "224",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "252"
+      },
+      "victims": [
+        {
+          "key": "60722",
+          "wave": 23,
+          "lane": "east",
+          "age": 53,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "61262",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "61445",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "61447",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "61530",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 7,
+          "hp_after2": 7,
+          "anchor_distance": 6,
+          "other_primaries": [
+            {
+              "uuid": "fd1f3c04-9543-4d6c-aeed-721c5b22e14a",
+              "player": "Drummie",
+              "role": "mage",
+              "tick": "241",
+              "wave": "28",
+              "offset": "5",
+              "x": "3294",
+              "y": "4247",
+              "attack_type": "104",
+              "attack_name": "EYE_OF_AYAK_AUTO",
+              "attack_category": "MAGIC",
+              "weapon": "31113",
+              "target_id": "61530",
+              "target": "w27 east-S big mage",
+              "target_wave": "27",
+              "lane": "east",
+              "slot": "S",
+              "big": "True",
+              "initial_style": "mage",
+              "current_style": "mage",
+              "current_npc_id": "8347",
+              "spawn_tick": "228",
+              "age": "13",
+              "since_arena_anchor_entry": "5",
+              "parent": "0",
+              "target_x": "3300",
+              "target_y": "4246",
+              "hp": "16",
+              "distance": "6",
+              "death_tick": "283"
+            }
+          ],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+      "tick": 241,
+      "cast": {
+        "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "241",
+        "wave": "28",
+        "offset": "9",
+        "x": "3290",
+        "y": "4248",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "34736",
+        "target": "w28 west-N small melee",
+        "target_wave": "28",
+        "lane": "west",
+        "slot": "N",
+        "big": "False",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8342",
+        "spawn_tick": "232",
+        "age": "9",
+        "since_arena_anchor_entry": "0",
+        "parent": "0",
+        "target_x": "3290",
+        "target_y": "4249",
+        "hp": "8",
+        "distance": "1",
+        "death_tick": "243"
+      },
+      "victims": [
+        {
+          "key": "33559",
+          "wave": 23,
+          "lane": "east",
+          "age": 49,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 10,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "34042",
+          "wave": 25,
+          "lane": "east",
+          "age": 33,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 10,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "34287",
+          "wave": 26,
+          "lane": "south",
+          "age": 25,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 5,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4243
+          ]
+        },
+        {
+          "key": "34289",
+          "wave": 26,
+          "lane": "east",
+          "age": 25,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 9,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "34370",
+          "wave": 27,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 9,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+      "tick": 248,
+      "cast": {
+        "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "248",
+        "wave": "29",
+        "offset": "4",
+        "x": "3298",
+        "y": "4253",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "34734",
+        "target": "w28 split small melee",
+        "target_wave": "28",
+        "lane": "split",
+        "slot": "",
+        "big": "False",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8342",
+        "spawn_tick": "232",
+        "age": "16",
+        "since_arena_anchor_entry": "16",
+        "parent": "34288",
+        "target_x": "3299",
+        "target_y": "4253",
+        "hp": "8",
+        "distance": "1",
+        "death_tick": "251"
+      },
+      "victims": [
+        {
+          "key": "34042",
+          "wave": 25,
+          "lane": "east",
+          "age": 40,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "34287",
+          "wave": 26,
+          "lane": "south",
+          "age": 32,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 2,
+          "anchor_distance": 10,
+          "other_primaries": [
+            {
+              "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+              "player": "cutely meows",
+              "role": "ranger",
+              "tick": "246",
+              "wave": "29",
+              "offset": "2",
+              "x": "3293",
+              "y": "4248",
+              "attack_type": "12",
+              "attack_name": "BLOWPIPE",
+              "attack_category": "RANGED",
+              "weapon": "12926",
+              "target_id": "34287",
+              "target": "w26 south-W big melee",
+              "target_wave": "26",
+              "lane": "south",
+              "slot": "W",
+              "big": "True",
+              "initial_style": "melee",
+              "current_style": "range",
+              "current_npc_id": "8346",
+              "spawn_tick": "216",
+              "age": "30",
+              "since_arena_anchor_entry": "20",
+              "parent": "0",
+              "target_x": "3292",
+              "target_y": "4243",
+              "hp": "16",
+              "distance": "4",
+              "death_tick": "261"
+            }
+          ],
+          "position": [
+            3292,
+            4243
+          ]
+        },
+        {
+          "key": "34289",
+          "wave": 26,
+          "lane": "east",
+          "age": 32,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "34370",
+          "wave": 27,
+          "lane": "east",
+          "age": 28,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92",
+      "tick": 231,
+      "cast": {
+        "uuid": "6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "231",
+        "wave": "28",
+        "offset": "7",
+        "x": "3293",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "58037",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "212",
+        "age": "19",
+        "since_arena_anchor_entry": "9",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "238"
+      },
+      "victims": [
+        {
+          "key": "57409",
+          "wave": 23,
+          "lane": "east",
+          "age": 43,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "57814",
+          "wave": 25,
+          "lane": "east",
+          "age": 27,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "58037",
+          "wave": 26,
+          "lane": "south",
+          "age": 19,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "58039",
+          "wave": 26,
+          "lane": "east",
+          "age": 19,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "58158",
+          "wave": 27,
+          "lane": "east",
+          "age": 15,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "73687cf8-5599-4f4d-a92c-d663a3e9e78a",
+      "tick": 241,
+      "cast": {
+        "uuid": "73687cf8-5599-4f4d-a92c-d663a3e9e78a",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "241",
+        "wave": "28",
+        "offset": "9",
+        "x": "3293",
+        "y": "4245",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "50610",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "220",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4243",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "248"
+      },
+      "victims": [
+        {
+          "key": "49553",
+          "wave": 23,
+          "lane": "east",
+          "age": 49,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "50219",
+          "wave": 25,
+          "lane": "east",
+          "age": 33,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "50610",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4243
+          ]
+        },
+        {
+          "key": "50612",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "50690",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "3650ae9e-8234-4d76-b1a7-4bb879d7aa70",
+      "tick": 247,
+      "cast": {
+        "uuid": "3650ae9e-8234-4d76-b1a7-4bb879d7aa70",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "247",
+        "wave": "28",
+        "offset": "11",
+        "x": "3294",
+        "y": "4245",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "33162",
+        "target": "w28 split small melee",
+        "target_wave": "28",
+        "lane": "split",
+        "slot": "",
+        "big": "False",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8342",
+        "spawn_tick": "243",
+        "age": "4",
+        "since_arena_anchor_entry": "4",
+        "parent": "63772",
+        "target_x": "3294",
+        "target_y": "4244",
+        "hp": "8",
+        "distance": "1",
+        "death_tick": "250"
+      },
+      "victims": [
+        {
+          "key": "64171",
+          "wave": 23,
+          "lane": "east",
+          "age": 47,
+          "style": "range",
+          "hp_before": 11,
+          "hp_after2": 11,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "64767",
+          "wave": 25,
+          "lane": "east",
+          "age": 31,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "65004",
+          "wave": 26,
+          "lane": "south",
+          "age": 23,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "65006",
+          "wave": 26,
+          "lane": "east",
+          "age": 23,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "65171",
+          "wave": 27,
+          "lane": "east",
+          "age": 19,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 5,
+          "other_primaries": [
+            {
+              "uuid": "3650ae9e-8234-4d76-b1a7-4bb879d7aa70",
+              "player": "Drummie",
+              "role": "mage",
+              "tick": "242",
+              "wave": "28",
+              "offset": "6",
+              "x": "3293",
+              "y": "4248",
+              "attack_type": "104",
+              "attack_name": "EYE_OF_AYAK_AUTO",
+              "attack_category": "MAGIC",
+              "weapon": "31113",
+              "target_id": "65171",
+              "target": "w27 east-S big mage",
+              "target_wave": "27",
+              "lane": "east",
+              "slot": "S",
+              "big": "True",
+              "initial_style": "mage",
+              "current_style": "mage",
+              "current_npc_id": "8347",
+              "spawn_tick": "228",
+              "age": "14",
+              "since_arena_anchor_entry": "6",
+              "parent": "0",
+              "target_x": "3299",
+              "target_y": "4245",
+              "hp": "16",
+              "distance": "6",
+              "death_tick": "283"
+            }
+          ],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "307224ee-7a6a-4246-8e56-e6bf85eaf701",
+      "tick": 241,
+      "cast": {
+        "uuid": "307224ee-7a6a-4246-8e56-e6bf85eaf701",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "241",
+        "wave": "28",
+        "offset": "5",
+        "x": "3292",
+        "y": "4247",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "52882",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "220",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3290",
+        "target_y": "4246",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "248"
+      },
+      "victims": [
+        {
+          "key": "52021",
+          "wave": 23,
+          "lane": "east",
+          "age": 45,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "52524",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "52882",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3290,
+            4246
+          ]
+        },
+        {
+          "key": "52884",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "53203",
+          "wave": 27,
+          "lane": "east",
+          "age": 13,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "1a0af441-a721-49d9-a579-d769c918cb69",
+      "tick": 236,
+      "cast": {
+        "uuid": "1a0af441-a721-49d9-a579-d769c918cb69",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "236",
+        "wave": "28",
+        "offset": "4",
+        "x": "3294",
+        "y": "4244",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "48973",
+        "target": "w27 split small melee",
+        "target_wave": "27",
+        "lane": "split",
+        "slot": "",
+        "big": "False",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8342",
+        "spawn_tick": "227",
+        "age": "9",
+        "since_arena_anchor_entry": "9",
+        "parent": "48587",
+        "target_x": "3294",
+        "target_y": "4243",
+        "hp": "8",
+        "distance": "1",
+        "death_tick": "238"
+      },
+      "victims": [
+        {
+          "key": "48105",
+          "wave": 23,
+          "lane": "east",
+          "age": 44,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "48589",
+          "wave": 25,
+          "lane": "east",
+          "age": 28,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "48797",
+          "wave": 26,
+          "lane": "south",
+          "age": 16,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 13,
+          "anchor_distance": 1,
+          "other_primaries": [],
+          "position": [
+            3293,
+            4244
+          ]
+        },
+        {
+          "key": "48799",
+          "wave": 26,
+          "lane": "east",
+          "age": 16,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "48902",
+          "wave": 27,
+          "lane": "east",
+          "age": 12,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 5,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "c052bfe0-61a9-45a6-8544-435ef6592bcd",
+      "tick": 240,
+      "cast": {
+        "uuid": "c052bfe0-61a9-45a6-8544-435ef6592bcd",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "240",
+        "wave": "28",
+        "offset": "8",
+        "x": "3293",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "34917",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "24",
+        "since_arena_anchor_entry": "14",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "265"
+      },
+      "victims": [
+        {
+          "key": "34416",
+          "wave": 23,
+          "lane": "east",
+          "age": 48,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "34755",
+          "wave": 25,
+          "lane": "east",
+          "age": 32,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "34917",
+          "wave": 26,
+          "lane": "south",
+          "age": 24,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 12,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "34919",
+          "wave": 26,
+          "lane": "east",
+          "age": 24,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "35031",
+          "wave": 27,
+          "lane": "east",
+          "age": 20,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "93acd8c7-85fb-4eb7-987e-44ad81636976",
+      "tick": 241,
+      "cast": {
+        "uuid": "93acd8c7-85fb-4eb7-987e-44ad81636976",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "241",
+        "wave": "28",
+        "offset": "9",
+        "x": "3292",
+        "y": "4247",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "42488",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "220",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3291",
+        "target_y": "4245",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "249"
+      },
+      "victims": [
+        {
+          "key": "41778",
+          "wave": 23,
+          "lane": "east",
+          "age": 45,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "42318",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "42488",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3291,
+            4245
+          ]
+        },
+        {
+          "key": "42490",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "42610",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "36e9d7cf-3953-4beb-b06d-7d04ec4fad58",
+      "tick": 242,
+      "cast": {
+        "uuid": "36e9d7cf-3953-4beb-b06d-7d04ec4fad58",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "242",
+        "wave": "28",
+        "offset": "10",
+        "x": "3293",
+        "y": "4245",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "37191",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "220",
+        "age": "22",
+        "since_arena_anchor_entry": "12",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4243",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "249"
+      },
+      "victims": [
+        {
+          "key": "36676",
+          "wave": 23,
+          "lane": "east",
+          "age": 46,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "37029",
+          "wave": 25,
+          "lane": "east",
+          "age": 30,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "37191",
+          "wave": 26,
+          "lane": "south",
+          "age": 22,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4243
+          ]
+        },
+        {
+          "key": "37193",
+          "wave": 26,
+          "lane": "east",
+          "age": 22,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "37306",
+          "wave": 27,
+          "lane": "east",
+          "age": 18,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "97778429-1912-47db-a6b0-45c0be484ca1",
+      "tick": 237,
+      "cast": {
+        "uuid": "97778429-1912-47db-a6b0-45c0be484ca1",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "237",
+        "wave": "28",
+        "offset": "9",
+        "x": "3293",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "60468",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "244"
+      },
+      "victims": [
+        {
+          "key": "59849",
+          "wave": 23,
+          "lane": "east",
+          "age": 49,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "60353",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "60468",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "60470",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "60539",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4247
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "fe97da07-8197-4625-bf23-31538d7e64fa",
+      "tick": 245,
+      "cast": {
+        "uuid": "fe97da07-8197-4625-bf23-31538d7e64fa",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "245",
+        "wave": "28",
+        "offset": "9",
+        "x": "3293",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "36450",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "220",
+        "age": "25",
+        "since_arena_anchor_entry": "15",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "252"
+      },
+      "victims": [
+        {
+          "key": "36103",
+          "wave": 23,
+          "lane": "east",
+          "age": 49,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "36378",
+          "wave": 25,
+          "lane": "east",
+          "age": 33,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "36450",
+          "wave": 26,
+          "lane": "south",
+          "age": 25,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "36452",
+          "wave": 26,
+          "lane": "east",
+          "age": 25,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "36609",
+          "wave": 27,
+          "lane": "west",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 3,
+          "hp_after2": 3,
+          "anchor_distance": 5,
+          "other_primaries": [
+            {
+              "uuid": "fe97da07-8197-4625-bf23-31538d7e64fa",
+              "player": "Drummie",
+              "role": "mage",
+              "tick": "237",
+              "wave": "28",
+              "offset": "1",
+              "x": "3293",
+              "y": "4248",
+              "attack_type": "104",
+              "attack_name": "EYE_OF_AYAK_AUTO",
+              "attack_category": "MAGIC",
+              "weapon": "31113",
+              "target_id": "36609",
+              "target": "w27 west-S big mage",
+              "target_wave": "27",
+              "lane": "west",
+              "slot": "S",
+              "big": "True",
+              "initial_style": "mage",
+              "current_style": "mage",
+              "current_npc_id": "8347",
+              "spawn_tick": "228",
+              "age": "9",
+              "since_arena_anchor_entry": "0",
+              "parent": "0",
+              "target_x": "3290",
+              "target_y": "4248",
+              "hp": "15",
+              "distance": "2",
+              "death_tick": "283"
+            },
+            {
+              "uuid": "fe97da07-8197-4625-bf23-31538d7e64fa",
+              "player": "Drummie",
+              "role": "mage",
+              "tick": "240",
+              "wave": "28",
+              "offset": "4",
+              "x": "3293",
+              "y": "4247",
+              "attack_type": "104",
+              "attack_name": "EYE_OF_AYAK_AUTO",
+              "attack_category": "MAGIC",
+              "weapon": "31113",
+              "target_id": "36609",
+              "target": "w27 west-S big mage",
+              "target_wave": "27",
+              "lane": "west",
+              "slot": "S",
+              "big": "True",
+              "initial_style": "mage",
+              "current_style": "mage",
+              "current_npc_id": "8347",
+              "spawn_tick": "228",
+              "age": "12",
+              "since_arena_anchor_entry": "3",
+              "parent": "0",
+              "target_x": "3290",
+              "target_y": "4251",
+              "hp": "4",
+              "distance": "4",
+              "death_tick": "283"
+            }
+          ],
+          "position": [
+            3290,
+            4251
+          ]
+        },
+        {
+          "key": "36610",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "fe612bd5-cb4b-4943-89e5-1f6ca4af63a2",
+      "tick": 249,
+      "cast": {
+        "uuid": "fe612bd5-cb4b-4943-89e5-1f6ca4af63a2",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "249",
+        "wave": "29",
+        "offset": "5",
+        "x": "3290",
+        "y": "4248",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "65415",
+        "target": "w28 west-N small melee",
+        "target_wave": "28",
+        "lane": "west",
+        "slot": "N",
+        "big": "False",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8342",
+        "spawn_tick": "240",
+        "age": "9",
+        "since_arena_anchor_entry": "0",
+        "parent": "0",
+        "target_x": "3290",
+        "target_y": "4249",
+        "hp": "8",
+        "distance": "1",
+        "death_tick": "251"
+      },
+      "victims": [
+        {
+          "key": "64953",
+          "wave": 25,
+          "lane": "east",
+          "age": 41,
+          "style": "melee",
+          "hp_before": 5,
+          "hp_after2": 5,
+          "anchor_distance": 9,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "65118",
+          "wave": 26,
+          "lane": "south",
+          "age": 29,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 4,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "65120",
+          "wave": 26,
+          "lane": "east",
+          "age": 29,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 9,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "8d1f397b-2cf3-4540-8351-d945e33a0965",
+      "tick": 237,
+      "cast": {
+        "uuid": "8d1f397b-2cf3-4540-8351-d945e33a0965",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "237",
+        "wave": "28",
+        "offset": "9",
+        "x": "3290",
+        "y": "4248",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "56768",
+        "target": "w28 west-N small melee",
+        "target_wave": "28",
+        "lane": "west",
+        "slot": "N",
+        "big": "False",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8342",
+        "spawn_tick": "228",
+        "age": "9",
+        "since_arena_anchor_entry": "0",
+        "parent": "0",
+        "target_x": "3290",
+        "target_y": "4249",
+        "hp": "8",
+        "distance": "1",
+        "death_tick": "239"
+      },
+      "victims": [
+        {
+          "key": "56181",
+          "wave": 23,
+          "lane": "east",
+          "age": 49,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 10,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "56326",
+          "wave": 24,
+          "lane": "south",
+          "age": 41,
+          "style": "magic",
+          "hp_before": 2,
+          "hp_after2": 2,
+          "anchor_distance": 5,
+          "other_primaries": [],
+          "position": [
+            3295,
+            4246
+          ]
+        },
+        {
+          "key": "56427",
+          "wave": 25,
+          "lane": "east",
+          "age": 33,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 9,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "56562",
+          "wave": 26,
+          "lane": "south",
+          "age": 25,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 5,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4243
+          ]
+        },
+        {
+          "key": "56564",
+          "wave": 26,
+          "lane": "east",
+          "age": 25,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 9,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "56631",
+          "wave": 27,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 10,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "8a5b5f0c-57ef-4f4d-b554-a0d6f0c96e77",
+      "tick": 245,
+      "cast": {
+        "uuid": "8a5b5f0c-57ef-4f4d-b554-a0d6f0c96e77",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "245",
+        "wave": "28",
+        "offset": "5",
+        "x": "3293",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "50986",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "224",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "252"
+      },
+      "victims": [
+        {
+          "key": "50547",
+          "wave": 23,
+          "lane": "east",
+          "age": 45,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "50828",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "50986",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4244
+          ]
+        },
+        {
+          "key": "50988",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "51108",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "f5cd51b6-7834-41b9-9861-14f03fbf2cf5",
+      "tick": 237,
+      "cast": {
+        "uuid": "f5cd51b6-7834-41b9-9861-14f03fbf2cf5",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "237",
+        "wave": "28",
+        "offset": "9",
+        "x": "3292",
+        "y": "4245",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "65145",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4243",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "245"
+      },
+      "victims": [
+        {
+          "key": "64767",
+          "wave": 23,
+          "lane": "east",
+          "age": 45,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "65014",
+          "wave": 25,
+          "lane": "west",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 2,
+          "hp_after2": 2,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3294,
+            4246
+          ]
+        },
+        {
+          "key": "65015",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "65145",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4243
+          ]
+        },
+        {
+          "key": "65147",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "65212",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "f5cd51b6-7834-41b9-9861-14f03fbf2cf5",
+      "tick": 242,
+      "cast": {
+        "uuid": "f5cd51b6-7834-41b9-9861-14f03fbf2cf5",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "242",
+        "wave": "28",
+        "offset": "14",
+        "x": "3290",
+        "y": "4251",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "65399",
+        "target": "w28 split small melee",
+        "target_wave": "28",
+        "lane": "split",
+        "slot": "",
+        "big": "False",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8342",
+        "spawn_tick": "230",
+        "age": "12",
+        "since_arena_anchor_entry": "12",
+        "parent": "65013",
+        "target_x": "3290",
+        "target_y": "4252",
+        "hp": "8",
+        "distance": "1",
+        "death_tick": "249"
+      },
+      "victims": [
+        {
+          "key": "64767",
+          "wave": 23,
+          "lane": "east",
+          "age": 50,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 10,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "65014",
+          "wave": 25,
+          "lane": "west",
+          "age": 34,
+          "style": "melee",
+          "hp_before": 2,
+          "hp_after2": 2,
+          "anchor_distance": 5,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4246
+          ]
+        },
+        {
+          "key": "65015",
+          "wave": 25,
+          "lane": "east",
+          "age": 34,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 9,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        },
+        {
+          "key": "65147",
+          "wave": 26,
+          "lane": "east",
+          "age": 26,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 9,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "65212",
+          "wave": 27,
+          "lane": "east",
+          "age": 22,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 10,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "16732a46-4067-47f9-8c18-c4d60056726e",
+      "tick": 240,
+      "cast": {
+        "uuid": "16732a46-4067-47f9-8c18-c4d60056726e",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "240",
+        "wave": "28",
+        "offset": "8",
+        "x": "3294",
+        "y": "4246",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "36121",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "220",
+        "age": "20",
+        "since_arena_anchor_entry": "10",
+        "parent": "0",
+        "target_x": "3293",
+        "target_y": "4244",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "267"
+      },
+      "victims": [
+        {
+          "key": "35664",
+          "wave": 23,
+          "lane": "east",
+          "age": 44,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "35987",
+          "wave": 25,
+          "lane": "east",
+          "age": 28,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "36121",
+          "wave": 26,
+          "lane": "south",
+          "age": 20,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 15,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3293,
+            4244
+          ]
+        },
+        {
+          "key": "36123",
+          "wave": 26,
+          "lane": "east",
+          "age": 20,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 5,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "36180",
+          "wave": 27,
+          "lane": "east",
+          "age": 16,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 5,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "8ad57d05-e365-4e4f-a2da-7dc2cc2f2730",
+      "tick": 237,
+      "cast": {
+        "uuid": "8ad57d05-e365-4e4f-a2da-7dc2cc2f2730",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "237",
+        "wave": "28",
+        "offset": "9",
+        "x": "3293",
+        "y": "4245",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "44095",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "216",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4243",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "245"
+      },
+      "victims": [
+        {
+          "key": "43360",
+          "wave": 23,
+          "lane": "east",
+          "age": 45,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "43791",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "44095",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4243
+          ]
+        },
+        {
+          "key": "44097",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "44224",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 6,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "282af10b-fa84-41fa-b021-14c0efbec5bc",
+      "tick": 241,
+      "cast": {
+        "uuid": "282af10b-fa84-41fa-b021-14c0efbec5bc",
+        "player": "Drummie",
+        "role": "mage",
+        "tick": "241",
+        "wave": "28",
+        "offset": "9",
+        "x": "3292",
+        "y": "4245",
+        "attack_type": "24",
+        "attack_name": "DINHS_SPEC",
+        "attack_category": "MELEE",
+        "weapon": "21015",
+        "target_id": "34753",
+        "target": "w26 south-W big melee",
+        "target_wave": "26",
+        "lane": "south",
+        "slot": "W",
+        "big": "True",
+        "initial_style": "melee",
+        "current_style": "melee",
+        "current_npc_id": "8345",
+        "spawn_tick": "220",
+        "age": "21",
+        "since_arena_anchor_entry": "11",
+        "parent": "0",
+        "target_x": "3292",
+        "target_y": "4243",
+        "hp": "16",
+        "distance": "1",
+        "death_tick": "248"
+      },
+      "victims": [
+        {
+          "key": "34178",
+          "wave": 23,
+          "lane": "east",
+          "age": 45,
+          "style": "range",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4251
+          ]
+        },
+        {
+          "key": "34596",
+          "wave": 25,
+          "lane": "east",
+          "age": 29,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 8,
+          "other_primaries": [],
+          "position": [
+            3300,
+            4245
+          ]
+        },
+        {
+          "key": "34753",
+          "wave": 26,
+          "lane": "south",
+          "age": 21,
+          "style": "melee",
+          "hp_before": 16,
+          "hp_after2": 0,
+          "anchor_distance": 2,
+          "other_primaries": [],
+          "position": [
+            3292,
+            4243
+          ]
+        },
+        {
+          "key": "34756",
+          "wave": 26,
+          "lane": "east",
+          "age": 21,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4251
+          ]
+        },
+        {
+          "key": "34927",
+          "wave": 27,
+          "lane": "west",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 6,
+          "hp_after2": 6,
+          "anchor_distance": 6,
+          "other_primaries": [
+            {
+              "uuid": "282af10b-fa84-41fa-b021-14c0efbec5bc",
+              "player": "Drummie",
+              "role": "mage",
+              "tick": "235",
+              "wave": "28",
+              "offset": "3",
+              "x": "3293",
+              "y": "4248",
+              "attack_type": "104",
+              "attack_name": "EYE_OF_AYAK_AUTO",
+              "attack_category": "MAGIC",
+              "weapon": "31113",
+              "target_id": "34927",
+              "target": "w27 west-S big mage",
+              "target_wave": "27",
+              "lane": "west",
+              "slot": "S",
+              "big": "True",
+              "initial_style": "mage",
+              "current_style": "mage",
+              "current_npc_id": "8347",
+              "spawn_tick": "224",
+              "age": "11",
+              "since_arena_anchor_entry": "2",
+              "parent": "0",
+              "target_x": "3290",
+              "target_y": "4250",
+              "hp": "15",
+              "distance": "2",
+              "death_tick": "279"
+            }
+          ],
+          "position": [
+            3290,
+            4251
+          ]
+        },
+        {
+          "key": "34928",
+          "wave": 27,
+          "lane": "east",
+          "age": 17,
+          "style": "magic",
+          "hp_before": 16,
+          "hp_after2": 16,
+          "anchor_distance": 7,
+          "other_primaries": [],
+          "position": [
+            3299,
+            4245
+          ]
+        }
+      ]
+    }
+  ],
+  "caveat": "Checksum-vetted raw snapshots. HPdrop>=4 withinT-1..T+2 and no other primary on that NPC inT-8..T+2 is compatible with Dinh AoE, not proof of attribution; other secondary effects and snapshot phases remain possible. Anchor distance<=5 is geometric screening, not native ray/search replay. Only first-level bigs23..27 inspected."
+}

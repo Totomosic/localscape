@@ -1,0 +1,16 @@
+{
+  "status": "isolated candidate; not promoted; no native simulation",
+  "canonicalRangerTests": 92,
+  "guidanceTests": 13,
+  "candidatePassingTests": 105,
+  "changes": [
+    "Preserve earliest available named opening west/east bow over ordinary equal-time work; expand east earliest request offset from2 to0 to allow first native-ready feasible tick.",
+    "Disallow BOW on every ordinary south6 small, preserving named south7 big BOW.",
+    "Allow west11 magic big backup only after actual12 spawns and give it first-ready service deadline; retain personal/partner claim and NULL checks."
+  ],
+  "deferred": [
+    "Re-audit opening after shared-flight fix; it can change movement during opening cooldown.",
+    "No broad newer-target/finishing scoring adjustment: baseline already passes fresh-over-old and survivor/zero-follow-up checks; existing test deliberately prefers old damaged small over fresh full HP.",
+    "No boss-time estimate: native comparison must use corrected shared-flight live-profile baseline."
+  ]
+}

@@ -1,0 +1,675 @@
+[
+  {
+    "run": ".state/simulations/training-v3-forecast-guidance-control-random-100",
+    "counts": {
+      "confirmed_first_pipes": 99,
+      "first_pipes_with_known_roll": 97,
+      "rolled_nonlethal": 47,
+      "nonlethal_airborne_at_age5_without_eye": 47,
+      "rolled_lethal": 50,
+      "first_pipes_without_matching_roll": 2
+    },
+    "examples": [
+      {
+        "seed": "93666698535880",
+        "key": 132,
+        "born": 212,
+        "pipe_tick": 215,
+        "roll": {
+          "tick": 215,
+          "damage": 11,
+          "maximum": 34
+        },
+        "age5_tick": 217,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 247,
+        "age5_selected_weapon": "PIPE",
+        "age5_selected_target": 135,
+        "native_impacts": [
+          {
+            "tick": 217,
+            "role": 0,
+            "damage": 11,
+            "hp": 5,
+            "thrall": false
+          },
+          {
+            "tick": 226,
+            "role": 1,
+            "damage": 5,
+            "hp": 0,
+            "thrall": false
+          },
+          {
+            "tick": 226,
+            "role": 1,
+            "damage": 0,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      },
+      {
+        "seed": "93666698535881",
+        "key": 132,
+        "born": 204,
+        "pipe_tick": 207,
+        "roll": {
+          "tick": 207,
+          "damage": 1,
+          "maximum": 34
+        },
+        "age5_tick": 209,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 239,
+        "age5_selected_weapon": "CHIN",
+        "age5_selected_target": 137,
+        "native_impacts": [
+          {
+            "tick": 209,
+            "role": 0,
+            "damage": 1,
+            "hp": 15,
+            "thrall": false
+          },
+          {
+            "tick": 220,
+            "role": 1,
+            "damage": 15,
+            "hp": 0,
+            "thrall": false
+          },
+          {
+            "tick": 220,
+            "role": 1,
+            "damage": 0,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      },
+      {
+        "seed": "93666698535882",
+        "key": 134,
+        "born": 204,
+        "pipe_tick": 207,
+        "roll": {
+          "tick": 207,
+          "damage": 3,
+          "maximum": 34
+        },
+        "age5_tick": 209,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 239,
+        "age5_selected_weapon": "EYE",
+        "age5_selected_target": 138,
+        "native_impacts": [
+          {
+            "tick": 209,
+            "role": 0,
+            "damage": 3,
+            "hp": 13,
+            "thrall": false
+          },
+          {
+            "tick": 217,
+            "role": 1,
+            "damage": 13,
+            "hp": 0,
+            "thrall": false
+          },
+          {
+            "tick": 217,
+            "role": 1,
+            "damage": 0,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      },
+      {
+        "seed": "93666698535887",
+        "key": 140,
+        "born": 220,
+        "pipe_tick": 223,
+        "roll": {
+          "tick": 223,
+          "damage": 1,
+          "maximum": 34
+        },
+        "age5_tick": 225,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 255,
+        "age5_selected_weapon": "PIPE",
+        "age5_selected_target": 138,
+        "native_impacts": [
+          {
+            "tick": 225,
+            "role": 0,
+            "damage": 1,
+            "hp": 15,
+            "thrall": false
+          },
+          {
+            "tick": 230,
+            "role": 1,
+            "damage": 15,
+            "hp": 0,
+            "thrall": false
+          },
+          {
+            "tick": 230,
+            "role": 1,
+            "damage": 0,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      },
+      {
+        "seed": "93666698535888",
+        "key": 136,
+        "born": 208,
+        "pipe_tick": 211,
+        "roll": {
+          "tick": 211,
+          "damage": 2,
+          "maximum": 34
+        },
+        "age5_tick": 213,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 243,
+        "age5_selected_weapon": "PIPE",
+        "age5_selected_target": 142,
+        "native_impacts": [
+          {
+            "tick": 213,
+            "role": 0,
+            "damage": 2,
+            "hp": 14,
+            "thrall": false
+          },
+          {
+            "tick": 221,
+            "role": 1,
+            "damage": 14,
+            "hp": 0,
+            "thrall": false
+          },
+          {
+            "tick": 221,
+            "role": 1,
+            "damage": 0,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      },
+      {
+        "seed": "93666698535890",
+        "key": 134,
+        "born": 208,
+        "pipe_tick": 211,
+        "roll": {
+          "tick": 211,
+          "damage": 15,
+          "maximum": 34
+        },
+        "age5_tick": 213,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 243,
+        "age5_selected_weapon": "PIPE",
+        "age5_selected_target": 131,
+        "native_impacts": [
+          {
+            "tick": 213,
+            "role": 0,
+            "damage": 15,
+            "hp": 1,
+            "thrall": false
+          },
+          {
+            "tick": 219,
+            "role": 1,
+            "damage": 1,
+            "hp": 0,
+            "thrall": false
+          },
+          {
+            "tick": 219,
+            "role": 1,
+            "damage": 0,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      },
+      {
+        "seed": "93666698535894",
+        "key": 132,
+        "born": 200,
+        "pipe_tick": 203,
+        "roll": {
+          "tick": 203,
+          "damage": 7,
+          "maximum": 34
+        },
+        "age5_tick": 205,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 235,
+        "age5_selected_weapon": "PIPE",
+        "age5_selected_target": 138,
+        "native_impacts": [
+          {
+            "tick": 205,
+            "role": 0,
+            "damage": 7,
+            "hp": 9,
+            "thrall": false
+          },
+          {
+            "tick": 212,
+            "role": 1,
+            "damage": 9,
+            "hp": 0,
+            "thrall": false
+          },
+          {
+            "tick": 212,
+            "role": 1,
+            "damage": 0,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      },
+      {
+        "seed": "93666698535895",
+        "key": 136,
+        "born": 200,
+        "pipe_tick": 203,
+        "roll": {
+          "tick": 203,
+          "damage": 6,
+          "maximum": 34
+        },
+        "age5_tick": 205,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 235,
+        "age5_selected_weapon": "PIPE",
+        "age5_selected_target": 135,
+        "native_impacts": [
+          {
+            "tick": 205,
+            "role": 0,
+            "damage": 6,
+            "hp": 10,
+            "thrall": false
+          },
+          {
+            "tick": 211,
+            "role": 1,
+            "damage": 10,
+            "hp": 0,
+            "thrall": false
+          },
+          {
+            "tick": 211,
+            "role": 1,
+            "damage": 0,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      }
+    ],
+    "sources": {
+      ".state/simulations/training-v3-forecast-guidance-control-random-100/server.log": "21f6c70457cb356a0c448cdd7df2de0b571094dabd9f5054b96ab8ce81d9158b",
+      ".state/simulations/training-v3-forecast-guidance-control-random-100/trials.csv": "b950a52caf016164875fc11d4cee45061b3a40ce3a6ee67acd356e466ff0fdf5"
+    }
+  },
+  {
+    "run": ".state/simulations/training-v3-queued-damage-enabled-random-200",
+    "counts": {
+      "confirmed_first_pipes": 200,
+      "first_pipes_with_known_roll": 193,
+      "rolled_lethal": 98,
+      "rolled_nonlethal": 95,
+      "nonlethal_airborne_at_age5_without_eye": 89,
+      "nonlethal_magic_window_eye": 6,
+      "first_pipes_without_matching_roll": 7
+    },
+    "examples": [
+      {
+        "seed": "49845458517442",
+        "key": 136,
+        "born": 236,
+        "pipe_tick": 239,
+        "roll": {
+          "tick": 239,
+          "damage": 11,
+          "maximum": 34
+        },
+        "age5_tick": 241,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 271,
+        "age5_selected_weapon": "PIPE",
+        "age5_selected_target": 142,
+        "native_impacts": [
+          {
+            "tick": 241,
+            "role": 0,
+            "damage": 11,
+            "hp": 5,
+            "thrall": false
+          },
+          {
+            "tick": 248,
+            "role": 1,
+            "damage": 5,
+            "hp": 0,
+            "thrall": false
+          },
+          {
+            "tick": 248,
+            "role": 1,
+            "damage": 0,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      },
+      {
+        "seed": "49845458517446",
+        "key": 136,
+        "born": 204,
+        "pipe_tick": 207,
+        "roll": {
+          "tick": 207,
+          "damage": 6,
+          "maximum": 34
+        },
+        "age5_tick": 209,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 239,
+        "age5_selected_weapon": "PIPE",
+        "age5_selected_target": 142,
+        "native_impacts": [
+          {
+            "tick": 209,
+            "role": 0,
+            "damage": 6,
+            "hp": 10,
+            "thrall": false
+          },
+          {
+            "tick": 218,
+            "role": 1,
+            "damage": 10,
+            "hp": 0,
+            "thrall": false
+          },
+          {
+            "tick": 218,
+            "role": 1,
+            "damage": 0,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      },
+      {
+        "seed": "49845458517447",
+        "key": 138,
+        "born": 212,
+        "pipe_tick": 215,
+        "roll": {
+          "tick": 215,
+          "damage": 11,
+          "maximum": 34
+        },
+        "age5_tick": 217,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 247,
+        "age5_selected_weapon": "PIPE",
+        "age5_selected_target": 135,
+        "native_impacts": [
+          {
+            "tick": 217,
+            "role": 0,
+            "damage": 11,
+            "hp": 5,
+            "thrall": false
+          },
+          {
+            "tick": 222,
+            "role": 1,
+            "damage": 3,
+            "hp": 2,
+            "thrall": false
+          },
+          {
+            "tick": 222,
+            "role": 1,
+            "damage": 0,
+            "hp": 2,
+            "thrall": false
+          },
+          {
+            "tick": 227,
+            "role": 1,
+            "damage": 2,
+            "hp": 0,
+            "thrall": false
+          },
+          {
+            "tick": 227,
+            "role": 1,
+            "damage": 0,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      },
+      {
+        "seed": "49845458517449",
+        "key": 134,
+        "born": 204,
+        "pipe_tick": 207,
+        "roll": {
+          "tick": 207,
+          "damage": 5,
+          "maximum": 34
+        },
+        "age5_tick": 209,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 239,
+        "age5_selected_weapon": "EYE",
+        "age5_selected_target": 137,
+        "native_impacts": [
+          {
+            "tick": 209,
+            "role": 0,
+            "damage": 5,
+            "hp": 11,
+            "thrall": false
+          },
+          {
+            "tick": 215,
+            "role": 1,
+            "damage": 11,
+            "hp": 0,
+            "thrall": false
+          },
+          {
+            "tick": 215,
+            "role": 1,
+            "damage": 0,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      },
+      {
+        "seed": "49845458517451",
+        "key": 138,
+        "born": 200,
+        "pipe_tick": 203,
+        "roll": {
+          "tick": 203,
+          "damage": 7,
+          "maximum": 34
+        },
+        "age5_tick": 205,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 235,
+        "age5_selected_weapon": "PIPE",
+        "age5_selected_target": 142,
+        "native_impacts": [
+          {
+            "tick": 205,
+            "role": 0,
+            "damage": 7,
+            "hp": 9,
+            "thrall": false
+          },
+          {
+            "tick": 213,
+            "role": 1,
+            "damage": 9,
+            "hp": 0,
+            "thrall": false
+          },
+          {
+            "tick": 213,
+            "role": 1,
+            "damage": 0,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      },
+      {
+        "seed": "49845458517454",
+        "key": 134,
+        "born": 208,
+        "pipe_tick": 211,
+        "roll": {
+          "tick": 211,
+          "damage": 8,
+          "maximum": 34
+        },
+        "age5_tick": 213,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 243,
+        "age5_selected_weapon": "PIPE",
+        "age5_selected_target": 137,
+        "native_impacts": [
+          {
+            "tick": 213,
+            "role": 0,
+            "damage": 8,
+            "hp": 8,
+            "thrall": false
+          },
+          {
+            "tick": 219,
+            "role": 1,
+            "damage": 8,
+            "hp": 0,
+            "thrall": false
+          },
+          {
+            "tick": 219,
+            "role": 1,
+            "damage": 0,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      },
+      {
+        "seed": "49845458517459",
+        "key": 136,
+        "born": 212,
+        "pipe_tick": 215,
+        "roll": {
+          "tick": 215,
+          "damage": 14,
+          "maximum": 34
+        },
+        "age5_tick": 217,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 247,
+        "age5_selected_weapon": "CHIN",
+        "age5_selected_target": 139,
+        "native_impacts": [
+          {
+            "tick": 217,
+            "role": 0,
+            "damage": 14,
+            "hp": 2,
+            "thrall": false
+          },
+          {
+            "tick": 226,
+            "role": 1,
+            "damage": 2,
+            "hp": 0,
+            "thrall": false
+          },
+          {
+            "tick": 226,
+            "role": 1,
+            "damage": 0,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      },
+      {
+        "seed": "49845458517461",
+        "key": 138,
+        "born": 208,
+        "pipe_tick": 211,
+        "roll": {
+          "tick": 211,
+          "damage": 2,
+          "maximum": 34
+        },
+        "age5_tick": 213,
+        "age5_predecision_hp": 16,
+        "previous_frame_flight_until": 243,
+        "age5_selected_weapon": "EYE",
+        "age5_selected_target": 141,
+        "native_impacts": [
+          {
+            "tick": 213,
+            "role": 0,
+            "damage": 2,
+            "hp": 14,
+            "thrall": false
+          },
+          {
+            "tick": 218,
+            "role": 1,
+            "damage": 9,
+            "hp": 5,
+            "thrall": false
+          },
+          {
+            "tick": 218,
+            "role": 1,
+            "damage": 5,
+            "hp": 0,
+            "thrall": false
+          }
+        ]
+      }
+    ],
+    "sources": {
+      ".state/simulations/training-v3-queued-damage-enabled-random-200/server.log": "275dc21243c9c2b13053da93c6a878b2f7c63b4d12a66e1a270c328c75e7ffdb",
+      ".state/simulations/training-v3-queued-damage-enabled-random-200/trials.csv": "044b717da70b101e509c949d0c8784f66cf7b3ce41f0f0062e3e8933781ecb79"
+    }
+  }
+]

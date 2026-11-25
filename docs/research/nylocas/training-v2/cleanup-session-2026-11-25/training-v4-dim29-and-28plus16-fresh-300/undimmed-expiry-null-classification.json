@@ -1,0 +1,818 @@
+{
+  "counts": {
+    "small_MageNULL0_RangerNULL0": 29,
+    "big_MageNULL0_RangerNULL0": 8,
+    "has_mage_ready_clear_big_MageNULL0_RangerNULL0": 5,
+    "small_MageNULL0_RangerNULL1": 1
+  },
+  "lifetimes": [
+    {
+      "seed": "32146393791779",
+      "boss_ticks": 324,
+      "target": {
+        "tick": 303,
+        "key": 186,
+        "wave": 30,
+        "age": 51,
+        "born": 252,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 7,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791779",
+      "boss_ticks": 324,
+      "target": {
+        "tick": 303,
+        "key": 187,
+        "wave": 30,
+        "age": 51,
+        "born": 252,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 7,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791807",
+      "boss_ticks": 324,
+      "target": {
+        "tick": 303,
+        "key": 184,
+        "wave": 30,
+        "age": 51,
+        "born": 252,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 3,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791807",
+      "boss_ticks": 324,
+      "target": {
+        "tick": 303,
+        "key": 185,
+        "wave": 30,
+        "age": 51,
+        "born": 252,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 7,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791809",
+      "boss_ticks": 340,
+      "target": {
+        "tick": 314,
+        "key": 183,
+        "wave": 30,
+        "age": 54,
+        "born": 260,
+        "style": "MELEE",
+        "big": true,
+        "hp": 8,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": [
+        {
+          "tick": 304,
+          "position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "style": "MELEE",
+          "hp": 8,
+          "pending": 0
+        },
+        {
+          "tick": 305,
+          "position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "style": "MELEE",
+          "hp": 8,
+          "pending": 0
+        }
+      ]
+    },
+    {
+      "seed": "32146393791810",
+      "boss_ticks": 336,
+      "target": {
+        "tick": 319,
+        "key": 186,
+        "wave": 30,
+        "age": 51,
+        "born": 268,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 6,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791816",
+      "boss_ticks": 328,
+      "target": {
+        "tick": 311,
+        "key": 187,
+        "wave": 30,
+        "age": 51,
+        "born": 260,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 3,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791821",
+      "boss_ticks": 324,
+      "target": {
+        "tick": 307,
+        "key": 185,
+        "wave": 30,
+        "age": 51,
+        "born": 256,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 1,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791828",
+      "boss_ticks": 324,
+      "target": {
+        "tick": 304,
+        "key": 185,
+        "wave": 30,
+        "age": 51,
+        "born": 253,
+        "style": "MELEE",
+        "big": false,
+        "hp": 8,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791835",
+      "boss_ticks": 336,
+      "target": {
+        "tick": 315,
+        "key": 185,
+        "wave": 30,
+        "age": 51,
+        "born": 264,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 2,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791837",
+      "boss_ticks": 344,
+      "target": {
+        "tick": 318,
+        "key": 185,
+        "wave": 30,
+        "age": 54,
+        "born": 264,
+        "style": "MELEE",
+        "big": true,
+        "hp": 9,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791842",
+      "boss_ticks": 344,
+      "target": {
+        "tick": 322,
+        "key": 188,
+        "wave": 30,
+        "age": 51,
+        "born": 271,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791847",
+      "boss_ticks": 344,
+      "target": {
+        "tick": 318,
+        "key": 185,
+        "wave": 30,
+        "age": 54,
+        "born": 264,
+        "style": "MELEE",
+        "big": true,
+        "hp": 1,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": [
+        {
+          "tick": 307,
+          "position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "style": "MELEE",
+          "hp": 1,
+          "pending": 0
+        },
+        {
+          "tick": 308,
+          "position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "style": "MELEE",
+          "hp": 1,
+          "pending": 0
+        }
+      ]
+    },
+    {
+      "seed": "32146393791862",
+      "boss_ticks": 320,
+      "target": {
+        "tick": 298,
+        "key": 183,
+        "wave": 30,
+        "age": 51,
+        "born": 247,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 4,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791862",
+      "boss_ticks": 320,
+      "target": {
+        "tick": 298,
+        "key": 184,
+        "wave": 30,
+        "age": 51,
+        "born": 247,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791871",
+      "boss_ticks": 328,
+      "target": {
+        "tick": 310,
+        "key": 185,
+        "wave": 30,
+        "age": 51,
+        "born": 259,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 5,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791895",
+      "boss_ticks": 344,
+      "target": {
+        "tick": 318,
+        "key": 183,
+        "wave": 30,
+        "age": 54,
+        "born": 264,
+        "style": "MELEE",
+        "big": true,
+        "hp": 7,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": [
+        {
+          "tick": 304,
+          "position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "style": "MELEE",
+          "hp": 7,
+          "pending": 0
+        },
+        {
+          "tick": 305,
+          "position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "style": "MELEE",
+          "hp": 7,
+          "pending": 0
+        }
+      ]
+    },
+    {
+      "seed": "32146393791921",
+      "boss_ticks": 340,
+      "target": {
+        "tick": 318,
+        "key": 185,
+        "wave": 30,
+        "age": 54,
+        "born": 264,
+        "style": "MELEE",
+        "big": true,
+        "hp": 11,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": [
+        {
+          "tick": 277,
+          "position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "style": "RANGE",
+          "hp": 11,
+          "pending": 0
+        },
+        {
+          "tick": 278,
+          "position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "style": "RANGE",
+          "hp": 11,
+          "pending": 0
+        }
+      ]
+    },
+    {
+      "seed": "32146393791932",
+      "boss_ticks": 336,
+      "target": {
+        "tick": 310,
+        "key": 183,
+        "wave": 30,
+        "age": 54,
+        "born": 256,
+        "style": "MELEE",
+        "big": true,
+        "hp": 1,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791939",
+      "boss_ticks": 344,
+      "target": {
+        "tick": 323,
+        "key": 185,
+        "wave": 30,
+        "age": 51,
+        "born": 272,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 7,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": true,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791946",
+      "boss_ticks": 332,
+      "target": {
+        "tick": 311,
+        "key": 184,
+        "wave": 30,
+        "age": 51,
+        "born": 260,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 5,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791952",
+      "boss_ticks": 332,
+      "target": {
+        "tick": 315,
+        "key": 184,
+        "wave": 30,
+        "age": 51,
+        "born": 264,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 4,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791952",
+      "boss_ticks": 332,
+      "target": {
+        "tick": 315,
+        "key": 185,
+        "wave": 30,
+        "age": 51,
+        "born": 264,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 7,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791956",
+      "boss_ticks": 332,
+      "target": {
+        "tick": 311,
+        "key": 184,
+        "wave": 30,
+        "age": 51,
+        "born": 260,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 2,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791971",
+      "boss_ticks": 328,
+      "target": {
+        "tick": 311,
+        "key": 187,
+        "wave": 30,
+        "age": 51,
+        "born": 260,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 2,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791974",
+      "boss_ticks": 332,
+      "target": {
+        "tick": 307,
+        "key": 184,
+        "wave": 30,
+        "age": 51,
+        "born": 256,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 7,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791976",
+      "boss_ticks": 328,
+      "target": {
+        "tick": 307,
+        "key": 184,
+        "wave": 30,
+        "age": 51,
+        "born": 256,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 7,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791985",
+      "boss_ticks": 316,
+      "target": {
+        "tick": 298,
+        "key": 186,
+        "wave": 30,
+        "age": 51,
+        "born": 247,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791988",
+      "boss_ticks": 328,
+      "target": {
+        "tick": 307,
+        "key": 184,
+        "wave": 30,
+        "age": 51,
+        "born": 256,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 3,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791988",
+      "boss_ticks": 328,
+      "target": {
+        "tick": 307,
+        "key": 185,
+        "wave": 30,
+        "age": 51,
+        "born": 256,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 4,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791994",
+      "boss_ticks": 324,
+      "target": {
+        "tick": 304,
+        "key": 186,
+        "wave": 30,
+        "age": 51,
+        "born": 253,
+        "style": "MELEE",
+        "big": false,
+        "hp": 8,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393791995",
+      "boss_ticks": 344,
+      "target": {
+        "tick": 314,
+        "key": 185,
+        "wave": 30,
+        "age": 54,
+        "born": 260,
+        "style": "MELEE",
+        "big": true,
+        "hp": 4,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": [
+        {
+          "tick": 300,
+          "position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "style": "MELEE",
+          "hp": 4,
+          "pending": 0
+        },
+        {
+          "tick": 301,
+          "position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "style": "MELEE",
+          "hp": 4,
+          "pending": 0
+        }
+      ]
+    },
+    {
+      "seed": "32146393792015",
+      "boss_ticks": 336,
+      "target": {
+        "tick": 316,
+        "key": 187,
+        "wave": 30,
+        "age": 51,
+        "born": 265,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393792016",
+      "boss_ticks": 324,
+      "target": {
+        "tick": 302,
+        "key": 188,
+        "wave": 30,
+        "age": 51,
+        "born": 251,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393792025",
+      "boss_ticks": 328,
+      "target": {
+        "tick": 311,
+        "key": 186,
+        "wave": 30,
+        "age": 51,
+        "born": 260,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 7,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393792046",
+      "boss_ticks": 336,
+      "target": {
+        "tick": 311,
+        "key": 182,
+        "wave": 30,
+        "age": 51,
+        "born": 260,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 6,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393792051",
+      "boss_ticks": 336,
+      "target": {
+        "tick": 314,
+        "key": 183,
+        "wave": 30,
+        "age": 54,
+        "born": 260,
+        "style": "MELEE",
+        "big": true,
+        "hp": 15,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    },
+    {
+      "seed": "32146393792061",
+      "boss_ticks": 328,
+      "target": {
+        "tick": 310,
+        "key": 187,
+        "wave": 30,
+        "age": 51,
+        "born": 259,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 2,
+        "dying": false,
+        "dimmed": false
+      },
+      "mageNull": false,
+      "rangerNull": false,
+      "mage_ready_clear_examples": []
+    }
+  ],
+  "caveat": "Undimmed expiring lifetimes identified by the measured actual31 predicate. NULL flags are actual lifetime feedback, not damage inference. Ready-clear frames still require native action/LOS replay before asserting an avoidable tick."
+}

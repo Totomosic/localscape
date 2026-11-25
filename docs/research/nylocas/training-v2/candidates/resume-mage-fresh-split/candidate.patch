@@ -1,0 +1,11 @@
+--- upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java
++++ upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java
+@@ -396,6 +396,8 @@
+ 			// must not bypass the rotation while that assignment is still pending.
+ 			if (ASSIGNMENTS.stream().anyMatch(a -> a.matches(c) && !completed.contains(a.name) && age <= a.last)) continue;
+ 			int score = (c.style == Style.MELEE ? 9000 : c.style == Style.MAGIC ? 6500 : 500) - age * 100;
++			// Prefer fresh pre-cap splits over older ordinary work; equal-age melee stays ahead.
++			if (room.wave < 20 && !c.big && c.lane == Lane.SPLIT && c.style == Style.MAGIC && age <= 3) score += 2400;
+ 			if (c.big) score = 10000 - age * 70;
+ 			if (c.style == Style.MAGIC && !c.big && room.wave >= 20 && room.wave <= 22 && c.point.getY() <= 4247) score += 5000;
+ 			if (c.style == Style.MELEE && c.big) weapon = Weapon.SCYTHE;

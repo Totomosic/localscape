@@ -1,0 +1,183 @@
+{
+  "helper_counts": {
+    "launches": 26,
+    "small": 26,
+    "birth_31": 24,
+    "pending_nonlethal": 26,
+    "birth_30": 2
+  },
+  "helper_rooms": 15,
+  "helper_targets": 23,
+  "helper_examples": [
+    {
+      "seed": "22080991948215",
+      "tick": 311,
+      "target": [
+        "205",
+        "31",
+        "0",
+        "RANGE",
+        "false",
+        "8",
+        "3298",
+        "4243",
+        "0",
+        "343",
+        "false"
+      ],
+      "lane": "split",
+      "pending": 0,
+      "position": "3297,4249,0"
+    },
+    {
+      "seed": "22080991948217",
+      "tick": 293,
+      "target": [
+        "197",
+        "31",
+        "6",
+        "RANGE",
+        "false",
+        "8",
+        "3300",
+        "4246",
+        "0",
+        "325",
+        "false"
+      ],
+      "lane": "split",
+      "pending": 0,
+      "position": "3297,4249,0"
+    },
+    {
+      "seed": "22080991948274",
+      "tick": 291,
+      "target": [
+        "205",
+        "31",
+        "3",
+        "RANGE",
+        "false",
+        "8",
+        "3293",
+        "4248",
+        "323",
+        "323",
+        "false"
+      ],
+      "lane": "split",
+      "pending": 2,
+      "position": "3297,4249,0"
+    },
+    {
+      "seed": "22080991948310",
+      "tick": 298,
+      "target": [
+        "189",
+        "30",
+        "27",
+        "RANGE",
+        "false",
+        "8",
+        "3300",
+        "4245",
+        "0",
+        "330",
+        "false"
+      ],
+      "lane": "split",
+      "pending": 0,
+      "position": "3297,4249,0"
+    },
+    {
+      "seed": "22080991948313",
+      "tick": 311,
+      "target": [
+        "205",
+        "31",
+        "0",
+        "RANGE",
+        "false",
+        "8",
+        "3298",
+        "4243",
+        "0",
+        "343",
+        "false"
+      ],
+      "lane": "split",
+      "pending": 0,
+      "position": "3297,4249,0"
+    },
+    {
+      "seed": "22080991948313",
+      "tick": 313,
+      "target": [
+        "206",
+        "31",
+        "2",
+        "RANGE",
+        "false",
+        "8",
+        "3297",
+        "4246",
+        "0",
+        "345",
+        "false"
+      ],
+      "lane": "split",
+      "pending": 4,
+      "position": "3297,4249,0"
+    },
+    {
+      "seed": "22080991948345",
+      "tick": 323,
+      "target": [
+        "204",
+        "31",
+        "4",
+        "RANGE",
+        "false",
+        "8",
+        "3295",
+        "4243",
+        "0",
+        "355",
+        "false"
+      ],
+      "lane": "split",
+      "pending": 0,
+      "position": "3296,4250,0"
+    },
+    {
+      "seed": "22080991948353",
+      "tick": 311,
+      "target": [
+        "203",
+        "31",
+        "0",
+        "RANGE",
+        "false",
+        "8",
+        "3298",
+        "4243",
+        "0",
+        "343",
+        "false"
+      ],
+      "lane": "split",
+      "pending": 0,
+      "position": "3297,4249,0"
+    }
+  ],
+  "trials": 200,
+  "wave19_excluded": 19,
+  "eligible_count": 181,
+  "eligible_ticks": {
+    "mean": 327.0055248618784,
+    "min": 312,
+    "max": 356
+  },
+  "within202_seconds_all": 170,
+  "within202_seconds_eligible": 166
+}

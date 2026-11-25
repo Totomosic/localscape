@@ -1,0 +1,225 @@
+package org.localscape.nylocas.ranger;
+
+import org.junit.Test;
+import org.localscape.nylocas.ranger.RangerStrategy.Crab;
+import org.localscape.nylocas.ranger.RangerStrategy.Decision;
+import org.localscape.nylocas.ranger.RangerStrategy.Lane;
+import org.localscape.nylocas.ranger.RangerStrategy.Room;
+import org.localscape.nylocas.ranger.RangerStrategy.Style;
+import org.localscape.nylocas.ranger.RangerStrategy.Weapon;
+
+import static org.junit.Assert.*;
+
+/** Movement assistance only after Ranger work and all possible parent births are closed. */
+public class RangerTerminalMeleeTest
+{
+	private final RangerStrategy strategy = new RangerStrategy();
+	private int key;
+
+	private Room room()
+	{
+		Room room = new Room();
+		room.wave = 31;
+		room.spawns[31] = 264;
+		room.player = RangerStrategy.tile(3293, 4248);
+		room.specialEnergy = 1000;
+		return room;
+	}
+
+	private Crab crab(Room room, int wave, int born, boolean big, Style style, int x, int y)
+	{
+		Crab crab = new Crab(++key, key, born, wave, Lane.SPLIT, (char) 0, big, style,
+			RangerStrategy.tile(x, y));
+		room.crabs.add(crab);
+		return crab;
+	}
+
+	private Crab terminal(Room room)
+	{
+		Crab melee = crab(room, 31, 264, false, Style.MELEE, 3292, 4243);
+		melee.hp = 7;
+		return melee;
+	}
+
+	@Test
+	public void seed167TerminalMeleeCanUseTheNormalProjectedApproachFromDistanceFive()
+	{
+		Room room = room();
+		Crab melee = terminal(room);
+		Decision decision = strategy.decide(room, 304);
+		assertSame(melee, decision.target != null ? decision.target : decision.approach);
+		assertEquals(Weapon.CLAWS, decision.weapon);
+		assertFalse(decision.special);
+		assertTrue(decision.pathToTarget);
+	}
+
+	@Test
+	public void currentObstructionRequestsAnOrdinaryMovementApproachInsteadOfGivingUp()
+	{
+		Room room = room();
+		Crab melee = terminal(room);
+		room.obstructed.add(melee.key);
+		Decision decision = strategy.decide(room, 304);
+		assertNull(decision.target);
+		assertSame(melee, decision.approach);
+		assertEquals(Weapon.CLAWS, decision.weapon);
+		assertFalse(decision.special);
+		assertEquals(0, melee.ownHitUntil);
+	}
+
+	@Test
+	public void livingBigsBigCorpsesAndIgnoredOldParentsAllKeepWorkOpen()
+	{
+		for (int parentState = 0; parentState < 3; parentState++)
+		{
+			strategy.reset();
+			Room room = room();
+			terminal(room);
+			Crab parent = crab(room, parentState == 2 ? 29 : 31, 280, true, Style.MELEE, 3300, 4253);
+			if (parentState == 1)
+			{
+				parent.hp = 0;
+				parent.dying = true;
+			}
+			parent.nulled = true;
+			Decision decision = strategy.decide(room, 304);
+			assertNull(decision.target);
+			assertNull(decision.approach);
+		}
+	}
+
+	@Test
+	public void claimedAndInFlightLiveRangeMagicTargetsStillKeepWorkOpen()
+	{
+		for (Style style : new Style[]{Style.RANGE, Style.MAGIC})
+		{
+			for (int state = 0; state < 2; state++)
+			{
+				strategy.reset();
+				Room room = room();
+				terminal(room);
+				Crab ownWork = crab(room, 31, 280, false, style, 3300, 4253);
+				if (state == 0) ownWork.claimedUntil = 340;
+				if (state == 1)
+				{
+					ownWork.ownHitUntil = 340;
+					ownWork.ownHitHp = 0;
+				}
+				Decision decision = strategy.decide(room, 304);
+				assertNull(decision.target);
+				assertNull(decision.approach);
+			}
+		}
+	}
+
+	@Test
+	public void ignoredOldRangeStillKeepsWorkOpenUntilItIsGone()
+	{
+		Room room = room();
+		terminal(room);
+		crab(room, 29, 280, false, Style.RANGE, 3300, 4253);
+		assertNull(strategy.decide(room, 304).target);
+		assertNull(strategy.decide(room, 304).approach);
+	}
+
+	@Test
+	public void aPersonalNullRangeTargetDoesNotInventAvailableRangerWork()
+	{
+		Room room = room();
+		Crab melee = terminal(room);
+		crab(room, 31, 280, false, Style.RANGE, 3300, 4253).nulled = true;
+		Decision decision = strategy.decide(room, 304);
+		assertSame(melee, decision.target != null ? decision.target : decision.approach);
+	}
+
+	@Test
+	public void evenAnOwnMeleeFlightIsNotDisplacedByTheNewApproach()
+	{
+		Room room = room();
+		terminal(room);
+		Crab pending = crab(room, 31, 280, false, Style.MELEE, 3300, 4253);
+		pending.ownHitUntil = 340;
+		pending.ownHitHp = 0;
+		Decision decision = strategy.decide(room, 304);
+		assertNull(decision.target);
+		assertNull(decision.approach);
+	}
+
+	@Test
+	public void futureNamedRangeIdentityKeepsWorkOpenDuringItsMeleePhase()
+	{
+		Room room = room();
+		room.spawns[31] = 100;
+		Crab north = new Crab(++key, key, 100, 31, Lane.WEST, 'N', false, Style.MELEE,
+			RangerStrategy.tile(3290, 4249));
+		room.crabs.add(north);
+		crab(room, 31, 100, false, Style.MELEE, 3291, 4248);
+		Decision decision = strategy.decide(room, 100);
+		assertNull(decision.target);
+		assertNull(decision.approach);
+	}
+
+	@Test
+	public void aFutureMagicStyleAtArrivalCannotBeChasedWithClaws()
+	{
+		Room room = room();
+		Crab flicker = new Crab(++key, key, 300, 30, Lane.SOUTH, 'W', false, Style.MELEE,
+			RangerStrategy.tile(3292, 4243));
+		room.crabs.add(flicker);
+		Decision decision = strategy.decide(room, 325);
+		assertNull(decision.target);
+		assertNull(decision.approach);
+	}
+
+	@Test
+	public void ordinaryLifetimeAndReadyBoundsStillApplyToTheLongerApproach()
+	{
+		Room room = room();
+		terminal(room);
+		room.ready = 305;
+		assertNull(strategy.decide(room, 304).approach);
+		strategy.reset();
+		room = room();
+		crab(room, 31, 257, false, Style.MELEE, 3301, 4254);
+		Decision expiresBeforeArrival = strategy.decide(room, 304);
+		assertNull(expiresBeforeArrival.target);
+		assertNull(expiresBeforeArrival.approach);
+	}
+
+	@Test
+	public void actualWave30AndBirth29AreStillOutsideTheAssistScope()
+	{
+		Room room = room();
+		room.wave = 30;
+		room.spawns[30] = 270;
+		crab(room, 30, 280, false, Style.MELEE, 3292, 4243);
+		assertNull(strategy.decide(room, 304).target);
+		assertNull(strategy.decide(room, 304).approach);
+		strategy.reset();
+		room = room();
+		crab(room, 29, 280, false, Style.MELEE, 3292, 4243);
+		assertNull(strategy.decide(room, 304).target);
+		assertNull(strategy.decide(room, 304).approach);
+	}
+
+	@Test
+	public void targetClaimsAndPersonalNullStillBlockAndNoSpecialEnergyIsRequired()
+	{
+		for (boolean nulled : new boolean[]{false, true})
+		{
+			strategy.reset();
+			Room room = room();
+			Crab melee = terminal(room);
+			if (nulled) melee.nulled = true;
+			else melee.claimedUntil = 340;
+			assertNull(strategy.decide(room, 304).target);
+			assertNull(strategy.decide(room, 304).approach);
+		}
+		strategy.reset();
+		Room room = room();
+		room.specialEnergy = 0;
+		terminal(room);
+		assertFalse(strategy.decide(room, 304).special);
+		assertEquals(Weapon.CLAWS, strategy.decide(room, 304).weapon);
+	}
+}

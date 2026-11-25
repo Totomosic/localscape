@@ -1,0 +1,48 @@
+{
+  "status": "isolated idle-only local cleanup melee candidate; unpromoted; root owns native/batch validation",
+  "baseline": "CURRENT canonical pure ranger guidance +Age3 first Mage South/East19 gate and retained idlePIPE, all current role tests197 at capture",
+  "scope": "Only actual31, ranger ready, ordinary candidate list entirely empty (including future feasible PIPE/EYE approaches). Separate local list adds fresh birth>=30 smallMELEE within3, never a special attack.",
+  "guards": "PersonalNULL/actual own-flight/partner claims, HP/death/expiry, current LOS and saved own/mage packets preserved. Reuses add() projected styles/positions, nativeRUN2 travel and full reservation return budget; only candidate.at==currenttick accepted. No energy/damage/supply changes.",
+  "policyFiles": [
+    "policy-source/org/localscape/nylocas/ranger/RangerStrategy.java"
+  ],
+  "tests": {
+    "currentCanonical": 197,
+    "newBehaviorTests": 11,
+    "candidatePassing": 208,
+    "baselineWithCandidateTestsFailures": 3,
+    "revisedOldTests": 0
+  },
+  "reproduce": "python3 .state/simulations/training-v2-candidate-ranger-idle-cleanup-melee/run-check.py; --baseline confirms expected red",
+  "evidence": ".state/simulations/training-v2-ranger-idle-cleanup-melee-evidence/",
+  "observedOpportunitySummary": {
+    "selection100Rooms": 16,
+    "selection100Frames": 25,
+    "holdout200Rooms": 26,
+    "holdout200Frames": 48,
+    "terminalFreshMeleeOutlastsOldRooms": 11,
+    "framesAfterAllOldGone": 19
+  },
+  "nativeWitness": {
+    "seed": 241,
+    "tick": 325,
+    "ranger": [
+      3293,
+      4248
+    ],
+    "targetKey": 205,
+    "target": [
+      3290,
+      4245
+    ],
+    "birthWave": 31,
+    "hp": 8,
+    "distance": 3,
+    "mageReady": false,
+    "magePlannedSulphurTick": 326,
+    "lastOldPresent": 315,
+    "targetLastPresent": 329
+  },
+  "evidenceLimits": "Trace lacks current LOS and exact completed-rule state. Leases reconstructed from previous afterCycle snapshot; Mage-ready same-target plans conservatively excluded for provisional claims. These are opportunity witnesses, not proven native launches or speed wins.",
+  "risks": "Normal4tick Claws cooldown may delay targets born/available afterward, despite preserving all currently feasible ordinary approaches. Native engine remains authoritative for pathfinding, finite run energy and attacks."
+}

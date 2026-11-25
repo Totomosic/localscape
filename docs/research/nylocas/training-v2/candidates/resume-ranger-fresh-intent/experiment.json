@@ -1,0 +1,23 @@
+{
+  "status": "isolated hypothesis candidate; not promoted; no simulation",
+  "baseline": "current canonical Java and both role test trees; independent of ranger-guidance and one-tick-bow candidates",
+  "hypothesis": "Pre-cap12-tick approach intent can retain an old unopened fullHP small despite newer equal-time useful smalls. Let those already-valid newer choices compete without changing scoring or timing.",
+  "scope": "Only pre-cap first-shot commitment retention. Release when committed target is unnamed, small, fullHP and unopened and post-prioritization choices contain a newer small. Post-cap and shared AttackIntent class unchanged.",
+  "preserved": "Earliest attack, big deadlines, named packets, confirmed wounded/opened-zero survivor followups, partner/personal hit claims, NULL, final saved12 guard, all current model fields.",
+  "changedFiles": [
+    "policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java",
+    "test-source/org/localscape/nylocas/ranger/RangerStrategyTest.java"
+  ],
+  "newTestSource": "RangerFreshIntentTest.java (10 tests)",
+  "revisedExistingTest": "approachKeepsFirstShotWhenANewSpawnOnlyImprovesTheScore -> unopenedApproachReconsidersNewerUsefulSmallDuringCooldown; only old test requiring retained unopened approach now follows newer wounded split.",
+  "tests": {
+    "candidate": 179,
+    "passed": 179,
+    "ranger": 102,
+    "mage": 77,
+    "baselineWithCandidateTests": 179,
+    "expectedFailuresOnBaseline": 3
+  },
+  "reproduction": "python3 .state/simulations/training-v2-candidate-ranger-fresh-intent/run-check.py; add --baseline for expected red comparison",
+  "limitations": "A newer alternative can compete but is not forced; original gain/beam scoring still selects best plan. Native adapter and encounter simulation not run. No speed claim."
+}

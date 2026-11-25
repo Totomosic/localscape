@@ -1,0 +1,59 @@
+--- client/src/test/java/org/localscape/nylocas/mage/MageStrategyTest.java
++++ client/src/test/java/org/localscape/nylocas/mage/MageStrategyTest.java
+@@ -824,4 +824,56 @@
+ 		crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3296, 4248);
+ 		Decision d = strategy.decide(r, 102); assertNull(d.target); assertNull(d.approach);
+ 	}
++
++	@Test public void idle18StagesForSouth19FirstRequest()
++	{
++		Room r = room(18, 100, 3295, 4248);
++		Decision d = strategy.decide(r, 104);
++		assertNull(d.target); assertNull(d.approach); assertEquals(Weapon.EYE, d.weapon);
++		assertEquals(MageStrategy.tile(3295, 4243), d.tile); assertEquals("Prepare South big 19", d.reason);
++	}
++	@Test public void south19StagingAllowsSouth0ThenEast3InTheirFirstMagicWindows()
++	{
++		Room prior = room(18, 92, 3295, 4248);
++		Decision staging = strategy.decide(prior, 96); strategy.reset();
++		Room r = room(19, 100, staging.tile.getX(), staging.tile.getY());
++		Crab south = crab(r, 19, 100, Lane.SOUTH, 'W', true, Style.MAGIC, 3295, 4233);
++		Crab east = crab(r, 19, 100, Lane.EAST, 'S', true, Style.MAGIC, 3309, 4248);
++		Decision first = strategy.decide(r, 100);
++		assertSame(south, first.target); assertEquals(Weapon.EYE, first.weapon); assertFalse(first.pathToTarget);
++		strategy.attacked(first, 101, 100); r.ready = 103;
++		south.point = MageStrategy.tile(3295, 4234); east.point = MageStrategy.tile(3308, 4248);
++		Decision approach = strategy.decide(r, 101);
++		assertTrue(approach.target == east || approach.approach == east);
++		// Cooldown travel overlaps the native running cycle; south's first projectile still awaits impact.
++		r.player = MageStrategy.tile(3297, 4243); south.point = MageStrategy.tile(3295, 4236); east.point = MageStrategy.tile(3306, 4248);
++		Decision second = strategy.decide(r, 103);
++		assertSame(east, second.target); assertEquals(Weapon.EYE, second.weapon); assertFalse(second.pathToTarget);
++	}
++	@Test public void south19IdleStagingNeverDisplacesOwnWorkOrIdlePipeSupport()
++	{
++		Room r = room(18, 100, 3295, 4248);
++		Crab own = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3296, 4248);
++		assertSame(own, strategy.decide(r, 102).target); own.dying = true; strategy.reset();
++		Crab support = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3295, 4249);
++		assertSame(support, strategy.decide(r, 102).target); assertEquals(Weapon.PIPE, strategy.decide(r, 102).weapon);
++	}
++	@Test public void south19StagingKeepsOtherWaveAndPostCapStaging()
++	{
++		Room r = room(17, 100, 3295, 4248);
++		assertEquals(MageStrategy.tile(3295, 4248), strategy.decide(r, 104).tile);
++		r.wave = 19; r.spawns[19] = 104;
++		assertEquals("Prepare South opener 20", strategy.decide(r, 108).reason);
++		r.wave = 20; r.spawns[20] = 112;
++		Decision postCap = strategy.decide(r, 116);
++		assertEquals(Weapon.BARRAGE, postCap.weapon); assertEquals("Reserve 21 west barrage", postCap.reason);
++		assertEquals(MageStrategy.tile(3290, 4249), postCap.tile);
++	}
++	@Test public void south19StagingDoesNotChangeMandatoryScythe12Reservation()
++	{
++		Room r = room(12, 100, 3301, 4249);
++		Decision reserve = strategy.decide(r, 106);
++		assertEquals(Weapon.SCYTHE, reserve.weapon); assertEquals("Reserve 12 east scythe", reserve.reason);
++		assertEquals(MageStrategy.tile(3301, 4249), reserve.tile);
++	}
+ }

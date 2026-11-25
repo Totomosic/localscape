@@ -1,0 +1,34 @@
+--- upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java
++++ upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java
+@@ -368,6 +368,7 @@
+ 		Decision extraDinh = extraDinh25(room, tick);
+ 		if (extraDinh != null) return extraDinh;
+ 		List<Candidate> candidates = new ArrayList<>();
++		List<Candidate> idleRange = new ArrayList<>();
+ 		for (Crab c : room.crabs)
+ 		{
+ 			if (!eligible(room, c, tick) || protectedTarget(room, c, tick)) continue;
+@@ -391,6 +392,15 @@
+ 			}
+ 			Weapon weapon = c.style == Style.MAGIC ? Weapon.EYE : c.style == Style.MELEE ? Weapon.SULPHUR : Weapon.PIPE;
+ 			if (!matchesNext(c, weapon.style, tick)) continue;
++			// A fresh split can use a genuinely idle ready tick, without claiming a lane
++			// assignment, displacing an own-role approach, or spending a packet's budget.
++			if (room.wave < 20 && !c.big && c.lane == Lane.SPLIT && c.style == Style.RANGE
++				&& age <= 4 && !c.partnerNulled && tick >= room.ready && !room.obstructed.contains(c.key)
++				&& c.distance(room.player) <= Weapon.PIPE.range)
++			{
++				Decision fallback = new Decision(c, Weapon.PIPE, c.point, false, null, "Idle ranged split support");
++				add(idleRange, room, next, fallback, 500 - age * 100, tick, tick, tick);
++			}
+ 			if (c.big && !finishBig(c, room, tick) || c.style == Style.RANGE && (c.big || !c.partnerNulled)) continue;
+ 			// Lane assignments own their opening offset and weapon. Generic cleanup
+ 			// must not bypass the rotation while that assignment is still pending.
+@@ -405,6 +415,7 @@
+ 			Decision d = new Decision(c, weapon, c.point, false, null, "Fresh " + c.style + (c.big ? " assigned big" : " small"));
+ 			add(candidates, room, next, d, score, tick, tick, c.born + 48);
+ 		}
++		if (candidates.isEmpty()) candidates.addAll(idleRange);
+ 		Comparator<Candidate> priority = Comparator.comparingInt((Candidate c) -> deferred(c, tick) ? 0 : 1)
+ 			.thenComparingInt(c -> c.at)
+ 			.thenComparingInt(c -> -c.score)

@@ -1,0 +1,982 @@
+[
+  {
+    "seed": "261725810220702",
+    "rule": "21 west barrage",
+    "spawn": 184,
+    "frames": [
+      {
+        "wave": 20,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3290,4249,0",
+        "weapon": "BARRAGE",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 21 west barrage",
+        "tick": 182,
+        "targets": [],
+        "nulls": [],
+        "engine": [
+          "0,4",
+          "null,null",
+          "3299,4248,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "93,83"
+      },
+      {
+        "wave": 20,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3290,4249,0",
+        "weapon": "BARRAGE",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 21 west barrage",
+        "tick": 183,
+        "targets": [],
+        "nulls": [],
+        "engine": [
+          "-1,3",
+          "null,null",
+          "3301,4248,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "93,83"
+      },
+      {
+        "wave": 21,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3290,4249,0",
+        "weapon": "BARRAGE",
+        "target": "110",
+        "rule": "21 west barrage",
+        "reason": "21 west barrage",
+        "tick": 184,
+        "targets": [
+          {
+            "key": 110,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 0,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4249,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 111,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 0,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "-2,2",
+          "8,8",
+          "3301,4248,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "93,83"
+      },
+      {
+        "wave": 21,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3290,4249,0",
+        "weapon": "BARRAGE",
+        "target": "110",
+        "rule": "21 west barrage",
+        "reason": "21 west barrage",
+        "tick": 185,
+        "targets": [
+          {
+            "key": 110,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 1,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4249,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 111,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 1,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,1",
+          "8,8",
+          "3301,4248,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "93,83"
+      },
+      {
+        "wave": 21,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3290,4249,0",
+        "weapon": "EYE",
+        "target": "109",
+        "rule": "null",
+        "reason": "Fresh MAGIC small",
+        "tick": 186,
+        "targets": [
+          {
+            "key": 110,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 2,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4249,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 111,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 2,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,0",
+          "8,8",
+          "3301,4248,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "93,83"
+      }
+    ]
+  },
+  {
+    "seed": "261725810220742",
+    "rule": "21 west barrage",
+    "spawn": 180,
+    "frames": [
+      {
+        "wave": 20,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3294,4247,0",
+        "weapon": "BARRAGE",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 21 west barrage",
+        "tick": 178,
+        "targets": [],
+        "nulls": [],
+        "engine": [
+          "0,2",
+          "8,null",
+          "3298,4248,0,3292,4247,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "87,77"
+      },
+      {
+        "wave": 20,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3292,4247,0",
+        "weapon": "BARRAGE",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 21 west barrage",
+        "tick": 179,
+        "targets": [],
+        "nulls": [],
+        "engine": [
+          "1,1",
+          "null,null",
+          "3300,4248,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "87,59"
+      },
+      {
+        "wave": 21,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3290,4249,0",
+        "weapon": "BARRAGE",
+        "target": "110",
+        "rule": "21 west barrage",
+        "reason": "21 west barrage",
+        "tick": 180,
+        "targets": [
+          {
+            "key": 110,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 0,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4249,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 111,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 0,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,0",
+          "8,8",
+          "3300,4248,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "87,81"
+      },
+      {
+        "wave": 21,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3290,4249,0",
+        "weapon": "BARRAGE",
+        "target": "110",
+        "rule": "21 west barrage",
+        "reason": "21 west barrage",
+        "tick": 181,
+        "targets": [
+          {
+            "key": 110,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 1,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4249,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 111,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 1,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,2",
+          "8,8",
+          "3300,4248,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "87,81"
+      },
+      {
+        "wave": 21,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3290,4249,0",
+        "weapon": "EYE",
+        "target": "108",
+        "rule": "null",
+        "reason": "Fresh MAGIC small",
+        "tick": 182,
+        "targets": [
+          {
+            "key": 110,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 2,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4249,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 111,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 2,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,1",
+          "8,8",
+          "3300,4248,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "87,81"
+      }
+    ]
+  },
+  {
+    "seed": "261725810220746",
+    "rule": "21 west barrage",
+    "spawn": 180,
+    "frames": [
+      {
+        "wave": 20,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3294,4246,0",
+        "weapon": "BARRAGE",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 21 west barrage",
+        "tick": 178,
+        "targets": [],
+        "nulls": [],
+        "engine": [
+          "0,0",
+          "null,null",
+          "3297,4248,0,3292,4247,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "99,67"
+      },
+      {
+        "wave": 20,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3292,4247,0",
+        "weapon": "BARRAGE",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 21 west barrage",
+        "tick": 179,
+        "targets": [],
+        "nulls": [],
+        "engine": [
+          "-1,-1",
+          "null,null",
+          "3299,4248,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "99,59"
+      },
+      {
+        "wave": 21,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3290,4249,0",
+        "weapon": "BARRAGE",
+        "target": "112",
+        "rule": "21 west barrage",
+        "reason": "21 west barrage",
+        "tick": 180,
+        "targets": [
+          {
+            "key": 112,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 0,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4249,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 113,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 0,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "-2,-2",
+          "8,8",
+          "3301,4249,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "99,81"
+      },
+      {
+        "wave": 21,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3290,4249,0",
+        "weapon": "BARRAGE",
+        "target": "112",
+        "rule": "21 west barrage",
+        "reason": "21 west barrage",
+        "tick": 181,
+        "targets": [
+          {
+            "key": 112,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 1,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4249,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 113,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 1,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,2",
+          "8,8",
+          "3301,4249,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "99,81"
+      },
+      {
+        "wave": 21,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3290,4249,0",
+        "weapon": "EYE",
+        "target": "108",
+        "rule": "null",
+        "reason": "Fresh MAGIC small",
+        "tick": 182,
+        "targets": [
+          {
+            "key": 112,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 2,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4249,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 113,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 2,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,1",
+          "8,8",
+          "3301,4249,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "99,81"
+      }
+    ]
+  },
+  {
+    "seed": "261725810220874",
+    "rule": "21 west barrage",
+    "spawn": 172,
+    "frames": [
+      {
+        "wave": 20,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3290,4249,0",
+        "weapon": "BARRAGE",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 21 west barrage",
+        "tick": 170,
+        "targets": [],
+        "nulls": [],
+        "engine": [
+          "1,4",
+          "null,null",
+          "3300,4248,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "99,85"
+      },
+      {
+        "wave": 20,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3290,4249,0",
+        "weapon": "BARRAGE",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 21 west barrage",
+        "tick": 171,
+        "targets": [],
+        "nulls": [],
+        "engine": [
+          "0,3",
+          "null,null",
+          "3301,4248,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "99,85"
+      },
+      {
+        "wave": 21,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3290,4249,0",
+        "weapon": "BARRAGE",
+        "target": "112",
+        "rule": "21 west barrage",
+        "reason": "21 west barrage",
+        "tick": 172,
+        "targets": [
+          {
+            "key": 112,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 0,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4249,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 113,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 0,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "-1,2",
+          "8,8",
+          "3301,4248,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "99,85"
+      },
+      {
+        "wave": 21,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3290,4249,0",
+        "weapon": "BARRAGE",
+        "target": "112",
+        "rule": "21 west barrage",
+        "reason": "21 west barrage",
+        "tick": 173,
+        "targets": [
+          {
+            "key": 112,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 1,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4249,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 113,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 1,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,1",
+          "8,8",
+          "3301,4248,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "99,85"
+      },
+      {
+        "wave": 21,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3290,4249,0",
+        "weapon": "EYE",
+        "target": "109",
+        "rule": "null",
+        "reason": "Fresh MAGIC small",
+        "tick": 174,
+        "targets": [
+          {
+            "key": 112,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 2,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4249,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 113,
+            "wave": 21,
+            "lane": "west",
+            "slot": "E",
+            "age": 2,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,0",
+          "8,8",
+          "3301,4248,0,3290,4249,0"
+        ],
+        "utility": [
+          "1",
+          "800",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "216"
+        ],
+        "hp": "99,85"
+      }
+    ]
+  }
+]

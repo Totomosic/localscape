@@ -1,0 +1,99 @@
+--- client/src/test/java/org/localscape/nylocas/mage/MageStrategyTest.java
++++ client/src/test/java/org/localscape/nylocas/mage/MageStrategyTest.java
+@@ -508,9 +508,9 @@
+ 		assertSame(big, strategy.decide(r, 103).target);
+ 	}
+ 
+-	@Test public void blowpipeRescuesARangedSmallOnlyWhenItsAssignedPartnerIsNulled()
+-	{
+-		Room r = room(18, 100, 3295, 4248);
++	@Test public void postCapBlowpipeRescuesARangedSmallOnlyWhenItsAssignedPartnerIsNulled()
++	{
++		Room r = room(20, 100, 3295, 4248);
+ 		Crab ranged = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3296, 4248);
+ 		assertNull(strategy.decide(r, 102).target);
+ 		ranged.partnerNulled = true;
+@@ -745,4 +745,83 @@
+ 		assertNull(strategy.decide(r, 102).target);
+ 	}
+ 
++
++	@Test public void idlePreCapPipeSupportsOnlyFreshRangedSplits()
++	{
++		Room r = room(18, 100, 3295, 4248);
++		Crab split = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3296, 4248);
++		Decision d = strategy.decide(r, 102);
++		assertSame(split, d.target); assertEquals(Weapon.PIPE, d.weapon);
++		assertEquals("Idle ranged split support", d.reason);
++		assertNull(strategy.decide(r, 105).target);
++	}
++	@Test public void idlePipeNeverDisplacesOwnReadyMagicOrMelee()
++	{
++		Room r = room(18, 100, 3295, 4248);
++		crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3296, 4248);
++		Crab magic = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3295, 4249);
++		assertSame(magic, strategy.decide(r, 102).target);
++		magic.dying = true; strategy.reset();
++		Crab melee = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.MELEE, 3294, 4248);
++		assertSame(melee, strategy.decide(r, 102).target);
++	}
++	@Test public void idlePipeNeverDisplacesAnOwnFutureApproach()
++	{
++		Room r = room(18, 100, 3290, 4248);
++		crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3291, 4248);
++		Crab magic = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3303, 4248);
++		Decision d = strategy.decide(r, 102);
++		assertTrue(d.target == magic || d.approach == magic); assertEquals(Weapon.EYE, d.weapon);
++	}
++	@Test public void idlePipeDoesNotApproachBlockedOrDistantPartnerWork()
++	{
++		Room r = room(18, 100, 3295, 4248);
++		Crab split = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3296, 4248);
++		r.obstructed.add(split.key); Decision blocked = strategy.decide(r, 102);
++		assertNull(blocked.target); assertNull(blocked.approach);
++		r.obstructed.clear(); split.point = MageStrategy.tile(3302, 4248);
++		Decision distant = strategy.decide(r, 102); assertNull(distant.target); assertNull(distant.approach);
++	}
++	@Test public void idlePipeHonorsNullClaimOwnFlightAndDeath()
++	{
++		Room r = room(18, 100, 3295, 4248);
++		Crab split = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3296, 4248);
++		split.nulled = true; assertNull(strategy.decide(r, 102).target);
++		split.nulled = false; split.claimedUntil = 105; assertNull(strategy.decide(r, 102).target);
++		split.claimedUntil = 0; split.ownHitUntil = 105; split.ownHitHp = 0;
++		assertNull(strategy.decide(r, 102).target);
++		split.ownHitUntil = 0; split.dying = true; assertNull(strategy.decide(r, 102).target);
++	}
++	@Test public void idlePipeKeepsFirstTick11BarrageCooldownBudget()
++	{
++		Room r = room(10, 100, 3301, 4249);
++		Crab split = crab(r, 10, 106, Lane.SPLIT, (char) 0, false, Style.RANGE, 3301, 4250);
++		assertSame(split, strategy.decide(r, 106).target);
++		Decision reserve = strategy.decide(r, 107);
++		assertNull(reserve.target); assertEquals(Weapon.BARRAGE, reserve.weapon);
++	}
++	@Test public void idlePipeKeepsFirstTick11BarrageReturnBudget()
++	{
++		Room r = room(10, 100, 3292, 4249);
++		crab(r, 10, 104, Lane.SPLIT, (char) 0, false, Style.RANGE, 3291, 4250);
++		Decision reserve = strategy.decide(r, 104);
++		assertNull(reserve.target); assertEquals(Weapon.BARRAGE, reserve.weapon);
++		assertEquals(MageStrategy.tile(3301, 4249), reserve.tile);
++	}
++	@Test public void idlePipeNeverOpensLaneTargetsBigsOrPostCapWork()
++	{
++		Room r = room(18, 100, 3295, 4248);
++		Crab lane = crab(r, 18, 100, Lane.WEST, 'S', false, Style.RANGE, 3296, 4248);
++		assertNull(strategy.decide(r, 102).target); r.crabs.remove(lane);
++		Crab big = crab(r, 18, 100, Lane.SPLIT, (char) 0, true, Style.RANGE, 3296, 4248);
++		assertNull(strategy.decide(r, 102).target); r.crabs.remove(big);
++		crab(r, 20, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3296, 4248);
++		r.wave = 20; r.spawns[20] = 100; assertNull(strategy.decide(r, 102).target);
++	}
++	@Test public void idlePipeDoesNotPlanPartnerWorkDuringOwnCooldown()
++	{
++		Room r = room(18, 100, 3295, 4248); r.ready = 103;
++		crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3296, 4248);
++		Decision d = strategy.decide(r, 102); assertNull(d.target); assertNull(d.approach);
++	}
+ }

@@ -1,0 +1,20 @@
+--- .state/simulations/training-v3-candidate-mage-barrage21-recovery/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:35:23.177649248 +0800
++++ .state/simulations/training-v3-candidate-mage-south23-recovery/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:37:37.224542158 +0800
+@@ -604,7 +604,7 @@
+ 
+ 	private static boolean requiredBig(Crab c)
+ 	{
+-		return c.big && (c.wave == 24 && (c.lane == Lane.SOUTH || c.lane == Lane.EAST || c.lane == Lane.WEST)
++		return c.big && (c.wave == 23 && c.lane == Lane.SOUTH || c.wave == 24 && (c.lane == Lane.SOUTH || c.lane == Lane.EAST || c.lane == Lane.WEST)
+ 			|| (c.wave == 25 || c.wave == 26) && c.lane == Lane.WEST);
+ 	}
+ 
+@@ -613,7 +613,7 @@
+ 		int age = tick - c.born;
+ 		// These parents remain assigned after their initial rotation window.
+ 		// Bad damage, travel or a blocked packet must not abandon an unopened big.
+-		if (requiredBig(c)) return true;
++		if (requiredBig(c) && (c.wave != 23 || age >= 7)) return true;
+ 		if (opened.contains(c.key) && ASSIGNMENTS.stream().anyMatch(a -> a.big && a.matches(c))
+ 			&& (room.wave < 21 || c.wave >= 20 || age < 26)) return true;
+ 		// Post-Dinh recovery: the east wave-22 fighting big, or west melee big,

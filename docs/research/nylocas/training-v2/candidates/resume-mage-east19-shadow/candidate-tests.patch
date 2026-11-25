@@ -1,0 +1,74 @@
+--- client/src/test/java/org/localscape/nylocas/mage/MageStrategyTest.java
++++ client/src/test/java/org/localscape/nylocas/mage/MageStrategyTest.java
+@@ -885,4 +885,71 @@
+ 		Decision packet = strategy.decide(r, 100); assertSame(west, packet.target);
+ 		assertEquals("21 west barrage", packet.rule); assertEquals(Weapon.BARRAGE, packet.weapon);
+ 	}
++
++	@Test public void unopenedEast19CanUseShadowFromItsAge3Window()
++	{
++		Room r = room(19, 100, 3295, 4248);
++		Crab east = crab(r, 19, 100, Lane.EAST, 'S', true, Style.MAGIC, 3300, 4248);
++		for (int age = 0; age < 3; age++) assertNull(strategy.decide(r, 100 + age).target);
++		Decision d = strategy.decide(r, 103);
++		assertSame(east, d.target); assertEquals(Weapon.SHADOW, d.weapon); assertEquals("East big 19", d.rule);
++	}
++	@Test public void east19ShadowNormalSurvivorFollowupUsesEye()
++	{
++		Room r = room(19, 100, 3295, 4248);
++		Crab east = crab(r, 19, 100, Lane.EAST, 'S', true, Style.MAGIC, 3300, 4248);
++		Decision first = strategy.decide(r, 103); assertEquals(Weapon.SHADOW, first.weapon);
++		strategy.attacked(first, 104, 103); r.ready = 108;
++		// Represent the real Applied release after a surviving zero/positive first hit.
++		east.ownHitUntil = 0; east.hp = 7;
++		Decision followup = strategy.decide(r, 110);
++		assertSame(east, followup.target); assertEquals(Weapon.EYE, followup.weapon);
++	}
++	@Test public void east19EyeRemainsAvailableWhenShadowCannotReturnFor21()
++	{
++		Room r = room(20, 110, 3290, 4249);
++		Crab east = crab(r, 19, 100, Lane.EAST, 'S', true, Style.MAGIC, 3297, 4249);
++		// Wave21 is due126: Shadow122+5 misses, Eye122+3 fits.
++		Decision d = strategy.decide(r, 122); assertSame(east, d.target); assertEquals(Weapon.EYE, d.weapon);
++		strategy.reset(); Decision reserve = strategy.decide(r, 124);
++		assertNull(reserve.target); assertEquals(Weapon.BARRAGE, reserve.weapon);
++	}
++	@Test public void east19ShadowUsesItsRangeWithoutChangingTheRequestFloor()
++	{
++		Room r = room(19, 100, 3294, 4248);
++		Crab east = crab(r, 19, 100, Lane.EAST, 'S', true, Style.MAGIC, 3306, 4248);
++		Decision d = strategy.decide(r, 103);
++		assertSame(east, d.target); assertEquals(Weapon.SHADOW, d.weapon); assertFalse(d.pathToTarget);
++	}
++	@Test public void east19ShadowDoesNotChangeSouthWestOrOtherEastBigWeapons()
++	{
++		Room r = room(19, 100, 3295, 4248);
++		Crab south = crab(r, 19, 100, Lane.SOUTH, 'W', true, Style.MAGIC, 3295, 4243);
++		assertEquals(Weapon.EYE, strategy.decide(r, 103).weapon); r.crabs.remove(south); strategy.reset();
++		Crab west = crab(r, 19, 100, Lane.WEST, 'S', true, Style.MAGIC, 3290, 4248);
++		Decision fallback = strategy.decide(r, 100); assertSame(west, fallback.target); assertEquals(Weapon.EYE, fallback.weapon);
++		strategy.reset(); r = room(30, 100, 3297, 4249);
++		Crab late = crab(r, 30, 100, Lane.EAST, 'S', true, Style.MAGIC, 3300, 4249);
++		Decision other = strategy.decide(r, 101); assertSame(late, other.target); assertEquals(Weapon.EYE, other.weapon);
++	}
++	@Test public void east19ShadowRespectsTheExistingShadowOptOut()
++	{
++		Room r = room(19, 100, 3295, 4248); r.shadowOpening = false;
++		Crab east = crab(r, 19, 100, Lane.EAST, 'S', true, Style.MAGIC, 3300, 4248);
++		Decision d = strategy.decide(r, 103); assertSame(east, d.target); assertEquals(Weapon.EYE, d.weapon);
++	}
++	@Test public void east19ShadowDoesNotForceEastAheadOfEquallyEarlySouth()
++	{
++		Room r = room(19, 100, 3295, 4248);
++		Crab south = crab(r, 19, 100, Lane.SOUTH, 'W', true, Style.MAGIC, 3295, 4243);
++		crab(r, 19, 100, Lane.EAST, 'S', true, Style.MAGIC, 3300, 4248);
++		Decision d = strategy.decide(r, 103); assertSame(south, d.target); assertEquals(Weapon.EYE, d.weapon);
++	}
++	@Test public void east19ShadowLeavesMandatory21BarrageFirst()
++	{
++		Room r = room(21, 125, 3290, 4249);
++		crab(r, 19, 100, Lane.EAST, 'S', true, Style.MAGIC, 3297, 4249);
++		Crab west = crab(r, 21, 125, Lane.WEST, 'N', false, Style.MAGIC, 3281, 4249);
++		Decision d = strategy.decide(r, 125); assertSame(west, d.target); assertEquals(Weapon.BARRAGE, d.weapon);
++	}
+ }

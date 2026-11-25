@@ -1,0 +1,225 @@
+{
+  "trials": 100,
+  "counts": {
+    "preparation_swaps_without_combat_snapshot": 200,
+    "combat_swaps": 392,
+    "role1_destination1": 200,
+    "role1_destination3": 185,
+    "swaps_outside_confirmed_five_tick_window": 11,
+    "role0_destination3": 7
+  },
+  "examples": [
+    {
+      "trial": 1,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 178,
+        "wave": 20,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 177,
+        "weapon": 31113,
+        "rule": "null"
+      },
+      "remaining_cooldown": 2
+    },
+    {
+      "trial": 6,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 177,
+        "wave": 20,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 176,
+        "weapon": 31113,
+        "rule": "null"
+      },
+      "remaining_cooldown": 2
+    },
+    {
+      "trial": 20,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 178,
+        "wave": 20,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 177,
+        "weapon": 31113,
+        "rule": "null"
+      },
+      "remaining_cooldown": 2
+    },
+    {
+      "trial": 23,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 161,
+        "wave": 20,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 160,
+        "weapon": 29084,
+        "rule": "null"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 30,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 178,
+        "wave": 20,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 177,
+        "weapon": 31113,
+        "rule": "null"
+      },
+      "remaining_cooldown": 2
+    },
+    {
+      "trial": 31,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 174,
+        "wave": 20,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 173,
+        "weapon": 31113,
+        "rule": "null"
+      },
+      "remaining_cooldown": 2
+    },
+    {
+      "trial": 35,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 176,
+        "wave": 20,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 175,
+        "weapon": 31113,
+        "rule": "null"
+      },
+      "remaining_cooldown": 2
+    },
+    {
+      "trial": 45,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 171,
+        "wave": 20,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 170,
+        "weapon": 29084,
+        "rule": "null"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 61,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 161,
+        "wave": 20,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 160,
+        "weapon": 31113,
+        "rule": "South opener 20"
+      },
+      "remaining_cooldown": 2
+    },
+    {
+      "trial": 63,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 173,
+        "wave": 20,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 172,
+        "weapon": 31113,
+        "rule": "South opener 20"
+      },
+      "remaining_cooldown": 2
+    },
+    {
+      "trial": 75,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 174,
+        "wave": 20,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 173,
+        "weapon": 31113,
+        "rule": "null"
+      },
+      "remaining_cooldown": 2
+    }
+  ],
+  "caveat": "Arceuus readiness excludes optional experimental pre-staging. Outside-window ancient requests may be mandatory barrage recovery; inspect examples. Pre-entry preparation is exempt from combat cooldown guidance.",
+  "run": ".state/simulations/training-v3-combined-guidance-random-100",
+  "source_sha256": "2b52f0ebae9f89179e593ee2bbc99deb7abf532473f756849115c976ce03a2db"
+}

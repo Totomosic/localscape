@@ -1,0 +1,72 @@
+--- a/api/nylocas-agents/src/main/java/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/api/nylocas-agents/src/main/java/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -199,7 +199,7 @@
+ 	// Priority 0: reserved windows; 1: paired lane assignments; 2: conditional/deferred work.
+ 	public static final List<Rule> RULES = Arrays.asList(
+ 		rule("Opening west", 1, Lane.WEST, 'S', false, Weapon.BOW, 0, 2, 0, 3292, 4249),
+-		rule("Opening east", 2, Lane.EAST, 'S', false, Weapon.BOW, 2, 4, 0, 3298, 4249),
++		rule("Opening east", 2, Lane.EAST, 'S', false, Weapon.BOW, 0, 4, 0, 3298, 4249),
+ 		rule("South chin 3", 3, Lane.SOUTH, 'E', false, Weapon.CHIN, 2, 4, 0, 3296, 4244),
+ 		rule("Opening scratch", 2, Lane.SOUTH, 'W', false, Weapon.CLAWS, 10, 13, 0, 3295, 4244),
+ 		rule("West big 5", 5, Lane.WEST, (char) 0, true, Weapon.PIPE, 2, 7, 0, 3290, 4248),
+@@ -404,7 +404,7 @@
+ 		if (room.wave == 20 && c.wave == 18)
+ 			return c.style == Style.RANGE && wave18Available(c, room, c.born + age);
+ 		if (room.wave >= 20 && c.wave < 20) return false;
+-		if (partnerMagicBig(c, room, age)) return true;
++		if (waveTwelveBackup(c, room) || partnerMagicBig(c, room, age)) return true;
+ 		BigAssignment assignment = BigAssignment.of(c);
+ 		if (assignment != null) return age >= assignment.first && (c.wave != 19 || c.style == Style.MAGIC);
+ 		if (c.wave == 18) return wave18Available(c, room, c.born + age);
+@@ -415,6 +415,11 @@
+ 		return c.wave == 23 && c.lane == Lane.SOUTH;
+ 	}
+ 
++	static boolean waveTwelveBackup(Crab c, Room room)
++	{
++		return room.wave == 12 && c.big && c.wave == 11 && c.lane == Lane.WEST && c.style == Style.MAGIC;
++	}
++
+ 	private static boolean partnerMagicBig(Crab c, Room room, int age)
+ 	{
+ 		if (!c.partnerNulled || !c.big || c.style != Style.MAGIC || age >= 26
+@@ -430,6 +435,7 @@
+ 	int bigServiceDeadline(Crab crab, Room room, int tick, Weapon weapon)
+ 	{
+ 		if (room.wave >= 20) return Integer.MAX_VALUE;
++		if (waveTwelveBackup(crab, room)) return room.spawns[12];
+ 		if (crab.big && crab.wave == 18 && wave18Available(crab, room, tick))
+ 		{
+ 			int deadline = crab.born + 26;
+--- a/api/nylocas-agents/src/main/java/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ b/api/nylocas-agents/src/main/java/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -105,6 +105,9 @@
+ 	{
+ 		// Keep attacking while ready; use cooldown to reach a big that needs service.
+ 		if (tick >= ready) keepEarliest(choices);
++		// Spend the first feasible opening bow tick before ordinary clearing.
++		if (choices.stream().anyMatch(p -> openingBow(last(p))))
++			choices.removeIf(p -> !openingBow(last(p)));
+ 		int serviceTick = Math.max(tick, ready);
+ 		if (RangerStrategy.wave18Released(room, serviceTick) && choices.stream()
+ 			.anyMatch(p -> last(p).target.big && last(p).target.wave == 18))
+@@ -115,6 +118,11 @@
+ 		int lane = choices.stream().mapToInt(p -> RangerStrategy.transitionLane(last(p).target)).min().getAsInt();
+ 		if (lane != Integer.MAX_VALUE) choices.removeIf(p -> RangerStrategy.transitionLane(last(p).target) != Integer.MAX_VALUE
+ 			&& RangerStrategy.transitionLane(last(p).target) > lane);
++	}
++
++	private static boolean openingBow(Decision decision)
++	{
++		return "Opening west".equals(decision.rule) || "Opening east".equals(decision.rule);
+ 	}
+ 
+ 	private static Decision last(Plan plan) { return plan.shots.get(plan.shots.size() - 1).decision; }
+@@ -221,6 +229,7 @@
+ 	private boolean allowed(Room room, Crab crab, Weapon weapon, int age)
+ 	{
+ 		if (RangerStrategy.savedMagePrimary(crab, crab.born + age)) return false;
++		if (weapon == Weapon.BOW && !crab.big && crab.wave == 6 && crab.lane == Lane.SOUTH) return false;
+ 		if (crab.big)
+ 		{
+ 			if (crab.wave == 18) return weapon.style == Style.RANGE && weapon != Weapon.CHIN

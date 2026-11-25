@@ -1,0 +1,8585 @@
+{
+  "rooms": 300,
+  "actualPrimaryFirstLane": {
+    "south": 285,
+    "west": 6,
+    "east": 9
+  },
+  "eastFirstRequestAge": {
+    "0": 5,
+    "1": 4,
+    "3": 3,
+    "7": 72,
+    "8": 11,
+    "9": 5,
+    "10": 102,
+    "11": 15,
+    "12": 5,
+    "13": 4,
+    "14": 2,
+    "15": 2,
+    "16": 29,
+    "17": 5,
+    "18": 1,
+    "19": 18,
+    "20": 7,
+    "21": 1,
+    "22": 1,
+    "None": 8
+  },
+  "southFirstRequestAge": {
+    "0": 3,
+    "1": 215,
+    "2": 53,
+    "3": 13,
+    "7": 5,
+    "8": 2,
+    "9": 1,
+    "10": 4,
+    "11": 2,
+    "13": 1,
+    "17": 1
+  },
+  "westStagingActual18Frames": 1548,
+  "westStagingRooms": 274,
+  "spawn19Point": {
+    "3291,4246,0": 6,
+    "3291,4247,0": 1,
+    "3291,4248,0": 227,
+    "3298,4251,0": 2,
+    "3292,4246,0": 8,
+    "3292,4247,0": 5,
+    "3295,4244,0": 2,
+    "3292,4245,0": 1,
+    "3297,4244,0": 1,
+    "3296,4248,0": 3,
+    "3293,4246,0": 3,
+    "3292,4244,0": 5,
+    "3294,4245,0": 1,
+    "3293,4250,0": 2,
+    "3301,4249,0": 1,
+    "3296,4247,0": 3,
+    "3300,4250,0": 2,
+    "3297,4243,0": 1,
+    "3291,4251,0": 2,
+    "3292,4249,0": 1,
+    "3298,4246,0": 1,
+    "3294,4244,0": 1,
+    "3292,4243,0": 1,
+    "3291,4245,0": 3,
+    "3296,4244,0": 1,
+    "3298,4250,0": 1,
+    "3293,4248,0": 2,
+    "3292,4252,0": 1,
+    "3295,4247,0": 1,
+    "3297,4251,0": 2,
+    "3297,4252,0": 1,
+    "3291,4249,0": 1,
+    "3290,4248,0": 1,
+    "3298,4244,0": 1,
+    "3299,4244,0": 1,
+    "3300,4251,0": 1,
+    "3299,4251,0": 2,
+    "3290,4249,0": 1
+  },
+  "sourceLogSha256": {
+    "training-v2-flight-mage-idle-pipe-100": "b0e6ae2759356f8e860139db248b07891277430b13691a77043c24bf10621bdb",
+    "training-v2-flight-mage-idle-pipe-validation-200": "e6c480088ec5ab62b57cd973e5185f339a65b5564535974f6257609313eade0f"
+  },
+  "perRoom": [
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 131,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 155,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4246,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 132,
+      "s19": 148,
+      "first": {
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 13
+        },
+        "east": {
+          "tick": 164,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3291,4247,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 133,
+      "s19": 164,
+      "first": {
+        "south": {
+          "tick": 165,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 174,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -8,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 134,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -8,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 135,
+      "s19": 152,
+      "first": {
+        "east": {
+          "tick": 152,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 0
+        },
+        "south": {
+          "tick": 155,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 3
+        },
+        "west": {
+          "tick": 164,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 12
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3298,4251,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 136,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 158,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 166,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 175,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3292,4246,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 137,
+      "s19": 164,
+      "first": {
+        "south": {
+          "tick": 165,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 171,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 174,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -19,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 138,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 163,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 139,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 146,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 151,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3292,4247,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 140,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 155,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 141,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 142,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 164,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 143,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 164,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 144,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 166,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 175,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -9,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 145,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 152,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 0
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 3
+        },
+        "west": {
+          "tick": 167,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 15
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3295,4244,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 146,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 156,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 8
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3292,4245,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 147,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 170,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -13,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 148,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -9,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 149,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 150,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 167,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 170,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 151,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 152,
+      "s19": 164,
+      "first": {
+        "south": {
+          "tick": 165,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 174,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 153,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 171,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 154,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3297,4244,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 155,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 168,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 8
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -14,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 156,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 157,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 160,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 8
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -10,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 158,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3296,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 159,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 151,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 3
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 164,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3291,4246,0",
+      "nativeAt19": 3,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 160,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 161,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -10,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 162,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 145,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 154,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 160,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 163,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 166,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 172,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -10,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 164,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 166,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 175,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -8,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 165,
+      "s19": 148,
+      "first": {
+        "west": {
+          "tick": 156,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 8
+        },
+        "south": {
+          "tick": 159,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 11
+        },
+        "east": {
+          "tick": 168,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 20
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3291,4246,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 166,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 168,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 167,
+      "s19": 148,
+      "first": {
+        "west": {
+          "tick": 155,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "south": {
+          "tick": 158,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4246,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 168,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 168,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 169,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3292,4247,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 170,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 164,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 8
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -16,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 171,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 172,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 170,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 176,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -12,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 173,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 167,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 170,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 174,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 150,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 164,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3293,4246,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 175,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 176,
+      "s19": 164,
+      "first": {
+        "south": {
+          "tick": 165,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 171,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 177,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 160,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 12
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3292,4244,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 178,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 155,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 179,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 146,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 153,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 9
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 18
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3294,4245,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 180,
+      "s19": 164,
+      "first": {
+        "south": {
+          "tick": 165,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 171,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -7,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 181,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 150,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3293,4250,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 182,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 158,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 165,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 9
+        },
+        "east": {
+          "tick": 171,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 15
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3301,4249,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 183,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 163,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 184,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 147,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 3
+        },
+        "west": {
+          "tick": 154,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 157,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 13
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3296,4247,0",
+      "nativeAt19": 3,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 185,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 186,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -9,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 187,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 172,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 20
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 188,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 189,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 190,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 163,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 191,
+      "s19": 168,
+      "first": {
+        "south": {
+          "tick": 169,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 175,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 178,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -11,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 192,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -11,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 193,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 194,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 163,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 195,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 196,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 197,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 198,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 164,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 12
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3292,4246,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 199,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -8,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 200,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3292,4246,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 201,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -7,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 202,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -11,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 203,
+      "s19": 148,
+      "first": {
+        "east": {
+          "tick": 148,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 0
+        },
+        "south": {
+          "tick": 151,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 3
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3300,4250,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 204,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 150,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 205,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 150,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 157,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 9
+        },
+        "east": {
+          "tick": 160,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 12
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 206,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 151,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 3
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 164,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3297,4243,0",
+      "nativeAt19": 3,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 207,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -14,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 208,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 209,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 168,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 210,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 211,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 145,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 151,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 154,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3293,4246,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 212,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 163,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 213,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 163,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -14,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 214,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 145,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 151,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 215,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 216,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 145,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 151,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 217,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 163,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -18,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 218,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 163,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 219,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 220,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 170,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 221,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 145,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 154,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 163,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 222,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 168,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 223,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -7,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 224,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 9
+        },
+        "east": {
+          "tick": 160,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 12
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4246,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 225,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 145,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 154,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 160,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 226,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 155,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3292,4244,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 227,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 166,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 172,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -8,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 228,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 229,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 164,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-100",
+      "seed": 230,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 159,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3293,4250,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 231,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 166,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 172,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -15,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 232,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 164,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 8
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 233,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 155,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 234,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3292,4247,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 235,
+      "s19": 148,
+      "first": {
+        "east": {
+          "tick": 148,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 0
+        },
+        "south": {
+          "tick": 151,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 3
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3298,4251,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 236,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -7,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 237,
+      "s19": 148,
+      "first": {
+        "east": {
+          "tick": 149,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 1
+        },
+        "south": {
+          "tick": 156,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 8
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3296,4247,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 238,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 160,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 8
+        },
+        "east": {
+          "tick": 163,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 239,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 240,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 241,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 242,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 243,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -8,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 244,
+      "s19": 144,
+      "first": {
+        "east": {
+          "tick": 145,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 152,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 8
+        },
+        "south": {
+          "tick": 155,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3296,4247,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 245,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 162,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 171,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 11
+        },
+        "east": {
+          "tick": 177,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 17
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 246,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 150,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 156,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 8
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3296,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 247,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 168,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 248,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 170,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -8,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 249,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 150,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3291,4251,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 250,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3292,4244,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 251,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 163,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3292,4247,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 252,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 253,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 150,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 254,
+      "s19": 148,
+      "first": {
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "south": {
+          "tick": 165,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 17
+        },
+        "east": {
+          "tick": 168,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 20
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3292,4249,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 255,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 256,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 257,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 163,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 258,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 163,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 259,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 260,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3298,4246,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 261,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -7,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 262,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 150,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 157,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 9
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3294,4244,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 263,
+      "s19": 168,
+      "first": {
+        "south": {
+          "tick": 169,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 179,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 11
+        },
+        "east": {
+          "tick": 185,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 17
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -12,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 264,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 165,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 9
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 265,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -9,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 266,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 166,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 267,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 158,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 163,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 268,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3295,4244,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 269,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 270,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 159,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 3
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3292,4243,0",
+      "nativeAt19": 3,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 271,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 272,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 163,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 273,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 170,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 274,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 156,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 8
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3291,4245,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 275,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3292,4244,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 276,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 148,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 0
+        },
+        "east": {
+          "tick": 151,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 3
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3296,4244,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 277,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 160,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 8
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3292,4246,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 278,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 171,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 279,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 166,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 172,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 280,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 146,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 154,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3296,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 281,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -11,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 282,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 283,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 170,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 284,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 285,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 286,
+      "s19": 164,
+      "first": {
+        "south": {
+          "tick": 165,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 175,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 11
+        },
+        "east": {
+          "tick": 184,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 20
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -8,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 287,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 288,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 150,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3291,4245,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 289,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 290,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 164,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 12
+        },
+        "east": {
+          "tick": 173,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 21
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3298,4250,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 291,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 146,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 152,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 8
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3293,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 292,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 293,
+      "s19": 140,
+      "first": {
+        "south": {
+          "tick": 143,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 3
+        },
+        "west": {
+          "tick": 150,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 156,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3292,4246,0",
+      "nativeAt19": 3,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 294,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 167,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 170,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 295,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -12,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 296,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 297,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 155,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 3
+        },
+        "west": {
+          "tick": 165,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 13
+        },
+        "east": {
+          "tick": 174,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 22
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3292,4252,0",
+      "nativeAt19": 3,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 298,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 171,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -8,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 299,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 300,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 301,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 164,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 302,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 164,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 8
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 303,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 146,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 151,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3292,4246,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 304,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 150,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 305,
+      "s19": 172,
+      "first": {
+        "south": {
+          "tick": 173,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 179,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -15,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 306,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 307,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 308,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 150,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 309,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 310,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 311,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 164,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 8
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -11,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 312,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 313,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 314,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 145,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 151,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 154,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 315,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 316,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 146,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 151,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 154,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3295,4247,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 317,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 155,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 318,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 170,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -9,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 319,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 320,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 145,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 156,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 12
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3292,4246,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 321,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3293,4246,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 322,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -10,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 323,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -13,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 324,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 164,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 8
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -17,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 325,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 170,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 326,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 163,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3291,4251,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 327,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 328,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 171,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 11
+        },
+        "east": {
+          "tick": 180,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 20
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -7,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 329,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 330,
+      "s19": 152,
+      "first": {
+        "east": {
+          "tick": 153,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "south": {
+          "tick": 162,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3297,4251,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 331,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 163,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 332,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -8,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 333,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 159,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3297,4252,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 334,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 150,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 156,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 8
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 335,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 336,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 163,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -9,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 337,
+      "s19": 164,
+      "first": {
+        "south": {
+          "tick": 165,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 171,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 338,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 339,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 158,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 163,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 340,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 163,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 341,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 342,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 343,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 344,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 166,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -18,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 345,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 169,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 17
+        }
+      },
+      "stage18frames": 9,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 346,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 145,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 151,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 154,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 347,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3291,4249,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 348,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 349,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 164,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 350,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 351,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 164,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 352,
+      "s19": 140,
+      "first": {
+        "south": {
+          "tick": 142,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 150,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 353,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 171,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 11
+        },
+        "east": {
+          "tick": 180,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 20
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 354,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 168,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3290,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 355,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 163,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -9,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 356,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 156,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 0
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 3
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3298,4244,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 357,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 15
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3291,4245,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 358,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 359,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 161,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 13
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 360,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 160,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 8
+        },
+        "east": {
+          "tick": 163,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -10,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 361,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 362,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 151,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 3
+        },
+        "east": {
+          "tick": 157,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 9
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3299,4244,0",
+      "nativeAt19": 3,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 363,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 161,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 13
+        }
+      },
+      "stage18frames": 12,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -12,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 364,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 158,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 163,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 365,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 366,
+      "s19": 144,
+      "first": {
+        "east": {
+          "tick": 145,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 1
+        },
+        "south": {
+          "tick": 152,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 8
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3300,4251,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 367,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 89,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 167,
+          "role": 1,
+          "key": 88,
+          "weapon": 31113,
+          "age": 11
+        },
+        "east": {
+          "tick": 170,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 14
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 368,
+      "s19": 152,
+      "first": {
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "south": {
+          "tick": 162,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 168,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3292,4244,0",
+      "nativeAt19": 4,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 369,
+      "s19": 152,
+      "first": {
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "south": {
+          "tick": 162,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 165,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 13
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4246,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 370,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 371,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3293,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 372,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 163,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 373,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 170,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -13,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 374,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 162,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 167,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 170,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 375,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 376,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3292,4247,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 377,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 378,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 164,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 8
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -7,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 379,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 168,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 380,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 381,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 146,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 151,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 382,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 383,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 384,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 166,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 172,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -17,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 385,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 168,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 386,
+      "s19": 140,
+      "first": {
+        "south": {
+          "tick": 147,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 150,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3292,4246,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 387,
+      "s19": 140,
+      "first": {
+        "south": {
+          "tick": 142,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 149,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 9
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 388,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 163,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 1,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 389,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 160,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 8
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -9,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 390,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 391,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 168,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 16
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -9,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 392,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 146,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 151,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 2,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 393,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 394,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -4,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 395,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 145,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 154,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 396,
+      "s19": 164,
+      "first": {
+        "south": {
+          "tick": 165,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 174,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -19,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 397,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 164,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 8
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 398,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 171,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 11
+        },
+        "east": {
+          "tick": 174,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 14
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -8,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 399,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 158,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 163,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3297,4251,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 400,
+      "s19": 140,
+      "first": {
+        "south": {
+          "tick": 142,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 147,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 150,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 7,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 401,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 166,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 175,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -13,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 402,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 167,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 11
+        },
+        "east": {
+          "tick": 173,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 17
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -9,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 403,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 155,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 404,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 150,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 158,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        },
+        "east": {
+          "tick": 167,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 19
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 405,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 170,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -9,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 406,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 169,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 9
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -6,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 407,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 163,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -12,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 408,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 163,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 409,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 4,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 410,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 167,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 170,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -11,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 411,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 167,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 11
+        },
+        "east": {
+          "tick": 176,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 20
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 412,
+      "s19": 160,
+      "first": {
+        "south": {
+          "tick": 161,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 167,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 170,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -7,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 413,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -8,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 414,
+      "s19": 152,
+      "first": {
+        "east": {
+          "tick": 152,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 0
+        },
+        "south": {
+          "tick": 155,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 3
+        },
+        "west": {
+          "tick": 162,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3299,4251,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 415,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 155,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 416,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 417,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 158,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3299,4251,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 418,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 155,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 3
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -3,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 419,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 154,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 420,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 146,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "east": {
+          "tick": 151,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 3,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 421,
+      "s19": 152,
+      "first": {
+        "east": {
+          "tick": 152,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 0
+        },
+        "south": {
+          "tick": 155,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 3
+        }
+      },
+      "stage18frames": 0,
+      "spawn19point": "3300,4250,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 422,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 162,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -18,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 423,
+      "s19": 156,
+      "first": {
+        "south": {
+          "tick": 157,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 163,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 166,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -5,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 424,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 159,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 11
+        },
+        "east": {
+          "tick": 165,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 17
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -7,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 425,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 145,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "west": {
+          "tick": 152,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 8
+        },
+        "east": {
+          "tick": 155,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 11
+        }
+      },
+      "stage18frames": 6,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -1,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 426,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 150,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 2
+        },
+        "west": {
+          "tick": 155,
+          "role": 1,
+          "key": 90,
+          "weapon": 31113,
+          "age": 7
+        },
+        "east": {
+          "tick": 158,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 1,
+      "spawn19point": "3290,4249,0",
+      "nativeAt19": 2,
+      "readyAt19": "false"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 427,
+      "s19": 148,
+      "first": {
+        "south": {
+          "tick": 149,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 156,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 8
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -10,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 428,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -2,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 429,
+      "s19": 152,
+      "first": {
+        "south": {
+          "tick": 153,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 159,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 7
+        }
+      },
+      "stage18frames": 8,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": -14,
+      "readyAt19": "true"
+    },
+    {
+      "run": "training-v2-flight-mage-idle-pipe-validation-200",
+      "seed": 430,
+      "s19": 144,
+      "first": {
+        "south": {
+          "tick": 145,
+          "role": 1,
+          "key": 91,
+          "weapon": 31113,
+          "age": 1
+        },
+        "east": {
+          "tick": 154,
+          "role": 1,
+          "key": 92,
+          "weapon": 31113,
+          "age": 10
+        }
+      },
+      "stage18frames": 5,
+      "spawn19point": "3291,4248,0",
+      "nativeAt19": 0,
+      "readyAt19": "true"
+    }
+  ]
+}

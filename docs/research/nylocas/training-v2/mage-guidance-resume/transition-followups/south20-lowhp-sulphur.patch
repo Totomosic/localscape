@@ -1,0 +1,13 @@
+--- age29-baseline/MageStrategy.java
++++ south20-lowhp-sulphur/MageStrategy.java
+@@ -422,7 +422,9 @@
+ 			// until the required late Dinh nulls its surviving magic phase.
+ 			if (requiredBig(c)) score += 6000;
+ 			if (c.style == Style.MAGIC && !c.big && room.wave >= 20 && room.wave <= 22 && c.point.getY() <= 4247) score += 5000;
+-			if (c.style == Style.MELEE && c.big) weapon = Weapon.SCYTHE;
++			if (c.style == Style.MELEE && c.big)
++				weapon = room.wave == 20 && c.wave == 20 && c.lane == Lane.SOUTH && c.hp <= 6
++					? Weapon.SULPHUR : Weapon.SCYTHE;
+ 			if (!c.big && c.style == Style.MELEE && cluster(room, c, tick) >= 2) { weapon = Weapon.SCYTHE; score += 2200; }
+ 			if (!c.big) score += Math.max(0, 8 - c.hp) * 40;
+ 			if (room.wave == 31 && c.wave >= 30 && c.lane == Lane.SPLIT && !c.big && c.style == Style.MAGIC && c.partnerNulled) score += 5000;

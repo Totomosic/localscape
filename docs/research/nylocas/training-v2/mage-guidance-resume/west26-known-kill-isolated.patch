@@ -1,0 +1,17 @@
+--- .state/simulations/training-v3-candidate-forecast-current-guidance/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:47:47.094341403 +0800
++++ .state/simulations/training-v3-candidate-mage-west26-known-kill/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:56:29.155435351 +0800
+@@ -599,10 +599,11 @@
+ 				&& !opened.contains(east.key) && eligible(room, east, tick))) return true;
+ 		if (c.big && c.wave == 27 && c.lane == Lane.WEST)
+ 		{
+-			// Finish the assigned 26 before spending attacks on 27. A 26 flight
+-			// still owns that work until the native impact confirms its death.
++			// Finish the assigned 26 before spending attacks on 27, unless
++			// already-rolled native hits prove that its remaining HP is covered.
+ 			if (room.crabs.stream().anyMatch(old -> old.big && old.wave == 26 && old.lane == Lane.WEST
+-				&& !old.dying && !old.nulled && old.hp > 0 && tick - old.born < 49)) return true;
++				&& !old.dying && !old.nulled && old.hp > 0 && tick - old.born < 49
++				&& (old.pendingDamage < 0 || old.pendingDamage < old.hp))) return true;
+ 			// Only open 27 while it is in the lane or just crossing the doorway.
+ 			if (!opened.contains(c.key) && tick - c.born > 9) return true;
+ 		}

@@ -1,0 +1,39 @@
+--- a/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -367,6 +367,8 @@
+ 				add(candidates, room, next, action, 100, tick, crab.born + 48);
+ 			}
+ 		}
++		if (candidates.isEmpty() && room.wave == 31)
++			candidates.addAll(idleCleanupMelee(room, next, tick));
+ 		preferTransitionLane(candidates);
+ 		Candidate best = candidates.stream().min(Comparator.comparingInt((Candidate c) -> c.at)
+ 			.thenComparingInt(c -> -c.score).thenComparingInt(c -> c.decision.target.key)).orElse(null);
+@@ -384,6 +386,27 @@
+ 			"Plan " + action.weapon + " #" + action.target.index + " @" + best.at + ": " + action.reason);
+ 		approach.approach = action.target;
+ 		return approach;
++	}
++
++	private List<Candidate> idleCleanupMelee(Room room, Reservation next, int tick)
++	{
++		List<Candidate> local = new ArrayList<>();
++		if (tick < room.ready) return local;
++		for (Crab crab : room.crabs)
++		{
++			int age = tick - crab.born;
++			if (crab.wave < 30 || crab.big || crab.style != Style.MELEE || crab.hp <= 0 || crab.dying
++				|| crab.nulled || crab.claimedUntil > tick || crab.awaitingHit(tick) || age < 0 || age >= 49
++				|| crab.distance(room.player) > 3 || room.obstructed.contains(crab.key)
++				|| savedMagePrimary(crab, tick) || protectedPacket(crab, tick)
++				|| !RangerFlickers.matchesNext(crab, Style.MELEE, tick)) continue;
++			Decision scratch = new Decision(crab, Weapon.CLAWS, CENTER, false, null, "Idle cleanup melee assist");
++			// Reuse native running/target projection and full packet return estimates.
++			add(local, room, next, scratch, 1500 - age * 80, tick, crab.born + 48);
++		}
++		// A local assist must launch in this ready cycle, not become another chase.
++		local.removeIf(c -> c.at != tick);
++		return local;
+ 	}
+ 
+ 	private boolean protectedPacket(Crab crab, int tick)

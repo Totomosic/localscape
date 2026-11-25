@@ -1,0 +1,10 @@
+--- a/org/localscape/nylocas/mage/MageStrategy.java
++++ b/org/localscape/nylocas/mage/MageStrategy.java
+@@ -382,6 +382,7 @@
+ 				int score = 12000 - age * 65 + (opened.contains(c.key) && c.big ? 500 : 0);
+ 				if (c.big && (c.wave == 4 || c.wave == 8 || c.wave == 11 || c.wave == 19)) score += 6000;
+ 				if (west19Handoff(c, tick)) score -= 12000;
++				if (a.name.equals("South magic 11") && !completed.contains(a.name)) score += 10000;
+ 				if (a.name.equals("South opener 20")) score += 10000;
+ 				if (a.name.equals("South big 29") && room.wave == 30) score += 6000;
+ 				Decision d = new Decision(c, weapon, a.stage, false, a.name, a.name);

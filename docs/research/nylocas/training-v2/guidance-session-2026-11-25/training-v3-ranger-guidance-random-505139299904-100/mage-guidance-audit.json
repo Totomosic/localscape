@@ -1,0 +1,2641 @@
+{
+  "run": ".state/simulations/training-v3-ranger-guidance-random-505139299904-100",
+  "trials": 100,
+  "counts": {
+    "big_4_south_launches": 157,
+    "wave3_lane_melee_launches": 62,
+    "big_8_west_launches": 158,
+    "big_19_south_launches": 152,
+    "big_19_west_launches": 68,
+    "big_19_east_launches": 162,
+    "big_24_south_launches": 148,
+    "big_25_west_launches": 80,
+    "big_26_west_launches": 153,
+    "west27_launches": 159,
+    "west27_while_west26_living": 101,
+    "west27_launches_after_entry_age9": 21,
+    "big_26_south_launches": 89,
+    "big_24_east_launches": 92,
+    "big_23_south_launches": 22,
+    "other_launch_while_settled_opened_8_alive": 8,
+    "11_order_reversed": 80,
+    "19_order_reversed": 100,
+    "required_24_west_last_observed_dead": 71,
+    "required_24_south_last_observed_dead": 96,
+    "required_24_east_last_observed_dead": 86,
+    "required_25_west_last_observed_dead": 78,
+    "required_26_west_last_observed_dead": 98,
+    "required_24_west_last_observed_alive": 29,
+    "required_24_east_last_observed_alive": 14,
+    "required_24_south_last_observed_alive": 4,
+    "required_25_west_last_observed_alive": 22,
+    "11_order_missing": 20,
+    "required_26_west_last_observed_alive": 2
+  },
+  "examples": {
+    "big_4_south_launches": [
+      {
+        "seed": 505139299904,
+        "tick": 18,
+        "target": {
+          "key": 11,
+          "wave": 4,
+          "age": 2,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4235,
+          "claim": 0,
+          "flight": 50,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299904,
+        "tick": 22,
+        "target": {
+          "key": 11,
+          "wave": 4,
+          "age": 6,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 5,
+          "x": 3295,
+          "y": 4239,
+          "claim": 0,
+          "flight": 54,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299905,
+        "tick": 18,
+        "target": {
+          "key": 11,
+          "wave": 4,
+          "age": 2,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4235,
+          "claim": 0,
+          "flight": 50,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299905,
+        "tick": 22,
+        "target": {
+          "key": 11,
+          "wave": 4,
+          "age": 6,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 10,
+          "x": 3295,
+          "y": 4239,
+          "claim": 0,
+          "flight": 54,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299905,
+        "tick": 28,
+        "target": {
+          "key": 11,
+          "wave": 4,
+          "age": 12,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 8,
+          "x": 3293,
+          "y": 4243,
+          "claim": 0,
+          "flight": 60,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299905,
+        "tick": 35,
+        "target": {
+          "key": 11,
+          "wave": 4,
+          "age": 19,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 7,
+          "x": 3292,
+          "y": 4243,
+          "claim": 0,
+          "flight": 67,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 18,
+        "target": {
+          "key": 11,
+          "wave": 4,
+          "age": 2,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4235,
+          "claim": 0,
+          "flight": 50,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299907,
+        "tick": 18,
+        "target": {
+          "key": 11,
+          "wave": 4,
+          "age": 2,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4235,
+          "claim": 0,
+          "flight": 50,
+          "dying": false,
+          "lane": "south"
+        }
+      }
+    ],
+    "wave3_lane_melee_launches": [
+      {
+        "seed": 505139299904,
+        "tick": 37,
+        "target": {
+          "key": 7,
+          "wave": 3,
+          "age": 25,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4253,
+          "claim": 0,
+          "flight": 69,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 22,
+        "target": {
+          "key": 7,
+          "wave": 3,
+          "age": 10,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3291,
+          "y": 4249,
+          "claim": 0,
+          "flight": 54,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299909,
+        "tick": 22,
+        "target": {
+          "key": 7,
+          "wave": 3,
+          "age": 10,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3291,
+          "y": 4249,
+          "claim": 0,
+          "flight": 54,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299910,
+        "tick": 22,
+        "target": {
+          "key": 7,
+          "wave": 3,
+          "age": 10,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3291,
+          "y": 4249,
+          "claim": 0,
+          "flight": 54,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299914,
+        "tick": 37,
+        "target": {
+          "key": 7,
+          "wave": 3,
+          "age": 25,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4254,
+          "claim": 0,
+          "flight": 69,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299915,
+        "tick": 37,
+        "target": {
+          "key": 7,
+          "wave": 3,
+          "age": 25,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4254,
+          "claim": 0,
+          "flight": 69,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299916,
+        "tick": 37,
+        "target": {
+          "key": 7,
+          "wave": 3,
+          "age": 25,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4254,
+          "claim": 0,
+          "flight": 69,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299918,
+        "tick": 22,
+        "target": {
+          "key": 7,
+          "wave": 3,
+          "age": 10,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3291,
+          "y": 4249,
+          "claim": 0,
+          "flight": 54,
+          "dying": false,
+          "lane": "west"
+        }
+      }
+    ],
+    "big_8_west_launches": [
+      {
+        "seed": 505139299904,
+        "tick": 57,
+        "target": {
+          "key": 28,
+          "wave": 8,
+          "age": 5,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3286,
+          "y": 4248,
+          "claim": 0,
+          "flight": 89,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299904,
+        "tick": 64,
+        "target": {
+          "key": 28,
+          "wave": 8,
+          "age": 12,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 7,
+          "x": 3293,
+          "y": 4247,
+          "claim": 0,
+          "flight": 96,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299905,
+        "tick": 58,
+        "target": {
+          "key": 26,
+          "wave": 8,
+          "age": 6,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3287,
+          "y": 4248,
+          "claim": 0,
+          "flight": 90,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 53,
+        "target": {
+          "key": 26,
+          "wave": 8,
+          "age": 1,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3282,
+          "y": 4248,
+          "claim": 0,
+          "flight": 85,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299907,
+        "tick": 55,
+        "target": {
+          "key": 26,
+          "wave": 8,
+          "age": 3,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3284,
+          "y": 4248,
+          "claim": 0,
+          "flight": 87,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299907,
+        "tick": 59,
+        "target": {
+          "key": 26,
+          "wave": 8,
+          "age": 7,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 2,
+          "x": 3288,
+          "y": 4248,
+          "claim": 0,
+          "flight": 91,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299908,
+        "tick": 56,
+        "target": {
+          "key": 28,
+          "wave": 8,
+          "age": 4,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3285,
+          "y": 4248,
+          "claim": 0,
+          "flight": 88,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299909,
+        "tick": 54,
+        "target": {
+          "key": 28,
+          "wave": 8,
+          "age": 2,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3283,
+          "y": 4248,
+          "claim": 0,
+          "flight": 86,
+          "dying": false,
+          "lane": "west"
+        }
+      }
+    ],
+    "big_19_south_launches": [
+      {
+        "seed": 505139299904,
+        "tick": 159,
+        "target": {
+          "key": 91,
+          "wave": 19,
+          "age": 3,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4236,
+          "claim": 0,
+          "flight": 191,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299904,
+        "tick": 166,
+        "target": {
+          "key": 91,
+          "wave": 19,
+          "age": 10,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 13,
+          "x": 3295,
+          "y": 4243,
+          "claim": 0,
+          "flight": 198,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299905,
+        "tick": 151,
+        "target": {
+          "key": 91,
+          "wave": 19,
+          "age": 3,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4236,
+          "claim": 0,
+          "flight": 183,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 151,
+        "target": {
+          "key": 91,
+          "wave": 19,
+          "age": 3,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4236,
+          "claim": 0,
+          "flight": 183,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299907,
+        "tick": 159,
+        "target": {
+          "key": 91,
+          "wave": 19,
+          "age": 7,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4240,
+          "claim": 0,
+          "flight": 191,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299908,
+        "tick": 143,
+        "target": {
+          "key": 91,
+          "wave": 19,
+          "age": 3,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4236,
+          "claim": 0,
+          "flight": 175,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299909,
+        "tick": 151,
+        "target": {
+          "key": 91,
+          "wave": 19,
+          "age": 3,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4236,
+          "claim": 0,
+          "flight": 183,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299910,
+        "tick": 155,
+        "target": {
+          "key": 91,
+          "wave": 19,
+          "age": 3,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4236,
+          "claim": 0,
+          "flight": 187,
+          "dying": false,
+          "lane": "south"
+        }
+      }
+    ],
+    "big_19_west_launches": [
+      {
+        "seed": 505139299904,
+        "tick": 172,
+        "target": {
+          "key": 90,
+          "wave": 19,
+          "age": 16,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 9,
+          "x": 3297,
+          "y": 4253,
+          "claim": 0,
+          "flight": 204,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 155,
+        "target": {
+          "key": 90,
+          "wave": 19,
+          "age": 7,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 15,
+          "x": 3288,
+          "y": 4248,
+          "claim": 0,
+          "flight": 187,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299909,
+        "tick": 157,
+        "target": {
+          "key": 90,
+          "wave": 19,
+          "age": 9,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 3,
+          "x": 3290,
+          "y": 4248,
+          "claim": 0,
+          "flight": 189,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299910,
+        "tick": 159,
+        "target": {
+          "key": 90,
+          "wave": 19,
+          "age": 7,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3288,
+          "y": 4248,
+          "claim": 0,
+          "flight": 191,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299910,
+        "tick": 168,
+        "target": {
+          "key": 90,
+          "wave": 19,
+          "age": 16,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 15,
+          "x": 3297,
+          "y": 4253,
+          "claim": 0,
+          "flight": 200,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299910,
+        "tick": 174,
+        "target": {
+          "key": 90,
+          "wave": 19,
+          "age": 22,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 12,
+          "x": 3298,
+          "y": 4253,
+          "claim": 0,
+          "flight": 206,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299914,
+        "tick": 162,
+        "target": {
+          "key": 90,
+          "wave": 19,
+          "age": 10,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 9,
+          "x": 3291,
+          "y": 4249,
+          "claim": 0,
+          "flight": 194,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299916,
+        "tick": 155,
+        "target": {
+          "key": 90,
+          "wave": 19,
+          "age": 7,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 4,
+          "x": 3288,
+          "y": 4248,
+          "claim": 0,
+          "flight": 187,
+          "dying": false,
+          "lane": "west"
+        }
+      }
+    ],
+    "big_19_east_launches": [
+      {
+        "seed": 505139299904,
+        "tick": 175,
+        "target": {
+          "key": 92,
+          "wave": 19,
+          "age": 19,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4247,
+          "claim": 0,
+          "flight": 207,
+          "dying": false,
+          "lane": "east"
+        }
+      },
+      {
+        "seed": 505139299905,
+        "tick": 157,
+        "target": {
+          "key": 92,
+          "wave": 19,
+          "age": 9,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3300,
+          "y": 4247,
+          "claim": 0,
+          "flight": 189,
+          "dying": false,
+          "lane": "east"
+        }
+      },
+      {
+        "seed": 505139299905,
+        "tick": 163,
+        "target": {
+          "key": 92,
+          "wave": 19,
+          "age": 15,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 15,
+          "x": 3297,
+          "y": 4245,
+          "claim": 0,
+          "flight": 195,
+          "dying": false,
+          "lane": "east"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 158,
+        "target": {
+          "key": 92,
+          "wave": 19,
+          "age": 10,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3299,
+          "y": 4248,
+          "claim": 0,
+          "flight": 190,
+          "dying": false,
+          "lane": "east"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 164,
+        "target": {
+          "key": 92,
+          "wave": 19,
+          "age": 16,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 5,
+          "x": 3295,
+          "y": 4246,
+          "claim": 0,
+          "flight": 196,
+          "dying": false,
+          "lane": "east"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 167,
+        "target": {
+          "key": 92,
+          "wave": 19,
+          "age": 19,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 1,
+          "x": 3295,
+          "y": 4246,
+          "claim": 0,
+          "flight": 199,
+          "dying": false,
+          "lane": "east"
+        }
+      },
+      {
+        "seed": 505139299907,
+        "tick": 162,
+        "target": {
+          "key": 92,
+          "wave": 19,
+          "age": 10,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3299,
+          "y": 4247,
+          "claim": 0,
+          "flight": 194,
+          "dying": false,
+          "lane": "east"
+        }
+      },
+      {
+        "seed": 505139299908,
+        "tick": 150,
+        "target": {
+          "key": 92,
+          "wave": 19,
+          "age": 10,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3299,
+          "y": 4246,
+          "claim": 0,
+          "flight": 182,
+          "dying": false,
+          "lane": "east"
+        }
+      }
+    ],
+    "big_24_south_launches": [
+      {
+        "seed": 505139299904,
+        "tick": 216,
+        "target": {
+          "key": 133,
+          "wave": 24,
+          "age": 4,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4237,
+          "claim": 0,
+          "flight": 248,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299904,
+        "tick": 223,
+        "target": {
+          "key": 133,
+          "wave": 24,
+          "age": 11,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 6,
+          "x": 3295,
+          "y": 4244,
+          "claim": 0,
+          "flight": 255,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299905,
+        "tick": 216,
+        "target": {
+          "key": 139,
+          "wave": 24,
+          "age": 4,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4237,
+          "claim": 0,
+          "flight": 248,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 204,
+        "target": {
+          "key": 135,
+          "wave": 24,
+          "age": 0,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4233,
+          "claim": 0,
+          "flight": 236,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 212,
+        "target": {
+          "key": 135,
+          "wave": 24,
+          "age": 8,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 15,
+          "x": 3295,
+          "y": 4241,
+          "claim": 0,
+          "flight": 244,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299907,
+        "tick": 212,
+        "target": {
+          "key": 137,
+          "wave": 24,
+          "age": 4,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4237,
+          "claim": 0,
+          "flight": 244,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299908,
+        "tick": 199,
+        "target": {
+          "key": 137,
+          "wave": 24,
+          "age": 3,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3295,
+          "y": 4236,
+          "claim": 0,
+          "flight": 231,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299908,
+        "tick": 207,
+        "target": {
+          "key": 137,
+          "wave": 24,
+          "age": 11,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 4,
+          "x": 3294,
+          "y": 4244,
+          "claim": 0,
+          "flight": 239,
+          "dying": false,
+          "lane": "south"
+        }
+      }
+    ],
+    "big_25_west_launches": [
+      {
+        "seed": 505139299904,
+        "tick": 226,
+        "target": {
+          "key": 139,
+          "wave": 25,
+          "age": 6,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3287,
+          "y": 4248,
+          "claim": 0,
+          "flight": 258,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 223,
+        "target": {
+          "key": 139,
+          "wave": 25,
+          "age": 11,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4247,
+          "claim": 0,
+          "flight": 255,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 231,
+        "target": {
+          "key": 139,
+          "wave": 25,
+          "age": 19,
+          "style": "MELEE",
+          "big": true,
+          "hp": 4,
+          "x": 3291,
+          "y": 4247,
+          "claim": 0,
+          "flight": 263,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299907,
+        "tick": 226,
+        "target": {
+          "key": 143,
+          "wave": 25,
+          "age": 10,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3291,
+          "y": 4248,
+          "claim": 0,
+          "flight": 258,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299908,
+        "tick": 210,
+        "target": {
+          "key": 141,
+          "wave": 25,
+          "age": 6,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3287,
+          "y": 4248,
+          "claim": 0,
+          "flight": 242,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299909,
+        "tick": 231,
+        "target": {
+          "key": 143,
+          "wave": 25,
+          "age": 19,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3293,
+          "y": 4247,
+          "claim": 0,
+          "flight": 263,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299911,
+        "tick": 228,
+        "target": {
+          "key": 143,
+          "wave": 25,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3291,
+          "y": 4245,
+          "claim": 0,
+          "flight": 260,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299912,
+        "tick": 238,
+        "target": {
+          "key": 137,
+          "wave": 25,
+          "age": 18,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3293,
+          "y": 4247,
+          "claim": 0,
+          "flight": 270,
+          "dying": false,
+          "lane": "west"
+        }
+      }
+    ],
+    "big_26_west_launches": [
+      {
+        "seed": 505139299904,
+        "tick": 231,
+        "target": {
+          "key": 146,
+          "wave": 26,
+          "age": 3,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3284,
+          "y": 4248,
+          "claim": 0,
+          "flight": 263,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299905,
+        "tick": 229,
+        "target": {
+          "key": 154,
+          "wave": 26,
+          "age": 1,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3282,
+          "y": 4248,
+          "claim": 0,
+          "flight": 261,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299905,
+        "tick": 235,
+        "target": {
+          "key": 154,
+          "wave": 26,
+          "age": 7,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 10,
+          "x": 3288,
+          "y": 4248,
+          "claim": 0,
+          "flight": 267,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299905,
+        "tick": 238,
+        "target": {
+          "key": 154,
+          "wave": 26,
+          "age": 10,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 3,
+          "x": 3290,
+          "y": 4248,
+          "claim": 0,
+          "flight": 270,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 220,
+        "target": {
+          "key": 148,
+          "wave": 26,
+          "age": 0,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3281,
+          "y": 4248,
+          "claim": 0,
+          "flight": 252,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299907,
+        "tick": 231,
+        "target": {
+          "key": 152,
+          "wave": 26,
+          "age": 3,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3284,
+          "y": 4248,
+          "claim": 0,
+          "flight": 263,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299908,
+        "tick": 215,
+        "target": {
+          "key": 148,
+          "wave": 26,
+          "age": 3,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3284,
+          "y": 4248,
+          "claim": 0,
+          "flight": 247,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299908,
+        "tick": 221,
+        "target": {
+          "key": 148,
+          "wave": 26,
+          "age": 9,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 2,
+          "x": 3290,
+          "y": 4248,
+          "claim": 0,
+          "flight": 253,
+          "dying": false,
+          "lane": "west"
+        }
+      }
+    ],
+    "west27_launches": [
+      {
+        "seed": 505139299904,
+        "tick": 234,
+        "target": {
+          "key": 149,
+          "wave": 27,
+          "age": 2,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3283,
+          "y": 4248,
+          "claim": 0,
+          "flight": 266,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299904,
+        "tick": 242,
+        "target": {
+          "key": 149,
+          "wave": 27,
+          "age": 10,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 9,
+          "x": 3290,
+          "y": 4247,
+          "claim": 0,
+          "flight": 274,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299904,
+        "tick": 245,
+        "target": {
+          "key": 149,
+          "wave": 27,
+          "age": 13,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 2,
+          "x": 3291,
+          "y": 4246,
+          "claim": 0,
+          "flight": 277,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299905,
+        "tick": 232,
+        "target": {
+          "key": 157,
+          "wave": 27,
+          "age": 0,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3281,
+          "y": 4248,
+          "claim": 0,
+          "flight": 264,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 228,
+        "target": {
+          "key": 155,
+          "wave": 27,
+          "age": 4,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3285,
+          "y": 4248,
+          "claim": 0,
+          "flight": 260,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299907,
+        "tick": 234,
+        "target": {
+          "key": 157,
+          "wave": 27,
+          "age": 2,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3283,
+          "y": 4248,
+          "claim": 0,
+          "flight": 266,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299907,
+        "tick": 241,
+        "target": {
+          "key": 157,
+          "wave": 27,
+          "age": 9,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 14,
+          "x": 3290,
+          "y": 4248,
+          "claim": 0,
+          "flight": 273,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299908,
+        "tick": 218,
+        "target": {
+          "key": 151,
+          "wave": 27,
+          "age": 2,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3283,
+          "y": 4248,
+          "claim": 0,
+          "flight": 250,
+          "dying": false,
+          "lane": "west"
+        }
+      }
+    ],
+    "west27_while_west26_living": [
+      {
+        "seed": 505139299904,
+        "tick": 234,
+        "target": {
+          "key": 149,
+          "wave": 27,
+          "age": 2,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3283,
+          "y": 4248,
+          "claim": 0,
+          "flight": 266,
+          "dying": false,
+          "lane": "west"
+        },
+        "west26": [
+          {
+            "key": 146,
+            "wave": 26,
+            "age": 6,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3287,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ]
+      },
+      {
+        "seed": 505139299905,
+        "tick": 232,
+        "target": {
+          "key": 157,
+          "wave": 27,
+          "age": 0,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3281,
+          "y": 4248,
+          "claim": 0,
+          "flight": 264,
+          "dying": false,
+          "lane": "west"
+        },
+        "west26": [
+          {
+            "key": 154,
+            "wave": 26,
+            "age": 4,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3285,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ]
+      },
+      {
+        "seed": 505139299907,
+        "tick": 234,
+        "target": {
+          "key": 157,
+          "wave": 27,
+          "age": 2,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3283,
+          "y": 4248,
+          "claim": 0,
+          "flight": 266,
+          "dying": false,
+          "lane": "west"
+        },
+        "west26": [
+          {
+            "key": 152,
+            "wave": 26,
+            "age": 6,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3287,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ]
+      },
+      {
+        "seed": 505139299908,
+        "tick": 218,
+        "target": {
+          "key": 151,
+          "wave": 27,
+          "age": 2,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3283,
+          "y": 4248,
+          "claim": 0,
+          "flight": 250,
+          "dying": false,
+          "lane": "west"
+        },
+        "west26": [
+          {
+            "key": 148,
+            "wave": 26,
+            "age": 6,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3287,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ]
+      },
+      {
+        "seed": 505139299909,
+        "tick": 225,
+        "target": {
+          "key": 153,
+          "wave": 27,
+          "age": 1,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3282,
+          "y": 4248,
+          "claim": 0,
+          "flight": 257,
+          "dying": false,
+          "lane": "west"
+        },
+        "west26": [
+          {
+            "key": 150,
+            "wave": 26,
+            "age": 5,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3286,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ]
+      },
+      {
+        "seed": 505139299910,
+        "tick": 228,
+        "target": {
+          "key": 153,
+          "wave": 27,
+          "age": 0,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3281,
+          "y": 4248,
+          "claim": 0,
+          "flight": 260,
+          "dying": false,
+          "lane": "west"
+        },
+        "west26": [
+          {
+            "key": 148,
+            "wave": 26,
+            "age": 4,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3285,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ]
+      },
+      {
+        "seed": 505139299910,
+        "tick": 234,
+        "target": {
+          "key": 153,
+          "wave": 27,
+          "age": 6,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 7,
+          "x": 3287,
+          "y": 4248,
+          "claim": 0,
+          "flight": 266,
+          "dying": false,
+          "lane": "west"
+        },
+        "west26": [
+          {
+            "key": 148,
+            "wave": 26,
+            "age": 10,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 9,
+            "x": 3290,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ]
+      },
+      {
+        "seed": 505139299911,
+        "tick": 225,
+        "target": {
+          "key": 155,
+          "wave": 27,
+          "age": 1,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3282,
+          "y": 4248,
+          "claim": 0,
+          "flight": 257,
+          "dying": false,
+          "lane": "west"
+        },
+        "west26": [
+          {
+            "key": 150,
+            "wave": 26,
+            "age": 5,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3286,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ]
+      }
+    ],
+    "west27_launches_after_entry_age9": [
+      {
+        "seed": 505139299904,
+        "tick": 242,
+        "target": {
+          "key": 149,
+          "wave": 27,
+          "age": 10,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 9,
+          "x": 3290,
+          "y": 4247,
+          "claim": 0,
+          "flight": 274,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299904,
+        "tick": 245,
+        "target": {
+          "key": 149,
+          "wave": 27,
+          "age": 13,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 2,
+          "x": 3291,
+          "y": 4246,
+          "claim": 0,
+          "flight": 277,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299912,
+        "tick": 243,
+        "target": {
+          "key": 151,
+          "wave": 27,
+          "age": 11,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 1,
+          "x": 3290,
+          "y": 4250,
+          "claim": 0,
+          "flight": 275,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299915,
+        "tick": 236,
+        "target": {
+          "key": 155,
+          "wave": 27,
+          "age": 12,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 6,
+          "x": 3290,
+          "y": 4251,
+          "claim": 0,
+          "flight": 268,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299916,
+        "tick": 253,
+        "target": {
+          "key": 155,
+          "wave": 27,
+          "age": 21,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 8,
+          "x": 3290,
+          "y": 4251,
+          "claim": 0,
+          "flight": 285,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299919,
+        "tick": 246,
+        "target": {
+          "key": 155,
+          "wave": 27,
+          "age": 10,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 2,
+          "x": 3291,
+          "y": 4248,
+          "claim": 0,
+          "flight": 278,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299922,
+        "tick": 235,
+        "target": {
+          "key": 155,
+          "wave": 27,
+          "age": 11,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 11,
+          "x": 3290,
+          "y": 4250,
+          "claim": 0,
+          "flight": 267,
+          "dying": false,
+          "lane": "west"
+        }
+      },
+      {
+        "seed": 505139299927,
+        "tick": 250,
+        "target": {
+          "key": 155,
+          "wave": 27,
+          "age": 10,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3290,
+          "y": 4249,
+          "claim": 0,
+          "flight": 282,
+          "dying": false,
+          "lane": "west"
+        }
+      }
+    ],
+    "big_26_south_launches": [
+      {
+        "seed": 505139299904,
+        "tick": 248,
+        "target": {
+          "key": 147,
+          "wave": 26,
+          "age": 20,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4244,
+          "claim": 0,
+          "flight": 280,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299905,
+        "tick": 248,
+        "target": {
+          "key": 155,
+          "wave": 26,
+          "age": 20,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3293,
+          "y": 4243,
+          "claim": 0,
+          "flight": 280,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 240,
+        "target": {
+          "key": 149,
+          "wave": 26,
+          "age": 20,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3294,
+          "y": 4243,
+          "claim": 0,
+          "flight": 272,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299907,
+        "tick": 248,
+        "target": {
+          "key": 153,
+          "wave": 26,
+          "age": 20,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4243,
+          "claim": 0,
+          "flight": 280,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299908,
+        "tick": 232,
+        "target": {
+          "key": 149,
+          "wave": 26,
+          "age": 20,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4244,
+          "claim": 0,
+          "flight": 264,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299909,
+        "tick": 240,
+        "target": {
+          "key": 151,
+          "wave": 26,
+          "age": 20,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3293,
+          "y": 4243,
+          "claim": 0,
+          "flight": 272,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299911,
+        "tick": 240,
+        "target": {
+          "key": 151,
+          "wave": 26,
+          "age": 20,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3294,
+          "y": 4244,
+          "claim": 0,
+          "flight": 272,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299912,
+        "tick": 248,
+        "target": {
+          "key": 149,
+          "wave": 26,
+          "age": 20,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4244,
+          "claim": 0,
+          "flight": 280,
+          "dying": false,
+          "lane": "south"
+        }
+      }
+    ],
+    "big_24_east_launches": [
+      {
+        "seed": 505139299905,
+        "tick": 219,
+        "target": {
+          "key": 140,
+          "wave": 24,
+          "age": 7,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3302,
+          "y": 4248,
+          "claim": 0,
+          "flight": 251,
+          "dying": false,
+          "lane": "east"
+        }
+      },
+      {
+        "seed": 505139299906,
+        "tick": 215,
+        "target": {
+          "key": 136,
+          "wave": 24,
+          "age": 11,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3298,
+          "y": 4245,
+          "claim": 0,
+          "flight": 247,
+          "dying": false,
+          "lane": "east"
+        }
+      },
+      {
+        "seed": 505139299909,
+        "tick": 217,
+        "target": {
+          "key": 136,
+          "wave": 24,
+          "age": 13,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3296,
+          "y": 4245,
+          "claim": 0,
+          "flight": 249,
+          "dying": false,
+          "lane": "east"
+        }
+      },
+      {
+        "seed": 505139299910,
+        "tick": 219,
+        "target": {
+          "key": 136,
+          "wave": 24,
+          "age": 11,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3299,
+          "y": 4248,
+          "claim": 0,
+          "flight": 251,
+          "dying": false,
+          "lane": "east"
+        }
+      },
+      {
+        "seed": 505139299911,
+        "tick": 212,
+        "target": {
+          "key": 140,
+          "wave": 24,
+          "age": 8,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3301,
+          "y": 4248,
+          "claim": 0,
+          "flight": 244,
+          "dying": false,
+          "lane": "east"
+        }
+      },
+      {
+        "seed": 505139299911,
+        "tick": 217,
+        "target": {
+          "key": 140,
+          "wave": 24,
+          "age": 13,
+          "style": "MELEE",
+          "big": true,
+          "hp": 15,
+          "x": 3298,
+          "y": 4248,
+          "claim": 0,
+          "flight": 249,
+          "dying": false,
+          "lane": "east"
+        }
+      },
+      {
+        "seed": 505139299912,
+        "tick": 218,
+        "target": {
+          "key": 134,
+          "wave": 24,
+          "age": 6,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3303,
+          "y": 4248,
+          "claim": 0,
+          "flight": 250,
+          "dying": false,
+          "lane": "east"
+        }
+      },
+      {
+        "seed": 505139299913,
+        "tick": 216,
+        "target": {
+          "key": 138,
+          "wave": 24,
+          "age": 12,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3297,
+          "y": 4246,
+          "claim": 0,
+          "flight": 248,
+          "dying": false,
+          "lane": "east"
+        }
+      }
+    ],
+    "big_23_south_launches": [
+      {
+        "seed": 505139299906,
+        "tick": 207,
+        "target": {
+          "key": 132,
+          "wave": 23,
+          "age": 11,
+          "style": "MELEE",
+          "big": true,
+          "hp": 13,
+          "x": 3295,
+          "y": 4243,
+          "claim": 0,
+          "flight": 239,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299913,
+        "tick": 207,
+        "target": {
+          "key": 132,
+          "wave": 23,
+          "age": 11,
+          "style": "MELEE",
+          "big": true,
+          "hp": 12,
+          "x": 3296,
+          "y": 4243,
+          "claim": 0,
+          "flight": 239,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299918,
+        "tick": 221,
+        "target": {
+          "key": 130,
+          "wave": 23,
+          "age": 13,
+          "style": "MELEE",
+          "big": true,
+          "hp": 13,
+          "x": 3292,
+          "y": 4243,
+          "claim": 0,
+          "flight": 253,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299926,
+        "tick": 224,
+        "target": {
+          "key": 132,
+          "wave": 23,
+          "age": 12,
+          "style": "MELEE",
+          "big": true,
+          "hp": 13,
+          "x": 3295,
+          "y": 4244,
+          "claim": 0,
+          "flight": 256,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299926,
+        "tick": 229,
+        "target": {
+          "key": 132,
+          "wave": 23,
+          "age": 17,
+          "style": "MELEE",
+          "big": true,
+          "hp": 7,
+          "x": 3293,
+          "y": 4246,
+          "claim": 0,
+          "flight": 261,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299929,
+        "tick": 216,
+        "target": {
+          "key": 132,
+          "wave": 23,
+          "age": 12,
+          "style": "MELEE",
+          "big": true,
+          "hp": 5,
+          "x": 3295,
+          "y": 4243,
+          "claim": 0,
+          "flight": 248,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299933,
+        "tick": 207,
+        "target": {
+          "key": 130,
+          "wave": 23,
+          "age": 15,
+          "style": "MELEE",
+          "big": true,
+          "hp": 13,
+          "x": 3293,
+          "y": 4244,
+          "claim": 0,
+          "flight": 239,
+          "dying": false,
+          "lane": "south"
+        }
+      },
+      {
+        "seed": 505139299937,
+        "tick": 203,
+        "target": {
+          "key": 132,
+          "wave": 23,
+          "age": 7,
+          "style": "MELEE",
+          "big": true,
+          "hp": 13,
+          "x": 3295,
+          "y": 4240,
+          "claim": 0,
+          "flight": 235,
+          "dying": false,
+          "lane": "south"
+        }
+      }
+    ],
+    "other_launch_while_settled_opened_8_alive": [
+      {
+        "seed": 505139299971,
+        "tick": 60,
+        "target": {
+          "key": 27,
+          "wave": 8,
+          "age": 8,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3295,
+          "y": 4241,
+          "claim": 0,
+          "flight": 92,
+          "dying": false,
+          "lane": "south"
+        },
+        "survivors": [
+          {
+            "key": 26,
+            "wave": 8,
+            "age": 8,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 14,
+            "x": 3289,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ],
+        "reason": "South melee 8"
+      },
+      {
+        "seed": 505139299989,
+        "tick": 62,
+        "target": {
+          "key": 29,
+          "wave": 8,
+          "age": 10,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3295,
+          "y": 4243,
+          "claim": 0,
+          "flight": 94,
+          "dying": false,
+          "lane": "south"
+        },
+        "survivors": [
+          {
+            "key": 28,
+            "wave": 8,
+            "age": 10,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 14,
+            "x": 3291,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ],
+        "reason": "South melee 8"
+      },
+      {
+        "seed": 505139300003,
+        "tick": 70,
+        "target": {
+          "key": 27,
+          "wave": 8,
+          "age": 18,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4250,
+          "claim": 0,
+          "flight": 102,
+          "dying": false,
+          "lane": "south"
+        },
+        "survivors": [
+          {
+            "key": 26,
+            "wave": 8,
+            "age": 18,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 4,
+            "x": 3292,
+            "y": 4245,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ],
+        "reason": "South melee 8"
+      },
+      {
+        "seed": 505139300003,
+        "tick": 76,
+        "target": {
+          "key": 45,
+          "wave": 11,
+          "age": 0,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3310,
+          "y": 4249,
+          "claim": 0,
+          "flight": 108,
+          "dying": false,
+          "lane": "east"
+        },
+        "survivors": [
+          {
+            "key": 26,
+            "wave": 8,
+            "age": 24,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 4,
+            "x": 3295,
+            "y": 4246,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ],
+        "reason": "East barrage 11"
+      },
+      {
+        "seed": 505139300003,
+        "tick": 81,
+        "target": {
+          "key": 42,
+          "wave": 11,
+          "age": 5,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3286,
+          "y": 4248,
+          "claim": 0,
+          "flight": 113,
+          "dying": false,
+          "lane": "west"
+        },
+        "survivors": [
+          {
+            "key": 26,
+            "wave": 8,
+            "age": 29,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 4,
+            "x": 3296,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ],
+        "reason": "West big 11"
+      },
+      {
+        "seed": 505139300003,
+        "tick": 84,
+        "target": {
+          "key": 43,
+          "wave": 11,
+          "age": 8,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3295,
+          "y": 4241,
+          "claim": 0,
+          "flight": 116,
+          "dying": false,
+          "lane": "south"
+        },
+        "survivors": [
+          {
+            "key": 26,
+            "wave": 8,
+            "age": 32,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 4,
+            "x": 3297,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ],
+        "reason": "South magic 11"
+      },
+      {
+        "seed": 505139300003,
+        "tick": 87,
+        "target": {
+          "key": 42,
+          "wave": 11,
+          "age": 11,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 10,
+          "x": 3291,
+          "y": 4247,
+          "claim": 0,
+          "flight": 119,
+          "dying": false,
+          "lane": "west"
+        },
+        "survivors": [
+          {
+            "key": 26,
+            "wave": 8,
+            "age": 35,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 4,
+            "x": 3297,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ],
+        "reason": "West big 11"
+      },
+      {
+        "seed": 505139300003,
+        "tick": 91,
+        "target": {
+          "key": 51,
+          "wave": 12,
+          "age": 7,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3303,
+          "y": 4248,
+          "claim": 0,
+          "flight": 123,
+          "dying": false,
+          "lane": "east"
+        },
+        "survivors": [
+          {
+            "key": 26,
+            "wave": 8,
+            "age": 39,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 4,
+            "x": 3297,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ],
+        "reason": "12 east scythe"
+      }
+    ]
+  },
+  "caveat": "Living26 is occupancy, not immediate eligibility. After-entry27 includes valid followups. Last-observed-dead includes natural expiry; no kill attribution is inferred. Other-launch counters are review candidates, including mandatory packets, not proof of a lost tick.",
+  "source_sha256": {
+    ".state/simulations/training-v3-ranger-guidance-random-505139299904-100/server.log": "cf55617bbe1a9dac24526e649c869f01b5f359261d854c1db0b1a9407698a57e"
+  }
+}

@@ -1,0 +1,12 @@
+--- upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java
++++ upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java
+@@ -452,6 +452,9 @@
+ 		if (next != null) return stage(next.weapon, next.stage, "Reserve " + next.name);
+ 		Assignment upcoming = ASSIGNMENTS.stream().filter(a -> a.wave == room.wave + 1)
+ 			.min(Comparator.comparingInt(a -> a.first)).orElse(null);
++		// Idle staging may open south19 one request earlier, leaving the first east magic window.
++		if (upcoming != null && room.wave == 18 && upcoming.name.equals("West big 19"))
++			return stage(Weapon.EYE, tile(3295, 4243), "Prepare South big 19");
+ 		if (upcoming != null) return stage(upcoming.weapon, upcoming.stage, "Prepare " + upcoming.name);
+ 		return stage(Weapon.EYE, room.wave >= 29 ? tile(3297, 4249) : tile(3295, 4248),
+ 			room.wave == 31 ? "Clear wave 30 and 31 survivors" : "Clear complete; stage");

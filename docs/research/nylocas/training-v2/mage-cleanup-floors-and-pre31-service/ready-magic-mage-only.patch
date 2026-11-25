@@ -1,0 +1,32 @@
+--- .state/simulations/training-v4-candidate-timestamp-dim29-and-28plus16/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 23:07:21.873033777 +0800
++++ .state/simulations/training-v4-candidate-mage-ready-magic-before-melee-chase/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 23:25:11.571305981 +0800
+@@ -492,10 +492,29 @@
+ 		Candidate best = candidates.stream().min(priority).orElse(null);
+ 		if (best != null)
+ 		{
++			// A normal split-small chase is less certain than a stationary
++			// in-range cast: the NPC can move before native interaction resolves.
++			// Preserve named packets, parents, AoE and partner-NULL priority.
++			boolean readyMagic = room.wave == 31 && tick >= room.ready && best.at <= tick
++				&& best.decision.rule == null && best.decision.weapon == Weapon.SULPHUR
++				&& !best.decision.target.big && best.decision.target.lane == Lane.SPLIT
++				&& !cleanupCooperation(room, best.decision.target)
++				&& best.decision.target.distance(room.player) > 1;
++			if (readyMagic)
++			{
++				Candidate cast = candidates.stream().filter(c -> c.at <= tick && c.first <= tick
++					&& c.decision.rule == null && c.decision.weapon == Weapon.EYE && !c.decision.target.big
++					&& c.decision.target.distance(room.player) <= Weapon.EYE.range
++					&& !room.obstructed.contains(c.decision.target.key)).min(priority).orElse(null);
++				if (cast == null) readyMagic = false;
++				else best = cast;
++			}
+ 			Candidate selected = best;
++			final boolean preserveReadyMagic = readyMagic;
+ 			// Keep an equally early commitment within the same rotation step;
+ 			// useful earlier attacks and reserved packets can replace an approach.
+ 			best = candidates.stream().filter(c -> c.at <= selected.at
++				&& (!preserveReadyMagic || c.decision.target.key == selected.decision.target.key)
+ 				&& c.decision.target.wave == selected.decision.target.wave
+ 				&& (c.decision.rule == null) == (selected.decision.rule == null)
+ 				&& c.first == selected.first && deferred(c, tick) == deferred(selected, tick)

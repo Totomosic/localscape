@@ -1,0 +1,5522 @@
+[
+  {
+    "run": ".state/simulations/training-v4-early18-eye-precap-audit-random-200",
+    "trials": 200,
+    "failed19_rooms": 19,
+    "counts": {
+      "west_native_gate_screen": 61,
+      "west_screen_eye5": 45,
+      "nonlethal_magic5_west": 135,
+      "ready_eye8_west": 61,
+      "eye5_west": 45,
+      "nonlethal_magic5_south": 200,
+      "ready_eye8_south": 57,
+      "other_native_attack_south": 57,
+      "nonlethal_magic5_east": 200,
+      "west_screen_other_native_attack": 16,
+      "other_native_attack_west": 16,
+      "ready_eye8_east": 19,
+      "other_native_attack_east": 19,
+      "west_screen_human_corridor": 6,
+      "west_native_gate_screen_failed19": 8
+    },
+    "examples": [
+      {
+        "seed": "32981221289328",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4245,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @145 \u2192 PIPE #93 @148",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289329",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4247,0",
+        "selected": [
+          "PIPE",
+          "88",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #94 @141 \u2192 PIPE #91 @143 \u2192 PIPE #91 @145",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          98,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289333",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4249,0",
+        "selected": [
+          "EYE",
+          "75",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #81 @149 \u2192 PIPE #93 @152 \u2192 PIPE #93 @154",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          87,
+          85
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289334",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          5
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4245,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @149 \u2192 PIPE #93 @152",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          83,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289340",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3292,4247,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @149 \u2192 PIPE #93 @152",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          95,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289345",
+        "tick": 145,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4246,0",
+        "selected": [
+          "EYE",
+          "85",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #91 @145 \u2192 PIPE #91 @148",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289348",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4245,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @145 \u2192 PIPE #93 @148",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          81,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289349",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4243,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @145 \u2192 PIPE #93 @148",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          70,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289357",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 13,
+        "style": "MAGIC",
+        "forecast": [
+          13,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4245,0",
+        "selected": [
+          "EYE",
+          "85",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #91 @137 \u2192 PIPE #91 @140",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          97,
+          96
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289362",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3292,4246,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @149 \u2192 PIPE #93 @152",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          90,
+          97
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289365",
+        "tick": 149,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4245,0",
+        "selected": [
+          "EYE",
+          "85",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #91 @149 \u2192 PIPE #91 @152",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          89,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289368",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          8
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4249,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @145 \u2192 PIPE #93 @148",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          98,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289374",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 15,
+        "style": "MAGIC",
+        "forecast": [
+          15,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3290,4248,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @145 \u2192 PIPE #93 @148",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          75,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289376",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          11
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4247,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @145 \u2192 PIPE #93 @148",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          84
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289377",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4244,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @149 \u2192 PIPE #93 @152",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289379",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          13
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4248,0",
+        "selected": [
+          "EYE",
+          "85",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #91 @141 \u2192 PIPE #91 @144",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "32981221289382",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4247,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @153 \u2192 PIPE #93 @156 \u2192 EYE #84 @158",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          90,
+          85
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289384",
+        "tick": 141,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4248,0",
+        "selected": [
+          "PIPE",
+          "78",
+          "South range flicker 16"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #84 @141 \u2192 PIPE #93 @143 \u2192 PIPE #93 @145",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          98
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289386",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4247,0",
+        "selected": [
+          "EYE",
+          "68",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #74 @145 \u2192 PIPE #93 @148 \u2192 PIPE #93 @150",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          95
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289388",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3292,4247,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @145 \u2192 PIPE #93 @148",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289390",
+        "tick": 145,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4246,0",
+        "selected": [
+          "PIPE",
+          "84",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #90 @145 \u2192 PIPE #91 @147 \u2192 PIPE #91 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          83,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289391",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 13,
+        "style": "MAGIC",
+        "forecast": [
+          13,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @145 \u2192 PIPE #93 @148",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          97,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289392",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4246,0",
+        "selected": [
+          "PIPE",
+          "83",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #89 @145 \u2192 PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          70,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289393",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 13,
+        "style": "MAGIC",
+        "forecast": [
+          13,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "EYE",
+          "85",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #91 @137 \u2192 PIPE #91 @140",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          91,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289396",
+        "tick": 149,
+        "key": 85,
+        "lane": "west",
+        "hp": 7,
+        "style": "MAGIC",
+        "forecast": [
+          7,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3290,4248,0",
+        "selected": [
+          "EYE",
+          "85",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #91 @149",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289402",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4248,0",
+        "selected": [
+          "EYE",
+          "68",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #74 @153 \u2192 PIPE #93 @156 \u2192 PIPE #93 @158",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          74,
+          81
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289410",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          15
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4248,0",
+        "selected": [
+          "EYE",
+          "85",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #91 @137 \u2192 PIPE #91 @140",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "32981221289412",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4249,0",
+        "selected": [
+          "PIPE",
+          "78",
+          "South range flicker 16"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #84 @145 \u2192 EYE #81 @147 \u2192 PIPE #93 @150",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          76,
+          89
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289417",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4244,0",
+        "selected": [
+          "EYE",
+          "85",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #91 @137 \u2192 PIPE #91 @140",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          95,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289419",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @145 \u2192 PIPE #93 @148",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          83
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": true
+      }
+    ],
+    "failed19_west_magic5_windows": [
+      {
+        "seed": "32981221289336",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 3,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [
+          "dead_or_dying"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "32981221289337",
+        "tick": 145,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4247,0",
+        "selected": [
+          "EYE",
+          "61",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: EYE #67 @146 \u2192 PIPE #91 @149 \u2192 PIPE #91 @151",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          88,
+          99
+        ],
+        "wave19_stalls": 7,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289359",
+        "tick": 157,
+        "key": 87,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          95,
+          71
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 163,
+        "eye_plus_return": 160,
+        "gates": [
+          "dead_or_dying",
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "32981221289382",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4247,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @153 \u2192 PIPE #93 @156 \u2192 EYE #84 @158",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          90,
+          85
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289388",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3292,4247,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @145 \u2192 PIPE #93 @148",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289393",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 13,
+        "style": "MAGIC",
+        "forecast": [
+          13,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "EYE",
+          "85",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #91 @137 \u2192 PIPE #91 @140",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          91,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289394",
+        "tick": 157,
+        "key": 87,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          68,
+          86
+        ],
+        "wave19_stalls": 8,
+        "earliest_west19_due": 163,
+        "eye_plus_return": 160,
+        "gates": [
+          "dead_or_dying"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "32981221289395",
+        "tick": 141,
+        "key": 83,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          69
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "86",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: EYE #92 @142 \u2192 PIPE #94 @145",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [
+          "known_lethal",
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "32981221289417",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4244,0",
+        "selected": [
+          "EYE",
+          "85",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #91 @137 \u2192 PIPE #91 @140",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          95,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289429",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          85,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [
+          "dead_or_dying"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "32981221289443",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          5
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4248,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @145 \u2192 PIPE #93 @148",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "32981221289445",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4245,0",
+        "selected": [
+          "EYE",
+          "85",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #91 @137 \u2192 PIPE #91 @140",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          88,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289449",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          85,
+          98
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [
+          "dead_or_dying",
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "32981221289477",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          6
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4245,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @143 \u2192 PIPE #91 @145 \u2192 PIPE #94 @147",
+        "native_action_delay": 2,
+        "previous_player_hp": [
+          74,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289507",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3296,4246,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @143 \u2192 PIPE #91 @145",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          99,
+          92
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay",
+          "outside_eye8"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289509",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3296,4247,0",
+        "selected": [
+          "EYE",
+          "68",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #74 @153 \u2192 PIPE #92 @156 \u2192 EYE #82 @158",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          83
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [
+          "outside_eye8"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289510",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 13,
+        "style": "MAGIC",
+        "forecast": [
+          13,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #93 @149 \u2192 PIPE #93 @152",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289522",
+        "tick": 141,
+        "key": 83,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4245,0",
+        "selected": [
+          "EYE",
+          "83",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #89 @141 \u2192 PIPE #89 @144",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "32981221289524",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4248,0",
+        "selected": [
+          "PIPE",
+          "89",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #95 @137 \u2192 EYE #94 @139",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 1,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [
+          "dead_or_dying"
+        ],
+        "matched_human_eye_corridor": false
+      }
+    ],
+    "caveat": "Eye8 distance and native readiness are opportunity screens; target LOS is not emitted. Predecision queued damage is authoritative; ordinary trace leases are postcycle. Native action delay, possible food, same-cycle Mage claim and conservative first19-return budget gates are checked, but a passing screen is not a proof of target LOS. Human-corridor matches cite actual vetted Eye launches, not inferred human NULL.",
+    "sources": {
+      ".state/simulations/training-v4-early18-eye-precap-audit-random-200/server.log": "9d8f382937199a0fafc04cebcf1487236b3164a5a5e52942584fa2d17371d7a9",
+      ".state/simulations/training-v4-early18-eye-precap-audit-random-200/trials.csv": "d192730f17f45b96f5fea1c36f571e36f8648d2b57a1751cf86963571d5d821f"
+    }
+  },
+  {
+    "run": ".state/simulations/training-v4-west30-parent-lifecycle-random-200",
+    "trials": 200,
+    "failed19_rooms": 21,
+    "counts": {
+      "nonlethal_magic5_west": 148,
+      "nonlethal_magic5_south": 200,
+      "nonlethal_magic5_east": 200,
+      "west_native_gate_screen": 62,
+      "west_screen_other_native_attack": 17,
+      "west_screen_human_corridor": 7,
+      "ready_eye8_west": 62,
+      "other_native_attack_west": 17,
+      "ready_eye8_south": 66,
+      "other_native_attack_south": 27,
+      "ready_eye8_east": 17,
+      "other_native_attack_east": 16,
+      "west_native_gate_screen_failed19": 5
+    },
+    "examples": [
+      {
+        "seed": "178734103529237",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "PIPE",
+          "83",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #89 @145 \u2192 PIPE #90 @147 \u2192 EYE #92 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          68,
+          98
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "178734103529241",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          14
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4248,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @143 \u2192 PIPE #91 @145",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          88
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "178734103529249",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4247,0",
+        "selected": [
+          "PIPE",
+          "78",
+          "South range flicker 16"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #84 @145 \u2192 PIPE #85 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          83,
+          89
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529252",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 11,
+        "style": "MAGIC",
+        "forecast": [
+          11,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529253",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3292,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151 \u2192 PIPE #93 @153",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          86,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529255",
+        "tick": 145,
+        "key": 83,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4248,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #93 @145 \u2192 PIPE #83 @147 \u2192 PIPE #92 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          98,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529261",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @155 \u2192 PIPE #93 @157",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529263",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151 \u2192 PIPE #93 @153",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          93,
+          83
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529265",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          4
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4248,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @139 \u2192 PIPE #91 @141",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "178734103529269",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          11
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4248,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151 \u2192 PIPE #93 @153",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "178734103529273",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @139 \u2192 PIPE #91 @141",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          84
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529276",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @155 \u2192 PIPE #93 @157",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          78,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529279",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3292,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @155 \u2192 PIPE #93 @157",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          81,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529286",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4245,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529289",
+        "tick": 141,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @143 \u2192 PIPE #93 @145",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          76,
+          88
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529293",
+        "tick": 141,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4245,0",
+        "selected": [
+          "EYE",
+          "70",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #76 @141 \u2192 PIPE #93 @144 \u2192 PIPE #93 @146",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          94,
+          96
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529294",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4245,0",
+        "selected": [
+          "EYE",
+          "84",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #90 @145 \u2192 EYE #89 @148 \u2192 EYE #92 @151",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          90,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529295",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 8,
+        "style": "MAGIC",
+        "forecast": [
+          8,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3290,4247,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          79,
+          86
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529296",
+        "tick": 141,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4249,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @143 \u2192 PIPE #93 @145",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          84,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529297",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          86,
+          98
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529300",
+        "tick": 145,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4248,0",
+        "selected": [
+          "PIPE",
+          "84",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #90 @145 \u2192 PIPE #95 @147 \u2192 PIPE #91 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          81,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529306",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3292,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          77
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529307",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          85,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529309",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4247,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151 \u2192 PIPE #93 @153",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          95,
+          88
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529310",
+        "tick": 141,
+        "key": 87,
+        "lane": "west",
+        "hp": 13,
+        "style": "MAGIC",
+        "forecast": [
+          13,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @143 \u2192 PIPE #93 @145",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          72,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529317",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @139 \u2192 PIPE #91 @141",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          81,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529318",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4245,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151 \u2192 PIPE #93 @153",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          95,
+          72
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529320",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4247,0",
+        "selected": [
+          "PIPE",
+          "78",
+          "South range flicker 16"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #84 @145 \u2192 PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529321",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4247,0",
+        "selected": [
+          "EYE",
+          "73",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #79 @149 \u2192 PIPE #93 @152 \u2192 PIPE #93 @154",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          88
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529327",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @155 \u2192 PIPE #93 @157",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          82,
+          91
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      }
+    ],
+    "failed19_west_magic5_windows": [
+      {
+        "seed": "178734103529238",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [
+          "dead_or_dying"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "178734103529244",
+        "tick": 145,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4249,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @147 \u2192 PIPE #91 @149",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          98,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529257",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3297,4247,0",
+        "selected": [
+          "EYE",
+          "77",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: EYE #83 @146 \u2192 EYE #92 @149 \u2192 EYE #89 @152",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          91,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay",
+          "outside_eye8"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529259",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          17
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          82,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [
+          "known_lethal"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "178734103529262",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3297,4248,0",
+        "selected": [
+          "EYE",
+          "83",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: EYE #89 @138 \u2192 PIPE #91 @141 \u2192 PIPE #91 @143",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 7,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay",
+          "outside_eye8"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529265",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          4
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4248,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @139 \u2192 PIPE #91 @141",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "178734103529271",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          78,
+          69
+        ],
+        "wave19_stalls": 8,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [
+          "dead_or_dying",
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "178734103529275",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4248,0",
+        "selected": [
+          "EYE",
+          "89",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: EYE #95 @142 \u2192 EYE #79 @145 \u2192 PIPE #91 @148",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          75,
+          99
+        ],
+        "wave19_stalls": 3,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529281",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "89",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #95 @141",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          95
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [
+          "dead_or_dying"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "178734103529313",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4247,0",
+        "selected": [
+          "EYE",
+          "76",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: EYE #82 @146 \u2192 PIPE #92 @149 \u2192 EYE #83 @151",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          87,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529324",
+        "tick": 149,
+        "key": 83,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4248,0",
+        "selected": [
+          "PIPE",
+          "88",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #94 @151 \u2192 PIPE #89 @153 \u2192 PIPE #89 @155",
+        "native_action_delay": 2,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529328",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          79
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 3,
+        "previous_player_hp": [
+          76,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [
+          "known_lethal",
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "178734103529341",
+        "tick": 141,
+        "key": 83,
+        "lane": "west",
+        "hp": 11,
+        "style": "MAGIC",
+        "forecast": [
+          11,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "EYE",
+          "86",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #92 @141 \u2192 PIPE #89 @144 \u2192 PIPE #89 @146",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 8,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529342",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3296,4247,0",
+        "selected": [
+          "EYE",
+          "84",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: EYE #90 @142 \u2192 PIPE #91 @145 \u2192 PIPE #91 @147",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          99,
+          92
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay",
+          "outside_eye8"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529350",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4246,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @140 \u2192 PIPE #91 @142 \u2192 EYE #89 @144",
+        "native_action_delay": 3,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529359",
+        "tick": 157,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          24
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          83,
+          89
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 163,
+        "eye_plus_return": 160,
+        "gates": [
+          "known_lethal"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "178734103529368",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4247,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @139 \u2192 PIPE #91 @141",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529373",
+        "tick": 149,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3292,4246,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @151 \u2192 PIPE #91 @153",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          82,
+          99
+        ],
+        "wave19_stalls": 3,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529376",
+        "tick": 137,
+        "key": 83,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3292,4245,0",
+        "selected": [
+          "EYE",
+          "87",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: EYE #93 @138",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          91,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [
+          "dead_or_dying",
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529380",
+        "tick": 153,
+        "key": 85,
+        "lane": "west",
+        "hp": 13,
+        "style": "MAGIC",
+        "forecast": [
+          13,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3290,4245,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @155 \u2192 PIPE #91 @157",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          99,
+          97
+        ],
+        "wave19_stalls": 7,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "178734103529400",
+        "tick": 161,
+        "key": 87,
+        "lane": "west",
+        "hp": 1,
+        "style": "MAGIC",
+        "forecast": [
+          1,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @163",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          98,
+          93
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 167,
+        "eye_plus_return": 164,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      }
+    ],
+    "caveat": "Eye8 distance and native readiness are opportunity screens; target LOS is not emitted. Predecision queued damage is authoritative; ordinary trace leases are postcycle. Native action delay, possible food, same-cycle Mage claim and conservative first19-return budget gates are checked, but a passing screen is not a proof of target LOS. Human-corridor matches cite actual vetted Eye launches, not inferred human NULL.",
+    "sources": {
+      ".state/simulations/training-v4-west30-parent-lifecycle-random-200/server.log": "2d8f98789e33a323f3cd29446b4a887e2e4a811a3266f5138d0a25087cd9a8e2",
+      ".state/simulations/training-v4-west30-parent-lifecycle-random-200/trials.csv": "3eb8bad3646474dae0f43babff6f1bf95b212894c1670118cdbdb15b5be0bb6a"
+    }
+  },
+  {
+    "run": ".state/simulations/training-v4-west30-parent-lifecycle-fresh-300",
+    "trials": 300,
+    "failed19_rooms": 26,
+    "counts": {
+      "west_native_gate_screen": 90,
+      "west_screen_other_native_attack": 37,
+      "nonlethal_magic5_west": 210,
+      "ready_eye8_west": 90,
+      "other_native_attack_west": 37,
+      "nonlethal_magic5_south": 300,
+      "ready_eye8_south": 83,
+      "other_native_attack_south": 42,
+      "nonlethal_magic5_east": 300,
+      "ready_eye8_east": 21,
+      "other_native_attack_east": 21,
+      "west_native_gate_screen_failed19": 10,
+      "west_screen_human_corridor": 5
+    },
+    "examples": [
+      {
+        "seed": "68515107335048",
+        "tick": 145,
+        "key": 85,
+        "lane": "west",
+        "hp": 1,
+        "style": "MAGIC",
+        "forecast": [
+          1,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "89",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #95 @145 \u2192 PIPE #91 @147",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          67,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335057",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4247,0",
+        "selected": [
+          "EYE",
+          "86",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #92 @153 \u2192 PIPE #93 @156 \u2192 PIPE #93 @158",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          99,
+          85
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335061",
+        "tick": 145,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4246,0",
+        "selected": [
+          "PIPE",
+          "88",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #94 @145 \u2192 EYE #90 @147 \u2192 PIPE #91 @150",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          97,
+          92
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335066",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          1
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "89",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #95 @141 \u2192 PIPE #91 @143 \u2192 PIPE #91 @145",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335067",
+        "tick": 141,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4248,0",
+        "selected": [
+          "EYE",
+          "75",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #81 @141 \u2192 PIPE #93 @144 \u2192 PIPE #93 @146",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          97,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335068",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 14,
+        "style": "MAGIC",
+        "forecast": [
+          14,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3290,4248,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          74,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335072",
+        "tick": 141,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4248,0",
+        "selected": [
+          "EYE",
+          "70",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #76 @141 \u2192 PIPE #93 @144 \u2192 PIPE #93 @146",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          95
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335073",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4247,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          91,
+          80
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335074",
+        "tick": 149,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @151 \u2192 PIPE #91 @153",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          96,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335076",
+        "tick": 141,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4247,0",
+        "selected": [
+          "PIPE",
+          "86",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #92 @141 \u2192 PIPE #93 @143 \u2192 PIPE #93 @145",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          95,
+          93
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335077",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4247,0",
+        "selected": [
+          "EYE",
+          "68",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #74 @149 \u2192 PIPE #93 @152 \u2192 PIPE #93 @154",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          97,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335078",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4245,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151 \u2192 PIPE #93 @153",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          74,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335085",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151 \u2192 PIPE #93 @153",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          86,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335089",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4248,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #91 @145 \u2192 PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          96,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335090",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4247,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @155 \u2192 PIPE #93 @157",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335091",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4248,0",
+        "selected": [
+          "PIPE",
+          "78",
+          "South range flicker 16"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #84 @145 \u2192 PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335095",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          80,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335100",
+        "tick": 145,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4247,0",
+        "selected": [
+          "PIPE",
+          "88",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #94 @145 \u2192 PIPE #91 @147 \u2192 PIPE #91 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335101",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4248,0",
+        "selected": [
+          "EYE",
+          "73",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #79 @145 \u2192 PIPE #93 @148 \u2192 PIPE #93 @150",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          68,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335102",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4247,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151 \u2192 PIPE #93 @153",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          94
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335103",
+        "tick": 141,
+        "key": 83,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4248,0",
+        "selected": [
+          "PIPE",
+          "77",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #83 @141 \u2192 PIPE #92 @143 \u2192 PIPE #89 @145",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335105",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          87,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335106",
+        "tick": 157,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @159 \u2192 PIPE #93 @161",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          96,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 163,
+        "eye_plus_return": 160,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335108",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "PIPE",
+          "88",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #94 @141 \u2192 EYE #95 @143 \u2192 EYE #90 @146",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          81,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "68515107335110",
+        "tick": 145,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3295,4248,0",
+        "selected": [
+          "CHIN",
+          "88",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: CHIN #94 @145 \u2192 PIPE #91 @148 \u2192 PIPE #91 @150",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          96,
+          81
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335111",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4248,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @143 \u2192 PIPE #91 @145",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "68515107335119",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3292,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          99,
+          79
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335120",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @143 \u2192 PIPE #91 @145",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          90,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335122",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4247,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #91 @145 \u2192 PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          81,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335126",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 0,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": true
+      }
+    ],
+    "failed19_west_magic5_windows": [
+      {
+        "seed": "68515107335053",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [
+          "dead_or_dying"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "68515107335055",
+        "tick": 149,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3296,4248,0",
+        "selected": [
+          "EYE",
+          "73",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: EYE #79 @150 \u2192 PIPE #94 @153 \u2192 PIPE #91 @155",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          90,
+          99
+        ],
+        "wave19_stalls": 1,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay",
+          "outside_eye8"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335087",
+        "tick": 157,
+        "key": 87,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 163,
+        "eye_plus_return": 160,
+        "gates": [
+          "dead_or_dying"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "68515107335094",
+        "tick": 145,
+        "key": 83,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "PIPE",
+          "86",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #92 @145",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          98,
+          99
+        ],
+        "wave19_stalls": 8,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [
+          "dead_or_dying"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "68515107335097",
+        "tick": 149,
+        "key": 83,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3290,4248,0",
+        "selected": [
+          "EYE",
+          "89",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: EYE #95 @151",
+        "native_action_delay": 2,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [
+          "dead_or_dying",
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335099",
+        "tick": 137,
+        "key": 83,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          85
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4248,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @139",
+        "native_action_delay": 2,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [
+          "known_lethal",
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335106",
+        "tick": 157,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @159 \u2192 PIPE #93 @161",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          96,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 163,
+        "eye_plus_return": 160,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335109",
+        "tick": 145,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3297,4245,0",
+        "selected": [
+          "PIPE",
+          "78",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #84 @145 \u2192 EYE #90 @147 \u2192 PIPE #91 @150",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [
+          "outside_eye8"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335138",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 1,
+        "style": "MAGIC",
+        "forecast": [
+          1,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @155",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 3,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335139",
+        "tick": 141,
+        "key": 83,
+        "lane": "west",
+        "hp": 5,
+        "style": "MAGIC",
+        "forecast": [
+          5,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "86",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #92 @141 \u2192 PIPE #89 @143",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335145",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          1
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4248,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @139 \u2192 PIPE #91 @141",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 7,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "68515107335166",
+        "tick": 149,
+        "key": 83,
+        "lane": "west",
+        "hp": 10,
+        "style": "MAGIC",
+        "forecast": [
+          10,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "EYE",
+          "86",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #92 @149 \u2192 PIPE #89 @152 \u2192 PIPE #89 @154",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          82
+        ],
+        "wave19_stalls": 8,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335172",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4245,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @139 \u2192 PIPE #91 @141",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          91,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335182",
+        "tick": 157,
+        "key": 87,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          79,
+          71
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 163,
+        "eye_plus_return": 160,
+        "gates": [
+          "dead_or_dying"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "68515107335212",
+        "tick": 157,
+        "key": 87,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          82,
+          79
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 163,
+        "eye_plus_return": 160,
+        "gates": [
+          "dead_or_dying"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "68515107335213",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @139 \u2192 PIPE #91 @141",
+        "native_action_delay": -1,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335226",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3292,4246,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @139 \u2192 PIPE #91 @141",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          91,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335228",
+        "tick": 137,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4247,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @139 \u2192 PIPE #93 @141",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          89,
+          99
+        ],
+        "wave19_stalls": 3,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335235",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 1,
+        "style": "MAGIC",
+        "forecast": [
+          1,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @155",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          86,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335239",
+        "tick": 137,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          30
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 143,
+        "eye_plus_return": 140,
+        "gates": [
+          "known_lethal",
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "68515107335285",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          85,
+          99
+        ],
+        "wave19_stalls": 3,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [
+          "dead_or_dying"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "68515107335291",
+        "tick": 145,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3292,4246,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #91 @145 \u2192 PIPE #93 @147 \u2192 PIPE #93 @149",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          72,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 151,
+        "eye_plus_return": 148,
+        "gates": [],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335297",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 0,
+        "style": "MAGIC",
+        "forecast": [
+          0,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4248,0",
+        "selected": [
+          "EYE",
+          "-1",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "No useful pre-cap attack: prepare West magic big 19",
+        "native_action_delay": 0,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 159,
+        "eye_plus_return": 156,
+        "gates": [
+          "dead_or_dying"
+        ],
+        "matched_human_eye_corridor": true
+      },
+      {
+        "seed": "68515107335302",
+        "tick": 141,
+        "key": 83,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          18
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4246,0",
+        "selected": [
+          "PIPE",
+          "86",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #92 @143",
+        "native_action_delay": 2,
+        "previous_player_hp": [
+          83,
+          99
+        ],
+        "wave19_stalls": 5,
+        "earliest_west19_due": 147,
+        "eye_plus_return": 144,
+        "gates": [
+          "known_lethal",
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335338",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          14
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151 \u2192 PIPE #93 @153",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          99,
+          83
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": false
+      },
+      {
+        "seed": "68515107335344",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "style": "MAGIC",
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4248,0",
+        "selected": [
+          "EYE",
+          "86",
+          "null"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: EYE #92 @150 \u2192 EYE #79 @153 \u2192 PIPE #93 @156",
+        "native_action_delay": 1,
+        "previous_player_hp": [
+          99,
+          99
+        ],
+        "wave19_stalls": 4,
+        "earliest_west19_due": 155,
+        "eye_plus_return": 152,
+        "gates": [
+          "policy_cooldown",
+          "native_action_delay"
+        ],
+        "matched_human_eye_corridor": false
+      }
+    ],
+    "caveat": "Eye8 distance and native readiness are opportunity screens; target LOS is not emitted. Predecision queued damage is authoritative; ordinary trace leases are postcycle. Native action delay, possible food, same-cycle Mage claim and conservative first19-return budget gates are checked, but a passing screen is not a proof of target LOS. Human-corridor matches cite actual vetted Eye launches, not inferred human NULL.",
+    "sources": {
+      ".state/simulations/training-v4-west30-parent-lifecycle-fresh-300/server.log": "0ff81dd380ebc25b9a7b3349a37763b74ae35d77e976ab9b89478dd04c682753",
+      ".state/simulations/training-v4-west30-parent-lifecycle-fresh-300/trials.csv": "0a684756ce9de3bec62bfe9f430176010a41e5efae31fe16cf8f6014c23408f0"
+    }
+  }
+]

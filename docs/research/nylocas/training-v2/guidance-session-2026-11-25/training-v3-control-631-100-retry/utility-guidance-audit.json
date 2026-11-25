@@ -1,0 +1,587 @@
+{
+  "trials": 100,
+  "counts": {
+    "preparation_swaps_without_combat_snapshot": 200,
+    "combat_swaps": 731,
+    "role1_destination1": 200,
+    "role0_destination3": 200,
+    "swaps_outside_confirmed_five_tick_window": 418,
+    "role1_destination3": 331,
+    "arceuus_swaps_without_death_charge_ready": 184
+  },
+  "examples": [
+    {
+      "trial": 0,
+      "role": 0,
+      "destination": 3,
+      "state": {
+        "tick": 47,
+        "wave": 7,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 0,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 46,
+        "weapon": 13652,
+        "rule": "East big claw special"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 0,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 113,
+        "wave": 14,
+        "book": 2,
+        "energy": 650,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 112,
+        "weapon": 29084,
+        "rule": "South melee 13"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 0,
+      "role": 1,
+      "destination": 3,
+      "state": {
+        "tick": 216,
+        "wave": 25,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 0,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 215,
+        "weapon": 29084,
+        "rule": "null"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 0,
+      "role": 1,
+      "destination": 3,
+      "state": {
+        "tick": 228,
+        "wave": 26,
+        "book": 2,
+        "energy": 750,
+        "dc_cooldown": 1,
+        "thrall_active": 0
+      },
+      "last_attack": {
+        "tick": 227,
+        "weapon": 22325,
+        "rule": "West melee big 25"
+      },
+      "remaining_cooldown": 4
+    },
+    {
+      "trial": 0,
+      "role": 0,
+      "destination": 3,
+      "state": {
+        "tick": 296,
+        "wave": 31,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 0,
+        "thrall_active": 0
+      },
+      "last_attack": {
+        "tick": 295,
+        "weapon": 12926,
+        "rule": "null"
+      },
+      "remaining_cooldown": 1
+    },
+    {
+      "trial": 1,
+      "role": 0,
+      "destination": 3,
+      "state": {
+        "tick": 49,
+        "wave": 7,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 0,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 48,
+        "weapon": 13652,
+        "rule": "East big claw special"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 1,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 116,
+        "wave": 13,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 115,
+        "weapon": 29084,
+        "rule": "null"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 1,
+      "role": 1,
+      "destination": 3,
+      "state": {
+        "tick": 222,
+        "wave": 23,
+        "book": 2,
+        "energy": 750,
+        "dc_cooldown": 1,
+        "thrall_active": 0
+      },
+      "last_attack": {
+        "tick": 220,
+        "weapon": 22325,
+        "rule": "null"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 1,
+      "role": 0,
+      "destination": 3,
+      "state": {
+        "tick": 319,
+        "wave": 31,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 0,
+        "thrall_active": 0
+      },
+      "last_attack": {
+        "tick": 316,
+        "weapon": 31113,
+        "rule": "null"
+      },
+      "remaining_cooldown": 0
+    },
+    {
+      "trial": 2,
+      "role": 0,
+      "destination": 3,
+      "state": {
+        "tick": 47,
+        "wave": 7,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 0,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 46,
+        "weapon": 13652,
+        "rule": "East big claw special"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 2,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 103,
+        "wave": 13,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 102,
+        "weapon": 29084,
+        "rule": "null"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 2,
+      "role": 0,
+      "destination": 3,
+      "state": {
+        "tick": 304,
+        "wave": 31,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 0,
+        "thrall_active": 0
+      },
+      "last_attack": {
+        "tick": 302,
+        "weapon": 31113,
+        "rule": "null"
+      },
+      "remaining_cooldown": 1
+    },
+    {
+      "trial": 2,
+      "role": 1,
+      "destination": 3,
+      "state": {
+        "tick": 305,
+        "wave": 31,
+        "book": 2,
+        "energy": 800,
+        "dc_cooldown": 1,
+        "thrall_active": 0
+      },
+      "last_attack": {
+        "tick": 304,
+        "weapon": 31113,
+        "rule": "null"
+      },
+      "remaining_cooldown": 2
+    },
+    {
+      "trial": 3,
+      "role": 0,
+      "destination": 3,
+      "state": {
+        "tick": 48,
+        "wave": 7,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 0,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 47,
+        "weapon": 13652,
+        "rule": "East big claw special"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 3,
+      "role": 1,
+      "destination": 3,
+      "state": {
+        "tick": 102,
+        "wave": 13,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 0,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 101,
+        "weapon": 29084,
+        "rule": "null"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 3,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 111,
+        "wave": 14,
+        "book": 2,
+        "energy": 650,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 110,
+        "weapon": 29084,
+        "rule": "South melee 13"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 3,
+      "role": 1,
+      "destination": 3,
+      "state": {
+        "tick": 207,
+        "wave": 23,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 0,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 206,
+        "weapon": 29084,
+        "rule": "null"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 3,
+      "role": 1,
+      "destination": 3,
+      "state": {
+        "tick": 224,
+        "wave": 26,
+        "book": 2,
+        "energy": 900,
+        "dc_cooldown": 1,
+        "thrall_active": 0
+      },
+      "last_attack": {
+        "tick": 223,
+        "weapon": 22325,
+        "rule": "West melee big 25"
+      },
+      "remaining_cooldown": 4
+    },
+    {
+      "trial": 3,
+      "role": 0,
+      "destination": 3,
+      "state": {
+        "tick": 296,
+        "wave": 31,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 0,
+        "thrall_active": 0
+      },
+      "last_attack": {
+        "tick": 295,
+        "weapon": 31113,
+        "rule": "null"
+      },
+      "remaining_cooldown": 2
+    },
+    {
+      "trial": 4,
+      "role": 0,
+      "destination": 3,
+      "state": {
+        "tick": 47,
+        "wave": 7,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 0,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 46,
+        "weapon": 13652,
+        "rule": "East big claw special"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 4,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 105,
+        "wave": 14,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 104,
+        "weapon": 29084,
+        "rule": "South melee 13"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 4,
+      "role": 1,
+      "destination": 3,
+      "state": {
+        "tick": 207,
+        "wave": 23,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 0,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 206,
+        "weapon": 29084,
+        "rule": "null"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 4,
+      "role": 1,
+      "destination": 3,
+      "state": {
+        "tick": 224,
+        "wave": 25,
+        "book": 2,
+        "energy": 900,
+        "dc_cooldown": 1,
+        "thrall_active": 0
+      },
+      "last_attack": {
+        "tick": 223,
+        "weapon": 22325,
+        "rule": "East melee big 24"
+      },
+      "remaining_cooldown": 4
+    },
+    {
+      "trial": 4,
+      "role": 0,
+      "destination": 3,
+      "state": {
+        "tick": 315,
+        "wave": 31,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 0,
+        "thrall_active": 0
+      },
+      "last_attack": {
+        "tick": 310,
+        "weapon": 12926,
+        "rule": "null"
+      },
+      "remaining_cooldown": -3
+    },
+    {
+      "trial": 5,
+      "role": 0,
+      "destination": 3,
+      "state": {
+        "tick": 46,
+        "wave": 7,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 0,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 45,
+        "weapon": 13652,
+        "rule": "East big claw special"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 5,
+      "role": 1,
+      "destination": 3,
+      "state": {
+        "tick": 109,
+        "wave": 14,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 0,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 108,
+        "weapon": 29084,
+        "rule": "South melee 13"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 5,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 117,
+        "wave": 15,
+        "book": 2,
+        "energy": 650,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 116,
+        "weapon": 29084,
+        "rule": "West melee 14"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 5,
+      "role": 0,
+      "destination": 3,
+      "state": {
+        "tick": 297,
+        "wave": 31,
+        "book": 2,
+        "energy": 1000,
+        "dc_cooldown": 0,
+        "thrall_active": 0
+      },
+      "last_attack": {
+        "tick": 295,
+        "weapon": 12926,
+        "rule": "null"
+      },
+      "remaining_cooldown": 0
+    },
+    {
+      "trial": 6,
+      "role": 0,
+      "destination": 3,
+      "state": {
+        "tick": 48,
+        "wave": 7,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 0,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 47,
+        "weapon": 13652,
+        "rule": "East big claw special"
+      },
+      "remaining_cooldown": 3
+    },
+    {
+      "trial": 6,
+      "role": 1,
+      "destination": 1,
+      "state": {
+        "tick": 108,
+        "wave": 14,
+        "book": 2,
+        "energy": 500,
+        "dc_cooldown": 1,
+        "thrall_active": 1
+      },
+      "last_attack": {
+        "tick": 107,
+        "weapon": 29084,
+        "rule": "null"
+      },
+      "remaining_cooldown": 3
+    }
+  ],
+  "caveat": "Arceuus readiness excludes optional experimental pre-staging. Outside-window ancient requests may be mandatory barrage recovery; inspect examples. Pre-entry preparation is exempt from combat cooldown guidance.",
+  "run": ".state/simulations/training-v3-control-631-100-retry",
+  "source_sha256": "bcd723fa1928330ad6b62a64c8ad11fae6307c90435cfb6572e9000d58f0a5a1"
+}

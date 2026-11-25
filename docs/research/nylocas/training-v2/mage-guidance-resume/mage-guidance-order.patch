@@ -1,0 +1,56 @@
+--- .state/simulations/training-v3-resume-control/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 10:05:46.347972362 +0800
++++ .state/simulations/training-v3-candidate-mage-guidance-order/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:13:12.537888002 +0800
+@@ -371,7 +371,7 @@
+ 		List<Candidate> idleRange = new ArrayList<>();
+ 		for (Crab c : room.crabs)
+ 		{
+-			if (!eligible(room, c, tick) || protectedTarget(room, c, tick)) continue;
++			if (!eligible(room, c, tick) || protectedTarget(room, c, tick) || guidanceDeferred(room, c, tick)) continue;
+ 			int age = tick - c.born;
+ 			for (Assignment a : ASSIGNMENTS)
+ 			{
+@@ -556,15 +556,42 @@
+ 			|| c.style == Style.RANGE && !(c.wave == 15 && c.lane == Lane.WEST && c.slot == 'S');
+ 	}
+ 
++	private boolean guidanceDeferred(Room room, Crab c, int tick)
++	{
++		// Jordan's opening leaves the wave-3 lane melee for natural expiry.
++		if (!c.big && c.wave == 3 && c.lane != Lane.SPLIT && c.style == Style.MELEE) return true;
++		// One south-11 Ayak precedes opening west-11, leaving that parent's
++		// children until the wave-13 admission. A NULL/claimed south can yield.
++		if (c.big && c.wave == 11 && c.lane == Lane.WEST && !completed.contains("South magic 11")
++			&& room.crabs.stream().anyMatch(south -> !south.big && south.wave == 11 && south.lane == Lane.SOUTH
++				&& south.slot == 'W' && eligible(room, south, tick) && tick - south.born <= 20)) return true;
++		// The east fighting parent is the first mage-19 opening. Do not let
++		// a shorter south ray or NPC allocation order reverse that assignment.
++		if (c.big && c.wave == 19 && c.lane == Lane.SOUTH
++			&& room.crabs.stream().anyMatch(east -> east.big && east.wave == 19 && east.lane == Lane.EAST
++				&& !opened.contains(east.key) && eligible(room, east, tick))) return true;
++		if (c.big && c.wave == 27 && c.lane == Lane.WEST)
++		{
++			// Finish the assigned 26 before spending attacks on 27. A 26 flight
++			// still owns that work until the native impact confirms its death.
++			if (room.crabs.stream().anyMatch(old -> old.big && old.wave == 26 && old.lane == Lane.WEST
++				&& !old.dying && !old.nulled && old.hp > 0 && tick - old.born < 49)) return true;
++			// Only open 27 while it is in the lane or just crossing the doorway.
++			if (!opened.contains(c.key) && tick - c.born > 9) return true;
++		}
++		return false;
++	}
++
+ 	private boolean finishBig(Crab c, Room room, int tick)
+ 	{
+ 		int age = tick - c.born;
+ 		if (opened.contains(c.key) && ASSIGNMENTS.stream().anyMatch(a -> a.big && a.matches(c))
+ 			&& (room.wave < 21 || c.wave >= 20 || age < 26)) return true;
+ 		// Post-Dinh recovery: the east wave-22 fighting big, or west melee big,
+-		// and a damaged south wave-23 survivor. Never open generic magic bigs.
++		// and a south wave-23 survivor after the ranger opening (including a zero hit). Never open generic magic bigs.
+ 		return room.wave >= 23 && room.wave <= 24 && c.wave == 22 && c.style == Style.MELEE
+-			|| c.wave == 23 && c.lane == Lane.SOUTH && c.style == Style.MELEE && c.hp < 16;
++			|| c.wave == 23 && c.lane == Lane.SOUTH && c.style == Style.MELEE && age >= 5
++			|| c.wave == 24 && c.lane == Lane.WEST && age >= 7 && (c.style == Style.MAGIC || c.style == Style.MELEE);
+ 	}
+ 
+ 	private static int cluster(Room room, Crab target, int tick)

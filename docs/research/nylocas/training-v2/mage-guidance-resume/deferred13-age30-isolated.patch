@@ -1,0 +1,11 @@
+--- .state/simulations/training-v3-candidate-forecast-current-guidance/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:47:47.094341403 +0800
++++ .state/simulations/training-v3-candidate-mage-deferred13-age30/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 19:04:59.037418843 +0800
+@@ -142,7 +142,7 @@
+ 		new Assignment("West melee 14", 14, Lane.WEST, 'S', false, Weapon.SULPHUR, 8, 24, 3291, 4248),
+ 		new Assignment("West melee 15", 15, Lane.WEST, 'N', false, Weapon.SULPHUR, 7, 24, 3290, 4249),
+ 		new Assignment("West ranged 15", 15, Lane.WEST, 'S', false, Weapon.PIPE, 6, 24, 3291, 4248),
+-		new Assignment("Deferred east big 13", 13, Lane.EAST, (char) 0, true, Weapon.SCYTHE, 25, 40, 3294, 4249),
++		new Assignment("Deferred east big 13", 13, Lane.EAST, (char) 0, true, Weapon.SCYTHE, 30, 40, 3294, 4249),
+ 		new Assignment("West big 19", 19, Lane.WEST, (char) 0, true, Weapon.EYE, 0, 25, 3291, 4248),
+ 		new Assignment("East big 19", 19, Lane.EAST, (char) 0, true, Weapon.EYE, 3, 25, 3296, 4248),
+ 		new Assignment("South big 19", 19, Lane.SOUTH, (char) 0, true, Weapon.EYE, 8, 25, 3296, 4246),

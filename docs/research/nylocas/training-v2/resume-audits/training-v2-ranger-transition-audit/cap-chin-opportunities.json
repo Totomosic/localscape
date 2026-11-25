@@ -1,0 +1,303 @@
+{
+  "run": ".state/simulations/training-v2-flight-fresh-intent-100",
+  "semantics": "Observed geometry/claims/NULL filter only; current LOS not reconstructed. Raw budget uses 8 work per pipe and2 impact buffer, not guaranteed damage.",
+  "frames": 6,
+  "rooms": 4,
+  "rawBudgetFrames": 0,
+  "witnesses": [
+    {
+      "seed": 134,
+      "tick": 168,
+      "population": 12,
+      "big18": [
+        {
+          "key": 88,
+          "w": 18,
+          "born": 148,
+          "age": 20,
+          "style": "RANGE",
+          "big": true,
+          "hp": 7,
+          "x": 3292,
+          "y": 4243,
+          "claim": 0,
+          "own": 200,
+          "dead": false,
+          "lane": "south"
+        },
+        {
+          "key": 89,
+          "w": 18,
+          "born": 148,
+          "age": 20,
+          "style": "RANGE",
+          "big": true,
+          "hp": 14,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 0,
+          "dead": false,
+          "lane": "east"
+        }
+      ],
+      "clusters": [
+        [
+          95,
+          96
+        ],
+        [
+          95,
+          96
+        ]
+      ],
+      "launch": "true",
+      "weapon": "PIPE",
+      "target": 88,
+      "decision": "Pre-cap plan: PIPE #94 @168 \u2192 CHIN #101 @170 \u2192 EYE #99 @173",
+      "rawPipeBudget": 8,
+      "remainingBefore26": 6,
+      "fitsRawBudget": false
+    },
+    {
+      "seed": 134,
+      "tick": 170,
+      "population": 12,
+      "big18": [
+        {
+          "key": 88,
+          "w": 18,
+          "born": 148,
+          "age": 22,
+          "style": "RANGE",
+          "big": true,
+          "hp": 7,
+          "x": 3292,
+          "y": 4243,
+          "claim": 0,
+          "own": 0,
+          "dead": false,
+          "lane": "south"
+        },
+        {
+          "key": 89,
+          "w": 18,
+          "born": 148,
+          "age": 22,
+          "style": "RANGE",
+          "big": true,
+          "hp": 13,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 202,
+          "dead": false,
+          "lane": "east"
+        }
+      ],
+      "clusters": [
+        [
+          95,
+          96
+        ],
+        [
+          95,
+          96
+        ]
+      ],
+      "launch": "true",
+      "weapon": "PIPE",
+      "target": 89,
+      "decision": "Pre-cap plan: PIPE #95 @170 \u2192 PIPE #95 @172 \u2192 CHIN #101 @174",
+      "rawPipeBudget": 8,
+      "remainingBefore26": 4,
+      "fitsRawBudget": false
+    },
+    {
+      "seed": 145,
+      "tick": 160,
+      "population": 12,
+      "big18": [
+        {
+          "key": 88,
+          "w": 18,
+          "born": 144,
+          "age": 16,
+          "style": "RANGE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4243,
+          "claim": 0,
+          "own": 0,
+          "dead": false,
+          "lane": "south"
+        },
+        {
+          "key": 89,
+          "w": 18,
+          "born": 144,
+          "age": 16,
+          "style": "RANGE",
+          "big": true,
+          "hp": 16,
+          "x": 3293,
+          "y": 4253,
+          "claim": 0,
+          "own": 192,
+          "dead": false,
+          "lane": "east"
+        }
+      ],
+      "clusters": [
+        [
+          93,
+          94
+        ],
+        [
+          93,
+          94
+        ]
+      ],
+      "launch": "true",
+      "weapon": "PIPE",
+      "target": 89,
+      "decision": "Pre-cap plan: PIPE #95 @160 \u2192 PIPE #95 @162 \u2192 CHIN #99 @164",
+      "rawPipeBudget": 10,
+      "remainingBefore26": 10,
+      "fitsRawBudget": false
+    },
+    {
+      "seed": 151,
+      "tick": 168,
+      "population": 13,
+      "big18": [
+        {
+          "key": 88,
+          "w": 18,
+          "born": 148,
+          "age": 20,
+          "style": "RANGE",
+          "big": true,
+          "hp": 1,
+          "x": 3292,
+          "y": 4243,
+          "claim": 0,
+          "own": 0,
+          "dead": false,
+          "lane": "south"
+        },
+        {
+          "key": 89,
+          "w": 18,
+          "born": 148,
+          "age": 20,
+          "style": "RANGE",
+          "big": true,
+          "hp": 14,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 200,
+          "dead": false,
+          "lane": "east"
+        }
+      ],
+      "clusters": [
+        [
+          97,
+          98
+        ],
+        [
+          97,
+          98
+        ]
+      ],
+      "launch": "true",
+      "weapon": "PIPE",
+      "target": 89,
+      "decision": "Pre-cap plan: PIPE #95 @168 \u2192 PIPE #95 @170 \u2192 CHIN #103 @172",
+      "rawPipeBudget": 8,
+      "remainingBefore26": 6,
+      "fitsRawBudget": false
+    },
+    {
+      "seed": 226,
+      "tick": 166,
+      "population": 13,
+      "big18": [
+        {
+          "key": 89,
+          "w": 18,
+          "born": 140,
+          "age": 26,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 12,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 0,
+          "dead": false,
+          "lane": "east"
+        }
+      ],
+      "clusters": [
+        [
+          99,
+          100
+        ],
+        [
+          99,
+          100
+        ]
+      ],
+      "launch": "true",
+      "weapon": "PIPE",
+      "target": 96,
+      "decision": "Pre-cap plan: PIPE #102 @166 \u2192 CHIN #105 @168 \u2192 PIPE #104 @171",
+      "rawPipeBudget": 6,
+      "remainingBefore26": 0,
+      "fitsRawBudget": false
+    },
+    {
+      "seed": 226,
+      "tick": 168,
+      "population": 14,
+      "big18": [
+        {
+          "key": 89,
+          "w": 18,
+          "born": 140,
+          "age": 28,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 7,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 0,
+          "dead": false,
+          "lane": "east"
+        }
+      ],
+      "clusters": [
+        [
+          96,
+          98
+        ],
+        [
+          96,
+          98
+        ]
+      ],
+      "launch": "true",
+      "weapon": "CHIN",
+      "target": 99,
+      "decision": "Pre-cap plan: CHIN #105 @168 \u2192 PIPE #107 @171 \u2192 PIPE #106 @173",
+      "rawPipeBudget": 4,
+      "remainingBefore26": -2,
+      "fitsRawBudget": false
+    }
+  ]
+}

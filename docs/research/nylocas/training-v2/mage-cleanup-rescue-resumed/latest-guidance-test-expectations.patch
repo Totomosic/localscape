@@ -1,0 +1,23 @@
+--- original-preserved/MageStrategyTest.java
++++ latest-clarification/MageStrategyTest.java
+@@ -734,17 +734,17 @@
+ 		Crab melee = crab(r, 31, 100, Lane.SPLIT, (char) 0, false, Style.MELEE, 3296, 4248);
+ 		assertSame(melee, strategy.decide(r, 102).target);
+ 	}
+-	@Test public void cleanupRescueLeavesNamedMageLaneAndPartnerPacketGuardsIntact()
++	@Test public void cleanupRescuePreemptsOrdinaryNamedLaneAndReleasesPartnerNullPacket()
+ 	{
+ 		Room r = room(31, 100, 3295, 4248);
+ 		Crab rescue = crab(r, 31, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3298, 4248);
+ 		rescue.partnerNulled = true;
+ 		Crab east = crab(r, 31, 100, Lane.EAST, 'N', false, Style.MAGIC, 3300, 4249);
+-		assertSame(east, strategy.decide(r, 102).target);
++		assertSame(rescue, strategy.decide(r, 102).target);
+ 		east.dying = true; rescue.dying = true;
+ 		Crab saved = crab(r, 31, 100, Lane.WEST, 'N', false, Style.MAGIC, 3291, 4249);
+ 		saved.partnerNulled = true;
+-		assertNull(strategy.decide(r, 102).target);
++		assertSame(saved, strategy.decide(r, 102).target);
+ 	}
+ 
+ 

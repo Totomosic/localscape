@@ -1,0 +1,609 @@
+[
+  {
+    "seed": "201945272172157",
+    "rule": "12 west Dinh",
+    "spawn": 84,
+    "frames": [
+      {
+        "wave": 12,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3299,4248,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 12 west Dinh",
+        "tick": 93,
+        "targets": [
+          {
+            "key": 51,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 9,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3290,
+            "y": 4249,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 52,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 9,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3290,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,3",
+          "3,null",
+          "3295,4246,0,3297,4248,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "141"
+        ],
+        "hp": "99,80"
+      },
+      {
+        "wave": 12,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3297,4248,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 12 west Dinh",
+        "tick": 94,
+        "targets": [
+          {
+            "key": 51,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 10,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3290,
+            "y": 4250,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 52,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 10,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3291,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,2",
+          "7,null",
+          "3295,4246,0,3295,4248,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "141"
+        ],
+        "hp": "99,64"
+      },
+      {
+        "wave": 12,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3295,4248,0",
+        "weapon": "DINH",
+        "target": "-1",
+        "rule": "null",
+        "reason": "Reserve 12 west Dinh",
+        "tick": 95,
+        "targets": [
+          {
+            "key": 51,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 11,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3290,
+            "y": 4251,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 52,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 11,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4246,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,1",
+          "7,null",
+          "3295,4246,0,3293,4249,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "141"
+        ],
+        "hp": "99,86"
+      },
+      {
+        "wave": 12,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4249,0",
+        "weapon": "DINH",
+        "target": "52",
+        "rule": "12 west Dinh",
+        "reason": "12 west Dinh",
+        "tick": 96,
+        "targets": [
+          {
+            "key": 51,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 12,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3291,
+            "y": 4250,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 52,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 12,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3293,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,3",
+          "7,8",
+          "3295,4246,0,3293,4249,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "141"
+        ],
+        "hp": "99,86"
+      },
+      {
+        "wave": 12,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3293,4249,0",
+        "weapon": "DINH",
+        "target": "52",
+        "rule": "12 west Dinh",
+        "reason": "12 west Dinh",
+        "tick": 97,
+        "targets": [
+          {
+            "key": 51,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 13,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3290,
+            "y": 4251,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 52,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 13,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3293,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,2",
+          "8,8",
+          "3295,4246,0,3294,4248,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "141"
+        ],
+        "hp": "99,86"
+      },
+      {
+        "wave": 12,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3294,4248,0",
+        "weapon": "SULPHUR",
+        "target": "51",
+        "rule": "null",
+        "reason": "Fresh MELEE small",
+        "tick": 98,
+        "targets": [
+          {
+            "key": 51,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 14,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3291,
+            "y": 4251,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 52,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 14,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3294,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,1",
+          "8,8",
+          "3295,4246,0,3292,4249,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "141"
+        ],
+        "hp": "99,86"
+      },
+      {
+        "wave": 12,
+        "ready": "true",
+        "attack": "false",
+        "pos": "3292,4249,0",
+        "weapon": "SULPHUR",
+        "target": "51",
+        "rule": "null",
+        "reason": "Fresh MELEE small",
+        "tick": 99,
+        "targets": [
+          {
+            "key": 51,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 15,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3290,
+            "y": 4251,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 52,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 15,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3294,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,0",
+          "8,8",
+          "3295,4246,0,3290,4250,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "141"
+        ],
+        "hp": "99,86"
+      },
+      {
+        "wave": 12,
+        "ready": "true",
+        "attack": "true",
+        "pos": "3290,4250,0",
+        "weapon": "SULPHUR",
+        "target": "51",
+        "rule": "null",
+        "reason": "Fresh MELEE small",
+        "tick": 100,
+        "targets": [
+          {
+            "key": 51,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 16,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3291,
+            "y": 4251,
+            "claim": 0,
+            "flight": 132,
+            "dying": false
+          },
+          {
+            "key": 52,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 16,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3294,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "2,-1",
+          "8,8",
+          "3295,4246,0,3290,4250,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "141"
+        ],
+        "hp": "99,90"
+      },
+      {
+        "wave": 12,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3290,4250,0",
+        "weapon": "SULPHUR",
+        "target": "52",
+        "rule": "null",
+        "reason": "Plan SULPHUR #58 @104: Fresh MELEE small",
+        "tick": 101,
+        "targets": [
+          {
+            "key": 51,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 17,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3290,
+            "y": 4251,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          },
+          {
+            "key": 52,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 17,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3293,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "1,3",
+          "8,8",
+          "3295,4246,0,3292,4249,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "141"
+        ],
+        "hp": "99,90"
+      },
+      {
+        "wave": 12,
+        "ready": "false",
+        "attack": "false",
+        "pos": "3292,4249,0",
+        "weapon": "SULPHUR",
+        "target": "52",
+        "rule": "null",
+        "reason": "Plan SULPHUR #58 @104: Fresh MELEE small",
+        "tick": 102,
+        "targets": [
+          {
+            "key": 51,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 18,
+            "style": "MELEE",
+            "big": false,
+            "hp": 0,
+            "x": 3290,
+            "y": 4251,
+            "claim": 0,
+            "flight": 0,
+            "dying": true
+          },
+          {
+            "key": 52,
+            "wave": 12,
+            "lane": "west",
+            "slot": "E",
+            "age": 18,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4249,
+            "claim": 0,
+            "flight": 0,
+            "dying": false
+          }
+        ],
+        "nulls": [],
+        "engine": [
+          "0,2",
+          "8,8",
+          "3295,4246,0,3291,4248,0"
+        ],
+        "utility": [
+          "2",
+          "1000",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "141"
+        ],
+        "hp": "99,90"
+      }
+    ]
+  }
+]

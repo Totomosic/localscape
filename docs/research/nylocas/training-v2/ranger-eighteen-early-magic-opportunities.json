@@ -1,0 +1,598 @@
+[
+  {
+    "run": ".state/simulations/training-v3-forecast-guidance-refined-random-200",
+    "trials": 200,
+    "counts": {
+      "nonlethal_magic5_south": 200,
+      "nonlethal_magic5_east": 200,
+      "nonlethal_magic5_west": 135,
+      "ready_eye8_west": 66,
+      "ready_eye8_south": 62,
+      "other_native_attack_west": 12,
+      "other_native_attack_south": 13,
+      "ready_eye8_east": 10,
+      "other_native_attack_east": 7
+    },
+    "examples": [
+      {
+        "seed": "201945272171966",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 11,
+        "forecast": [
+          11,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3290,4245,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @143 \u2192 PIPE #91 @145"
+      },
+      {
+        "seed": "201945272171966",
+        "tick": 141,
+        "key": 86,
+        "lane": "south",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3295,
+          4238
+        ],
+        "player": "3290,4245,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @143 \u2192 PIPE #91 @145"
+      },
+      {
+        "seed": "201945272171967",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3290,4245,0",
+        "selected": [
+          "PIPE",
+          "88",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #94 @141 \u2192 PIPE #91 @143 \u2192 PIPE #91 @145"
+      },
+      {
+        "seed": "201945272171967",
+        "tick": 141,
+        "key": 86,
+        "lane": "south",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3295,
+          4238
+        ],
+        "player": "3290,4245,0",
+        "selected": [
+          "PIPE",
+          "88",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #94 @141 \u2192 PIPE #91 @143 \u2192 PIPE #91 @145"
+      },
+      {
+        "seed": "201945272171968",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4245,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151 \u2192 PIPE #93 @153"
+      },
+      {
+        "seed": "201945272171968",
+        "tick": 149,
+        "key": 88,
+        "lane": "south",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3295,
+          4238
+        ],
+        "player": "3291,4245,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151 \u2192 PIPE #93 @153"
+      },
+      {
+        "seed": "201945272171969",
+        "tick": 153,
+        "key": 88,
+        "lane": "south",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3295,
+          4238
+        ],
+        "player": "3296,4247,0",
+        "selected": [
+          "EYE",
+          "75",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #81 @153 \u2192 PIPE #93 @156 \u2192 PIPE #93 @158"
+      },
+      {
+        "seed": "201945272171969",
+        "tick": 153,
+        "key": 89,
+        "lane": "east",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3304,
+          4248
+        ],
+        "player": "3296,4247,0",
+        "selected": [
+          "EYE",
+          "75",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #81 @153 \u2192 PIPE #93 @156 \u2192 PIPE #93 @158"
+      },
+      {
+        "seed": "201945272171970",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3293,4247,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @143 \u2192 PIPE #91 @145"
+      },
+      {
+        "seed": "201945272171970",
+        "tick": 141,
+        "key": 86,
+        "lane": "south",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3295,
+          4238
+        ],
+        "player": "3293,4247,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @143 \u2192 PIPE #91 @145"
+      },
+      {
+        "seed": "201945272171972",
+        "tick": 157,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @159 \u2192 PIPE #93 @161"
+      },
+      {
+        "seed": "201945272171972",
+        "tick": 157,
+        "key": 88,
+        "lane": "south",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3295,
+          4238
+        ],
+        "player": "3291,4246,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @159 \u2192 PIPE #93 @161"
+      }
+    ],
+    "caveat": "Eye8 distance and native readiness are opportunity screens; target LOS is not emitted. Predecision queued damage is authoritative; ordinary trace leases are postcycle.",
+    "sources": {
+      ".state/simulations/training-v3-forecast-guidance-refined-random-200/server.log": "848308ccbf22994d519e1ad49851ec2535a93d40396b4ee1ad6a46471e0bb5b1",
+      ".state/simulations/training-v3-forecast-guidance-refined-random-200/trials.csv": "9e7df286fb75c4ec1b1c8c0a0ef73e841f7ce26d99310446ed2f4502b931a665"
+    }
+  },
+  {
+    "run": ".state/simulations/training-v3-forecast-guidance-refined-fresh-300",
+    "trials": 300,
+    "counts": {
+      "nonlethal_magic5_west": 186,
+      "ready_eye8_west": 86,
+      "nonlethal_magic5_south": 300,
+      "ready_eye8_south": 89,
+      "nonlethal_magic5_east": 300,
+      "other_native_attack_west": 16,
+      "other_native_attack_south": 26,
+      "ready_eye8_east": 22,
+      "other_native_attack_east": 18
+    },
+    "examples": [
+      {
+        "seed": "222206795139630",
+        "tick": 153,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4245,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @155 \u2192 PIPE #93 @157"
+      },
+      {
+        "seed": "222206795139630",
+        "tick": 153,
+        "key": 88,
+        "lane": "south",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3295,
+          4238
+        ],
+        "player": "3291,4245,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @155 \u2192 PIPE #93 @157"
+      },
+      {
+        "seed": "222206795139634",
+        "tick": 141,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4247,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @143 \u2192 PIPE #91 @145"
+      },
+      {
+        "seed": "222206795139634",
+        "tick": 141,
+        "key": 86,
+        "lane": "south",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3295,
+          4238
+        ],
+        "player": "3294,4247,0",
+        "selected": [
+          "PIPE",
+          "85",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #91 @143 \u2192 PIPE #91 @145"
+      },
+      {
+        "seed": "222206795139638",
+        "tick": 145,
+        "key": 85,
+        "lane": "west",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3294,4247,0",
+        "selected": [
+          "EYE",
+          "59",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #65 @145 \u2192 PIPE #91 @148 \u2192 PIPE #91 @150"
+      },
+      {
+        "seed": "222206795139638",
+        "tick": 145,
+        "key": 86,
+        "lane": "south",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3295,
+          4238
+        ],
+        "player": "3294,4247,0",
+        "selected": [
+          "EYE",
+          "59",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: EYE #65 @145 \u2192 PIPE #91 @148 \u2192 PIPE #91 @150"
+      },
+      {
+        "seed": "222206795139639",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 7,
+        "forecast": [
+          7,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3290,4247,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151"
+      },
+      {
+        "seed": "222206795139639",
+        "tick": 149,
+        "key": 88,
+        "lane": "south",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3295,
+          4238
+        ],
+        "player": "3290,4247,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151"
+      },
+      {
+        "seed": "222206795139640",
+        "tick": 141,
+        "key": 86,
+        "lane": "south",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3295,
+          4238
+        ],
+        "player": "3296,4247,0",
+        "selected": [
+          "PIPE",
+          "89",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #95 @141 \u2192 PIPE #91 @143 \u2192 PIPE #91 @145"
+      },
+      {
+        "seed": "222206795139640",
+        "tick": 141,
+        "key": 87,
+        "lane": "east",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3304,
+          4248
+        ],
+        "player": "3296,4247,0",
+        "selected": [
+          "PIPE",
+          "89",
+          "null"
+        ],
+        "native_attack": true,
+        "reason": "Pre-cap plan: PIPE #95 @141 \u2192 PIPE #91 @143 \u2192 PIPE #91 @145"
+      },
+      {
+        "seed": "222206795139641",
+        "tick": 149,
+        "key": 87,
+        "lane": "west",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3286,
+          4248
+        ],
+        "player": "3291,4245,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151 \u2192 PIPE #93 @153"
+      },
+      {
+        "seed": "222206795139641",
+        "tick": 149,
+        "key": 88,
+        "lane": "south",
+        "hp": 16,
+        "forecast": [
+          16,
+          0
+        ],
+        "target": [
+          3295,
+          4238
+        ],
+        "player": "3291,4245,0",
+        "selected": [
+          "PIPE",
+          "87",
+          "West big 18"
+        ],
+        "native_attack": false,
+        "reason": "Pre-cap plan: PIPE #93 @151 \u2192 PIPE #93 @153"
+      }
+    ],
+    "caveat": "Eye8 distance and native readiness are opportunity screens; target LOS is not emitted. Predecision queued damage is authoritative; ordinary trace leases are postcycle.",
+    "sources": {
+      ".state/simulations/training-v3-forecast-guidance-refined-fresh-300/server.log": "cfb18935fe22967695a035971b73762af30fb6301bc58ebe5a73a236220ef503",
+      ".state/simulations/training-v3-forecast-guidance-refined-fresh-300/trials.csv": "9729c7d98eed36b696fa43f6277d3c5d657eab02dfdc48c70766f7e723eb44cd"
+    }
+  }
+]

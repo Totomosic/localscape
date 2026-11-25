@@ -1,0 +1,16 @@
+{
+  "baseSource": "upstream/rsmod/api/nylocas-agents/src/main/java",
+  "baseMageSha256": "92eed2dacf878ffd17cf33cf713e366f8b863f58158f72ff4a6f35beff5fe108",
+  "candidateMageSha256": "4bf3119581490d839107e5b2cd0c7a87d071181d06941784f8e97813d0b06524",
+  "delta": "One ordinary SHADOW candidate for unopened East19 before unchanged EYE candidate, using same score/rule/stage/first>=3/deadline and normal range10/cooldown5/packetreturn checks. Same-time equal-target ties prefer Shadow insertion; Eye remains available if Shadow cannot fit. Opened followups use existing Eye. Existing shadowOpening=false opts out. No hard order/staging/gear/damage/handoff changes.",
+  "evidence": {
+    "path": "docs/research/nylocas/training-v2/training-v2-mage19-first-big.json",
+    "sha256": "3fc83e661bdda52a5c435271fa67d7dfc0918f3b55dc440ebdb698c1c6790373",
+    "shadowFirstRooms": 15,
+    "totalRooms": 46,
+    "shadowFirstAnimationAges": [
+      4
+    ]
+  },
+  "limits": "Vetted Shadows are all firstEast age3requests; unchanged bot competition may select South first and open East later. Native timing/coverage/completion must be measured before adoption."
+}

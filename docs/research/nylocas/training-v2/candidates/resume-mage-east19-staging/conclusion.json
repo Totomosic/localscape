@@ -1,0 +1,16 @@
+{
+  "decision": "rejected; not promoted",
+  "run": ".state/simulations/training-v2-flight-mage-east19-staging-100",
+  "baseline": ".state/simulations/training-v2-flight-mage-idle-pipe-100",
+  "completed": 100,
+  "trials": 100,
+  "deaths": 0,
+  "completedMeanTicks": 338.48,
+  "baselineCompletedMeanTicks": 336.56,
+  "pairedMeanTicks": 1.92,
+  "pairedStandardError": 1.0824289931688476,
+  "preCapMean": 4.73,
+  "baselinePreCapMean": 4.43,
+  "mechanism": "Early east19 launch mechanism activated: actual first-east rooms2->68; east first request median10->1; east request<=3 rooms3->69. South median first request1->7. Last19 stalls1.45->1.75 and total speed regressed despite better transition completion.",
+  "causalityLimits": "Failed-check cohorts differ; earlier19big splits add population and require clearing, but damage RNG/secondary targeting/18 work change simultaneously. Seed181 has same South dyingage10 but earlier East dying5vs20 and5extra19stalls, so delayed South alone cannot explain the regression. See outcome-audit.json for population observations."
+}

@@ -1,0 +1,13 @@
+--- cleanup-foundation/MageStrategy.java
++++ south29-return-margin/MageStrategy.java
+@@ -564,6 +564,10 @@
+ 			// Leave a native movement tick when a fighting melee filler can move before impact.
+ 			if (next != null && next.name.equals("22 south Dinh") && d.weapon.style == Style.MELEE && c.fighting)
+ 				returnTravel++;
++			// A north melee chase can finish one native movement tick farther
++			// from the south return than the short geometric estimate predicts.
++			if (next != null && (next.name.equals("29 south stage") || next.name.equals("South big 29"))
++				&& d.weapon.style == Style.MELEE) returnTravel++;
+ 			if (next != null && !next.name.equals(d.rule) && !(next.name.equals("22 south Dinh") && tick > next.due + 1)
+ 				&& at + Math.max(d.weapon.cooldown, returnTravel) > next.due) return;
+ 			candidates.add(new Candidate(d, score, first, at, position));

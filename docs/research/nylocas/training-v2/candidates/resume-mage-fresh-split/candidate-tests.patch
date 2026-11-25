@@ -1,0 +1,65 @@
+--- client/src/test/java/org/localscape/nylocas/mage/MageStrategyTest.java
++++ client/src/test/java/org/localscape/nylocas/mage/MageStrategyTest.java
+@@ -745,4 +745,62 @@
+ 		assertNull(strategy.decide(r, 102).target);
+ 	}
+ 
++
++	@Test public void firstWindowMagicSplitDisplacesOlderOrdinaryMelee()
++	{
++		Room r = room(7, 100, 3295, 4248);
++		crab(r, 5, 86, Lane.SPLIT, (char) 0, false, Style.MELEE, 3294, 4248);
++		Crab fresh = crab(r, 7, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3296, 4248);
++		Decision d = strategy.decide(r, 100);
++		assertSame(fresh, d.target); assertEquals(Weapon.EYE, d.weapon);
++	}
++	@Test public void freshMagicSplitDoesNotDisplaceAssignedBig()
++	{
++		Room r = room(8, 100, 3295, 4248);
++		Crab big = crab(r, 8, 100, Lane.WEST, 'N', true, Style.MAGIC, 3291, 4248);
++		crab(r, 8, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3296, 4248);
++		assertSame(big, strategy.decide(r, 100).target);
++	}
++	@Test public void firstWindowMagicBonusPreservesMultiTargetMelee()
++	{
++		Room r = room(7, 100, 3295, 4248);
++		Crab first = crab(r, 6, 93, Lane.SPLIT, (char) 0, false, Style.MELEE, 3294, 4248);
++		crab(r, 6, 93, Lane.SPLIT, (char) 0, false, Style.MELEE, 3294, 4249);
++		crab(r, 7, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3296, 4248);
++		Decision d = strategy.decide(r, 100);
++		assertSame(first, d.target); assertEquals(Weapon.SCYTHE, d.weapon);
++	}
++	@Test public void freshMagicSplitStillHonorsNullAndPartnerClaim()
++	{
++		Room r = room(7, 100, 3295, 4248);
++		Crab melee = crab(r, 5, 86, Lane.SPLIT, (char) 0, false, Style.MELEE, 3294, 4248);
++		Crab fresh = crab(r, 7, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3296, 4248);
++		fresh.nulled = true; assertSame(melee, strategy.decide(r, 100).target);
++		fresh.nulled = false; fresh.claimedUntil = 104; assertSame(melee, strategy.decide(r, 100).target);
++		fresh.claimedUntil = 0; fresh.ownHitUntil = 104; fresh.ownHitHp = 0;
++		assertSame(melee, strategy.decide(r, 100).target);
++	}
++	@Test public void firstWindowMagicBonusEndsAfterOneEyeCooldown()
++	{
++		Room r = room(7, 100, 3295, 4248);
++		Crab melee = crab(r, 5, 86, Lane.SPLIT, (char) 0, false, Style.MELEE, 3294, 4248);
++		crab(r, 7, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3296, 4248);
++		assertSame(melee, strategy.decide(r, 104).target);
++	}
++	@Test public void firstWindowMagicBonusDoesNotChangePostCap()
++	{
++		Room r = room(23, 100, 3295, 4248);
++		Crab melee = crab(r, 21, 86, Lane.SPLIT, (char) 0, false, Style.MELEE, 3294, 4248);
++		crab(r, 23, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3296, 4248);
++		assertSame(melee, strategy.decide(r, 100).target);
++	}
++
++	@Test public void freshMagicSplitDoesNotDisplaceFirstTickEast11Barrage()
++	{
++		Room r = room(11, 100, 3301, 4249);
++		Crab east = crab(r, 11, 100, Lane.EAST, 'N', false, Style.MAGIC, 3309, 4249);
++		crab(r, 11, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3300, 4249);
++		Decision d = strategy.decide(r, 100);
++		assertSame(east, d.target); assertEquals("East barrage 11", d.rule); assertEquals(Weapon.BARRAGE, d.weapon);
++	}
+ }

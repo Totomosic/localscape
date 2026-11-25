@@ -1,0 +1,223 @@
+package org.localscape.nylocas.ranger;
+
+import org.junit.Test;
+import org.localscape.nylocas.ranger.RangerStrategy.Crab;
+import org.localscape.nylocas.ranger.RangerStrategy.Decision;
+import org.localscape.nylocas.ranger.RangerStrategy.Lane;
+import org.localscape.nylocas.ranger.RangerStrategy.Room;
+import org.localscape.nylocas.ranger.RangerStrategy.Style;
+import org.localscape.nylocas.ranger.RangerStrategy.Weapon;
+
+import static org.junit.Assert.*;
+
+/** Follow-up ownership after a real opening hit, with observed remaining18 work reserved. */
+public class RangerWest19FollowupTest
+{
+	private final RangerStrategy strategy = new RangerStrategy();
+	private int key;
+
+	private Room room()
+	{
+		Room room = new Room();
+		room.wave = 19;
+		room.spawns[18] = 92;
+		room.spawns[19] = 100;
+		room.player = RangerStrategy.tile(3293, 4248);
+		room.specialEnergy = 1000;
+		return room;
+	}
+
+	private Crab west(Room room, int hp)
+	{
+		Crab west = new Crab(++key, key, 100, 19, Lane.WEST, 'S', true, Style.MAGIC,
+			RangerStrategy.tile(3291, 4248));
+		room.crabs.add(west);
+		strategy.attacked(new Decision(west, Weapon.EYE, room.player, false, "West magic big 19", "Opening"), 104);
+		// The native adapter clears this on Applied, including a real zero/splash.
+		west.ownHitUntil = 0;
+		west.hp = hp;
+		return west;
+	}
+
+	private Crab east18(Room room, int born, int hp)
+	{
+		Crab east = new Crab(++key, key, born, 18, Lane.EAST, 'S', true, Style.RANGE,
+			RangerStrategy.tile(3297, 4253));
+		east.hp = hp;
+		room.crabs.add(east);
+		return east;
+	}
+
+	@Test
+	public void openedWestSurvivorGetsAnImmediateFollowupAndHandoffDue()
+	{
+		Room room = room();
+		Crab west = west(room, 3);
+		assertEquals(110, strategy.west19PacketDue(room, 110));
+		Decision decision = strategy.decide(room, 110);
+		assertSame(west, decision.target);
+		assertEquals(Weapon.EYE, decision.weapon);
+		assertFalse(decision.pathToTarget);
+	}
+
+	@Test
+	public void feasibleFollowupCanInterruptWave18DominanceWithoutLosingItsBudget()
+	{
+		Room room = room();
+		Crab west = west(room, 3);
+		east18(room, 92, 16);
+		// Eye110, pipe113 and116, final native pipe impact118 == birth18+26.
+		assertEquals(110, strategy.west19PacketDue(room, 110));
+		assertSame(west, strategy.decide(room, 110).target);
+	}
+
+	@Test
+	public void urgentWave18StillWinsWhenItsLastImpactWouldMissTheBudget()
+	{
+		Room room = room();
+		west(room, 3);
+		Crab east = east18(room, 91, 16);
+		assertEquals(-1, strategy.west19PacketDue(room, 110));
+		assertSame(east, strategy.decide(room, 110).target);
+	}
+
+	@Test
+	public void theBudgetCountsEveryObservedLivingWave18Big()
+	{
+		Room room = room();
+		west(room, 3);
+		east18(room, 92, 16);
+		Crab south = new Crab(++key, key, 92, 18, Lane.SOUTH, 'W', true, Style.RANGE,
+			RangerStrategy.tile(3295, 4243));
+		room.crabs.add(south);
+		assertEquals(-1, strategy.west19PacketDue(room, 110));
+	}
+
+	@Test
+	public void pendingWave18FlightIsNotTreatedAsADeadBig()
+	{
+		Room room = room();
+		west(room, 3);
+		Crab east = east18(room, 92, 16);
+		east.ownHitUntil = 140;
+		east.ownHitHp = 0;
+		assertEquals(-1, strategy.west19PacketDue(room, 110));
+	}
+
+	@Test
+	public void nativeCooldownMovementCanCoverTheReturnToWave18()
+	{
+		Room room = room();
+		room.player = RangerStrategy.tile(3290, 4243);
+		west(room, 3);
+		Crab east = east18(room, 92, 16);
+		east.point = RangerStrategy.tile(3301, 4254);
+		assertEquals(110, strategy.west19PacketDue(room, 110));
+	}
+
+	@Test
+	public void aNulledRemainingWave18BigDoesNotPromiseAnUnfinishableBudget()
+	{
+		Room room = room();
+		west(room, 3);
+		east18(room, 92, 16).nulled = true;
+		assertEquals(-1, strategy.west19PacketDue(room, 110));
+	}
+
+	@Test
+	public void aRealZeroOpeningStillAllowsTheFollowup()
+	{
+		Room room = room();
+		Crab west = west(room, 16);
+		assertEquals(110, strategy.west19PacketDue(room, 110));
+		assertSame(west, strategy.decide(room, 110).target);
+	}
+
+	@Test
+	public void pendingOpeningFlightDoesNotAdvertiseAFollowup()
+	{
+		Room room = room();
+		Crab west = west(room, 16);
+		west.ownHitUntil = 136;
+		west.ownHitHp = 0;
+		assertEquals(-1, strategy.west19PacketDue(room, 110));
+		assertNotSame(west, strategy.decide(room, 110).target);
+	}
+
+	@Test
+	public void partnerClaimStillBlocksTheFollowup()
+	{
+		Room room = room();
+		Crab west = west(room, 3);
+		west.claimedUntil = 120;
+		assertEquals(-1, strategy.west19PacketDue(room, 110));
+		assertNotSame(west, strategy.decide(room, 110).target);
+	}
+
+	@Test
+	public void personalNullStillBlocksTheFollowup()
+	{
+		Room room = room();
+		Crab west = west(room, 3);
+		west.nulled = true;
+		assertEquals(-1, strategy.west19PacketDue(room, 110));
+		assertNotSame(west, strategy.decide(room, 110).target);
+	}
+
+	@Test
+	public void aCooldownCannotAdvertiseAFutureFollowupAsImmediate()
+	{
+		Room room = room();
+		west(room, 3);
+		room.ready = 111;
+		assertEquals(-1, strategy.west19PacketDue(room, 110));
+	}
+
+	@Test
+	public void currentObstructionPreventsTheFollowupPromise()
+	{
+		Room room = room();
+		Crab west = west(room, 3);
+		room.obstructed.add(west.key);
+		assertEquals(-1, strategy.west19PacketDue(room, 110));
+	}
+
+	@Test
+	public void travelCannotAdvertiseAFutureFollowupAsImmediate()
+	{
+		Room room = room();
+		Crab west = west(room, 3);
+		west.point = RangerStrategy.tile(3281, 4248);
+		room.player = RangerStrategy.tile(3301, 4254);
+		assertEquals(-1, strategy.west19PacketDue(room, 110));
+	}
+
+	@Test
+	public void unopenedWestBigDoesNotCreateAFollowupReservation()
+	{
+		Room room = room();
+		west(room, 3);
+		strategy.reset();
+		assertEquals(-1, strategy.west19PacketDue(room, 110));
+	}
+
+	@Test
+	public void actualWave20AndAgeElevenReleaseFollowupProtection()
+	{
+		Room room = room();
+		west(room, 3);
+		assertEquals(-1, strategy.west19PacketDue(room, 111));
+		room.wave = 20;
+		room.spawns[20] = 112;
+		assertEquals(-1, strategy.west19PacketDue(room, 112));
+	}
+
+	@Test
+	public void aDeadWestBigDoesNotRetainFollowupOwnership()
+	{
+		Room room = room();
+		Crab west = west(room, 0);
+		west.dying = true;
+		assertEquals(-1, strategy.west19PacketDue(room, 110));
+	}
+}

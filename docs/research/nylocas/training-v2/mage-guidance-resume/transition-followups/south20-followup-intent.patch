@@ -1,0 +1,16 @@
+--- age29-baseline/MageStrategy.java
++++ south20-followup-intent/MageStrategy.java
+@@ -447,10 +447,11 @@
+ 				&& c.first == selected.first && deferred(c, tick) == deferred(selected, tick)
+ 				&& (c.decision.weapon.style != Style.RANGE || selected.decision.weapon.style == Style.RANGE)
+ 				// A tentative small approach chosen during the last projectile must
+-				// yield to a known surviving 4/8 parent or required 24–26 recovery.
++				// yield to an opened 4/8 or south20 parent, or required-parent recovery.
+ 				&& !(selected.decision.target.big
+ 					&& (requiredBig(selected.decision.target) || opened.contains(selected.decision.target.key)
+-						&& (selected.decision.target.wave == 4 || selected.decision.target.wave == 8))
++						&& (selected.decision.target.wave == 4 || selected.decision.target.wave == 8
++							|| selected.decision.target.wave == 20 && selected.decision.target.lane == Lane.SOUTH))
+ 					&& c.decision.target.key != selected.decision.target.key)
+ 				&& !west19Handoff(c.decision.target, tick)
+ 				&& intent.matches(c.decision.target.key, c.decision.weapon, tick))

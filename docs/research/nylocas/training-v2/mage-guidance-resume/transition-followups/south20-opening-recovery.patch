@@ -1,0 +1,12 @@
+--- age29-baseline/MageStrategy.java
++++ south20-opening-recovery/MageStrategy.java
+@@ -623,6 +623,9 @@
+ 	private boolean finishBig(Crab c, Room room, int tick)
+ 	{
+ 		int age = tick - c.born;
++		// The south20 parent remains ours if earlier work or native input
++		// prevented its short magic opener. Recover on its melee entry.
++		if (c.wave == 20 && c.lane == Lane.SOUTH && age >= 7) return true;
+ 		// These parents remain assigned after their initial rotation window.
+ 		// Bad damage, travel or a blocked packet must not abandon an unopened big.
+ 		if (requiredBig(c) && (c.wave != 23 || age >= 7)) return true;

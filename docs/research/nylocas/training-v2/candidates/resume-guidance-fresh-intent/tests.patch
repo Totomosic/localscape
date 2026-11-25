@@ -1,0 +1,371 @@
+--- a/org/localscape/nylocas/ranger/RangerStrategyTest.java
++++ b/org/localscape/nylocas/ranger/RangerStrategyTest.java
+@@ -249,7 +249,7 @@
+ 	}
+ 
+ 	@Test
+-	public void approachKeepsFirstShotWhenANewSpawnOnlyImprovesTheScore()
++	public void unopenedApproachReconsidersNewerUsefulSmallDuringCooldown()
+ 	{
+ 		Room room = room(12, 100); room.ready = 105;
+ 		Crab original = crab(room, 12, 100, Lane.SPLIT, (char) 0, false, Style.RANGE);
+@@ -258,9 +258,9 @@
+ 		room.player = RangerStrategy.tile(3297, 4248);
+ 		Crab fresh = crab(room, 12, 101, Lane.SPLIT, (char) 0, false, Style.RANGE);
+ 		fresh.point = RangerStrategy.tile(3290, 4248); fresh.hp = 2;
+-		assertSame(original, strategy.decide(room, 101).approach);
+-		room.player = RangerStrategy.tile(3299, 4248);
+-		assertSame(original, strategy.decide(room, 105).target);
++		assertSame(fresh, strategy.decide(room, 101).approach);
++		room.player = RangerStrategy.tile(3292, 4248);
++		assertSame(fresh, strategy.decide(room, 105).target);
+ 	}
+ 
+ 	@Test
+--- /dev/null
++++ b/org/localscape/nylocas/ranger/RangerFreshIntentTest.java
+@@ -0,0 +1,164 @@
++package org.localscape.nylocas.ranger;
++
++import org.junit.Test;
++import org.localscape.nylocas.ranger.RangerStrategy.Crab;
++import org.localscape.nylocas.ranger.RangerStrategy.Decision;
++import org.localscape.nylocas.ranger.RangerStrategy.Lane;
++import org.localscape.nylocas.ranger.RangerStrategy.Room;
++import org.localscape.nylocas.ranger.RangerStrategy.Style;
++import org.localscape.nylocas.ranger.RangerStrategy.Weapon;
++
++import static org.junit.Assert.*;
++
++/** Behavior probes for replacing unopened old-small approaches with newer useful work. */
++public class RangerFreshIntentTest
++{
++	private final RangerStrategy strategy = new RangerStrategy();
++	private int key;
++
++	private Room room()
++	{
++		Room r = new Room();
++		r.wave = 12;
++		r.spawns[12] = 100;
++		r.player = RangerStrategy.tile(3295, 4248);
++		r.ready = 105;
++		r.specialEnergy = 1000;
++		return r;
++	}
++
++	private Crab crab(Room r, int wave, int born, boolean big, int hp, int x, int y)
++	{
++		Crab c = new Crab(++key, key, born, wave, Lane.SPLIT, (char) 0, big, Style.RANGE, RangerStrategy.tile(x, y));
++		c.hp = hp;
++		r.crabs.add(c);
++		return c;
++	}
++
++	private Crab oldApproach(Room r, int hp)
++	{
++		Crab c = crab(r, 8, 90, false, hp, 3303, 4248);
++		assertSame(c, strategy.decide(r, 100).approach);
++		r.player = RangerStrategy.tile(3297, 4248);
++		return c;
++	}
++
++	private static Crab target(Decision d)
++	{
++		return d.target != null ? d.target : d.approach;
++	}
++
++	@Test
++	public void freshLocalSplitReplacesOldUnopenedFullHpApproachDuringCooldown()
++	{
++		Room r = room();
++		oldApproach(r, 8);
++		Crab fresh = crab(r, 12, 101, false, 8, 3296, 4248);
++		assertSame(fresh, target(strategy.decide(r, 101)));
++	}
++
++	@Test
++	public void freshLocalSplitReplacesOldUnopenedFullHpApproachOnReadyTick()
++	{
++		Room r = room();
++		oldApproach(r, 8);
++		r.ready = 101;
++		Crab fresh = crab(r, 12, 101, false, 8, 3296, 4248);
++		Decision d = strategy.decide(r, 101);
++		assertSame(fresh, d.target);
++		assertEquals(Weapon.PIPE, d.weapon);
++		assertFalse(d.pathToTarget);
++	}
++
++	@Test
++	public void woundedOldSurvivorKeepsItsFinishApproach()
++	{
++		Room r = room();
++		Crab original = oldApproach(r, 2);
++		crab(r, 12, 101, false, 8, 3296, 4248);
++		assertSame(original, target(strategy.decide(r, 101)));
++	}
++
++	@Test
++	public void openedOldSurvivorAfterZeroKeepsItsFinishApproach()
++	{
++		Room r = room();
++		Crab original = crab(r, 8, 90, false, 8, 3303, 4248);
++		strategy.attacked(new Decision(original, Weapon.PIPE, r.player, false, null, "Earlier zero"), 95);
++		original.ownHitUntil = 0;
++		assertSame(original, strategy.decide(r, 100).approach);
++		r.player = RangerStrategy.tile(3297, 4248);
++		crab(r, 12, 101, false, 8, 3296, 4248);
++		assertSame(original, target(strategy.decide(r, 101)));
++	}
++
++	@Test
++	public void claimedFreshSplitDoesNotBreakTheOldApproach()
++	{
++		Room r = room();
++		Crab original = oldApproach(r, 8);
++		crab(r, 12, 101, false, 8, 3296, 4248).claimedUntil = 140;
++		assertSame(original, target(strategy.decide(r, 101)));
++	}
++
++	@Test
++	public void personallyNullFreshSplitDoesNotBreakTheOldApproach()
++	{
++		Room r = room();
++		Crab original = oldApproach(r, 8);
++		crab(r, 12, 101, false, 8, 3296, 4248).nulled = true;
++		assertSame(original, target(strategy.decide(r, 101)));
++	}
++
++	@Test
++	public void equalBirthSmallDoesNotBreakTheOldApproach()
++	{
++		Room r = room();
++		Crab original = oldApproach(r, 8);
++		crab(r, 8, 90, false, 8, 3296, 4248);
++		assertSame(original, target(strategy.decide(r, 101)));
++	}
++
++	@Test
++	public void laterFreshAttackCannotDisplaceAnEarlierOldAttack()
++	{
++		Room r = room();
++		Crab original = oldApproach(r, 8);
++		r.ready = 101;
++		crab(r, 12, 101, false, 8, 3310, 4248);
++		assertSame(original, strategy.decide(r, 101).target);
++	}
++
++	@Test
++	public void namedPacketApproachStillKeepsItsTarget()
++	{
++		Room r = room();
++		r.wave = 2;
++		r.spawns[2] = 100;
++		r.ready = 103;
++		r.player = RangerStrategy.tile(3290, 4248);
++		Crab original = new Crab(++key, key, 100, 2, Lane.EAST, 'S', false, Style.RANGE, RangerStrategy.tile(3310, 4248));
++		r.crabs.add(original);
++		Decision first = strategy.decide(r, 100);
++		assertSame(original, target(first));
++		assertEquals(Weapon.BOW, first.weapon);
++		assertEquals("Opening east", first.rule);
++		r.player = RangerStrategy.tile(3292, 4248);
++		crab(r, 2, 101, false, 8, 3291, 4248);
++		assertSame(original, target(strategy.decide(r, 101)));
++	}
++
++	@Test
++	public void dueBigDeadlineStillWinsOverFreshSplit()
++	{
++		Room r = room();
++		r.wave = 15;
++		r.spawns[15] = 100;
++		Crab original = new Crab(++key, key, 90, 14, Lane.EAST, 'S', true, Style.RANGE, RangerStrategy.tile(3304, 4248));
++		r.crabs.add(original);
++		assertSame(original, target(strategy.decide(r, 100)));
++		r.player = RangerStrategy.tile(3297, 4248);
++		crab(r, 15, 101, false, 8, 3296, 4248);
++		assertSame(original, target(strategy.decide(r, 101)));
++	}
++}
+--- /dev/null
++++ b/org/localscape/nylocas/ranger/RangerGuidanceAuditTest.java
+@@ -0,0 +1,177 @@
++package org.localscape.nylocas.ranger;
++
++import org.junit.Test;
++import org.localscape.nylocas.ranger.RangerStrategy.Crab;
++import org.localscape.nylocas.ranger.RangerStrategy.Decision;
++import org.localscape.nylocas.ranger.RangerStrategy.Lane;
++import org.localscape.nylocas.ranger.RangerStrategy.Room;
++import org.localscape.nylocas.ranger.RangerStrategy.Style;
++import org.localscape.nylocas.ranger.RangerStrategy.Weapon;
++
++import static org.junit.Assert.*;
++
++/** Isolated desired-behavior probes from Jordan's 25 Nov guidance. Not canonical tests. */
++public class RangerGuidanceAuditTest
++{
++	private final RangerStrategy strategy = new RangerStrategy();
++	private int key;
++
++	private Room room(int wave, int spawn)
++	{
++		Room r = new Room();
++		r.wave = wave;
++		r.spawns[wave] = spawn;
++		r.player = RangerStrategy.tile(3295, 4248);
++		r.specialEnergy = 1000;
++		return r;
++	}
++
++	private Crab crab(Room r, int wave, int born, Lane lane, char slot, boolean big, Style style, int x, int y)
++	{
++		Crab c = new Crab(++key, key, born, wave, lane, slot, big, style, RangerStrategy.tile(x, y));
++		r.crabs.add(c);
++		return c;
++	}
++
++	@Test
++	public void southSixSmallNeverUsesBowEvenOutsidePipeRange()
++	{
++		Room r = room(6, 100);
++		r.player = RangerStrategy.tile(3295, 4243);
++		Crab c = crab(r, 6, 100, Lane.SOUTH, 'W', false, Style.RANGE, 3295, 4233);
++		Decision d = strategy.decide(r, 100);
++		assertNotEquals(d.reason, Weapon.BOW, d.weapon);
++	}
++
++	@Test
++	public void waveSevenBigStillKeepsItsNamedBow()
++	{
++		Room r = room(7, 100);
++		r.player = RangerStrategy.tile(3295, 4243);
++		Crab c = crab(r, 7, 100, Lane.SOUTH, 'W', true, Style.RANGE, 3295, 4233);
++		Decision d = strategy.decide(r, 100);
++		assertSame(c, d.target);
++		assertEquals(Weapon.BOW, d.weapon);
++	}
++
++	@Test
++	public void westElevenMageBigIsBackedUpWhenWaveTwelveEnters()
++	{
++		Room r = room(12, 108);
++		r.spawns[11] = 100;
++		Crab c = crab(r, 11, 100, Lane.WEST, 'S', true, Style.MAGIC, 3289, 4248);
++		Decision d = strategy.decide(r, 108);
++		assertSame(d.reason, c, d.target);
++		assertEquals(Weapon.EYE, d.weapon);
++	}
++
++	@Test
++	public void westElevenBackupStillRespectsPartnerFlight()
++	{
++		Room r = room(12, 108);
++		r.spawns[11] = 100;
++		Crab c = crab(r, 11, 100, Lane.WEST, 'S', true, Style.MAGIC, 3289, 4248);
++		c.claimedUntil = 115;
++		assertNotSame(c, strategy.decide(r, 108).target);
++	}
++
++	@Test
++	public void freshSplitOutranksUnopenedVeryOldSmall()
++	{
++		Room r = room(8, 100);
++		crab(r, 1, 70, Lane.SPLIT, (char) 0, false, Style.RANGE, 3291, 4248);
++		Crab c = crab(r, 8, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3299, 4248);
++		assertSame(c, strategy.decide(r, 101).target);
++	}
++
++	@Test
++	public void confirmedSurvivorKeepsFollowupAfterImpact()
++	{
++		Room r = room(8, 100);
++		Crab c = crab(r, 8, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3291, 4248);
++		Decision d = strategy.decide(r, 100);
++		strategy.attacked(d, 101);
++		c.hp = 2;
++		crab(r, 8, 102, Lane.SPLIT, (char) 0, false, Style.RANGE, 3299, 4248);
++		r.ready = 102;
++		assertSame(c, strategy.decide(r, 102).target);
++	}
++
++	@Test
++	public void openingEastBowTakesFirstReadyTickOverNearbyMagicFiller()
++	{
++		Room r = room(2, 108);
++		r.spawns[1] = 104;
++		r.player = RangerStrategy.tile(3297, 4249);
++		Crab c = crab(r, 2, 108, Lane.EAST, 'S', false, Style.RANGE, 3308, 4248);
++		crab(r, 1, 104, Lane.SOUTH, 'E', false, Style.MAGIC, 3296, 4239);
++		crab(r, 2, 108, Lane.WEST, 'N', false, Style.MAGIC, 3283, 4249);
++		Decision d = strategy.decide(r, 110);
++		assertSame(d.reason, c, d.target);
++		assertEquals(Weapon.BOW, d.weapon);
++	}
++
++	@Test
++	public void mageKeepsWestElevenUntilActualTwelveSpawns()
++	{
++		Room r = room(11, 100);
++		Crab c = crab(r, 11, 100, Lane.WEST, 'S', true, Style.MAGIC, 3289, 4248);
++		assertNotSame(c, strategy.decide(r, 108).target);
++	}
++
++	@Test
++	public void waveTwelveBackupYieldsWhenRangerIsNulled()
++	{
++		Room r = room(12, 108);
++		r.spawns[11] = 100;
++		Crab c = crab(r, 11, 100, Lane.WEST, 'S', true, Style.MAGIC, 3289, 4248);
++		c.nulled = true;
++		assertNotSame(c, strategy.decide(r, 108).target);
++	}
++
++	@Test
++	public void waveTwelveBackupGetsReadyTickBeforeOrdinarySplit()
++	{
++		Room r = room(12, 108);
++		r.spawns[11] = 100;
++		Crab c = crab(r, 11, 100, Lane.WEST, 'S', true, Style.MAGIC, 3289, 4248);
++		crab(r, 12, 108, Lane.SPLIT, (char) 0, false, Style.RANGE, 3299, 4248);
++		assertSame(c, strategy.decide(r, 108).target);
++	}
++
++	@Test
++	public void claimedOpeningEastDoesNotBlockUsefulWork()
++	{
++		Room r = room(2, 108);
++		r.player = RangerStrategy.tile(3297, 4249);
++		Crab c = crab(r, 2, 108, Lane.EAST, 'S', false, Style.RANGE, 3308, 4248);
++		c.claimedUntil = 140;
++		Crab fallback = crab(r, 1, 104, Lane.SOUTH, 'E', false, Style.MAGIC, 3296, 4239);
++		assertSame(fallback, strategy.decide(r, 110).target);
++	}
++
++	@Test
++	public void openingEastUsesBowBeforeAgeTwoWhenReadyAndReachable()
++	{
++		Room r = room(2, 108);
++		r.player = RangerStrategy.tile(3297, 4249);
++		Crab c = crab(r, 2, 108, Lane.EAST, 'S', false, Style.RANGE, 3309, 4248);
++		crab(r, 1, 104, Lane.SOUTH, 'E', false, Style.MAGIC, 3296, 4238);
++		Decision d = strategy.decide(r, 109);
++		assertSame(d.reason, c, d.target);
++		assertEquals(Weapon.BOW, d.weapon);
++	}
++
++	@Test
++	public void zeroDamageFollowupRetainsTargetAfterFlightResolves()
++	{
++		Room r = room(8, 100);
++		Crab c = crab(r, 8, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3291, 4248);
++		Decision d = strategy.decide(r, 100);
++		strategy.attacked(d, 101);
++		c.ownHitUntil = 0;
++		crab(r, 8, 103, Lane.SPLIT, (char) 0, false, Style.RANGE, 3299, 4248);
++		r.ready = 103;
++		assertSame(c, strategy.decide(r, 103).target);
++	}
++}

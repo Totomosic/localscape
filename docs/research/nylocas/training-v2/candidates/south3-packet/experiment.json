@@ -1,0 +1,31 @@
+{
+  "baseline": ".state/simulations/training-v2-iteration-9-range-order/policy-source",
+  "scope": "Only actual-spawn South3 opening chin reservation; no future-wave hold; no Mage or controller changes",
+  "baseline_sha256": {
+    "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+    "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+    "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+    "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+    "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+    "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "29825e0108f8a6a95417176616f0c9a60d4099424dc4d64891fe9224e64c5e3c",
+    "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+    "org/localscape/nylocas/ranger/RangerStrategy.java": "f48ccf09229adce960144afa446601de6f2048279f75f87564956b70f975ab4f",
+    "org/localscape/nylocas/mage/MageStrategy.java": "a54020b441e308aafbcab061f6cc16941033f618b0c1d9318eecc812c49b1645"
+  },
+  "candidate_sha256": {
+    "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+    "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+    "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+    "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+    "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+    "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "17bd248c843d804f3806f1220a4ad4f471b0c235ccb906a8f66dfd689ea2a50e",
+    "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+    "org/localscape/nylocas/ranger/RangerStrategy.java": "e87770a15150795af5b34b5bdd7307d0948212b39e8ea72ae3ce94d19babfab9",
+    "org/localscape/nylocas/mage/MageStrategy.java": "a54020b441e308aafbcab061f6cc16941033f618b0c1d9318eecc812c49b1645"
+  },
+  "changed_policy_files": [
+    "org/localscape/nylocas/ranger/RangerPreCapPlanner.java",
+    "org/localscape/nylocas/ranger/RangerStrategy.java"
+  ],
+  "ranger_junit_tests_passed": 85
+}

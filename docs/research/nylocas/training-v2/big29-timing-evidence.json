@@ -1,0 +1,76 @@
+{
+  "vetted_mage_recordings": 46,
+  "first_request_phase": {
+    "29": 29,
+    "30": 17
+  },
+  "first_attack_animation_phase": {
+    "29": 19,
+    "30": 23,
+    "31": 4
+  },
+  "parent_removal_and_split_phase": {
+    "29": 5,
+    "30": 21,
+    "31": 20
+  },
+  "witness": {
+    "uuid": "0c25e13d-045e-4362-a7e3-e4cf83f229a8",
+    "south29_big": 48457,
+    "parent_born": 240,
+    "request_tick": 249,
+    "wave30_spawn": 248,
+    "wave31_spawn": 256,
+    "parent_removed": 257,
+    "children": [
+      {
+        "id": 48870,
+        "birth_wave": 31,
+        "born": 257,
+        "removed": 269
+      },
+      {
+        "id": 48871,
+        "birth_wave": 31,
+        "born": 257,
+        "removed": 267
+      }
+    ]
+  },
+  "bot_iteration3": {
+    "trials": 30,
+    "south29_parent_split_phase": {
+      "29": 4,
+      "30": 14,
+      "31": 12
+    },
+    "never_attacked_parents": 7,
+    "live_wave29_children_excluded_at31": [
+      {
+        "seed": 4,
+        "children_born": 260,
+        "wave31_spawn": 268,
+        "child_keys": [
+          185,
+          186
+        ],
+        "last_observed_alive": 311
+      },
+      {
+        "seed": 14,
+        "children_born": 266,
+        "wave31_spawn": 280,
+        "child_keys": [
+          185,
+          186
+        ],
+        "last_observed_alive": 317
+      }
+    ]
+  },
+  "limits": [
+    "The actual30 guard is an explicit experiment supported by a recorded variant, not the majority first-request phase.",
+    "Bot child associations are inferred from simultaneous birth at the removed parent southwest and northeast coordinates; the trace has no native parent ID.",
+    "First request is attack-animation tick minus one; recorded animations include four during actual31, which the user cutoff deliberately excludes."
+  ]
+}

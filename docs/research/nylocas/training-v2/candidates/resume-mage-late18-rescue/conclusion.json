@@ -1,0 +1,30 @@
+{
+  "decision": "not promoted; no demonstrated speed win",
+  "run": ".state/simulations/training-v2-flight-mage-late18-rescue-100",
+  "exactBaseline": ".state/simulations/training-v2-flight-fresh-intent-100",
+  "trials": 100,
+  "completed": 100,
+  "deaths": 0,
+  "completedMeanTicks": 335,
+  "baselineCompletedMeanTicks": 334.84,
+  "pairedCompletedDeltaMeanTicks": 0.16,
+  "pairedStandardError": 0.17906603939509708,
+  "pairedFaster": 2,
+  "pairedTied": 94,
+  "pairedSlower": 4,
+  "transitionGoal": {
+    "candidate": {
+      "met": 42,
+      "observed": 100
+    },
+    "baseline": {
+      "met": 40,
+      "observed": 100
+    }
+  },
+  "packetAudit": "Both exact-baseline and candidate have99 planned-trace21westbarrage launches in99rooms; no duplicate. Seed135 absent in both. At184/185 policy selected living, unclaimed, non-NULL west21primary while native action delay2/1 blocked; native-ready0 at186 beyond window. HP48->70 at179 consistent with native food; traces alone do not prove actual event target/weapon. Planned-trace labels may misattribute an unmatched native event.",
+  "packetSourceHashes": {
+    ".state/simulations/training-v2-flight-fresh-intent-100/server.log": "f2c6c1ffe4343dda3977ef8a08de102feb3e74e6215ae0c47f35eff829fcf223",
+    ".state/simulations/training-v2-flight-mage-late18-rescue-100/server.log": "f28c5254105cfb46109ffebbaaa26cdf26f920560cbf0086a59d9e22796f4b43"
+  }
+}

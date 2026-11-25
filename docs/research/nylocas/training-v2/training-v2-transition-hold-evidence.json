@@ -1,0 +1,7286 @@
+{
+  "source": "42 eligible ranger rooms from vetted pairs; raw raid and events checksums verified for all84 files",
+  "observationConvention": "Blert observed attack ticks; subtract1 to compare policy request offsets",
+  "summary": {
+    "any": {
+      "WEST": {
+        "n": 42,
+        "ageHistogram": {
+          "1": 3,
+          "3": 3,
+          "4": 8,
+          "6": 5,
+          "8": 10,
+          "9": 5,
+          "11": 1,
+          "12": 3,
+          "13": 2,
+          "14": 1,
+          "17": 1
+        },
+        "offset19Histogram": {
+          "-7": 3,
+          "-5": 3,
+          "-4": 8,
+          "-2": 5,
+          "0": 10,
+          "1": 5,
+          "2": 1,
+          "3": 1,
+          "4": 3,
+          "5": 2,
+          "9": 1
+        },
+        "medianAge": 8.0,
+        "meanAge": 7.214285714285714,
+        "before19": 19,
+        "beforeGuideObserved6": 41,
+        "withPositiveHpSmalls": 40
+      },
+      "SOUTH": {
+        "n": 42,
+        "ageHistogram": {
+          "13": 2,
+          "14": 5,
+          "15": 24,
+          "16": 2,
+          "19": 5,
+          "20": 2,
+          "21": 1,
+          "22": 1
+        },
+        "offset19Histogram": {
+          "5": 2,
+          "6": 5,
+          "7": 25,
+          "8": 2,
+          "11": 4,
+          "12": 2,
+          "13": 1,
+          "14": 1
+        },
+        "medianAge": 15.0,
+        "meanAge": 15.857142857142858,
+        "before19": 0,
+        "beforeGuideObserved6": 2,
+        "withPositiveHpSmalls": 20
+      },
+      "EAST": {
+        "n": 40,
+        "ageHistogram": {
+          "16": 1,
+          "17": 15,
+          "18": 3,
+          "19": 7,
+          "20": 4,
+          "21": 5,
+          "22": 1,
+          "23": 2,
+          "24": 2
+        },
+        "offset19Histogram": {
+          "8": 1,
+          "9": 16,
+          "10": 3,
+          "11": 7,
+          "12": 4,
+          "13": 4,
+          "14": 1,
+          "15": 2,
+          "16": 2
+        },
+        "medianAge": 19.0,
+        "meanAge": 18.975,
+        "before19": 0,
+        "beforeGuideObserved6": 0,
+        "withPositiveHpSmalls": 27
+      }
+    },
+    "ranged": {
+      "WEST": {
+        "n": 39,
+        "ageHistogram": {
+          "1": 3,
+          "3": 3,
+          "4": 8,
+          "8": 10,
+          "9": 7,
+          "11": 1,
+          "12": 3,
+          "13": 2,
+          "14": 1,
+          "17": 1
+        },
+        "offset19Histogram": {
+          "-7": 3,
+          "-5": 3,
+          "-4": 8,
+          "0": 10,
+          "1": 7,
+          "2": 1,
+          "3": 1,
+          "4": 3,
+          "5": 2,
+          "9": 1
+        },
+        "medianAge": 8,
+        "meanAge": 7.461538461538462,
+        "before19": 14,
+        "beforeGuideObserved6": 38,
+        "withPositiveHpSmalls": 36
+      },
+      "SOUTH": {
+        "n": 42,
+        "ageHistogram": {
+          "13": 2,
+          "14": 5,
+          "15": 24,
+          "16": 2,
+          "19": 5,
+          "20": 2,
+          "21": 1,
+          "22": 1
+        },
+        "offset19Histogram": {
+          "5": 2,
+          "6": 5,
+          "7": 25,
+          "8": 2,
+          "11": 4,
+          "12": 2,
+          "13": 1,
+          "14": 1
+        },
+        "medianAge": 15.0,
+        "meanAge": 15.857142857142858,
+        "before19": 0,
+        "beforeGuideObserved6": 2,
+        "withPositiveHpSmalls": 20
+      },
+      "EAST": {
+        "n": 40,
+        "ageHistogram": {
+          "16": 1,
+          "17": 15,
+          "18": 3,
+          "19": 7,
+          "20": 4,
+          "21": 5,
+          "22": 1,
+          "23": 2,
+          "24": 2
+        },
+        "offset19Histogram": {
+          "8": 1,
+          "9": 16,
+          "10": 3,
+          "11": 7,
+          "12": 4,
+          "13": 4,
+          "14": 1,
+          "15": 2,
+          "16": 2
+        },
+        "medianAge": 19.0,
+        "meanAge": 18.975,
+        "before19": 0,
+        "beforeGuideObserved6": 0,
+        "withPositiveHpSmalls": 27
+      }
+    }
+  },
+  "rows": [
+    {
+      "uuid": "0c25e13d-045e-4362-a7e3-e4cf83f229a8",
+      "category": "any",
+      "lane": "WEST",
+      "target": 45559,
+      "attackTick": 142,
+      "weapon": 31113,
+      "attackType": 104,
+      "age": 6,
+      "offset19": -2,
+      "offset20": -14,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3287,
+        4248
+      ],
+      "targetLastSeenTick": 142,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "0c25e13d-045e-4362-a7e3-e4cf83f229a8",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 45560,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "0c25e13d-045e-4362-a7e3-e4cf83f229a8",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 45560,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "0c25e13d-045e-4362-a7e3-e4cf83f229a8",
+      "category": "any",
+      "lane": "EAST",
+      "target": 45558,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 153,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "0c25e13d-045e-4362-a7e3-e4cf83f229a8",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 45558,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 153,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "747b0a15-bdf7-4f83-aa41-6d2d4b214734",
+      "category": "any",
+      "lane": "WEST",
+      "target": 41798,
+      "attackTick": 135,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 3,
+      "offset19": -5,
+      "offset20": -17,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3290,
+        4248
+      ],
+      "targetLastSeen": [
+        3283,
+        4248
+      ],
+      "targetLastSeenTick": 134,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "747b0a15-bdf7-4f83-aa41-6d2d4b214734",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 41798,
+      "attackTick": 135,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 3,
+      "offset19": -5,
+      "offset20": -17,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3290,
+        4248
+      ],
+      "targetLastSeen": [
+        3283,
+        4248
+      ],
+      "targetLastSeenTick": 134,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "747b0a15-bdf7-4f83-aa41-6d2d4b214734",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 41799,
+      "attackTick": 147,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 146,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "747b0a15-bdf7-4f83-aa41-6d2d4b214734",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 41799,
+      "attackTick": 147,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 146,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "747b0a15-bdf7-4f83-aa41-6d2d4b214734",
+      "category": "any",
+      "lane": "EAST",
+      "target": 41797,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 21,
+      "offset19": 13,
+      "offset20": 1,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "747b0a15-bdf7-4f83-aa41-6d2d4b214734",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 41797,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 21,
+      "offset19": 13,
+      "offset20": 1,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "934cff40-3524-4711-b02e-86e029798465",
+      "category": "any",
+      "lane": "WEST",
+      "target": 42017,
+      "attackTick": 144,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 143,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "934cff40-3524-4711-b02e-86e029798465",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 42017,
+      "attackTick": 144,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 143,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "934cff40-3524-4711-b02e-86e029798465",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 42018,
+      "attackTick": 149,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 13,
+      "offset19": 5,
+      "offset20": -7,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4243
+      ],
+      "targetLastSeenTick": 148,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "934cff40-3524-4711-b02e-86e029798465",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 42018,
+      "attackTick": 149,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 13,
+      "offset19": 5,
+      "offset20": -7,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4243
+      ],
+      "targetLastSeenTick": 148,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "934cff40-3524-4711-b02e-86e029798465",
+      "category": "any",
+      "lane": "EAST",
+      "target": 42016,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "934cff40-3524-4711-b02e-86e029798465",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 42016,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "dae05a58-6d36-40fe-8463-1d0a66f78a5c",
+      "category": "any",
+      "lane": "WEST",
+      "target": 57574,
+      "attackTick": 144,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 12,
+      "offset19": 4,
+      "offset20": -8,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3291,
+        4249
+      ],
+      "targetLastSeenTick": 143,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "dae05a58-6d36-40fe-8463-1d0a66f78a5c",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 57574,
+      "attackTick": 144,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 12,
+      "offset19": 4,
+      "offset20": -8,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3291,
+        4249
+      ],
+      "targetLastSeenTick": 143,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "dae05a58-6d36-40fe-8463-1d0a66f78a5c",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 57575,
+      "attackTick": 147,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 146,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "dae05a58-6d36-40fe-8463-1d0a66f78a5c",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 57575,
+      "attackTick": 147,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 146,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "dae05a58-6d36-40fe-8463-1d0a66f78a5c",
+      "category": "any",
+      "lane": "EAST",
+      "target": 57573,
+      "attackTick": 149,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 148,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "dae05a58-6d36-40fe-8463-1d0a66f78a5c",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 57573,
+      "attackTick": 149,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 148,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "fc3ae6ed-cc38-4901-898e-8facd01cb9fc",
+      "category": "any",
+      "lane": "WEST",
+      "target": 46124,
+      "attackTick": 144,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 144,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "fc3ae6ed-cc38-4901-898e-8facd01cb9fc",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 46124,
+      "attackTick": 144,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 144,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "fc3ae6ed-cc38-4901-898e-8facd01cb9fc",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 46125,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "fc3ae6ed-cc38-4901-898e-8facd01cb9fc",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 46125,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "fc3ae6ed-cc38-4901-898e-8facd01cb9fc",
+      "category": "any",
+      "lane": "EAST",
+      "target": 46123,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 155,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "fc3ae6ed-cc38-4901-898e-8facd01cb9fc",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 46123,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 155,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "0783d870-5e9e-4227-98bf-3a2d495cd66e",
+      "category": "any",
+      "lane": "WEST",
+      "target": 45889,
+      "attackTick": 133,
+      "weapon": 20997,
+      "attackType": 54,
+      "age": 1,
+      "offset19": -7,
+      "offset20": -19,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3281,
+        4248
+      ],
+      "targetLastSeenTick": 132,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "0783d870-5e9e-4227-98bf-3a2d495cd66e",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 45889,
+      "attackTick": 133,
+      "weapon": 20997,
+      "attackType": 54,
+      "age": 1,
+      "offset19": -7,
+      "offset20": -19,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3281,
+        4248
+      ],
+      "targetLastSeenTick": 132,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "0783d870-5e9e-4227-98bf-3a2d495cd66e",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 45890,
+      "attackTick": 147,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 146,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "0783d870-5e9e-4227-98bf-3a2d495cd66e",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 45890,
+      "attackTick": 147,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 146,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "0783d870-5e9e-4227-98bf-3a2d495cd66e",
+      "category": "any",
+      "lane": "EAST",
+      "target": 45888,
+      "attackTick": 149,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 148,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "0783d870-5e9e-4227-98bf-3a2d495cd66e",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 45888,
+      "attackTick": 149,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 148,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14",
+      "category": "any",
+      "lane": "WEST",
+      "target": 48384,
+      "attackTick": 133,
+      "weapon": 20997,
+      "attackType": 54,
+      "age": 1,
+      "offset19": -7,
+      "offset20": -19,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3281,
+        4248
+      ],
+      "targetLastSeenTick": 132,
+      "visibleSmalls": 4,
+      "positiveHpSmalls": 4
+    },
+    {
+      "uuid": "bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 48384,
+      "attackTick": 133,
+      "weapon": 20997,
+      "attackType": 54,
+      "age": 1,
+      "offset19": -7,
+      "offset20": -19,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3281,
+        4248
+      ],
+      "targetLastSeenTick": 132,
+      "visibleSmalls": 4,
+      "positiveHpSmalls": 4
+    },
+    {
+      "uuid": "bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 48385,
+      "attackTick": 154,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 22,
+      "offset19": 14,
+      "offset20": 2,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 153,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 48385,
+      "attackTick": 154,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 22,
+      "offset19": 14,
+      "offset20": 2,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 153,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14",
+      "category": "any",
+      "lane": "EAST",
+      "target": 48383,
+      "attackTick": 156,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 24,
+      "offset19": 16,
+      "offset20": 4,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 155,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 48383,
+      "attackTick": 156,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 24,
+      "offset19": 16,
+      "offset20": 4,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 155,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "efa27528-eecf-48ba-8253-4815ef976eb7",
+      "category": "any",
+      "lane": "WEST",
+      "target": 52651,
+      "attackTick": 136,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3284,
+        4248
+      ],
+      "targetLastSeenTick": 135,
+      "visibleSmalls": 4,
+      "positiveHpSmalls": 4
+    },
+    {
+      "uuid": "efa27528-eecf-48ba-8253-4815ef976eb7",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 52651,
+      "attackTick": 136,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3284,
+        4248
+      ],
+      "targetLastSeenTick": 135,
+      "visibleSmalls": 4,
+      "positiveHpSmalls": 4
+    },
+    {
+      "uuid": "efa27528-eecf-48ba-8253-4815ef976eb7",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 52652,
+      "attackTick": 148,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 16,
+      "offset19": 8,
+      "offset20": -4,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3297,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 147,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "efa27528-eecf-48ba-8253-4815ef976eb7",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 52652,
+      "attackTick": 148,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 16,
+      "offset19": 8,
+      "offset20": -4,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3297,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 147,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "efa27528-eecf-48ba-8253-4815ef976eb7",
+      "category": "any",
+      "lane": "EAST",
+      "target": 52650,
+      "attackTick": 152,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 20,
+      "offset19": 12,
+      "offset20": 0,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "efa27528-eecf-48ba-8253-4815ef976eb7",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 52650,
+      "attackTick": 152,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 20,
+      "offset19": 12,
+      "offset20": 0,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "c112f942-5558-4ed3-af57-2118458aea8a",
+      "category": "any",
+      "lane": "WEST",
+      "target": 43930,
+      "attackTick": 140,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3284,
+        4248
+      ],
+      "targetLastSeenTick": 139,
+      "visibleSmalls": 4,
+      "positiveHpSmalls": 4
+    },
+    {
+      "uuid": "c112f942-5558-4ed3-af57-2118458aea8a",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 43930,
+      "attackTick": 140,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3284,
+        4248
+      ],
+      "targetLastSeenTick": 139,
+      "visibleSmalls": 4,
+      "positiveHpSmalls": 4
+    },
+    {
+      "uuid": "c112f942-5558-4ed3-af57-2118458aea8a",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 43931,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "c112f942-5558-4ed3-af57-2118458aea8a",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 43931,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "c112f942-5558-4ed3-af57-2118458aea8a",
+      "category": "any",
+      "lane": "EAST",
+      "target": 43929,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3294,
+        4253
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "c112f942-5558-4ed3-af57-2118458aea8a",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 43929,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3294,
+        4253
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "4195844f-b13e-451f-916a-9b8ffd17b009",
+      "category": "any",
+      "lane": "WEST",
+      "target": 38055,
+      "attackTick": 138,
+      "weapon": 31113,
+      "attackType": 104,
+      "age": 6,
+      "offset19": -2,
+      "offset20": -14,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3292,
+        4248
+      ],
+      "targetLastSeen": [
+        3286,
+        4248
+      ],
+      "targetLastSeenTick": 137,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "4195844f-b13e-451f-916a-9b8ffd17b009",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 38055,
+      "attackTick": 141,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 9,
+      "offset19": 1,
+      "offset20": -11,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 140,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "4195844f-b13e-451f-916a-9b8ffd17b009",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 38056,
+      "attackTick": 146,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 14,
+      "offset19": 6,
+      "offset20": -6,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 145,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "4195844f-b13e-451f-916a-9b8ffd17b009",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 38056,
+      "attackTick": 146,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 14,
+      "offset19": 6,
+      "offset20": -6,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 145,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "4195844f-b13e-451f-916a-9b8ffd17b009",
+      "category": "any",
+      "lane": "EAST",
+      "target": 38054,
+      "attackTick": 150,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 18,
+      "offset19": 10,
+      "offset20": -2,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 149,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "4195844f-b13e-451f-916a-9b8ffd17b009",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 38054,
+      "attackTick": 150,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 18,
+      "offset19": 10,
+      "offset20": -2,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 149,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "74891214-79d0-4ed4-8b07-e58f601d0583",
+      "category": "any",
+      "lane": "WEST",
+      "target": 37788,
+      "attackTick": 141,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 9,
+      "offset19": 1,
+      "offset20": -11,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 140,
+      "visibleSmalls": 4,
+      "positiveHpSmalls": 4
+    },
+    {
+      "uuid": "74891214-79d0-4ed4-8b07-e58f601d0583",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 37788,
+      "attackTick": 141,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 9,
+      "offset19": 1,
+      "offset20": -11,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 140,
+      "visibleSmalls": 4,
+      "positiveHpSmalls": 4
+    },
+    {
+      "uuid": "74891214-79d0-4ed4-8b07-e58f601d0583",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 37789,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "74891214-79d0-4ed4-8b07-e58f601d0583",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 37789,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "74891214-79d0-4ed4-8b07-e58f601d0583",
+      "category": "any",
+      "lane": "EAST",
+      "target": 37787,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 23,
+      "offset19": 15,
+      "offset20": 3,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "74891214-79d0-4ed4-8b07-e58f601d0583",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 37787,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 23,
+      "offset19": 15,
+      "offset20": 3,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "f5aab638-bf14-4511-8a83-026ea46cc37f",
+      "category": "any",
+      "lane": "WEST",
+      "target": 62537,
+      "attackTick": 140,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3285,
+        4248
+      ],
+      "targetLastSeenTick": 140,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "f5aab638-bf14-4511-8a83-026ea46cc37f",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 62537,
+      "attackTick": 140,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3285,
+        4248
+      ],
+      "targetLastSeenTick": 140,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "f5aab638-bf14-4511-8a83-026ea46cc37f",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 62538,
+      "attackTick": 156,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 20,
+      "offset19": 12,
+      "offset20": 0,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "f5aab638-bf14-4511-8a83-026ea46cc37f",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 62538,
+      "attackTick": 156,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 20,
+      "offset19": 12,
+      "offset20": 0,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "f5aab638-bf14-4511-8a83-026ea46cc37f",
+      "category": "any",
+      "lane": "EAST",
+      "target": 62536,
+      "attackTick": 160,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 24,
+      "offset19": 16,
+      "offset20": 4,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 160,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "f5aab638-bf14-4511-8a83-026ea46cc37f",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 62536,
+      "attackTick": 160,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 24,
+      "offset19": 16,
+      "offset20": 4,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 160,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "4374381d-f598-4d96-90b6-e5204385bc46",
+      "category": "any",
+      "lane": "WEST",
+      "target": 51004,
+      "attackTick": 146,
+      "weapon": 31113,
+      "attackType": 104,
+      "age": 6,
+      "offset19": -2,
+      "offset20": -14,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3286,
+        4248
+      ],
+      "targetLastSeenTick": 145,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "4374381d-f598-4d96-90b6-e5204385bc46",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 51004,
+      "attackTick": 149,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 9,
+      "offset19": 1,
+      "offset20": -11,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 148,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "4374381d-f598-4d96-90b6-e5204385bc46",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 51005,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "4374381d-f598-4d96-90b6-e5204385bc46",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 51005,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "4374381d-f598-4d96-90b6-e5204385bc46",
+      "category": "any",
+      "lane": "EAST",
+      "target": 51003,
+      "attackTick": 157,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "4374381d-f598-4d96-90b6-e5204385bc46",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 51003,
+      "attackTick": 157,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+      "category": "any",
+      "lane": "WEST",
+      "target": 64537,
+      "attackTick": 144,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 143,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 64537,
+      "attackTick": 144,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 143,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 64538,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 64538,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+      "category": "any",
+      "lane": "EAST",
+      "target": 64536,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3294,
+        4253
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 64536,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3294,
+        4253
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92",
+      "category": "any",
+      "lane": "WEST",
+      "target": 55664,
+      "attackTick": 138,
+      "weapon": 31113,
+      "attackType": 104,
+      "age": 6,
+      "offset19": -2,
+      "offset20": -14,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3286,
+        4248
+      ],
+      "targetLastSeenTick": 137,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 55665,
+      "attackTick": 147,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 146,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 55665,
+      "attackTick": 147,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 146,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92",
+      "category": "any",
+      "lane": "EAST",
+      "target": 55662,
+      "attackTick": 152,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 20,
+      "offset19": 12,
+      "offset20": 0,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 55662,
+      "attackTick": 152,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 20,
+      "offset19": 12,
+      "offset20": 0,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "73687cf8-5599-4f4d-a92c-d663a3e9e78a",
+      "category": "any",
+      "lane": "WEST",
+      "target": 47984,
+      "attackTick": 140,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3284,
+        4248
+      ],
+      "targetLastSeenTick": 139,
+      "visibleSmalls": 5,
+      "positiveHpSmalls": 5
+    },
+    {
+      "uuid": "73687cf8-5599-4f4d-a92c-d663a3e9e78a",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 47984,
+      "attackTick": 140,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3284,
+        4248
+      ],
+      "targetLastSeenTick": 139,
+      "visibleSmalls": 5,
+      "positiveHpSmalls": 5
+    },
+    {
+      "uuid": "73687cf8-5599-4f4d-a92c-d663a3e9e78a",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 47985,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "73687cf8-5599-4f4d-a92c-d663a3e9e78a",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 47985,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "73687cf8-5599-4f4d-a92c-d663a3e9e78a",
+      "category": "any",
+      "lane": "EAST",
+      "target": 47983,
+      "attackTick": 157,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 21,
+      "offset19": 13,
+      "offset20": 1,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "73687cf8-5599-4f4d-a92c-d663a3e9e78a",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 47983,
+      "attackTick": 157,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 21,
+      "offset19": 13,
+      "offset20": 1,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "8e3e4461-009c-4f5a-8040-fc2861dae393",
+      "category": "any",
+      "lane": "WEST",
+      "target": 49716,
+      "attackTick": 143,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 11,
+      "offset19": 3,
+      "offset20": -9,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3290,
+        4248
+      ],
+      "targetLastSeenTick": 142,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "8e3e4461-009c-4f5a-8040-fc2861dae393",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 49716,
+      "attackTick": 143,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 11,
+      "offset19": 3,
+      "offset20": -9,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3290,
+        4248
+      ],
+      "targetLastSeenTick": 142,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "8e3e4461-009c-4f5a-8040-fc2861dae393",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 49717,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 21,
+      "offset19": 13,
+      "offset20": 1,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3294,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "8e3e4461-009c-4f5a-8040-fc2861dae393",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 49717,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 21,
+      "offset19": 13,
+      "offset20": 1,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3294,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "8e3e4461-009c-4f5a-8040-fc2861dae393",
+      "category": "any",
+      "lane": "EAST",
+      "target": 49715,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 23,
+      "offset19": 15,
+      "offset20": 3,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "8e3e4461-009c-4f5a-8040-fc2861dae393",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 49715,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 23,
+      "offset19": 15,
+      "offset20": 3,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "d5cbc4b0-1aa1-4586-b599-7875c131d34d",
+      "category": "any",
+      "lane": "WEST",
+      "target": 64255,
+      "attackTick": 135,
+      "weapon": 20997,
+      "attackType": 54,
+      "age": 3,
+      "offset19": -5,
+      "offset20": -17,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3283,
+        4248
+      ],
+      "targetLastSeenTick": 134,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "d5cbc4b0-1aa1-4586-b599-7875c131d34d",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 64255,
+      "attackTick": 135,
+      "weapon": 20997,
+      "attackType": 54,
+      "age": 3,
+      "offset19": -5,
+      "offset20": -17,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3283,
+        4248
+      ],
+      "targetLastSeenTick": 134,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "d5cbc4b0-1aa1-4586-b599-7875c131d34d",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 64256,
+      "attackTick": 146,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 14,
+      "offset19": 6,
+      "offset20": -6,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 145,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "d5cbc4b0-1aa1-4586-b599-7875c131d34d",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 64256,
+      "attackTick": 146,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 14,
+      "offset19": 6,
+      "offset20": -6,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 145,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "d5cbc4b0-1aa1-4586-b599-7875c131d34d",
+      "category": "any",
+      "lane": "EAST",
+      "target": 64254,
+      "attackTick": 150,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 18,
+      "offset19": 10,
+      "offset20": -2,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 149,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "d5cbc4b0-1aa1-4586-b599-7875c131d34d",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 64254,
+      "attackTick": 150,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 18,
+      "offset19": 10,
+      "offset20": -2,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 149,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "e258f37f-09c9-4df6-96c2-86a6fd828818",
+      "category": "any",
+      "lane": "WEST",
+      "target": 45517,
+      "attackTick": 148,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 12,
+      "offset19": 4,
+      "offset20": -8,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3290,
+        4248
+      ],
+      "targetLastSeenTick": 147,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "e258f37f-09c9-4df6-96c2-86a6fd828818",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 45517,
+      "attackTick": 148,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 12,
+      "offset19": 4,
+      "offset20": -8,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3290,
+        4248
+      ],
+      "targetLastSeenTick": 147,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "e258f37f-09c9-4df6-96c2-86a6fd828818",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 45518,
+      "attackTick": 150,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 14,
+      "offset19": 6,
+      "offset20": -6,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 149,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "e258f37f-09c9-4df6-96c2-86a6fd828818",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 45518,
+      "attackTick": 150,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 14,
+      "offset19": 6,
+      "offset20": -6,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 149,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "e258f37f-09c9-4df6-96c2-86a6fd828818",
+      "category": "any",
+      "lane": "EAST",
+      "target": 45516,
+      "attackTick": 152,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 16,
+      "offset19": 8,
+      "offset20": -4,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3294,
+        4253
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "e258f37f-09c9-4df6-96c2-86a6fd828818",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 45516,
+      "attackTick": 152,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 16,
+      "offset19": 8,
+      "offset20": -4,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3294,
+        4253
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "b1a463ba-d6f5-4041-be9b-7a0412b54e86",
+      "category": "any",
+      "lane": "WEST",
+      "target": 62356,
+      "attackTick": 141,
+      "weapon": 20997,
+      "attackType": 54,
+      "age": 1,
+      "offset19": -7,
+      "offset20": -19,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3281,
+        4248
+      ],
+      "targetLastSeenTick": 140,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "b1a463ba-d6f5-4041-be9b-7a0412b54e86",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 62356,
+      "attackTick": 141,
+      "weapon": 20997,
+      "attackType": 54,
+      "age": 1,
+      "offset19": -7,
+      "offset20": -19,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3281,
+        4248
+      ],
+      "targetLastSeenTick": 140,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "b1a463ba-d6f5-4041-be9b-7a0412b54e86",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 62357,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "b1a463ba-d6f5-4041-be9b-7a0412b54e86",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 62357,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "b1a463ba-d6f5-4041-be9b-7a0412b54e86",
+      "category": "any",
+      "lane": "EAST",
+      "target": 62355,
+      "attackTick": 157,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "b1a463ba-d6f5-4041-be9b-7a0412b54e86",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 62355,
+      "attackTick": 157,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "b9e91268-0f79-4fb9-bdbc-5d8e7dd685b8",
+      "category": "any",
+      "lane": "WEST",
+      "target": 46384,
+      "attackTick": 145,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 9,
+      "offset19": 1,
+      "offset20": -11,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 144,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "b9e91268-0f79-4fb9-bdbc-5d8e7dd685b8",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 46384,
+      "attackTick": 145,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 9,
+      "offset19": 1,
+      "offset20": -11,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 144,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "b9e91268-0f79-4fb9-bdbc-5d8e7dd685b8",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 46385,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "b9e91268-0f79-4fb9-bdbc-5d8e7dd685b8",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 46385,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "b9e91268-0f79-4fb9-bdbc-5d8e7dd685b8",
+      "category": "any",
+      "lane": "EAST",
+      "target": 46383,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "b9e91268-0f79-4fb9-bdbc-5d8e7dd685b8",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 46383,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "cf64d5dd-05d8-49c4-b854-1ac7235923e0",
+      "category": "any",
+      "lane": "WEST",
+      "target": 59560,
+      "attackTick": 141,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 9,
+      "offset19": 1,
+      "offset20": -11,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 140,
+      "visibleSmalls": 4,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "cf64d5dd-05d8-49c4-b854-1ac7235923e0",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 59560,
+      "attackTick": 141,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 9,
+      "offset19": 1,
+      "offset20": -11,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 140,
+      "visibleSmalls": 4,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "cf64d5dd-05d8-49c4-b854-1ac7235923e0",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 59561,
+      "attackTick": 147,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 146,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "cf64d5dd-05d8-49c4-b854-1ac7235923e0",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 59561,
+      "attackTick": 147,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 146,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "cf64d5dd-05d8-49c4-b854-1ac7235923e0",
+      "category": "any",
+      "lane": "EAST",
+      "target": 59559,
+      "attackTick": 149,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 148,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "cf64d5dd-05d8-49c4-b854-1ac7235923e0",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 59559,
+      "attackTick": 149,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 148,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "3650ae9e-8234-4d76-b1a7-4bb879d7aa70",
+      "category": "any",
+      "lane": "WEST",
+      "target": 62105,
+      "attackTick": 148,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 148,
+      "visibleSmalls": 4,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "3650ae9e-8234-4d76-b1a7-4bb879d7aa70",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 62105,
+      "attackTick": 148,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 148,
+      "visibleSmalls": 4,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "3650ae9e-8234-4d76-b1a7-4bb879d7aa70",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 62106,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 155,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "3650ae9e-8234-4d76-b1a7-4bb879d7aa70",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 62106,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 155,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "3650ae9e-8234-4d76-b1a7-4bb879d7aa70",
+      "category": "any",
+      "lane": "EAST",
+      "target": 62104,
+      "attackTick": 159,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 159,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "3650ae9e-8234-4d76-b1a7-4bb879d7aa70",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 62104,
+      "attackTick": 159,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 159,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "c052bfe0-61a9-45a6-8544-435ef6592bcd",
+      "category": "any",
+      "lane": "WEST",
+      "target": 33299,
+      "attackTick": 140,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3291,
+        4249
+      ],
+      "targetLastSeen": [
+        3285,
+        4248
+      ],
+      "targetLastSeenTick": 140,
+      "visibleSmalls": 5,
+      "positiveHpSmalls": 4
+    },
+    {
+      "uuid": "c052bfe0-61a9-45a6-8544-435ef6592bcd",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 33299,
+      "attackTick": 140,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3291,
+        4249
+      ],
+      "targetLastSeen": [
+        3285,
+        4248
+      ],
+      "targetLastSeenTick": 140,
+      "visibleSmalls": 5,
+      "positiveHpSmalls": 4
+    },
+    {
+      "uuid": "c052bfe0-61a9-45a6-8544-435ef6592bcd",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 33300,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "c052bfe0-61a9-45a6-8544-435ef6592bcd",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 33300,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "c052bfe0-61a9-45a6-8544-435ef6592bcd",
+      "category": "any",
+      "lane": "EAST",
+      "target": 33298,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 153,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "c052bfe0-61a9-45a6-8544-435ef6592bcd",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 33298,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 153,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "36e9d7cf-3953-4beb-b06d-7d04ec4fad58",
+      "category": "any",
+      "lane": "WEST",
+      "target": 35403,
+      "attackTick": 146,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 14,
+      "offset19": 2,
+      "offset20": -10,
+      "spawn18": 132,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3291,
+        4248
+      ],
+      "targetLastSeenTick": 145,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "36e9d7cf-3953-4beb-b06d-7d04ec4fad58",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 35403,
+      "attackTick": 146,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 14,
+      "offset19": 2,
+      "offset20": -10,
+      "spawn18": 132,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3291,
+        4248
+      ],
+      "targetLastSeenTick": 145,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "36e9d7cf-3953-4beb-b06d-7d04ec4fad58",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 35404,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 132,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "36e9d7cf-3953-4beb-b06d-7d04ec4fad58",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 35404,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 132,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "36e9d7cf-3953-4beb-b06d-7d04ec4fad58",
+      "category": "any",
+      "lane": "EAST",
+      "target": 35402,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 21,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 132,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "36e9d7cf-3953-4beb-b06d-7d04ec4fad58",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 35402,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 21,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 132,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "97778429-1912-47db-a6b0-45c0be484ca1",
+      "category": "any",
+      "lane": "WEST",
+      "target": 58749,
+      "attackTick": 140,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 139,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "97778429-1912-47db-a6b0-45c0be484ca1",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 58749,
+      "attackTick": 140,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 139,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "97778429-1912-47db-a6b0-45c0be484ca1",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 58750,
+      "attackTick": 147,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 146,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "97778429-1912-47db-a6b0-45c0be484ca1",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 58750,
+      "attackTick": 147,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 146,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "97778429-1912-47db-a6b0-45c0be484ca1",
+      "category": "any",
+      "lane": "EAST",
+      "target": 58748,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "97778429-1912-47db-a6b0-45c0be484ca1",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 58748,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 132,
+      "spawn19": 140,
+      "spawn20": 152,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "16732a46-4067-47f9-8c18-c4d60056726e",
+      "category": "any",
+      "lane": "WEST",
+      "target": 34198,
+      "attackTick": 145,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 9,
+      "offset19": 1,
+      "offset20": -11,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 144,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "16732a46-4067-47f9-8c18-c4d60056726e",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 34198,
+      "attackTick": 145,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 9,
+      "offset19": 1,
+      "offset20": -11,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 144,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "16732a46-4067-47f9-8c18-c4d60056726e",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 34199,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "16732a46-4067-47f9-8c18-c4d60056726e",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 34199,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "16732a46-4067-47f9-8c18-c4d60056726e",
+      "category": "any",
+      "lane": "EAST",
+      "target": 34197,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "16732a46-4067-47f9-8c18-c4d60056726e",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 34197,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "0a19210e-9aae-421a-9411-1e3272f86eec",
+      "category": "any",
+      "lane": "WEST",
+      "target": 35786,
+      "attackTick": 146,
+      "weapon": 31113,
+      "attackType": 104,
+      "age": 6,
+      "offset19": -2,
+      "offset20": -14,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3286,
+        4248
+      ],
+      "targetLastSeenTick": 145,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "0a19210e-9aae-421a-9411-1e3272f86eec",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 35787,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 13,
+      "offset19": 5,
+      "offset20": -7,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4243
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "0a19210e-9aae-421a-9411-1e3272f86eec",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 35787,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 13,
+      "offset19": 5,
+      "offset20": -7,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4243
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "0a19210e-9aae-421a-9411-1e3272f86eec",
+      "category": "any",
+      "lane": "EAST",
+      "target": 35785,
+      "attackTick": 157,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "0a19210e-9aae-421a-9411-1e3272f86eec",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 35785,
+      "attackTick": 157,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "63ca9240-d989-4989-b27a-56b646883abe",
+      "category": "any",
+      "lane": "WEST",
+      "target": 44601,
+      "attackTick": 143,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 3,
+      "offset19": -5,
+      "offset20": -17,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3290,
+        4248
+      ],
+      "targetLastSeen": [
+        3283,
+        4248
+      ],
+      "targetLastSeenTick": 142,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "63ca9240-d989-4989-b27a-56b646883abe",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 44601,
+      "attackTick": 143,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 3,
+      "offset19": -5,
+      "offset20": -17,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3290,
+        4248
+      ],
+      "targetLastSeen": [
+        3283,
+        4248
+      ],
+      "targetLastSeenTick": 142,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "63ca9240-d989-4989-b27a-56b646883abe",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 44602,
+      "attackTick": 154,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 14,
+      "offset19": 6,
+      "offset20": -6,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 153,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "63ca9240-d989-4989-b27a-56b646883abe",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 44602,
+      "attackTick": 154,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 14,
+      "offset19": 6,
+      "offset20": -6,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 153,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "63ca9240-d989-4989-b27a-56b646883abe",
+      "category": "any",
+      "lane": "EAST",
+      "target": 44600,
+      "attackTick": 160,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 20,
+      "offset19": 12,
+      "offset20": 0,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 159,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "63ca9240-d989-4989-b27a-56b646883abe",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 44600,
+      "attackTick": 160,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 20,
+      "offset19": 12,
+      "offset20": 0,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 159,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "6117f746-6276-43dd-8195-0541d6ca719c",
+      "category": "any",
+      "lane": "WEST",
+      "target": 49820,
+      "attackTick": 144,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3284,
+        4248
+      ],
+      "targetLastSeenTick": 143,
+      "visibleSmalls": 5,
+      "positiveHpSmalls": 5
+    },
+    {
+      "uuid": "6117f746-6276-43dd-8195-0541d6ca719c",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 49820,
+      "attackTick": 144,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3284,
+        4248
+      ],
+      "targetLastSeenTick": 143,
+      "visibleSmalls": 5,
+      "positiveHpSmalls": 5
+    },
+    {
+      "uuid": "6117f746-6276-43dd-8195-0541d6ca719c",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 49821,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "6117f746-6276-43dd-8195-0541d6ca719c",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 49821,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "6117f746-6276-43dd-8195-0541d6ca719c",
+      "category": "any",
+      "lane": "EAST",
+      "target": 49819,
+      "attackTick": 159,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 158,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "6117f746-6276-43dd-8195-0541d6ca719c",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 49819,
+      "attackTick": 159,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 158,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "3eb7e34f-95ae-4a9c-b518-e9a8c30cd3c3",
+      "category": "any",
+      "lane": "WEST",
+      "target": 38402,
+      "attackTick": 157,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3291,
+        4247
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "3eb7e34f-95ae-4a9c-b518-e9a8c30cd3c3",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 38402,
+      "attackTick": 157,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3291,
+        4247
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "3eb7e34f-95ae-4a9c-b518-e9a8c30cd3c3",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 38403,
+      "attackTick": 159,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 158,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "3eb7e34f-95ae-4a9c-b518-e9a8c30cd3c3",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 38403,
+      "attackTick": 159,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 158,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "b4ba2dd6-abe5-485c-b99c-b8b872d4d290",
+      "category": "any",
+      "lane": "WEST",
+      "target": 44684,
+      "attackTick": 149,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 13,
+      "offset19": 5,
+      "offset20": -7,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3290,
+        4247
+      ],
+      "targetLastSeenTick": 148,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "b4ba2dd6-abe5-485c-b99c-b8b872d4d290",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 44684,
+      "attackTick": 149,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 13,
+      "offset19": 5,
+      "offset20": -7,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3290,
+        4247
+      ],
+      "targetLastSeenTick": 148,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "b4ba2dd6-abe5-485c-b99c-b8b872d4d290",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 44685,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "b4ba2dd6-abe5-485c-b99c-b8b872d4d290",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 44685,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "b4ba2dd6-abe5-485c-b99c-b8b872d4d290",
+      "category": "any",
+      "lane": "EAST",
+      "target": 44683,
+      "attackTick": 157,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 21,
+      "offset19": 13,
+      "offset20": 1,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "b4ba2dd6-abe5-485c-b99c-b8b872d4d290",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 44683,
+      "attackTick": 157,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 21,
+      "offset19": 13,
+      "offset20": 1,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "3709bee9-ef63-4652-b065-94378dfc1343",
+      "category": "any",
+      "lane": "WEST",
+      "target": 60056,
+      "attackTick": 144,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 143,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "3709bee9-ef63-4652-b065-94378dfc1343",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 60056,
+      "attackTick": 144,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 143,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "3709bee9-ef63-4652-b065-94378dfc1343",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 60057,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "3709bee9-ef63-4652-b065-94378dfc1343",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 60057,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "3709bee9-ef63-4652-b065-94378dfc1343",
+      "category": "any",
+      "lane": "EAST",
+      "target": 60055,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "3709bee9-ef63-4652-b065-94378dfc1343",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 60055,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "4f90fa47-6f60-4935-9914-adcbb67a7564",
+      "category": "any",
+      "lane": "WEST",
+      "target": 46927,
+      "attackTick": 144,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3284,
+        4248
+      ],
+      "targetLastSeenTick": 143,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "4f90fa47-6f60-4935-9914-adcbb67a7564",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 46927,
+      "attackTick": 144,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3291,
+        4248
+      ],
+      "targetLastSeen": [
+        3284,
+        4248
+      ],
+      "targetLastSeenTick": 143,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "4f90fa47-6f60-4935-9914-adcbb67a7564",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 46928,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "4f90fa47-6f60-4935-9914-adcbb67a7564",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 46928,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "4f90fa47-6f60-4935-9914-adcbb67a7564",
+      "category": "any",
+      "lane": "EAST",
+      "target": 46926,
+      "attackTick": 161,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 21,
+      "offset19": 13,
+      "offset20": 1,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 160,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "4f90fa47-6f60-4935-9914-adcbb67a7564",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 46926,
+      "attackTick": 161,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 21,
+      "offset19": 13,
+      "offset20": 1,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 160,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "41726436-9006-46c4-9f8b-4a62e732918d",
+      "category": "any",
+      "lane": "WEST",
+      "target": 41131,
+      "attackTick": 152,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 144,
+      "spawn19": 152,
+      "spawn20": 164,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "41726436-9006-46c4-9f8b-4a62e732918d",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 41131,
+      "attackTick": 152,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 144,
+      "spawn19": 152,
+      "spawn20": 164,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "41726436-9006-46c4-9f8b-4a62e732918d",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 41132,
+      "attackTick": 158,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 14,
+      "offset19": 6,
+      "offset20": -6,
+      "spawn18": 144,
+      "spawn19": 152,
+      "spawn20": 164,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 157,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "41726436-9006-46c4-9f8b-4a62e732918d",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 41132,
+      "attackTick": 158,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 14,
+      "offset19": 6,
+      "offset20": -6,
+      "spawn18": 144,
+      "spawn19": 152,
+      "spawn20": 164,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 157,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "41726436-9006-46c4-9f8b-4a62e732918d",
+      "category": "any",
+      "lane": "EAST",
+      "target": 41130,
+      "attackTick": 162,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 18,
+      "offset19": 10,
+      "offset20": -2,
+      "spawn18": 144,
+      "spawn19": 152,
+      "spawn20": 164,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 161,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "41726436-9006-46c4-9f8b-4a62e732918d",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 41130,
+      "attackTick": 162,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 18,
+      "offset19": 10,
+      "offset20": -2,
+      "spawn18": 144,
+      "spawn19": 152,
+      "spawn20": 164,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 161,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "df3a8a7a-446c-481d-948f-615d12c061e8",
+      "category": "any",
+      "lane": "WEST",
+      "target": 60113,
+      "attackTick": 152,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 12,
+      "offset19": 4,
+      "offset20": -8,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3290,
+        4248
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "df3a8a7a-446c-481d-948f-615d12c061e8",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 60113,
+      "attackTick": 152,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 12,
+      "offset19": 4,
+      "offset20": -8,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3290,
+        4248
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "df3a8a7a-446c-481d-948f-615d12c061e8",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 60114,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "df3a8a7a-446c-481d-948f-615d12c061e8",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 60114,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "df3a8a7a-446c-481d-948f-615d12c061e8",
+      "category": "any",
+      "lane": "EAST",
+      "target": 60112,
+      "attackTick": 159,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 158,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "df3a8a7a-446c-481d-948f-615d12c061e8",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 60112,
+      "attackTick": 159,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 158,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "f3b4982c-c20f-4b79-9e71-0a506ffe06ba",
+      "category": "any",
+      "lane": "WEST",
+      "target": 56876,
+      "attackTick": 145,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 9,
+      "offset19": 1,
+      "offset20": -11,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 144,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "f3b4982c-c20f-4b79-9e71-0a506ffe06ba",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 56876,
+      "attackTick": 145,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 9,
+      "offset19": 1,
+      "offset20": -11,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3289,
+        4248
+      ],
+      "targetLastSeenTick": 144,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "f3b4982c-c20f-4b79-9e71-0a506ffe06ba",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 56877,
+      "attackTick": 156,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 20,
+      "offset19": 12,
+      "offset20": 0,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 155,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "f3b4982c-c20f-4b79-9e71-0a506ffe06ba",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 56877,
+      "attackTick": 156,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 20,
+      "offset19": 12,
+      "offset20": 0,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 155,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "f3b4982c-c20f-4b79-9e71-0a506ffe06ba",
+      "category": "any",
+      "lane": "EAST",
+      "target": 56875,
+      "attackTick": 158,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 22,
+      "offset19": 14,
+      "offset20": 2,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 157,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "f3b4982c-c20f-4b79-9e71-0a506ffe06ba",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 56875,
+      "attackTick": 158,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 22,
+      "offset19": 14,
+      "offset20": 2,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 157,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "4e00043b-b6b6-4cd2-b43d-7149636e04cf",
+      "category": "any",
+      "lane": "WEST",
+      "target": 35245,
+      "attackTick": 140,
+      "weapon": 20997,
+      "attackType": 54,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3292,
+        4249
+      ],
+      "targetLastSeen": [
+        3284,
+        4248
+      ],
+      "targetLastSeenTick": 139,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "4e00043b-b6b6-4cd2-b43d-7149636e04cf",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 35245,
+      "attackTick": 140,
+      "weapon": 20997,
+      "attackType": 54,
+      "age": 4,
+      "offset19": -4,
+      "offset20": -16,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3292,
+        4249
+      ],
+      "targetLastSeen": [
+        3284,
+        4248
+      ],
+      "targetLastSeenTick": 139,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "4e00043b-b6b6-4cd2-b43d-7149636e04cf",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 35246,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "4e00043b-b6b6-4cd2-b43d-7149636e04cf",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 35246,
+      "attackTick": 151,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 150,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "4e00043b-b6b6-4cd2-b43d-7149636e04cf",
+      "category": "any",
+      "lane": "EAST",
+      "target": 35244,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "4e00043b-b6b6-4cd2-b43d-7149636e04cf",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 35244,
+      "attackTick": 153,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 152,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "0a39a906-2984-4851-ace0-cd1e9b104aea",
+      "category": "any",
+      "lane": "WEST",
+      "target": 36467,
+      "attackTick": 152,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 144,
+      "spawn19": 152,
+      "spawn20": 164,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "0a39a906-2984-4851-ace0-cd1e9b104aea",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 36467,
+      "attackTick": 152,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 144,
+      "spawn19": 152,
+      "spawn20": 164,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 151,
+      "visibleSmalls": 3,
+      "positiveHpSmalls": 3
+    },
+    {
+      "uuid": "0a39a906-2984-4851-ace0-cd1e9b104aea",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 36468,
+      "attackTick": 159,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 144,
+      "spawn19": 152,
+      "spawn20": 164,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 158,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "0a39a906-2984-4851-ace0-cd1e9b104aea",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 36468,
+      "attackTick": 159,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 144,
+      "spawn19": 152,
+      "spawn20": 164,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 158,
+      "visibleSmalls": 1,
+      "positiveHpSmalls": 1
+    },
+    {
+      "uuid": "0a39a906-2984-4851-ace0-cd1e9b104aea",
+      "category": "any",
+      "lane": "EAST",
+      "target": 36466,
+      "attackTick": 161,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 144,
+      "spawn19": 152,
+      "spawn20": 164,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 160,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "0a39a906-2984-4851-ace0-cd1e9b104aea",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 36466,
+      "attackTick": 161,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 144,
+      "spawn19": 152,
+      "spawn20": 164,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 160,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "82f0c657-82bc-4b1c-a19e-ae80175dcc08",
+      "category": "any",
+      "lane": "WEST",
+      "target": 36570,
+      "attackTick": 148,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 147,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "82f0c657-82bc-4b1c-a19e-ae80175dcc08",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 36570,
+      "attackTick": 148,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 147,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "82f0c657-82bc-4b1c-a19e-ae80175dcc08",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 36571,
+      "attackTick": 156,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 16,
+      "offset19": 8,
+      "offset20": -4,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 155,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "82f0c657-82bc-4b1c-a19e-ae80175dcc08",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 36571,
+      "attackTick": 156,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 16,
+      "offset19": 8,
+      "offset20": -4,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4243
+      ],
+      "targetLastSeenTick": 155,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "82f0c657-82bc-4b1c-a19e-ae80175dcc08",
+      "category": "any",
+      "lane": "EAST",
+      "target": 36569,
+      "attackTick": 160,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 20,
+      "offset19": 12,
+      "offset20": 0,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 159,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "82f0c657-82bc-4b1c-a19e-ae80175dcc08",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 36569,
+      "attackTick": 160,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 20,
+      "offset19": 12,
+      "offset20": 0,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4253
+      ],
+      "targetLastSeenTick": 159,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "14aa975a-a31a-413e-b0dc-7b62c8f16fc9",
+      "category": "any",
+      "lane": "WEST",
+      "target": 41293,
+      "attackTick": 148,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 147,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "14aa975a-a31a-413e-b0dc-7b62c8f16fc9",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 41293,
+      "attackTick": 148,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 8,
+      "offset19": 0,
+      "offset20": -12,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3288,
+        4248
+      ],
+      "targetLastSeenTick": 147,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "14aa975a-a31a-413e-b0dc-7b62c8f16fc9",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 41294,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "14aa975a-a31a-413e-b0dc-7b62c8f16fc9",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 41294,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 15,
+      "offset19": 7,
+      "offset20": -5,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "14aa975a-a31a-413e-b0dc-7b62c8f16fc9",
+      "category": "any",
+      "lane": "EAST",
+      "target": 41292,
+      "attackTick": 157,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "14aa975a-a31a-413e-b0dc-7b62c8f16fc9",
+      "category": "ranged",
+      "lane": "EAST",
+      "target": 41292,
+      "attackTick": 157,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 17,
+      "offset19": 9,
+      "offset20": -3,
+      "spawn18": 140,
+      "spawn19": 148,
+      "spawn20": 160,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3293,
+        4253
+      ],
+      "targetLastSeenTick": 156,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "7cb34e4e-8ace-4e94-92ae-bb01c9a20839",
+      "category": "any",
+      "lane": "WEST",
+      "target": 45959,
+      "attackTick": 149,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 13,
+      "offset19": 5,
+      "offset20": -7,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3291,
+        4246
+      ],
+      "targetLastSeenTick": 148,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "7cb34e4e-8ace-4e94-92ae-bb01c9a20839",
+      "category": "ranged",
+      "lane": "WEST",
+      "target": 45959,
+      "attackTick": 149,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 13,
+      "offset19": 5,
+      "offset20": -7,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3291,
+        4246
+      ],
+      "targetLastSeenTick": 148,
+      "visibleSmalls": 2,
+      "positiveHpSmalls": 2
+    },
+    {
+      "uuid": "7cb34e4e-8ace-4e94-92ae-bb01c9a20839",
+      "category": "any",
+      "lane": "SOUTH",
+      "target": 45960,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    },
+    {
+      "uuid": "7cb34e4e-8ace-4e94-92ae-bb01c9a20839",
+      "category": "ranged",
+      "lane": "SOUTH",
+      "target": 45960,
+      "attackTick": 155,
+      "weapon": 12926,
+      "attackType": 12,
+      "age": 19,
+      "offset19": 11,
+      "offset20": -1,
+      "spawn18": 136,
+      "spawn19": 144,
+      "spawn20": 156,
+      "player": [
+        3293,
+        4248
+      ],
+      "targetLastSeen": [
+        3292,
+        4244
+      ],
+      "targetLastSeenTick": 154,
+      "visibleSmalls": 0,
+      "positiveHpSmalls": 0
+    }
+  ],
+  "iteration3SimFirstAttacks": [
+    {
+      "trial": 0,
+      "lane": "WEST",
+      "age": 14,
+      "offset19": 2,
+      "key": "85",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 0,
+      "lane": "SOUTH",
+      "age": 17,
+      "offset19": 5,
+      "key": "86",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 0,
+      "lane": "EAST",
+      "age": 21,
+      "offset19": 9,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 1,
+      "lane": "WEST",
+      "age": 13,
+      "offset19": 5,
+      "key": "85",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 1,
+      "lane": "SOUTH",
+      "age": 15,
+      "offset19": 7,
+      "key": "86",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 1,
+      "lane": "EAST",
+      "age": 21,
+      "offset19": 13,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 2,
+      "lane": "WEST",
+      "age": 12,
+      "offset19": 4,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 2,
+      "lane": "SOUTH",
+      "age": 14,
+      "offset19": 6,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 2,
+      "lane": "EAST",
+      "age": 16,
+      "offset19": 8,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 3,
+      "lane": "WEST",
+      "age": 13,
+      "offset19": 5,
+      "key": "85",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 3,
+      "lane": "SOUTH",
+      "age": 15,
+      "offset19": 7,
+      "key": "86",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 3,
+      "lane": "EAST",
+      "age": 19,
+      "offset19": 11,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 4,
+      "lane": "WEST",
+      "age": 14,
+      "offset19": 6,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 4,
+      "lane": "SOUTH",
+      "age": 16,
+      "offset19": 8,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 4,
+      "lane": "EAST",
+      "age": 18,
+      "offset19": 10,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 5,
+      "lane": "WEST",
+      "age": 10,
+      "offset19": 2,
+      "key": "85",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 5,
+      "lane": "SOUTH",
+      "age": 13,
+      "offset19": 5,
+      "key": "86",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 5,
+      "lane": "EAST",
+      "age": 15,
+      "offset19": 7,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 6,
+      "lane": "WEST",
+      "age": 9,
+      "offset19": 1,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 6,
+      "lane": "SOUTH",
+      "age": 14,
+      "offset19": 6,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 6,
+      "lane": "EAST",
+      "age": 18,
+      "offset19": 10,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 7,
+      "lane": "WEST",
+      "age": 11,
+      "offset19": 3,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 7,
+      "lane": "SOUTH",
+      "age": 13,
+      "offset19": 5,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 7,
+      "lane": "EAST",
+      "age": 19,
+      "offset19": 11,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 8,
+      "lane": "WEST",
+      "age": 13,
+      "offset19": 5,
+      "key": "85",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 8,
+      "lane": "SOUTH",
+      "age": 15,
+      "offset19": 7,
+      "key": "86",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 8,
+      "lane": "EAST",
+      "age": 17,
+      "offset19": 9,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 9,
+      "lane": "WEST",
+      "age": 9,
+      "offset19": 1,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 9,
+      "lane": "SOUTH",
+      "age": 13,
+      "offset19": 5,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 9,
+      "lane": "EAST",
+      "age": 15,
+      "offset19": 7,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 10,
+      "lane": "WEST",
+      "age": 13,
+      "offset19": 5,
+      "key": "85",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 10,
+      "lane": "SOUTH",
+      "age": 15,
+      "offset19": 7,
+      "key": "86",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 10,
+      "lane": "EAST",
+      "age": 17,
+      "offset19": 9,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 11,
+      "lane": "WEST",
+      "age": 13,
+      "offset19": 5,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 11,
+      "lane": "SOUTH",
+      "age": 15,
+      "offset19": 7,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 11,
+      "lane": "EAST",
+      "age": 17,
+      "offset19": 9,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 12,
+      "lane": "WEST",
+      "age": 14,
+      "offset19": 6,
+      "key": "85",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 12,
+      "lane": "SOUTH",
+      "age": 16,
+      "offset19": 8,
+      "key": "86",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 12,
+      "lane": "EAST",
+      "age": 18,
+      "offset19": 10,
+      "key": "87",
+      "weapon": "BOW"
+    },
+    {
+      "trial": 13,
+      "lane": "EAST",
+      "age": 13,
+      "offset19": 5,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 13,
+      "lane": "WEST",
+      "age": 15,
+      "offset19": 7,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 13,
+      "lane": "SOUTH",
+      "age": 17,
+      "offset19": 9,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 14,
+      "lane": "WEST",
+      "age": 9,
+      "offset19": 1,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 14,
+      "lane": "SOUTH",
+      "age": 14,
+      "offset19": 6,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 14,
+      "lane": "EAST",
+      "age": 18,
+      "offset19": 10,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 15,
+      "lane": "WEST",
+      "age": 10,
+      "offset19": 2,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 15,
+      "lane": "SOUTH",
+      "age": 13,
+      "offset19": 5,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 15,
+      "lane": "EAST",
+      "age": 15,
+      "offset19": 7,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 16,
+      "lane": "WEST",
+      "age": 13,
+      "offset19": 5,
+      "key": "85",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 16,
+      "lane": "SOUTH",
+      "age": 15,
+      "offset19": 7,
+      "key": "86",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 16,
+      "lane": "EAST",
+      "age": 17,
+      "offset19": 9,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 17,
+      "lane": "WEST",
+      "age": 13,
+      "offset19": 5,
+      "key": "85",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 17,
+      "lane": "SOUTH",
+      "age": 15,
+      "offset19": 7,
+      "key": "86",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 17,
+      "lane": "EAST",
+      "age": 21,
+      "offset19": 13,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 18,
+      "lane": "WEST",
+      "age": 9,
+      "offset19": 1,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 18,
+      "lane": "SOUTH",
+      "age": 14,
+      "offset19": 6,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 18,
+      "lane": "EAST",
+      "age": 16,
+      "offset19": 8,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 19,
+      "lane": "WEST",
+      "age": 9,
+      "offset19": 1,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 19,
+      "lane": "SOUTH",
+      "age": 14,
+      "offset19": 6,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 19,
+      "lane": "EAST",
+      "age": 16,
+      "offset19": 8,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 20,
+      "lane": "WEST",
+      "age": 9,
+      "offset19": 1,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 20,
+      "lane": "SOUTH",
+      "age": 14,
+      "offset19": 6,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 20,
+      "lane": "EAST",
+      "age": 22,
+      "offset19": 14,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 21,
+      "lane": "WEST",
+      "age": 9,
+      "offset19": 1,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 21,
+      "lane": "SOUTH",
+      "age": 14,
+      "offset19": 6,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 21,
+      "lane": "EAST",
+      "age": 16,
+      "offset19": 8,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 22,
+      "lane": "WEST",
+      "age": 11,
+      "offset19": 3,
+      "key": "85",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 22,
+      "lane": "SOUTH",
+      "age": 13,
+      "offset19": 5,
+      "key": "86",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 22,
+      "lane": "EAST",
+      "age": 15,
+      "offset19": 7,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 23,
+      "lane": "WEST",
+      "age": 11,
+      "offset19": 3,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 23,
+      "lane": "SOUTH",
+      "age": 13,
+      "offset19": 5,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 23,
+      "lane": "EAST",
+      "age": 17,
+      "offset19": 9,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 24,
+      "lane": "WEST",
+      "age": 9,
+      "offset19": 1,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 24,
+      "lane": "SOUTH",
+      "age": 14,
+      "offset19": 6,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 24,
+      "lane": "EAST",
+      "age": 16,
+      "offset19": 8,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 25,
+      "lane": "WEST",
+      "age": 15,
+      "offset19": 7,
+      "key": "85",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 25,
+      "lane": "SOUTH",
+      "age": 17,
+      "offset19": 9,
+      "key": "86",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 25,
+      "lane": "EAST",
+      "age": 23,
+      "offset19": 15,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 26,
+      "lane": "WEST",
+      "age": 9,
+      "offset19": 1,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 26,
+      "lane": "SOUTH",
+      "age": 13,
+      "offset19": 5,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 26,
+      "lane": "EAST",
+      "age": 15,
+      "offset19": 7,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 27,
+      "lane": "WEST",
+      "age": 12,
+      "offset19": 4,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 27,
+      "lane": "SOUTH",
+      "age": 14,
+      "offset19": 6,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 27,
+      "lane": "EAST",
+      "age": 20,
+      "offset19": 12,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 28,
+      "lane": "WEST",
+      "age": 9,
+      "offset19": 1,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 28,
+      "lane": "SOUTH",
+      "age": 14,
+      "offset19": 6,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 28,
+      "lane": "EAST",
+      "age": 16,
+      "offset19": 8,
+      "key": "89",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 29,
+      "lane": "WEST",
+      "age": 11,
+      "offset19": 3,
+      "key": "87",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 29,
+      "lane": "SOUTH",
+      "age": 13,
+      "offset19": 5,
+      "key": "88",
+      "weapon": "PIPE"
+    },
+    {
+      "trial": 29,
+      "lane": "EAST",
+      "age": 19,
+      "offset19": 11,
+      "key": "89",
+      "weapon": "PIPE"
+    }
+  ]
+}

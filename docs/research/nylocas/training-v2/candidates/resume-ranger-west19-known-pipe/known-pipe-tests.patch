@@ -1,0 +1,219 @@
+--- /dev/null
++++ b/org/localscape/nylocas/ranger/RangerWest19KnownPipeTest.java
+@@ -0,0 +1,181 @@
++package org.localscape.nylocas.ranger;
++
++import org.junit.Test;
++import org.localscape.nylocas.ranger.RangerStrategy.Crab;
++import org.localscape.nylocas.ranger.RangerStrategy.Decision;
++import org.localscape.nylocas.ranger.RangerStrategy.Lane;
++import org.localscape.nylocas.ranger.RangerStrategy.Room;
++import org.localscape.nylocas.ranger.RangerStrategy.Style;
++import org.localscape.nylocas.ranger.RangerStrategy.Weapon;
++
++import static org.junit.Assert.*;
++
++/** Prospective return scheduling may use a known due pipe without releasing its real flight. */
++public class RangerWest19KnownPipeTest
++{
++	private final RangerStrategy strategy = new RangerStrategy();
++	private Crab west;
++	private Crab east;
++
++	private Room witness(int pipeRequest)
++	{
++		Room room = new Room();
++		room.wave = 19;
++		room.spawns[18] = 140;
++		room.spawns[19] = 148;
++		room.ready = 158;
++		room.player = RangerStrategy.tile(3293, 4249);
++		west = new Crab(90, 96, 148, 19, Lane.WEST, 'S', true, Style.MAGIC,
++			RangerStrategy.tile(3291, 4249));
++		room.crabs.add(west);
++		strategy.attacked(new Decision(west, Weapon.EYE, room.player, false, "West magic big 19", "Opening"), 152);
++		west.hp = 8;
++		west.ownHitUntil = 0;
++		east = new Crab(87, 93, 140, 18, Lane.EAST, 'S', true, Style.RANGE,
++			RangerStrategy.tile(3292, 4253));
++		room.crabs.add(east);
++		strategy.attacked(new Decision(east, Weapon.PIPE, room.player, false, "East big 18", "Confirmed pipe"), pipeRequest + 1);
++		east.hp = 16;
++		east.ownHitUntil = pipeRequest + 32;
++		east.ownHitHp = 0;
++		return room;
++	}
++
++	@Test
++	public void aNormallyDuePipeAllowsWestFollowupWhileBothActualFlightFieldsStayUnchanged()
++	{
++		Room room = witness(156);
++		assertEquals(158, strategy.west19PacketDue(room, 158));
++		Decision followup = strategy.decide(room, 158);
++		assertSame(west, followup.target);
++		assertEquals(Weapon.EYE, followup.weapon);
++		assertEquals(188, east.ownHitUntil);
++		assertEquals(0, east.ownHitHp);
++		assertTrue(east.awaitingHit(158));
++		assertEquals(16, east.hp);
++	}
++
++	@Test
++	public void theProspectiveBudgetStillCountsAllObservedHpOfThePendingBig()
++	{
++		Room room = witness(156);
++		// One older18 body: full observed16HP cannot fit after the West followup.
++		room.crabs.remove(east);
++		Crab urgent = new Crab(87, 93, 139, 18, Lane.EAST, 'S', true, Style.RANGE, east.point);
++		urgent.hp = 16;
++		urgent.ownHitUntil = 188;
++		urgent.ownHitHp = 0;
++		room.crabs.add(urgent);
++		assertEquals(-1, strategy.west19PacketDue(room, 158));
++		assertEquals(188, urgent.ownHitUntil);
++		assertEquals(16, urgent.hp);
++	}
++
++	@Test
++	public void aPipeWhoseNormalImpactIsStillInTheFutureDoesNotRelaxTheBudget()
++	{
++		Room room = witness(157);
++		assertEquals(-1, strategy.west19PacketDue(room, 158));
++		assertEquals(189, east.ownHitUntil);
++	}
++
++	@Test
++	public void anotherConfirmedPipeTargetCannotExplainThePendingBigFlight()
++	{
++		Room room = witness(156);
++		Crab other = new Crab(200, 200, 156, 19, Lane.SPLIT, (char) 0, false, Style.RANGE,
++			RangerStrategy.tile(3293, 4247));
++		room.crabs.add(other);
++		strategy.attacked(new Decision(other, Weapon.PIPE, room.player, false, null, "Other confirmed pipe"), 157);
++		assertEquals(-1, strategy.west19PacketDue(room, 158));
++	}
++
++	@Test
++	public void aConfirmedBowClearsTheKnownPipeMarker()
++	{
++		Room room = witness(156);
++		strategy.attacked(new Decision(east, Weapon.BOW, room.player, false, null, "Confirmed bow"), 157);
++		east.ownHitUntil = 188;
++		east.ownHitHp = 0;
++		assertEquals(-1, strategy.west19PacketDue(room, 158));
++	}
++
++	@Test
++	public void aConfirmedEyeOnAnotherTargetClearsTheKnownPipeMarker()
++	{
++		Room room = witness(156);
++		Crab other = new Crab(200, 200, 156, 19, Lane.SPLIT, (char) 0, false, Style.MAGIC,
++			RangerStrategy.tile(3293, 4247));
++		room.crabs.add(other);
++		strategy.attacked(new Decision(other, Weapon.EYE, room.player, false, null, "Confirmed eye"), 157);
++		assertEquals(-1, strategy.west19PacketDue(room, 158));
++	}
++
++	@Test
++	public void aDuePipeDoesNotRelaxTheWestTargetsOwnFlightLease()
++	{
++		Room room = witness(156);
++		west.ownHitUntil = 183;
++		west.ownHitHp = 0;
++		assertEquals(-1, strategy.west19PacketDue(room, 158));
++		assertEquals(183, west.ownHitUntil);
++	}
++
++	@Test
++	public void aDuePipeDoesNotRelaxAPartnerClaimOnTheRemainingBig()
++	{
++		Room room = witness(156);
++		east.claimedUntil = 190;
++		assertEquals(-1, strategy.west19PacketDue(room, 158));
++		assertEquals(190, east.claimedUntil);
++		assertEquals(188, east.ownHitUntil);
++	}
++
++	@Test
++	public void aDuePipeDoesNotRelaxPersonalNullOnTheRemainingBig()
++	{
++		Room room = witness(156);
++		east.nulled = true;
++		assertEquals(-1, strategy.west19PacketDue(room, 158));
++	}
++	@Test
++	public void prospectivePermissionNeverAllowsReattackingTheUnresolvedWave18Target()
++	{
++		Room room = witness(156);
++		Decision followup = strategy.decide(room, 158);
++		assertSame(west, followup.target);
++		strategy.attacked(followup, 159);
++		west.ownHitUntil = 190;
++		west.ownHitHp = 0;
++		room.ready = 161;
++		assertNotSame(east, strategy.decide(room, 161).target);
++		assertEquals(188, east.ownHitUntil);
++	}
++
++	@Test
++	public void anActualWave20BowStillPreemptsTheProspectiveLatePipe()
++	{
++		Room room = witness(156);
++		Decision followup = strategy.decide(room, 158);
++		assertSame(west, followup.target);
++		strategy.attacked(followup, 159);
++		west.ownHitUntil = 190;
++		west.ownHitHp = 0;
++		// A real zero/splash clears only the actual18 lease; its HP remains16.
++		east.ownHitUntil = 0;
++		room.wave = 20;
++		room.spawns[20] = 160;
++		room.ready = 164;
++		Crab flicker = new Crab(250, 250, 160, 20, Lane.WEST, 'S', true, Style.MELEE,
++			RangerStrategy.tile(3285, 4248));
++		room.crabs.add(flicker);
++		Decision before = strategy.decide(room, 164);
++		assertNotSame(east, before.target);
++		assertEquals(Weapon.BOW, before.weapon);
++		flicker.style = Style.RANGE;
++		flicker.point = RangerStrategy.tile(3286, 4248);
++		Decision bow = strategy.decide(room, 165);
++		assertSame(flicker, bow.target);
++		assertEquals("West bow flicker 20", bow.rule);
++	}
++}
+--- /dev/null
++++ b/org/localscape/nylocas/ranger/RangerKnownPipeTimingTest.java
+@@ -0,0 +1,32 @@
++package org.localscape.nylocas.ranger;
++
++import org.junit.Test;
++import org.localscape.nylocas.ranger.RangerStrategy.Crab;
++import org.localscape.nylocas.ranger.RangerStrategy.Decision;
++import org.localscape.nylocas.ranger.RangerStrategy.Lane;
++import org.localscape.nylocas.ranger.RangerStrategy.Style;
++import org.localscape.nylocas.ranger.RangerStrategy.Weapon;
++
++import static org.junit.Assert.*;
++
++/** Event timing and room-reset safety of the private last-confirmed-pipe observation. */
++public class RangerKnownPipeTimingTest
++{
++	@Test
++	public void observationTickMeansLaunchOneTickEarlierAndResetRemovesKnowledge()
++	{
++		RangerStrategy strategy = new RangerStrategy();
++		Crab crab = new Crab(87, 93, 140, 18, Lane.EAST, 'S', true, Style.RANGE,
++			RangerStrategy.tile(3292, 4253));
++		strategy.attacked(new Decision(crab, Weapon.PIPE, crab.point, false, null, "Confirmed"), 157);
++		crab.ownHitUntil = 188;
++		crab.ownHitHp = 0;
++		assertFalse(strategy.knownPipeImpactDue(crab, 157));
++		assertTrue(strategy.knownPipeImpactDue(crab, 158));
++		Crab anotherIdentity = new Crab(88, 94, 140, 18, Lane.EAST, 'S', true, Style.RANGE, crab.point);
++		assertFalse(strategy.knownPipeImpactDue(anotherIdentity, 158));
++		strategy.reset();
++		assertFalse(strategy.knownPipeImpactDue(crab, 158));
++		assertEquals(188, crab.ownHitUntil);
++	}
++}

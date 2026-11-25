@@ -1,0 +1,3727 @@
+{
+  "limitations": [
+    "Read-only central-geometry approximation: exact LOS and next-tick flicker filtering are not exported in the trace. All other rejection gates are observed native state or recorded policy state."
+  ],
+  "trials": [
+    {
+      "frames": [
+        {
+          "tick": 218,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": false
+          },
+          "energy": 600,
+          "activeStacks": 2,
+          "neighborCount": 1,
+          "smallCount": 0,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4251
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 219,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": false
+          },
+          "energy": 600,
+          "activeStacks": 2,
+          "neighborCount": 2,
+          "smallCount": 0,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4250
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 220,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": false
+          },
+          "energy": 600,
+          "activeStacks": 2,
+          "neighborCount": 2,
+          "smallCount": 0,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4250
+          ],
+          "rule": "West big 26",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 221,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 750,
+          "activeStacks": 1,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 1,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4250
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 222,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 750,
+          "activeStacks": 1,
+          "neighborCount": 3,
+          "smallCount": 2,
+          "creditCharges": 1,
+          "creditRegens": 1,
+          "position": [
+            3297,
+            4246
+          ],
+          "rule": "East melee big 24",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 223,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 750,
+          "activeStacks": 1,
+          "neighborCount": 3,
+          "smallCount": 2,
+          "creditCharges": 1,
+          "creditRegens": 1,
+          "position": [
+            3297,
+            4246
+          ],
+          "rule": "East melee big 24",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 224,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 750,
+          "activeStacks": 1,
+          "neighborCount": 3,
+          "smallCount": 2,
+          "creditCharges": 1,
+          "creditRegens": 1,
+          "position": [
+            3297,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 225,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3295,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 226,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 600,
+          "activeStacks": 2,
+          "neighborCount": 5,
+          "smallCount": 3,
+          "creditCharges": 2,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4247
+          ],
+          "rule": "West melee big 25",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 227,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 600,
+          "activeStacks": 2,
+          "neighborCount": 5,
+          "smallCount": 3,
+          "creditCharges": 2,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4248
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 228,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": false,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 750,
+          "activeStacks": 1,
+          "neighborCount": 3,
+          "smallCount": 2,
+          "creditCharges": 1,
+          "creditRegens": 1,
+          "position": [
+            3292,
+            4248
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 0
+        },
+        {
+          "tick": 229,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": false,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 750,
+          "activeStacks": 1,
+          "neighborCount": 2,
+          "smallCount": 1,
+          "creditCharges": 1,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 0
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 222,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3298,
+            4243
+          ],
+          "rule": "East melee big 24",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 223,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3298,
+            4243
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 224,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3296,
+            4243
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 225,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3294,
+            4243
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 222,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 3,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3299,
+            4251
+          ],
+          "rule": "null",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 223,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 3,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3299,
+            4252
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 224,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 0,
+          "smallCount": 0,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3297,
+            4252
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 225,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 1,
+          "smallCount": 0,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3295,
+            4252
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 226,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3295,
+            4245
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 227,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3293,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 228,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3291,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 229,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4245
+          ],
+          "rule": "West big 26",
+          "attacked": true,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 222,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3298,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 223,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3298,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 224,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3298,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 225,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3298,
+            4246
+          ],
+          "rule": "null",
+          "attacked": true,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 222,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 8,
+          "smallCount": 6,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4247
+          ],
+          "rule": "West melee big 25",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 223,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 8,
+          "smallCount": 6,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4248
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 224,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": false,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 4,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3292,
+            4248
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 0
+        },
+        {
+          "tick": 225,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": false,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 3,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 0
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 230,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3299,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 231,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3297,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 232,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 4,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3295,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 233,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 3,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3293,
+            4247
+          ],
+          "rule": "West big 26",
+          "attacked": true,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 238,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 0,
+          "smallCount": 0,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3294,
+            4245
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 239,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": true,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 1,
+          "smallCount": 0,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3292,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 240,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 1,
+          "smallCount": 0,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4247
+          ],
+          "rule": "West big 26",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 241,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 1,
+          "smallCount": 0,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 246,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3291,
+            4246
+          ],
+          "rule": "West melee big 25",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 247,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 0,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4248
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 248,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": false,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": true,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3292,
+            4248
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 0
+        },
+        {
+          "tick": 249,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": false,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 0
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 254,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3300,
+            4251
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 255,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3298,
+            4251
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 256,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 4,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3296,
+            4251
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 257,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 6,
+          "smallCount": 4,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3294,
+            4251
+          ],
+          "rule": "West big 26",
+          "attacked": true,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 218,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3296,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 219,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3296,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 220,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3296,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 221,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3296,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 246,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3298,
+            4246
+          ],
+          "rule": "East melee big 24",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 247,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3298,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 248,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3298,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 249,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 3,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3298,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 222,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 600,
+          "activeStacks": 2,
+          "neighborCount": 5,
+          "smallCount": 3,
+          "creditCharges": 2,
+          "creditRegens": 1,
+          "position": [
+            3291,
+            4248
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 223,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 600,
+          "activeStacks": 2,
+          "neighborCount": 5,
+          "smallCount": 3,
+          "creditCharges": 2,
+          "creditRegens": 1,
+          "position": [
+            3291,
+            4248
+          ],
+          "rule": "West melee big 25",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 224,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 600,
+          "activeStacks": 2,
+          "neighborCount": 5,
+          "smallCount": 3,
+          "creditCharges": 2,
+          "creditRegens": 1,
+          "position": [
+            3291,
+            4248
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 225,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": false,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 750,
+          "activeStacks": 1,
+          "neighborCount": 4,
+          "smallCount": 3,
+          "creditCharges": 1,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 0
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 238,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 3,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3291,
+            4246
+          ],
+          "rule": "West melee big 25",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 239,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4248
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 240,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": false,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 3,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3292,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 0
+        },
+        {
+          "tick": 241,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": false,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4245
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 0
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 226,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 1000,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3299,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 227,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 1000,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3299,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 228,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 1000,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3299,
+            4247
+          ],
+          "rule": "null",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 229,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 1000,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3299,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 222,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4247
+          ],
+          "rule": "West melee big 25",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 223,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4248
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 224,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": false,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 3,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3292,
+            4248
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 0
+        },
+        {
+          "tick": 225,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": false,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 3,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 0
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 222,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3300,
+            4247
+          ],
+          "rule": "null",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 223,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 3,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3301,
+            4249
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 224,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3299,
+            4251
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 225,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3297,
+            4251
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 242,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": false
+          },
+          "energy": 800,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 0,
+          "position": [
+            3292,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 243,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": false
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 0,
+          "position": [
+            3292,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 244,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": false
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 0,
+          "position": [
+            3290,
+            4247
+          ],
+          "rule": "West big 26",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 245,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": false
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 0,
+          "position": [
+            3290,
+            4247
+          ],
+          "rule": "West big 26",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 222,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3300,
+            4252
+          ],
+          "rule": "null",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 223,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3299,
+            4252
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 224,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 1,
+          "smallCount": 0,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3297,
+            4252
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 225,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3295,
+            4252
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 226,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": false
+          },
+          "energy": 600,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 0,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3300,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 227,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": false
+          },
+          "energy": 600,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3300,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 228,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": false
+          },
+          "energy": 600,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3299,
+            4245
+          ],
+          "rule": "null",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 229,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": false
+          },
+          "energy": 600,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3297,
+            4244
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 234,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 3,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3292,
+            4246
+          ],
+          "rule": "West melee big 25",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 235,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 6,
+          "smallCount": 4,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4248
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 236,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": false,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 3,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3292,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 0
+        },
+        {
+          "tick": 237,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": false,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 3,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4245
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 0
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 238,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 1,
+          "smallCount": 0,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3294,
+            4245
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 239,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3292,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 240,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4247
+          ],
+          "rule": "25 west extra Dinh",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 241,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": false
+          },
+          "energy": 400,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 238,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3291,
+            4251
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 239,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3291,
+            4250
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 240,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 0,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4249
+          ],
+          "rule": "West big 26",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 241,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": true,
+            "recordedStage": true,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3290,
+            4249
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 222,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 750,
+          "activeStacks": 1,
+          "neighborCount": 3,
+          "smallCount": 2,
+          "creditCharges": 1,
+          "creditRegens": 1,
+          "position": [
+            3300,
+            4245
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 223,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 750,
+          "activeStacks": 1,
+          "neighborCount": 3,
+          "smallCount": 3,
+          "creditCharges": 1,
+          "creditRegens": 1,
+          "position": [
+            3300,
+            4245
+          ],
+          "rule": "null",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 224,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3299,
+            4245
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 225,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 1,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3297,
+            4245
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 230,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 6,
+          "smallCount": 4,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3298,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 231,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 7,
+          "smallCount": 6,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3298,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 232,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 6,
+          "smallCount": 5,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3296,
+            4247
+          ],
+          "rule": "null",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 233,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 4,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3294,
+            4245
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 222,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 750,
+          "activeStacks": 1,
+          "neighborCount": 4,
+          "smallCount": 1,
+          "creditCharges": 1,
+          "creditRegens": 1,
+          "position": [
+            3300,
+            4248
+          ],
+          "rule": "null",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 223,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3301,
+            4248
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 224,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 0,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3299,
+            4248
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 225,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": true
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 1,
+          "position": [
+            3297,
+            4248
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 242,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": false
+          },
+          "energy": 800,
+          "activeStacks": 0,
+          "neighborCount": 3,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 0,
+          "position": [
+            3299,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 243,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": false
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 0,
+          "position": [
+            3299,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 244,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": false
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 2,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 0,
+          "position": [
+            3299,
+            4246
+          ],
+          "rule": "null",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 245,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": false,
+            "budget": false
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 1,
+          "smallCount": 1,
+          "creditCharges": 0,
+          "creditRegens": 0,
+          "position": [
+            3300,
+            4245
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "tick": 242,
+          "age": 6,
+          "tests": {
+            "wave": true,
+            "ready": true,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": false
+          },
+          "energy": 800,
+          "activeStacks": 0,
+          "neighborCount": 5,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 0,
+          "position": [
+            3300,
+            4249
+          ],
+          "rule": "null",
+          "attacked": true,
+          "targetHp": 16
+        },
+        {
+          "tick": 243,
+          "age": 7,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": false
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 0,
+          "position": [
+            3301,
+            4249
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 244,
+          "age": 8,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": false
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 0,
+          "position": [
+            3301,
+            4247
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        },
+        {
+          "tick": 245,
+          "age": 9,
+          "tests": {
+            "wave": true,
+            "ready": false,
+            "live": true,
+            "ownClean": true,
+            "meleeNow": true,
+            "unclaimed": true,
+            "noPendingOwnHit": true,
+            "adjacent": false,
+            "recordedStage": false,
+            "cluster": true,
+            "budget": false
+          },
+          "energy": 900,
+          "activeStacks": 0,
+          "neighborCount": 4,
+          "smallCount": 2,
+          "creditCharges": 0,
+          "creditRegens": 0,
+          "position": [
+            3299,
+            4246
+          ],
+          "rule": "null",
+          "attacked": false,
+          "targetHp": 16
+        }
+      ]
+    }
+  ]
+}

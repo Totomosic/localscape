@@ -1,0 +1,21 @@
+--- retainedSouth20/MageStrategy.java
++++ idle-melee-parent/MageStrategy.java
+@@ -437,6 +437,18 @@
+ 			Decision d = new Decision(c, weapon, c.point, false, null, "Fresh " + c.style + (c.big ? " assigned big" : " small"));
+ 			add(candidates, room, next, d, score, tick, tick, c.born + 48);
+ 		}
++		// A surviving partner-owned melee parent can still be killed normally.
++		// Begin its approach only after all own candidates and packets are clear.
++		if (candidates.isEmpty() && next == null && room.wave == 31 && tick >= room.ready)
++		{
++			for (Crab c : room.crabs)
++			{
++				if (!c.big || c.wave < 30 || c.hp <= 0 || c.style != Style.MELEE
++					|| !eligible(room, c, tick) || !matchesNext(c, Style.MELEE, tick)) continue;
++				Decision help = new Decision(c, Weapon.SCYTHE, c.point, false, null, "Idle fresh melee parent support");
++				add(candidates, room, null, help, 10000 - (tick - c.born) * 70, tick, tick, c.born + 48);
++			}
++		}
+ 		if (candidates.isEmpty()) candidates.addAll(idleRange);
+ 		Comparator<Candidate> priority = Comparator.comparingInt((Candidate c) -> deferred(c, tick) ? 0 : 1)
+ 			.thenComparingInt(c -> c.at)

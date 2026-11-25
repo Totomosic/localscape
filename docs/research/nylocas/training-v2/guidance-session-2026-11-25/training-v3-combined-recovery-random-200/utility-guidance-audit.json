@@ -1,0 +1,14 @@
+{
+  "trials": 200,
+  "counts": {
+    "preparation_swaps_without_combat_snapshot": 400,
+    "combat_swaps": 599,
+    "role1_destination1": 400,
+    "role1_destination3": 188,
+    "role0_destination3": 11
+  },
+  "examples": [],
+  "caveat": "Arceuus readiness excludes optional experimental pre-staging. Outside-window ancient requests may be mandatory barrage recovery; inspect examples. Pre-entry preparation is exempt from combat cooldown guidance.",
+  "run": ".state/simulations/training-v3-combined-recovery-random-200",
+  "source_sha256": "e7dc5247d43134c72bbc3256f1b50782b13d2f83ecc16485dbe356b41c461c06"
+}

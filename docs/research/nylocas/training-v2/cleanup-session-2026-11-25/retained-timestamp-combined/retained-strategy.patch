@@ -1,0 +1,334 @@
+--- upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/ranger/RangerStrategy.java
++++ .state/simulations/training-v4-candidate-timestamp-dim29-and-28plus16/policy-source/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -54,7 +54,6 @@
+ 		public boolean nulled;
+ 		public boolean partnerNulled;
+ 		public int claimedUntil;
+-		// A same-cycle partner plan is separate from already-rolled native damage.
+ 		public int provisionalClaimUntil;
+ 		public int ownHitUntil;
+ 		public int ownHitHp;
+@@ -320,14 +319,16 @@
+ 		if (room.wave == 31 && finalPacketFinished(room, tick)) room.cleanup = true;
+ 		Reservation next = reservation(room, tick);
+ 		if (room.wave < 20) return preCap.decide(room, tick, next);
++		Crab lastLiving = room.wave == 31 ? lastLiving(room) : null;
+ 		List<Candidate> candidates = new ArrayList<>();
+ 		for (Crab crab : room.crabs)
+ 		{
+ 			int age = tick - crab.born;
+-			if (crab.dying || crab.nulled || savedMagePrimary(crab, tick) || crab.claimed(tick) || crab.awaitingHit(tick)
++			if (crab.hp <= 0 || crab.dying || crab.nulled || savedMagePrimary(crab, tick)
++				|| crab != lastLiving && crab.claimed(tick) || crab.awaitingHit(tick)
+ 				|| age >= 49 || crab.big && crab.wave < 20 && room.wave < 29
+ 					&& !(room.wave == 20 && crab.wave == 18)
+-				|| room.wave == 31 && crab.wave <= 29) continue;
++				|| dimmed(room, crab)) continue;
+ 			for (Rule rule : RULES)
+ 			{
+ 				if (completed.contains(rule.name) || !rule.matches(crab) || age < rule.first || age > rule.last
+@@ -352,7 +353,7 @@
+ 				// Finish final-wave lane rangers before their permanent melee flicker.
+ 				if (room.wave == 31 && crab.wave == 31 && crab.lane != Lane.SPLIT && age < 26) score += 10000;
+ 				long cluster = room.crabs.stream().filter(c -> !c.big && !c.dying && !c.nulled && c.style == Style.RANGE
+-					&& !c.claimed(tick) && (room.wave < 31 || c.wave >= 30)
++					&& !c.claimed(tick) && !dimmed(room, c)
+ 					&& c.point.distanceTo(crab.point) <= 1).count();
+ 				boolean savedSplash = room.crabs.stream().anyMatch(c -> !c.dying && !c.nulled
+ 					&& c.style == Style.RANGE && savedMagePrimary(c, tick) && c.point.distanceTo(crab.point) <= 1);
+@@ -393,6 +394,52 @@
+ 				add(candidates, room, next, action, 100, tick, crab.born + 48);
+ 			}
+ 		}
++		if (candidates.isEmpty() && lastLiving != null && !dimmed(room, lastLiving)
++			&& !lastLiving.nulled && !lastLiving.awaitingHit(tick) && tick - lastLiving.born < 49)
++		{
++			Weapon weapon = lastLiving.style == Style.RANGE ? Weapon.PIPE
++				: lastLiving.style == Style.MAGIC ? Weapon.EYE : Weapon.CLAWS;
++			if (RangerFlickers.matchesNext(lastLiving, weapon.style, tick))
++			{
++				Decision helper = new Decision(lastLiving, weapon, CENTER, false, null, "Last living cleanup target");
++				add(candidates, room, next, helper, 1500, tick, lastLiving.born + 48);
++			}
++		}
++
++		if (candidates.isEmpty() && room.wave == 31 && next == null)
++		{
++			// Spend otherwise idle cleanup time helping the partner with fresh melee.
++			for (Crab crab : room.crabs)
++			{
++				int age = tick - crab.born;
++				if (dimmed(room, crab) || crab.hp <= 0 || crab.dying || crab.nulled || age >= 49
++					|| crab.claimed(tick) || crab.awaitingHit(tick)
++					|| !RangerFlickers.matchesNext(crab, Style.MELEE, tick)) continue;
++				Decision helper = new Decision(crab, Weapon.CLAWS, CENTER, false, null, "Idle melee cleanup helper");
++				add(candidates, room, next, helper, 1500 - age * 80, tick, crab.born + 48);
++			}
++		}
++
++		if (room.wave == 31)
++		{
++			for (Crab crab : room.crabs)
++			{
++				int age = tick - crab.born;
++				if (dimmed(room, crab) || !crab.partnerNulled || crab.hp <= 0 || crab.dying || crab.nulled
++					|| age >= 49 || crab.awaitingHit(tick)) continue;
++				Rule rule = RULES.stream().filter(r -> !completed.contains(r.name) && r.matches(crab)
++					&& age >= r.first && age <= r.last && r.weapon.style == crab.style)
++					.min(Comparator.comparingInt(r -> r.priority)).orElse(null);
++				Weapon weapon = rule != null ? rule.weapon : crab.style == Style.RANGE ? Weapon.PIPE
++					: crab.style == Style.MAGIC ? Weapon.EYE : Weapon.CLAWS;
++				if (!RangerFlickers.matchesNext(crab, weapon.style, tick)) continue;
++				Decision rescue = new Decision(crab, weapon, rule == null ? CENTER : rule.stage, false,
++					rule == null ? null : rule.name, "Partner NULL cleanup rescue");
++				add(candidates, room, next, rescue, 25000 - age * 40, tick, crab.born + 48);
++			}
++			prioritizeCleanupRescue(candidates);
++		}
++
+ 		preferTransitionLane(candidates);
+ 		Candidate best = candidates.stream().min(Comparator.comparingInt((Candidate c) -> c.at)
+ 			.thenComparingInt(c -> -c.score).thenComparingInt(c -> c.decision.target.key)).orElse(null);
+@@ -404,7 +451,8 @@
+ 			.min(Comparator.comparingInt((Candidate c) -> -c.score)).orElse(null);
+ 		// The conditional west-24 Eye window takes priority over filler planned before the flicker.
+ 		if (west24 != null) best = west24;
+-		else best = candidates.stream().filter(c -> c.at == earliest && committed(c.decision, tick))
++		else if (!(room.wave == 31 && best.decision.target.partnerNulled))
++			best = candidates.stream().filter(c -> c.at == earliest && committed(c.decision, tick))
+ 			.min(Comparator.comparingInt((Candidate c) -> -c.score)).orElse(best);
+ 		if (best.at <= tick || tick >= room.ready && !room.obstructed.contains(best.decision.target.key))
+ 		{
+@@ -418,16 +466,58 @@
+ 		return approach;
+ 	}
+ 
++	private static Crab lastLiving(Room room)
++	{
++		Crab last = null;
++		for (Crab crab : room.crabs)
++		{
++			if (crab.hp <= 0 || crab.dying) continue;
++			if (last != null) return null;
++			last = crab;
++		}
++		return last;
++	}
++
++	private static void prioritizeCleanupRescue(List<Candidate> candidates)
++	{
++		int earliest = candidates.stream().mapToInt(c -> c.at).min().orElse(Integer.MAX_VALUE);
++		if (candidates.stream().noneMatch(c -> c.at == earliest && c.decision.target.partnerNulled)) return;
++		boolean protectedWork = candidates.stream().anyMatch(c -> c.at == earliest && protectedCleanupWork(c));
++		candidates.removeIf(c -> c.at == earliest && (protectedWork ? !protectedCleanupWork(c) : !c.decision.target.partnerNulled));
++	}
++
++	private static boolean protectedCleanupWork(Candidate candidate)
++	{
++		Decision decision = candidate.decision;
++		if (decision.rule != null && RULES.stream().anyMatch(r -> r.priority <= 1 && r.name.equals(decision.rule))) return true;
++		Crab crab = decision.target;
++		return !crab.big && crab.wave == 31 && crab.lane != Lane.SPLIT
++			&& decision.weapon.style == Style.RANGE && candidate.at - crab.born < 26;
++	}
++
+ 	private boolean protectedPacket(Crab crab, int tick)
+ 	{
+ 		return RULES.stream().anyMatch(r -> r.priority <= 1 && !completed.contains(r.name)
+ 			&& r.matches(crab) && tick - crab.born <= r.last);
+ 	}
+ 
++	private static boolean freshCleanup(Room room, Crab crab)
++	{
++		// Wave dims are birth-time anchors, not entire labelled wave intervals.
++		if (room.spawns[29] >= 0 ? crab.born <= room.spawns[29] : crab.wave <= 29) return false;
++		if (room.spawns[28] >= 0 && crab.born <= room.spawns[28] + 16) return false;
++		return true;
++	}
++
++	private static boolean dimmed(Room room, Crab crab)
++	{
++		return room.wave == 31 && !freshCleanup(room, crab);
++	}
++
+ 	private boolean finalPacketFinished(Room room, int tick)
+ 	{
+ 		return RULES.stream().filter(r -> r.wave >= 30).allMatch(r -> completed.contains(r.name)
+-			|| tick > room.spawns[r.wave] + r.last || room.crabs.stream().noneMatch(c -> r.matches(c) && !c.dying && !c.nulled));
++			|| tick > room.spawns[r.wave] + r.last || room.crabs.stream().noneMatch(c -> r.matches(c) && !c.dying && !c.nulled && !dimmed(room, c)));
+ 	}
+ 
+ 	boolean assignedBig(Crab c, Room room, int age)
+@@ -578,7 +668,7 @@
+ 				|| room.wave < 20 && rule.wave != 10 && rule.wave != 20) continue;
+ 			if (rule.wave <= room.wave)
+ 			{
+-				Crab crab = room.crabs.stream().filter(c -> rule.matches(c) && !c.dying && !c.nulled).findFirst().orElse(null);
++				Crab crab = room.crabs.stream().filter(c -> rule.matches(c) && !c.dying && !c.nulled && !dimmed(room, c)).findFirst().orElse(null);
+ 				if (crab == null || tick > crab.born + rule.last) continue;
+ 				// A missed west-30 pipe cannot reserve its melee flicker over the south chin.
+ 				if ("West big 30".equals(rule.name)
+--- upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java
++++ .state/simulations/training-v4-candidate-timestamp-dim29-and-28plus16/policy-source/org/localscape/nylocas/mage/MageStrategy.java
+@@ -187,9 +187,23 @@
+ 
+ 	static boolean eligible(Room room, Crab c, int tick)
+ 	{
+-		return !c.dying && !c.nulled && !c.claimed(tick) && !c.awaitingHit(tick) && tick - c.born < 49
+-			&& (room.wave - c.wave <= MAX_WAVE_AGE || requiredBig(c)) && !rangerOwned(c)
+-			&& !rangerPacket(c, tick) && (room.wave < 31 || c.wave > 29);
++		return !c.dying && !c.nulled && (!c.claimed(tick) || cleanupCooperation(room, c)) && !c.awaitingHit(tick) && tick - c.born < 49
++			&& (room.wave - c.wave <= MAX_WAVE_AGE || requiredBig(c))
++			&& (cleanupCooperation(room, c) || !rangerOwned(c) && !rangerPacket(c, tick))
++			&& !dimmed(room, c);
++	}
++
++	private static boolean freshCleanup(Room room, Crab crab)
++	{
++		// Wave dims are birth-time anchors, not entire labelled wave intervals.
++		if (room.spawns[29] >= 0 ? crab.born <= room.spawns[29] : crab.wave <= 29) return false;
++		if (room.spawns[28] >= 0 && crab.born <= room.spawns[28] + 16) return false;
++		return true;
++	}
++
++	private static boolean dimmed(Room room, Crab crab)
++	{
++		return room.wave == 31 && !freshCleanup(room, crab);
+ 	}
+ 
+ 	public static boolean matchesNext(Crab c, Style style, int tick)
+@@ -378,7 +392,8 @@
+ 		List<Candidate> idleRange = new ArrayList<>();
+ 		for (Crab c : room.crabs)
+ 		{
+-			if (!eligible(room, c, tick) || protectedTarget(room, c, tick) || guidanceDeferred(room, c, tick)) continue;
++			if (!eligible(room, c, tick) || !cleanupCooperation(room, c) && protectedTarget(room, c, tick)
++				|| guidanceDeferred(room, c, tick)) continue;
+ 			int age = tick - c.born;
+ 			for (Assignment a : ASSIGNMENTS)
+ 			{
+@@ -419,10 +434,12 @@
+ 				Decision fallback = new Decision(c, Weapon.PIPE, c.point, false, null, "Idle ranged split support");
+ 				add(idleRange, room, next, fallback, 500 - age * 100, tick, tick, tick);
+ 			}
+-			if (c.big && !finishBig(c, room, tick) || c.style == Style.RANGE && (c.big || !c.partnerNulled)) continue;
++			boolean cooperate = cleanupCooperation(room, c);
++			if (c.big && !finishBig(c, room, tick) && !cooperate
++				|| c.style == Style.RANGE && (c.big || !c.partnerNulled) && !cooperate) continue;
+ 			// Lane assignments own their opening offset and weapon. Generic cleanup
+ 			// must not bypass the rotation while that assignment is still pending.
+-			if (ASSIGNMENTS.stream().anyMatch(a -> a.matches(c) && !completed.contains(a.name) && age <= a.last)) continue;
++			if (!cooperate && ASSIGNMENTS.stream().anyMatch(a -> a.matches(c) && !completed.contains(a.name) && age <= a.last)) continue;
+ 			int score = (c.style == Style.MELEE ? 9000 : c.style == Style.MAGIC ? 6500 : 500) - age * 100;
+ 			if (c.big) score = 10000 - age * 70;
+ 			// Preserve the named parent's finish priority after its opening window.
+@@ -433,12 +450,41 @@
+ 			if (c.style == Style.MELEE && c.big) weapon = Weapon.SCYTHE;
+ 			if (!c.big && c.style == Style.MELEE && cluster(room, c, tick) >= 2) { weapon = Weapon.SCYTHE; score += 2200; }
+ 			if (!c.big) score += Math.max(0, 8 - c.hp) * 40;
+-			if (room.wave == 31 && c.wave >= 30 && c.lane == Lane.SPLIT && !c.big && c.style == Style.MAGIC && c.partnerNulled) score += 5000;
++			if (room.wave == 31 && freshCleanup(room, c) && c.lane == Lane.SPLIT && !c.big && c.style == Style.MAGIC && c.partnerNulled) score += 5000;
+ 			Decision d = new Decision(c, weapon, c.point, false, null, "Fresh " + c.style + (c.big ? " assigned big" : " small"));
+ 			add(candidates, room, next, d, score, tick, tick, c.born + 48);
+ 		}
++		// A surviving partner-owned melee parent can still be killed normally.
++		// Begin its approach only after all own candidates and packets are clear.
++		if (candidates.isEmpty() && next == null && room.wave == 31)
++		{
++			for (Crab c : room.crabs)
++			{
++				if (!c.big || c.hp <= 0 || c.style != Style.MELEE
++					|| !eligible(room, c, tick) || !matchesNext(c, Style.MELEE, tick)) continue;
++				Decision help = new Decision(c, Weapon.SCYTHE, c.point, false, null, "Idle fresh melee parent support");
++				add(candidates, room, null, help, 10000 - (tick - c.born) * 70, tick, tick, c.born + 48);
++			}
++		}
++		// With no own attack or approach pending, help a fresh ranged cleanup
++		// target using the normal loadout. Real queued-lethal hits and saved
++		// partner packets remain protected; old births keep the actual31 cutoff.
++		if (candidates.isEmpty() && next == null && room.wave == 31 && tick >= room.ready)
++		{
++			for (Crab c : room.crabs)
++			{
++				if (dimmed(room, c) || c.style != Style.RANGE || c.hp <= 0 || c.dying || c.nulled
++					|| c.claimed(tick) || c.awaitingHit(tick) || tick - c.born >= 49
++					|| rangerPacket(c, tick) || protectedTarget(room, c, tick) || !matchesNext(c, Style.RANGE, tick)) continue;
++				Decision help = new Decision(c, Weapon.PIPE, c.point, false, null, "Idle fresh ranged cleanup support");
++				add(candidates, room, null, help, 500 - (tick - c.born) * 100
++					+ Math.max(0, 8 - c.hp) * 40, tick, tick, c.born + 48);
++			}
++		}
+ 		if (candidates.isEmpty()) candidates.addAll(idleRange);
+-		Comparator<Candidate> priority = Comparator.comparingInt((Candidate c) -> deferred(c, tick) ? 0 : 1)
++		Comparator<Candidate> priority = Comparator.comparingInt((Candidate c) -> cleanupRescue(room, c.decision.target) ? 0
++			: west30MeleeTakeover(room, c.decision.target, tick) ? 1 : 2)
++			.thenComparingInt(c -> deferred(c, tick) ? 0 : 1)
+ 			.thenComparingInt(c -> c.at)
+ 			.thenComparingInt(c -> -c.score)
+ 			.thenComparingInt(c -> -c.decision.target.wave)
+@@ -454,6 +500,8 @@
+ 				&& (c.decision.rule == null) == (selected.decision.rule == null)
+ 				&& c.first == selected.first && deferred(c, tick) == deferred(selected, tick)
+ 				&& (c.decision.weapon.style != Style.RANGE || selected.decision.weapon.style == Style.RANGE)
++				&& (!cleanupRescue(room, selected.decision.target) || cleanupRescue(room, c.decision.target))
++				&& (!west30MeleeTakeover(room, selected.decision.target, tick) || west30MeleeTakeover(room, c.decision.target, tick))
+ 				// A tentative small approach chosen during the last projectile must
+ 				// yield to a known surviving 4/8 parent or required 24–26 recovery.
+ 				&& !(selected.decision.target.big
+@@ -553,7 +601,6 @@
+ 	{
+ 		if (room.rangerWest19PacketFeasible && c.wave == 19 && c.lane == Lane.WEST && c.big
+ 			&& tick - c.born <= 3 && !c.partnerNulled) return true;
+-		if (c.wave == 29 && c.lane == Lane.SOUTH && c.big && room.wave < 30) return true;
+ 		if (c.wave == 26 && c.lane == Lane.SOUTH && c.big && room.wave < 29) return true;
+ 		if (c.wave == 12 && !c.big && (c.lane == Lane.EAST && !completed.contains("12 east scythe") && tick - c.born <= 9
+ 			|| c.lane == Lane.WEST && c.slot == 'S' && !completed.contains("12 west Dinh") && tick - c.born <= (scythe12 < 0 ? 13 : scythe12 + 6 - c.born))) return true;
+@@ -631,6 +678,23 @@
+ 		return false;
+ 	}
+ 
++	private static boolean cleanupRescue(Room room, Crab target)
++	{
++		return room.wave >= 30 && (target.wave >= 30 || freshCleanup(room, target))
++			&& !dimmed(room, target) && target.partnerNulled && target.hp > 0 && !target.dying;
++	}
++
++	private static boolean finalLivingCleanup(Room room, Crab target)
++	{
++		return room.wave == 31 && target.hp > 0 && !target.dying
++			&& room.crabs.stream().noneMatch(other -> other.key != target.key && other.hp > 0 && !other.dying);
++	}
++
++	private static boolean cleanupCooperation(Room room, Crab target)
++	{
++		return cleanupRescue(room, target) || finalLivingCleanup(room, target);
++	}
++
+ 	private static boolean requiredBig(Crab c)
+ 	{
+ 		return c.big && (c.wave == 23 && c.lane == Lane.SOUTH || c.wave == 24 && (c.lane == Lane.SOUTH || c.lane == Lane.EAST || c.lane == Lane.WEST)
+@@ -642,9 +706,24 @@
+ 		return room.wave == 20 && c.big && c.wave == 20 && c.lane == Lane.SOUTH;
+ 	}
+ 
++	private static boolean west30MeleeTakeover(Room room, Crab target, int tick)
++	{
++		int age = tick - target.born;
++		if (room.wave != 31 || target.wave != 30 || target.lane != Lane.WEST || !target.big
++			|| target.style != Style.MELEE || age < 26 || age >= 49) return false;
++		// The partner's complete range window has ended. Finish a surviving
++		// parent before it expires and creates another late pair, while keeping
++		// serviceable own east30/31 work and all partner-NULL rescue ahead.
++		return room.crabs.stream().noneMatch(own -> own.lane == Lane.EAST
++			&& (own.wave == 30 && own.big || own.wave == 31 && !own.big && own.slot == 'N')
++			&& own.style == Style.MAGIC && own.hp > 0 && !own.dying && !own.nulled
++			&& !dimmed(room, own) && tick - own.born < 49 && own.pendingDamage < own.hp);
++	}
++
+ 	private boolean finishBig(Crab c, Room room, int tick)
+ 	{
+ 		int age = tick - c.born;
++		if (west30MeleeTakeover(room, c, tick)) return true;
+ 		// These parents remain assigned after their initial rotation window.
+ 		// Bad damage, travel or a blocked packet must not abandon an unopened big.
+ 		if (requiredBig(c) && (c.wave != 23 || age >= 7)) return true;

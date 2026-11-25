@@ -1,0 +1,466 @@
+{
+  "endpoint": "Nylocas boss spawn (waves and cleanup only)",
+  "training": {
+    "stall_naming": "last wave actually spawned; wave 28 retries admission to 29",
+    "completed_with_wave_counters": 500,
+    "stalls_by_last_spawned_wave": {
+      "1": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "2": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "3": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "4": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "5": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "6": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "7": {
+        "mean": 0.014,
+        "median": 0.0,
+        "min": 0,
+        "max": 2,
+        "p95": 0
+      },
+      "8": {
+        "mean": 0.13,
+        "median": 0.0,
+        "min": 0,
+        "max": 2,
+        "p95": 1
+      },
+      "9": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "10": {
+        "mean": 0.296,
+        "median": 0.0,
+        "min": 0,
+        "max": 4,
+        "p95": 1
+      },
+      "11": {
+        "mean": 0.444,
+        "median": 0.0,
+        "min": 0,
+        "max": 4,
+        "p95": 2
+      },
+      "12": {
+        "mean": 0.928,
+        "median": 1.0,
+        "min": 0,
+        "max": 3,
+        "p95": 2
+      },
+      "13": {
+        "mean": 0.07,
+        "median": 0.0,
+        "min": 0,
+        "max": 2,
+        "p95": 1
+      },
+      "14": {
+        "mean": 0.094,
+        "median": 0.0,
+        "min": 0,
+        "max": 2,
+        "p95": 1
+      },
+      "15": {
+        "mean": 0.296,
+        "median": 0.0,
+        "min": 0,
+        "max": 3,
+        "p95": 1
+      },
+      "16": {
+        "mean": 0.658,
+        "median": 0.0,
+        "min": 0,
+        "max": 4,
+        "p95": 2
+      },
+      "17": {
+        "mean": 0.122,
+        "median": 0.0,
+        "min": 0,
+        "max": 2,
+        "p95": 1
+      },
+      "18": {
+        "mean": 0.014,
+        "median": 0.0,
+        "min": 0,
+        "max": 1,
+        "p95": 0
+      },
+      "19": {
+        "mean": 0.546,
+        "median": 0.0,
+        "min": 0,
+        "max": 7,
+        "p95": 4
+      },
+      "20": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "21": {
+        "mean": 0.158,
+        "median": 0.0,
+        "min": 0,
+        "max": 2,
+        "p95": 1
+      },
+      "22": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "23": {
+        "mean": 0.014,
+        "median": 0.0,
+        "min": 0,
+        "max": 3,
+        "p95": 0
+      },
+      "24": {
+        "mean": 0.062,
+        "median": 0.0,
+        "min": 0,
+        "max": 3,
+        "p95": 0
+      },
+      "25": {
+        "mean": 0.04,
+        "median": 0.0,
+        "min": 0,
+        "max": 2,
+        "p95": 0
+      },
+      "26": {
+        "mean": 0.052,
+        "median": 0.0,
+        "min": 0,
+        "max": 2,
+        "p95": 0
+      },
+      "27": {
+        "mean": 0.054,
+        "median": 0.0,
+        "min": 0,
+        "max": 2,
+        "p95": 0
+      },
+      "28": {
+        "mean": 2.14,
+        "median": 2.0,
+        "min": 0,
+        "max": 7,
+        "p95": 5
+      },
+      "29": {
+        "mean": 2.062,
+        "median": 2.0,
+        "min": 0,
+        "max": 6,
+        "p95": 4
+      },
+      "30": {
+        "mean": 1.412,
+        "median": 1.0,
+        "min": 0,
+        "max": 7,
+        "p95": 5
+      }
+    },
+    "completed_pre_cap_at_most_one": 44,
+    "completed_without_wave_21_to_27_stalls": 355,
+    "completed_with_two_or_three_wave_28_stalls": 270,
+    "completed_boss_3m07_to_3m12": 42,
+    "completed_boss_over_3m14": 458,
+    "consistency_denominator_all_trials": 500,
+    "boss_mean_target_ticks": 315
+  },
+  "trials": 500,
+  "completed": 500,
+  "deaths": 0,
+  "timeouts": 0,
+  "completion_rate": 1.0,
+  "terminal_resources_all_trials": {
+    "ranger_final_hp": {
+      "mean": 79.036,
+      "median": 79.0,
+      "min": 15,
+      "max": 99,
+      "p95": 95
+    },
+    "mage_final_hp": {
+      "mean": 83.892,
+      "median": 84.0,
+      "min": 33,
+      "max": 99,
+      "p95": 99
+    },
+    "ranger_final_energy": {
+      "mean": 9997.036,
+      "median": 10000.0,
+      "min": 9580,
+      "max": 10000,
+      "p95": 10000
+    },
+    "mage_final_energy": {
+      "mean": 4120.834,
+      "median": 4120.5,
+      "min": 779,
+      "max": 6883,
+      "p95": 5980
+    },
+    "ranger_food_remaining": {
+      "mean": 4.022,
+      "median": 4.0,
+      "min": 0,
+      "max": 5,
+      "p95": 5
+    },
+    "mage_food_remaining": {
+      "mean": 4.234,
+      "median": 5.0,
+      "min": 0,
+      "max": 5,
+      "p95": 5
+    },
+    "ranger_final_magic": {
+      "mean": 112,
+      "median": 112.0,
+      "min": 112,
+      "max": 112,
+      "p95": 112
+    },
+    "mage_final_magic": {
+      "mean": 112,
+      "median": 112.0,
+      "min": 112,
+      "max": 112,
+      "p95": 112
+    }
+  },
+  "thralls_all_trials": {
+    "ranger": {
+      "impacts": {
+        "mean": 10.642,
+        "median": 10.0,
+        "min": 2,
+        "max": 35,
+        "p95": 25
+      },
+      "applied_damage": {
+        "mean": 4.2,
+        "median": 4.0,
+        "min": 0,
+        "max": 17,
+        "p95": 10
+      }
+    },
+    "mage": {
+      "impacts": {
+        "mean": 19.048,
+        "median": 20.0,
+        "min": 1,
+        "max": 32,
+        "p95": 26
+      },
+      "applied_damage": {
+        "mean": 9.096,
+        "median": 9.0,
+        "min": 0,
+        "max": 23,
+        "p95": 17
+      }
+    }
+  },
+  "completion_ticks": {
+    "mean": 334.416,
+    "median": 332.0,
+    "min": 316,
+    "max": 376,
+    "p95": 352
+  },
+  "completion_game_seconds": {
+    "mean": 200.6496,
+    "median": 199.2,
+    "min": 189.6,
+    "max": 225.6,
+    "p95": 211.2
+  },
+  "trial_wall_seconds": 112.588771871,
+  "trials_per_second": 4.440940172727714,
+  "completed_ready_idle": {
+    "mage": {
+      "mean": 35.098,
+      "median": 34.0,
+      "min": 14,
+      "max": 59,
+      "p95": 49,
+      "under_20": 1,
+      "trials": 500,
+      "under_20_rate": 0.002
+    },
+    "ranger": {
+      "mean": 27.964,
+      "median": 27.0,
+      "min": 9,
+      "max": 56,
+      "p95": 42,
+      "under_20": 60,
+      "trials": 500,
+      "under_20_rate": 0.12
+    }
+  },
+  "metrics_all_trials": {
+    "ranger_attacks": {
+      "mean": 111.828,
+      "median": 111.0,
+      "min": 100,
+      "max": 125,
+      "p95": 120
+    },
+    "mage_attacks": {
+      "mean": 75.272,
+      "median": 75.0,
+      "min": 67,
+      "max": 84,
+      "p95": 80
+    },
+    "ranger_idle_ticks": {
+      "mean": 200.23,
+      "median": 199.0,
+      "min": 183,
+      "max": 235,
+      "p95": 215
+    },
+    "mage_idle_ticks": {
+      "mean": 235.786,
+      "median": 235.0,
+      "min": 219,
+      "max": 274,
+      "p95": 251
+    },
+    "ranger_ready_idle_ticks": {
+      "mean": 27.964,
+      "median": 27.0,
+      "min": 9,
+      "max": 56,
+      "p95": 42
+    },
+    "mage_ready_idle_ticks": {
+      "mean": 35.098,
+      "median": 34.0,
+      "min": 14,
+      "max": 59,
+      "p95": 49
+    },
+    "same_tick_double_ups": {
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "p95": 0
+    },
+    "shared_targets": {
+      "mean": 4.46,
+      "median": 4.0,
+      "min": 0,
+      "max": 12,
+      "p95": 8
+    },
+    "positive_damage_rolls": {
+      "mean": 241.96,
+      "median": 242.0,
+      "min": 221,
+      "max": 263,
+      "p95": 253
+    },
+    "pre_cap_stalls": {
+      "mean": 3.612,
+      "median": 3.0,
+      "min": 0,
+      "max": 12,
+      "p95": 8
+    },
+    "post_cap_stalls": {
+      "mean": 5.994,
+      "median": 6.0,
+      "min": 3,
+      "max": 11,
+      "p95": 9
+    },
+    "pre_29_stalls": {
+      "mean": 3.992,
+      "median": 4.0,
+      "min": 0,
+      "max": 12,
+      "p95": 8
+    },
+    "wave_29_stalls": {
+      "mean": 2.14,
+      "median": 2.0,
+      "min": 0,
+      "max": 7,
+      "p95": 5
+    },
+    "overlapping_primary_flights": {
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "p95": 0
+    }
+  },
+  "canonical_runs": [
+    "training-v2-flight-mage-19-age3-100",
+    "training-v2-flight-mage-19-age3-validation-200",
+    "training-v2-flight-age3-fresh-200"
+  ]
+}

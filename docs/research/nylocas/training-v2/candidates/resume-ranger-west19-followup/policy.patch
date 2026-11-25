@@ -1,0 +1,91 @@
+--- a/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ b/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -49,6 +49,7 @@
+ 
+ 	Decision decide(Room room, int tick, Reservation reservation)
+ 	{
++		Crab west19Followup = west19Followup(room, tick, reservation);
+ 		int[] hp = room.crabs.stream().mapToInt(c -> c.hp).toArray();
+ 		List<Plan> beam = new ArrayList<>();
+ 		beam.add(new Plan(hp));
+@@ -62,6 +63,10 @@
+ 				if (!extensions.isEmpty())
+ 				{
+ 					Shot previous = plan.shots.isEmpty() ? null : plan.shots.get(plan.shots.size() - 1);
++					if (previous == null && west19Followup != null && extensions.stream().anyMatch(p ->
++						last(p).target == west19Followup && last(p).weapon == Weapon.EYE && p.shots.get(0).tick == tick))
++						extensions.removeIf(p -> last(p).target != west19Followup || last(p).weapon != Weapon.EYE
++							|| p.shots.get(0).tick != tick);
+ 					prioritize(extensions, room, previous == null ? tick : previous.tick + 1,
+ 						previous == null ? room.ready : previous.tick + previous.decision.weapon.cooldown);
+ 					if (previous == null && extensions.stream().anyMatch(p -> strategy.committed(last(p), tick)))
+@@ -93,6 +98,57 @@
+ 		decision.pathToTarget = first.tick > tick && queue;
+ 		if (decision.target == null) decision.approach = action.target;
+ 		return decision;
++	}
++
++	Crab west19Followup(Room room, int tick, Reservation reservation)
++	{
++		if (room.wave != 19 || tick < room.ready) return null;
++		for (Crab crab : room.crabs)
++		{
++			int age = tick - crab.born;
++			if (!crab.big || crab.wave != 19 || crab.lane != Lane.WEST || age <= 3 || age > 10
++				|| !strategy.opened(crab) || crab.hp <= 0 || crab.dying || crab.nulled
++				|| crab.claimedUntil > tick || crab.awaitingHit(tick) || room.obstructed.contains(crab.key)
++				|| !RangerFlickers.matchesNext(crab, Style.MAGIC, tick)) continue;
++			Tile target = position(crab, tick, tick + 1);
++			Tile destination = attackTile(room.player, target, true, Weapon.EYE.range);
++			if (room.player.distanceTo(destination) > 2 || distance(destination, target, true) > Weapon.EYE.range) continue;
++			if (reservation != null && tick + Math.max(Weapon.EYE.cooldown,
++				(destination.distanceTo(reservation.rule.stage) + 1) / 2) > reservation.due) continue;
++			if (wave18ReturnFits(room, tick, destination)) return crab;
++		}
++		return null;
++	}
++
++	private boolean wave18ReturnFits(Room room, int tick, Tile from)
++	{
++		List<Crab> remaining = room.crabs.stream().filter(c -> c.big && c.wave == 18 && !c.dying && c.hp > 0)
++			.sorted(Comparator.comparingInt(c -> c.lane.ordinal())).collect(Collectors.toList());
++		int at = tick + Weapon.EYE.cooldown;
++		int moveFrom = tick + 1;
++		for (Crab crab : remaining)
++		{
++			// Reserve observed remaining HP: an airborne hit is never credited as a future kill.
++			if (crab.nulled || crab.claimedUntil > tick || crab.awaitingHit(tick)
++				|| !RangerStrategy.wave18Available(crab, room, tick) || room.obstructed.contains(crab.key)) return false;
++			int attacks = Math.max(1, (crab.hp + 7) / 8);
++			for (int shot = 0; shot < attacks; shot++)
++			{
++				Tile target = position(crab, tick, at + 1);
++				Tile destination = attackTile(from, target, true, Weapon.PIPE.range);
++				int travel = (from.distanceTo(destination) + 1) / 2;
++				at = Math.max(at, moveFrom + Math.max(0, travel - 1));
++				// Same 8-work estimate as the beam, with native pipe impact2 and a following
++				// observation before retrying. Count the final impact, not its unused cooldown.
++				if (at + 2 > crab.born + 26 || predictedStyle(crab, tick, at) != Style.RANGE
++					|| predictedStyle(crab, tick, at + 1) != Style.RANGE
++					|| distance(destination, position(crab, tick, at + 1), true) > Weapon.PIPE.range) return false;
++				from = destination;
++				moveFrom = at + 1;
++				at += 3;
++			}
++		}
++		return true;
+ 	}
+ 
+ 	private static void keepEarliest(List<Plan> choices)
+--- a/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -289,7 +289,8 @@
+ 	public int west19PacketDue(Room room, int tick)
+ 	{
+ 		Reservation next = reservation(room, tick);
+-		return next != null && "West magic big 19".equals(next.rule.name) ? next.due : -1;
++		if (next != null && "West magic big 19".equals(next.rule.name)) return next.due;
++		return preCap.west19Followup(room, tick, next) != null ? tick : -1;
+ 	}
+ 
+ 	boolean committed(Decision decision, int tick) { return intent.matches(decision.target.key, decision.weapon, tick); }

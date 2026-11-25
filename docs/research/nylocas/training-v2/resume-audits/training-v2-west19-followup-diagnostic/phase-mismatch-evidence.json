@@ -1,0 +1,169 @@
+{
+  "status": "Diagnosed; no policy change",
+  "cause": "Mixed-phase controller trace: HP/positions/style copied before planning, own/partner leases mutated during native cycle and printed after releaseAppliedFlights. Audits treated postcycle lease0 as predecision eligibility.",
+  "nativeRun": ".state/simulations/training-v2-flight-west19-followup-100",
+  "falseWindows": 17,
+  "allRejectedByPredecisionPending18Flight": true,
+  "witnesses": [
+    {
+      "seed": 143,
+      "decisionTick": 158,
+      "targetKey": 87,
+      "beforeDecisionOwnUntil": 188,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 16,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 153,
+      "decisionTick": 162,
+      "targetKey": 89,
+      "beforeDecisionOwnUntil": 192,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 15,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 161,
+      "decisionTick": 162,
+      "targetKey": 89,
+      "beforeDecisionOwnUntil": 192,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 16,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 162,
+      "decisionTick": 154,
+      "targetKey": 87,
+      "beforeDecisionOwnUntil": 184,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 16,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 164,
+      "decisionTick": 166,
+      "targetKey": 89,
+      "beforeDecisionOwnUntil": 196,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 14,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 166,
+      "decisionTick": 162,
+      "targetKey": 89,
+      "beforeDecisionOwnUntil": 192,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 15,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 172,
+      "decisionTick": 170,
+      "targetKey": 89,
+      "beforeDecisionOwnUntil": 200,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 16,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 174,
+      "decisionTick": 158,
+      "targetKey": 87,
+      "beforeDecisionOwnUntil": 188,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 16,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 189,
+      "decisionTick": 162,
+      "targetKey": 89,
+      "beforeDecisionOwnUntil": 192,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 16,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 202,
+      "decisionTick": 162,
+      "targetKey": 89,
+      "beforeDecisionOwnUntil": 192,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 15,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 206,
+      "decisionTick": 158,
+      "targetKey": 89,
+      "beforeDecisionOwnUntil": 188,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 16,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 208,
+      "decisionTick": 162,
+      "targetKey": 89,
+      "beforeDecisionOwnUntil": 192,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 14,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 209,
+      "decisionTick": 162,
+      "targetKey": 89,
+      "beforeDecisionOwnUntil": 192,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 16,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 211,
+      "decisionTick": 154,
+      "targetKey": 85,
+      "beforeDecisionOwnUntil": 184,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 16,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 212,
+      "decisionTick": 166,
+      "targetKey": 89,
+      "beforeDecisionOwnUntil": 196,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 16,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 222,
+      "decisionTick": 162,
+      "targetKey": 89,
+      "beforeDecisionOwnUntil": 192,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 16,
+      "rejectedAsPendingBeforeDecision": true
+    },
+    {
+      "seed": 229,
+      "decisionTick": 158,
+      "targetKey": 89,
+      "beforeDecisionOwnUntil": 188,
+      "printedAfterCycleOwnUntil": 0,
+      "hpCopiedBeforeCycle": 16,
+      "rejectedAsPendingBeforeDecision": true
+    }
+  ],
+  "phaseCorrectRoutedWindows": {
+    "coupled100": 0,
+    "guidance100": 0,
+    "guidance200": 0
+  },
+  "tightReproducer": "West19PhaseReplayTest.java",
+  "verification": "JUnit1/1 passes using actual coupled Java policy; only changing predecision east18 lease188 to postcycle0 flips due-1 to158 in seed143."
+}

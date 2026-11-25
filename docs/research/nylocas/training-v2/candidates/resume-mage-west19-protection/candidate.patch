@@ -1,0 +1,13 @@
+--- upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java
++++ upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java
+@@ -500,8 +500,8 @@
+ 
+ 	private boolean protectedTarget(Room room, Crab c, int tick)
+ 	{
+-		if (room.rangerWest19PacketFeasible && c.wave == 19 && c.lane == Lane.WEST && c.big
+-			&& tick - c.born <= 3 && !c.partnerNulled) return true;
++		if (room.wave == 19 && room.rangerWest19PacketFeasible && c.wave == 19 && c.lane == Lane.WEST && c.big
++			&& tick - c.born <= 10 && !c.partnerNulled) return true;
+ 		if (c.wave == 29 && c.lane == Lane.SOUTH && c.big && room.wave < 30) return true;
+ 		if (c.wave == 26 && c.lane == Lane.SOUTH && c.big && room.wave < 29) return true;
+ 		if (c.wave == 12 && !c.big && (c.lane == Lane.EAST && !completed.contains("12 east scythe") && tick - c.born <= 9

@@ -1,0 +1,1257 @@
+{
+  "run": ".state/simulations/training-v2-flight-ranger-guidance-100",
+  "scope": "SOFT known-lastPIPE projection; real own/partner leases unchanged and full observed18HP reserved. Strict future20 reservation is separately assessed, not promised by variant.",
+  "softFrames": 13,
+  "softRooms": 13,
+  "strictJointFrames": 0,
+  "witnesses": [
+    {
+      "seed": 142,
+      "tick": 166,
+      "west19": {
+        "key": 90,
+        "w": 19,
+        "born": 156,
+        "age": 10,
+        "style": "MAGIC",
+        "big": true,
+        "hp": 15,
+        "x": 3291,
+        "y": 4248,
+        "claim": 0,
+        "own": 0,
+        "dead": false,
+        "lane": "west",
+        "postOwn": 0,
+        "postClaim": 199
+      },
+      "westDistanceAfterOneNativeStep": 0,
+      "big18": [
+        {
+          "key": 89,
+          "w": 18,
+          "born": 148,
+          "age": 18,
+          "style": "RANGE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 196,
+          "dead": false,
+          "lane": "east",
+          "postOwn": 0,
+          "postClaim": 0
+        }
+      ],
+      "rawBudget": 6,
+      "remaining": 8,
+      "fitsRawBudget": false,
+      "current": [
+        "EYE",
+        "90",
+        "null",
+        "Pre-cap plan: EYE #96 @167 \u2192 EYE #96 @170"
+      ],
+      "currentAttacked": false,
+      "position": [
+        3291,
+        4248
+      ],
+      "nulled18": [],
+      "claimed": false,
+      "withinEyeRange": true,
+      "mageShootsWestNow": true,
+      "lastConfirmedPrimary": [
+        164,
+        89,
+        "PIPE"
+      ],
+      "knownPending": [
+        {
+          "key": 89,
+          "launch": 164,
+          "normalImpact": 166,
+          "actualLease": 196
+        }
+      ],
+      "prospectiveRoute": [
+        {
+          "key": 89,
+          "request": 169,
+          "impact": 171,
+          "position": [
+            3291,
+            4248
+          ],
+          "fitsFutureWest20Bow": true
+        },
+        {
+          "key": 89,
+          "request": 172,
+          "impact": 174,
+          "position": [
+            3291,
+            4248
+          ],
+          "fitsFutureWest20Bow": false
+        }
+      ],
+      "futureWest20Bow": 173,
+      "strictJointBudgetFits": false
+    },
+    {
+      "seed": 143,
+      "tick": 158,
+      "west19": {
+        "key": 90,
+        "w": 19,
+        "born": 148,
+        "age": 10,
+        "style": "MAGIC",
+        "big": true,
+        "hp": 8,
+        "x": 3291,
+        "y": 4249,
+        "claim": 0,
+        "own": 0,
+        "dead": false,
+        "lane": "west",
+        "postOwn": 0,
+        "postClaim": 191
+      },
+      "westDistanceAfterOneNativeStep": 0,
+      "big18": [
+        {
+          "key": 87,
+          "w": 18,
+          "born": 140,
+          "age": 18,
+          "style": "RANGE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 188,
+          "dead": false,
+          "lane": "east",
+          "postOwn": 0,
+          "postClaim": 0
+        }
+      ],
+      "rawBudget": 6,
+      "remaining": 8,
+      "fitsRawBudget": false,
+      "current": [
+        "PIPE",
+        "93",
+        "null",
+        "Pre-cap plan: PIPE #99 @158 \u2192 EYE #100 @160"
+      ],
+      "currentAttacked": true,
+      "position": [
+        3293,
+        4249
+      ],
+      "nulled18": [],
+      "claimed": false,
+      "withinEyeRange": true,
+      "mageShootsWestNow": true,
+      "lastConfirmedPrimary": [
+        156,
+        87,
+        "PIPE"
+      ],
+      "knownPending": [
+        {
+          "key": 87,
+          "launch": 156,
+          "normalImpact": 158,
+          "actualLease": 188
+        }
+      ],
+      "prospectiveRoute": [
+        {
+          "key": 87,
+          "request": 161,
+          "impact": 163,
+          "position": [
+            3293,
+            4249
+          ],
+          "fitsFutureWest20Bow": true
+        },
+        {
+          "key": 87,
+          "request": 164,
+          "impact": 166,
+          "position": [
+            3293,
+            4249
+          ],
+          "fitsFutureWest20Bow": false
+        }
+      ],
+      "futureWest20Bow": 165,
+      "strictJointBudgetFits": false
+    },
+    {
+      "seed": 153,
+      "tick": 162,
+      "west19": {
+        "key": 90,
+        "w": 19,
+        "born": 152,
+        "age": 10,
+        "style": "MAGIC",
+        "big": true,
+        "hp": 15,
+        "x": 3291,
+        "y": 4249,
+        "claim": 0,
+        "own": 0,
+        "dead": false,
+        "lane": "west",
+        "postOwn": 0,
+        "postClaim": 195
+      },
+      "westDistanceAfterOneNativeStep": 0,
+      "big18": [
+        {
+          "key": 89,
+          "w": 18,
+          "born": 144,
+          "age": 18,
+          "style": "RANGE",
+          "big": true,
+          "hp": 15,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 192,
+          "dead": false,
+          "lane": "east",
+          "postOwn": 0,
+          "postClaim": 0
+        }
+      ],
+      "rawBudget": 6,
+      "remaining": 8,
+      "fitsRawBudget": false,
+      "current": [
+        "EYE",
+        "94",
+        "null",
+        "Pre-cap plan: EYE #100 @162 \u2192 CLAWS #99 @165"
+      ],
+      "currentAttacked": true,
+      "position": [
+        3290,
+        4249
+      ],
+      "nulled18": [],
+      "claimed": false,
+      "withinEyeRange": true,
+      "mageShootsWestNow": true,
+      "lastConfirmedPrimary": [
+        160,
+        89,
+        "PIPE"
+      ],
+      "knownPending": [
+        {
+          "key": 89,
+          "launch": 160,
+          "normalImpact": 162,
+          "actualLease": 192
+        }
+      ],
+      "prospectiveRoute": [
+        {
+          "key": 89,
+          "request": 165,
+          "impact": 167,
+          "position": [
+            3290,
+            4249
+          ],
+          "fitsFutureWest20Bow": true
+        },
+        {
+          "key": 89,
+          "request": 168,
+          "impact": 170,
+          "position": [
+            3290,
+            4249
+          ],
+          "fitsFutureWest20Bow": false
+        }
+      ],
+      "futureWest20Bow": 169,
+      "strictJointBudgetFits": false
+    },
+    {
+      "seed": 155,
+      "tick": 166,
+      "west19": {
+        "key": 90,
+        "w": 19,
+        "born": 156,
+        "age": 10,
+        "style": "MAGIC",
+        "big": true,
+        "hp": 11,
+        "x": 3291,
+        "y": 4249,
+        "claim": 0,
+        "own": 0,
+        "dead": false,
+        "lane": "west",
+        "postOwn": 0,
+        "postClaim": 199
+      },
+      "westDistanceAfterOneNativeStep": 0,
+      "big18": [
+        {
+          "key": 89,
+          "w": 18,
+          "born": 148,
+          "age": 18,
+          "style": "RANGE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 196,
+          "dead": false,
+          "lane": "east",
+          "postOwn": 0,
+          "postClaim": 0
+        }
+      ],
+      "rawBudget": 6,
+      "remaining": 8,
+      "fitsRawBudget": false,
+      "current": [
+        "EYE",
+        "77",
+        "null",
+        "Pre-cap plan: EYE #83 @166 \u2192 PIPE #99 @169"
+      ],
+      "currentAttacked": true,
+      "position": [
+        3293,
+        4249
+      ],
+      "nulled18": [],
+      "claimed": false,
+      "withinEyeRange": true,
+      "mageShootsWestNow": true,
+      "lastConfirmedPrimary": [
+        164,
+        89,
+        "PIPE"
+      ],
+      "knownPending": [
+        {
+          "key": 89,
+          "launch": 164,
+          "normalImpact": 166,
+          "actualLease": 196
+        }
+      ],
+      "prospectiveRoute": [
+        {
+          "key": 89,
+          "request": 169,
+          "impact": 171,
+          "position": [
+            3293,
+            4249
+          ],
+          "fitsFutureWest20Bow": true
+        },
+        {
+          "key": 89,
+          "request": 172,
+          "impact": 174,
+          "position": [
+            3293,
+            4249
+          ],
+          "fitsFutureWest20Bow": false
+        }
+      ],
+      "futureWest20Bow": 173,
+      "strictJointBudgetFits": false
+    },
+    {
+      "seed": 162,
+      "tick": 154,
+      "west19": {
+        "key": 90,
+        "w": 19,
+        "born": 144,
+        "age": 10,
+        "style": "MAGIC",
+        "big": true,
+        "hp": 6,
+        "x": 3291,
+        "y": 4249,
+        "claim": 0,
+        "own": 0,
+        "dead": false,
+        "lane": "west",
+        "postOwn": 0,
+        "postClaim": 187
+      },
+      "westDistanceAfterOneNativeStep": 0,
+      "big18": [
+        {
+          "key": 87,
+          "w": 18,
+          "born": 136,
+          "age": 18,
+          "style": "RANGE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 184,
+          "dead": false,
+          "lane": "east",
+          "postOwn": 0,
+          "postClaim": 0
+        }
+      ],
+      "rawBudget": 6,
+      "remaining": 8,
+      "fitsRawBudget": false,
+      "current": [
+        "PIPE",
+        "93",
+        "null",
+        "Pre-cap plan: PIPE #99 @154 \u2192 EYE #100 @156"
+      ],
+      "currentAttacked": true,
+      "position": [
+        3292,
+        4249
+      ],
+      "nulled18": [],
+      "claimed": false,
+      "withinEyeRange": true,
+      "mageShootsWestNow": true,
+      "lastConfirmedPrimary": [
+        152,
+        87,
+        "PIPE"
+      ],
+      "knownPending": [
+        {
+          "key": 87,
+          "launch": 152,
+          "normalImpact": 154,
+          "actualLease": 184
+        }
+      ],
+      "prospectiveRoute": [
+        {
+          "key": 87,
+          "request": 157,
+          "impact": 159,
+          "position": [
+            3292,
+            4249
+          ],
+          "fitsFutureWest20Bow": true
+        },
+        {
+          "key": 87,
+          "request": 160,
+          "impact": 162,
+          "position": [
+            3292,
+            4249
+          ],
+          "fitsFutureWest20Bow": false
+        }
+      ],
+      "futureWest20Bow": 161,
+      "strictJointBudgetFits": false
+    },
+    {
+      "seed": 166,
+      "tick": 162,
+      "west19": {
+        "key": 90,
+        "w": 19,
+        "born": 152,
+        "age": 10,
+        "style": "MAGIC",
+        "big": true,
+        "hp": 12,
+        "x": 3291,
+        "y": 4249,
+        "claim": 0,
+        "own": 0,
+        "dead": false,
+        "lane": "west",
+        "postOwn": 0,
+        "postClaim": 195
+      },
+      "westDistanceAfterOneNativeStep": 0,
+      "big18": [
+        {
+          "key": 89,
+          "w": 18,
+          "born": 144,
+          "age": 18,
+          "style": "RANGE",
+          "big": true,
+          "hp": 15,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 192,
+          "dead": false,
+          "lane": "east",
+          "postOwn": 0,
+          "postClaim": 0
+        }
+      ],
+      "rawBudget": 6,
+      "remaining": 8,
+      "fitsRawBudget": false,
+      "current": [
+        "EYE",
+        "94",
+        "null",
+        "Pre-cap plan: EYE #100 @162 \u2192 CLAWS #99 @165"
+      ],
+      "currentAttacked": true,
+      "position": [
+        3291,
+        4249
+      ],
+      "nulled18": [],
+      "claimed": false,
+      "withinEyeRange": true,
+      "mageShootsWestNow": true,
+      "lastConfirmedPrimary": [
+        160,
+        89,
+        "PIPE"
+      ],
+      "knownPending": [
+        {
+          "key": 89,
+          "launch": 160,
+          "normalImpact": 162,
+          "actualLease": 192
+        }
+      ],
+      "prospectiveRoute": [
+        {
+          "key": 89,
+          "request": 165,
+          "impact": 167,
+          "position": [
+            3291,
+            4249
+          ],
+          "fitsFutureWest20Bow": true
+        },
+        {
+          "key": 89,
+          "request": 168,
+          "impact": 170,
+          "position": [
+            3291,
+            4249
+          ],
+          "fitsFutureWest20Bow": false
+        }
+      ],
+      "futureWest20Bow": 169,
+      "strictJointBudgetFits": false
+    },
+    {
+      "seed": 172,
+      "tick": 170,
+      "west19": {
+        "key": 90,
+        "w": 19,
+        "born": 160,
+        "age": 10,
+        "style": "MAGIC",
+        "big": true,
+        "hp": 14,
+        "x": 3291,
+        "y": 4249,
+        "claim": 0,
+        "own": 0,
+        "dead": false,
+        "lane": "west",
+        "postOwn": 0,
+        "postClaim": 203
+      },
+      "westDistanceAfterOneNativeStep": 0,
+      "big18": [
+        {
+          "key": 89,
+          "w": 18,
+          "born": 152,
+          "age": 18,
+          "style": "RANGE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 200,
+          "dead": false,
+          "lane": "east",
+          "postOwn": 0,
+          "postClaim": 0
+        }
+      ],
+      "rawBudget": 6,
+      "remaining": 8,
+      "fitsRawBudget": false,
+      "current": [
+        "PIPE",
+        "93",
+        "null",
+        "Pre-cap plan: PIPE #99 @170 \u2192 PIPE #100 @172 \u2192 EYE #96 @174"
+      ],
+      "currentAttacked": true,
+      "position": [
+        3290,
+        4249
+      ],
+      "nulled18": [],
+      "claimed": false,
+      "withinEyeRange": true,
+      "mageShootsWestNow": true,
+      "lastConfirmedPrimary": [
+        168,
+        89,
+        "PIPE"
+      ],
+      "knownPending": [
+        {
+          "key": 89,
+          "launch": 168,
+          "normalImpact": 170,
+          "actualLease": 200
+        }
+      ],
+      "prospectiveRoute": [
+        {
+          "key": 89,
+          "request": 173,
+          "impact": 175,
+          "position": [
+            3290,
+            4249
+          ],
+          "fitsFutureWest20Bow": true
+        },
+        {
+          "key": 89,
+          "request": 176,
+          "impact": 178,
+          "position": [
+            3290,
+            4249
+          ],
+          "fitsFutureWest20Bow": false
+        }
+      ],
+      "futureWest20Bow": 177,
+      "strictJointBudgetFits": false
+    },
+    {
+      "seed": 173,
+      "tick": 178,
+      "west19": {
+        "key": 90,
+        "w": 19,
+        "born": 168,
+        "age": 10,
+        "style": "MAGIC",
+        "big": true,
+        "hp": 1,
+        "x": 3291,
+        "y": 4249,
+        "claim": 0,
+        "own": 0,
+        "dead": false,
+        "lane": "west",
+        "postOwn": 0,
+        "postClaim": 211
+      },
+      "westDistanceAfterOneNativeStep": 0,
+      "big18": [
+        {
+          "key": 89,
+          "w": 18,
+          "born": 160,
+          "age": 18,
+          "style": "RANGE",
+          "big": true,
+          "hp": 13,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 208,
+          "dead": false,
+          "lane": "east",
+          "postOwn": 0,
+          "postClaim": 0
+        }
+      ],
+      "rawBudget": 6,
+      "remaining": 8,
+      "fitsRawBudget": false,
+      "current": [
+        "CLAWS",
+        "94",
+        "null",
+        "Pre-cap plan: CLAWS #100 @178 \u2192 EYE #96 @182"
+      ],
+      "currentAttacked": true,
+      "position": [
+        3290,
+        4247
+      ],
+      "nulled18": [],
+      "claimed": false,
+      "withinEyeRange": true,
+      "mageShootsWestNow": true,
+      "lastConfirmedPrimary": [
+        176,
+        89,
+        "PIPE"
+      ],
+      "knownPending": [
+        {
+          "key": 89,
+          "launch": 176,
+          "normalImpact": 178,
+          "actualLease": 208
+        }
+      ],
+      "prospectiveRoute": [
+        {
+          "key": 89,
+          "request": 181,
+          "impact": 183,
+          "position": [
+            3290,
+            4248
+          ],
+          "fitsFutureWest20Bow": true
+        },
+        {
+          "key": 89,
+          "request": 184,
+          "impact": 186,
+          "position": [
+            3290,
+            4248
+          ],
+          "fitsFutureWest20Bow": false
+        }
+      ],
+      "futureWest20Bow": 185,
+      "strictJointBudgetFits": false
+    },
+    {
+      "seed": 174,
+      "tick": 158,
+      "west19": {
+        "key": 90,
+        "w": 19,
+        "born": 148,
+        "age": 10,
+        "style": "MAGIC",
+        "big": true,
+        "hp": 9,
+        "x": 3291,
+        "y": 4249,
+        "claim": 0,
+        "own": 0,
+        "dead": false,
+        "lane": "west",
+        "postOwn": 0,
+        "postClaim": 191
+      },
+      "westDistanceAfterOneNativeStep": 0,
+      "big18": [
+        {
+          "key": 87,
+          "w": 18,
+          "born": 140,
+          "age": 18,
+          "style": "RANGE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 188,
+          "dead": false,
+          "lane": "east",
+          "postOwn": 0,
+          "postClaim": 0
+        }
+      ],
+      "rawBudget": 6,
+      "remaining": 8,
+      "fitsRawBudget": false,
+      "current": [
+        "PIPE",
+        "93",
+        "null",
+        "Pre-cap plan: PIPE #99 @158 \u2192 PIPE #100 @160 \u2192 EYE #96 @162"
+      ],
+      "currentAttacked": true,
+      "position": [
+        3291,
+        4248
+      ],
+      "nulled18": [],
+      "claimed": false,
+      "withinEyeRange": true,
+      "mageShootsWestNow": true,
+      "lastConfirmedPrimary": [
+        156,
+        87,
+        "PIPE"
+      ],
+      "knownPending": [
+        {
+          "key": 87,
+          "launch": 156,
+          "normalImpact": 158,
+          "actualLease": 188
+        }
+      ],
+      "prospectiveRoute": [
+        {
+          "key": 87,
+          "request": 161,
+          "impact": 163,
+          "position": [
+            3291,
+            4248
+          ],
+          "fitsFutureWest20Bow": true
+        },
+        {
+          "key": 87,
+          "request": 164,
+          "impact": 166,
+          "position": [
+            3291,
+            4248
+          ],
+          "fitsFutureWest20Bow": false
+        }
+      ],
+      "futureWest20Bow": 165,
+      "strictJointBudgetFits": false
+    },
+    {
+      "seed": 206,
+      "tick": 158,
+      "west19": {
+        "key": 90,
+        "w": 19,
+        "born": 148,
+        "age": 10,
+        "style": "MAGIC",
+        "big": true,
+        "hp": 10,
+        "x": 3291,
+        "y": 4249,
+        "claim": 0,
+        "own": 0,
+        "dead": false,
+        "lane": "west",
+        "postOwn": 0,
+        "postClaim": 191
+      },
+      "westDistanceAfterOneNativeStep": 0,
+      "big18": [
+        {
+          "key": 89,
+          "w": 18,
+          "born": 140,
+          "age": 18,
+          "style": "RANGE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 188,
+          "dead": false,
+          "lane": "east",
+          "postOwn": 0,
+          "postClaim": 0
+        }
+      ],
+      "rawBudget": 6,
+      "remaining": 8,
+      "fitsRawBudget": false,
+      "current": [
+        "PIPE",
+        "93",
+        "null",
+        "Pre-cap plan: PIPE #99 @158 \u2192 CLAWS #100 @160"
+      ],
+      "currentAttacked": true,
+      "position": [
+        3292,
+        4248
+      ],
+      "nulled18": [],
+      "claimed": false,
+      "withinEyeRange": true,
+      "mageShootsWestNow": true,
+      "lastConfirmedPrimary": [
+        156,
+        89,
+        "PIPE"
+      ],
+      "knownPending": [
+        {
+          "key": 89,
+          "launch": 156,
+          "normalImpact": 158,
+          "actualLease": 188
+        }
+      ],
+      "prospectiveRoute": [
+        {
+          "key": 89,
+          "request": 161,
+          "impact": 163,
+          "position": [
+            3292,
+            4248
+          ],
+          "fitsFutureWest20Bow": true
+        },
+        {
+          "key": 89,
+          "request": 164,
+          "impact": 166,
+          "position": [
+            3292,
+            4248
+          ],
+          "fitsFutureWest20Bow": false
+        }
+      ],
+      "futureWest20Bow": 165,
+      "strictJointBudgetFits": false
+    },
+    {
+      "seed": 209,
+      "tick": 162,
+      "west19": {
+        "key": 90,
+        "w": 19,
+        "born": 152,
+        "age": 10,
+        "style": "MAGIC",
+        "big": true,
+        "hp": 2,
+        "x": 3291,
+        "y": 4249,
+        "claim": 0,
+        "own": 0,
+        "dead": false,
+        "lane": "west",
+        "postOwn": 0,
+        "postClaim": 195
+      },
+      "westDistanceAfterOneNativeStep": 0,
+      "big18": [
+        {
+          "key": 89,
+          "w": 18,
+          "born": 144,
+          "age": 18,
+          "style": "RANGE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 192,
+          "dead": false,
+          "lane": "east",
+          "postOwn": 0,
+          "postClaim": 0
+        }
+      ],
+      "rawBudget": 6,
+      "remaining": 8,
+      "fitsRawBudget": false,
+      "current": [
+        "EYE",
+        "93",
+        "null",
+        "Pre-cap plan: EYE #99 @162 \u2192 EYE #96 @165"
+      ],
+      "currentAttacked": true,
+      "position": [
+        3290,
+        4249
+      ],
+      "nulled18": [],
+      "claimed": false,
+      "withinEyeRange": true,
+      "mageShootsWestNow": true,
+      "lastConfirmedPrimary": [
+        160,
+        89,
+        "PIPE"
+      ],
+      "knownPending": [
+        {
+          "key": 89,
+          "launch": 160,
+          "normalImpact": 162,
+          "actualLease": 192
+        }
+      ],
+      "prospectiveRoute": [
+        {
+          "key": 89,
+          "request": 165,
+          "impact": 167,
+          "position": [
+            3290,
+            4249
+          ],
+          "fitsFutureWest20Bow": true
+        },
+        {
+          "key": 89,
+          "request": 168,
+          "impact": 170,
+          "position": [
+            3290,
+            4249
+          ],
+          "fitsFutureWest20Bow": false
+        }
+      ],
+      "futureWest20Bow": 169,
+      "strictJointBudgetFits": false
+    },
+    {
+      "seed": 222,
+      "tick": 162,
+      "west19": {
+        "key": 90,
+        "w": 19,
+        "born": 152,
+        "age": 10,
+        "style": "MAGIC",
+        "big": true,
+        "hp": 11,
+        "x": 3291,
+        "y": 4249,
+        "claim": 0,
+        "own": 0,
+        "dead": false,
+        "lane": "west",
+        "postOwn": 0,
+        "postClaim": 195
+      },
+      "westDistanceAfterOneNativeStep": 0,
+      "big18": [
+        {
+          "key": 89,
+          "w": 18,
+          "born": 144,
+          "age": 18,
+          "style": "RANGE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 192,
+          "dead": false,
+          "lane": "east",
+          "postOwn": 0,
+          "postClaim": 0
+        }
+      ],
+      "rawBudget": 6,
+      "remaining": 8,
+      "fitsRawBudget": false,
+      "current": [
+        "PIPE",
+        "94",
+        "null",
+        "Pre-cap plan: PIPE #100 @162 \u2192 CLAWS #99 @164"
+      ],
+      "currentAttacked": true,
+      "position": [
+        3291,
+        4249
+      ],
+      "nulled18": [],
+      "claimed": false,
+      "withinEyeRange": true,
+      "mageShootsWestNow": true,
+      "lastConfirmedPrimary": [
+        160,
+        89,
+        "PIPE"
+      ],
+      "knownPending": [
+        {
+          "key": 89,
+          "launch": 160,
+          "normalImpact": 162,
+          "actualLease": 192
+        }
+      ],
+      "prospectiveRoute": [
+        {
+          "key": 89,
+          "request": 165,
+          "impact": 167,
+          "position": [
+            3291,
+            4249
+          ],
+          "fitsFutureWest20Bow": true
+        },
+        {
+          "key": 89,
+          "request": 168,
+          "impact": 170,
+          "position": [
+            3291,
+            4249
+          ],
+          "fitsFutureWest20Bow": false
+        }
+      ],
+      "futureWest20Bow": 169,
+      "strictJointBudgetFits": false
+    },
+    {
+      "seed": 229,
+      "tick": 158,
+      "west19": {
+        "key": 90,
+        "w": 19,
+        "born": 148,
+        "age": 10,
+        "style": "MAGIC",
+        "big": true,
+        "hp": 16,
+        "x": 3291,
+        "y": 4249,
+        "claim": 0,
+        "own": 0,
+        "dead": false,
+        "lane": "west",
+        "postOwn": 0,
+        "postClaim": 191
+      },
+      "westDistanceAfterOneNativeStep": 0,
+      "big18": [
+        {
+          "key": 89,
+          "w": 18,
+          "born": 140,
+          "age": 18,
+          "style": "RANGE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4253,
+          "claim": 0,
+          "own": 188,
+          "dead": false,
+          "lane": "east",
+          "postOwn": 0,
+          "postClaim": 0
+        }
+      ],
+      "rawBudget": 6,
+      "remaining": 8,
+      "fitsRawBudget": false,
+      "current": [
+        "CHIN",
+        "93",
+        "null",
+        "Pre-cap plan: CHIN #99 @158 \u2192 EYE #96 @161"
+      ],
+      "currentAttacked": true,
+      "position": [
+        3292,
+        4248
+      ],
+      "nulled18": [],
+      "claimed": false,
+      "withinEyeRange": true,
+      "mageShootsWestNow": true,
+      "lastConfirmedPrimary": [
+        156,
+        89,
+        "PIPE"
+      ],
+      "knownPending": [
+        {
+          "key": 89,
+          "launch": 156,
+          "normalImpact": 158,
+          "actualLease": 188
+        }
+      ],
+      "prospectiveRoute": [
+        {
+          "key": 89,
+          "request": 161,
+          "impact": 163,
+          "position": [
+            3292,
+            4248
+          ],
+          "fitsFutureWest20Bow": true
+        },
+        {
+          "key": 89,
+          "request": 164,
+          "impact": 166,
+          "position": [
+            3292,
+            4248
+          ],
+          "fitsFutureWest20Bow": false
+        }
+      ],
+      "futureWest20Bow": 165,
+      "strictJointBudgetFits": false
+    }
+  ]
+}

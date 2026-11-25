@@ -1,0 +1,11 @@
+--- .state/simulations/training-v3-candidate-mage-barrage21-recovery/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:35:23.177649248 +0800
++++ .state/simulations/training-v3-candidate-mage-required-parent-age-only/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:42:36.611943038 +0800
+@@ -181,7 +181,7 @@
+ 	static boolean eligible(Room room, Crab c, int tick)
+ 	{
+ 		return !c.dying && !c.nulled && c.claimedUntil <= tick && !c.awaitingHit(tick) && tick - c.born < 49
+-			&& room.wave - c.wave <= MAX_WAVE_AGE && !rangerOwned(c)
++			&& (room.wave - c.wave <= MAX_WAVE_AGE || requiredBig(c)) && !rangerOwned(c)
+ 			&& !rangerPacket(c, tick) && (room.wave < 31 || c.wave > 29);
+ 	}
+ 

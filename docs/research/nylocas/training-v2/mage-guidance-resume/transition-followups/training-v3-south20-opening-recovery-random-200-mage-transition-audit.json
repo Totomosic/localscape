@@ -1,0 +1,1457 @@
+{
+  "directory": ".state/simulations/training-v3-south20-opening-recovery-random-200",
+  "trials": 200,
+  "counts": {
+    "20_south_EYE_launches": 201,
+    "transition_observed": 200,
+    "20_south_uncovered": 73,
+    "transition_physical_clear": 84,
+    "transition_clear_or_known_lethal": 84,
+    "20_south_SCYTHE_launches": 16,
+    "18_east_uncovered": 25,
+    "20_west_uncovered": 40,
+    "18_south_uncovered": 3,
+    "19_south_uncovered": 8,
+    "20_south_rooms_with_mage_attack": 194,
+    "20_south_rooms_with_scythe": 16,
+    "20_west_rooms_with_mage_attack": 0,
+    "20_west_rooms_with_scythe": 0
+  },
+  "examples": {
+    "20_south_uncovered": [
+      {
+        "seed": 277700433457057,
+        "tick": 176,
+        "parent": {
+          "key": 94,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 5,
+          "x": 3296,
+          "y": 4245,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 161,
+            "weapon": "EYE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457061,
+        "tick": 184,
+        "parent": {
+          "key": 94,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 3,
+          "x": 3293,
+          "y": 4247,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 169,
+            "weapon": "EYE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457066,
+        "tick": 184,
+        "parent": {
+          "key": 108,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 7,
+          "x": 3296,
+          "y": 4246,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 169,
+            "weapon": "EYE",
+            "target": {
+              "key": 108,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457067,
+        "tick": 172,
+        "parent": {
+          "key": 94,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4247,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 157,
+            "weapon": "EYE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457070,
+        "tick": 176,
+        "parent": {
+          "key": 96,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 3,
+          "x": 3295,
+          "y": 4247,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 162,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 2,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4235,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          },
+          {
+            "tick": 169,
+            "weapon": "SCYTHE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 9,
+              "style": "MELEE",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4242,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457071,
+        "tick": 176,
+        "parent": {
+          "key": 96,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 12,
+          "x": 3292,
+          "y": 4247,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 161,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457076,
+        "tick": 204,
+        "parent": {
+          "key": 108,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 13,
+          "x": 3294,
+          "y": 4248,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 191,
+            "weapon": "EYE",
+            "target": {
+              "key": 108,
+              "wave": 20,
+              "age": 3,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4236,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457078,
+        "tick": 180,
+        "parent": {
+          "key": 96,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 2,
+          "x": 3296,
+          "y": 4245,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 164,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 0,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4233,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          },
+          {
+            "tick": 167,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 3,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4236,
+              "lane": "south",
+              "dying": false,
+              "pending": 7,
+              "mage_null": false
+            }
+          }
+        ]
+      }
+    ],
+    "18_east_uncovered": [
+      {
+        "seed": 277700433457067,
+        "tick": 172,
+        "parent": {
+          "key": 87,
+          "wave": 18,
+          "age": 36,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 7,
+          "x": 3292,
+          "y": 4253,
+          "lane": "east",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 157,
+            "weapon": "EYE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457078,
+        "tick": 180,
+        "parent": {
+          "key": 89,
+          "wave": 18,
+          "age": 36,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 2,
+          "x": 3292,
+          "y": 4253,
+          "lane": "east",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 164,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 0,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4233,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          },
+          {
+            "tick": 167,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 3,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4236,
+              "lane": "south",
+              "dying": false,
+              "pending": 7,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457081,
+        "tick": 168,
+        "parent": {
+          "key": 87,
+          "wave": 18,
+          "age": 36,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 3,
+          "x": 3292,
+          "y": 4253,
+          "lane": "east",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 152,
+            "weapon": "EYE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 0,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4233,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457086,
+        "tick": 176,
+        "parent": {
+          "key": 85,
+          "wave": 18,
+          "age": 36,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3292,
+          "y": 4253,
+          "lane": "east",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 160,
+            "weapon": "EYE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 0,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4233,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457108,
+        "tick": 176,
+        "parent": {
+          "key": 89,
+          "wave": 18,
+          "age": 36,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 3,
+          "x": 3292,
+          "y": 4253,
+          "lane": "east",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 160,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 0,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4233,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          },
+          {
+            "tick": 163,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 3,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4236,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457122,
+        "tick": 172,
+        "parent": {
+          "key": 89,
+          "wave": 18,
+          "age": 36,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 1,
+          "x": 3292,
+          "y": 4253,
+          "lane": "east",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 157,
+            "weapon": "EYE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457124,
+        "tick": 184,
+        "parent": {
+          "key": 89,
+          "wave": 18,
+          "age": 36,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 4,
+          "x": 3292,
+          "y": 4253,
+          "lane": "east",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 169,
+            "weapon": "EYE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457131,
+        "tick": 184,
+        "parent": {
+          "key": 89,
+          "wave": 18,
+          "age": 36,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 4,
+          "x": 3292,
+          "y": 4253,
+          "lane": "east",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 171,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 3,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4236,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      }
+    ],
+    "20_west_uncovered": [
+      {
+        "seed": 277700433457069,
+        "tick": 184,
+        "parent": {
+          "key": 93,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 13,
+          "x": 3290,
+          "y": 4251,
+          "lane": "west",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 169,
+            "weapon": "EYE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          },
+          {
+            "tick": 178,
+            "weapon": "SCYTHE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 10,
+              "style": "MELEE",
+              "big": true,
+              "hp": 13,
+              "x": 3295,
+              "y": 4243,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457071,
+        "tick": 176,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 11,
+          "x": 3290,
+          "y": 4251,
+          "lane": "west",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 161,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457072,
+        "tick": 184,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 13,
+          "x": 3290,
+          "y": 4250,
+          "lane": "west",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 171,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 3,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4236,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457079,
+        "tick": 176,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 6,
+          "x": 3290,
+          "y": 4251,
+          "lane": "west",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 161,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457080,
+        "tick": 180,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 9,
+          "x": 3290,
+          "y": 4251,
+          "lane": "west",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 165,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457083,
+        "tick": 172,
+        "parent": {
+          "key": 93,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 8,
+          "x": 3290,
+          "y": 4251,
+          "lane": "west",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 157,
+            "weapon": "EYE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457087,
+        "tick": 196,
+        "parent": {
+          "key": 107,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 8,
+          "x": 3291,
+          "y": 4251,
+          "lane": "west",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 183,
+            "weapon": "EYE",
+            "target": {
+              "key": 108,
+              "wave": 20,
+              "age": 3,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4236,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457094,
+        "tick": 172,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "age": 16,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3290,
+          "y": 4251,
+          "lane": "west",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 157,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      }
+    ],
+    "18_south_uncovered": [
+      {
+        "seed": 277700433457086,
+        "tick": 176,
+        "parent": {
+          "key": 84,
+          "wave": 18,
+          "age": 36,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 7,
+          "x": 3292,
+          "y": 4244,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 160,
+            "weapon": "EYE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 0,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4233,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457203,
+        "tick": 172,
+        "parent": {
+          "key": 86,
+          "wave": 18,
+          "age": 36,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 5,
+          "x": 3292,
+          "y": 4243,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 157,
+            "weapon": "EYE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457235,
+        "tick": 180,
+        "parent": {
+          "key": 86,
+          "wave": 18,
+          "age": 36,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 6,
+          "x": 3292,
+          "y": 4243,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 165,
+            "weapon": "EYE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      }
+    ],
+    "19_south_uncovered": [
+      {
+        "seed": 277700433457101,
+        "tick": 172,
+        "parent": {
+          "key": 91,
+          "wave": 19,
+          "age": 28,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "x": 3298,
+          "y": 4244,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 157,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457120,
+        "tick": 176,
+        "parent": {
+          "key": 91,
+          "wave": 19,
+          "age": 28,
+          "style": "MELEE",
+          "big": true,
+          "hp": 15,
+          "x": 3298,
+          "y": 4244,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 162,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 2,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4235,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457121,
+        "tick": 176,
+        "parent": {
+          "key": 91,
+          "wave": 19,
+          "age": 28,
+          "style": "MELEE",
+          "big": true,
+          "hp": 9,
+          "x": 3298,
+          "y": 4244,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 161,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457124,
+        "tick": 184,
+        "parent": {
+          "key": 91,
+          "wave": 19,
+          "age": 28,
+          "style": "MELEE",
+          "big": true,
+          "hp": 5,
+          "x": 3298,
+          "y": 4244,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 169,
+            "weapon": "EYE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457127,
+        "tick": 176,
+        "parent": {
+          "key": 91,
+          "wave": 19,
+          "age": 28,
+          "style": "MELEE",
+          "big": true,
+          "hp": 2,
+          "x": 3298,
+          "y": 4244,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 161,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457161,
+        "tick": 176,
+        "parent": {
+          "key": 91,
+          "wave": 19,
+          "age": 28,
+          "style": "MELEE",
+          "big": true,
+          "hp": 2,
+          "x": 3298,
+          "y": 4244,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 161,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457182,
+        "tick": 176,
+        "parent": {
+          "key": 91,
+          "wave": 19,
+          "age": 28,
+          "style": "MELEE",
+          "big": true,
+          "hp": 2,
+          "x": 3298,
+          "y": 4244,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 161,
+            "weapon": "EYE",
+            "target": {
+              "key": 96,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      },
+      {
+        "seed": 277700433457232,
+        "tick": 176,
+        "parent": {
+          "key": 91,
+          "wave": 19,
+          "age": 28,
+          "style": "MELEE",
+          "big": true,
+          "hp": 2,
+          "x": 3298,
+          "y": 4244,
+          "lane": "south",
+          "dying": false,
+          "pending": 0,
+          "mage_null": false
+        },
+        "mage_20_attacks": [
+          {
+            "tick": 161,
+            "weapon": "EYE",
+            "target": {
+              "key": 94,
+              "wave": 20,
+              "age": 1,
+              "style": "MAGIC",
+              "big": true,
+              "hp": 16,
+              "x": 3295,
+              "y": 4234,
+              "lane": "south",
+              "dying": false,
+              "pending": 0,
+              "mage_null": false
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "source_sha256": {
+    "trials.csv": "52f9c7d06b77a64c272ac8aeae81edc2f365a5d0a45775c2e987966fa7cf6b79",
+    "server.log": "53124a8349416bce0d006c8e088c7df163434348bcde7a376e67044c7b888a57"
+  },
+  "caveat": "First mage snapshot of actual21; physical positive-HP non-dying parents are distinguished from already-rolled lethal forecasts. Presence is not proof of an earlier attackable opportunity. No role kill credit inferred."
+}

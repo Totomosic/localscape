@@ -1,0 +1,33 @@
+{
+  "status": "audit complete; no cap-relief candidate prepared",
+  "runs": [
+    "training-v2-flight-fresh-intent-100 (100 rooms)",
+    "training-v2-flight-guidance-holdout-200 (200 rooms)"
+  ],
+  "result": "No actual-wave19 recent ranged-split-cluster frame passes remaining18 work budget even after admitting populations below12.",
+  "earlierActual18RawFits": [
+    {
+      "seed": 312,
+      "tick": 142,
+      "observation": "Current target ordinary small; existing plan chins next."
+    },
+    {
+      "seed": 345,
+      "tick": 140,
+      "observation": "Current target ordinary small; no forced18 priority to release."
+    },
+    {
+      "seed": 381,
+      "tick": 143,
+      "observation": "Current target opened west18 with5HP; preserve finishing guidance. Existing plan chins next."
+    },
+    {
+      "seed": 414,
+      "tick": 148,
+      "observation": "Current target ordinary small; existing plan chins next."
+    }
+  ],
+  "budget": "3chin cooldown +2cycles per ceil(observed18 HP/8) per big +2impact buffer <= earliest remaining birth18+26 deadline; no travel credit, no pending-hit kill assumptions. Policy work estimate, not guaranteed randomized native damage.",
+  "caveat": "Geometry reconstructed from snapshots; current LOS not reconstructed. No proposed relaxing of claims, NULL, damage, supplies, or26 eligibility.",
+  "separateFinding": "Initial west18 stale fullHP filler deferrals observed in3/100 fresh-intent rooms; not pursued because effect opportunity is narrow and prior unconditioned early-west changes regressed."
+}

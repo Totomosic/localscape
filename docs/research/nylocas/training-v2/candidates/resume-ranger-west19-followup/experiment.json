@@ -1,0 +1,36 @@
+{
+  "status": "isolated ranger half of coupled West19 followup candidate; not promoted; no simulation by ranger agent",
+  "baseline": "CURRENT pure-guidance canonical Java +all role test sources captured at candidate creation",
+  "source": "candidate/policy-source",
+  "couplingRequired": "Root must overlay .state/simulations/training-v2-candidate-mage-west19-followup-protection/MageStrategy.java to honor immediate feasible later-age handoff.",
+  "scope": "Opened West19 MAGIC survivor after opening flight resolves, actual19 and requestage4\u201310; immediate EYE only. west19PacketDue returns currenttick for feasible followup. Existing opening actual19+3 packet remains untouched.",
+  "budget": "Observed living18 HP uses existing ceil(HP/8) work estimate. Reject active own/partner flight, personal NULL, current obstruction or unavailable18. Project eye attack tile and native running return to18 in lane order. Eye3cooldown, pipe2impact plus1observation before retry, last impact<=birth18+26; unused final cooldown not charged. No pending-hit kill credit or altered damage.",
+  "budgetNature": "Strategy estimate preserving current policy26 cutoff, not encounter rule, guaranteed damage or proof every planned native retry will succeed.",
+  "evidence": {
+    "guidance100": {
+      "eligibleFrames": 79,
+      "budgetRoutedFrames": 17,
+      "budgetRoutedRooms": 17
+    },
+    "guidance200": {
+      "eligibleFrames": 137,
+      "budgetRoutedFrames": 29,
+      "budgetRoutedRooms": 29
+    },
+    "directory": ".state/simulations/training-v2-ranger-west19-followup-audit"
+  },
+  "nativeTimingSources": [
+    "content/other/special-weapons/src/main/kotlin/org/rsmod/content/other/special/weapons/ranged/ToxicBlowpipeWeapons.kt",
+    "api/config/src/main/kotlin/org/rsmod/api/config/builders/ProjAnimBuilds.kt (thrown:32+5*distance)",
+    "engine/game/src/main/kotlin/org/rsmod/game/proj/ProjAnim.kt (1+endTime/30)",
+    "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotController.kt (next-observation primary lease release)"
+  ],
+  "tests": {
+    "allPassed": 208,
+    "newRangerBehaviorTests": 17,
+    "baselineWithCandidateTestsFailures": 5,
+    "revisedExistingTest": "wave19WestAfterItsPacketStillCompetesWithUsefulCleanup -> openedWest19SurvivorIsFinishedBeforeOrdinarySmalls"
+  },
+  "reproduction": "python3 .state/simulations/training-v2-candidate-ranger-west19-followup/run-check.py; add --baseline to see expected red",
+  "limitations": "No native/simulation validation by this agent; LOS projections remain observations and native adapter is authoritative. Exact earlier-audit counted no windows because it included an unused final PIPE cooldown; refined routed audit supersedes that bound."
+}

@@ -1,0 +1,18 @@
+{
+  "cohort": "retainedSouth20 pooled500",
+  "target_seconds": 202,
+  "target_rate": 0.95,
+  "denominator": "all trials, including wave19policyfailures; deaths/timeouts cannot pass",
+  "all_trials": 500,
+  "within_target": 440,
+  "over_target_or_incomplete": 60,
+  "within_rate": 0.88,
+  "required_within_target": 475,
+  "p95_ticks": 344,
+  "p95_seconds": 206.4,
+  "wave19_policy_failure_rooms": 30,
+  "wave19_failure_rooms_over_time_target": 20,
+  "eligible_rooms_average_filter": 470,
+  "eligible_rooms_within_time_target": 430,
+  "source_csv_sha256": "d1796367fe13b0db3fd69ed97820fc59f288a7cef002b828d1ff3fe533219f3f"
+}

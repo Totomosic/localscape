@@ -1,0 +1,1696 @@
+{
+  "counts": {
+    "old_expiry_terminal_child_lifetimes": 12,
+    "old_combat_death_terminal_child_lifetimes": 6,
+    "fresh_expiry_terminal_child_lifetimes": 7,
+    "fresh_combat_death_terminal_child_lifetimes": 1
+  },
+  "cases": [
+    {
+      "seed": "268077164743958",
+      "boss_ticks": 348,
+      "child_birth": 323,
+      "child": {
+        "key": 205,
+        "wave": 31,
+        "born": 323,
+        "age": 0,
+        "style": "MELEE",
+        "big": false,
+        "hp": 8,
+        "x": 3298,
+        "y": 4243,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 182,
+        "wave": 29,
+        "born": 268,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 6,
+        "x": 3298,
+        "y": 4243,
+        "lane": "south",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": true
+      },
+      "parent_attacks": [
+        {
+          "tick": 278,
+          "role": 1,
+          "weapon": "SCYTHE",
+          "reason": "South big 29"
+        }
+      ],
+      "mage_idle_parent_examples": [],
+      "classification": "old_expiry"
+    },
+    {
+      "seed": "268077164743961",
+      "boss_ticks": 340,
+      "child_birth": 283,
+      "child": {
+        "key": 197,
+        "wave": 31,
+        "born": 283,
+        "age": 0,
+        "style": "MELEE",
+        "big": false,
+        "hp": 8,
+        "x": 3298,
+        "y": 4243,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 178,
+        "wave": 29,
+        "born": 260,
+        "age": 22,
+        "style": "MELEE",
+        "big": true,
+        "hp": 0,
+        "x": 3298,
+        "y": 4243,
+        "lane": "south",
+        "dying": true,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 275,
+          "role": 1,
+          "weapon": "SCYTHE",
+          "reason": "South big 29"
+        }
+      ],
+      "mage_idle_parent_examples": [],
+      "classification": "old_combat_death"
+    },
+    {
+      "seed": "268077164743981",
+      "boss_ticks": 348,
+      "child_birth": 279,
+      "child": {
+        "key": 187,
+        "wave": 30,
+        "born": 279,
+        "age": 0,
+        "style": "MELEE",
+        "big": false,
+        "hp": 8,
+        "x": 3300,
+        "y": 4245,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 145,
+        "wave": 25,
+        "born": 224,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 16,
+        "x": 3300,
+        "y": 4245,
+        "lane": "east",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [],
+      "mage_idle_parent_examples": [],
+      "classification": "old_expiry"
+    },
+    {
+      "seed": "268077164743993",
+      "boss_ticks": 352,
+      "child_birth": 291,
+      "child": {
+        "key": 189,
+        "wave": 30,
+        "born": 291,
+        "age": 0,
+        "style": "MELEE",
+        "big": false,
+        "hp": 8,
+        "x": 3292,
+        "y": 4244,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 144,
+        "wave": 25,
+        "born": 236,
+        "age": 54,
+        "style": "RANGE",
+        "big": true,
+        "hp": 8,
+        "x": 3292,
+        "y": 4244,
+        "lane": "south",
+        "dying": false,
+        "mageNull": true,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 253,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "South big 25"
+        }
+      ],
+      "mage_idle_parent_examples": [],
+      "classification": "old_expiry"
+    },
+    {
+      "seed": "268077164743995",
+      "boss_ticks": 340,
+      "child_birth": 272,
+      "child": {
+        "key": 187,
+        "wave": 30,
+        "born": 272,
+        "age": 0,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "x": 3297,
+        "y": 4243,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 176,
+        "wave": 29,
+        "born": 252,
+        "age": 19,
+        "style": "MELEE",
+        "big": true,
+        "hp": 0,
+        "x": 3297,
+        "y": 4243,
+        "lane": "south",
+        "dying": true,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 264,
+          "role": 1,
+          "weapon": "SCYTHE",
+          "reason": "South big 29"
+        }
+      ],
+      "mage_idle_parent_examples": [],
+      "classification": "old_combat_death"
+    },
+    {
+      "seed": "268077164744000",
+      "boss_ticks": 356,
+      "child_birth": 327,
+      "child": {
+        "key": 206,
+        "wave": 31,
+        "born": 327,
+        "age": 0,
+        "style": "MELEE",
+        "big": false,
+        "hp": 8,
+        "x": 3291,
+        "y": 4246,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 185,
+        "wave": 30,
+        "born": 272,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 7,
+        "x": 3290,
+        "y": 4245,
+        "lane": "west",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 275,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "West big 30"
+        },
+        {
+          "tick": 292,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "Recent RANGE big"
+        },
+        {
+          "tick": 294,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "Recent RANGE big"
+        },
+        {
+          "tick": 296,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "Recent RANGE big"
+        }
+      ],
+      "mage_idle_parent_examples": [
+        {
+          "tick": 312,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 185,
+            "wave": 30,
+            "born": 272,
+            "age": 40,
+            "style": "MELEE",
+            "big": true,
+            "hp": 7,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 313,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 185,
+            "wave": 30,
+            "born": 272,
+            "age": 41,
+            "style": "MELEE",
+            "big": true,
+            "hp": 7,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 314,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 185,
+            "wave": 30,
+            "born": 272,
+            "age": 42,
+            "style": "MELEE",
+            "big": true,
+            "hp": 7,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 315,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 185,
+            "wave": 30,
+            "born": 272,
+            "age": 43,
+            "style": "MELEE",
+            "big": true,
+            "hp": 7,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 316,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 185,
+            "wave": 30,
+            "born": 272,
+            "age": 44,
+            "style": "MELEE",
+            "big": true,
+            "hp": 7,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        }
+      ],
+      "classification": "fresh_expiry"
+    },
+    {
+      "seed": "268077164744002",
+      "boss_ticks": 348,
+      "child_birth": 319,
+      "child": {
+        "key": 206,
+        "wave": 31,
+        "born": 319,
+        "age": 0,
+        "style": "MELEE",
+        "big": false,
+        "hp": 8,
+        "x": 3291,
+        "y": 4246,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 183,
+        "wave": 30,
+        "born": 264,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 14,
+        "x": 3290,
+        "y": 4245,
+        "lane": "west",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 267,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "West big 30"
+        },
+        {
+          "tick": 272,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "Recent RANGE big"
+        }
+      ],
+      "mage_idle_parent_examples": [
+        {
+          "tick": 309,
+          "mage_position": "3296,4250,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 183,
+            "wave": 30,
+            "born": 264,
+            "age": 45,
+            "style": "MELEE",
+            "big": true,
+            "hp": 14,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 310,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 183,
+            "wave": 30,
+            "born": 264,
+            "age": 46,
+            "style": "MELEE",
+            "big": true,
+            "hp": 14,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 311,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 183,
+            "wave": 30,
+            "born": 264,
+            "age": 47,
+            "style": "MELEE",
+            "big": true,
+            "hp": 14,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 312,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 183,
+            "wave": 30,
+            "born": 264,
+            "age": 48,
+            "style": "MELEE",
+            "big": true,
+            "hp": 14,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        }
+      ],
+      "classification": "fresh_expiry"
+    },
+    {
+      "seed": "268077164744005",
+      "boss_ticks": 340,
+      "child_birth": 315,
+      "child": {
+        "key": 206,
+        "wave": 31,
+        "born": 315,
+        "age": 0,
+        "style": "MELEE",
+        "big": false,
+        "hp": 8,
+        "x": 3292,
+        "y": 4246,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 183,
+        "wave": 30,
+        "born": 260,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 9,
+        "x": 3291,
+        "y": 4245,
+        "lane": "west",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 263,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "West big 30"
+        }
+      ],
+      "mage_idle_parent_examples": [
+        {
+          "tick": 302,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 183,
+            "wave": 30,
+            "born": 260,
+            "age": 42,
+            "style": "MELEE",
+            "big": true,
+            "hp": 9,
+            "x": 3291,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 303,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 183,
+            "wave": 30,
+            "born": 260,
+            "age": 43,
+            "style": "MELEE",
+            "big": true,
+            "hp": 9,
+            "x": 3291,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 304,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 183,
+            "wave": 30,
+            "born": 260,
+            "age": 44,
+            "style": "MELEE",
+            "big": true,
+            "hp": 9,
+            "x": 3291,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 305,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 183,
+            "wave": 30,
+            "born": 260,
+            "age": 45,
+            "style": "MELEE",
+            "big": true,
+            "hp": 9,
+            "x": 3291,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 306,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 183,
+            "wave": 30,
+            "born": 260,
+            "age": 46,
+            "style": "MELEE",
+            "big": true,
+            "hp": 9,
+            "x": 3291,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        }
+      ],
+      "classification": "fresh_expiry"
+    },
+    {
+      "seed": "268077164744007",
+      "boss_ticks": 344,
+      "child_birth": 319,
+      "child": {
+        "key": 205,
+        "wave": 31,
+        "born": 319,
+        "age": 0,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "x": 3290,
+        "y": 4245,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 185,
+        "wave": 30,
+        "born": 264,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 15,
+        "x": 3290,
+        "y": 4245,
+        "lane": "west",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 267,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "West big 30"
+        }
+      ],
+      "mage_idle_parent_examples": [
+        {
+          "tick": 305,
+          "mage_position": "3293,4251,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 185,
+            "wave": 30,
+            "born": 264,
+            "age": 41,
+            "style": "MELEE",
+            "big": true,
+            "hp": 15,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 306,
+          "mage_position": "3295,4251,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 185,
+            "wave": 30,
+            "born": 264,
+            "age": 42,
+            "style": "MELEE",
+            "big": true,
+            "hp": 15,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 307,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 185,
+            "wave": 30,
+            "born": 264,
+            "age": 43,
+            "style": "MELEE",
+            "big": true,
+            "hp": 15,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 308,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 185,
+            "wave": 30,
+            "born": 264,
+            "age": 44,
+            "style": "MELEE",
+            "big": true,
+            "hp": 15,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 309,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 185,
+            "wave": 30,
+            "born": 264,
+            "age": 45,
+            "style": "MELEE",
+            "big": true,
+            "hp": 15,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        }
+      ],
+      "classification": "fresh_expiry"
+    },
+    {
+      "seed": "268077164744019",
+      "boss_ticks": 344,
+      "child_birth": 319,
+      "child": {
+        "key": 206,
+        "wave": 31,
+        "born": 319,
+        "age": 0,
+        "style": "MELEE",
+        "big": false,
+        "hp": 8,
+        "x": 3291,
+        "y": 4246,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 185,
+        "wave": 30,
+        "born": 264,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 9,
+        "x": 3290,
+        "y": 4245,
+        "lane": "west",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 267,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "West big 30"
+        },
+        {
+          "tick": 272,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "Recent RANGE big"
+        },
+        {
+          "tick": 287,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "Recent RANGE big"
+        }
+      ],
+      "mage_idle_parent_examples": [
+        {
+          "tick": 301,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 185,
+            "wave": 30,
+            "born": 264,
+            "age": 37,
+            "style": "MELEE",
+            "big": true,
+            "hp": 9,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 302,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 185,
+            "wave": 30,
+            "born": 264,
+            "age": 38,
+            "style": "MELEE",
+            "big": true,
+            "hp": 9,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 303,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 185,
+            "wave": 30,
+            "born": 264,
+            "age": 39,
+            "style": "MELEE",
+            "big": true,
+            "hp": 9,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 304,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 185,
+            "wave": 30,
+            "born": 264,
+            "age": 40,
+            "style": "MELEE",
+            "big": true,
+            "hp": 9,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        },
+        {
+          "tick": 305,
+          "mage_position": "3297,4249,0",
+          "reason": "Clear wave 30 and 31 survivors",
+          "target": {
+            "key": 185,
+            "wave": 30,
+            "born": 264,
+            "age": 41,
+            "style": "MELEE",
+            "big": true,
+            "hp": 9,
+            "x": 3290,
+            "y": 4245,
+            "lane": "west",
+            "dying": false,
+            "mageNull": false,
+            "rangerNull": false
+          }
+        }
+      ],
+      "classification": "fresh_expiry"
+    },
+    {
+      "seed": "268077164744034",
+      "boss_ticks": 348,
+      "child_birth": 275,
+      "child": {
+        "key": 188,
+        "wave": 30,
+        "born": 275,
+        "age": 0,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "x": 3301,
+        "y": 4246,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 143,
+        "wave": 25,
+        "born": 220,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 16,
+        "x": 3300,
+        "y": 4245,
+        "lane": "east",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [],
+      "mage_idle_parent_examples": [],
+      "classification": "old_expiry"
+    },
+    {
+      "seed": "268077164744034",
+      "boss_ticks": 348,
+      "child_birth": 282,
+      "child": {
+        "key": 196,
+        "wave": 31,
+        "born": 282,
+        "age": 0,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "x": 3293,
+        "y": 4244,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 149,
+        "wave": 26,
+        "born": 228,
+        "age": 53,
+        "style": "RANGE",
+        "big": true,
+        "hp": 0,
+        "x": 3292,
+        "y": 4243,
+        "lane": "south",
+        "dying": true,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 265,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "Recent RANGE big"
+        },
+        {
+          "tick": 273,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "Recent RANGE big"
+        }
+      ],
+      "mage_idle_parent_examples": [],
+      "classification": "old_combat_death"
+    },
+    {
+      "seed": "268077164744035",
+      "boss_ticks": 348,
+      "child_birth": 288,
+      "child": {
+        "key": 188,
+        "wave": 30,
+        "born": 288,
+        "age": 0,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "x": 3299,
+        "y": 4245,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 170,
+        "wave": 29,
+        "born": 264,
+        "age": 23,
+        "style": "MELEE",
+        "big": true,
+        "hp": 0,
+        "x": 3298,
+        "y": 4244,
+        "lane": "south",
+        "dying": true,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 280,
+          "role": 1,
+          "weapon": "SCYTHE",
+          "reason": "South big 29"
+        }
+      ],
+      "mage_idle_parent_examples": [],
+      "classification": "old_combat_death"
+    },
+    {
+      "seed": "268077164744035",
+      "boss_ticks": 348,
+      "child_birth": 291,
+      "child": {
+        "key": 191,
+        "wave": 30,
+        "born": 291,
+        "age": 0,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "x": 3300,
+        "y": 4245,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 143,
+        "wave": 25,
+        "born": 236,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 16,
+        "x": 3300,
+        "y": 4245,
+        "lane": "east",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [],
+      "mage_idle_parent_examples": [],
+      "classification": "old_expiry"
+    },
+    {
+      "seed": "268077164744066",
+      "boss_ticks": 344,
+      "child_birth": 274,
+      "child": {
+        "key": 185,
+        "wave": 30,
+        "born": 274,
+        "age": 0,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "x": 3293,
+        "y": 4246,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 162,
+        "wave": 27,
+        "born": 240,
+        "age": 33,
+        "style": "MAGIC",
+        "big": true,
+        "hp": 0,
+        "x": 3293,
+        "y": 4246,
+        "lane": "south",
+        "dying": true,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 247,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "South big flicker 27"
+        },
+        {
+          "tick": 249,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "Recent RANGE big"
+        },
+        {
+          "tick": 264,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "Recent RANGE big"
+        }
+      ],
+      "mage_idle_parent_examples": [],
+      "classification": "old_combat_death"
+    },
+    {
+      "seed": "268077164744067",
+      "boss_ticks": 348,
+      "child_birth": 323,
+      "child": {
+        "key": 205,
+        "wave": 31,
+        "born": 323,
+        "age": 0,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "x": 3290,
+        "y": 4245,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 183,
+        "wave": 30,
+        "born": 268,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 2,
+        "x": 3290,
+        "y": 4245,
+        "lane": "west",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 271,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "West big 30"
+        },
+        {
+          "tick": 292,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "Recent RANGE big"
+        }
+      ],
+      "mage_idle_parent_examples": [],
+      "classification": "fresh_expiry"
+    },
+    {
+      "seed": "268077164744067",
+      "boss_ticks": 348,
+      "child_birth": 323,
+      "child": {
+        "key": 206,
+        "wave": 31,
+        "born": 323,
+        "age": 0,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "x": 3291,
+        "y": 4246,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 183,
+        "wave": 30,
+        "born": 268,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 2,
+        "x": 3290,
+        "y": 4245,
+        "lane": "west",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 271,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "West big 30"
+        },
+        {
+          "tick": 292,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "Recent RANGE big"
+        }
+      ],
+      "mage_idle_parent_examples": [],
+      "classification": "fresh_expiry"
+    },
+    {
+      "seed": "268077164744068",
+      "boss_ticks": 348,
+      "child_birth": 285,
+      "child": {
+        "key": 192,
+        "wave": 30,
+        "born": 285,
+        "age": 0,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "x": 3288,
+        "y": 4249,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 179,
+        "wave": 30,
+        "born": 272,
+        "age": 12,
+        "style": "MELEE",
+        "big": true,
+        "hp": 0,
+        "x": 3287,
+        "y": 4248,
+        "lane": "west",
+        "dying": true,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 275,
+          "role": 0,
+          "weapon": "PIPE",
+          "reason": "West big 30"
+        }
+      ],
+      "mage_idle_parent_examples": [],
+      "classification": "fresh_combat_death"
+    },
+    {
+      "seed": "268077164744082",
+      "boss_ticks": 344,
+      "child_birth": 315,
+      "child": {
+        "key": 205,
+        "wave": 31,
+        "born": 315,
+        "age": 0,
+        "style": "MELEE",
+        "big": false,
+        "hp": 8,
+        "x": 3298,
+        "y": 4243,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 180,
+        "wave": 29,
+        "born": 260,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 15,
+        "x": 3298,
+        "y": 4243,
+        "lane": "south",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 270,
+          "role": 1,
+          "weapon": "SCYTHE",
+          "reason": "South big 29"
+        }
+      ],
+      "mage_idle_parent_examples": [],
+      "classification": "old_expiry"
+    },
+    {
+      "seed": "268077164744102",
+      "boss_ticks": 340,
+      "child_birth": 319,
+      "child": {
+        "key": 205,
+        "wave": 31,
+        "born": 319,
+        "age": 0,
+        "style": "RANGE",
+        "big": false,
+        "hp": 8,
+        "x": 3298,
+        "y": 4243,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 182,
+        "wave": 29,
+        "born": 264,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 16,
+        "x": 3298,
+        "y": 4243,
+        "lane": "south",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [],
+      "mage_idle_parent_examples": [],
+      "classification": "old_expiry"
+    },
+    {
+      "seed": "268077164744102",
+      "boss_ticks": 340,
+      "child_birth": 319,
+      "child": {
+        "key": 206,
+        "wave": 31,
+        "born": 319,
+        "age": 0,
+        "style": "MELEE",
+        "big": false,
+        "hp": 8,
+        "x": 3299,
+        "y": 4244,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 182,
+        "wave": 29,
+        "born": 264,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 16,
+        "x": 3298,
+        "y": 4243,
+        "lane": "south",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [],
+      "mage_idle_parent_examples": [],
+      "classification": "old_expiry"
+    },
+    {
+      "seed": "268077164744108",
+      "boss_ticks": 344,
+      "child_birth": 287,
+      "child": {
+        "key": 190,
+        "wave": 30,
+        "born": 287,
+        "age": 0,
+        "style": "MELEE",
+        "big": false,
+        "hp": 8,
+        "x": 3301,
+        "y": 4246,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 143,
+        "wave": 25,
+        "born": 232,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 16,
+        "x": 3300,
+        "y": 4245,
+        "lane": "east",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [],
+      "mage_idle_parent_examples": [],
+      "classification": "old_expiry"
+    },
+    {
+      "seed": "268077164744113",
+      "boss_ticks": 348,
+      "child_birth": 327,
+      "child": {
+        "key": 205,
+        "wave": 31,
+        "born": 327,
+        "age": 0,
+        "style": "MELEE",
+        "big": false,
+        "hp": 8,
+        "x": 3298,
+        "y": 4243,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 182,
+        "wave": 29,
+        "born": 272,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 1,
+        "x": 3298,
+        "y": 4243,
+        "lane": "south",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 279,
+          "role": 1,
+          "weapon": "SCYTHE",
+          "reason": "South big 29"
+        },
+        {
+          "tick": 284,
+          "role": 1,
+          "weapon": "SCYTHE",
+          "reason": "South big 29"
+        }
+      ],
+      "mage_idle_parent_examples": [],
+      "classification": "old_expiry"
+    },
+    {
+      "seed": "268077164744123",
+      "boss_ticks": 352,
+      "child_birth": 327,
+      "child": {
+        "key": 205,
+        "wave": 31,
+        "born": 327,
+        "age": 0,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "x": 3298,
+        "y": 4244,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 180,
+        "wave": 29,
+        "born": 272,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 15,
+        "x": 3298,
+        "y": 4244,
+        "lane": "south",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 287,
+          "role": 1,
+          "weapon": "SCYTHE",
+          "reason": "South big 29"
+        }
+      ],
+      "mage_idle_parent_examples": [],
+      "classification": "old_expiry"
+    },
+    {
+      "seed": "268077164744123",
+      "boss_ticks": 352,
+      "child_birth": 327,
+      "child": {
+        "key": 206,
+        "wave": 31,
+        "born": 327,
+        "age": 0,
+        "style": "MELEE",
+        "big": false,
+        "hp": 8,
+        "x": 3299,
+        "y": 4245,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 180,
+        "wave": 29,
+        "born": 272,
+        "age": 54,
+        "style": "MELEE",
+        "big": true,
+        "hp": 15,
+        "x": 3298,
+        "y": 4244,
+        "lane": "south",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 287,
+          "role": 1,
+          "weapon": "SCYTHE",
+          "reason": "South big 29"
+        }
+      ],
+      "mage_idle_parent_examples": [],
+      "classification": "old_expiry"
+    },
+    {
+      "seed": "268077164744139",
+      "boss_ticks": 340,
+      "child_birth": 286,
+      "child": {
+        "key": 190,
+        "wave": 30,
+        "born": 286,
+        "age": 0,
+        "style": "MAGIC",
+        "big": false,
+        "hp": 8,
+        "x": 3299,
+        "y": 4244,
+        "lane": "split",
+        "dying": false,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent": {
+        "key": 176,
+        "wave": 29,
+        "born": 264,
+        "age": 21,
+        "style": "MELEE",
+        "big": true,
+        "hp": 0,
+        "x": 3298,
+        "y": 4243,
+        "lane": "south",
+        "dying": true,
+        "mageNull": false,
+        "rangerNull": false
+      },
+      "parent_attacks": [
+        {
+          "tick": 278,
+          "role": 1,
+          "weapon": "SCYTHE",
+          "reason": "South big 29"
+        }
+      ],
+      "mage_idle_parent_examples": [],
+      "classification": "old_combat_death"
+    }
+  ],
+  "caveat": "All rooms above336ticks. Terminal split children attributed only by the unique native SW/NE zero-age pair at parent removal. Counts are lifetimes, not independent rooms. Ready-clear examples require exact policy/native-action replay before claiming attackability."
+}

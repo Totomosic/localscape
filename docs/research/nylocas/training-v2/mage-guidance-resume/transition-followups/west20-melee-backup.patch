@@ -1,0 +1,26 @@
+--- age29-baseline/MageStrategy.java
++++ west20-melee-backup/MageStrategy.java
+@@ -620,9 +620,23 @@
+ 			|| (c.wave == 25 || c.wave == 26) && c.lane == Lane.WEST);
+ 	}
+ 
++	private static boolean west20MeleeBackup(Room room, Crab target, int tick)
++	{
++		int age = tick - target.born;
++		if (room.wave != 20 || !target.big || target.wave != 20 || target.lane != Lane.WEST
++			|| target.style != Style.MELEE || age < 7 || age >= 26) return false;
++		// Preserve the ranger's bow opening, then assist only after our own
++		// transition parents are dead, unavailable to us, or covered by real hits.
++		return room.crabs.stream().noneMatch(own -> own.big
++			&& (own.wave == 19 || own.wave == 20 && own.lane == Lane.SOUTH)
++			&& own.hp > 0 && !own.dying && !own.nulled && tick - own.born < 49
++			&& own.pendingDamage < own.hp);
++	}
++
+ 	private boolean finishBig(Crab c, Room room, int tick)
+ 	{
+ 		int age = tick - c.born;
++		if (west20MeleeBackup(room, c, tick)) return true;
+ 		// These parents remain assigned after their initial rotation window.
+ 		// Bad damage, travel or a blocked packet must not abandon an unopened big.
+ 		if (requiredBig(c) && (c.wave != 23 || age >= 7)) return true;

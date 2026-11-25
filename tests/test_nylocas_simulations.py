@@ -90,6 +90,104 @@ class SimulationReportTests(unittest.TestCase):
                 self.assertEqual(report["metrics_all_trials"][metric]["mean"], 2)
                 self.assertIn(f"{label} **2.00**", markdown)
 
+    def test_max_hit_report_is_explicitly_excluded_from_randomized_benchmark(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            row = self.row("completed", 304)
+            source = root / "trials.csv"
+            with source.open("w", newline="") as output:
+                writer = csv.DictWriter(output, fieldnames=list(row))
+                writer.writeheader()
+                writer.writerow(row)
+            simulation.write_report(source, root, {"max_hit_diagnostic": True})
+            markdown = (root / "report.md").read_text()
+            self.assertIn("always-max-hit diagnostic", markdown)
+            self.assertIn("excluded from randomized benchmarks", markdown)
+            self.assertIn("minimum **182.40**", markdown)
+            self.assertIn("maximum **182.40**", markdown)
+
+    def test_training_uses_last_spawned_names_and_failures_cannot_meet_goals(self):
+        completed = self.row("completed", 315)
+        completed["pre_cap_stalls"] = "1"
+        counts = [0] * 31
+        counts[12], counts[28] = 1, 2
+        completed["stalls_by_last_spawned_wave"] = ";".join(map(str, counts))
+        failed = dict(completed, status="death", ticks="100")
+        goals = simulation.summarize([completed, failed])["training"]
+        self.assertEqual(goals["completed_pre_cap_at_most_one"], 1)
+        self.assertEqual(goals["completed_without_wave_21_to_27_stalls"], 1)
+        self.assertEqual(goals["completed_with_two_or_three_wave_28_stalls"], 1)
+        self.assertEqual(goals["stalls_by_last_spawned_wave"]["28"]["mean"], 2)
+        self.assertEqual(goals["consistency_denominator_all_trials"], 2)
+        self.assertEqual(goals["completed_boss_3m07_to_3m12"], 1)
+
+    def test_training_legacy_missing_wave_counters_remain_unknown(self):
+        goals = simulation.summarize([self.row("completed", 315)])["training"]
+        self.assertEqual(goals["completed_with_wave_counters"], 0)
+        self.assertIsNone(goals["stalls_by_last_spawned_wave"]["28"]["mean"])
+
+    def test_boss_average_excludes_whole_wave19_stall_rooms_but_keeps_raw_results(self):
+        clean = self.row("completed", 310)
+        clean["stalls_by_last_spawned_wave"] = ";".join(map(str, [0] * 31))
+        counts = [0] * 31
+        counts[19] = 4
+        stalled = dict(clean, ticks="350", stalls_by_last_spawned_wave=";".join(map(str, counts)))
+        failed = dict(stalled, status="death", ticks="100")
+        report = simulation.summarize([clean, stalled, failed])
+        benchmark = report["boss_time_benchmark"]
+        self.assertEqual(benchmark["completion_ticks"]["mean"], 310)
+        self.assertEqual(benchmark["eligible_completed_trials"], 1)
+        self.assertEqual(benchmark["excluded_completed_wave19_stall_trials"], 1)
+        self.assertEqual(benchmark["wave19_policy_failure_trials"], 2)
+        self.assertFalse(benchmark["wave19_zero_stall_goal_met"])
+        self.assertEqual(report["completion_ticks"]["mean"], 330)
+        self.assertEqual(report["training"]["stalls_by_last_spawned_wave"]["19"]["mean"], 2)
+        self.assertEqual(report["completion_rate"], 2 / 3)
+
+    def test_unknown_wave_counters_cannot_establish_a_clean_boss_time_sample(self):
+        benchmark = simulation.summarize([self.row("completed", 300)])["boss_time_benchmark"]
+        self.assertEqual(benchmark["eligible_completed_trials"], 0)
+        self.assertEqual(benchmark["completed_without_wave_counter_evidence"], 1)
+        self.assertFalse(benchmark["wave19_zero_stall_goal_met"])
+        self.assertIsNone(benchmark["completion_ticks"]["mean"])
+
+    def test_3m22_reliability_counts_all_rooms_and_respects_tick_boundary(self):
+        clean = self.row("completed", 336)
+        counts = [0] * 31
+        counts[19] = 1
+        stalled = dict(clean, stalls_by_last_spawned_wave=";".join(map(str, counts)))
+        late = self.row("completed", 337)
+        failed = self.row("death", 100)
+        goals = simulation.summarize([clean, stalled, late, failed])["training"]
+        self.assertEqual(goals["completed_boss_at_most_3m22"], 2)
+        self.assertEqual(goals["boss_at_most_3m22_rate_all_trials"], 0.5)
+        self.assertFalse(goals["boss_95pct_at_most_3m22_goal_met"])
+
+    def test_3m22_goal_requires_95_percent_and_does_not_pass_empty_samples(self):
+        fast = self.row("completed", 336)
+        slow = self.row("completed", 340)
+        self.assertTrue(simulation.summarize([fast] * 19 + [slow])["training"]["boss_95pct_at_most_3m22_goal_met"])
+        self.assertFalse(simulation.summarize([fast] * 18 + [slow] * 2)["training"]["boss_95pct_at_most_3m22_goal_met"])
+        self.assertFalse(simulation.summarize([])["training"]["boss_95pct_at_most_3m22_goal_met"])
+
+    def test_thrall_statistics_preserve_zero_damage_and_missing_legacy_measurements(self):
+        legacy = self.row("completed", 315)
+        current = dict(legacy, ranger_thrall_impacts="4", ranger_thrall_damage="0",
+                       mage_thrall_impacts="7", mage_thrall_damage="9")
+        report = simulation.summarize([legacy, current])["thralls_all_trials"]
+        self.assertEqual(report["ranger"]["applied_damage"]["mean"], 0)
+        self.assertEqual(report["mage"]["applied_damage"]["mean"], 9)
+        self.assertEqual(report["ranger"]["impacts"]["mean"], 4)
+        self.assertIsNone(simulation.summarize([legacy])["thralls_all_trials"]["mage"]["impacts"]["mean"])
+
+    def test_overlapping_flights_preserve_zero_and_missing_legacy_measurements(self):
+        legacy = self.row("completed", 315)
+        legacy.pop("overlapping_primary_flights")
+        current = dict(legacy, overlapping_primary_flights="0")
+        metric = "overlapping_primary_flights"
+        self.assertEqual(simulation.summarize([legacy, current])["metrics_all_trials"][metric]["mean"], 0)
+        self.assertIsNone(simulation.summarize([legacy])["metrics_all_trials"][metric]["mean"])
+
     def test_client_sync_keeps_policy_tests_and_purges_retired_agent_plugins(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

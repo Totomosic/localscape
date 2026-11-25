@@ -1,0 +1,513 @@
+{
+  "endpoint": "Nylocas boss spawn (waves and cleanup only)",
+  "training": {
+    "stall_naming": "last wave actually spawned; wave 28 retries admission to 29",
+    "completed_with_wave_counters": 100,
+    "stalls_by_last_spawned_wave": {
+      "1": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "2": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "3": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "4": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "5": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "6": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "7": {
+        "mean": 0.02,
+        "median": 0.0,
+        "min": 0,
+        "max": 1,
+        "p95": 0
+      },
+      "8": {
+        "mean": 0.11,
+        "median": 0.0,
+        "min": 0,
+        "max": 1,
+        "p95": 1
+      },
+      "9": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "10": {
+        "mean": 0.24,
+        "median": 0.0,
+        "min": 0,
+        "max": 3,
+        "p95": 2
+      },
+      "11": {
+        "mean": 0.43,
+        "median": 0.0,
+        "min": 0,
+        "max": 3,
+        "p95": 2
+      },
+      "12": {
+        "mean": 1.06,
+        "median": 1.0,
+        "min": 0,
+        "max": 3,
+        "p95": 2
+      },
+      "13": {
+        "mean": 0.06,
+        "median": 0.0,
+        "min": 0,
+        "max": 1,
+        "p95": 1
+      },
+      "14": {
+        "mean": 0.06,
+        "median": 0.0,
+        "min": 0,
+        "max": 1,
+        "p95": 1
+      },
+      "15": {
+        "mean": 0.33,
+        "median": 0.0,
+        "min": 0,
+        "max": 2,
+        "p95": 1
+      },
+      "16": {
+        "mean": 0.57,
+        "median": 0.0,
+        "min": 0,
+        "max": 3,
+        "p95": 2
+      },
+      "17": {
+        "mean": 0.09,
+        "median": 0.0,
+        "min": 0,
+        "max": 1,
+        "p95": 1
+      },
+      "18": {
+        "mean": 0.01,
+        "median": 0.0,
+        "min": 0,
+        "max": 1,
+        "p95": 0
+      },
+      "19": {
+        "mean": 0.44,
+        "median": 0.0,
+        "min": 0,
+        "max": 5,
+        "p95": 4
+      },
+      "20": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "21": {
+        "mean": 0.19,
+        "median": 0.0,
+        "min": 0,
+        "max": 2,
+        "p95": 1
+      },
+      "22": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "23": {
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "p95": 0
+      },
+      "24": {
+        "mean": 0.02,
+        "median": 0.0,
+        "min": 0,
+        "max": 1,
+        "p95": 0
+      },
+      "25": {
+        "mean": 0.04,
+        "median": 0.0,
+        "min": 0,
+        "max": 2,
+        "p95": 0
+      },
+      "26": {
+        "mean": 0.04,
+        "median": 0.0,
+        "min": 0,
+        "max": 1,
+        "p95": 0
+      },
+      "27": {
+        "mean": 0.04,
+        "median": 0.0,
+        "min": 0,
+        "max": 1,
+        "p95": 0
+      },
+      "28": {
+        "mean": 2.02,
+        "median": 2.0,
+        "min": 0,
+        "max": 5,
+        "p95": 5
+      },
+      "29": {
+        "mean": 2.24,
+        "median": 2.0,
+        "min": 0,
+        "max": 6,
+        "p95": 4
+      },
+      "30": {
+        "mean": 1.67,
+        "median": 1.0,
+        "min": 0,
+        "max": 6,
+        "p95": 5
+      }
+    },
+    "completed_pre_cap_at_most_one": 8,
+    "completed_without_wave_21_to_27_stalls": 73,
+    "completed_with_two_or_three_wave_28_stalls": 53,
+    "completed_boss_3m07_to_3m12": 8,
+    "completed_boss_over_3m14": 92,
+    "consistency_denominator_all_trials": 100,
+    "boss_mean_target_ticks": 315
+  },
+  "trials": 100,
+  "completed": 100,
+  "deaths": 0,
+  "timeouts": 0,
+  "completion_rate": 1.0,
+  "terminal_resources_all_trials": {
+    "ranger_final_hp": {
+      "mean": 78.05,
+      "median": 78.5,
+      "min": 37,
+      "max": 99,
+      "p95": 92
+    },
+    "mage_final_hp": {
+      "mean": 84.39,
+      "median": 84.5,
+      "min": 67,
+      "max": 99,
+      "p95": 99
+    },
+    "ranger_final_energy": {
+      "mean": 9994.63,
+      "median": 10000.0,
+      "min": 9712,
+      "max": 10000,
+      "p95": 10000
+    },
+    "mage_final_energy": {
+      "mean": 4284.68,
+      "median": 4236.0,
+      "min": 979,
+      "max": 6743,
+      "p95": 6198
+    },
+    "ranger_food_remaining": {
+      "mean": 3.91,
+      "median": 4.0,
+      "min": 0,
+      "max": 5,
+      "p95": 5
+    },
+    "mage_food_remaining": {
+      "mean": 4.27,
+      "median": 4.0,
+      "min": 1,
+      "max": 5,
+      "p95": 5
+    },
+    "ranger_final_magic": {
+      "mean": 112,
+      "median": 112.0,
+      "min": 112,
+      "max": 112,
+      "p95": 112
+    },
+    "mage_final_magic": {
+      "mean": 112,
+      "median": 112.0,
+      "min": 112,
+      "max": 112,
+      "p95": 112
+    }
+  },
+  "thralls_all_trials": {
+    "ranger": {
+      "impacts": {
+        "mean": 9.58,
+        "median": 9.0,
+        "min": 2,
+        "max": 25,
+        "p95": 15
+      },
+      "applied_damage": {
+        "mean": 4.12,
+        "median": 4.0,
+        "min": 0,
+        "max": 14,
+        "p95": 10
+      }
+    },
+    "mage": {
+      "impacts": {
+        "mean": 18.74,
+        "median": 20.0,
+        "min": 3,
+        "max": 32,
+        "p95": 26
+      },
+      "applied_damage": {
+        "mean": 9.09,
+        "median": 9.0,
+        "min": 0,
+        "max": 21,
+        "p95": 19
+      }
+    }
+  },
+  "completion_ticks": {
+    "mean": 333.84,
+    "median": 332.0,
+    "min": 316,
+    "max": 360,
+    "p95": 352
+  },
+  "completion_game_seconds": {
+    "mean": 200.304,
+    "median": 199.2,
+    "min": 189.6,
+    "max": 216.0,
+    "p95": 211.2
+  },
+  "trial_wall_seconds": 22.841524878,
+  "trials_per_second": 4.377991422819402,
+  "completed_ready_idle": {
+    "mage": {
+      "mean": 34.84,
+      "median": 34.0,
+      "min": 20,
+      "max": 54,
+      "p95": 47,
+      "under_20": 0,
+      "trials": 100,
+      "under_20_rate": 0.0
+    },
+    "ranger": {
+      "mean": 27.45,
+      "median": 27.0,
+      "min": 9,
+      "max": 52,
+      "p95": 41,
+      "under_20": 13,
+      "trials": 100,
+      "under_20_rate": 0.13
+    }
+  },
+  "metrics_all_trials": {
+    "ranger_attacks": {
+      "mean": 112,
+      "median": 112.0,
+      "min": 102,
+      "max": 125,
+      "p95": 120
+    },
+    "mage_attacks": {
+      "mean": 75.15,
+      "median": 75.0,
+      "min": 70,
+      "max": 84,
+      "p95": 79
+    },
+    "ranger_idle_ticks": {
+      "mean": 199.48,
+      "median": 199.0,
+      "min": 183,
+      "max": 221,
+      "p95": 213
+    },
+    "mage_idle_ticks": {
+      "mean": 235.33,
+      "median": 233.5,
+      "min": 222,
+      "max": 259,
+      "p95": 252
+    },
+    "ranger_ready_idle_ticks": {
+      "mean": 27.45,
+      "median": 27.0,
+      "min": 9,
+      "max": 52,
+      "p95": 41
+    },
+    "mage_ready_idle_ticks": {
+      "mean": 34.84,
+      "median": 34.0,
+      "min": 20,
+      "max": 54,
+      "p95": 47
+    },
+    "same_tick_double_ups": {
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "p95": 0
+    },
+    "shared_targets": {
+      "mean": 4.58,
+      "median": 5.0,
+      "min": 0,
+      "max": 12,
+      "p95": 7
+    },
+    "positive_damage_rolls": {
+      "mean": 242.25,
+      "median": 242.0,
+      "min": 225,
+      "max": 260,
+      "p95": 253
+    },
+    "pre_cap_stalls": {
+      "mean": 3.42,
+      "median": 3.0,
+      "min": 1,
+      "max": 10,
+      "p95": 8
+    },
+    "post_cap_stalls": {
+      "mean": 6.26,
+      "median": 6.0,
+      "min": 4,
+      "max": 10,
+      "p95": 9
+    },
+    "pre_29_stalls": {
+      "mean": 3.75,
+      "median": 3.0,
+      "min": 1,
+      "max": 10,
+      "p95": 9
+    },
+    "wave_29_stalls": {
+      "mean": 2.02,
+      "median": 2.0,
+      "min": 0,
+      "max": 5,
+      "p95": 5
+    },
+    "overlapping_primary_flights": {
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "p95": 0
+    }
+  },
+  "run": {
+    "seed": 131,
+    "max_ticks": 2000,
+    "idle_window": "each role's first confirmed attack through the final living nylo's death",
+    "invocation_seconds": 42.766151144000105,
+    "policy_sha256": {
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/mage/MageStrategy.java": "92eed2dacf878ffd17cf33cf713e366f8b863f58158f72ff4a6f35beff5fe108",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "fecca8f0a4bc6a4d3054f0e4cff9de1427edfa16e958ce4f470b8676114c176c",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "2c4e0e554dccb77bd4a5a972c37ab43e35ed49fde304ddbeafa77a0007677d7e"
+    },
+    "fixture": {
+      "base_stats": 99,
+      "agility": 99,
+      "starting_run_energy": 10000,
+      "starting_hitpoints": 99,
+      "prayer_potions_four_dose_per_player": 4,
+      "prayer_threshold": 25,
+      "special_energy": "normal regeneration with Lightbearer",
+      "inventory_input_bridge": "HeldOpScript; shared supply-fixture contract verified",
+      "prepot": true,
+      "server_boosts": true,
+      "native_utilities": true,
+      "extra_dinh_25": false,
+      "defer_mage_thrall_renewal": false,
+      "manta_rays_once_per_player": 5,
+      "food_hp_threshold": 65,
+      "damage": "randomized",
+      "gear": "role loadouts from mage-strategy.md and range-strategy.md; see adapter"
+    },
+    "adapter_sha256": {
+      "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasServerAgents.kt": "9aaacf4e2f517cba97d7f6a196ece73004ce14318de15133f2b7315811399bb2",
+      "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationTest.kt": "a728c15d6277a597bb835f60846884c376f8860ef8f28780d3894099f5880be6",
+      "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationAreas.kt": "d37dacf487cfbabbdcb9ebd6b05b2c1d702040c2b6c16be727a16fb269d95cdc",
+      "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationStalls.kt": "329a5e818dc2468b408f1a60e4038845a06e20b700611eb9c456f928d86e0149",
+      "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationSupplies.kt": "c8dfa7b030428845b720ee3f682ad01c1cc85011c6ec8f0868beb5068e18cc41",
+      "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotClient.kt": "9ddb23023dde2cc1e68fde50393ec78261ee98a35bb7a5e28aff4a4037dee507",
+      "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotController.kt": "7310e25a143e694468faf0d7e7d01b2261f655b30f04a6131efbfd6bf5f6dbe9",
+      "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotInputs.kt": "95146bf352cf71037add4d007556f8c49758b9910959cb3d71316671cb311908",
+      "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotService.kt": "e02deeec5c72833630109f5012f5caf0a152f877cfc7c73795bf4e69a65eac5f",
+      "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotUtilities.kt": "d1583befd909017775cf34cd120c06085383c2fe41c47f999dec388df29db77f",
+      "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotUtilitySupplies.kt": "937de43b61928fda25e638630dabe5dabc22c28826db5704ceeb5bfde916d6f2",
+      "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasCombatIdle.kt": "ba19211218d4ac9cc21c623ae91d79cfe9cac43e55f6313a36850f531994413f",
+      "content/other/login/src/main/kotlin/org/rsmod/content/other/login/LoginScript.kt": "ed82d01a241076816811ea3208a8792ee8c3518d1232120e3e22e5a35985a99f",
+      "api/stats-plugin/src/main/kotlin/org/rsmod/api/stats/plugin/StatRegenScript.kt": "2ea612b185d3052ec9e80e0abb98bde3509e9ddf8220bd7f17a9dcdd22ed33c9"
+    }
+  }
+}

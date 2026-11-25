@@ -1,0 +1,12 @@
+--- .state/simulations/training-v2-flight-fresh-intent-100/policy-source/org/localscape/nylocas/mage/MageStrategy.java
++++ .state/simulations/training-v2-flight-fresh-intent-100/policy-source/org/localscape/nylocas/mage/MageStrategy.java
+@@ -545,6 +545,9 @@
+ 	private boolean finishBig(Crab c, Room room, int tick)
+ 	{
+ 		int age = tick - c.born;
++		// The ranger's wave-18 pipe window ends at 26, when these bigs become magic.
++		// Rescue that transition survivor before 21, subject to ordinary flight and packet budgets.
++		if (room.wave >= 19 && room.wave <= 20 && c.wave == 18 && c.big && age >= 26 && c.style == Style.MAGIC) return true;
+ 		if (opened.contains(c.key) && ASSIGNMENTS.stream().anyMatch(a -> a.big && a.matches(c))
+ 			&& (room.wave < 21 || c.wave >= 20 || age < 26)) return true;
+ 		// Post-Dinh recovery: the east wave-22 fighting big, or west melee big,

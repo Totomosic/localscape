@@ -1,0 +1,1929 @@
+{
+  "run": ".state/simulations/training-v2-flight-ranger-guidance-100",
+  "rooms": 100,
+  "nativeReadyFreshTargetObservations": 108,
+  "nativeReadyFreshFrames": 80,
+  "nativeReadyFreshRooms": 35,
+  "conservativeReturnTargetObservations": 83,
+  "conservativeReturnFrames": 58,
+  "conservativeReturnRooms": 24,
+  "byIdleReason": {
+    "Prepare South opener 20": 10,
+    "Reserve East barrage 11": 6,
+    "Clear complete; stage": 32,
+    "Prepare West big 19": 35
+  },
+  "opportunities": [
+    {
+      "trial": 9,
+      "seed": 140,
+      "tick": 161,
+      "wave": 19,
+      "key": 94,
+      "age": 1,
+      "hp": 8,
+      "distance": 3,
+      "reason": "Prepare South opener 20",
+      "magePoint": [
+        3296,
+        4243
+      ],
+      "crabPoint": [
+        3296,
+        4240
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 9,
+      "seed": 140,
+      "tick": 162,
+      "wave": 19,
+      "key": 94,
+      "age": 2,
+      "hp": 8,
+      "distance": 2,
+      "reason": "Prepare South opener 20",
+      "magePoint": [
+        3296,
+        4243
+      ],
+      "crabPoint": [
+        3296,
+        4241
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -1
+    },
+    {
+      "trial": 9,
+      "seed": 140,
+      "tick": 163,
+      "wave": 19,
+      "key": 94,
+      "age": 3,
+      "hp": 8,
+      "distance": 1,
+      "reason": "Prepare South opener 20",
+      "magePoint": [
+        3296,
+        4243
+      ],
+      "crabPoint": [
+        3296,
+        4242
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -2
+    },
+    {
+      "trial": 11,
+      "seed": 142,
+      "tick": 72,
+      "wave": 10,
+      "key": 43,
+      "age": 0,
+      "hp": 8,
+      "distance": 3,
+      "reason": "Reserve East barrage 11",
+      "magePoint": [
+        3296,
+        4246
+      ],
+      "crabPoint": [
+        3293,
+        4248
+      ],
+      "packet": "East barrage 11",
+      "packetDue": 76,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 13,
+      "seed": 144,
+      "tick": 143,
+      "wave": 17,
+      "key": 85,
+      "age": 0,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -4
+    },
+    {
+      "trial": 13,
+      "seed": 144,
+      "tick": 143,
+      "wave": 17,
+      "key": 86,
+      "age": 0,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3293,
+        4244
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -4
+    },
+    {
+      "trial": 13,
+      "seed": 144,
+      "tick": 144,
+      "wave": 17,
+      "key": 85,
+      "age": 1,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4244
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -5
+    },
+    {
+      "trial": 13,
+      "seed": 144,
+      "tick": 144,
+      "wave": 17,
+      "key": 86,
+      "age": 1,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3294,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -5
+    },
+    {
+      "trial": 13,
+      "seed": 144,
+      "tick": 145,
+      "wave": 17,
+      "key": 85,
+      "age": 2,
+      "hp": 8,
+      "distance": 3,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3293,
+        4245
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -6
+    },
+    {
+      "trial": 13,
+      "seed": 144,
+      "tick": 145,
+      "wave": 17,
+      "key": 86,
+      "age": 2,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3295,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -6
+    },
+    {
+      "trial": 13,
+      "seed": 144,
+      "tick": 146,
+      "wave": 17,
+      "key": 85,
+      "age": 3,
+      "hp": 8,
+      "distance": 3,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3294,
+        4245
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -7
+    },
+    {
+      "trial": 13,
+      "seed": 144,
+      "tick": 146,
+      "wave": 17,
+      "key": 86,
+      "age": 3,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3296,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -7
+    },
+    {
+      "trial": 13,
+      "seed": 144,
+      "tick": 147,
+      "wave": 17,
+      "key": 86,
+      "age": 4,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3297,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -8
+    },
+    {
+      "trial": 19,
+      "seed": 150,
+      "tick": 152,
+      "wave": 18,
+      "key": 86,
+      "age": 1,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 19,
+      "seed": 150,
+      "tick": 153,
+      "wave": 18,
+      "key": 86,
+      "age": 2,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3293,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -1
+    },
+    {
+      "trial": 19,
+      "seed": 150,
+      "tick": 154,
+      "wave": 18,
+      "key": 85,
+      "age": 3,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3295,
+        4245
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -2
+    },
+    {
+      "trial": 19,
+      "seed": 150,
+      "tick": 154,
+      "wave": 18,
+      "key": 86,
+      "age": 3,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -2
+    },
+    {
+      "trial": 20,
+      "seed": 151,
+      "tick": 163,
+      "wave": 19,
+      "key": 93,
+      "age": 0,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Prepare South opener 20",
+      "magePoint": [
+        3296,
+        4243
+      ],
+      "crabPoint": [
+        3292,
+        4246
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -1
+    },
+    {
+      "trial": 20,
+      "seed": 151,
+      "tick": 163,
+      "wave": 19,
+      "key": 94,
+      "age": 0,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Prepare South opener 20",
+      "magePoint": [
+        3296,
+        4243
+      ],
+      "crabPoint": [
+        3293,
+        4247
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -1
+    },
+    {
+      "trial": 24,
+      "seed": 155,
+      "tick": 74,
+      "wave": 10,
+      "key": 44,
+      "age": 0,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Reserve East barrage 11",
+      "magePoint": [
+        3297,
+        4250
+      ],
+      "crabPoint": [
+        3292,
+        4247
+      ],
+      "packet": "East barrage 11",
+      "packetDue": 76,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 25,
+      "seed": 156,
+      "tick": 143,
+      "wave": 18,
+      "key": 88,
+      "age": 0,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 25,
+      "seed": 156,
+      "tick": 143,
+      "wave": 18,
+      "key": 89,
+      "age": 0,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3293,
+        4244
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 25,
+      "seed": 156,
+      "tick": 144,
+      "wave": 18,
+      "key": 89,
+      "age": 1,
+      "hp": 8,
+      "distance": 3,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3294,
+        4245
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -1
+    },
+    {
+      "trial": 25,
+      "seed": 156,
+      "tick": 145,
+      "wave": 18,
+      "key": 89,
+      "age": 2,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3295,
+        4246
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -2
+    },
+    {
+      "trial": 25,
+      "seed": 156,
+      "tick": 146,
+      "wave": 18,
+      "key": 88,
+      "age": 3,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3295,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -3
+    },
+    {
+      "trial": 25,
+      "seed": 156,
+      "tick": 147,
+      "wave": 18,
+      "key": 88,
+      "age": 4,
+      "hp": 7,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3296,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -4
+    },
+    {
+      "trial": 29,
+      "seed": 160,
+      "tick": 144,
+      "wave": 18,
+      "key": 86,
+      "age": 1,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3294,
+        4244
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 29,
+      "seed": 160,
+      "tick": 145,
+      "wave": 18,
+      "key": 86,
+      "age": 2,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3293,
+        4248
+      ],
+      "crabPoint": [
+        3295,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -1
+    },
+    {
+      "trial": 29,
+      "seed": 160,
+      "tick": 146,
+      "wave": 18,
+      "key": 86,
+      "age": 3,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3296,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -2
+    },
+    {
+      "trial": 29,
+      "seed": 160,
+      "tick": 147,
+      "wave": 18,
+      "key": 85,
+      "age": 4,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3294,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -3
+    },
+    {
+      "trial": 30,
+      "seed": 161,
+      "tick": 136,
+      "wave": 17,
+      "key": 83,
+      "age": 3,
+      "hp": 8,
+      "distance": 3,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4249
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 30,
+      "seed": 161,
+      "tick": 136,
+      "wave": 17,
+      "key": 84,
+      "age": 3,
+      "hp": 8,
+      "distance": 2,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3293,
+        4250
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 30,
+      "seed": 161,
+      "tick": 137,
+      "wave": 17,
+      "key": 84,
+      "age": 4,
+      "hp": 8,
+      "distance": 3,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4251
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -1
+    },
+    {
+      "trial": 33,
+      "seed": 164,
+      "tick": 78,
+      "wave": 10,
+      "key": 42,
+      "age": 4,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Reserve East barrage 11",
+      "magePoint": [
+        3301,
+        4249
+      ],
+      "crabPoint": [
+        3296,
+        4248
+      ],
+      "packet": "East barrage 11",
+      "packetDue": 80,
+      "returnFits": true,
+      "nativeDelay": -3
+    },
+    {
+      "trial": 40,
+      "seed": 171,
+      "tick": 150,
+      "wave": 18,
+      "key": 88,
+      "age": 3,
+      "hp": 8,
+      "distance": 2,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4246
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 42,
+      "seed": 173,
+      "tick": 82,
+      "wave": 10,
+      "key": 45,
+      "age": 0,
+      "hp": 8,
+      "distance": 2,
+      "reason": "Reserve East barrage 11",
+      "magePoint": [
+        3301,
+        4249
+      ],
+      "crabPoint": [
+        3303,
+        4249
+      ],
+      "packet": "East barrage 11",
+      "packetDue": 84,
+      "returnFits": true,
+      "nativeDelay": -2
+    },
+    {
+      "trial": 51,
+      "seed": 182,
+      "tick": 74,
+      "wave": 10,
+      "key": 45,
+      "age": 0,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Reserve East barrage 11",
+      "magePoint": [
+        3298,
+        4247
+      ],
+      "crabPoint": [
+        3293,
+        4248
+      ],
+      "packet": "East barrage 11",
+      "packetDue": 76,
+      "returnFits": true,
+      "nativeDelay": -2
+    },
+    {
+      "trial": 58,
+      "seed": 189,
+      "tick": 135,
+      "wave": 17,
+      "key": 81,
+      "age": 0,
+      "hp": 8,
+      "distance": 3,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3294,
+        4245
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -2
+    },
+    {
+      "trial": 58,
+      "seed": 189,
+      "tick": 135,
+      "wave": 17,
+      "key": 82,
+      "age": 0,
+      "hp": 8,
+      "distance": 2,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3295,
+        4246
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -2
+    },
+    {
+      "trial": 58,
+      "seed": 189,
+      "tick": 136,
+      "wave": 17,
+      "key": 82,
+      "age": 1,
+      "hp": 8,
+      "distance": 1,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3294,
+        4247
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -3
+    },
+    {
+      "trial": 58,
+      "seed": 189,
+      "tick": 136,
+      "wave": 17,
+      "key": 83,
+      "age": 0,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3291,
+        4245
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -3
+    },
+    {
+      "trial": 58,
+      "seed": 189,
+      "tick": 136,
+      "wave": 17,
+      "key": 84,
+      "age": 0,
+      "hp": 8,
+      "distance": 3,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4246
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -3
+    },
+    {
+      "trial": 58,
+      "seed": 189,
+      "tick": 137,
+      "wave": 17,
+      "key": 82,
+      "age": 2,
+      "hp": 8,
+      "distance": 2,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3293,
+        4248
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -4
+    },
+    {
+      "trial": 58,
+      "seed": 189,
+      "tick": 137,
+      "wave": 17,
+      "key": 83,
+      "age": 1,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3290,
+        4246
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -4
+    },
+    {
+      "trial": 58,
+      "seed": 189,
+      "tick": 137,
+      "wave": 17,
+      "key": 84,
+      "age": 1,
+      "hp": 8,
+      "distance": 2,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3293,
+        4247
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -4
+    },
+    {
+      "trial": 58,
+      "seed": 189,
+      "tick": 138,
+      "wave": 17,
+      "key": 81,
+      "age": 3,
+      "hp": 8,
+      "distance": 1,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3296,
+        4248
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -5
+    },
+    {
+      "trial": 58,
+      "seed": 189,
+      "tick": 138,
+      "wave": 17,
+      "key": 82,
+      "age": 3,
+      "hp": 8,
+      "distance": 3,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4249
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -5
+    },
+    {
+      "trial": 58,
+      "seed": 189,
+      "tick": 138,
+      "wave": 17,
+      "key": 83,
+      "age": 2,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3291,
+        4245
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -5
+    },
+    {
+      "trial": 58,
+      "seed": 189,
+      "tick": 138,
+      "wave": 17,
+      "key": 84,
+      "age": 2,
+      "hp": 8,
+      "distance": 1,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3294,
+        4248
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -5
+    },
+    {
+      "trial": 62,
+      "seed": 193,
+      "tick": 132,
+      "wave": 17,
+      "key": 81,
+      "age": 0,
+      "hp": 8,
+      "distance": 3,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3294,
+        4245
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 62,
+      "seed": 193,
+      "tick": 132,
+      "wave": 17,
+      "key": 82,
+      "age": 0,
+      "hp": 8,
+      "distance": 2,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3295,
+        4246
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 62,
+      "seed": 193,
+      "tick": 133,
+      "wave": 17,
+      "key": 82,
+      "age": 1,
+      "hp": 8,
+      "distance": 1,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3294,
+        4247
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -1
+    },
+    {
+      "trial": 64,
+      "seed": 195,
+      "tick": 139,
+      "wave": 17,
+      "key": 85,
+      "age": 0,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3296,
+        4246
+      ],
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 64,
+      "seed": 195,
+      "tick": 139,
+      "wave": 17,
+      "key": 86,
+      "age": 0,
+      "hp": 8,
+      "distance": 3,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3296,
+        4246
+      ],
+      "crabPoint": [
+        3293,
+        4244
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 64,
+      "seed": 195,
+      "tick": 140,
+      "wave": 18,
+      "key": 85,
+      "age": 1,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -1
+    },
+    {
+      "trial": 64,
+      "seed": 195,
+      "tick": 140,
+      "wave": 18,
+      "key": 86,
+      "age": 1,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3294,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -1
+    },
+    {
+      "trial": 64,
+      "seed": 195,
+      "tick": 141,
+      "wave": 18,
+      "key": 86,
+      "age": 2,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3293,
+        4248
+      ],
+      "crabPoint": [
+        3295,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -2
+    },
+    {
+      "trial": 64,
+      "seed": 195,
+      "tick": 142,
+      "wave": 18,
+      "key": 86,
+      "age": 3,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3296,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -3
+    },
+    {
+      "trial": 64,
+      "seed": 195,
+      "tick": 143,
+      "wave": 18,
+      "key": 85,
+      "age": 4,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -4
+    },
+    {
+      "trial": 65,
+      "seed": 196,
+      "tick": 143,
+      "wave": 18,
+      "key": 85,
+      "age": 4,
+      "hp": 8,
+      "distance": 1,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3290,
+        4247
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -2
+    },
+    {
+      "trial": 68,
+      "seed": 199,
+      "tick": 138,
+      "wave": 17,
+      "key": 86,
+      "age": 2,
+      "hp": 8,
+      "distance": 1,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3294,
+        4248
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 68,
+      "seed": 199,
+      "tick": 139,
+      "wave": 17,
+      "key": 86,
+      "age": 3,
+      "hp": 8,
+      "distance": 1,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3295,
+        4249
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -1
+    },
+    {
+      "trial": 68,
+      "seed": 199,
+      "tick": 140,
+      "wave": 18,
+      "key": 85,
+      "age": 4,
+      "hp": 8,
+      "distance": 1,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3295,
+        4247
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -2
+    },
+    {
+      "trial": 79,
+      "seed": 210,
+      "tick": 143,
+      "wave": 18,
+      "key": 88,
+      "age": 0,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -5
+    },
+    {
+      "trial": 79,
+      "seed": 210,
+      "tick": 143,
+      "wave": 18,
+      "key": 89,
+      "age": 0,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3293,
+        4244
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -5
+    },
+    {
+      "trial": 79,
+      "seed": 210,
+      "tick": 144,
+      "wave": 18,
+      "key": 88,
+      "age": 1,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3293,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -6
+    },
+    {
+      "trial": 79,
+      "seed": 210,
+      "tick": 144,
+      "wave": 18,
+      "key": 89,
+      "age": 1,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -6
+    },
+    {
+      "trial": 79,
+      "seed": 210,
+      "tick": 145,
+      "wave": 18,
+      "key": 89,
+      "age": 2,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -7
+    },
+    {
+      "trial": 79,
+      "seed": 210,
+      "tick": 146,
+      "wave": 18,
+      "key": 89,
+      "age": 3,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -8
+    },
+    {
+      "trial": 79,
+      "seed": 210,
+      "tick": 147,
+      "wave": 18,
+      "key": 88,
+      "age": 4,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3296,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -9
+    },
+    {
+      "trial": 80,
+      "seed": 211,
+      "tick": 143,
+      "wave": 18,
+      "key": 88,
+      "age": 4,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3296,
+        4246
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 80,
+      "seed": 211,
+      "tick": 143,
+      "wave": 18,
+      "key": 89,
+      "age": 4,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3296,
+        4244
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 82,
+      "seed": 213,
+      "tick": 137,
+      "wave": 17,
+      "key": 82,
+      "age": 4,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Clear complete; stage",
+      "magePoint": [
+        3295,
+        4248
+      ],
+      "crabPoint": [
+        3296,
+        4243
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 85,
+      "seed": 216,
+      "tick": 156,
+      "wave": 19,
+      "key": 95,
+      "age": 0,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare South opener 20",
+      "magePoint": [
+        3296,
+        4243
+      ],
+      "crabPoint": [
+        3295,
+        4238
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -2
+    },
+    {
+      "trial": 85,
+      "seed": 216,
+      "tick": 157,
+      "wave": 19,
+      "key": 95,
+      "age": 1,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Prepare South opener 20",
+      "magePoint": [
+        3296,
+        4243
+      ],
+      "crabPoint": [
+        3295,
+        4239
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -3
+    },
+    {
+      "trial": 86,
+      "seed": 217,
+      "tick": 74,
+      "wave": 10,
+      "key": 45,
+      "age": 0,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Reserve East barrage 11",
+      "magePoint": [
+        3297,
+        4250
+      ],
+      "crabPoint": [
+        3293,
+        4248
+      ],
+      "packet": "East barrage 11",
+      "packetDue": 76,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 88,
+      "seed": 219,
+      "tick": 145,
+      "wave": 18,
+      "key": 88,
+      "age": 2,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3292,
+        4244
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 88,
+      "seed": 219,
+      "tick": 145,
+      "wave": 18,
+      "key": 89,
+      "age": 2,
+      "hp": 8,
+      "distance": 1,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3291,
+        4247
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": 0
+    },
+    {
+      "trial": 88,
+      "seed": 219,
+      "tick": 146,
+      "wave": 18,
+      "key": 89,
+      "age": 3,
+      "hp": 8,
+      "distance": 1,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3290,
+        4248
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -1
+    },
+    {
+      "trial": 88,
+      "seed": 219,
+      "tick": 147,
+      "wave": 18,
+      "key": 89,
+      "age": 4,
+      "hp": 8,
+      "distance": 1,
+      "reason": "Prepare West big 19",
+      "magePoint": [
+        3291,
+        4248
+      ],
+      "crabPoint": [
+        3290,
+        4249
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -2
+    },
+    {
+      "trial": 88,
+      "seed": 219,
+      "tick": 169,
+      "wave": 19,
+      "key": 96,
+      "age": 3,
+      "hp": 8,
+      "distance": 5,
+      "reason": "Prepare South opener 20",
+      "magePoint": [
+        3296,
+        4243
+      ],
+      "crabPoint": [
+        3296,
+        4248
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -1
+    },
+    {
+      "trial": 88,
+      "seed": 219,
+      "tick": 169,
+      "wave": 19,
+      "key": 97,
+      "age": 0,
+      "hp": 8,
+      "distance": 4,
+      "reason": "Prepare South opener 20",
+      "magePoint": [
+        3296,
+        4243
+      ],
+      "crabPoint": [
+        3292,
+        4244
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -1
+    },
+    {
+      "trial": 88,
+      "seed": 219,
+      "tick": 169,
+      "wave": 19,
+      "key": 98,
+      "age": 0,
+      "hp": 8,
+      "distance": 3,
+      "reason": "Prepare South opener 20",
+      "magePoint": [
+        3296,
+        4243
+      ],
+      "crabPoint": [
+        3293,
+        4245
+      ],
+      "packet": null,
+      "packetDue": null,
+      "returnFits": true,
+      "nativeDelay": -1
+    }
+  ],
+  "sourceLogSha256": "2144d5451deeedf7dfc84b422b0031485a639eb08ff6486c1dc63411d6f94233",
+  "semantics": "Screen uses targetless normal-policy staging, policy-ready and native action delay<=0, actual1..19, RANGE SPLIT small age0..4, positiveHP/non-dying, neither-role NULL, no ownflight/partnerclaim, distance<=5. Mandatory packet due and conservative current-position return are reconstructed for East11/Scythe12 staging. LOS is not exposed by trace; immediate native feasibility and food blocking must be validated in the candidate run. Target observations can share one frame and are not independent saved attacks."
+}

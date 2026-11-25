@@ -1,0 +1,77 @@
+--- client/src/test/java/org/localscape/nylocas/mage/MageStrategyTest.java
++++ client/src/test/java/org/localscape/nylocas/mage/MageStrategyTest.java
+@@ -745,4 +745,74 @@
+ 		assertNull(strategy.decide(r, 102).target);
+ 	}
+ 
++
++	@Test public void mageRescuesMagicWave18SurvivorDuring19And20()
++	{
++		Room r = room(19, 128, 3293, 4248);
++		Crab survivor = crab(r, 18, 120, Lane.EAST, 'S', true, Style.MAGIC, 3292, 4253); survivor.hp = 6;
++		Decision d = strategy.decide(r, 148);
++		assertSame(survivor, d.target); assertEquals(Weapon.EYE, d.weapon);
++		strategy.reset(); r.wave = 20; r.spawns[20] = 148;
++		assertSame(survivor, strategy.decide(r, 150).target);
++		// No ranger-presence flag is required: a human partner gets the same legal rescue.
++		assertFalse(survivor.partnerNulled);
++	}
++	@Test public void mageWave18RescueDoesNotStealEarlierRangeOrMeleeService()
++	{
++		Room r = room(19, 128, 3293, 4248);
++		Crab survivor = crab(r, 18, 120, Lane.EAST, 'S', true, Style.RANGE, 3292, 4253);
++		assertNull(strategy.decide(r, 145).target);
++		survivor.style = Style.MAGIC; assertNull(strategy.decide(r, 145).target);
++		survivor.style = Style.MELEE; assertNull(strategy.decide(r, 146).target);
++	}
++	@Test public void mageWave18RescueIsLimitedToActual19And20()
++	{
++		Room r = room(18, 120, 3293, 4248);
++		crab(r, 18, 120, Lane.EAST, 'S', true, Style.MAGIC, 3292, 4253);
++		assertNull(strategy.decide(r, 146).target);
++		r.wave = 21; r.spawns[21] = 156; assertNull(strategy.decide(r, 156).target);
++		r.wave = 22; r.spawns[22] = 164; assertNull(strategy.decide(r, 165).target);
++	}
++	@Test public void mageWave18RescueHonorsNullClaimsFlightAndLifetime()
++	{
++		Room r = room(19, 128, 3293, 4248);
++		Crab survivor = crab(r, 18, 120, Lane.EAST, 'S', true, Style.MAGIC, 3292, 4253);
++		survivor.nulled = true; assertNull(strategy.decide(r, 146).target);
++		survivor.nulled = false; survivor.claimedUntil = 150; assertNull(strategy.decide(r, 146).target);
++		survivor.claimedUntil = 0; survivor.ownHitUntil = 150; survivor.ownHitHp = 0;
++		assertNull(strategy.decide(r, 146).target);
++		survivor.ownHitUntil = 0; survivor.dying = true; assertNull(strategy.decide(r, 146).target);
++		survivor.dying = false; assertNull(strategy.decide(r, 169).target);
++	}
++	@Test public void mageWave18RescueKeepsWave21CooldownBudget()
++	{
++		Room r = room(20, 140, 3290, 4249);
++		Crab survivor = crab(r, 18, 120, Lane.EAST, 'S', true, Style.MAGIC, 3292, 4253);
++		assertSame(survivor, strategy.decide(r, 153).target);
++		Decision reserve = strategy.decide(r, 154);
++		assertNull(reserve.target); assertEquals(Weapon.BARRAGE, reserve.weapon);
++		assertEquals(MageStrategy.tile(3290, 4249), reserve.tile);
++	}
++	@Test public void mageWave18RescueKeepsWave21ReturnTravelBudget()
++	{
++		Room r = room(20, 140, 3302, 4249);
++		crab(r, 18, 120, Lane.EAST, 'S', true, Style.MAGIC, 3302, 4248);
++		Decision reserve = strategy.decide(r, 152);
++		assertNull(reserve.target); assertEquals(Weapon.BARRAGE, reserve.weapon);
++		assertEquals(MageStrategy.tile(3290, 4249), reserve.tile);
++	}
++	@Test public void mageWave18RescueRemainsBelowAssigned19Bigs()
++	{
++		Room r = room(19, 128, 3293, 4248);
++		crab(r, 18, 120, Lane.EAST, 'S', true, Style.MAGIC, 3292, 4253);
++		Crab assigned = crab(r, 19, 128, Lane.EAST, 'S', true, Style.MAGIC, 3298, 4248);
++		assertSame(assigned, strategy.decide(r, 146).target);
++	}
++	@Test public void mageWave18RescueDoesNotDisplaceNamed20SouthOpener()
++	{
++		Room r = room(20, 145, 3295, 4243);
++		crab(r, 18, 120, Lane.EAST, 'S', true, Style.MAGIC, 3292, 4250);
++		Crab south = crab(r, 20, 145, Lane.SOUTH, 'W', true, Style.MAGIC, 3295, 4238);
++		assertSame(south, strategy.decide(r, 146).target);
++	}
+ }

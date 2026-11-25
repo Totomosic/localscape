@@ -1,0 +1,36 @@
+{
+  "retrievedDate": "2026-11-25",
+  "sources": [
+    {
+      "path": "blert-item-delta.ts",
+      "url": "https://github.com/blert-io/blert/blob/main/common/item-delta.ts",
+      "gitBlobSha": "d964c37ef2ef03cf35ee15b01aac6121049ae6a9"
+    },
+    {
+      "path": "blert-event.ts",
+      "url": "https://github.com/blert-io/blert/blob/main/common/event.ts",
+      "gitBlobSha": "760e32e3c0f5df86a3dae9b952ea773397db98d9"
+    },
+    {
+      "path": "blert-challenge.ts",
+      "url": "https://github.com/blert-io/blert/blob/main/common/challenge.ts",
+      "gitBlobSha": "6f5ca9fc9466fd39e205c9fe35c42356362e0962"
+    },
+    {
+      "path": "blert-prayer-set.ts",
+      "url": "https://github.com/blert-io/blert/blob/main/common/prayer-set.ts",
+      "gitBlobSha": "96979bb3d47a218cc0d888581c909b94cb55ea73"
+    },
+    {
+      "path": "blert-event.proto",
+      "url": "https://github.com/blert-io/protos/blob/main/event.proto",
+      "gitBlobSha": "fb63fd3f828aac98fb606735cd51df6fa415fdbc"
+    },
+    {
+      "path": "runelite-item-names.json",
+      "url": "https://static.runelite.net/cache/item/names.json",
+      "sha256": "6838e8f2db6954a6a637c9afc8e637aec73314a4e6211f02ee1900bcf15c8b0f",
+      "purpose": "Names only; no combat stats implied"
+    }
+  ]
+}

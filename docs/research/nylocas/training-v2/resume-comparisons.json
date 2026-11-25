@@ -1,0 +1,515 @@
+{
+  "training-v2-flight-age3-control-fresh-200": {
+    "trials": 200,
+    "completed": 200,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 337.26,
+      "median": 336.0,
+      "min": 312,
+      "max": 380,
+      "p95": 356
+    },
+    "pre_cap_stalls": {
+      "mean": 4.355,
+      "median": 4.0,
+      "min": 1,
+      "max": 11,
+      "p95": 9
+    }
+  },
+  "training-v2-flight-age3-fresh-200": {
+    "trials": 200,
+    "completed": 200,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 335.1,
+      "median": 332.0,
+      "min": 316,
+      "max": 368,
+      "p95": 356
+    },
+    "pre_cap_stalls": {
+      "mean": 3.83,
+      "median": 3.0,
+      "min": 1,
+      "max": 11,
+      "p95": 9
+    }
+  },
+  "training-v2-flight-cleanup-aging-magic-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 336.8,
+      "median": 336.0,
+      "min": 316,
+      "max": 364,
+      "p95": 352
+    },
+    "pre_cap_stalls": {
+      "mean": 4.43,
+      "median": 4.0,
+      "min": 1,
+      "max": 12,
+      "p95": 10
+    }
+  },
+  "training-v2-flight-control-holdout-200": {
+    "trials": 200,
+    "completed": 200,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 337.42,
+      "median": 336.0,
+      "min": 316,
+      "max": 368,
+      "p95": 356
+    },
+    "pre_cap_stalls": {
+      "mean": 4.465,
+      "median": 4.0,
+      "min": 1,
+      "max": 11,
+      "p95": 9
+    }
+  },
+  "training-v2-flight-damage-instrumented-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 336.56,
+      "median": 336.0,
+      "min": 316,
+      "max": 368,
+      "p95": 356
+    },
+    "pre_cap_stalls": {
+      "mean": 4.43,
+      "median": 4.0,
+      "min": 1,
+      "max": 12,
+      "p95": 10
+    }
+  },
+  "training-v2-flight-fix-fresh-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 336.36,
+      "median": 336.0,
+      "min": 316,
+      "max": 368,
+      "p95": 356
+    },
+    "pre_cap_stalls": {
+      "mean": 4.47,
+      "median": 3.0,
+      "min": 0,
+      "max": 12,
+      "p95": 10
+    }
+  },
+  "training-v2-flight-fix-smoke-seed22": {
+    "trials": 1,
+    "completed": 1,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 352,
+      "median": 352,
+      "min": 352,
+      "max": 352,
+      "p95": 352
+    },
+    "pre_cap_stalls": {
+      "mean": 5,
+      "median": 5,
+      "min": 5,
+      "max": 5,
+      "p95": 5
+    }
+  },
+  "training-v2-flight-fresh-intent-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 334.84,
+      "median": 332.0,
+      "min": 316,
+      "max": 368,
+      "p95": 356
+    },
+    "pre_cap_stalls": {
+      "mean": 4.01,
+      "median": 3.0,
+      "min": 0,
+      "max": 12,
+      "p95": 9
+    }
+  },
+  "training-v2-flight-guidance-fresh-intent-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 335.8,
+      "median": 332.0,
+      "min": 312,
+      "max": 364,
+      "p95": 356
+    },
+    "pre_cap_stalls": {
+      "mean": 4.1,
+      "median": 3.0,
+      "min": 0,
+      "max": 11,
+      "p95": 9
+    }
+  },
+  "training-v2-flight-guidance-fresh-intent-holdout-200": {
+    "trials": 200,
+    "completed": 200,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 338.64,
+      "median": 338.0,
+      "min": 308,
+      "max": 372,
+      "p95": 360
+    },
+    "pre_cap_stalls": {
+      "mean": 4.565,
+      "median": 4.0,
+      "min": 0,
+      "max": 11,
+      "p95": 9
+    }
+  },
+  "training-v2-flight-guidance-holdout-200": {
+    "trials": 200,
+    "completed": 200,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 338.04,
+      "median": 336.0,
+      "min": 316,
+      "max": 376,
+      "p95": 360
+    },
+    "pre_cap_stalls": {
+      "mean": 4.525,
+      "median": 4.0,
+      "min": 0,
+      "max": 11,
+      "p95": 9
+    }
+  },
+  "training-v2-flight-mage-19-age3-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 333.84,
+      "median": 332.0,
+      "min": 316,
+      "max": 364,
+      "p95": 352
+    },
+    "pre_cap_stalls": {
+      "mean": 3.42,
+      "median": 3.0,
+      "min": 1,
+      "max": 10,
+      "p95": 8
+    }
+  },
+  "training-v2-flight-mage-19-age3-validation-200": {
+    "trials": 200,
+    "completed": 200,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 334.02,
+      "median": 332.0,
+      "min": 316,
+      "max": 376,
+      "p95": 348
+    },
+    "pre_cap_stalls": {
+      "mean": 3.49,
+      "median": 3.0,
+      "min": 0,
+      "max": 12,
+      "p95": 8
+    }
+  },
+  "training-v2-flight-mage-east19-shadow-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 334.24,
+      "median": 332.0,
+      "min": 316,
+      "max": 360,
+      "p95": 348
+    },
+    "pre_cap_stalls": {
+      "mean": 3.39,
+      "median": 3.0,
+      "min": 1,
+      "max": 10,
+      "p95": 7
+    }
+  },
+  "training-v2-flight-mage-east19-staging-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 338.48,
+      "median": 336.0,
+      "min": 316,
+      "max": 372,
+      "p95": 360
+    },
+    "pre_cap_stalls": {
+      "mean": 4.73,
+      "median": 4.0,
+      "min": 1,
+      "max": 12,
+      "p95": 10
+    }
+  },
+  "training-v2-flight-mage-fresh-split-100": {
+    "trials": 100,
+    "completed": 99,
+    "deaths": 1,
+    "completion_ticks": {
+      "mean": 337.93939393939394,
+      "median": 336,
+      "min": 316,
+      "max": 376,
+      "p95": 360
+    },
+    "pre_cap_stalls": {
+      "mean": 4.71,
+      "median": 4.0,
+      "min": 0,
+      "max": 12,
+      "p95": 9
+    }
+  },
+  "training-v2-flight-mage-idle-pipe-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 336.56,
+      "median": 336.0,
+      "min": 316,
+      "max": 368,
+      "p95": 356
+    },
+    "pre_cap_stalls": {
+      "mean": 4.43,
+      "median": 4.0,
+      "min": 1,
+      "max": 12,
+      "p95": 10
+    }
+  },
+  "training-v2-flight-mage-idle-pipe-validation-200": {
+    "trials": 200,
+    "completed": 200,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 337.76,
+      "median": 336.0,
+      "min": 308,
+      "max": 376,
+      "p95": 356
+    },
+    "pre_cap_stalls": {
+      "mean": 4.565,
+      "median": 4.0,
+      "min": 0,
+      "max": 11,
+      "p95": 9
+    }
+  },
+  "training-v2-flight-mage-late18-rescue-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 335,
+      "median": 334.0,
+      "min": 316,
+      "max": 364,
+      "p95": 356
+    },
+    "pre_cap_stalls": {
+      "mean": 4.01,
+      "median": 3.0,
+      "min": 0,
+      "max": 12,
+      "p95": 9
+    }
+  },
+  "training-v2-flight-mage-south19-staging-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 338.04,
+      "median": 338.0,
+      "min": 316,
+      "max": 372,
+      "p95": 352
+    },
+    "pre_cap_stalls": {
+      "mean": 4.7,
+      "median": 4.0,
+      "min": 1,
+      "max": 11,
+      "p95": 9
+    }
+  },
+  "training-v2-flight-one-tick-bow-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 337.2,
+      "median": 336.0,
+      "min": 316,
+      "max": 368,
+      "p95": 356
+    },
+    "pre_cap_stalls": {
+      "mean": 4.56,
+      "median": 4.0,
+      "min": 0,
+      "max": 12,
+      "p95": 10
+    }
+  },
+  "training-v2-flight-ranger-early-west18-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 338.88,
+      "median": 338.0,
+      "min": 308,
+      "max": 368,
+      "p95": 356
+    },
+    "pre_cap_stalls": {
+      "mean": 4.72,
+      "median": 4.0,
+      "min": 1,
+      "max": 12,
+      "p95": 9
+    }
+  },
+  "training-v2-flight-ranger-guidance-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 336.96,
+      "median": 336.0,
+      "min": 316,
+      "max": 368,
+      "p95": 356
+    },
+    "pre_cap_stalls": {
+      "mean": 4.45,
+      "median": 3.0,
+      "min": 1,
+      "max": 12,
+      "p95": 10
+    }
+  },
+  "training-v2-flight-ranger-idle-melee-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 333.84,
+      "median": 332.0,
+      "min": 316,
+      "max": 364,
+      "p95": 352
+    },
+    "pre_cap_stalls": {
+      "mean": 3.42,
+      "median": 3.0,
+      "min": 1,
+      "max": 10,
+      "p95": 8
+    }
+  },
+  "training-v2-flight-ranger-terminal-melee-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 333.84,
+      "median": 332.0,
+      "min": 316,
+      "max": 360,
+      "p95": 352
+    },
+    "pre_cap_stalls": {
+      "mean": 3.42,
+      "median": 3.0,
+      "min": 1,
+      "max": 10,
+      "p95": 8
+    }
+  },
+  "training-v2-flight-west19-followup-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 336.56,
+      "median": 336.0,
+      "min": 316,
+      "max": 368,
+      "p95": 356
+    },
+    "pre_cap_stalls": {
+      "mean": 4.43,
+      "median": 4.0,
+      "min": 1,
+      "max": 12,
+      "p95": 10
+    }
+  },
+  "training-v2-flight-west19-known-pipe-100": {
+    "trials": 100,
+    "completed": 100,
+    "deaths": 0,
+    "completion_ticks": {
+      "mean": 336.76,
+      "median": 336.0,
+      "min": 316,
+      "max": 368,
+      "p95": 356
+    },
+    "pre_cap_stalls": {
+      "mean": 4.45,
+      "median": 4.0,
+      "min": 1,
+      "max": 12,
+      "p95": 10
+    }
+  }
+}

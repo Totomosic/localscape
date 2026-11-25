@@ -1,0 +1,15 @@
+# Early West-18 Eye window: native validation
+
+The measured pre-cap planner allowed West-18 only in RANGE, despite a temporary MAGIC window at request-age 5. A one-predicate candidate admits that Eye window without changing its score, other lanes, native rules or return budgets. The source and ten focused checks are preserved under `.state/simulations/training-v4-ranger-early18-eye-current/`.
+
+Five of the 42 checksum-vetted ranger rooms contain a West-18 Eye at observed age 6 (native request age 5). In the [0c25e13d recording](https://blert.io/raids/tob/0c25e13d-045e-4362-a7e3-e4cf83f229a8/nylocas), this is tick 142, HP16, actor3291,4248 and target3287,4248. The original [events API](https://blert.io/api/v1/raids/tob/0c25e13d-045e-4362-a7e3-e4cf83f229a8/events?stage=12) owns the launch event; pinned bytes/checksums are in the ranger recording manifest. This supports eligibility, not forcing every available age5 Eye over useful newer work.
+
+The fresh randomized 200-room native trial is `.state/simulations/training-v4-early18-eye-precap-audit-random-200`. It confirms 45 West EYE5 launches. There are 61 ready, nonlethal, native-delay/food/budget-screened age5 frames; the other16 execute useful other native attacks. No remaining idle age5 refusal is demonstrated. Distance screens do not establish LOS.
+
+West-18 observed zeroHP/death age averages 10.73, versus 11.118 over the independently seeded parent-lifecycle500 control; first absence averages17.45 versus17.696. West18 remains combat-alive when19spawns in132/200 versus358/500 controls. Removal includes a death animation or natural expiry; this is an observed lifetime comparison, not proof of a particular child-birth mechanism or a significant average speed improvement. South/East18 still frequently survive into20, so opening West18 earlier alone cannot satisfy the full transition requirement.
+
+Wave19 still stalls in19/200 rooms versus47/500 controls. West19 EYE3 is confirmed198/200 versus496/500. In both candidate misses, seeds32981221289337 and32981221289374, the ranger continues selecting/planning the required Eye3 while finite-food/native action delay blocks launch. The latter room consumed food after dropping to57HP; it had made an EYE5 earlier. These are real native constraints, not evidence that the candidate intentionally skips West19.
+
+Reported average is3:15.85, min3:07.20, max3:31.20 across181 rooms without19stalls. All200 completed; raw average3:16.788, min3:07.20,max3:40.80. The all-room3:22 reliability is176/200(88%); the95% and zero19 goals remain unmet. These measurements use the historical saved dim semantics; the pre-cap delta is independent, but the whole-room timings are not measurements of the corrected timestamp policy.
+
+Detailed native records/source hashes: [ready screens](ranger-early18-parent-lifecycle-comparison.json), [parent outcomes](ranger-early18-parent-outcomes.json). Reproduce with `tools/research/nylocas_ranger_eighteen_magic_audit.py` and `tools/research/nylocas_ranger_eighteen_outcomes.py`. Neither command launches a simulator or changes measured sources.

@@ -1,0 +1,1096 @@
+{
+  "scope": "Active cleanup training; strategy candidates remain isolated pending fresh timestamp validation. Earlier whole-wave29 runs are historical; later29 splits are now fresh.",
+  "canonical_checkpoint": "training-v4-retained-timestamp-combined-checkpoint/policy-source",
+  "runs": [
+    {
+      "run": "training-v4-cleanup-foundation-random-200",
+      "damage": "randomized",
+      "trials": 200,
+      "completed": 200,
+      "reported_seconds": {
+        "mean": 196.0695652173913,
+        "median": 195.6,
+        "min": 187.2,
+        "max": 213.6,
+        "p95": 206.4
+      },
+      "average_eligible": 184,
+      "wave19_failure_rooms": 16,
+      "by3m22": 171,
+      "files": [
+        {
+          "path": "training-v4-cleanup-foundation-random-200/summary.json",
+          "sha256": "1c33d50f11b5c2200847fd43cf8be2324814b83a8a0234456cfbb7d182baf9b8"
+        },
+        {
+          "path": "training-v4-cleanup-foundation-random-200/trials.csv",
+          "sha256": "820294a55564c32a022b67d499b84c24a5bd713f5a8598450532072b86d08b5d"
+        },
+        {
+          "path": "training-v4-cleanup-foundation-random-200/ranger-guidance-audit.json",
+          "sha256": "7afef5ca7f18dea0ae672605fa8cd27b1f87784663360b79ca95f5f2c5302094"
+        },
+        {
+          "path": "training-v4-cleanup-foundation-random-200/mage-guidance-audit.json",
+          "sha256": "252c006fab19794400578b9f9759e6a218841c9736a26cc0f0a6a24df721a283"
+        },
+        {
+          "path": "training-v4-cleanup-foundation-random-200/training-audit.json",
+          "sha256": "dc4bc4647aeb1f89a23a718aa52707016902016b50f6d171c3730096ae488f86"
+        },
+        {
+          "path": "training-v4-cleanup-foundation-random-200/utility-guidance-audit.json",
+          "sha256": "76f405d3dbe53c15ec7bf022e62907a389e1d191648e11de0874ff27f57930e6"
+        }
+      ],
+      "dim_semantics": "historical_whole_wave29"
+    },
+    {
+      "run": "training-v4-ranger-idle-melee-random-200",
+      "damage": "randomized",
+      "trials": 200,
+      "completed": 200,
+      "reported_seconds": {
+        "mean": 195.86145251396647,
+        "median": 196.79999999999998,
+        "min": 184.79999999999998,
+        "max": 208.79999999999998,
+        "p95": 204.0
+      },
+      "average_eligible": 179,
+      "wave19_failure_rooms": 21,
+      "by3m22": 175,
+      "files": [
+        {
+          "path": "training-v4-ranger-idle-melee-random-200/summary.json",
+          "sha256": "d8f1d7a07e9e7347d5fd9a20e1e671f656ede04d17fb4c0128e36d71315f0b9b"
+        },
+        {
+          "path": "training-v4-ranger-idle-melee-random-200/trials.csv",
+          "sha256": "003cae0d961fc7fe6d6c6931bbe5c21cce4090556e26b8a3c5c41a5126f03039"
+        },
+        {
+          "path": "training-v4-ranger-idle-melee-random-200/ranger-idle-melee-helper-audit.json",
+          "sha256": "37b08a811e88eaf05d3474ad416eb87c3a240b1b960aa9e9adc09231a95924a9"
+        },
+        {
+          "path": "training-v4-ranger-idle-melee-random-200/ranger-guidance-audit.json",
+          "sha256": "0f0f970791b9bf3a99ff4733dd39a67a28dea5ddf93b1e7f26d0fa110b43a1b4"
+        },
+        {
+          "path": "training-v4-ranger-idle-melee-random-200/ranger-forecast-audit.json",
+          "sha256": "713ebc890e18f3d3b8e765f7e907d382b29bf8abd88543be6bb1417eb95ee2c4"
+        }
+      ],
+      "dim_semantics": "historical_whole_wave29"
+    },
+    {
+      "run": "training-v4-dim29-control-random-200",
+      "damage": "randomized",
+      "trials": 200,
+      "completed": 200,
+      "reported_seconds": {
+        "mean": 196.09723756906078,
+        "median": 196.79999999999998,
+        "min": 187.2,
+        "max": 211.2,
+        "p95": 204.0
+      },
+      "average_eligible": 181,
+      "wave19_failure_rooms": 19,
+      "by3m22": 174,
+      "files": [
+        {
+          "path": "training-v4-dim29-control-random-200/summary.json",
+          "sha256": "1485a11c77ccc79d8184f9f740e80f513be2282ae9022422f36dad73e8dd8e32"
+        },
+        {
+          "path": "training-v4-dim29-control-random-200/trials.csv",
+          "sha256": "0d3c84d291c1c1120570acb6b1d5b16f86d4cfd64def3cc16ad2c05207a8c4fe"
+        },
+        {
+          "path": "training-v4-dim29-control-random-200/cleanup-dim-audit.json",
+          "sha256": "cc35639134eb68013d2db45fb19820f781b246f58305ecf42f9e89d814999a7e"
+        }
+      ],
+      "dim_semantics": "historical_whole_wave29"
+    },
+    {
+      "run": "training-v4-dim29-control-fresh-300",
+      "damage": "randomized",
+      "trials": 300,
+      "completed": 300,
+      "reported_seconds": {
+        "mean": 196.04163568773234,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 211.2,
+        "p95": 204.0
+      },
+      "average_eligible": 269,
+      "wave19_failure_rooms": 31,
+      "by3m22": 250,
+      "files": [
+        {
+          "path": "training-v4-dim29-control-fresh-300/summary.json",
+          "sha256": "ef86ebdd48d43d7ed440a2585894b3da7515c3bcbed97ecf7d132e8364b8a828"
+        },
+        {
+          "path": "training-v4-dim29-control-fresh-300/trials.csv",
+          "sha256": "ce9ba39a862555d328ac45ab5bb3bb34521a8ca77324ab164817f2383d4f181f"
+        },
+        {
+          "path": "training-v4-dim29-control-fresh-300/cleanup-dim-audit.json",
+          "sha256": "9b1f54b0ea4b609011bdeb931dde04d5657a2d78b491a48aa6b3baab4125b8ac"
+        }
+      ],
+      "dim_semantics": "historical_whole_wave29"
+    },
+    {
+      "run": "training-v4-dim29-control-pooled-500",
+      "damage": "randomized",
+      "trials": 500,
+      "completed": 500,
+      "reported_seconds": {
+        "mean": 196.064,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 211.2,
+        "p95": 204.0
+      },
+      "average_eligible": 450,
+      "wave19_failure_rooms": 50,
+      "by3m22": 424,
+      "files": [
+        {
+          "path": "training-v4-dim29-control-pooled-500/summary.json",
+          "sha256": "641ccb2f10f2e9de6fe3f8c829173b05c2947bd6d84542f648a335df42c17bb5"
+        },
+        {
+          "path": "training-v4-dim29-control-pooled-500/trials.csv",
+          "sha256": "f743a5196e12475d75c65505b7f4840c78beb365220f975fc2d797ec5170a931"
+        }
+      ],
+      "dim_semantics": "historical_whole_wave29"
+    },
+    {
+      "run": "training-v4-dim29-and-28plus16-random-200",
+      "damage": "randomized",
+      "trials": 200,
+      "completed": 200,
+      "reported_seconds": {
+        "mean": 196.1,
+        "median": 194.4,
+        "min": 187.2,
+        "max": 211.2,
+        "p95": 206.4
+      },
+      "average_eligible": 192,
+      "wave19_failure_rooms": 8,
+      "by3m22": 169,
+      "files": [
+        {
+          "path": "training-v4-dim29-and-28plus16-random-200/summary.json",
+          "sha256": "488fbbfb1aeb771e3fe13f4aa341a3c7b0fab234d1101d5333ef4c706d1b962a"
+        },
+        {
+          "path": "training-v4-dim29-and-28plus16-random-200/trials.csv",
+          "sha256": "06a194e32a40ed32616e8936bc9fe85fdf44c0298d302334e6b970ef63b14213"
+        },
+        {
+          "path": "training-v4-dim29-and-28plus16-random-200/cleanup-dim-audit.json",
+          "sha256": "26714121650e041c2c495aa645bd376a39a2572bdaa178a8712b75a36356f3b2"
+        }
+      ],
+      "dim_semantics": "historical_whole_wave29"
+    },
+    {
+      "run": "training-v4-dim29-and-28plus16-fresh-300",
+      "damage": "randomized",
+      "trials": 300,
+      "completed": 300,
+      "reported_seconds": {
+        "mean": 196.26382978723404,
+        "median": 196.79999999999998,
+        "min": 184.79999999999998,
+        "max": 213.6,
+        "p95": 204.0
+      },
+      "average_eligible": 282,
+      "wave19_failure_rooms": 18,
+      "by3m22": 261,
+      "files": [
+        {
+          "path": "training-v4-dim29-and-28plus16-fresh-300/summary.json",
+          "sha256": "cd26ad98628fa9e6c8d6dd7fde700949a3d104e027e798c16c0dc2c2fab25d9e"
+        },
+        {
+          "path": "training-v4-dim29-and-28plus16-fresh-300/trials.csv",
+          "sha256": "d2a46dfd1e55f101cb8da9c0b3fd8a8bddd620fe658468add109d8179dd3ce70"
+        },
+        {
+          "path": "training-v4-dim29-and-28plus16-fresh-300/cleanup-dim-audit.json",
+          "sha256": "96ef733de20e3f8389f305cf0c5f81fc98ae5ab3c6e612e2047f8655b70d286b"
+        },
+        {
+          "path": "training-v4-dim29-and-28plus16-fresh-300/mage-undimmed-expiring-parents.json",
+          "sha256": "b8b3811f2a912088be555e455d355e125b0cecc03b9a2fa99ff052a32359b650"
+        },
+        {
+          "path": "training-v4-dim29-and-28plus16-fresh-300/undimmed-expiry-null-classification.json",
+          "sha256": "befefc9e9d31423a9da982c6b43ee6a241b1232ebfe09af9ad98162e5d79998b"
+        },
+        {
+          "path": "training-v4-dim29-and-28plus16-fresh-300/primary-attribution-audit.json",
+          "sha256": "7fdb5ab46b7404c547b24f665c28da0f98d71fbde10877f1e9850d59d22f83cb"
+        }
+      ],
+      "dim_semantics": "historical_whole_wave29"
+    },
+    {
+      "run": "training-v4-dim29-and-28plus16-pooled-500",
+      "damage": "randomized",
+      "trials": 500,
+      "completed": 500,
+      "reported_seconds": {
+        "mean": 196.19746835443038,
+        "median": 195.6,
+        "min": 184.79999999999998,
+        "max": 213.6,
+        "p95": 206.4
+      },
+      "average_eligible": 474,
+      "wave19_failure_rooms": 26,
+      "by3m22": 430,
+      "files": [
+        {
+          "path": "training-v4-dim29-and-28plus16-pooled-500/summary.json",
+          "sha256": "a995f437fdc978b740aa1a53c21efa6d99fce2b30eb4f089e44d6efc0857f723"
+        },
+        {
+          "path": "training-v4-dim29-and-28plus16-pooled-500/trials.csv",
+          "sha256": "889f6867921f6994749d8d04429f43c148fbf9a97fdab12492db01468bea72ee"
+        }
+      ],
+      "dim_semantics": "historical_whole_wave29"
+    },
+    {
+      "run": "training-v4-dim29-maxhit-control-100",
+      "damage": "always-max-hit diagnostic",
+      "trials": 100,
+      "completed": 100,
+      "reported_seconds": {
+        "mean": 182.256,
+        "median": 182.4,
+        "min": 177.6,
+        "max": 189.6,
+        "p95": 187.2
+      },
+      "average_eligible": 100,
+      "wave19_failure_rooms": 0,
+      "by3m22": 100,
+      "files": [
+        {
+          "path": "training-v4-dim29-maxhit-control-100/summary.json",
+          "sha256": "0341c7ee1fa556e0c5ecb127b480dd5711f94b05abc24c1c06aa7f69a2f182b3"
+        },
+        {
+          "path": "training-v4-dim29-maxhit-control-100/trials.csv",
+          "sha256": "0f21328b0e98b9dae457f6e83564579e9a06a7c4e1c484506bdaf69c9c69e3cd"
+        }
+      ],
+      "dim_semantics": "historical_whole_wave29"
+    },
+    {
+      "run": "training-v4-combined-dims-maxhit-diagnostic-100",
+      "damage": "always-max-hit diagnostic",
+      "trials": 100,
+      "completed": 100,
+      "reported_seconds": {
+        "mean": 185.47199999999998,
+        "median": 184.79999999999998,
+        "min": 177.6,
+        "max": 192.0,
+        "p95": 189.6
+      },
+      "average_eligible": 100,
+      "wave19_failure_rooms": 0,
+      "by3m22": 100,
+      "files": [
+        {
+          "path": "training-v4-combined-dims-maxhit-diagnostic-100/summary.json",
+          "sha256": "4f1ed36c513b73d7e88f6814cd995999a20f0f688e9691fd56c91edfdb7cf082"
+        },
+        {
+          "path": "training-v4-combined-dims-maxhit-diagnostic-100/trials.csv",
+          "sha256": "aaa0a36261d0dc117ede21b9f839ad532e2a36d3437e3ff5b8f7e74e163045d5"
+        },
+        {
+          "path": "training-v4-combined-dims-maxhit-diagnostic-100/cleanup-dim-audit.json",
+          "sha256": "860c64785c3abedf7046c798357362a97420922e7a123da69a2b5a4baea72858"
+        }
+      ],
+      "dim_semantics": "historical_whole_wave29"
+    },
+    {
+      "run": "training-v4-cleanup-early29-separated-claims-random-200",
+      "damage": "randomized",
+      "dim_semantics": "historical_whole_wave29",
+      "trials": 200,
+      "completed": 200,
+      "reported_seconds": {
+        "mean": 195.29999999999998,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 211.2,
+        "p95": 201.6
+      },
+      "average_eligible": 184,
+      "wave19_failure_rooms": 16,
+      "by3m22": 179,
+      "files": [
+        {
+          "path": "training-v4-cleanup-early29-separated-claims-random-200/cleanup-dim-audit.json",
+          "sha256": "1cdaaba0a9530ade0d55b61f61f30eda3be830dc99eccebd794baaac5b988bc5"
+        },
+        {
+          "path": "training-v4-cleanup-early29-separated-claims-random-200/ranger-guidance-audit.json",
+          "sha256": "5c17c5e44cfee43df63fe1b309d574534d636552bce6b327df20f068ae1d0b75"
+        },
+        {
+          "path": "training-v4-cleanup-early29-separated-claims-random-200/report.md",
+          "sha256": "0f925a470773b1ba5ee8db4cea90db094ef745e00dbfc9bf15cf0c61bdf6f66e"
+        },
+        {
+          "path": "training-v4-cleanup-early29-separated-claims-random-200/summary.json",
+          "sha256": "88b60b36db96882aa7e2759bcd932396dd0f5603f6bbe0c49dafd20c5e187606"
+        },
+        {
+          "path": "training-v4-cleanup-early29-separated-claims-random-200/trials.csv",
+          "sha256": "d39b5b1153263cd49866aa7ca3872bdef5fd21ca67419b8dd897e843c58ed107"
+        },
+        {
+          "path": "training-v4-cleanup-early29-separated-claims-random-200/utility-guidance-audit.json",
+          "sha256": "e7f26f1c9244e76727e114da6254b869a966f9cf4ea09e1c4aad6ee59f5d72aa"
+        }
+      ]
+    },
+    {
+      "run": "training-v4-west30-parent-lifecycle-random-200",
+      "damage": "randomized",
+      "dim_semantics": "historical_whole_wave29",
+      "trials": 200,
+      "completed": 200,
+      "reported_seconds": {
+        "mean": 195.41899441340783,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 208.79999999999998,
+        "p95": 201.6
+      },
+      "average_eligible": 179,
+      "wave19_failure_rooms": 21,
+      "by3m22": 180,
+      "files": [
+        {
+          "path": "training-v4-west30-parent-lifecycle-random-200/cleanup-dim-audit.json",
+          "sha256": "568e0c6aa863e35fd3a16c2ffea45e4c4510c14619663309fcbba7812598ca30"
+        },
+        {
+          "path": "training-v4-west30-parent-lifecycle-random-200/mage-guidance-audit.json",
+          "sha256": "fd0a46344b4f0b7ae1abf722a65734197bdd1317e8f790dc55b1046f732d8e67"
+        },
+        {
+          "path": "training-v4-west30-parent-lifecycle-random-200/mage29-gap-screen.json",
+          "sha256": "614c9a1c887e8dd0c797b64d31cb2f0ba70a5e204d16c3dd705da952654bc8a9"
+        },
+        {
+          "path": "training-v4-west30-parent-lifecycle-random-200/ranger-guidance-audit.json",
+          "sha256": "36ee0f103e1912355ceac7b0d5e0c459a010937e268dd33f416de7f80f28811f"
+        },
+        {
+          "path": "training-v4-west30-parent-lifecycle-random-200/report.md",
+          "sha256": "981974cdbb69739dada59bc09ac19409232225d2a7e7610905014a3db5e6ec75"
+        },
+        {
+          "path": "training-v4-west30-parent-lifecycle-random-200/summary.json",
+          "sha256": "d2f4af7cc95a265f4c17b54fb6b91c16305e5c58b6d6a8c128194d82318c99f9"
+        },
+        {
+          "path": "training-v4-west30-parent-lifecycle-random-200/trials.csv",
+          "sha256": "3eb8bad3646474dae0f43babff6f1bf95b212894c1670118cdbdb15b5be0bb6a"
+        }
+      ]
+    },
+    {
+      "run": "training-v4-west30-parent-lifecycle-fresh-300",
+      "damage": "randomized",
+      "dim_semantics": "historical_whole_wave29",
+      "trials": 300,
+      "completed": 300,
+      "reported_seconds": {
+        "mean": 195.43357664233577,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 208.79999999999998,
+        "p95": 204.0
+      },
+      "average_eligible": 274,
+      "wave19_failure_rooms": 26,
+      "by3m22": 267,
+      "files": [
+        {
+          "path": "training-v4-west30-parent-lifecycle-fresh-300/cleanup-dim-audit.json",
+          "sha256": "a47c500571ef6a5703f4e3606e47fac554078092a3471250eadf4d0393b1ce9d"
+        },
+        {
+          "path": "training-v4-west30-parent-lifecycle-fresh-300/mage-guidance-audit.json",
+          "sha256": "54385e457ae783cd570194402d9518854408cbc137799f6425ebb488def7a648"
+        },
+        {
+          "path": "training-v4-west30-parent-lifecycle-fresh-300/mage24East-native-frames.json",
+          "sha256": "fb501a93083033e199e95fe9935eeb6317ac814a56c1298b4dd547ff05e5dbcf"
+        },
+        {
+          "path": "training-v4-west30-parent-lifecycle-fresh-300/ranger-guidance-audit.json",
+          "sha256": "5e3500ac2fcfe07abb44c99a5fb18321a39ea8d8cfaf44f82a21abdb0003f906"
+        },
+        {
+          "path": "training-v4-west30-parent-lifecycle-fresh-300/report.md",
+          "sha256": "af25cbb2c6948a715bfd4f7f448bc87fedf2dad8537f69eaefaaf8744145629b"
+        },
+        {
+          "path": "training-v4-west30-parent-lifecycle-fresh-300/required24east-survivor-detail.json",
+          "sha256": "f6b68682f8977288e7365b33ba51f61b86a5439d3085bc98639b7f0d6da316af"
+        },
+        {
+          "path": "training-v4-west30-parent-lifecycle-fresh-300/summary.json",
+          "sha256": "043e17e3af34987316c074e575c89bd52e89ee2bf56fad8f11bb2110bf6d34d5"
+        },
+        {
+          "path": "training-v4-west30-parent-lifecycle-fresh-300/trials.csv",
+          "sha256": "0a684756ce9de3bec62bfe9f430176010a41e5efae31fe16cf8f6014c23408f0"
+        }
+      ]
+    },
+    {
+      "run": "training-v4-west30-parent-lifecycle-pooled-500",
+      "damage": "randomized",
+      "dim_semantics": "historical_whole_wave29",
+      "trials": 500,
+      "completed": 500,
+      "reported_seconds": {
+        "mean": 195.42781456953642,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 208.79999999999998,
+        "p95": 204.0
+      },
+      "average_eligible": 453,
+      "wave19_failure_rooms": 47,
+      "by3m22": 447,
+      "files": [
+        {
+          "path": "training-v4-west30-parent-lifecycle-pooled-500/report.md",
+          "sha256": "81169f25202f7b12bc49cd4b407ac6c0421a31b3e835d33ed55024fb90443c03"
+        },
+        {
+          "path": "training-v4-west30-parent-lifecycle-pooled-500/summary.json",
+          "sha256": "abf705bc764be76bd54877dc4551741905db0b78807c38443105134d94b36b27"
+        },
+        {
+          "path": "training-v4-west30-parent-lifecycle-pooled-500/trials.csv",
+          "sha256": "211e70c9adcd0d9824fa47f4a5cbbf17e0f9fc5724ce56191384f82ab9d02323"
+        }
+      ]
+    },
+    {
+      "run": "training-v4-early18-eye-precap-audit-random-200",
+      "damage": "randomized",
+      "dim_semantics": "historical_whole_wave29",
+      "trials": 200,
+      "completed": 200,
+      "reported_seconds": {
+        "mean": 195.84530386740332,
+        "median": 194.4,
+        "min": 187.2,
+        "max": 211.2,
+        "p95": 204.0
+      },
+      "average_eligible": 181,
+      "wave19_failure_rooms": 19,
+      "by3m22": 176,
+      "files": [
+        {
+          "path": "training-v4-early18-eye-precap-audit-random-200/report.md",
+          "sha256": "e6238a165b34797985e080047cc0b1f8ff1b9d23ec1a0f8ae4164344b465fa00"
+        },
+        {
+          "path": "training-v4-early18-eye-precap-audit-random-200/summary.json",
+          "sha256": "7f1066a0edf8671b3dc68909e9a7a62b4d6672350c1ed373fef619217270f584"
+        },
+        {
+          "path": "training-v4-early18-eye-precap-audit-random-200/trials.csv",
+          "sha256": "d192730f17f45b96f5fea1c36f571e36f8648d2b57a1751cf86963571d5d821f"
+        }
+      ]
+    },
+    {
+      "run": "training-v4-timestamp-dim29-control-random-200",
+      "damage": "randomized",
+      "dim_semantics": "timestamp_wave29",
+      "trials": 200,
+      "completed": 200,
+      "reported_seconds": {
+        "mean": 195.34945054945055,
+        "median": 194.4,
+        "min": 187.2,
+        "max": 206.4,
+        "p95": 204.0
+      },
+      "average_eligible": 182,
+      "wave19_failure_rooms": 18,
+      "by3m22": 179,
+      "files": [
+        {
+          "path": "training-v4-timestamp-dim29-control-random-200/cleanup-dim-audit.json",
+          "sha256": "9cdcafe903018842b4ec994580129236f3c676df3a6ef70e0c5add53c78bfbb6"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-control-random-200/mage-guidance-audit.json",
+          "sha256": "0503b0d1b22d8ba4641ff6ea00978003757c013aebfef3f8fc5acf012bbe65d1"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-control-random-200/mage-timestamp-expiry-screen.json",
+          "sha256": "99f34ea54814abf219e9f926df590a245d590fbf6676b3529a9beb98a5c4a5c1"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-control-random-200/mage-timestamp-floor-audit.json",
+          "sha256": "481a6b5b7e56b86c8dcb8bec3f3c1ea852577d28099ba5e6f9d5b605004a0040"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-control-random-200/ranger-forecast-audit.json",
+          "sha256": "ecfd6da3f7aa6a41dd6728e32b516f2726690f9ba8f50607a4fb26231c9d55fa"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-control-random-200/ranger-guidance-audit.json",
+          "sha256": "9dc4c871fe0d14070d36505758da1c75776320679eeffaca0b7fe387a4a9f830"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-control-random-200/ranger-null-refusal-frames.json",
+          "sha256": "727ef59c6e40c7204a1695292a450b8db601833b7f70a9ae1a8fdbcca25ad06a"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-control-random-200/report.md",
+          "sha256": "abbc6f52096030afdaaf15a611d10a36ca071e61ca8f16782a33c0357e0aebf3"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-control-random-200/summary.json",
+          "sha256": "9f2b0b51defc953f47509047c9681fe1d07fb25eaef4b4b5f2c6b3de69d3f14c"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-control-random-200/training-audit.json",
+          "sha256": "fae2239ff25a29d9dbb1c58abda89cbe7e203162508bbbc5ad8bf3c8c6d82ca9"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-control-random-200/trials.csv",
+          "sha256": "f988ae8774b16c608def69ef8db0c37507783d0e0200af9798c0d33481d19496"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-control-random-200/utility-guidance-audit.json",
+          "sha256": "3e0d5830caeba4db3466cb9c5ad68879bb32d952784d9febea3e2c93129df724"
+        }
+      ]
+    },
+    {
+      "run": "training-v4-timestamp-dim29-and-28plus16-random-200",
+      "damage": "randomized",
+      "dim_semantics": "timestamp_wave29",
+      "trials": 200,
+      "completed": 200,
+      "reported_seconds": {
+        "mean": 195.44516129032257,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 208.79999999999998,
+        "p95": 204.0
+      },
+      "average_eligible": 186,
+      "wave19_failure_rooms": 14,
+      "by3m22": 181,
+      "files": [
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-random-200/cleanup-dim-audit.json",
+          "sha256": "e4757c2c233db2da466b20220fc1dc8f6610a254f19f5088c9d492d697388203"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-random-200/report.md",
+          "sha256": "c3f40bafd7797a16be9855c0f4d4c38fa1ce03a7865d0ed4a34d90943711d72e"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-random-200/summary.json",
+          "sha256": "82bb644cdf783bf7267296805faf19ec8ed13efdd89f421df00b423490cdd881"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-random-200/training-audit.json",
+          "sha256": "8a6967c884fab16684df2564dee15e18f320e3edd0d014759ec43a0c3d220b46"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-random-200/trials.csv",
+          "sha256": "c17a897c68cb37665e883f60a9242a2c565d89bbd4503356513464d9edc3063c"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-random-200/utility-guidance-audit.json",
+          "sha256": "ba246f5b2fbddfd0980c23cf64bff9cdab1d510b938365f94e34f8419aa03ac5"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-random-200/cleanup-floor-audit.json",
+          "sha256": "515f14aae9c782854076222045987ddd51173c4e6ce4d123f207470f515e0049"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-random-200/mage-cleanup-chase-audit.json",
+          "sha256": "63f52b5eb925527359ee4de5bb74926e7553809c3fc3b28d23dc4e72e283507c"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-random-200/mage-guidance-audit.json",
+          "sha256": "39b52507fb21d05635833bf1c1c49b2b2dc3e63b295a516979add1e700f89fe3"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-random-200/mage-timestamp-expiry-screen.json",
+          "sha256": "a1fc34aa19c66c8c40fad75ac06f47664a5f42d86d9770a3a1b5cf6cc2bed2fe"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-random-200/ranger-pre31-fresh-null-priority-screens.json",
+          "sha256": "c23dfa0213aea37a7808afc473ec239e5e7157957d20fe5b2bc2ae877197c951"
+        }
+      ]
+    },
+    {
+      "run": "training-v4-timestamp-dim29-and-28plus16-fresh-300",
+      "damage": "randomized",
+      "dim_semantics": "timestamp_wave29",
+      "trials": 300,
+      "completed": 300,
+      "reported_seconds": {
+        "mean": 195.1191011235955,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 206.4,
+        "p95": 201.6
+      },
+      "average_eligible": 267,
+      "wave19_failure_rooms": 33,
+      "by3m22": 271,
+      "files": [
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-fresh-300/cleanup-dim-audit.json",
+          "sha256": "b911d89ffb88257414bf1df22b3122e039f1b6561d37fda777d3f4588743703c"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-fresh-300/mage-cleanup-chase-audit.json",
+          "sha256": "6f24d81541e0639d6425a22aa6515468c944135d6c2d46c38e053a59bce14977"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-fresh-300/mage-guidance-audit.json",
+          "sha256": "f4236e5003cc61b598ec64a7ee41b2c1ecf7a9366f75e23bf6807a5c8e33749f"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-fresh-300/mage-timestamp-floor-audit.json",
+          "sha256": "6ecb6cdacd5ea1ba8ae6103972462735c55aa92819ffc975a005ca4e438d85c2"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-fresh-300/ranger-guidance-audit.json",
+          "sha256": "80e737ec272b273c15137a61db895f281144afa4d344b79224d86c531699ca09"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-fresh-300/report.md",
+          "sha256": "b8eeef03db963a6976428000e51a18b57b30dfa2fd96cab9a68f5606f952369a"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-fresh-300/summary.json",
+          "sha256": "dc7a1e0a03992591833244b0d2fcdbe368061739a9e075deff18508387946ec7"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-fresh-300/training-audit.json",
+          "sha256": "0f0497a152ed520f698288c0bf23eb3f7df95b8d1ab9745cd48a5c29abde33b0"
+        },
+        {
+          "path": "training-v4-timestamp-dim29-and-28plus16-fresh-300/trials.csv",
+          "sha256": "94929091d2c5af47eeb3ba85c78af0e7be8d725f16c64fc0e86657b456d0f6a7"
+        }
+      ]
+    },
+    {
+      "run": "training-v4-timestamp-combined-pooled-500",
+      "damage": "randomized",
+      "dim_semantics": "timestamp_wave29",
+      "trials": 500,
+      "completed": 500,
+      "reported_seconds": {
+        "mean": 195.25298013245032,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 208.79999999999998,
+        "p95": 201.6
+      },
+      "average_eligible": 453,
+      "wave19_failure_rooms": 47,
+      "by3m22": 452,
+      "files": [
+        {
+          "path": "training-v4-timestamp-combined-pooled-500/report.md",
+          "sha256": "9c48176468c03265adb780b1533209373807cff89cbe046b70318921aa975f02"
+        },
+        {
+          "path": "training-v4-timestamp-combined-pooled-500/summary.json",
+          "sha256": "15db366c348d7efe757ddf39facb5a9674e09f180d8bcb360ed7001064347ad4"
+        },
+        {
+          "path": "training-v4-timestamp-combined-pooled-500/trials.csv",
+          "sha256": "b641a890c2da159dda21243e6169df1136d9886f141972e4954a3ea3b203f58f"
+        }
+      ]
+    },
+    {
+      "run": "training-v4-mage-late24east-recovery-random-200",
+      "damage": "randomized",
+      "dim_semantics": "timestamp_wave29",
+      "trials": 200,
+      "completed": 200,
+      "reported_seconds": {
+        "mean": 195.1483870967742,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 208.79999999999998,
+        "p95": 204.0
+      },
+      "average_eligible": 186,
+      "wave19_failure_rooms": 14,
+      "by3m22": 182,
+      "files": [
+        {
+          "path": "training-v4-mage-late24east-recovery-random-200/mage-guidance-audit.json",
+          "sha256": "a36a1707ac252eb937598920bfad951d8dc5828b5504423920d8cd64a8a92f84"
+        },
+        {
+          "path": "training-v4-mage-late24east-recovery-random-200/mage-late24East-launch-summary.json",
+          "sha256": "a642bd37b57814eb3822aaedb7a08b22ed69dcab397cd629a5016b26952a841d"
+        },
+        {
+          "path": "training-v4-mage-late24east-recovery-random-200/mage-movement-audit.json",
+          "sha256": "fb094ba04bc5f28107934b7420b66e124e304727378484c09362e742c86ac749"
+        },
+        {
+          "path": "training-v4-mage-late24east-recovery-random-200/report.md",
+          "sha256": "adf27ecd2cfca727e71e7f9affe97438ca40fab7b46e656a1e473363fb472eea"
+        },
+        {
+          "path": "training-v4-mage-late24east-recovery-random-200/summary.json",
+          "sha256": "7a164b169b852f50ec9a0edd7b11491f19dbc43961ec9484739fd1793241e3ee"
+        },
+        {
+          "path": "training-v4-mage-late24east-recovery-random-200/training-audit.json",
+          "sha256": "5989439a6be0699b8f3a0d36128e5e78b8a11de6101731a0950de2c3e08e00b2"
+        },
+        {
+          "path": "training-v4-mage-late24east-recovery-random-200/trials.csv",
+          "sha256": "30087e519b7511cc63385d2e263a213771ca863ced12ccfadf308abd7e76c2ce"
+        }
+      ]
+    },
+    {
+      "run": "training-v4-timestamp-combined-optional-east23-pipe-random-200",
+      "damage": "randomized",
+      "dim_semantics": "timestamp_wave29",
+      "trials": 200,
+      "completed": 200,
+      "reported_seconds": {
+        "mean": 195.52087912087913,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 206.4,
+        "p95": 201.6
+      },
+      "average_eligible": 182,
+      "wave19_failure_rooms": 18,
+      "by3m22": 179,
+      "files": [
+        {
+          "path": "training-v4-timestamp-combined-optional-east23-pipe-random-200/cleanup-dim-audit.json",
+          "sha256": "50f08ba39e90e9abd5afe2a4600110f70ef4670ee1e857844803275d93b909d0"
+        },
+        {
+          "path": "training-v4-timestamp-combined-optional-east23-pipe-random-200/cleanup-floor-audit.json",
+          "sha256": "a801a2027f7337383439bd27b244aa1a57a935d7f8c87ffe21b5645639e15738"
+        },
+        {
+          "path": "training-v4-timestamp-combined-optional-east23-pipe-random-200/mage-guidance-audit.json",
+          "sha256": "3795c215dc4b1934c15dd79d7fb3536946987e998112e99fa13b1314abf44cd5"
+        },
+        {
+          "path": "training-v4-timestamp-combined-optional-east23-pipe-random-200/ranger-east23-branch-audit.json",
+          "sha256": "3cc816e990496fce2d7f22cd73c8f0539ca0ae3fb7b9f69b3629200f9e35fd0c"
+        },
+        {
+          "path": "training-v4-timestamp-combined-optional-east23-pipe-random-200/ranger-guidance-audit.json",
+          "sha256": "2c96cca45575243f3eafbcf8c12ea415aa1e4de0be97fd64a462796c7605b023"
+        },
+        {
+          "path": "training-v4-timestamp-combined-optional-east23-pipe-random-200/ranger-packet-exception-native-frames.json",
+          "sha256": "351a443530f499f4982dbfaad5964ae228772f1d413516ebe01d512fb458eb76"
+        },
+        {
+          "path": "training-v4-timestamp-combined-optional-east23-pipe-random-200/report.md",
+          "sha256": "76e334cf8ca4ca8b2630bef1cb753c4884f148d8cc63726aa5f7f441d2bab9c6"
+        },
+        {
+          "path": "training-v4-timestamp-combined-optional-east23-pipe-random-200/summary.json",
+          "sha256": "3f350d9dea521d7bca0343b69babb06b49ae8069873629beb014c2c2c9ef3ff5"
+        },
+        {
+          "path": "training-v4-timestamp-combined-optional-east23-pipe-random-200/trials.csv",
+          "sha256": "a7dc0040e9a27e053905671adf283c21fb1a99b78fdbff0b9458b7f4d58b8e26"
+        }
+      ]
+    },
+    {
+      "run": "training-v4-mage-ready-magic-before-melee-chase-random-200",
+      "damage": "randomized",
+      "dim_semantics": "timestamp_wave29",
+      "trials": 200,
+      "completed": 200,
+      "reported_seconds": {
+        "mean": 195.21290322580646,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 211.2,
+        "p95": 204.0
+      },
+      "average_eligible": 186,
+      "wave19_failure_rooms": 14,
+      "by3m22": 179,
+      "files": [
+        {
+          "path": "training-v4-mage-ready-magic-before-melee-chase-random-200/cleanup-dim-audit.json",
+          "sha256": "d3bd25f3f1bcc24fd2806e3533062d536ec4313bb38d992b959930e48a8800b5"
+        },
+        {
+          "path": "training-v4-mage-ready-magic-before-melee-chase-random-200/mage-cleanup-chase-audit.json",
+          "sha256": "b402c6e9a71262180fa705f3d8d926dcbb6662ed195557a8211b9a65d60b18db"
+        },
+        {
+          "path": "training-v4-mage-ready-magic-before-melee-chase-random-200/mage-fresh-own-null-classification.json",
+          "sha256": "9eaa350c0108eb2c0cdf52767c490943a9df3058738e0fb1f9cd40ee8add7062"
+        },
+        {
+          "path": "training-v4-mage-ready-magic-before-melee-chase-random-200/mage-mixed-scythe-witnesses.json",
+          "sha256": "b413996f6c8dc4031435b8483bdd4c138a47d3ce0c3a10bfbf289a55d3f7591f"
+        },
+        {
+          "path": "training-v4-mage-ready-magic-before-melee-chase-random-200/report.md",
+          "sha256": "7acbf4e8524b77a7ac360595bad55c8838fe554ccce076bc5973c80375920f9d"
+        },
+        {
+          "path": "training-v4-mage-ready-magic-before-melee-chase-random-200/summary.json",
+          "sha256": "935d30361ef2f8c9d7d458c710a8ad348d0f1ec0b0b16e66d6fb8659f951a437"
+        },
+        {
+          "path": "training-v4-mage-ready-magic-before-melee-chase-random-200/training-audit.json",
+          "sha256": "90ac780f43ae7a4a6b97c2248d2a0ec9e8782cc8862e56a91982565ec777bd9e"
+        },
+        {
+          "path": "training-v4-mage-ready-magic-before-melee-chase-random-200/trials.csv",
+          "sha256": "ef1c4424ebff5651193663501d5dc441b39119e185c35ac839e6c576da179bb8"
+        }
+      ]
+    },
+    {
+      "run": "training-v4-ranger-timestamp-combined-null-rescue-at30-random-200",
+      "damage": "randomized",
+      "dim_semantics": "timestamp_wave29",
+      "trials": 200,
+      "completed": 200,
+      "reported_seconds": {
+        "mean": 195.7139664804469,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 213.6,
+        "p95": 204.0
+      },
+      "average_eligible": 179,
+      "wave19_failure_rooms": 21,
+      "by3m22": 171,
+      "files": [
+        {
+          "path": "training-v4-ranger-timestamp-combined-null-rescue-at30-random-200/cleanup-dim-audit.json",
+          "sha256": "ffbd969099620f508e55b7d9223f0c2fbff091ab658b8fd3a5050e5329aa05b1"
+        },
+        {
+          "path": "training-v4-ranger-timestamp-combined-null-rescue-at30-random-200/report.md",
+          "sha256": "c7081344b3ef499c46156a640fd5f3656ce63daa69904285415652d2e1809989"
+        },
+        {
+          "path": "training-v4-ranger-timestamp-combined-null-rescue-at30-random-200/summary.json",
+          "sha256": "b34acc330a3eb7a81fcd36b1fea88300611c8b4b6508742ac4af0cc6a91ff047"
+        },
+        {
+          "path": "training-v4-ranger-timestamp-combined-null-rescue-at30-random-200/training-audit.json",
+          "sha256": "d44a0ef031fc942df1c5e7422e0ffe2aa02c5b1a7b6ab31e91f90e4eb0b64649"
+        },
+        {
+          "path": "training-v4-ranger-timestamp-combined-null-rescue-at30-random-200/trials.csv",
+          "sha256": "6da7ab0ca1c791aff75490ad2d22df37ab4249303934ff9d2c3ebbae186638a4"
+        }
+      ]
+    },
+    {
+      "run": "training-v4-mage-ready-magic-before-melee-chase-fresh-300",
+      "damage": "randomized",
+      "dim_semantics": "timestamp_wave29",
+      "trials": 300,
+      "completed": 300,
+      "reported_seconds": {
+        "mean": 194.784,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 211.2,
+        "p95": 201.6
+      },
+      "average_eligible": 275,
+      "wave19_failure_rooms": 25,
+      "by3m22": 272,
+      "files": [
+        {
+          "path": "training-v4-mage-ready-magic-before-melee-chase-fresh-300/cleanup-dim-audit.json",
+          "sha256": "67acc3cf9362f7db6d9d90e036423fa138695dfc5c0ef42887d57d3efd65669a"
+        },
+        {
+          "path": "training-v4-mage-ready-magic-before-melee-chase-fresh-300/mage-guidance-audit.json",
+          "sha256": "4926f526f52a33a6f3a4ddae7343a38f77c3778c1e0a0861fda727bb9e791c37"
+        },
+        {
+          "path": "training-v4-mage-ready-magic-before-melee-chase-fresh-300/report.md",
+          "sha256": "82b4ed34aeaeb0d2ac77d758445523917c2663fc9c97b6216df125daac82da05"
+        },
+        {
+          "path": "training-v4-mage-ready-magic-before-melee-chase-fresh-300/summary.json",
+          "sha256": "04df880520fd6a431c175a46fb7a4b8f9df5d420031260c36df1f1acf9384c78"
+        },
+        {
+          "path": "training-v4-mage-ready-magic-before-melee-chase-fresh-300/training-audit.json",
+          "sha256": "2dc3b93ac04a2f47465ec6183e6cda2102fd18300f90b2b24cd40fea035a7748"
+        },
+        {
+          "path": "training-v4-mage-ready-magic-before-melee-chase-fresh-300/trials.csv",
+          "sha256": "aeba990c2fc2c03625d04cbd92298b8ab826a676ffa0839cf64547d1ab2bfa42"
+        }
+      ]
+    },
+    {
+      "run": "training-v4-mage-ready-magic-pooled-500",
+      "damage": "randomized",
+      "dim_semantics": "timestamp_wave29",
+      "trials": 500,
+      "completed": 500,
+      "reported_seconds": {
+        "mean": 194.95704989154012,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 211.2,
+        "p95": 204.0
+      },
+      "average_eligible": 461,
+      "wave19_failure_rooms": 39,
+      "by3m22": 451,
+      "files": [
+        {
+          "path": "training-v4-mage-ready-magic-pooled-500/report.md",
+          "sha256": "b82f0885878c2dad81c9da10712088f7bb95b655d9a848ec2e46678640a3adbb"
+        },
+        {
+          "path": "training-v4-mage-ready-magic-pooled-500/summary.json",
+          "sha256": "daa498f5d5b82c83ea7cb827dcd75930757345eff13080d516aca2da9b6af82b"
+        },
+        {
+          "path": "training-v4-mage-ready-magic-pooled-500/trials.csv",
+          "sha256": "ce65c027b0ac8669561ac98aace7f2f9750aef3fc625b47b14ff9e9e96792816"
+        }
+      ]
+    },
+    {
+      "run": "training-v4-mage-cleanup-mixed-cleave-safety-random-200",
+      "damage": "randomized",
+      "dim_semantics": "timestamp_wave29",
+      "trials": 200,
+      "completed": 200,
+      "reported_seconds": {
+        "mean": 195.6454054054054,
+        "median": 194.4,
+        "min": 184.79999999999998,
+        "max": 211.2,
+        "p95": 204.0
+      },
+      "average_eligible": 185,
+      "wave19_failure_rooms": 15,
+      "by3m22": 178,
+      "files": [
+        {
+          "path": "training-v4-mage-cleanup-mixed-cleave-safety-random-200/cleanup-dim-audit.json",
+          "sha256": "f66483a891892673378b011f1d98df6265e60fe3614ed9b6911d8bed9618ffa3"
+        },
+        {
+          "path": "training-v4-mage-cleanup-mixed-cleave-safety-random-200/mage-cleanup-chase-audit.json",
+          "sha256": "aadcf863233d32667813fe370c9765fb4336bc0aacfa3393abe695ad52152291"
+        },
+        {
+          "path": "training-v4-mage-cleanup-mixed-cleave-safety-random-200/mage-cleanup-weapon-counts.json",
+          "sha256": "2fde3e26b6bc3cfd38f4df8159af5ddff53a41e5901bb5a42e87599a97daeb0a"
+        },
+        {
+          "path": "training-v4-mage-cleanup-mixed-cleave-safety-random-200/mage-final-guidance-audit.json",
+          "sha256": "8785c33f86222606fb1b7bf4b8c159380d6e164f05a79b09847e2f98d60cab14"
+        },
+        {
+          "path": "training-v4-mage-cleanup-mixed-cleave-safety-random-200/mage-final-movement-audit.json",
+          "sha256": "807a0389eac5b62bca32afa94b130b31cb90533a5188c9f5fe27c6bb09fb3544"
+        },
+        {
+          "path": "training-v4-mage-cleanup-mixed-cleave-safety-random-200/mage-fresh-own-null-classification.json",
+          "sha256": "fe4bf615161af12bd6958282d06a6f448e06934d61c5321a8c10c85b58a5abe6"
+        },
+        {
+          "path": "training-v4-mage-cleanup-mixed-cleave-safety-random-200/mage-guidance-audit.json",
+          "sha256": "8785c33f86222606fb1b7bf4b8c159380d6e164f05a79b09847e2f98d60cab14"
+        },
+        {
+          "path": "training-v4-mage-cleanup-mixed-cleave-safety-random-200/report.md",
+          "sha256": "dc076e588892f9f449d7034851ff4f63db6babca45068714fbca18f0a16d1533"
+        },
+        {
+          "path": "training-v4-mage-cleanup-mixed-cleave-safety-random-200/summary.json",
+          "sha256": "5a6fdad1062df5eb982d3ed5890e16d52ee254986910d1df2695f536047919f3"
+        },
+        {
+          "path": "training-v4-mage-cleanup-mixed-cleave-safety-random-200/training-audit.json",
+          "sha256": "ac1add7dfdadb97952befbed4b938e47227af4d548cbbe2081029f981e44fbdc"
+        },
+        {
+          "path": "training-v4-mage-cleanup-mixed-cleave-safety-random-200/trials.csv",
+          "sha256": "750f213afe0ed723597420b49fe0ed8b99c74fc4d9e00f1c2e13918f87cb6b62"
+        }
+      ]
+    }
+  ],
+  "remaining_goals": "Active:3:09mean,95%ofallroomsby3:22,zero19andbriefconsistencytargets",
+  "retention_files": [
+    {
+      "path": "retained-timestamp-combined/retention.json",
+      "sha256": "38e22e208ffd37e3488303c9be338491c170ba81a6971eac885288961875b0be"
+    },
+    {
+      "path": "retained-timestamp-combined/retained-strategy.patch",
+      "sha256": "61612652a136988a80147588dcd6230fe3ad50b271a47411855504b63658af1a"
+    }
+  ],
+  "status": "paused at explicit user wrapup after final mixed-cleave200; goals unmet"
+}

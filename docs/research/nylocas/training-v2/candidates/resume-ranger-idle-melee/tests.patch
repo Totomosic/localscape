@@ -1,0 +1,181 @@
+--- /dev/null
++++ b/org/localscape/nylocas/ranger/RangerIdleCleanupMeleeTest.java
+@@ -0,0 +1,178 @@
++package org.localscape.nylocas.ranger;
++
++import org.junit.Test;
++import org.localscape.nylocas.ranger.RangerStrategy.Crab;
++import org.localscape.nylocas.ranger.RangerStrategy.Decision;
++import org.localscape.nylocas.ranger.RangerStrategy.Lane;
++import org.localscape.nylocas.ranger.RangerStrategy.Room;
++import org.localscape.nylocas.ranger.RangerStrategy.Style;
++import org.localscape.nylocas.ranger.RangerStrategy.Weapon;
++
++import static org.junit.Assert.*;
++
++/** Local cleanup assistance spends only a ready tick with no ordinary feasible plan. */
++public class RangerIdleCleanupMeleeTest
++{
++	private final RangerStrategy strategy = new RangerStrategy();
++	private int key;
++
++	private Room room()
++	{
++		Room room = new Room();
++		room.wave = 31;
++		room.spawns[31] = 270;
++		room.player = RangerStrategy.tile(3293, 4248);
++		room.specialEnergy = 1000;
++		return room;
++	}
++
++	private Crab crab(Room room, int wave, int born, Style style, int x, int y)
++	{
++		Crab crab = new Crab(++key, key, born, wave, Lane.SPLIT, (char) 0, false, style,
++			RangerStrategy.tile(x, y));
++		room.crabs.add(crab);
++		return crab;
++	}
++
++	@Test
++	public void seed241TerminalFreshMeleeCanBeScratchedWithOneNativeRunStep()
++	{
++		Room room = room();
++		Crab melee = crab(room, 31, 323, Style.MELEE, 3290, 4245);
++		Decision decision = strategy.decide(room, 325);
++		assertSame(melee, decision.target);
++		assertEquals(Weapon.CLAWS, decision.weapon);
++		assertFalse(decision.special);
++		assertFalse(decision.pathToTarget);
++	}
++
++	@Test
++	public void freshBirth30WithinTwoAlsoGetsAnOrdinaryScratchWithNoSpecialEnergy()
++	{
++		Room room = room();
++		room.specialEnergy = 0;
++		Crab melee = crab(room, 30, 300, Style.MELEE, 3291, 4248);
++		Decision decision = strategy.decide(room, 325);
++		assertSame(melee, decision.target);
++		assertEquals(Weapon.CLAWS, decision.weapon);
++		assertFalse(decision.special);
++	}
++
++	@Test
++	public void birth29AndDistanceFourRemainOutsideTheAssistScope()
++	{
++		Room room = room();
++		crab(room, 29, 300, Style.MELEE, 3291, 4248);
++		crab(room, 31, 323, Style.MELEE, 3297, 4248);
++		assertNull(strategy.decide(room, 325).target);
++	}
++
++	@Test
++	public void actualWave30DoesNotStartTheCleanupAssist()
++	{
++		Room room = room();
++		room.wave = 30;
++		room.spawns[30] = 320;
++		crab(room, 30, 323, Style.MELEE, 3291, 4248);
++		assertNull(strategy.decide(room, 325).target);
++	}
++
++	@Test
++	public void futureRangeAndMagicApproachesStillKeepTheOrdinaryPlan()
++	{
++		for (Style style : new Style[]{Style.RANGE, Style.MAGIC})
++		{
++			strategy.reset();
++			Room room = room();
++			crab(room, 31, 323, Style.MELEE, 3291, 4248);
++			Crab ordinary = crab(room, 31, 323, style, 3301, 4254);
++			if (style == Style.MAGIC) room.player = RangerStrategy.tile(3290, 4243);
++			Decision decision = strategy.decide(room, 325);
++			assertSame(ordinary, decision.target != null ? decision.target : decision.approach);
++			assertEquals(style == Style.RANGE ? Weapon.PIPE : Weapon.EYE, decision.weapon);
++		}
++	}
++
++	@Test
++	public void anExistingAdjacentMeleePlanIsNotReplacedByTheNewerLocalAssist()
++	{
++		Room room = room();
++		Crab adjacent = crab(room, 30, 300, Style.MELEE, 3292, 4248);
++		crab(room, 31, 323, Style.MELEE, 3291, 4248);
++		assertSame(adjacent, strategy.decide(room, 325).target);
++	}
++
++	@Test
++	public void claimsOwnFlightsPersonalNullAndCurrentObstructionStillBlockTheAssist()
++	{
++		for (int unavailable = 0; unavailable < 4; unavailable++)
++		{
++			strategy.reset();
++			Room room = room();
++			Crab melee = crab(room, 31, 323, Style.MELEE, 3291, 4248);
++			if (unavailable == 0) melee.claimedUntil = 340;
++			if (unavailable == 1)
++			{
++				melee.ownHitUntil = 350;
++				melee.ownHitHp = 0;
++			}
++			if (unavailable == 2) melee.nulled = true;
++			if (unavailable == 3) room.obstructed.add(melee.key);
++			Decision decision = strategy.decide(room, 325);
++			assertNull(decision.target);
++			assertNull(decision.approach);
++		}
++	}
++
++	@Test
++	public void mageNullDoesNotPreventTheAvailableRangerFromAssisting()
++	{
++		Room room = room();
++		Crab melee = crab(room, 31, 323, Style.MELEE, 3291, 4248);
++		melee.partnerNulled = true;
++		assertSame(melee, strategy.decide(room, 325).target);
++	}
++
++	@Test
++	public void aCooldownOrExpiredTargetDoesNotCreateANewApproach()
++	{
++		Room room = room();
++		crab(room, 31, 323, Style.MELEE, 3291, 4248);
++		room.ready = 326;
++		Decision cooldown = strategy.decide(room, 325);
++		assertNull(cooldown.target);
++		assertNull(cooldown.approach);
++		strategy.reset();
++		room = room();
++		crab(room, 30, 276, Style.MELEE, 3291, 4248);
++		assertNull(strategy.decide(room, 325).target);
++	}
++
++	@Test
++	public void aFutureNamedFlickerIdentityCannotBeStolenAsMeleeFiller()
++	{
++		Room room = room();
++		room.spawns[31] = 100;
++		Crab north = new Crab(++key, key, 100, 31, Lane.WEST, 'N', false, Style.MELEE,
++			RangerStrategy.tile(3291, 4246));
++		room.crabs.add(north);
++		Decision decision = strategy.decide(room, 101);
++		assertNull(decision.target);
++		assertNull(decision.approach);
++	}
++
++	@Test
++	public void aShortPacketReturnBudgetStillPreventsTheScratch()
++	{
++		Room room = room();
++		room.spawns[31] = 100;
++		Crab north = new Crab(++key, key, 100, 31, Lane.WEST, 'N', false, Style.MELEE,
++			RangerStrategy.tile(3290, 4249));
++		room.crabs.add(north);
++		Crab melee = crab(room, 31, 103, Style.MELEE, 3291, 4246);
++		Decision decision = strategy.decide(room, 103);
++		assertNotSame(melee, decision.target);
++		assertNotSame(melee, decision.approach);
++		assertEquals(Weapon.PIPE, decision.weapon);
++	}
++}

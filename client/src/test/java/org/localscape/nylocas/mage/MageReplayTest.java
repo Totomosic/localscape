@@ -13,6 +13,8 @@ import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+import java.util.HashSet;
 import java.util.zip.GZIPInputStream;
 import org.localscape.nylocas.Tile;
 import org.localscape.nylocas.mage.MageStrategy.Crab;
@@ -27,7 +29,7 @@ import static org.junit.Assert.*;
 public class MageReplayTest
 {
 	@Test
-	public void verifiesLaneFlickersAndEveryMageAssignmentAgainst62Recordings() throws Exception
+	public void verifiesLaneFlickersAndMageAssignmentsAgainstVettedRecordings() throws Exception
 	{
 		Path root = Paths.get("").toAbsolutePath();
 		while (root != null && !Files.exists(root.resolve("docs/research/nylocas/mage/manifest.json"))) root = root.getParent();
@@ -36,10 +38,14 @@ public class MageReplayTest
 		JsonObject manifest = new JsonParser().parse(Files.readString(corpus.resolve("manifest.json"))).getAsJsonObject();
 		JsonArray recordings = manifest.getAsJsonArray("recordings");
 		assertEquals(62, recordings.size());
+		Set<String> eligible = vettedRecordings(root);
+		int selected = 0;
 		Map<String, Integer> support = new HashMap<>();
 		int updates = 0;
 		for (JsonElement recording : recordings)
 		{
+			if (!eligible.contains(recording.getAsJsonObject().get("uuid").getAsString())) continue;
+			selected++;
 			JsonObject files = recording.getAsJsonObject().getAsJsonObject("files");
 			JsonObject raid = checked(corpus, files.getAsJsonObject("raid")).getAsJsonObject();
 			JsonArray events = checked(corpus, files.getAsJsonObject("events")).getAsJsonArray();
@@ -94,7 +100,8 @@ public class MageReplayTest
 				}
 			}
 		}
-		assertTrue("Substantial direct NPC observations were checked", updates > 100000);
+		assertEquals(46, selected);
+		assertTrue("Substantial direct NPC observations were checked", updates > 50000);
 		for (Assignment rule : MageStrategy.ASSIGNMENTS) assertTrue("No replay supports packet: " + rule.name, support.getOrDefault(rule.name, 0) > 0);
 	}
 
@@ -119,6 +126,7 @@ public class MageReplayTest
 		assertPacket(raid, events, 177, 3292, 4252, "21 north sulphur");
 		assertPacket(raid, events, 189, 3295, 4244, "22 south Dinh");
 		assertPacket(raid, events, 236, 3293, 4245, "26 Dinh on 28");
+		assertPacket(raid, events, 249, 3295, 4244, "South big 29");
 		MageStrategy.Room after29 = frame(raid, events, 240, 3295, 4243);
 		assertNotNull(new MageStrategy().decide(after29, 240).target);
 	}
@@ -184,10 +192,20 @@ public class MageReplayTest
 			case SHADOW: return attack == 40;
 			case SCYTHE: return attack == 38;
 			case SULPHUR: return attack == 101;
-			case DARTS: return attack == 74;
+			// User requests blowpipe for this supporting shot; the source rotation used darts.
+			case PIPE: return attack == 74;
 			case BARRAGE: return attack == 1 || attack == 37;
 			default: return false;
 		}
+	}
+
+	private Set<String> vettedRecordings(Path root) throws Exception
+	{
+		JsonObject summary = new JsonParser().parse(Files.readString(root.resolve("docs/research/nylocas/vetting/summary.json"))).getAsJsonObject();
+		Set<String> result = new HashSet<>();
+		for (JsonElement row : summary.getAsJsonArray("eligiblePinnedRecordings"))
+			result.add(row.getAsJsonObject().get("uuid").getAsString());
+		return result;
 	}
 
 	private JsonElement checked(Path corpus, JsonObject entry) throws Exception

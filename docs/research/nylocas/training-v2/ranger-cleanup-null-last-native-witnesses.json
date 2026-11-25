@@ -1,0 +1,4241 @@
+[
+  {
+    "run": ".state/simulations/training-v3-south20-coherent-random-200",
+    "trials": 200,
+    "counts": {
+      "literal_last_ready_ranger_mage_primary": 24,
+      "partner_null_fresh_lifetimes": 9,
+      "partner_null_lifetimes_with_ready_nonlethal_screen": 8,
+      "partner_null_lifetimes_never_selected": 2
+    },
+    "partner_null": [
+      {
+        "seed": "257451351778369",
+        "key": 204,
+        "first_partner_null": 302,
+        "first_cleanup_seen": 302,
+        "first_selected": 302,
+        "first_native_attack": 303,
+        "first_ready_nonlethal_screen": {
+          "tick": 303,
+          "target": {
+            "key": 204,
+            "wave": 31,
+            "born": 287,
+            "age": 16,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4252,
+            "claimed_until": 0,
+            "own_hit_until": 335,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 303,
+          "living_count": 11,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3295,4248,0",
+            "weapon": "EYE",
+            "target": 204,
+            "reason": "Recent MAGIC small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3299,4251,0",
+            "weapon": "SULPHUR",
+            "target": 191,
+            "reason": "Plan SULPHUR #197 @306: Fresh MELEE small"
+          }
+        }
+      },
+      {
+        "seed": "257451351778373",
+        "key": 195,
+        "first_partner_null": 304,
+        "first_cleanup_seen": 304,
+        "first_selected": null,
+        "first_native_attack": null,
+        "first_ready_nonlethal_screen": null
+      },
+      {
+        "seed": "257451351778411",
+        "key": 200,
+        "first_partner_null": 286,
+        "first_cleanup_seen": 286,
+        "first_selected": 286,
+        "first_native_attack": 286,
+        "first_ready_nonlethal_screen": {
+          "tick": 286,
+          "target": {
+            "key": 200,
+            "wave": 31,
+            "born": 279,
+            "age": 7,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4245,
+            "claimed_until": 0,
+            "own_hit_until": 318,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 286,
+          "living_count": 15,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3296,4248,0",
+            "weapon": "PIPE",
+            "target": 200,
+            "reason": "Recent RANGE small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3300,4246,0",
+            "weapon": "SULPHUR",
+            "target": 202,
+            "reason": "Plan SULPHUR #208 @290: Fresh MELEE small"
+          }
+        }
+      },
+      {
+        "seed": "257451351778422",
+        "key": 198,
+        "first_partner_null": 280,
+        "first_cleanup_seen": 280,
+        "first_selected": 292,
+        "first_native_attack": 294,
+        "first_ready_nonlethal_screen": {
+          "tick": 280,
+          "target": {
+            "key": 198,
+            "wave": 31,
+            "born": 267,
+            "age": 13,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4244,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 280,
+          "living_count": 20,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3297,4248,0",
+            "weapon": "PIPE",
+            "target": 196,
+            "reason": "Recent RANGE small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3293,4244,0",
+            "weapon": "SULPHUR",
+            "target": 203,
+            "reason": "Plan SULPHUR #209 @284: Fresh MELEE small"
+          }
+        }
+      },
+      {
+        "seed": "257451351778445",
+        "key": 199,
+        "first_partner_null": 267,
+        "first_cleanup_seen": 267,
+        "first_selected": null,
+        "first_native_attack": null,
+        "first_ready_nonlethal_screen": {
+          "tick": 267,
+          "target": {
+            "key": 199,
+            "wave": 31,
+            "born": 262,
+            "age": 5,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4252,
+            "claimed_until": 0,
+            "own_hit_until": 297,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              3
+            ]
+          },
+          "earliest_request": 267,
+          "living_count": 24,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3296,4248,0",
+            "weapon": "CHIN",
+            "target": 202,
+            "reason": "Recent RANGE small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3300,4251,0",
+            "weapon": "SCYTHE",
+            "target": 201,
+            "reason": "Plan SCYTHE #207 @271: Fresh MELEE small"
+          }
+        }
+      },
+      {
+        "seed": "257451351778496",
+        "key": 202,
+        "first_partner_null": 284,
+        "first_cleanup_seen": 284,
+        "first_selected": 284,
+        "first_native_attack": 284,
+        "first_ready_nonlethal_screen": {
+          "tick": 284,
+          "target": {
+            "key": 202,
+            "wave": 31,
+            "born": 283,
+            "age": 1,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4245,
+            "claimed_until": 0,
+            "own_hit_until": 316,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 284,
+          "living_count": 20,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3296,4248,0",
+            "weapon": "PIPE",
+            "target": 202,
+            "reason": "Recent RANGE small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3300,4246,0",
+            "weapon": "SULPHUR",
+            "target": 204,
+            "reason": "Plan SULPHUR #210 @288: Fresh MELEE small"
+          }
+        }
+      },
+      {
+        "seed": "257451351778496",
+        "key": 200,
+        "first_partner_null": 302,
+        "first_cleanup_seen": 302,
+        "first_selected": 302,
+        "first_native_attack": 303,
+        "first_ready_nonlethal_screen": {
+          "tick": 303,
+          "target": {
+            "key": 200,
+            "wave": 31,
+            "born": 279,
+            "age": 24,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4252,
+            "claimed_until": 0,
+            "own_hit_until": 335,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 303,
+          "living_count": 3,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3296,4248,0",
+            "weapon": "EYE",
+            "target": 200,
+            "reason": "Recent MAGIC small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3299,4251,0",
+            "weapon": "EYE",
+            "target": -1,
+            "reason": "Clear wave 30 and 31 survivors"
+          }
+        }
+      },
+      {
+        "seed": "257451351778498",
+        "key": 206,
+        "first_partner_null": 284,
+        "first_cleanup_seen": 284,
+        "first_selected": 287,
+        "first_native_attack": 289,
+        "first_ready_nonlethal_screen": {
+          "tick": 284,
+          "target": {
+            "key": 206,
+            "wave": 31,
+            "born": 275,
+            "age": 9,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4245,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 284,
+          "living_count": 16,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3295,4248,0",
+            "weapon": "PIPE",
+            "target": 198,
+            "reason": "Recent RANGE small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3300,4246,0",
+            "weapon": "SULPHUR",
+            "target": 190,
+            "reason": "Plan SULPHUR #196 @288: Fresh MELEE small"
+          }
+        }
+      },
+      {
+        "seed": "257451351778556",
+        "key": 188,
+        "first_partner_null": 289,
+        "first_cleanup_seen": 289,
+        "first_selected": 301,
+        "first_native_attack": 302,
+        "first_ready_nonlethal_screen": {
+          "tick": 291,
+          "target": {
+            "key": 188,
+            "wave": 30,
+            "born": 255,
+            "age": 36,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 291,
+          "living_count": 13,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3296,4248,0",
+            "weapon": "EYE",
+            "target": 206,
+            "reason": "Recent MAGIC small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3292,4243,0",
+            "weapon": "SULPHUR",
+            "target": 200,
+            "reason": "Plan SULPHUR #206 @293: Fresh MELEE small"
+          }
+        }
+      }
+    ],
+    "literal_last_partner_primary_examples": [
+      {
+        "seed": "257451351778368",
+        "tick": 313,
+        "target": {
+          "key": 196,
+          "wave": 31,
+          "born": 273,
+          "age": 40,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3291,
+          "y": 4252,
+          "claimed_until": 346,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3292,4253,0",
+          "weapon": "SULPHUR",
+          "target": 196,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778382",
+        "tick": 306,
+        "target": {
+          "key": 187,
+          "wave": 30,
+          "born": 261,
+          "age": 45,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4243,
+          "claimed_until": 339,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3299,4244,0",
+          "weapon": "SULPHUR",
+          "target": 187,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778394",
+        "tick": 334,
+        "target": {
+          "key": 196,
+          "wave": 31,
+          "born": 293,
+          "age": 41,
+          "style": "MELEE",
+          "big": false,
+          "hp": 5,
+          "x": 3290,
+          "y": 4252,
+          "claimed_until": 367,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            5,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3291,4252,0",
+          "weapon": "SULPHUR",
+          "target": 196,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778395",
+        "tick": 312,
+        "target": {
+          "key": 205,
+          "wave": 31,
+          "born": 307,
+          "age": 5,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3293,
+          "y": 4243,
+          "claimed_until": 345,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3295,4244,0",
+          "weapon": "SULPHUR",
+          "target": 205,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778404",
+        "tick": 313,
+        "target": {
+          "key": 195,
+          "wave": 31,
+          "born": 278,
+          "age": 35,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4252,
+          "claimed_until": 346,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3290,4251,0",
+          "weapon": "SULPHUR",
+          "target": 195,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778411",
+        "tick": 307,
+        "target": {
+          "key": 205,
+          "wave": 31,
+          "born": 303,
+          "age": 4,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3294,
+          "y": 4243,
+          "claimed_until": 340,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3295,4244,0",
+          "weapon": "SULPHUR",
+          "target": 205,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778413",
+        "tick": 314,
+        "target": {
+          "key": 206,
+          "wave": 31,
+          "born": 307,
+          "age": 7,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4252,
+          "claimed_until": 347,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3292,4250,0",
+          "weapon": "SULPHUR",
+          "target": 206,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778415",
+        "tick": 305,
+        "target": {
+          "key": 200,
+          "wave": 31,
+          "born": 276,
+          "age": 29,
+          "style": "MELEE",
+          "big": false,
+          "hp": 1,
+          "x": 3292,
+          "y": 4243,
+          "claimed_until": 338,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            1,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3293,4244,0",
+          "weapon": "SULPHUR",
+          "target": 200,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778419",
+        "tick": 321,
+        "target": {
+          "key": 197,
+          "wave": 31,
+          "born": 289,
+          "age": 32,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4243,
+          "claimed_until": 354,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3298,4245,0",
+          "weapon": "SULPHUR",
+          "target": 197,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778430",
+        "tick": 311,
+        "target": {
+          "key": 200,
+          "wave": 31,
+          "born": 279,
+          "age": 32,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4252,
+          "claimed_until": 344,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3293,4251,0",
+          "weapon": "SULPHUR",
+          "target": 200,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778437",
+        "tick": 307,
+        "target": {
+          "key": 206,
+          "wave": 31,
+          "born": 287,
+          "age": 20,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3291,
+          "y": 4252,
+          "claimed_until": 340,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3297,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3295,4245,0",
+          "weapon": "EYE",
+          "target": 206,
+          "reason": "Fresh MAGIC small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778441",
+        "tick": 296,
+        "target": {
+          "key": 193,
+          "wave": 30,
+          "born": 260,
+          "age": 36,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4252,
+          "claimed_until": 329,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3291,4251,0",
+          "weapon": "SULPHUR",
+          "target": 193,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778444",
+        "tick": 311,
+        "target": {
+          "key": 202,
+          "wave": 31,
+          "born": 275,
+          "age": 36,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3301,
+          "y": 4245,
+          "claimed_until": 344,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3300,4246,0",
+          "weapon": "SULPHUR",
+          "target": 202,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778445",
+        "tick": 296,
+        "target": {
+          "key": 194,
+          "wave": 31,
+          "born": 249,
+          "age": 47,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3291,
+          "y": 4245,
+          "claimed_until": 329,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3290,4246,0",
+          "weapon": "SULPHUR",
+          "target": 194,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778449",
+        "tick": 300,
+        "target": {
+          "key": 200,
+          "wave": 31,
+          "born": 272,
+          "age": 28,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3292,
+          "y": 4253,
+          "claimed_until": 333,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3292,4252,0",
+          "weapon": "SULPHUR",
+          "target": 200,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778452",
+        "tick": 323,
+        "target": {
+          "key": 190,
+          "wave": 30,
+          "born": 279,
+          "age": 44,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 7,
+          "x": 3292,
+          "y": 4254,
+          "claimed_until": 356,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            7,
+            3
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3295,4249,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3291,4252,0",
+          "weapon": "EYE",
+          "target": 190,
+          "reason": "Fresh MAGIC small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778462",
+        "tick": 309,
+        "target": {
+          "key": 200,
+          "wave": 31,
+          "born": 275,
+          "age": 34,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3300,
+          "y": 4252,
+          "claimed_until": 342,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3299,4250,0",
+          "weapon": "SULPHUR",
+          "target": 200,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778468",
+        "tick": 296,
+        "target": {
+          "key": 202,
+          "wave": 31,
+          "born": 267,
+          "age": 29,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3301,
+          "y": 4252,
+          "claimed_until": 329,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3300,4251,0",
+          "weapon": "SULPHUR",
+          "target": 202,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778477",
+        "tick": 312,
+        "target": {
+          "key": 205,
+          "wave": 31,
+          "born": 307,
+          "age": 5,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3293,
+          "y": 4243,
+          "claimed_until": 345,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3295,4244,0",
+          "weapon": "SULPHUR",
+          "target": 205,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778479",
+        "tick": 315,
+        "target": {
+          "key": 206,
+          "wave": 31,
+          "born": 307,
+          "age": 8,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3292,
+          "y": 4243,
+          "claimed_until": 348,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3294,4245,0",
+          "weapon": "SULPHUR",
+          "target": 206,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778486",
+        "tick": 303,
+        "target": {
+          "key": 192,
+          "wave": 30,
+          "born": 261,
+          "age": 42,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4253,
+          "claimed_until": 336,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3297,4250,0",
+          "weapon": "SULPHUR",
+          "target": 192,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778520",
+        "tick": 303,
+        "target": {
+          "key": 194,
+          "wave": 31,
+          "born": 263,
+          "age": 40,
+          "style": "MELEE",
+          "big": false,
+          "hp": 2,
+          "x": 3300,
+          "y": 4252,
+          "claimed_until": 336,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            2,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3301,4251,0",
+          "weapon": "SULPHUR",
+          "target": 194,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778557",
+        "tick": 328,
+        "target": {
+          "key": 192,
+          "wave": 30,
+          "born": 288,
+          "age": 40,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4252,
+          "claimed_until": 361,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3291,4250,0",
+          "weapon": "SULPHUR",
+          "target": 192,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "257451351778565",
+        "tick": 318,
+        "target": {
+          "key": 188,
+          "wave": 30,
+          "born": 271,
+          "age": 47,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3291,
+          "y": 4252,
+          "claimed_until": 351,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3293,4253,0",
+          "weapon": "SULPHUR",
+          "target": 188,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      }
+    ],
+    "caveat": "Screen native cleanup NULL rescue and literal-last cooperation opportunities.\n\nPredecision queued damage is authoritative. Range/travel screens do not establish\ntarget line of sight or a missed native launch. Mage's temporary same-cycle claim\nis reconstructed from its actual ready primary; it is absent from final leases.\n",
+    "sources": {
+      ".state/simulations/training-v3-south20-coherent-random-200/server.log": "9d1059f40704bd562e9d97e70d22eb274fcd6c98ef27d84451ebf5575b440281",
+      ".state/simulations/training-v3-south20-coherent-random-200/trials.csv": "6525a924a42ce8c9913c5a39cdcd9559d2eb583c2d8687d51d9cb00971fc2ee0"
+    }
+  },
+  {
+    "run": ".state/simulations/training-v3-south20-coherent-fresh-300",
+    "trials": 300,
+    "counts": {
+      "literal_last_ready_ranger_mage_primary": 42,
+      "partner_null_fresh_lifetimes": 11,
+      "partner_null_lifetimes_with_ready_nonlethal_screen": 9,
+      "partner_null_lifetimes_never_selected": 3
+    },
+    "partner_null": [
+      {
+        "seed": "279799561480272",
+        "key": 187,
+        "first_partner_null": 289,
+        "first_cleanup_seen": 289,
+        "first_selected": 289,
+        "first_native_attack": 289,
+        "first_ready_nonlethal_screen": {
+          "tick": 289,
+          "target": {
+            "key": 187,
+            "wave": 30,
+            "born": 262,
+            "age": 27,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4252,
+            "claimed_until": 0,
+            "own_hit_until": 321,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 289,
+          "living_count": 10,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3296,4248,0",
+            "weapon": "PIPE",
+            "target": 187,
+            "reason": "Recent RANGE small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3301,4251,0",
+            "weapon": "SULPHUR",
+            "target": 204,
+            "reason": "Plan SULPHUR #210 @293: Fresh MELEE small"
+          }
+        }
+      },
+      {
+        "seed": "279799561480285",
+        "key": 189,
+        "first_partner_null": 276,
+        "first_cleanup_seen": 276,
+        "first_selected": 276,
+        "first_native_attack": 276,
+        "first_ready_nonlethal_screen": {
+          "tick": 276,
+          "target": {
+            "key": 189,
+            "wave": 30,
+            "born": 271,
+            "age": 5,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3293,
+            "y": 4243,
+            "claimed_until": 0,
+            "own_hit_until": 308,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              5
+            ]
+          },
+          "earliest_request": 276,
+          "living_count": 24,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3296,4248,0",
+            "weapon": "PIPE",
+            "target": 189,
+            "reason": "Recent RANGE small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3292,4244,0",
+            "weapon": "SULPHUR",
+            "target": 184,
+            "reason": "Plan SULPHUR #190 @280: Fresh MELEE small"
+          }
+        }
+      },
+      {
+        "seed": "279799561480290",
+        "key": 192,
+        "first_partner_null": 287,
+        "first_cleanup_seen": 287,
+        "first_selected": null,
+        "first_native_attack": null,
+        "first_ready_nonlethal_screen": {
+          "tick": 288,
+          "target": {
+            "key": 192,
+            "wave": 30,
+            "born": 271,
+            "age": 17,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4245,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 288,
+          "living_count": 18,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3297,4248,0",
+            "weapon": "PIPE",
+            "target": 195,
+            "reason": "Recent RANGE small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3301,4246,0",
+            "weapon": "SCYTHE",
+            "target": 205,
+            "reason": "Plan SCYTHE #211 @291: Fresh MELEE small"
+          }
+        }
+      },
+      {
+        "seed": "279799561480313",
+        "key": 184,
+        "first_partner_null": 294,
+        "first_cleanup_seen": 294,
+        "first_selected": 300,
+        "first_native_attack": 302,
+        "first_ready_nonlethal_screen": {
+          "tick": 294,
+          "target": {
+            "key": 184,
+            "wave": 30,
+            "born": 264,
+            "age": 30,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 2,
+            "x": 3292,
+            "y": 4243,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              2,
+              0
+            ]
+          },
+          "earliest_request": 294,
+          "living_count": 14,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3296,4249,0",
+            "weapon": "PIPE",
+            "target": 193,
+            "reason": "Recent RANGE small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3293,4244,0",
+            "weapon": "SULPHUR",
+            "target": 201,
+            "reason": "Plan SULPHUR #207 @298: Fresh MELEE small"
+          }
+        }
+      },
+      {
+        "seed": "279799561480315",
+        "key": 199,
+        "first_partner_null": 276,
+        "first_cleanup_seen": 276,
+        "first_selected": 284,
+        "first_native_attack": 285,
+        "first_ready_nonlethal_screen": {
+          "tick": 277,
+          "target": {
+            "key": 199,
+            "wave": 31,
+            "born": 267,
+            "age": 10,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4244,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 277,
+          "living_count": 18,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3296,4248,0",
+            "weapon": "PIPE",
+            "target": 198,
+            "reason": "East range 31"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3292,4243,0",
+            "weapon": "SULPHUR",
+            "target": 192,
+            "reason": "Plan SULPHUR #198 @280: Fresh MELEE small"
+          }
+        }
+      },
+      {
+        "seed": "279799561480316",
+        "key": 187,
+        "first_partner_null": 303,
+        "first_cleanup_seen": 303,
+        "first_selected": null,
+        "first_native_attack": null,
+        "first_ready_nonlethal_screen": null
+      },
+      {
+        "seed": "279799561480358",
+        "key": 194,
+        "first_partner_null": 297,
+        "first_cleanup_seen": 297,
+        "first_selected": 303,
+        "first_native_attack": 304,
+        "first_ready_nonlethal_screen": {
+          "tick": 298,
+          "target": {
+            "key": 194,
+            "wave": 31,
+            "born": 275,
+            "age": 23,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4252,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 298,
+          "living_count": 11,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3295,4248,0",
+            "weapon": "PIPE",
+            "target": 197,
+            "reason": "Recent RANGE small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3299,4251,0",
+            "weapon": "SULPHUR",
+            "target": 205,
+            "reason": "Plan SULPHUR #211 @301: Fresh MELEE small"
+          }
+        }
+      },
+      {
+        "seed": "279799561480391",
+        "key": 196,
+        "first_partner_null": 292,
+        "first_cleanup_seen": 292,
+        "first_selected": null,
+        "first_native_attack": null,
+        "first_ready_nonlethal_screen": null
+      },
+      {
+        "seed": "279799561480397",
+        "key": 186,
+        "first_partner_null": 275,
+        "first_cleanup_seen": 280,
+        "first_selected": 308,
+        "first_native_attack": 310,
+        "first_ready_nonlethal_screen": {
+          "tick": 280,
+          "target": {
+            "key": 186,
+            "wave": 30,
+            "born": 269,
+            "age": 11,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3299,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 280,
+          "living_count": 27,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3294,4248,0",
+            "weapon": "EYE",
+            "target": 192,
+            "reason": "Recent MAGIC small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3292,4245,0",
+            "weapon": "EYE",
+            "target": 197,
+            "reason": "Plan EYE #203 @283: East magic 31"
+          }
+        }
+      },
+      {
+        "seed": "279799561480423",
+        "key": 195,
+        "first_partner_null": 307,
+        "first_cleanup_seen": 307,
+        "first_selected": 318,
+        "first_native_attack": 319,
+        "first_ready_nonlethal_screen": {
+          "tick": 307,
+          "target": {
+            "key": 195,
+            "wave": 31,
+            "born": 282,
+            "age": 25,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4252,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 307,
+          "living_count": 9,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3296,4248,0",
+            "weapon": "EYE",
+            "target": 205,
+            "reason": "Recent MAGIC small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3300,4251,0",
+            "weapon": "SULPHUR",
+            "target": 188,
+            "reason": "Plan SULPHUR #194 @311: Fresh MELEE small"
+          }
+        }
+      },
+      {
+        "seed": "279799561480534",
+        "key": 201,
+        "first_partner_null": 280,
+        "first_cleanup_seen": 280,
+        "first_selected": 287,
+        "first_native_attack": 288,
+        "first_ready_nonlethal_screen": {
+          "tick": 280,
+          "target": {
+            "key": 201,
+            "wave": 31,
+            "born": 279,
+            "age": 1,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4245,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 280,
+          "living_count": 25,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3295,4248,0",
+            "weapon": "PIPE",
+            "target": 191,
+            "reason": "Recent RANGE small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3300,4246,0",
+            "weapon": "SULPHUR",
+            "target": 204,
+            "reason": "Plan SULPHUR #210 @284: Fresh MELEE small"
+          }
+        }
+      }
+    ],
+    "literal_last_partner_primary_examples": [
+      {
+        "seed": "279799561480265",
+        "tick": 307,
+        "target": {
+          "key": 198,
+          "wave": 31,
+          "born": 273,
+          "age": 34,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3291,
+          "y": 4252,
+          "claimed_until": 340,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3292,4250,0",
+          "weapon": "SULPHUR",
+          "target": 198,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480272",
+        "tick": 313,
+        "target": {
+          "key": 206,
+          "wave": 31,
+          "born": 307,
+          "age": 6,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3297,
+          "y": 4243,
+          "claimed_until": 346,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3295,4244,0",
+          "weapon": "SULPHUR",
+          "target": 206,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480274",
+        "tick": 329,
+        "target": {
+          "key": 202,
+          "wave": 31,
+          "born": 294,
+          "age": 35,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3301,
+          "y": 4252,
+          "claimed_until": 362,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3300,4251,0",
+          "weapon": "SULPHUR",
+          "target": 202,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480276",
+        "tick": 306,
+        "target": {
+          "key": 187,
+          "wave": 30,
+          "born": 266,
+          "age": 40,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3301,
+          "y": 4252,
+          "claimed_until": 339,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            4
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3295,4249,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3299,4250,0",
+          "weapon": "EYE",
+          "target": 187,
+          "reason": "Fresh MAGIC small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480284",
+        "tick": 316,
+        "target": {
+          "key": 205,
+          "wave": 31,
+          "born": 311,
+          "age": 5,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3301,
+          "y": 4246,
+          "claimed_until": 349,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3299,4245,0",
+          "weapon": "SULPHUR",
+          "target": 205,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480294",
+        "tick": 312,
+        "target": {
+          "key": 205,
+          "wave": 31,
+          "born": 307,
+          "age": 5,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3293,
+          "y": 4243,
+          "claimed_until": 345,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3293,4245,0",
+          "weapon": "SULPHUR",
+          "target": 205,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480295",
+        "tick": 301,
+        "target": {
+          "key": 189,
+          "wave": 30,
+          "born": 263,
+          "age": 38,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4244,
+          "claimed_until": 334,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            2
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3296,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3292,4245,0",
+          "weapon": "EYE",
+          "target": 189,
+          "reason": "Fresh MAGIC small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480301",
+        "tick": 313,
+        "target": {
+          "key": 206,
+          "wave": 31,
+          "born": 295,
+          "age": 18,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3291,
+          "y": 4245,
+          "claimed_until": 346,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3290,4245,0",
+          "weapon": "SULPHUR",
+          "target": 206,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480301",
+        "tick": 317,
+        "target": {
+          "key": 206,
+          "wave": 31,
+          "born": 295,
+          "age": 22,
+          "style": "MELEE",
+          "big": false,
+          "hp": 2,
+          "x": 3291,
+          "y": 4245,
+          "claimed_until": 350,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            2,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3290,4245,0",
+          "weapon": "SULPHUR",
+          "target": 206,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480304",
+        "tick": 325,
+        "target": {
+          "key": 197,
+          "wave": 31,
+          "born": 289,
+          "age": 36,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4252,
+          "claimed_until": 358,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3291,4251,0",
+          "weapon": "SULPHUR",
+          "target": 197,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480311",
+        "tick": 299,
+        "target": {
+          "key": 197,
+          "wave": 31,
+          "born": 263,
+          "age": 36,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3292,
+          "y": 4243,
+          "claimed_until": 332,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3292,4244,0",
+          "weapon": "SULPHUR",
+          "target": 197,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480323",
+        "tick": 311,
+        "target": {
+          "key": 188,
+          "wave": 30,
+          "born": 266,
+          "age": 45,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4245,
+          "claimed_until": 344,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3291,4246,0",
+          "weapon": "SULPHUR",
+          "target": 188,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480330",
+        "tick": 307,
+        "target": {
+          "key": 190,
+          "wave": 30,
+          "born": 267,
+          "age": 40,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3292,
+          "y": 4243,
+          "claimed_until": 340,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3293,4244,0",
+          "weapon": "SULPHUR",
+          "target": 190,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480350",
+        "tick": 312,
+        "target": {
+          "key": 200,
+          "wave": 31,
+          "born": 281,
+          "age": 31,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4252,
+          "claimed_until": 345,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3291,4250,0",
+          "weapon": "SULPHUR",
+          "target": 200,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480358",
+        "tick": 314,
+        "target": {
+          "key": 206,
+          "wave": 31,
+          "born": 297,
+          "age": 17,
+          "style": "MELEE",
+          "big": false,
+          "hp": 4,
+          "x": 3299,
+          "y": 4254,
+          "claimed_until": 347,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            4,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3299,4253,0",
+          "weapon": "SULPHUR",
+          "target": 206,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480369",
+        "tick": 315,
+        "target": {
+          "key": 206,
+          "wave": 31,
+          "born": 307,
+          "age": 8,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3292,
+          "y": 4243,
+          "claimed_until": 348,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3293,4244,0",
+          "weapon": "SULPHUR",
+          "target": 206,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480375",
+        "tick": 320,
+        "target": {
+          "key": 205,
+          "wave": 31,
+          "born": 315,
+          "age": 5,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4243,
+          "claimed_until": 353,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3298,4244,0",
+          "weapon": "SULPHUR",
+          "target": 205,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480377",
+        "tick": 317,
+        "target": {
+          "key": 206,
+          "wave": 31,
+          "born": 311,
+          "age": 6,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4252,
+          "claimed_until": 350,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3291,4250,0",
+          "weapon": "SULPHUR",
+          "target": 206,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480393",
+        "tick": 310,
+        "target": {
+          "key": 205,
+          "wave": 31,
+          "born": 307,
+          "age": 3,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3294,
+          "y": 4243,
+          "claimed_until": 343,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            5
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3295,4246,0",
+          "weapon": "EYE",
+          "target": 205,
+          "reason": "Fresh MAGIC small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480398",
+        "tick": 321,
+        "target": {
+          "key": 205,
+          "wave": 31,
+          "born": 315,
+          "age": 6,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4243,
+          "claimed_until": 354,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3299,4244,0",
+          "weapon": "SULPHUR",
+          "target": 205,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480410",
+        "tick": 306,
+        "target": {
+          "key": 202,
+          "wave": 31,
+          "born": 283,
+          "age": 23,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4252,
+          "claimed_until": 339,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3291,4250,0",
+          "weapon": "SULPHUR",
+          "target": 202,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480424",
+        "tick": 306,
+        "target": {
+          "key": 204,
+          "wave": 31,
+          "born": 271,
+          "age": 35,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4243,
+          "claimed_until": 339,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3299,4245,0",
+          "weapon": "SULPHUR",
+          "target": 204,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480427",
+        "tick": 315,
+        "target": {
+          "key": 206,
+          "wave": 31,
+          "born": 311,
+          "age": 4,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3301,
+          "y": 4248,
+          "claimed_until": 348,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3300,4247,0",
+          "weapon": "SULPHUR",
+          "target": 206,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480436",
+        "tick": 314,
+        "target": {
+          "key": 198,
+          "wave": 31,
+          "born": 277,
+          "age": 37,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4245,
+          "claimed_until": 347,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3291,4246,0",
+          "weapon": "SULPHUR",
+          "target": 198,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480449",
+        "tick": 303,
+        "target": {
+          "key": 206,
+          "wave": 31,
+          "born": 292,
+          "age": 11,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4252,
+          "claimed_until": 336,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3293,4250,0",
+          "weapon": "SULPHUR",
+          "target": 206,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480455",
+        "tick": 316,
+        "target": {
+          "key": 205,
+          "wave": 31,
+          "born": 311,
+          "age": 5,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3293,
+          "y": 4243,
+          "claimed_until": 349,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3295,4244,0",
+          "weapon": "SULPHUR",
+          "target": 205,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480459",
+        "tick": 307,
+        "target": {
+          "key": 198,
+          "wave": 31,
+          "born": 274,
+          "age": 33,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4252,
+          "claimed_until": 340,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3292,4249,0",
+          "weapon": "SULPHUR",
+          "target": 198,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480470",
+        "tick": 306,
+        "target": {
+          "key": 198,
+          "wave": 31,
+          "born": 263,
+          "age": 43,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4244,
+          "claimed_until": 339,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3298,4245,0",
+          "weapon": "SULPHUR",
+          "target": 198,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480496",
+        "tick": 325,
+        "target": {
+          "key": 206,
+          "wave": 31,
+          "born": 319,
+          "age": 6,
+          "style": "MELEE",
+          "big": false,
+          "hp": 5,
+          "x": 3298,
+          "y": 4252,
+          "claimed_until": 358,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            5,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3297,4250,0",
+          "weapon": "SULPHUR",
+          "target": 206,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "279799561480502",
+        "tick": 314,
+        "target": {
+          "key": 197,
+          "wave": 31,
+          "born": 281,
+          "age": 33,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4252,
+          "claimed_until": 347,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3293,4251,0",
+          "weapon": "SULPHUR",
+          "target": 197,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      }
+    ],
+    "caveat": "Screen native cleanup NULL rescue and literal-last cooperation opportunities.\n\nPredecision queued damage is authoritative. Range/travel screens do not establish\ntarget line of sight or a missed native launch. Mage's temporary same-cycle claim\nis reconstructed from its actual ready primary; it is absent from final leases.\n",
+    "sources": {
+      ".state/simulations/training-v3-south20-coherent-fresh-300/server.log": "b5a7459269e33c090c158e9b254824ba07f65d7f02dd53f2a1b8350ac8c5dc56",
+      ".state/simulations/training-v3-south20-coherent-fresh-300/trials.csv": "fa7704390931ee2e786562d701108a4d1442bdb18961fa7650bc3e15203858e2"
+    }
+  },
+  {
+    "run": ".state/simulations/training-v3-mage-idle-ranged-cleanup-random-200",
+    "trials": 200,
+    "counts": {
+      "literal_last_ready_ranger_mage_primary": 24,
+      "partner_null_fresh_lifetimes": 7,
+      "partner_null_lifetimes_with_ready_nonlethal_screen": 4,
+      "partner_null_lifetimes_never_selected": 4
+    },
+    "partner_null": [
+      {
+        "seed": "22080991948234",
+        "key": 189,
+        "first_partner_null": 267,
+        "first_cleanup_seen": 272,
+        "first_selected": 272,
+        "first_native_attack": 272,
+        "first_ready_nonlethal_screen": {
+          "tick": 272,
+          "target": {
+            "key": 189,
+            "wave": 30,
+            "born": 266,
+            "age": 6,
+            "style": "RANGE",
+            "big": false,
+            "hp": 3,
+            "x": 3298,
+            "y": 4243,
+            "claimed_until": 0,
+            "own_hit_until": 304,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              3,
+              0
+            ]
+          },
+          "earliest_request": 272,
+          "living_count": 22,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3293,4248,0",
+            "weapon": "PIPE",
+            "target": 189,
+            "reason": "Recent RANGE small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3301,4251,0",
+            "weapon": "EYE",
+            "target": 197,
+            "reason": "Plan EYE #203 @275: East magic 31"
+          }
+        }
+      },
+      {
+        "seed": "22080991948272",
+        "key": 201,
+        "first_partner_null": 290,
+        "first_cleanup_seen": 290,
+        "first_selected": 296,
+        "first_native_attack": 297,
+        "first_ready_nonlethal_screen": {
+          "tick": 290,
+          "target": {
+            "key": 201,
+            "wave": 31,
+            "born": 283,
+            "age": 7,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4252,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 291,
+          "living_count": 23,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3293,4248,0",
+            "weapon": "CHIN",
+            "target": 198,
+            "reason": "Recent RANGE small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3301,4251,0",
+            "weapon": "SULPHUR",
+            "target": 205,
+            "reason": "Plan SULPHUR #211 @294: Fresh MELEE small"
+          }
+        }
+      },
+      {
+        "seed": "22080991948346",
+        "key": 193,
+        "first_partner_null": 279,
+        "first_cleanup_seen": 279,
+        "first_selected": 281,
+        "first_native_attack": 282,
+        "first_ready_nonlethal_screen": {
+          "tick": 280,
+          "target": {
+            "key": 193,
+            "wave": 31,
+            "born": 267,
+            "age": 13,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4244,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 280,
+          "living_count": 20,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3297,4248,0",
+            "weapon": "PIPE",
+            "target": 201,
+            "reason": "Recent RANGE small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3295,4243,0",
+            "weapon": "SULPHUR",
+            "target": 202,
+            "reason": "Plan SULPHUR #208 @283: Fresh MELEE small"
+          }
+        }
+      },
+      {
+        "seed": "22080991948347",
+        "key": 198,
+        "first_partner_null": 307,
+        "first_cleanup_seen": 307,
+        "first_selected": null,
+        "first_native_attack": null,
+        "first_ready_nonlethal_screen": null
+      },
+      {
+        "seed": "22080991948372",
+        "key": 206,
+        "first_partner_null": 289,
+        "first_cleanup_seen": 289,
+        "first_selected": null,
+        "first_native_attack": null,
+        "first_ready_nonlethal_screen": null
+      },
+      {
+        "seed": "22080991948377",
+        "key": 196,
+        "first_partner_null": 291,
+        "first_cleanup_seen": 291,
+        "first_selected": null,
+        "first_native_attack": null,
+        "first_ready_nonlethal_screen": null
+      },
+      {
+        "seed": "22080991948384",
+        "key": 192,
+        "first_partner_null": 275,
+        "first_cleanup_seen": 276,
+        "first_selected": null,
+        "first_native_attack": null,
+        "first_ready_nonlethal_screen": {
+          "tick": 277,
+          "target": {
+            "key": 192,
+            "wave": 30,
+            "born": 273,
+            "age": 4,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4243,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "ranger_null": false,
+            "mage_null": true,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          "earliest_request": 277,
+          "living_count": 27,
+          "ranger": {
+            "ready": true,
+            "attack": true,
+            "player": "3293,4248,0",
+            "weapon": "PIPE",
+            "target": 191,
+            "reason": "Recent RANGE small"
+          },
+          "mage": {
+            "ready": false,
+            "attack": false,
+            "player": "3297,4244,0",
+            "weapon": "EYE",
+            "target": -1,
+            "reason": "Close during cooldown: East magic 31"
+          }
+        }
+      }
+    ],
+    "literal_last_partner_primary_examples": [
+      {
+        "seed": "22080991948204",
+        "tick": 305,
+        "target": {
+          "key": 183,
+          "wave": 30,
+          "born": 259,
+          "age": 46,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4252,
+          "claimed_until": 338,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3292,4251,0",
+          "weapon": "SULPHUR",
+          "target": 183,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948205",
+        "tick": 316,
+        "target": {
+          "key": 206,
+          "wave": 31,
+          "born": 311,
+          "age": 5,
+          "style": "MELEE",
+          "big": false,
+          "hp": 1,
+          "x": 3294,
+          "y": 4250,
+          "claimed_until": 349,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            1,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3295,4248,0",
+          "weapon": "SULPHUR",
+          "target": 206,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948207",
+        "tick": 317,
+        "target": {
+          "key": 198,
+          "wave": 31,
+          "born": 277,
+          "age": 40,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3301,
+          "y": 4252,
+          "claimed_until": 350,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3301,4251,0",
+          "weapon": "SULPHUR",
+          "target": 198,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948218",
+        "tick": 299,
+        "target": {
+          "key": 195,
+          "wave": 31,
+          "born": 258,
+          "age": 41,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3301,
+          "y": 4252,
+          "claimed_until": 332,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3300,4251,0",
+          "weapon": "SULPHUR",
+          "target": 195,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948229",
+        "tick": 298,
+        "target": {
+          "key": 205,
+          "wave": 31,
+          "born": 291,
+          "age": 7,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3292,
+          "y": 4243,
+          "claimed_until": 331,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3294,4245,0",
+          "weapon": "SULPHUR",
+          "target": 205,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948233",
+        "tick": 311,
+        "target": {
+          "key": 190,
+          "wave": 30,
+          "born": 267,
+          "age": 44,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3292,
+          "y": 4243,
+          "claimed_until": 344,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3292,4246,0",
+          "weapon": "SULPHUR",
+          "target": 190,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948236",
+        "tick": 326,
+        "target": {
+          "key": 205,
+          "wave": 31,
+          "born": 323,
+          "age": 3,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3294,
+          "y": 4247,
+          "claimed_until": 359,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            5
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3295,4248,0",
+          "weapon": "EYE",
+          "target": 205,
+          "reason": "Fresh MAGIC small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948248",
+        "tick": 303,
+        "target": {
+          "key": 197,
+          "wave": 31,
+          "born": 265,
+          "age": 38,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3292,
+          "y": 4243,
+          "claimed_until": 336,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3293,4245,0",
+          "weapon": "SULPHUR",
+          "target": 197,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948262",
+        "tick": 295,
+        "target": {
+          "key": 202,
+          "wave": 31,
+          "born": 263,
+          "age": 32,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4245,
+          "claimed_until": 328,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3291,4245,0",
+          "weapon": "SULPHUR",
+          "target": 202,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948266",
+        "tick": 312,
+        "target": {
+          "key": 198,
+          "wave": 31,
+          "born": 271,
+          "age": 41,
+          "style": "MELEE",
+          "big": false,
+          "hp": 7,
+          "x": 3300,
+          "y": 4252,
+          "claimed_until": 345,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            7,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3298,4250,0",
+          "weapon": "SULPHUR",
+          "target": 198,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948272",
+        "tick": 309,
+        "target": {
+          "key": 189,
+          "wave": 30,
+          "born": 274,
+          "age": 35,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3300,
+          "y": 4252,
+          "claimed_until": 342,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3298,4253,0",
+          "weapon": "SULPHUR",
+          "target": 189,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948276",
+        "tick": 316,
+        "target": {
+          "key": 198,
+          "wave": 31,
+          "born": 282,
+          "age": 34,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3292,
+          "y": 4253,
+          "claimed_until": 349,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3291,4252,0",
+          "weapon": "SULPHUR",
+          "target": 198,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948285",
+        "tick": 301,
+        "target": {
+          "key": 194,
+          "wave": 31,
+          "born": 263,
+          "age": 38,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3292,
+          "y": 4254,
+          "claimed_until": 334,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            5
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3295,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3299,4250,0",
+          "weapon": "EYE",
+          "target": 194,
+          "reason": "Fresh MAGIC small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948293",
+        "tick": 312,
+        "target": {
+          "key": 205,
+          "wave": 31,
+          "born": 307,
+          "age": 5,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3293,
+          "y": 4243,
+          "claimed_until": 345,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3295,4244,0",
+          "weapon": "SULPHUR",
+          "target": 205,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948295",
+        "tick": 299,
+        "target": {
+          "key": 189,
+          "wave": 30,
+          "born": 262,
+          "age": 37,
+          "style": "MELEE",
+          "big": false,
+          "hp": 3,
+          "x": 3299,
+          "y": 4243,
+          "claimed_until": 332,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            3,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3299,4244,0",
+          "weapon": "SULPHUR",
+          "target": 189,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948296",
+        "tick": 310,
+        "target": {
+          "key": 197,
+          "wave": 31,
+          "born": 272,
+          "age": 38,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4252,
+          "claimed_until": 343,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3292,4251,0",
+          "weapon": "SULPHUR",
+          "target": 197,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948322",
+        "tick": 336,
+        "target": {
+          "key": 206,
+          "wave": 31,
+          "born": 331,
+          "age": 5,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3301,
+          "y": 4249,
+          "claimed_until": 369,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3299,4250,0",
+          "weapon": "SULPHUR",
+          "target": 206,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948332",
+        "tick": 303,
+        "target": {
+          "key": 205,
+          "wave": 31,
+          "born": 299,
+          "age": 4,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3294,
+          "y": 4243,
+          "claimed_until": 336,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3295,4244,0",
+          "weapon": "SULPHUR",
+          "target": 205,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948333",
+        "tick": 305,
+        "target": {
+          "key": 195,
+          "wave": 31,
+          "born": 267,
+          "age": 38,
+          "style": "MELEE",
+          "big": false,
+          "hp": 5,
+          "x": 3292,
+          "y": 4253,
+          "claimed_until": 338,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            5,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3294,4251,0",
+          "weapon": "SULPHUR",
+          "target": 195,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948345",
+        "tick": 335,
+        "target": {
+          "key": 206,
+          "wave": 31,
+          "born": 331,
+          "age": 4,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4245,
+          "claimed_until": 368,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3291,4247,0",
+          "weapon": "SULPHUR",
+          "target": 206,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948346",
+        "tick": 308,
+        "target": {
+          "key": 205,
+          "wave": 31,
+          "born": 303,
+          "age": 5,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3293,
+          "y": 4243,
+          "claimed_until": 341,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3295,4244,0",
+          "weapon": "SULPHUR",
+          "target": 205,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948356",
+        "tick": 300,
+        "target": {
+          "key": 205,
+          "wave": 31,
+          "born": 295,
+          "age": 5,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4243,
+          "claimed_until": 333,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3298,4244,0",
+          "weapon": "SULPHUR",
+          "target": 205,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948372",
+        "tick": 309,
+        "target": {
+          "key": 194,
+          "wave": 31,
+          "born": 261,
+          "age": 48,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3291,
+          "y": 4245,
+          "claimed_until": 342,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3293,4244,0",
+          "weapon": "SULPHUR",
+          "target": 194,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      },
+      {
+        "seed": "22080991948376",
+        "tick": 337,
+        "target": {
+          "key": 198,
+          "wave": 31,
+          "born": 299,
+          "age": 38,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3291,
+          "y": 4252,
+          "claimed_until": 370,
+          "own_hit_until": 0,
+          "ranger_null": false,
+          "mage_null": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "ranger": {
+          "ready": true,
+          "attack": false,
+          "player": "3293,4248,0",
+          "weapon": "PIPE",
+          "target": -1,
+          "reason": "Reserve next packet"
+        },
+        "mage": {
+          "ready": true,
+          "attack": true,
+          "player": "3293,4251,0",
+          "weapon": "SULPHUR",
+          "target": 198,
+          "reason": "Fresh MELEE small"
+        },
+        "living_count": 1
+      }
+    ],
+    "caveat": "Screen native cleanup NULL rescue and literal-last cooperation opportunities.\n\nPredecision queued damage is authoritative. Range/travel screens do not establish\ntarget line of sight or a missed native launch. Mage's temporary same-cycle claim\nis reconstructed from its actual ready primary; it is absent from final leases.\n",
+    "sources": {
+      ".state/simulations/training-v3-mage-idle-ranged-cleanup-random-200/server.log": "a699cbe893ad2e2c6b7a81c3f27149a7d78f4ee67ff8122fe57787cc852d4af3",
+      ".state/simulations/training-v3-mage-idle-ranged-cleanup-random-200/trials.csv": "76024d55cfff52a8f8ab700f8d5e967ae9abe4acd337105693ac61a31b7f6791"
+    }
+  }
+]

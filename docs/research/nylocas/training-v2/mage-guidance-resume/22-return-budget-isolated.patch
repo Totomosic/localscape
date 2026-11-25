@@ -1,0 +1,17 @@
+--- .state/simulations/training-v3-candidate-forecast-current-guidance/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:47:47.094341403 +0800
++++ .state/simulations/training-v3-candidate-mage-22-return-budget/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:59:33.360016184 +0800
+@@ -521,8 +521,13 @@
+ 			if (room.obstructed.contains(c.key)) travel = Math.max(1, travel);
+ 			if (tick + travel > at || AttackTiming.distance(position, target, c.big) > d.weapon.range) continue;
+ 			// Travel during cooldown overlaps it, both on approach and on return to a packet.
++			int returnTravel = next == null ? 0 : (position.distanceTo(next.stage) + 1) / 2;
++			// A fighting melee target can take another step before native routing
++			// finishes the attack. Do not spend the south-22 return margin on it.
++			if (next != null && next.name.equals("22 south Dinh") && d.weapon.style == Style.MELEE && c.fighting)
++				returnTravel++;
+ 			if (next != null && !next.name.equals(d.rule) && !(next.name.equals("22 south Dinh") && tick > next.due + 1)
+-				&& at + Math.max(d.weapon.cooldown, (position.distanceTo(next.stage) + 1) / 2) > next.due) return;
++				&& at + Math.max(d.weapon.cooldown, returnTravel) > next.due) return;
+ 			candidates.add(new Candidate(d, score, first, at, position));
+ 			return;
+ 		}

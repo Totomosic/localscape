@@ -1,0 +1,64 @@
+--- client/src/test/java/org/localscape/nylocas/mage/MageStrategyTest.java
++++ client/src/test/java/org/localscape/nylocas/mage/MageStrategyTest.java
+@@ -692,7 +692,7 @@
+ 		assertSame(east, strategy.decide(r, 106).target);
+ 	}
+ 
+-	@Test public void feasibleRangerWest19PacketIsProtectedOnlyThroughItsActualRequest()
++	@Test public void feasibleRangerWest19PacketIsProtectedThroughTheFollowupWindow()
+ 	{
+ 		Room r = room(19, 100, 3295, 4248); r.rangerWest19PacketFeasible = true;
+ 		Crab west = crab(r, 19, 100, Lane.WEST, (char) 0, true, Style.MAGIC, 3290, 4248);
+@@ -701,7 +701,8 @@
+ 		r.rangerWest19PacketFeasible = false;
+ 		assertSame(west, strategy.decide(r, 103).target);
+ 		r.rangerWest19PacketFeasible = true;
+-		assertSame(west, strategy.decide(r, 107).target);
++		assertNull(strategy.decide(r, 107).target);
++		assertSame(west, strategy.decide(r, 111).target);
+ 	}
+ 	@Test public void rangerWest19ProtectionDoesNotSuppressMageOwnedBiggerWorkOrNullRescue()
+ 	{
+@@ -824,4 +825,42 @@
+ 		crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3296, 4248);
+ 		Decision d = strategy.decide(r, 102); assertNull(d.target); assertNull(d.approach);
+ 	}
++
++	@Test public void feasibleWest19FollowupLetsMageServiceEastInstead()
++	{
++		Room r = room(19, 100, 3295, 4248); r.rangerWest19PacketFeasible = true;
++		Crab west = crab(r, 19, 100, Lane.WEST, (char) 0, true, Style.MAGIC, 3290, 4248); west.hp = 4;
++		Crab east = crab(r, 19, 100, Lane.EAST, (char) 0, true, Style.MAGIC, 3300, 4248);
++		assertSame(east, strategy.decide(r, 107).target);
++		east.dying = true; assertNull(strategy.decide(r, 107).target);
++	}
++	@Test public void unavailableWest19FollowupKeepsHumanPartnerFallback()
++	{
++		Room r = room(19, 100, 3295, 4248);
++		Crab west = crab(r, 19, 100, Lane.WEST, (char) 0, true, Style.MAGIC, 3290, 4248); west.hp = 4;
++		Crab east = crab(r, 19, 100, Lane.EAST, (char) 0, true, Style.MAGIC, 3300, 4248);
++		assertFalse(r.rangerWest19PacketFeasible); assertSame(west, strategy.decide(r, 107).target);
++		east.dying = true; assertSame(west, strategy.decide(r, 108).target);
++	}
++	@Test public void feasibleWest19FollowupStillYieldsToPartnerNullRescue()
++	{
++		Room r = room(19, 100, 3295, 4248); r.rangerWest19PacketFeasible = true;
++		Crab west = crab(r, 19, 100, Lane.WEST, (char) 0, true, Style.MAGIC, 3290, 4248); west.partnerNulled = true;
++		assertSame(west, strategy.decide(r, 107).target);
++		west.nulled = true; assertNull(strategy.decide(r, 107).target);
++		r.rangerWest19PacketFeasible = false; assertNull(strategy.decide(r, 107).target);
++	}
++	@Test public void west19FollowupProtectionHasAnInclusiveAge10Limit()
++	{
++		Room r = room(19, 100, 3295, 4248); r.rangerWest19PacketFeasible = true;
++		Crab west = crab(r, 19, 100, Lane.WEST, (char) 0, true, Style.MAGIC, 3290, 4248);
++		assertNull(strategy.decide(r, 110).target);
++		assertSame(west, strategy.decide(r, 111).target);
++	}
++	@Test public void west19FollowupProtectionDoesNotCarryIntoActual20()
++	{
++		Room r = room(20, 108, 3295, 4248); r.rangerWest19PacketFeasible = true;
++		Crab west = crab(r, 19, 100, Lane.WEST, (char) 0, true, Style.MAGIC, 3290, 4248);
++		assertSame(west, strategy.decide(r, 110).target);
++	}
+ }

@@ -1,0 +1,6263 @@
+{
+  "run": ".state/simulations/training-v2-live-boosts-baseline-30",
+  "semantics": "HP snapshots are planning observations. Partner launches before first observed HP change prove overlapping primary flights; they do not by themselves prove wasted damage.",
+  "trials": 30,
+  "roomsWithPartnerLaunchBeforeHpChange": 26,
+  "firstHpChangeRemainingHp": {
+    "3": 1,
+    "0": 25,
+    "2": 2,
+    "7": 1,
+    "4": 1
+  },
+  "openingThrallHits": 2,
+  "rooms": [
+    {
+      "trial": 0,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 3,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 3,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 3,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 3,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 14,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 14,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 15,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 15,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 3,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": false
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 1,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 2,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 3,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 4,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 5,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 6,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 7,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 0,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": []
+    },
+    {
+      "trial": 8,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 9,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 10,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 11,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 12,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        },
+        {
+          "tick": 20,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 2,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 2,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 2,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 2,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 14,
+          "role": 0,
+          "hp": 2,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 14,
+          "role": 1,
+          "hp": 2,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 15,
+          "role": 0,
+          "hp": 2,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 15,
+          "role": 1,
+          "hp": 2,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 16,
+          "role": 0,
+          "hp": 2,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 16,
+          "role": 1,
+          "hp": 2,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 17,
+          "role": 0,
+          "hp": 2,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 17,
+          "role": 1,
+          "hp": 2,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 18,
+          "role": 0,
+          "hp": 2,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 18,
+          "role": 1,
+          "hp": 2,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 19,
+          "role": 0,
+          "hp": 2,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 19,
+          "role": 1,
+          "hp": 2,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 20,
+          "role": 0,
+          "hp": 2,
+          "claimedUntil": 10,
+          "ownHitUntil": 52,
+          "dying": false
+        },
+        {
+          "tick": 20,
+          "role": 1,
+          "hp": 2,
+          "claimedUntil": 25,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 21,
+          "role": 0,
+          "hp": 2,
+          "claimedUntil": 10,
+          "ownHitUntil": 52,
+          "dying": false
+        },
+        {
+          "tick": 21,
+          "role": 1,
+          "hp": 2,
+          "claimedUntil": 25,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 22,
+          "role": 0,
+          "hp": 2,
+          "claimedUntil": 10,
+          "ownHitUntil": 52,
+          "dying": false
+        },
+        {
+          "tick": 22,
+          "role": 1,
+          "hp": 2,
+          "claimedUntil": 25,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 23,
+          "role": 0,
+          "hp": 2,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 23,
+          "role": 1,
+          "hp": 2,
+          "claimedUntil": 25,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 24,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 24,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 25,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [
+        {
+          "tick": 24,
+          "role": 0,
+          "damage": 0
+        }
+      ],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 2,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": false
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 13,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 14,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 15,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 2,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 2,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 2,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 2,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 14,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 14,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 15,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 15,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 2,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": false
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 16,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 17,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 18,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 19,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 0,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": []
+    },
+    {
+      "trial": 20,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 21,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 0,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": []
+    },
+    {
+      "trial": 22,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 23,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 24,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 0,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": []
+    },
+    {
+      "trial": 25,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 26,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 7,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 7,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 7,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 7,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 14,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 14,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 15,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 15,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 7,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": false
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 27,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 28,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": true
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 0,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": true
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    },
+    {
+      "trial": 29,
+      "target": "2",
+      "shots": [
+        {
+          "tick": 5,
+          "role": 1,
+          "weapon": "SHADOW"
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        },
+        {
+          "tick": 20,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ],
+      "snapshots": [
+        {
+          "tick": 4,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 4,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 5,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 6,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 7,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 8,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 9,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 0,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 10,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 37,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 0,
+          "hp": 8,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 11,
+          "role": 1,
+          "hp": 8,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 0,
+          "hp": 4,
+          "claimedUntil": 10,
+          "ownHitUntil": 42,
+          "dying": false
+        },
+        {
+          "tick": 12,
+          "role": 1,
+          "hp": 4,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 13,
+          "role": 0,
+          "hp": 4,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 13,
+          "role": 1,
+          "hp": 4,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 14,
+          "role": 0,
+          "hp": 3,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 14,
+          "role": 1,
+          "hp": 3,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 15,
+          "role": 0,
+          "hp": 3,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 15,
+          "role": 1,
+          "hp": 3,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 16,
+          "role": 0,
+          "hp": 3,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 16,
+          "role": 1,
+          "hp": 3,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 17,
+          "role": 0,
+          "hp": 3,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 17,
+          "role": 1,
+          "hp": 3,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 18,
+          "role": 0,
+          "hp": 3,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 18,
+          "role": 1,
+          "hp": 3,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 19,
+          "role": 0,
+          "hp": 3,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 19,
+          "role": 1,
+          "hp": 3,
+          "claimedUntil": 15,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 20,
+          "role": 0,
+          "hp": 3,
+          "claimedUntil": 10,
+          "ownHitUntil": 52,
+          "dying": false
+        },
+        {
+          "tick": 20,
+          "role": 1,
+          "hp": 3,
+          "claimedUntil": 25,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 21,
+          "role": 0,
+          "hp": 3,
+          "claimedUntil": 10,
+          "ownHitUntil": 52,
+          "dying": false
+        },
+        {
+          "tick": 21,
+          "role": 1,
+          "hp": 3,
+          "claimedUntil": 25,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 22,
+          "role": 0,
+          "hp": 3,
+          "claimedUntil": 10,
+          "ownHitUntil": 52,
+          "dying": false
+        },
+        {
+          "tick": 22,
+          "role": 1,
+          "hp": 3,
+          "claimedUntil": 25,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 23,
+          "role": 0,
+          "hp": 3,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 23,
+          "role": 1,
+          "hp": 3,
+          "claimedUntil": 25,
+          "ownHitUntil": 0,
+          "dying": false
+        },
+        {
+          "tick": 24,
+          "role": 0,
+          "hp": 0,
+          "claimedUntil": 10,
+          "ownHitUntil": 0,
+          "dying": true
+        },
+        {
+          "tick": 24,
+          "role": 1,
+          "hp": 0,
+          "claimedUntil": 25,
+          "ownHitUntil": 0,
+          "dying": true
+        }
+      ],
+      "thrallHits": [
+        {
+          "tick": 24,
+          "role": 0,
+          "damage": 0
+        }
+      ],
+      "firstHpChange": {
+        "tick": 12,
+        "role": 0,
+        "hp": 4,
+        "claimedUntil": 10,
+        "ownHitUntil": 42,
+        "dying": false
+      },
+      "partnerLaunchesBeforeHpChange": [
+        {
+          "tick": 10,
+          "role": 0,
+          "weapon": "EYE"
+        }
+      ]
+    }
+  ],
+  "sourceSha256": "580c3614ddee24a7071f218cacc02447e1b491f706142bf65383d3a2f0341c28"
+}

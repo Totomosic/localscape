@@ -1,0 +1,57 @@
+{
+  "directory": ".state/simulations/training-v4-dim29-and-28plus16-fresh-300",
+  "dim": {
+    "wave": 29,
+    "additional_wave28_offset": 16,
+    "activation": "actual31"
+  },
+  "all_trials": {
+    "trials": 300,
+    "completed": 300,
+    "eligible": 282,
+    "wave19_failure_rooms": 18,
+    "reported_seconds": {
+      "mean": 196.26382978723404,
+      "min": 184.79999999999998,
+      "max": 213.6
+    },
+    "within_3m22": 261,
+    "expiry_status": {
+      "undimmed_targets_last_alive": 162,
+      "made_dim_expiry": 112,
+      "same_tick_boundary": 26
+    },
+    "dimmed_primary_attacks": 0,
+    "additional_time_dim_rooms": 15,
+    "undimmed_expiry_rooms": 33,
+    "dimmed_big_expiry_rooms": 300,
+    "additional_time_dim_big_expiry_rooms": 7
+  },
+  "eligible_trials": {
+    "trials": 282,
+    "completed": 282,
+    "eligible": 282,
+    "wave19_failure_rooms": 0,
+    "reported_seconds": {
+      "mean": 196.26382978723404,
+      "min": 184.79999999999998,
+      "max": 213.6
+    },
+    "within_3m22": 257,
+    "expiry_status": {
+      "undimmed_targets_last_alive": 154,
+      "made_dim_expiry": 105,
+      "same_tick_boundary": 23
+    },
+    "dimmed_primary_attacks": 0,
+    "additional_time_dim_rooms": 13,
+    "undimmed_expiry_rooms": 32,
+    "dimmed_big_expiry_rooms": 282,
+    "additional_time_dim_big_expiry_rooms": 6
+  },
+  "sources": {
+    "trials.csv": "d2a46dfd1e55f101cb8da9c0b3fd8a8bddd620fe658468add109d8179dd3ce70",
+    "server.log": "0d379a8d244e3d23db69a17dbd10db466ae0a052c67c155abced90c4e3b67064"
+  },
+  "caveat": "Last positive-HP/non-dying snapshots distinguish natural expiry from combat death. A terminal queued-lethal fresh target is still living in that snapshot; no lost tick is inferred. Same-tick old/fresh endings are kept separate. AoE secondary hits are not primary dim violations."
+}

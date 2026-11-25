@@ -1,0 +1,383 @@
+{
+  "counts": {
+    "11-order-reversed": 78,
+    "19-order-reversed": 100,
+    "bypass-opened-8": 9,
+    "11-order-missing": 22
+  },
+  "examples": {
+    "11-order-reversed": [
+      {
+        "seed": 131,
+        "firsts": {
+          "11-west": 81,
+          "11-south": 84,
+          "19-south": 155,
+          "19-east": 158
+        }
+      },
+      {
+        "seed": 132,
+        "firsts": {
+          "11-west": 85,
+          "11-south": 88,
+          "19-south": 161,
+          "19-east": 164
+        }
+      },
+      {
+        "seed": 133,
+        "firsts": {
+          "11-west": 81,
+          "11-south": 84,
+          "19-south": 167,
+          "19-east": 174
+        }
+      },
+      {
+        "seed": 134,
+        "firsts": {
+          "11-west": 81,
+          "11-south": 84,
+          "19-south": 159,
+          "19-east": 166
+        }
+      },
+      {
+        "seed": 135,
+        "firsts": {
+          "11-west": 89,
+          "11-south": 92,
+          "19-south": 162,
+          "19-east": 165
+        }
+      },
+      {
+        "seed": 138,
+        "firsts": {
+          "11-west": 81,
+          "11-south": 84,
+          "19-south": 159,
+          "19-east": 163
+        }
+      }
+    ],
+    "19-order-reversed": [
+      {
+        "seed": 131,
+        "firsts": {
+          "11-west": 81,
+          "11-south": 84,
+          "19-south": 155,
+          "19-east": 158
+        }
+      },
+      {
+        "seed": 132,
+        "firsts": {
+          "11-west": 85,
+          "11-south": 88,
+          "19-south": 161,
+          "19-east": 164
+        }
+      },
+      {
+        "seed": 133,
+        "firsts": {
+          "11-west": 81,
+          "11-south": 84,
+          "19-south": 167,
+          "19-east": 174
+        }
+      },
+      {
+        "seed": 134,
+        "firsts": {
+          "11-west": 81,
+          "11-south": 84,
+          "19-south": 159,
+          "19-east": 166
+        }
+      },
+      {
+        "seed": 135,
+        "firsts": {
+          "11-west": 89,
+          "11-south": 92,
+          "19-south": 162,
+          "19-east": 165
+        }
+      },
+      {
+        "seed": 136,
+        "firsts": {
+          "11-west": 85,
+          "19-south": 159,
+          "19-east": 175
+        }
+      }
+    ],
+    "bypass-opened-8": [
+      {
+        "seed": 133,
+        "tick": 64,
+        "launch": {
+          "k": 27,
+          "wave": 8,
+          "age": 12,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3293,
+          "y": 4245,
+          "claim": 0,
+          "flight": 96,
+          "dying": false,
+          "lane": "south"
+        },
+        "others": [
+          {
+            "k": 26,
+            "wave": 8,
+            "age": 12,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 5,
+            "x": 3292,
+            "y": 4247,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ],
+        "reason": "South melee 8"
+      },
+      {
+        "seed": 152,
+        "tick": 70,
+        "launch": {
+          "k": 27,
+          "wave": 8,
+          "age": 18,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3290,
+          "y": 4248,
+          "claim": 0,
+          "flight": 102,
+          "dying": false,
+          "lane": "south"
+        },
+        "others": [
+          {
+            "k": 26,
+            "wave": 8,
+            "age": 18,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 4,
+            "x": 3292,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ],
+        "reason": "South melee 8"
+      },
+      {
+        "seed": 152,
+        "tick": 76,
+        "launch": {
+          "k": 45,
+          "wave": 11,
+          "age": 0,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3310,
+          "y": 4249,
+          "claim": 0,
+          "flight": 108,
+          "dying": false,
+          "lane": "east"
+        },
+        "others": [
+          {
+            "k": 26,
+            "wave": 8,
+            "age": 24,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 4,
+            "x": 3294,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ],
+        "reason": "East barrage 11"
+      },
+      {
+        "seed": 152,
+        "tick": 81,
+        "launch": {
+          "k": 42,
+          "wave": 11,
+          "age": 5,
+          "style": "MAGIC",
+          "big": true,
+          "hp": 16,
+          "x": 3286,
+          "y": 4248,
+          "claim": 0,
+          "flight": 113,
+          "dying": false,
+          "lane": "west"
+        },
+        "others": [
+          {
+            "k": 26,
+            "wave": 8,
+            "age": 29,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 4,
+            "x": 3295,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ],
+        "reason": "West big 11"
+      },
+      {
+        "seed": 152,
+        "tick": 84,
+        "launch": {
+          "k": 43,
+          "wave": 11,
+          "age": 8,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3295,
+          "y": 4241,
+          "claim": 0,
+          "flight": 116,
+          "dying": false,
+          "lane": "south"
+        },
+        "others": [
+          {
+            "k": 26,
+            "wave": 8,
+            "age": 32,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 4,
+            "x": 3295,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ],
+        "reason": "South magic 11"
+      },
+      {
+        "seed": 152,
+        "tick": 87,
+        "launch": {
+          "k": 47,
+          "wave": 11,
+          "age": 1,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "x": 3292,
+          "y": 4246,
+          "claim": 0,
+          "flight": 119,
+          "dying": false,
+          "lane": "split"
+        },
+        "others": [
+          {
+            "k": 26,
+            "wave": 8,
+            "age": 35,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 4,
+            "x": 3295,
+            "y": 4248,
+            "claim": 0,
+            "flight": 0,
+            "dying": false,
+            "lane": "west"
+          }
+        ],
+        "reason": "Fresh MELEE small"
+      }
+    ],
+    "11-order-missing": [
+      {
+        "seed": 136,
+        "firsts": {
+          "11-west": 85,
+          "19-south": 159,
+          "19-east": 175
+        }
+      },
+      {
+        "seed": 137,
+        "firsts": {
+          "11-west": 85,
+          "19-south": 167,
+          "19-east": 171
+        }
+      },
+      {
+        "seed": 144,
+        "firsts": {
+          "11-west": 85,
+          "19-south": 159,
+          "19-east": 166
+        }
+      },
+      {
+        "seed": 145,
+        "firsts": {
+          "11-west": 93,
+          "19-south": 155,
+          "19-east": 168
+        }
+      },
+      {
+        "seed": 156,
+        "firsts": {
+          "11-west": 85,
+          "19-south": 151,
+          "19-east": 155
+        }
+      },
+      {
+        "seed": 158,
+        "firsts": {
+          "11-west": 81,
+          "19-south": 151,
+          "19-east": 155
+        }
+      }
+    ]
+  }
+}

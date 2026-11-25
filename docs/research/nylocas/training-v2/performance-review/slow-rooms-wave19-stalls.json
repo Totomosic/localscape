@@ -1,0 +1,890 @@
+{
+  "question": "in runs where the boss spawn is slow (>3:19) how many wave 19 stalls are there",
+  "cohort": "training-v3-south20-coherent-pooled-500",
+  "policy": "retainedSouth20",
+  "damage": "randomized",
+  "threshold_seconds_exclusive": 199,
+  "slow_room_tick_minimum": 332,
+  "total_rooms": 500,
+  "slow_rooms": 173,
+  "wave19_stalls_histogram": {
+    "0": 144,
+    "3": 3,
+    "4": 14,
+    "5": 11,
+    "7": 1
+  },
+  "wave19_stalls_total": 127,
+  "wave19_stalls_mean_per_slow_room": 0.7341040462427746,
+  "slow_rooms_without_wave19_stalls": 144,
+  "slow_rooms_without_wave19_stalls_percent": 83.23699421965318,
+  "wave19_definition": "last successfully spawned wave19; admission retries for wave20",
+  "source_csv_sha256": "d1796367fe13b0db3fd69ed97820fc59f288a7cef002b828d1ff3fe533219f3f",
+  "slow_rooms_evidence": [
+    {
+      "seed": 257451351778368,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778369,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778370,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778373,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778379,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778380,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778385,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778393,
+      "boss_ticks": 348,
+      "wave19_stalls": 5
+    },
+    {
+      "seed": 257451351778394,
+      "boss_ticks": 356,
+      "wave19_stalls": 4
+    },
+    {
+      "seed": 257451351778395,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778398,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778399,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778401,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778402,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778403,
+      "boss_ticks": 332,
+      "wave19_stalls": 4
+    },
+    {
+      "seed": 257451351778404,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778413,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778414,
+      "boss_ticks": 344,
+      "wave19_stalls": 4
+    },
+    {
+      "seed": 257451351778419,
+      "boss_ticks": 344,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778421,
+      "boss_ticks": 336,
+      "wave19_stalls": 5
+    },
+    {
+      "seed": 257451351778423,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778427,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778430,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778437,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778444,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778451,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778452,
+      "boss_ticks": 344,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778453,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778461,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778462,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778464,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778465,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778470,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778472,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778475,
+      "boss_ticks": 348,
+      "wave19_stalls": 3
+    },
+    {
+      "seed": 257451351778477,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778479,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778481,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778482,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778484,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778488,
+      "boss_ticks": 340,
+      "wave19_stalls": 7
+    },
+    {
+      "seed": 257451351778489,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778492,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778500,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778501,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778502,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778507,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778508,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778510,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778511,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778517,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778518,
+      "boss_ticks": 344,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778523,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778525,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778529,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778530,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778538,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778545,
+      "boss_ticks": 344,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778547,
+      "boss_ticks": 340,
+      "wave19_stalls": 5
+    },
+    {
+      "seed": 257451351778548,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778555,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778557,
+      "boss_ticks": 348,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778558,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778560,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 257451351778565,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480258,
+      "boss_ticks": 336,
+      "wave19_stalls": 4
+    },
+    {
+      "seed": 279799561480264,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480268,
+      "boss_ticks": 340,
+      "wave19_stalls": 4
+    },
+    {
+      "seed": 279799561480269,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480270,
+      "boss_ticks": 348,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480272,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480274,
+      "boss_ticks": 352,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480275,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480276,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480281,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480283,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480284,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480285,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480286,
+      "boss_ticks": 336,
+      "wave19_stalls": 4
+    },
+    {
+      "seed": 279799561480287,
+      "boss_ticks": 344,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480293,
+      "boss_ticks": 348,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480294,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480301,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480304,
+      "boss_ticks": 348,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480305,
+      "boss_ticks": 344,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480313,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480316,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480323,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480326,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480327,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480328,
+      "boss_ticks": 348,
+      "wave19_stalls": 4
+    },
+    {
+      "seed": 279799561480332,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480335,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480336,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480339,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480346,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480349,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480350,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480351,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480354,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480356,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480358,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480359,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480361,
+      "boss_ticks": 348,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480363,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480366,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480368,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480369,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480372,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480374,
+      "boss_ticks": 344,
+      "wave19_stalls": 5
+    },
+    {
+      "seed": 279799561480375,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480377,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480378,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480382,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480384,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480387,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480388,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480389,
+      "boss_ticks": 364,
+      "wave19_stalls": 4
+    },
+    {
+      "seed": 279799561480391,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480393,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480396,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480397,
+      "boss_ticks": 332,
+      "wave19_stalls": 3
+    },
+    {
+      "seed": 279799561480398,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480401,
+      "boss_ticks": 348,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480402,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480403,
+      "boss_ticks": 344,
+      "wave19_stalls": 4
+    },
+    {
+      "seed": 279799561480406,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480407,
+      "boss_ticks": 344,
+      "wave19_stalls": 3
+    },
+    {
+      "seed": 279799561480413,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480414,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480416,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480418,
+      "boss_ticks": 348,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480423,
+      "boss_ticks": 344,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480427,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480429,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480431,
+      "boss_ticks": 344,
+      "wave19_stalls": 5
+    },
+    {
+      "seed": 279799561480436,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480438,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480440,
+      "boss_ticks": 356,
+      "wave19_stalls": 5
+    },
+    {
+      "seed": 279799561480444,
+      "boss_ticks": 344,
+      "wave19_stalls": 4
+    },
+    {
+      "seed": 279799561480448,
+      "boss_ticks": 340,
+      "wave19_stalls": 5
+    },
+    {
+      "seed": 279799561480455,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480460,
+      "boss_ticks": 340,
+      "wave19_stalls": 5
+    },
+    {
+      "seed": 279799561480462,
+      "boss_ticks": 348,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480463,
+      "boss_ticks": 336,
+      "wave19_stalls": 4
+    },
+    {
+      "seed": 279799561480464,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480466,
+      "boss_ticks": 348,
+      "wave19_stalls": 4
+    },
+    {
+      "seed": 279799561480467,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480468,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480469,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480471,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480476,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480480,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480483,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480486,
+      "boss_ticks": 332,
+      "wave19_stalls": 4
+    },
+    {
+      "seed": 279799561480488,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480496,
+      "boss_ticks": 344,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480502,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480503,
+      "boss_ticks": 332,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480512,
+      "boss_ticks": 336,
+      "wave19_stalls": 4
+    },
+    {
+      "seed": 279799561480514,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480516,
+      "boss_ticks": 336,
+      "wave19_stalls": 5
+    },
+    {
+      "seed": 279799561480529,
+      "boss_ticks": 352,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480532,
+      "boss_ticks": 340,
+      "wave19_stalls": 5
+    },
+    {
+      "seed": 279799561480534,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480538,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480540,
+      "boss_ticks": 344,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480542,
+      "boss_ticks": 340,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480544,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480546,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480552,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    },
+    {
+      "seed": 279799561480554,
+      "boss_ticks": 344,
+      "wave19_stalls": 5
+    },
+    {
+      "seed": 279799561480556,
+      "boss_ticks": 336,
+      "wave19_stalls": 0
+    }
+  ]
+}

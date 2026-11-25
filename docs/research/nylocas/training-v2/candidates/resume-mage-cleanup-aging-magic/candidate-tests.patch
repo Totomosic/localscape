@@ -1,0 +1,88 @@
+--- client/src/test/java/org/localscape/nylocas/mage/MageStrategyTest.java
++++ client/src/test/java/org/localscape/nylocas/mage/MageStrategyTest.java
+@@ -824,4 +824,85 @@
+ 		crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3296, 4248);
+ 		Decision d = strategy.decide(r, 102); assertNull(d.target); assertNull(d.approach);
+ 	}
++
++	private Room agingCleanupRoom(int wave, int magicBorn)
++	{
++		Room r = room(wave, 100, 3295, 4248);
++		crab(r, wave, magicBorn, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3296, 4248);
++		crab(r, wave, 110, Lane.SPLIT, (char) 0, false, Style.MELEE, 3294, 4248);
++		crab(r, wave, 111, Lane.SPLIT, (char) 0, false, Style.RANGE, 3295, 4249);
++		return r;
++	}
++	@Test public void agingCleanupMagicAdvancesWhileRangerHasFreshRangeWork()
++	{
++		Room r = agingCleanupRoom(31, 100);
++		assertSame(r.crabs.get(0), strategy.decide(r, 112).target);
++		// A mage-NULL ranged target remains useful work for its non-NULL ranger partner.
++		r.crabs.get(2).nulled = true; strategy.reset();
++		assertSame(r.crabs.get(0), strategy.decide(r, 112).target);
++	}
++	@Test public void agingCleanupMagicKeepsNormalPriorityWithoutPartnerRangeWork()
++	{
++		Room r = agingCleanupRoom(31, 100); Crab range = r.crabs.get(2), melee = r.crabs.get(1);
++		range.partnerNulled = true; assertSame(melee, strategy.decide(r, 112).target);
++		range.partnerNulled = false; range.dying = true; strategy.reset(); assertSame(melee, strategy.decide(r, 112).target);
++		range.dying = false; range.hp = 0; strategy.reset(); assertSame(melee, strategy.decide(r, 112).target);
++		r.crabs.remove(range); strategy.reset(); assertSame(melee, strategy.decide(r, 112).target);
++	}
++	@Test public void agingCleanupMagicDoesNotCountAlreadyClaimedRangeWork()
++	{
++		Room r = agingCleanupRoom(31, 100); Crab range = r.crabs.get(2), melee = r.crabs.get(1);
++		range.claimedUntil = 120; assertSame(melee, strategy.decide(r, 112).target);
++		range.claimedUntil = 0; range.ownHitUntil = 120; range.ownHitHp = 0; strategy.reset();
++		assertSame(melee, strategy.decide(r, 112).target);
++	}
++	@Test public void agingCleanupMagicStillHonorsOwnNullAndBothFlightLeases()
++	{
++		Room r = agingCleanupRoom(31, 100); Crab magic = r.crabs.get(0), melee = r.crabs.get(1);
++		magic.nulled = true; assertSame(melee, strategy.decide(r, 112).target);
++		magic.nulled = false; magic.claimedUntil = 120; strategy.reset(); assertSame(melee, strategy.decide(r, 112).target);
++		magic.claimedUntil = 0; magic.ownHitUntil = 120; magic.ownHitHp = 0; strategy.reset();
++		assertSame(melee, strategy.decide(r, 112).target);
++	}
++	@Test public void agingMagicBonusStartsAt10AndAppliesOnlyDuringCleanup()
++	{
++		Room young = agingCleanupRoom(31, 103);
++		assertSame(young.crabs.get(1), strategy.decide(young, 112).target);
++		strategy.reset(); Room before31 = agingCleanupRoom(30, 100);
++		assertSame(before31.crabs.get(1), strategy.decide(before31, 112).target);
++	}
++	@Test public void agingMagicBonusDoesNotStackWithNullRescueOrBeatNamedEast31()
++	{
++		Room r = agingCleanupRoom(31, 100); Crab magic = r.crabs.get(0); magic.partnerNulled = true;
++		Crab named = crab(r, 31, 100, Lane.EAST, 'N', false, Style.MAGIC, 3300, 4249);
++		assertSame(named, strategy.decide(r, 112).target);
++		named.dying = true; r.crabs.get(2).dying = true; strategy.reset();
++		assertSame(magic, strategy.decide(r, 112).target);
++	}
++	@Test public void agingMagicBonusPreservesFreshMeleeClusterValue()
++	{
++		Room r = agingCleanupRoom(31, 100); Crab first = r.crabs.get(1);
++		crab(r, 31, 110, Lane.SPLIT, (char) 0, false, Style.MELEE, 3294, 4249);
++		Decision d = strategy.decide(r, 112); assertSame(first, d.target); assertEquals(Weapon.SCYTHE, d.weapon);
++	}
++	@Test public void partnerRangeWorkMustSurviveTheNextStyleCheck()
++	{
++		Room r = room(31, 100, 3295, 4248);
++		Crab magic = crab(r, 30, 94, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3296, 4248);
++		Crab melee = crab(r, 31, 104, Lane.SPLIT, (char) 0, false, Style.MELEE, 3294, 4248);
++		crab(r, 31, 100, Lane.WEST, 'S', false, Style.RANGE, 3285, 4248);
++		assertSame(melee, strategy.decide(r, 104).target);
++		strategy.reset(); assertSame(magic, strategy.decide(r, 107).target);
++	}
++	@Test public void agingCleanupMagicDoesNotUseOldRangeBirthsOrOldMagicTargets()
++	{
++		Room r = room(31, 100, 3295, 4248);
++		Crab magic = crab(r, 31, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3296, 4248);
++		Crab melee = crab(r, 31, 110, Lane.SPLIT, (char) 0, false, Style.MELEE, 3294, 4248);
++		crab(r, 29, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3295, 4249);
++		assertSame(melee, strategy.decide(r, 112).target);
++		r.crabs.remove(magic); crab(r, 29, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3296, 4248);
++		crab(r, 31, 111, Lane.SPLIT, (char) 0, false, Style.RANGE, 3295, 4249);
++		strategy.reset(); assertSame(melee, strategy.decide(r, 112).target);
++	}
+ }

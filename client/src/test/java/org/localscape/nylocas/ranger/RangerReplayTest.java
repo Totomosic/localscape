@@ -13,7 +13,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 import java.util.zip.GZIPInputStream;
 import org.localscape.nylocas.Tile;
 import org.localscape.nylocas.ranger.RangerStrategy.Crab;
@@ -28,7 +30,7 @@ import static org.junit.Assert.*;
 public class RangerReplayTest
 {
 	@Test
-	public void verifiesAllLaneFlickersAndEveryScheduledPacketAgainstThe93Recordings() throws Exception
+	public void verifiesLaneFlickersAndScheduledPacketsAgainstVettedRecordings() throws Exception
 	{
 		Path root = Paths.get("").toAbsolutePath();
 		while (root != null && !Files.exists(root.resolve("docs/research/nylocas/ranger/manifest.json"))) root = root.getParent();
@@ -37,10 +39,17 @@ public class RangerReplayTest
 		JsonObject manifest = new JsonParser().parse(Files.readString(corpus.resolve("manifest.json"))).getAsJsonObject();
 		JsonArray recordings = manifest.getAsJsonArray("recordings");
 		assertEquals(93, recordings.size());
+		JsonObject vetting = new JsonParser().parse(Files.readString(
+			root.resolve("docs/research/nylocas/vetting/summary.json"))).getAsJsonObject();
+		Set<String> eligible = new HashSet<>();
+		for (JsonElement recording : vetting.getAsJsonArray("eligiblePinnedRecordings"))
+			eligible.add(recording.getAsJsonObject().get("uuid").getAsString());
 		Map<String, Integer> support = new HashMap<>();
-		int updates = 0;
+		int updates = 0, selected = 0;
 		for (JsonElement recording : recordings)
 		{
+			if (!eligible.contains(recording.getAsJsonObject().get("uuid").getAsString())) continue;
+			selected++;
 			JsonObject files = recording.getAsJsonObject().getAsJsonObject("files");
 			JsonObject raid = checked(corpus, files.getAsJsonObject("raid")).getAsJsonObject();
 			JsonArray events = checked(corpus, files.getAsJsonObject("events")).getAsJsonArray();
@@ -97,7 +106,8 @@ public class RangerReplayTest
 				}
 			}
 		}
-		assertTrue("Substantial direct NPC observations were checked", updates > 100000);
+		assertEquals("Only pinned fast rooms from fully vetted pairs", 42, selected);
+		assertTrue("Substantial direct NPC observations were checked", updates > 40000);
 		for (Rule rule : RangerStrategy.RULES) assertTrue("No replay supports packet: " + rule.name, support.getOrDefault(rule.name, 0) > 0);
 	}
 

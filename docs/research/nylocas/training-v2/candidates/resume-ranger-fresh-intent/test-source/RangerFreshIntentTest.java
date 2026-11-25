@@ -1,0 +1,89 @@
+package org.localscape.nylocas.ranger;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+import org.localscape.nylocas.ranger.RangerStrategy.*;
+
+/** Behavior probes for replacing unopened old-small approaches with newer useful work. */
+public class RangerFreshIntentTest {
+    private final RangerStrategy strategy = new RangerStrategy();
+    private int key;
+    private Room room() {
+        Room r = new Room(); r.wave=12; r.spawns[12]=100;
+        r.player=RangerStrategy.tile(3295,4248); r.ready=105; r.specialEnergy=1000; return r;
+    }
+    private Crab crab(Room r,int wave,int born,boolean big,int hp,int x,int y) {
+        Crab c=new Crab(++key,key,born,wave,Lane.SPLIT,(char)0,big,Style.RANGE,RangerStrategy.tile(x,y));
+        c.hp=hp; r.crabs.add(c); return c;
+    }
+    private Crab oldApproach(Room r,int hp) {
+        Crab c=crab(r,8,90,false,hp,3303,4248);
+        assertSame(c,strategy.decide(r,100).approach);
+        r.player=RangerStrategy.tile(3297,4248); return c;
+    }
+    private static Crab target(Decision d) { return d.target!=null ? d.target : d.approach; }
+    @Test public void freshLocalSplitReplacesOldUnopenedFullHpApproachDuringCooldown() {
+        Room r=room(); oldApproach(r,8);
+        Crab fresh=crab(r,12,101,false,8,3296,4248);
+        assertSame(fresh,target(strategy.decide(r,101)));
+    }
+    @Test public void freshLocalSplitReplacesOldUnopenedFullHpApproachOnReadyTick() {
+        Room r=room(); oldApproach(r,8); r.ready=101;
+        Crab fresh=crab(r,12,101,false,8,3296,4248);
+        Decision d=strategy.decide(r,101);
+        assertSame(fresh,d.target); assertEquals(Weapon.PIPE,d.weapon); assertFalse(d.pathToTarget);
+    }
+    @Test public void woundedOldSurvivorKeepsItsFinishApproach() {
+        Room r=room(); Crab original=oldApproach(r,2);
+        crab(r,12,101,false,8,3296,4248);
+        assertSame(original,target(strategy.decide(r,101)));
+    }
+    @Test public void openedOldSurvivorAfterZeroKeepsItsFinishApproach() {
+        Room r=room(); Crab original=crab(r,8,90,false,8,3303,4248);
+        strategy.attacked(new Decision(original,Weapon.PIPE,r.player,false,null,"Earlier zero"),95);
+        original.ownHitUntil=0;
+        assertSame(original,strategy.decide(r,100).approach);
+        r.player=RangerStrategy.tile(3297,4248);
+        crab(r,12,101,false,8,3296,4248);
+        assertSame(original,target(strategy.decide(r,101)));
+    }
+    @Test public void claimedFreshSplitDoesNotBreakTheOldApproach() {
+        Room r=room(); Crab original=oldApproach(r,8);
+        crab(r,12,101,false,8,3296,4248).claimedUntil=140;
+        assertSame(original,target(strategy.decide(r,101)));
+    }
+    @Test public void personallyNullFreshSplitDoesNotBreakTheOldApproach() {
+        Room r=room(); Crab original=oldApproach(r,8);
+        crab(r,12,101,false,8,3296,4248).nulled=true;
+        assertSame(original,target(strategy.decide(r,101)));
+    }
+    @Test public void equalBirthSmallDoesNotBreakTheOldApproach() {
+        Room r=room(); Crab original=oldApproach(r,8);
+        crab(r,8,90,false,8,3296,4248);
+        assertSame(original,target(strategy.decide(r,101)));
+    }
+    @Test public void laterFreshAttackCannotDisplaceAnEarlierOldAttack() {
+        Room r=room(); Crab original=oldApproach(r,8); r.ready=101;
+        crab(r,12,101,false,8,3310,4248);
+        assertSame(original,strategy.decide(r,101).target);
+    }
+    @Test public void namedPacketApproachStillKeepsItsTarget() {
+        Room r=room(); r.wave=2; r.spawns[2]=100; r.ready=103; r.player=RangerStrategy.tile(3290,4248);
+        Crab original=new Crab(++key,key,100,2,Lane.EAST,'S',false,Style.RANGE,RangerStrategy.tile(3310,4248));
+        r.crabs.add(original);
+        Decision first=strategy.decide(r,100);
+        assertSame(original,target(first)); assertEquals(Weapon.BOW,first.weapon); assertEquals("Opening east",first.rule);
+        r.player=RangerStrategy.tile(3292,4248);
+        crab(r,2,101,false,8,3291,4248);
+        assertSame(original,target(strategy.decide(r,101)));
+    }
+    @Test public void dueBigDeadlineStillWinsOverFreshSplit() {
+        Room r=room(); r.wave=15; r.spawns[15]=100;
+        Crab original=new Crab(++key,key,90,14,Lane.EAST,'S',true,Style.RANGE,RangerStrategy.tile(3304,4248));
+        r.crabs.add(original);
+        assertSame(original,target(strategy.decide(r,100)));
+        r.player=RangerStrategy.tile(3297,4248);
+        crab(r,15,101,false,8,3296,4248);
+        assertSame(original,target(strategy.decide(r,101)));
+    }
+}

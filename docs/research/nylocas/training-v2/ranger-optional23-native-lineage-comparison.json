@@ -1,0 +1,56 @@
+[
+  {
+    "run": "training-v4-timestamp-dim29-and-28plus16-random-200",
+    "trials": 200,
+    "parent_removals": {
+      "natural_expiry_during_29": 129,
+      "natural_expiry_during_30": 20,
+      "natural_expiry_during_28": 50,
+      "combat_death_during_28": 1
+    },
+    "children": {
+      "fresh": 256,
+      "dimmed": 144
+    },
+    "source": {
+      "trials.csv": "c17a897c68cb37665e883f60a9242a2c565d89bbd4503356513464d9edc3063c",
+      "server.log": "450c1eed880a04902a6c0e5084f7981aeefbe46c3e190979e60fd1cccf3d68b8"
+    }
+  },
+  {
+    "run": "training-v4-timestamp-dim29-and-28plus16-fresh-300",
+    "trials": 300,
+    "parent_removals": {
+      "natural_expiry_during_29": 199,
+      "natural_expiry_during_28": 71,
+      "natural_expiry_during_30": 30
+    },
+    "children": {
+      "fresh": 404,
+      "dimmed": 196
+    },
+    "source": {
+      "trials.csv": "94929091d2c5af47eeb3ba85c78af0e7be8d725f16c64fc0e86657b456d0f6a7",
+      "server.log": "1d8807d1de5fec55b7aa43cf6eafe8f96ac6143e195f99478adca3264163ce02"
+    }
+  },
+  {
+    "run": "training-v4-timestamp-combined-optional-east23-pipe-random-200",
+    "trials": 200,
+    "parent_removals": {
+      "natural_expiry_during_29": 113,
+      "combat_death_during_28": 27,
+      "natural_expiry_during_28": 34,
+      "natural_expiry_during_30": 15,
+      "combat_death_during_29": 11
+    },
+    "children": {
+      "dimmed": 184,
+      "fresh": 216
+    },
+    "source": {
+      "trials.csv": "a7dc0040e9a27e053905671adf283c21fb1a99b78fdbff0b9458b7f4d58b8e26",
+      "server.log": "8a40b84462a4206ad2fe702e4653525c3759f2a9450e2b027f20ce28a6f5d64a"
+    }
+  }
+]

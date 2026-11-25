@@ -1,0 +1,4781 @@
+{
+  "question": "How many stalls pre-28 and was expiry made?",
+  "cohort": "retainedSouth20 pooled500",
+  "scope": "144completed rooms with boss spawn>199seconds and zero wave19stalls",
+  "definitions": {
+    "post_cap_pre28": "last-spawned waves21through27; wave20 also zero in this sample",
+    "all_pre28": "last-spawned waves1through27",
+    "made_expiry": "last positiveHP non-dying observed NPCs are only wave29births in their native natural-expiry animation; no fresh30plus remains",
+    "boundary": "old29naturalexpiry and fresh30plus share the final living snapshot; ordering within native cycle is not asserted"
+  },
+  "rooms": 144,
+  "stalls21to27": {
+    "mean": 0.7916666666666666,
+    "min": 0,
+    "max": 5,
+    "histogram": {
+      "0": 70,
+      "1": 44,
+      "2": 22,
+      "3": 7,
+      "5": 1
+    }
+  },
+  "all_stalls_before28": {
+    "mean": 3.6944444444444446,
+    "min": 1,
+    "max": 7,
+    "histogram": {
+      "1": 9,
+      "2": 25,
+      "3": 29,
+      "4": 37,
+      "5": 29,
+      "6": 12,
+      "7": 3
+    }
+  },
+  "stalls28": {
+    "mean": 2.8541666666666665,
+    "min": 0,
+    "max": 6,
+    "histogram": {
+      "0": 12,
+      "1": 6,
+      "2": 59,
+      "3": 17,
+      "4": 18,
+      "5": 28,
+      "6": 4
+    }
+  },
+  "expiry_status": {
+    "missed_expiry_last_living_include_fresh30plus": 117,
+    "made_expiry_last_living_are_naturally_expiring_wave29": 24,
+    "same_tick_boundary_old29_and_fresh_last_living": 3
+  },
+  "fresh_expiry_rooms": 40,
+  "by_wave28_stalls": {
+    "0": {
+      "rooms": 12,
+      "expiry_status": {
+        "missed_expiry_last_living_include_fresh30plus": 10,
+        "made_expiry_last_living_are_naturally_expiring_wave29": 1,
+        "same_tick_boundary_old29_and_fresh_last_living": 1
+      }
+    },
+    "1": {
+      "rooms": 6,
+      "expiry_status": {
+        "made_expiry_last_living_are_naturally_expiring_wave29": 3,
+        "missed_expiry_last_living_include_fresh30plus": 3
+      }
+    },
+    "2": {
+      "rooms": 59,
+      "expiry_status": {
+        "missed_expiry_last_living_include_fresh30plus": 50,
+        "made_expiry_last_living_are_naturally_expiring_wave29": 8,
+        "same_tick_boundary_old29_and_fresh_last_living": 1
+      }
+    },
+    "3": {
+      "rooms": 17,
+      "expiry_status": {
+        "missed_expiry_last_living_include_fresh30plus": 17
+      }
+    },
+    "4": {
+      "rooms": 18,
+      "expiry_status": {
+        "missed_expiry_last_living_include_fresh30plus": 14,
+        "made_expiry_last_living_are_naturally_expiring_wave29": 4
+      }
+    },
+    "5": {
+      "rooms": 28,
+      "expiry_status": {
+        "made_expiry_last_living_are_naturally_expiring_wave29": 6,
+        "missed_expiry_last_living_include_fresh30plus": 21,
+        "same_tick_boundary_old29_and_fresh_last_living": 1
+      }
+    },
+    "6": {
+      "rooms": 4,
+      "expiry_status": {
+        "made_expiry_last_living_are_naturally_expiring_wave29": 2,
+        "missed_expiry_last_living_include_fresh30plus": 2
+      }
+    }
+  },
+  "sources": {
+    "training-v3-south20-coherent-random-200": {
+      "csv_sha256": "6525a924a42ce8c9913c5a39cdcd9559d2eb583c2d8687d51d9cb00971fc2ee0",
+      "log_sha256": "9d1059f40704bd562e9d97e70d22eb274fcd6c98ef27d84451ebf5575b440281"
+    },
+    "training-v3-south20-coherent-fresh-300": {
+      "csv_sha256": "fa7704390931ee2e786562d701108a4d1442bdb18961fa7650bc3e15203858e2",
+      "log_sha256": "b5a7459269e33c090c158e9b254824ba07f65d7f02dd53f2a1b8350ac8c5dc56"
+    }
+  },
+  "per_room": [
+    {
+      "seed": 257451351778368,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 2,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 196,
+          "wave": 31,
+          "age": 41,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 314,
+      "last_old29_living_tick": 306,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778369,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 5,
+      "stalls21to27": 0,
+      "all_stalls_before28": 5,
+      "stalls28": 0,
+      "stalls29": 1,
+      "stalls30": 6,
+      "last_living_tick": 321,
+      "terminal_living": [
+        {
+          "key": 189,
+          "wave": 30,
+          "age": 45,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 321,
+      "last_old29_living_tick": 304,
+      "spawn31": 284,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778370,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 3,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 316,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 5,
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 316,
+      "last_old29_living_tick": 310,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778373,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 1,
+      "all_stalls_before28": 5,
+      "stalls28": 1,
+      "stalls29": 4,
+      "stalls30": 0,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 184,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 313,
+      "last_old29_living_tick": 314,
+      "spawn31": 276,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778379,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 1,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 321,
+      "terminal_living": [
+        {
+          "key": 190,
+          "wave": 31,
+          "age": 49,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 6,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 321,
+      "last_old29_living_tick": 310,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 319,
+          "key": 186,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 7,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 257451351778380,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 1,
+      "stalls29": 3,
+      "stalls30": 0,
+      "last_living_tick": 318,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 3,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 318,
+      "last_old29_living_tick": 306,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 314,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 12,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 257451351778385,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 1,
+      "all_stalls_before28": 5,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 319,
+      "terminal_living": [
+        {
+          "key": 183,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 184,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 312,
+      "last_old29_living_tick": 319,
+      "spawn31": 276,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778395,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 3,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 313,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 6,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 313,
+      "last_old29_living_tick": 306,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778398,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 1,
+      "stalls21to27": 2,
+      "all_stalls_before28": 3,
+      "stalls28": 5,
+      "stalls29": 1,
+      "stalls30": 1,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 187,
+          "wave": 30,
+          "age": 46,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 5,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 314,
+      "last_old29_living_tick": 311,
+      "spawn31": 276,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778399,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 6,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 318,
+      "terminal_living": [
+        {
+          "key": 185,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 186,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 307,
+      "last_old29_living_tick": 318,
+      "spawn31": 272,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778401,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 4,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 312,
+      "terminal_living": [
+        {
+          "key": 198,
+          "wave": 31,
+          "age": 33,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 312,
+      "last_old29_living_tick": 311,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778402,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 0,
+      "all_stalls_before28": 4,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 312,
+      "terminal_living": [
+        {
+          "key": 184,
+          "wave": 30,
+          "age": 48,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 2,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 312,
+      "last_old29_living_tick": 310,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778404,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 1,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 1,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 195,
+          "wave": 31,
+          "age": 36,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 314,
+      "last_old29_living_tick": 310,
+      "spawn31": 276,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778413,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 1,
+      "stalls21to27": 0,
+      "all_stalls_before28": 1,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 315,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 8,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 315,
+      "last_old29_living_tick": 298,
+      "spawn31": 256,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 306,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 15,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 257451351778419,
+      "boss_ticks": 344,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 2,
+      "all_stalls_before28": 6,
+      "stalls28": 2,
+      "stalls29": 3,
+      "stalls30": 0,
+      "last_living_tick": 322,
+      "terminal_living": [
+        {
+          "key": 197,
+          "wave": 31,
+          "age": 33,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 322,
+      "last_old29_living_tick": 318,
+      "spawn31": 280,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778423,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 0,
+      "all_stalls_before28": 4,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 3,
+      "last_living_tick": 319,
+      "terminal_living": [
+        {
+          "key": 189,
+          "wave": 30,
+          "age": 47,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 4,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 319,
+      "last_old29_living_tick": 310,
+      "spawn31": 280,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778427,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 4,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 311,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 4,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 4,
+          "style": "RANGE",
+          "big": false,
+          "hp": 3,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 311,
+      "last_old29_living_tick": 306,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778430,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 1,
+      "stalls29": 2,
+      "stalls30": 1,
+      "last_living_tick": 312,
+      "terminal_living": [
+        {
+          "key": 200,
+          "wave": 31,
+          "age": 33,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 312,
+      "last_old29_living_tick": 306,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778437,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 313,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 26,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 1,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 313,
+      "last_old29_living_tick": 306,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778444,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 5,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 312,
+      "terminal_living": [
+        {
+          "key": 202,
+          "wave": 31,
+          "age": 37,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 312,
+      "last_old29_living_tick": 307,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778451,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 1,
+      "all_stalls_before28": 3,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 1,
+      "last_living_tick": 318,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 3,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 318,
+      "last_old29_living_tick": 303,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 314,
+          "key": 187,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 14,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 257451351778452,
+      "boss_ticks": 344,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 1,
+      "all_stalls_before28": 5,
+      "stalls28": 3,
+      "stalls29": 3,
+      "stalls30": 0,
+      "last_living_tick": 325,
+      "terminal_living": [
+        {
+          "key": 190,
+          "wave": 30,
+          "age": 46,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 4,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 325,
+      "last_old29_living_tick": 314,
+      "spawn31": 280,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778453,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 1,
+      "all_stalls_before28": 5,
+      "stalls28": 0,
+      "stalls29": 3,
+      "stalls30": 0,
+      "last_living_tick": 310,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 7,
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 310,
+      "last_old29_living_tick": 302,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778461,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 3,
+      "last_living_tick": 318,
+      "terminal_living": [
+        {
+          "key": 192,
+          "wave": 30,
+          "age": 43,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 318,
+      "last_old29_living_tick": 310,
+      "spawn31": 280,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778462,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 310,
+      "terminal_living": [
+        {
+          "key": 200,
+          "wave": 31,
+          "age": 35,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 310,
+      "last_old29_living_tick": 302,
+      "spawn31": 260,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778464,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 5,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 318,
+      "terminal_living": [
+        {
+          "key": 183,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 184,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 309,
+      "last_old29_living_tick": 318,
+      "spawn31": 272,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778465,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 1,
+      "stalls21to27": 0,
+      "all_stalls_before28": 1,
+      "stalls28": 2,
+      "stalls29": 5,
+      "stalls30": 0,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 184,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 309,
+      "last_old29_living_tick": 314,
+      "spawn31": 268,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778470,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 3,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 0,
+      "stalls30": 1,
+      "last_living_tick": 315,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 4,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 315,
+      "last_old29_living_tick": 310,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778472,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 3,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 4,
+      "last_living_tick": 313,
+      "terminal_living": [
+        {
+          "key": 191,
+          "wave": 30,
+          "age": 37,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 313,
+      "last_old29_living_tick": 310,
+      "spawn31": 288,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778477,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 1,
+      "stalls21to27": 1,
+      "all_stalls_before28": 2,
+      "stalls28": 4,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 313,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 6,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 313,
+      "last_old29_living_tick": 306,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778479,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 1,
+      "last_living_tick": 316,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 9,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 316,
+      "last_old29_living_tick": 310,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778481,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 0,
+      "all_stalls_before28": 4,
+      "stalls28": 4,
+      "stalls29": 1,
+      "stalls30": 2,
+      "last_living_tick": 311,
+      "terminal_living": [
+        {
+          "key": 183,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 184,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 310,
+      "last_old29_living_tick": 311,
+      "spawn31": 280,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778482,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 2,
+      "stalls29": 3,
+      "stalls30": 1,
+      "last_living_tick": 318,
+      "terminal_living": [
+        {
+          "key": 190,
+          "wave": 30,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 1,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 318,
+      "last_old29_living_tick": 304,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 311,
+          "key": 186,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 6,
+          "dying": false
+        },
+        {
+          "tick": 318,
+          "key": 190,
+          "wave": 30,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 1,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 257451351778484,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 1,
+      "last_living_tick": 315,
+      "terminal_living": [
+        {
+          "key": 184,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 6,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 315,
+      "last_old29_living_tick": 310,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 315,
+          "key": 184,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 6,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 257451351778489,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 2,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 188,
+          "wave": 30,
+          "age": 47,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 1,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 314,
+      "last_old29_living_tick": 307,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 311,
+          "key": 185,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 4,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 257451351778492,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 3,
+      "all_stalls_before28": 6,
+      "stalls28": 2,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 321,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 6,
+          "style": "RANGE",
+          "big": false,
+          "hp": 7,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 321,
+      "last_old29_living_tick": 314,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778500,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 4,
+      "stalls29": 0,
+      "stalls30": 3,
+      "last_living_tick": 313,
+      "terminal_living": [
+        {
+          "key": 187,
+          "wave": 30,
+          "age": 42,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 1,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 313,
+      "last_old29_living_tick": 307,
+      "spawn31": 276,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778501,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 3,
+      "stalls29": 2,
+      "stalls30": 1,
+      "last_living_tick": 310,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 7,
+          "style": "RANGE",
+          "big": false,
+          "hp": 1,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 310,
+      "last_old29_living_tick": 302,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778502,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 4,
+      "stalls29": 1,
+      "stalls30": 2,
+      "last_living_tick": 313,
+      "terminal_living": [
+        {
+          "key": 187,
+          "wave": 30,
+          "age": 46,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 5,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 313,
+      "last_old29_living_tick": 303,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778507,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 1,
+      "last_living_tick": 315,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 4,
+          "style": "RANGE",
+          "big": false,
+          "hp": 3,
+          "dying": false
+        },
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 4,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 315,
+      "last_old29_living_tick": 302,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 310,
+          "key": 183,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 3,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 257451351778508,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 2,
+      "all_stalls_before28": 6,
+      "stalls28": 2,
+      "stalls29": 1,
+      "stalls30": 2,
+      "last_living_tick": 315,
+      "terminal_living": [
+        {
+          "key": 182,
+          "wave": 29,
+          "age": 51,
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 309,
+      "last_old29_living_tick": 315,
+      "spawn31": 280,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778510,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 4,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 319,
+      "terminal_living": [
+        {
+          "key": 198,
+          "wave": 31,
+          "age": 49,
+          "style": "MELEE",
+          "big": false,
+          "hp": 7,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 319,
+      "last_old29_living_tick": 303,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 318,
+          "key": 196,
+          "wave": 31,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 2,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 257451351778511,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 2,
+      "all_stalls_before28": 4,
+      "stalls28": 0,
+      "stalls29": 5,
+      "stalls30": 0,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 183,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 310,
+      "last_old29_living_tick": 314,
+      "spawn31": 272,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778517,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 0,
+      "all_stalls_before28": 4,
+      "stalls28": 5,
+      "stalls29": 3,
+      "stalls30": 0,
+      "last_living_tick": 317,
+      "terminal_living": [
+        {
+          "key": 191,
+          "wave": 30,
+          "age": 34,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 317,
+      "last_old29_living_tick": 315,
+      "spawn31": 284,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778518,
+      "boss_ticks": 344,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 0,
+      "all_stalls_before28": 4,
+      "stalls28": 3,
+      "stalls29": 1,
+      "stalls30": 3,
+      "last_living_tick": 326,
+      "terminal_living": [
+        {
+          "key": 189,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 2,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 326,
+      "last_old29_living_tick": 310,
+      "spawn31": 280,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 326,
+          "key": 189,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 2,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 257451351778523,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 313,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 2,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 2,
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 313,
+      "last_old29_living_tick": 310,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778525,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 1,
+      "stalls21to27": 0,
+      "all_stalls_before28": 1,
+      "stalls28": 6,
+      "stalls29": 1,
+      "stalls30": 2,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 185,
+          "wave": 29,
+          "age": 51,
+          "style": "RANGE",
+          "big": false,
+          "hp": 7,
+          "dying": false
+        },
+        {
+          "key": 186,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 313,
+      "last_old29_living_tick": 314,
+      "spawn31": 276,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778529,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 2,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 183,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 184,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 312,
+      "last_old29_living_tick": 314,
+      "spawn31": 272,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778530,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 5,
+      "stalls21to27": 0,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 315,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 4,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 315,
+      "last_old29_living_tick": 314,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778538,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 0,
+      "all_stalls_before28": 4,
+      "stalls28": 3,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 319,
+      "terminal_living": [
+        {
+          "key": 187,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 4,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 319,
+      "last_old29_living_tick": 310,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 319,
+          "key": 187,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 4,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 257451351778545,
+      "boss_ticks": 344,
+      "pre_cap_stalls": 1,
+      "stalls21to27": 2,
+      "all_stalls_before28": 3,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 323,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 4,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 323,
+      "last_old29_living_tick": 314,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 318,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 8,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 257451351778548,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 2,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 186,
+          "wave": 29,
+          "age": 51,
+          "style": "RANGE",
+          "big": false,
+          "hp": 7,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 308,
+      "last_old29_living_tick": 314,
+      "spawn31": 272,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778555,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 0,
+      "all_stalls_before28": 4,
+      "stalls28": 5,
+      "stalls29": 1,
+      "stalls30": 1,
+      "last_living_tick": 315,
+      "terminal_living": [
+        {
+          "key": 178,
+          "wave": 29,
+          "age": 51,
+          "style": "RANGE",
+          "big": false,
+          "hp": 6,
+          "dying": false
+        },
+        {
+          "key": 181,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 182,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 187,
+          "wave": 30,
+          "age": 40,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 315,
+      "last_old29_living_tick": 315,
+      "spawn31": 280,
+      "expiry_status": "same_tick_boundary_old29_and_fresh_last_living",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778557,
+      "boss_ticks": 348,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 2,
+      "all_stalls_before28": 6,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 4,
+      "last_living_tick": 329,
+      "terminal_living": [
+        {
+          "key": 192,
+          "wave": 30,
+          "age": 41,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 329,
+      "last_old29_living_tick": 323,
+      "spawn31": 296,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 327,
+          "key": 189,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 6,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 257451351778558,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 5,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 316,
+      "terminal_living": [
+        {
+          "key": 196,
+          "wave": 31,
+          "age": 38,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 5,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 316,
+      "last_old29_living_tick": 311,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778560,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 0,
+      "all_stalls_before28": 4,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 311,
+      "terminal_living": [
+        {
+          "key": 187,
+          "wave": 30,
+          "age": 47,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 2,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 311,
+      "last_old29_living_tick": 310,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 257451351778565,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 2,
+      "last_living_tick": 319,
+      "terminal_living": [
+        {
+          "key": 188,
+          "wave": 30,
+          "age": 48,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 319,
+      "last_old29_living_tick": 307,
+      "spawn31": 276,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480264,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 2,
+      "all_stalls_before28": 5,
+      "stalls28": 4,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 322,
+      "terminal_living": [
+        {
+          "key": 183,
+          "wave": 29,
+          "age": 51,
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 184,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 321,
+      "last_old29_living_tick": 322,
+      "spawn31": 276,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480269,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 0,
+      "all_stalls_before28": 4,
+      "stalls28": 4,
+      "stalls29": 1,
+      "stalls30": 2,
+      "last_living_tick": 315,
+      "terminal_living": [
+        {
+          "key": 186,
+          "wave": 30,
+          "age": 47,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 2,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 315,
+      "last_old29_living_tick": 311,
+      "spawn31": 280,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480270,
+      "boss_ticks": 348,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 6,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 326,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 7,
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 326,
+      "last_old29_living_tick": 318,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480272,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 0,
+      "stalls29": 3,
+      "stalls30": 2,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 7,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 314,
+      "last_old29_living_tick": 299,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 306,
+          "key": 183,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 2,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480274,
+      "boss_ticks": 352,
+      "pre_cap_stalls": 5,
+      "stalls21to27": 1,
+      "all_stalls_before28": 6,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 1,
+      "last_living_tick": 330,
+      "terminal_living": [
+        {
+          "key": 202,
+          "wave": 31,
+          "age": 36,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 330,
+      "last_old29_living_tick": 311,
+      "spawn31": 280,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480275,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 1,
+      "all_stalls_before28": 3,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 318,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 3,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 3,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 318,
+      "last_old29_living_tick": 314,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480276,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 2,
+      "last_living_tick": 310,
+      "terminal_living": [
+        {
+          "key": 187,
+          "wave": 30,
+          "age": 44,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 1,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 310,
+      "last_old29_living_tick": 302,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480281,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 317,
+      "terminal_living": [
+        {
+          "key": 185,
+          "wave": 30,
+          "age": 49,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 2,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 317,
+      "last_old29_living_tick": 315,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480283,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 1,
+      "stalls21to27": 0,
+      "all_stalls_before28": 1,
+      "stalls28": 2,
+      "stalls29": 3,
+      "stalls30": 1,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 3,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 314,
+      "last_old29_living_tick": 298,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 310,
+          "key": 183,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 7,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480284,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 1,
+      "stalls21to27": 0,
+      "all_stalls_before28": 1,
+      "stalls28": 6,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 317,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 6,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 317,
+      "last_old29_living_tick": 310,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480285,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 1,
+      "all_stalls_before28": 3,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 3,
+      "last_living_tick": 313,
+      "terminal_living": [
+        {
+          "key": 198,
+          "wave": 31,
+          "age": 34,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 30,
+          "style": "MELEE",
+          "big": false,
+          "hp": 3,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 313,
+      "last_old29_living_tick": 306,
+      "spawn31": 276,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480287,
+      "boss_ticks": 344,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 0,
+      "all_stalls_before28": 4,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 322,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 3,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 322,
+      "last_old29_living_tick": 318,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480293,
+      "boss_ticks": 348,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 2,
+      "all_stalls_before28": 5,
+      "stalls28": 4,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 328,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 5,
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 328,
+      "last_old29_living_tick": 315,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 322,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 5,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480294,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 2,
+      "all_stalls_before28": 4,
+      "stalls28": 2,
+      "stalls29": 3,
+      "stalls30": 0,
+      "last_living_tick": 313,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 6,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 313,
+      "last_old29_living_tick": 310,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480301,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 5,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 318,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 23,
+          "style": "MELEE",
+          "big": false,
+          "hp": 2,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 318,
+      "last_old29_living_tick": 311,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480304,
+      "boss_ticks": 348,
+      "pre_cap_stalls": 5,
+      "stalls21to27": 1,
+      "all_stalls_before28": 6,
+      "stalls28": 4,
+      "stalls29": 1,
+      "stalls30": 2,
+      "last_living_tick": 326,
+      "terminal_living": [
+        {
+          "key": 197,
+          "wave": 31,
+          "age": 37,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 326,
+      "last_old29_living_tick": 319,
+      "spawn31": 288,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480305,
+      "boss_ticks": 344,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 3,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 1,
+      "stalls30": 1,
+      "last_living_tick": 322,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 3,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 322,
+      "last_old29_living_tick": 307,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 318,
+          "key": 183,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 10,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480313,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 2,
+      "stalls29": 3,
+      "stalls30": 0,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 198,
+          "wave": 31,
+          "age": 32,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 314,
+      "last_old29_living_tick": 307,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480316,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 1,
+      "all_stalls_before28": 3,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 322,
+      "terminal_living": [
+        {
+          "key": 196,
+          "wave": 31,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 322,
+      "last_old29_living_tick": 311,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 322,
+          "key": 196,
+          "wave": 31,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480323,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 0,
+      "stalls21to27": 2,
+      "all_stalls_before28": 2,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 3,
+      "last_living_tick": 312,
+      "terminal_living": [
+        {
+          "key": 188,
+          "wave": 30,
+          "age": 46,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 312,
+      "last_old29_living_tick": 307,
+      "spawn31": 276,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480326,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 316,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 5,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 5,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 316,
+      "last_old29_living_tick": 302,
+      "spawn31": 260,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 310,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 15,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480327,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 4,
+      "stalls29": 2,
+      "stalls30": 2,
+      "last_living_tick": 316,
+      "terminal_living": [
+        {
+          "key": 185,
+          "wave": 30,
+          "age": 48,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 7,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 316,
+      "last_old29_living_tick": null,
+      "spawn31": 280,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480332,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 5,
+      "last_living_tick": 311,
+      "terminal_living": [
+        {
+          "key": 185,
+          "wave": 30,
+          "age": 42,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 189,
+          "wave": 30,
+          "age": 40,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 2,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 311,
+      "last_old29_living_tick": 299,
+      "spawn31": 284,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480335,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 2,
+      "all_stalls_before28": 5,
+      "stalls28": 4,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 315,
+      "terminal_living": [
+        {
+          "key": 181,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 182,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 314,
+      "last_old29_living_tick": 315,
+      "spawn31": 272,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480336,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 5,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 318,
+      "terminal_living": [
+        {
+          "key": 186,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 305,
+      "last_old29_living_tick": 318,
+      "spawn31": 272,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480339,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 6,
+      "stalls21to27": 1,
+      "all_stalls_before28": 7,
+      "stalls28": 2,
+      "stalls29": 1,
+      "stalls30": 1,
+      "last_living_tick": 320,
+      "terminal_living": [
+        {
+          "key": 183,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 7,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 314,
+      "last_old29_living_tick": 320,
+      "spawn31": 280,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480346,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 5,
+      "stalls21to27": 1,
+      "all_stalls_before28": 6,
+      "stalls28": 2,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 181,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 182,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 310,
+      "last_old29_living_tick": 314,
+      "spawn31": 272,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480349,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 1,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 317,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 6,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 1,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 317,
+      "last_old29_living_tick": 310,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480350,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 1,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 1,
+      "last_living_tick": 313,
+      "terminal_living": [
+        {
+          "key": 200,
+          "wave": 31,
+          "age": 32,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 313,
+      "last_old29_living_tick": 307,
+      "spawn31": 276,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480351,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 1,
+      "all_stalls_before28": 3,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 312,
+      "terminal_living": [
+        {
+          "key": 183,
+          "wave": 29,
+          "age": 51,
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 184,
+          "wave": 29,
+          "age": 51,
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 310,
+      "last_old29_living_tick": 312,
+      "spawn31": 268,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480354,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 2,
+      "all_stalls_before28": 6,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 323,
+      "terminal_living": [
+        {
+          "key": 181,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 7,
+          "dying": false
+        },
+        {
+          "key": 183,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 184,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 314,
+      "last_old29_living_tick": 323,
+      "spawn31": 280,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480356,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 4,
+      "stalls29": 0,
+      "stalls30": 1,
+      "last_living_tick": 319,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 4,
+          "style": "RANGE",
+          "big": false,
+          "hp": 3,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 319,
+      "last_old29_living_tick": 307,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 314,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 2,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480358,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 2,
+      "stalls29": 3,
+      "stalls30": 0,
+      "last_living_tick": 315,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 18,
+          "style": "MELEE",
+          "big": false,
+          "hp": 4,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 315,
+      "last_old29_living_tick": 307,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480359,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 1,
+      "all_stalls_before28": 3,
+      "stalls28": 4,
+      "stalls29": 0,
+      "stalls30": 1,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 3,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 314,
+      "last_old29_living_tick": 310,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480361,
+      "boss_ticks": 348,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 3,
+      "all_stalls_before28": 7,
+      "stalls28": 2,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 326,
+      "terminal_living": [
+        {
+          "key": 197,
+          "wave": 31,
+          "age": 45,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 7,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 326,
+      "last_old29_living_tick": 315,
+      "spawn31": 276,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 323,
+          "key": 183,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 2,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480363,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 2,
+      "all_stalls_before28": 4,
+      "stalls28": 0,
+      "stalls29": 3,
+      "stalls30": 4,
+      "last_living_tick": 311,
+      "terminal_living": [
+        {
+          "key": 199,
+          "wave": 31,
+          "age": 28,
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 311,
+      "last_old29_living_tick": 310,
+      "spawn31": 280,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480366,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 1,
+      "stalls21to27": 0,
+      "all_stalls_before28": 1,
+      "stalls28": 3,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 3,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 314,
+      "last_old29_living_tick": 298,
+      "spawn31": 260,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 310,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 5,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480368,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 2,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 316,
+      "terminal_living": [
+        {
+          "key": 189,
+          "wave": 31,
+          "age": 48,
+          "style": "RANGE",
+          "big": false,
+          "hp": 1,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 316,
+      "last_old29_living_tick": 310,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480369,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 1,
+      "stalls21to27": 2,
+      "all_stalls_before28": 3,
+      "stalls28": 3,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 316,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 9,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 316,
+      "last_old29_living_tick": 306,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480372,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 0,
+      "all_stalls_before28": 4,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 312,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 5,
+          "style": "RANGE",
+          "big": false,
+          "hp": 1,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 312,
+      "last_old29_living_tick": 310,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480375,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 321,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 6,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 321,
+      "last_old29_living_tick": 314,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480377,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 1,
+      "stalls21to27": 0,
+      "all_stalls_before28": 1,
+      "stalls28": 3,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 318,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 7,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 318,
+      "last_old29_living_tick": 298,
+      "spawn31": 260,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 310,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 14,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480378,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 4,
+      "stalls29": 1,
+      "stalls30": 1,
+      "last_living_tick": 310,
+      "terminal_living": [
+        {
+          "key": 187,
+          "wave": 30,
+          "age": 46,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 7,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 310,
+      "last_old29_living_tick": 307,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480382,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 1,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 1,
+      "stalls30": 2,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 183,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 313,
+      "last_old29_living_tick": 314,
+      "spawn31": 276,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480384,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 0,
+      "stalls29": 2,
+      "stalls30": 5,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 190,
+          "wave": 30,
+          "age": 42,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 314,
+      "last_old29_living_tick": 295,
+      "spawn31": 280,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 307,
+          "key": 181,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 2,
+          "dying": false
+        },
+        {
+          "tick": 308,
+          "key": 183,
+          "wave": 30,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480387,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 0,
+      "all_stalls_before28": 4,
+      "stalls28": 2,
+      "stalls29": 3,
+      "stalls30": 0,
+      "last_living_tick": 310,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 3,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 3,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 310,
+      "last_old29_living_tick": 306,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480388,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 5,
+      "stalls21to27": 0,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 1,
+      "stalls30": 1,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 184,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 307,
+      "last_old29_living_tick": 314,
+      "spawn31": 272,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480391,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 1,
+      "stalls29": 3,
+      "stalls30": 0,
+      "last_living_tick": 313,
+      "terminal_living": [
+        {
+          "key": 183,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 184,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 302,
+      "last_old29_living_tick": 313,
+      "spawn31": 268,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480393,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 2,
+      "stalls29": 1,
+      "stalls30": 1,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 7,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 2,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 314,
+      "last_old29_living_tick": 302,
+      "spawn31": 260,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 306,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 12,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480396,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 3,
+      "stalls29": 2,
+      "stalls30": 1,
+      "last_living_tick": 313,
+      "terminal_living": [
+        {
+          "key": 187,
+          "wave": 30,
+          "age": 49,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 5,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 313,
+      "last_old29_living_tick": 306,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480398,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 5,
+      "stalls21to27": 1,
+      "all_stalls_before28": 6,
+      "stalls28": 2,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 322,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 7,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 322,
+      "last_old29_living_tick": 314,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480401,
+      "boss_ticks": 348,
+      "pre_cap_stalls": 5,
+      "stalls21to27": 0,
+      "all_stalls_before28": 5,
+      "stalls28": 1,
+      "stalls29": 3,
+      "stalls30": 0,
+      "last_living_tick": 326,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 3,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 326,
+      "last_old29_living_tick": 314,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 322,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480402,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 5,
+      "stalls21to27": 1,
+      "all_stalls_before28": 6,
+      "stalls28": 3,
+      "stalls29": 1,
+      "stalls30": 1,
+      "last_living_tick": 317,
+      "terminal_living": [
+        {
+          "key": 198,
+          "wave": 31,
+          "age": 32,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 3,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 317,
+      "last_old29_living_tick": 315,
+      "spawn31": 280,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480406,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 2,
+      "last_living_tick": 317,
+      "terminal_living": [
+        {
+          "key": 186,
+          "wave": 30,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 317,
+      "last_old29_living_tick": 311,
+      "spawn31": 276,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 315,
+          "key": 182,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 1,
+          "dying": false
+        },
+        {
+          "tick": 317,
+          "key": 186,
+          "wave": 30,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480413,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 0,
+      "stalls29": 4,
+      "stalls30": 0,
+      "last_living_tick": 318,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 7,
+          "style": "MELEE",
+          "big": false,
+          "hp": 7,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 318,
+      "last_old29_living_tick": 294,
+      "spawn31": 260,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 310,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 12,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480414,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 3,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 321,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 6,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 321,
+      "last_old29_living_tick": 299,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 314,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 11,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480416,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 310,
+      "terminal_living": [
+        {
+          "key": 194,
+          "wave": 31,
+          "age": 40,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 310,
+      "last_old29_living_tick": 306,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480418,
+      "boss_ticks": 348,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 2,
+      "all_stalls_before28": 4,
+      "stalls28": 4,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 328,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 5,
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 328,
+      "last_old29_living_tick": 311,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 322,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 10,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480423,
+      "boss_ticks": 344,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 5,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 322,
+      "terminal_living": [
+        {
+          "key": 195,
+          "wave": 31,
+          "age": 40,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 322,
+      "last_old29_living_tick": 315,
+      "spawn31": 276,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480427,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 5,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 316,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 5,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 316,
+      "last_old29_living_tick": 310,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480429,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 3,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 318,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 3,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 318,
+      "last_old29_living_tick": 302,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 314,
+          "key": 183,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 15,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480436,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 2,
+      "last_living_tick": 315,
+      "terminal_living": [
+        {
+          "key": 198,
+          "wave": 31,
+          "age": 38,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 315,
+      "last_old29_living_tick": 311,
+      "spawn31": 276,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480438,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 0,
+      "stalls29": 4,
+      "stalls30": 0,
+      "last_living_tick": 310,
+      "terminal_living": [
+        {
+          "key": 183,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 187,
+          "wave": 30,
+          "age": 46,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 7,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 310,
+      "last_old29_living_tick": 310,
+      "spawn31": 268,
+      "expiry_status": "same_tick_boundary_old29_and_fresh_last_living",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480455,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 2,
+      "all_stalls_before28": 4,
+      "stalls28": 3,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 317,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 6,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 317,
+      "last_old29_living_tick": 310,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480462,
+      "boss_ticks": 348,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 2,
+      "stalls29": 3,
+      "stalls30": 0,
+      "last_living_tick": 326,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 3,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 326,
+      "last_old29_living_tick": 310,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 322,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 15,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480464,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 5,
+      "stalls21to27": 0,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 3,
+      "stalls30": 2,
+      "last_living_tick": 321,
+      "terminal_living": [
+        {
+          "key": 199,
+          "wave": 31,
+          "age": 34,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 1,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 321,
+      "last_old29_living_tick": 307,
+      "spawn31": 284,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480467,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 1,
+      "last_living_tick": 312,
+      "terminal_living": [
+        {
+          "key": 183,
+          "wave": 30,
+          "age": 48,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 312,
+      "last_old29_living_tick": 311,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480468,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 2,
+      "all_stalls_before28": 6,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 318,
+      "terminal_living": [
+        {
+          "key": 184,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 198,
+          "wave": 31,
+          "age": 35,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 318,
+      "last_old29_living_tick": 318,
+      "spawn31": 276,
+      "expiry_status": "same_tick_boundary_old29_and_fresh_last_living",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480469,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 1,
+      "stalls21to27": 0,
+      "all_stalls_before28": 1,
+      "stalls28": 5,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 312,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 5,
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 312,
+      "last_old29_living_tick": 306,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480471,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 4,
+      "stalls29": 0,
+      "stalls30": 1,
+      "last_living_tick": 313,
+      "terminal_living": [
+        {
+          "key": 183,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 184,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 307,
+      "last_old29_living_tick": 313,
+      "spawn31": 272,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480476,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 2,
+      "stalls29": 0,
+      "stalls30": 1,
+      "last_living_tick": 313,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 2,
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 2,
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 313,
+      "last_old29_living_tick": 303,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 307,
+          "key": 181,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "tick": 307,
+          "key": 182,
+          "wave": 30,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "tick": 310,
+          "key": 183,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 13,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480480,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 5,
+      "stalls29": 0,
+      "stalls30": 0,
+      "last_living_tick": 315,
+      "terminal_living": [
+        {
+          "key": 183,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 184,
+          "wave": 29,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 309,
+      "last_old29_living_tick": 315,
+      "spawn31": 272,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480483,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 1,
+      "stalls21to27": 0,
+      "all_stalls_before28": 1,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 310,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 3,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 310,
+      "last_old29_living_tick": 298,
+      "spawn31": 256,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 306,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 4,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480488,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 1,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 316,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 5,
+          "style": "RANGE",
+          "big": false,
+          "hp": 5,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 316,
+      "last_old29_living_tick": 311,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480496,
+      "boss_ticks": 344,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 0,
+      "all_stalls_before28": 3,
+      "stalls28": 3,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 326,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 7,
+          "style": "MELEE",
+          "big": false,
+          "hp": 5,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 326,
+      "last_old29_living_tick": 303,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 318,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 16,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480502,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 1,
+      "all_stalls_before28": 5,
+      "stalls28": 0,
+      "stalls29": 4,
+      "stalls30": 0,
+      "last_living_tick": 315,
+      "terminal_living": [
+        {
+          "key": 197,
+          "wave": 31,
+          "age": 34,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 315,
+      "last_old29_living_tick": 312,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480503,
+      "boss_ticks": 332,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 1,
+      "all_stalls_before28": 3,
+      "stalls28": 0,
+      "stalls29": 5,
+      "stalls30": 3,
+      "last_living_tick": 314,
+      "terminal_living": [
+        {
+          "key": 191,
+          "wave": 30,
+          "age": 40,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 314,
+      "last_old29_living_tick": 307,
+      "spawn31": 280,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480514,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 3,
+      "all_stalls_before28": 5,
+      "stalls28": 0,
+      "stalls29": 2,
+      "stalls30": 2,
+      "last_living_tick": 318,
+      "terminal_living": [
+        {
+          "key": 196,
+          "wave": 31,
+          "age": 45,
+          "style": "MELEE",
+          "big": false,
+          "hp": 1,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 318,
+      "last_old29_living_tick": 309,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 311,
+          "key": 182,
+          "wave": 30,
+          "age": 51,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "tick": 311,
+          "key": 184,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 7,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480529,
+      "boss_ticks": 352,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 1,
+      "all_stalls_before28": 5,
+      "stalls28": 0,
+      "stalls29": 4,
+      "stalls30": 1,
+      "last_living_tick": 332,
+      "terminal_living": [
+        {
+          "key": 206,
+          "wave": 31,
+          "age": 9,
+          "style": "MELEE",
+          "big": false,
+          "hp": 3,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 332,
+      "last_old29_living_tick": 314,
+      "spawn31": 276,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 322,
+          "key": 181,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 12,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480534,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 3,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 317,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 6,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 6,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 317,
+      "last_old29_living_tick": 302,
+      "spawn31": 260,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 310,
+          "key": 185,
+          "wave": 30,
+          "age": 54,
+          "style": "MELEE",
+          "big": true,
+          "hp": 13,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480538,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 2,
+      "all_stalls_before28": 4,
+      "stalls28": 3,
+      "stalls29": 1,
+      "stalls30": 3,
+      "last_living_tick": 317,
+      "terminal_living": [
+        {
+          "key": 199,
+          "wave": 31,
+          "age": 36,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 1,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 317,
+      "last_old29_living_tick": 310,
+      "spawn31": 280,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 315,
+          "key": 185,
+          "wave": 30,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 4,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480540,
+      "boss_ticks": 344,
+      "pre_cap_stalls": 5,
+      "stalls21to27": 0,
+      "all_stalls_before28": 5,
+      "stalls28": 2,
+      "stalls29": 3,
+      "stalls30": 2,
+      "last_living_tick": 325,
+      "terminal_living": [
+        {
+          "key": 198,
+          "wave": 31,
+          "age": 40,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 325,
+      "last_old29_living_tick": 314,
+      "spawn31": 284,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480542,
+      "boss_ticks": 340,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 2,
+      "all_stalls_before28": 6,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 0,
+      "last_living_tick": 319,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 4,
+          "style": "RANGE",
+          "big": false,
+          "hp": 4,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 319,
+      "last_old29_living_tick": 318,
+      "spawn31": 276,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480544,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 0,
+      "all_stalls_before28": 2,
+      "stalls28": 2,
+      "stalls29": 2,
+      "stalls30": 1,
+      "last_living_tick": 316,
+      "terminal_living": [
+        {
+          "key": 194,
+          "wave": 31,
+          "age": 49,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 316,
+      "last_old29_living_tick": 298,
+      "spawn31": 264,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": [
+        {
+          "tick": 311,
+          "key": 185,
+          "wave": 30,
+          "age": 51,
+          "style": "RANGE",
+          "big": false,
+          "hp": 6,
+          "dying": false
+        }
+      ]
+    },
+    {
+      "seed": 279799561480546,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 3,
+      "stalls21to27": 1,
+      "all_stalls_before28": 4,
+      "stalls28": 2,
+      "stalls29": 3,
+      "stalls30": 0,
+      "last_living_tick": 315,
+      "terminal_living": [
+        {
+          "key": 189,
+          "wave": 30,
+          "age": 44,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 315,
+      "last_old29_living_tick": 303,
+      "spawn31": 272,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480552,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 2,
+      "stalls21to27": 5,
+      "all_stalls_before28": 7,
+      "stalls28": 1,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 318,
+      "terminal_living": [
+        {
+          "key": 183,
+          "wave": 29,
+          "age": 51,
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        },
+        {
+          "key": 184,
+          "wave": 29,
+          "age": 51,
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 316,
+      "last_old29_living_tick": 318,
+      "spawn31": 272,
+      "expiry_status": "made_expiry_last_living_are_naturally_expiring_wave29",
+      "fresh_expired_lifetimes": []
+    },
+    {
+      "seed": 279799561480556,
+      "boss_ticks": 336,
+      "pre_cap_stalls": 4,
+      "stalls21to27": 0,
+      "all_stalls_before28": 4,
+      "stalls28": 3,
+      "stalls29": 1,
+      "stalls30": 0,
+      "last_living_tick": 316,
+      "terminal_living": [
+        {
+          "key": 205,
+          "wave": 31,
+          "age": 5,
+          "style": "MELEE",
+          "big": false,
+          "hp": 8,
+          "dying": false
+        }
+      ],
+      "last_fresh_living_tick": 316,
+      "last_old29_living_tick": 310,
+      "spawn31": 268,
+      "expiry_status": "missed_expiry_last_living_include_fresh30plus",
+      "fresh_expired_lifetimes": []
+    }
+  ],
+  "mean_stalls_by_wave21through27": {
+    "21": 0.4513888888888889,
+    "22": 0,
+    "23": 0,
+    "24": 0.041666666666666664,
+    "25": 0.05555555555555555,
+    "26": 0.13194444444444445,
+    "27": 0.1111111111111111
+  }
+}

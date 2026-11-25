@@ -1,0 +1,38 @@
+--- a/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -367,6 +367,8 @@
+ 				add(candidates, room, next, action, 100, tick, crab.born + 48);
+ 			}
+ 		}
++		if (candidates.isEmpty() && room.wave == 31)
++			candidates.addAll(terminalCleanupMelee(room, next, tick));
+ 		preferTransitionLane(candidates);
+ 		Candidate best = candidates.stream().min(Comparator.comparingInt((Candidate c) -> c.at)
+ 			.thenComparingInt(c -> -c.score).thenComparingInt(c -> c.decision.target.key)).orElse(null);
+@@ -384,6 +386,26 @@
+ 			"Plan " + action.weapon + " #" + action.target.index + " @" + best.at + ": " + action.reason);
+ 		approach.approach = action.target;
+ 		return approach;
++	}
++
++	private List<Candidate> terminalCleanupMelee(Room room, Reservation next, int tick)
++	{
++		List<Candidate> terminal = new ArrayList<>();
++		if (tick < room.ready || room.crabs.stream().anyMatch(c -> c.big
++			|| !c.dying && c.hp > 0 && (c.awaitingHit(tick)
++				|| !c.nulled && (c.style != Style.MELEE || protectedPacket(c, tick))))) return terminal;
++		for (Crab crab : room.crabs)
++		{
++			int age = tick - crab.born;
++			if (crab.wave < 30 || crab.big || crab.style != Style.MELEE || crab.hp <= 0 || crab.dying
++				|| crab.nulled || crab.claimedUntil > tick || crab.awaitingHit(tick) || age < 0 || age >= 49
++				|| savedMagePrimary(crab, tick) || protectedPacket(crab, tick)
++				|| !RangerFlickers.matchesNext(crab, Style.MELEE, tick)) continue;
++			Decision scratch = new Decision(crab, Weapon.CLAWS, CENTER, false, null, "Closed cleanup melee assist");
++			// Normal movement, current obstruction and future style/lifetime checks remain authoritative.
++			add(terminal, room, next, scratch, 1500 - age * 80, tick, crab.born + 48);
++		}
++		return terminal;
+ 	}
+ 
+ 	private boolean protectedPacket(Crab crab, int tick)

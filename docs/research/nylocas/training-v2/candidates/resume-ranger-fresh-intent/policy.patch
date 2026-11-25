@@ -1,0 +1,27 @@
+--- a/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ b/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -64,7 +64,8 @@
+ 					Shot previous = plan.shots.isEmpty() ? null : plan.shots.get(plan.shots.size() - 1);
+ 					prioritize(extensions, room, previous == null ? tick : previous.tick + 1,
+ 						previous == null ? room.ready : previous.tick + previous.decision.weapon.cooldown);
+-					if (previous == null && extensions.stream().anyMatch(p -> strategy.committed(last(p), tick)))
++					if (previous == null && extensions.stream().anyMatch(p -> strategy.committed(last(p), tick)
++						&& !newerSmallAvailable(extensions, last(p))))
+ 						extensions.removeIf(p -> !strategy.committed(last(p), tick));
+ 				}
+ 				// A short plan that clears the work must not lose to a longer, less useful one.
+@@ -93,6 +94,14 @@
+ 		decision.pathToTarget = first.tick > tick && queue;
+ 		if (decision.target == null) decision.approach = action.target;
+ 		return decision;
++	}
++
++	private boolean newerSmallAvailable(List<Plan> choices, Decision committed)
++	{
++		Crab old = committed.target;
++		// Preserve named packets and follow-ups on an observed survivor, including a zero hit.
++		if (committed.rule != null || old.big || old.hp < 8 || strategy.opened(old)) return false;
++		return choices.stream().anyMatch(p -> !last(p).target.big && last(p).target.born > old.born);
+ 	}
+ 
+ 	private static void keepEarliest(List<Plan> choices)

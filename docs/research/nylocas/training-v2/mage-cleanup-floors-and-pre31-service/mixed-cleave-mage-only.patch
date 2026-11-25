@@ -1,0 +1,33 @@
+--- upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 23:26:51.681342633 +0800
++++ .state/simulations/training-v4-candidate-mage-cleanup-mixed-cleave-safety/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 23:34:47.208882945 +0800
+@@ -448,7 +448,7 @@
+ 			if (requiredBig(c) || south20(room, c)) score += 6000;
+ 			if (c.style == Style.MAGIC && !c.big && room.wave >= 20 && room.wave <= 22 && c.point.getY() <= 4247) score += 5000;
+ 			if (c.style == Style.MELEE && c.big) weapon = Weapon.SCYTHE;
+-			if (!c.big && c.style == Style.MELEE && cluster(room, c, tick) >= 2) { weapon = Weapon.SCYTHE; score += 2200; }
++			if (!c.big && c.style == Style.MELEE && cluster(room, c, tick) >= 2 && !riskyCleanupCleave(room, c, tick)) { weapon = Weapon.SCYTHE; score += 2200; }
+ 			if (!c.big) score += Math.max(0, 8 - c.hp) * 40;
+ 			if (room.wave == 31 && freshCleanup(room, c) && c.lane == Lane.SPLIT && !c.big && c.style == Style.MAGIC && c.partnerNulled) score += 5000;
+ 			Decision d = new Decision(c, weapon, c.point, false, null, "Fresh " + c.style + (c.big ? " assigned big" : " small"));
+@@ -737,6 +737,21 @@
+ 			|| c.wave == 24 && c.lane == Lane.WEST && age >= 7 && (c.style == Style.MAGIC || c.style == Style.MELEE);
+ 	}
+ 
++	private static boolean riskyCleanupCleave(Room room, Crab target, int tick)
++	{
++		if (room.wave != 31) return false;
++		// A size1 primary sweeps the same/left/right tiles, without a style
++		// filter. Both smalls can walk once before native interaction, so a
++		// current three-tile gap can still enter that one-tile secondary arc.
++		return room.crabs.stream().anyMatch(c -> c.key != target.key && !c.big
++			&& c.hp > 0 && !c.dying && !c.nulled && !dimmed(room, c) && tick - c.born < 49
++			&& c.style != Style.MELEE && (c.pendingDamage < 0 || c.pendingDamage < c.hp)
++			&& c.point.distanceTo(target.point) <= 3
++			&& (NylocasFlickers.at(c.wave, c.lane.ordinal(), c.slot, c.style.ordinal(), tick - c.born)
++				!= c.style.ordinal() || NylocasFlickers.at(c.wave, c.lane.ordinal(), c.slot,
++					c.style.ordinal(), tick + 1 - c.born) != Style.MELEE.ordinal()));
++	}
++
+ 	private static int cluster(Room room, Crab target, int tick)
+ 	{
+ 		return (int) room.crabs.stream().filter(c -> !c.big && eligible(room, c, tick) && matchesNext(c, Style.MELEE, tick)

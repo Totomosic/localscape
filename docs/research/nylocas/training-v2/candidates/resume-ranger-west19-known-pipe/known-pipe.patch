@@ -1,0 +1,54 @@
+--- a/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ b/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -128,8 +128,10 @@
+ 		int moveFrom = tick + 1;
+ 		for (Crab crab : remaining)
+ 		{
+-			// Reserve observed remaining HP: an airborne hit is never credited as a future kill.
+-			if (crab.nulled || crab.claimedUntil > tick || crab.awaitingHit(tick)
++			// Soft work projection: reserve full observed HP, including a normally due known pipe.
++			// Its real lease stays active; later inputs still honor actual hits and hard reservations.
++			if (crab.nulled || crab.claimedUntil > tick
++				|| crab.awaitingHit(tick) && !strategy.knownPipeImpactDue(crab, tick)
+ 				|| !RangerStrategy.wave18Available(crab, room, tick) || room.obstructed.contains(crab.key)) return false;
+ 			int attacks = Math.max(1, (crab.hp + 7) / 8);
+ 			for (int shot = 0; shot < attacks; shot++)
+--- a/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -257,17 +257,24 @@
+ 	private final Set<Integer> opened = new HashSet<>();
+ 	private final RangerPreCapPlanner preCap = new RangerPreCapPlanner(this);
+ 	private final AttackIntent<Weapon> intent = new AttackIntent<>();
++	private int lastPipeTarget = -1;
++	private int lastPipeRequest = -1;
+ 
+ 	public void reset()
+ 	{
+ 		completed.clear();
+ 		opened.clear();
+ 		intent.clear();
++		lastPipeTarget = -1;
++		lastPipeRequest = -1;
+ 	}
+ 
+ 	public void attacked(Decision decision, int tick)
+ 	{
+ 		intent.clear();
++		lastPipeTarget = decision.weapon == Weapon.PIPE ? decision.target.key : -1;
++		// Native confirmation passes the observation tick, one after its request/launch tick.
++		lastPipeRequest = decision.weapon == Weapon.PIPE ? tick - 1 : -1;
+ 		if (decision.rule != null) completed.add(decision.rule);
+ 		opened.add(decision.target.key);
+ 		// Wait for a small's projectile/HP update before deciding whether another hit is useful.
+@@ -291,6 +298,11 @@
+ 		Reservation next = reservation(room, tick);
+ 		if (next != null && "West magic big 19".equals(next.rule.name)) return next.due;
+ 		return preCap.west19Followup(room, tick, next) != null ? tick : -1;
++	}
++
++	boolean knownPipeImpactDue(Crab crab, int tick)
++	{
++		return lastPipeTarget == crab.key && lastPipeRequest >= 0 && tick >= lastPipeRequest + 2;
+ 	}
+ 
+ 	boolean committed(Decision decision, int tick) { return intent.matches(decision.target.key, decision.weapon, tick); }

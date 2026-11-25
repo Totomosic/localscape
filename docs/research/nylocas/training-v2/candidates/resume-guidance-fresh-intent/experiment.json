@@ -1,0 +1,17 @@
+{
+  "status": "combined candidate; root owns simulation comparisons",
+  "components": [
+    "ranger-guidance-audit",
+    "ranger-fresh-intent"
+  ],
+  "tests": {
+    "all": 192,
+    "ranger": 115,
+    "mage": 77,
+    "passed": 192
+  },
+  "supplementalFormatting": "tabs, Allman braces, @Test on own line; semantics preserved; historical isolated trees unchanged",
+  "policySource": "candidate/policy-source",
+  "reproduction": "python3 .state/simulations/training-v2-candidate-ranger-guidance-fresh-intent/run-check.py",
+  "limits": "No canonical edits or native runs by ranger agent"
+}

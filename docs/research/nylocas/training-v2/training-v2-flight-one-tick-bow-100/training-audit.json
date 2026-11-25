@@ -1,0 +1,6923 @@
+{
+  "trials": 100,
+  "mean_wave_spawn_ticks": {
+    "1": 4,
+    "2": 8,
+    "3": 12,
+    "4": 16,
+    "5": 20,
+    "6": 36,
+    "7": 40,
+    "8": 52,
+    "9": 56.24,
+    "10": 68.24,
+    "11": 77.28,
+    "12": 87.12,
+    "13": 98.68,
+    "14": 107.08,
+    "15": 115.44,
+    "16": 124.4,
+    "17": 131.72,
+    "18": 144.08,
+    "19": 152.12,
+    "20": 170.24,
+    "21": 186.24,
+    "22": 194.8,
+    "23": 206.84,
+    "24": 214.84,
+    "25": 222.88,
+    "26": 230.92,
+    "27": 235.2,
+    "28": 243.48,
+    "29": 254.64,
+    "30": 266.88,
+    "31": 277.84
+  },
+  "confirmed_rule_attacks": {
+    "0:Opening west": 100,
+    "1:Opening south": 113,
+    "0:null": 7299,
+    "1:West magic 2": 103,
+    "0:South chin 3": 85,
+    "1:East magic 3": 87,
+    "1:South big 4": 153,
+    "0:West big 5": 100,
+    "1:null": 3388,
+    "0:West small 4": 44,
+    "1:East magic 5": 105,
+    "1:South melee 5": 101,
+    "1:East melee 4": 97,
+    "0:South bow 7": 92,
+    "1:South magic 7": 119,
+    "0:East big claw special": 100,
+    "1:West big 8": 155,
+    "0:East magic 9": 62,
+    "1:West melee 9": 106,
+    "0:West big 9": 94,
+    "1:South melee 8": 99,
+    "0:West chin 10": 100,
+    "0:East chin 10": 100,
+    "0:South chin 10": 100,
+    "1:East barrage 11": 100,
+    "1:West big 11": 139,
+    "1:South magic 11": 87,
+    "1:12 east scythe": 100,
+    "0:West magic 13": 44,
+    "1:12 west Dinh": 100,
+    "0:West range 13": 84,
+    "0:South range 13": 43,
+    "1:West magic 14": 84,
+    "0:South magic 14": 82,
+    "1:South melee 13": 92,
+    "0:South range 14": 98,
+    "1:West melee 14": 101,
+    "1:West ranged 15": 86,
+    "1:West melee 15": 109,
+    "0:East magic 15": 55,
+    "1:Deferred east big 13": 113,
+    "0:South range flicker 16": 98,
+    "0:East range flicker 16": 84,
+    "0:West big 18": 68,
+    "0:West magic big 19": 100,
+    "1:West big 19": 56,
+    "0:South big 18": 100,
+    "1:South big 19": 160,
+    "1:South opener 20": 86,
+    "1:East big 19": 158,
+    "0:West bow flicker 20": 100,
+    "0:East chin 21": 100,
+    "1:21 west barrage": 100,
+    "1:21 north sulphur": 66,
+    "1:22 south Dinh": 92,
+    "0:South bow 23": 99,
+    "0:West north flicker 23": 100,
+    "0:West south flicker 23": 100,
+    "1:South big 24": 150,
+    "0:West big 24": 100,
+    "1:East melee big 24": 75,
+    "1:West big 26": 141,
+    "1:West big 27": 149,
+    "0:South big flicker 27": 99,
+    "1:West melee big 25": 79,
+    "0:South east flicker 28": 97,
+    "0:South west flicker 28": 97,
+    "1:26 Dinh on 28": 92,
+    "0:West south early 29": 55,
+    "0:West north flicker 29": 96,
+    "1:South big 29": 105,
+    "0:West big 30": 100,
+    "0:South chin flicker 30": 97,
+    "1:East magic 31": 119,
+    "0:West north flicker 31": 100,
+    "1:East big 30": 144,
+    "0:West south late 31": 53,
+    "0:South chin 31": 100,
+    "0:East range 31": 98,
+    "1:West magic 6": 77,
+    "0:South magic 11": 65,
+    "0:East range 15": 83,
+    "0:West range flicker 16": 68,
+    "0:East big 18": 89,
+    "0:West south late 29": 47,
+    "0:West south early 31": 59,
+    "0:South big 25": 43,
+    "0:Deferred east big 14": 38,
+    "0:West range 15": 27,
+    "0:Opening scratch": 26
+  },
+  "confirmed_attacks_by_birth": {
+    "0:1:west:small:BOW": 100,
+    "1:1:south:small:SHADOW": 113,
+    "0:2:east:small:BOW": 100,
+    "1:2:west:small:EYE": 103,
+    "0:3:south:small:CHIN": 85,
+    "1:3:east:small:EYE": 87,
+    "0:4:west:small:BOW": 51,
+    "1:4:south:big:EYE": 153,
+    "0:5:west:big:PIPE": 164,
+    "1:3:west:small:SULPHUR": 64,
+    "0:4:west:small:PIPE": 69,
+    "0:3:south:small:PIPE": 33,
+    "1:5:east:small:EYE": 105,
+    "0:5:split:small:PIPE": 123,
+    "1:5:south:small:SULPHUR": 102,
+    "0:5:split:small:EYE": 79,
+    "1:4:east:small:SULPHUR": 100,
+    "0:6:west:small:EYE": 40,
+    "0:7:south:big:BOW": 92,
+    "1:7:south:small:EYE": 119,
+    "0:6:east:big:CLAWS": 100,
+    "1:7:east:small:SULPHUR": 92,
+    "0:6:south:small:PIPE": 76,
+    "1:8:west:big:EYE": 156,
+    "0:8:split:small:EYE": 68,
+    "1:5:split:small:SULPHUR": 64,
+    "0:8:east:small:PIPE": 103,
+    "0:9:east:small:EYE": 119,
+    "1:8:split:small:SULPHUR": 61,
+    "1:9:west:small:SULPHUR": 106,
+    "0:9:west:big:PIPE": 166,
+    "1:8:south:small:SULPHUR": 99,
+    "0:10:west:small:CHIN": 110,
+    "0:10:east:small:CHIN": 100,
+    "0:10:south:small:CHIN": 106,
+    "1:11:east:small:BARRAGE": 100,
+    "0:10:west:small:PIPE": 63,
+    "1:11:west:big:EYE": 139,
+    "0:10:south:small:PIPE": 53,
+    "1:11:south:small:EYE": 88,
+    "0:11:east:small:EYE": 43,
+    "1:11:split:small:SULPHUR": 40,
+    "0:11:split:small:CHIN": 5,
+    "1:11:split:small:EYE": 18,
+    "0:11:split:small:PIPE": 62,
+    "1:12:split:small:SULPHUR": 33,
+    "0:12:split:small:PIPE": 88,
+    "1:12:east:small:SCYTHE": 102,
+    "0:13:west:small:EYE": 105,
+    "1:12:west:small:DINH": 100,
+    "0:13:west:small:PIPE": 125,
+    "0:13:south:small:PIPE": 112,
+    "1:14:west:small:EYE": 85,
+    "0:14:south:small:EYE": 130,
+    "1:13:south:small:SULPHUR": 98,
+    "0:14:south:small:PIPE": 127,
+    "0:11:south:small:EYE": 150,
+    "1:14:west:small:SULPHUR": 102,
+    "0:14:east:big:PIPE": 156,
+    "0:15:east:small:BOW": 9,
+    "1:15:west:small:PIPE": 86,
+    "1:15:west:small:SULPHUR": 109,
+    "0:15:east:small:EYE": 129,
+    "1:13:east:big:SCYTHE": 113,
+    "0:16:west:small:EYE": 12,
+    "0:17:split:small:PIPE": 103,
+    "0:17:split:small:CHIN": 8,
+    "1:17:split:small:EYE": 78,
+    "0:16:south:small:PIPE": 120,
+    "0:16:east:small:PIPE": 104,
+    "0:18:west:big:PIPE": 111,
+    "1:18:split:small:SULPHUR": 22,
+    "0:18:split:small:PIPE": 28,
+    "0:19:west:big:EYE": 102,
+    "1:19:west:big:EYE": 56,
+    "0:18:south:big:PIPE": 151,
+    "0:18:east:big:BOW": 3,
+    "1:19:south:big:EYE": 160,
+    "1:20:south:big:EYE": 86,
+    "1:19:east:big:EYE": 158,
+    "0:20:west:big:BOW": 100,
+    "0:20:split:small:EYE": 63,
+    "1:20:split:small:EYE": 220,
+    "0:21:east:small:CHIN": 123,
+    "1:21:west:small:BARRAGE": 100,
+    "1:20:split:small:SULPHUR": 91,
+    "0:21:split:small:PIPE": 159,
+    "1:21:split:small:EYE": 116,
+    "0:21:split:small:EYE": 55,
+    "1:22:south:small:DINH": 88,
+    "0:23:south:big:BOW": 99,
+    "1:21:split:small:SULPHUR": 61,
+    "0:23:west:small:PIPE": 232,
+    "1:23:split:small:SULPHUR": 28,
+    "0:21:south:small:PIPE": 48,
+    "1:24:south:big:EYE": 156,
+    "0:24:west:big:PIPE": 100,
+    "0:23:split:small:PIPE": 83,
+    "0:24:split:small:EYE": 68,
+    "1:24:split:small:EYE": 26,
+    "0:25:south:big:PIPE": 157,
+    "1:24:east:big:SCYTHE": 76,
+    "0:25:split:small:PIPE": 188,
+    "1:26:west:big:EYE": 141,
+    "1:27:west:big:EYE": 149,
+    "0:27:south:big:PIPE": 140,
+    "1:25:west:big:SCYTHE": 81,
+    "0:27:split:small:PIPE": 109,
+    "1:28:split:small:EYE": 31,
+    "0:28:south:small:PIPE": 209,
+    "1:26:south:big:DINH": 92,
+    "0:28:split:small:PIPE": 154,
+    "1:28:split:small:SCYTHE": 7,
+    "0:29:west:small:PIPE": 213,
+    "1:28:west:small:SULPHUR": 12,
+    "0:26:south:big:PIPE": 7,
+    "0:29:east:small:EYE": 2,
+    "1:27:split:small:SULPHUR": 45,
+    "0:29:split:small:PIPE": 175,
+    "1:29:split:small:SULPHUR": 95,
+    "0:28:east:small:PIPE": 23,
+    "1:29:south:big:SCYTHE": 105,
+    "0:30:west:big:PIPE": 164,
+    "0:30:south:small:CHIN": 97,
+    "1:31:east:small:EYE": 119,
+    "0:31:west:small:PIPE": 230,
+    "1:30:east:big:EYE": 144,
+    "0:31:south:small:CHIN": 101,
+    "1:31:split:small:SULPHUR": 321,
+    "0:31:east:small:PIPE": 110,
+    "0:31:split:small:CHIN": 93,
+    "1:31:split:small:EYE": 208,
+    "0:31:split:small:PIPE": 296,
+    "0:31:south:small:PIPE": 34,
+    "0:31:split:small:EYE": 193,
+    "0:30:split:small:EYE": 97,
+    "1:31:south:small:SULPHUR": 17,
+    "1:30:south:small:EYE": 15,
+    "0:3:east:small:EYE": 48,
+    "0:5:south:small:CLAWS": 7,
+    "0:6:south:small:BOW": 26,
+    "1:6:west:small:EYE": 77,
+    "0:7:south:big:PIPE": 38,
+    "1:6:split:small:SULPHUR": 20,
+    "0:6:split:small:PIPE": 29,
+    "0:8:split:small:PIPE": 111,
+    "1:8:split:small:EYE": 68,
+    "1:9:split:small:EYE": 32,
+    "1:6:split:small:EYE": 15,
+    "0:15:east:small:PIPE": 115,
+    "0:16:split:small:PIPE": 59,
+    "1:16:split:small:SULPHUR": 64,
+    "0:16:west:small:PIPE": 92,
+    "0:13:split:small:EYE": 16,
+    "1:18:split:small:EYE": 17,
+    "0:18:east:big:PIPE": 135,
+    "0:15:south:big:EYE": 9,
+    "0:20:split:small:PIPE": 292,
+    "0:21:split:small:CHIN": 73,
+    "0:20:split:small:CHIN": 64,
+    "0:21:west:small:EYE": 7,
+    "1:21:split:small:SCYTHE": 8,
+    "1:22:west:big:SCYTHE": 47,
+    "0:24:split:small:CHIN": 36,
+    "1:25:split:small:EYE": 18,
+    "0:25:split:small:EYE": 66,
+    "0:29:split:small:EYE": 21,
+    "0:30:south:small:EYE": 14,
+    "0:2:west:small:EYE": 23,
+    "0:5:east:small:EYE": 25,
+    "0:10:east:big:PIPE": 64,
+    "0:10:east:small:PIPE": 19,
+    "0:11:split:small:EYE": 51,
+    "0:13:west:small:BOW": 4,
+    "0:14:west:small:EYE": 41,
+    "0:15:west:small:PIPE": 52,
+    "0:16:split:small:EYE": 23,
+    "1:16:split:small:EYE": 48,
+    "1:17:split:small:SULPHUR": 104,
+    "0:21:east:small:PIPE": 29,
+    "1:22:south:small:SULPHUR": 15,
+    "1:23:split:small:SCYTHE": 2,
+    "0:23:split:small:EYE": 21,
+    "1:24:split:small:SULPHUR": 35,
+    "0:26:split:small:PIPE": 38,
+    "1:26:split:small:SULPHUR": 17,
+    "1:28:split:small:SULPHUR": 81,
+    "1:28:east:small:SULPHUR": 25,
+    "1:29:east:small:SULPHUR": 18,
+    "1:31:west:small:EYE": 7,
+    "0:5:split:small:CHIN": 15,
+    "1:5:split:small:EYE": 46,
+    "0:7:split:small:CHIN": 4,
+    "0:7:split:small:PIPE": 21,
+    "1:9:split:small:SULPHUR": 22,
+    "0:12:split:small:EYE": 67,
+    "1:12:west:small:SULPHUR": 14,
+    "0:19:split:small:CHIN": 14,
+    "1:19:split:small:EYE": 102,
+    "0:19:split:small:PIPE": 214,
+    "1:19:split:small:SULPHUR": 131,
+    "1:22:east:big:SCYTHE": 34,
+    "1:23:south:big:SCYTHE": 8,
+    "0:28:split:small:EYE": 26,
+    "0:8:split:small:CHIN": 13,
+    "0:6:south:small:CHIN": 4,
+    "0:9:split:small:PIPE": 52,
+    "0:17:split:small:EYE": 51,
+    "0:19:split:small:EYE": 127,
+    "0:21:south:small:CLAWS": 11,
+    "1:23:split:small:EYE": 30,
+    "0:24:split:small:PIPE": 105,
+    "1:30:south:small:SULPHUR": 19,
+    "0:30:split:small:PIPE": 134,
+    "1:30:split:small:SCYTHE": 12,
+    "1:30:split:small:SULPHUR": 132,
+    "0:2:south:small:CLAWS": 92,
+    "1:10:split:small:EYE": 36,
+    "1:11:east:small:EYE": 10,
+    "0:10:split:small:EYE": 40,
+    "0:16:east:small:EYE": 24,
+    "0:23:split:small:CHIN": 7,
+    "0:28:east:small:EYE": 19,
+    "0:28:split:small:CHIN": 27,
+    "1:29:east:small:EYE": 8,
+    "1:29:split:small:EYE": 29,
+    "0:10:split:small:PIPE": 55,
+    "1:14:split:small:SULPHUR": 18,
+    "0:22:south:small:EYE": 19,
+    "1:25:split:small:SULPHUR": 32,
+    "0:25:split:small:CHIN": 26,
+    "0:27:split:small:EYE": 13,
+    "0:29:split:small:CHIN": 33,
+    "0:27:south:big:EYE": 8,
+    "1:30:split:small:EYE": 76,
+    "0:30:split:small:CHIN": 35,
+    "0:5:split:small:CLAWS": 11,
+    "0:10:split:small:CHIN": 7,
+    "1:12:split:small:EYE": 24,
+    "0:16:west:small:BOW": 19,
+    "1:17:split:small:SCYTHE": 4,
+    "1:19:split:small:SCYTHE": 10,
+    "1:22:south:small:EYE": 17,
+    "0:26:split:small:EYE": 27,
+    "0:7:split:small:EYE": 10,
+    "1:22:east:big:DINH": 4,
+    "1:31:split:small:SCYTHE": 22,
+    "0:6:split:small:EYE": 5,
+    "0:8:east:small:BOW": 16,
+    "0:14:split:small:CHIN": 3,
+    "1:20:split:small:SCYTHE": 6,
+    "0:23:west:small:CHIN": 2,
+    "0:23:south:big:EYE": 3,
+    "0:13:split:small:PIPE": 30,
+    "0:18:west:big:BOW": 41,
+    "1:29:split:small:SCYTHE": 8,
+    "1:10:split:small:SULPHUR": 32,
+    "0:24:west:big:EYE": 23,
+    "0:31:split:small:CLAWS": 2,
+    "1:7:split:small:SULPHUR": 10,
+    "1:7:split:small:EYE": 6,
+    "0:16:split:small:CHIN": 9,
+    "0:1:west:small:PIPE": 15,
+    "0:9:west:big:BOW": 6,
+    "0:14:split:small:PIPE": 22,
+    "0:21:west:small:PIPE": 21,
+    "1:21:south:small:SULPHUR": 17,
+    "0:20:west:big:PIPE": 27,
+    "0:22:south:small:PIPE": 2,
+    "1:27:split:small:SCYTHE": 6,
+    "0:27:split:small:CHIN": 7,
+    "1:27:split:small:EYE": 7,
+    "0:28:west:small:EYE": 3,
+    "0:9:split:small:EYE": 27,
+    "1:14:split:small:EYE": 4,
+    "0:13:west:small:CHIN": 1,
+    "0:14:east:big:BOW": 1,
+    "1:20:south:big:SCYTHE": 12,
+    "0:21:south:small:EYE": 2,
+    "0:2:east:small:PIPE": 10,
+    "0:7:south:small:EYE": 4,
+    "0:6:split:small:CHIN": 3,
+    "1:16:split:small:SCYTHE": 2,
+    "0:16:south:small:EYE": 3,
+    "1:31:east:small:SULPHUR": 5,
+    "0:13:split:small:CHIN": 2,
+    "0:16:south:small:CHIN": 1,
+    "0:22:split:small:EYE": 5,
+    "1:22:split:small:SULPHUR": 8,
+    "0:28:west:small:PIPE": 6,
+    "0:19:east:big:EYE": 1,
+    "1:22:south:small:SCYTHE": 3,
+    "1:24:split:small:SCYTHE": 2,
+    "0:8:split:small:CLAWS": 1,
+    "0:12:split:small:CLAWS": 1,
+    "0:26:split:small:CHIN": 5,
+    "0:14:split:small:EYE": 15,
+    "1:23:west:small:SULPHUR": 3,
+    "1:11:split:small:SCYTHE": 1,
+    "1:12:east:small:SULPHUR": 6,
+    "0:18:split:small:EYE": 8,
+    "1:29:west:small:EYE": 2,
+    "0:15:split:small:PIPE": 6,
+    "1:15:split:small:SULPHUR": 5,
+    "1:13:split:small:EYE": 4,
+    "0:22:split:small:PIPE": 11,
+    "0:16:east:small:CHIN": 4,
+    "1:28:west:small:EYE": 7,
+    "1:28:south:small:SULPHUR": 3,
+    "0:23:east:big:PIPE": 2,
+    "0:15:east:small:CHIN": 1,
+    "0:23:split:small:CLAWS": 1,
+    "0:14:south:small:BOW": 2,
+    "0:19:split:small:CLAWS": 1,
+    "1:28:west:small:SCYTHE": 1,
+    "1:8:split:small:SCYTHE": 1,
+    "1:25:split:small:SCYTHE": 5,
+    "1:28:east:small:EYE": 4,
+    "1:15:split:small:EYE": 4,
+    "0:31:west:small:EYE": 1,
+    "0:5:west:big:BOW": 2,
+    "0:29:west:small:EYE": 2,
+    "0:15:split:small:EYE": 3,
+    "1:5:split:small:SCYTHE": 1,
+    "1:14:split:small:SCYTHE": 1,
+    "0:9:split:small:CHIN": 3,
+    "1:29:east:small:SCYTHE": 1,
+    "1:13:split:small:SULPHUR": 2,
+    "0:12:split:small:CHIN": 4,
+    "0:15:west:small:BOW": 1,
+    "1:22:split:small:EYE": 3,
+    "1:28:south:small:SCYTHE": 1,
+    "1:21:west:small:EYE": 1,
+    "0:1:south:small:EYE": 1,
+    "1:22:split:small:SCYTHE": 2,
+    "0:31:east:small:CHIN": 1,
+    "0:18:split:small:CHIN": 1,
+    "0:11:west:big:EYE": 1,
+    "1:26:split:small:EYE": 1,
+    "0:19:south:big:EYE": 2,
+    "0:21:west:small:CHIN": 1,
+    "0:28:south:small:CHIN": 1
+  },
+  "ready_idle_reason_window": "all traced ticks including entrance and terminal waits; use summary ready_idle metrics for combat window",
+  "ready_idle_reasons": [
+    {
+      "Reserve next packet": 2519,
+      "Opening setup": 400,
+      "Recent RANGE small": 241,
+      "Reserve next packet: South bow 23": 137,
+      "Reserve next packet: East chin 21": 121,
+      "No useful pre-cap attack: prepare South chin 6": 112,
+      "Reserve next packet: West south early 31": 109,
+      "No useful pre-cap attack: West chin 10": 95,
+      "Reserve next packet: West bow flicker 20": 88,
+      "Reserve next packet: West south early 29": 85,
+      "Reserve next packet: South big flicker 27": 84,
+      "Reserve next packet: South east flicker 28": 80,
+      "Recent MAGIC small": 73,
+      "Reserve next packet: West big 30": 70,
+      "Pre-cap plan: EYE #96 @155": 59,
+      "No useful pre-cap attack: prepare West magic big 19": 58,
+      "No useful pre-cap attack: prepare West big 18": 47,
+      "Pre-cap plan: EYE #96 @151": 38,
+      "Reserve next packet: West big 24": 38,
+      "Pre-cap plan: EYE #96 @159": 34,
+      "Recent RANGE big": 33,
+      "No useful pre-cap attack: West bow flicker 20": 24,
+      "Pre-cap plan: EYE #21 @25": 20,
+      "Pre-cap plan: PIPE #27 @52": 18,
+      "Pre-cap plan: EYE #96 @167": 18,
+      "Pre-cap plan: PIPE #27 @51": 16,
+      "Pre-cap plan: CHIN #48 @72": 14,
+      "Pre-cap plan: PIPE #16 @20 \u2192 PIPE #19 @22 \u2192 PIPE #19 @24": 14,
+      "Pre-cap plan: EYE #96 @163": 14,
+      "South big flicker 27": 12,
+      "Pre-cap plan: PIPE #93 @151 \u2192 PIPE #93 @153": 10,
+      "South west flicker 28": 10,
+      "Pre-cap plan: PIPE #19 @22 \u2192 PIPE #19 @24 \u2192 PIPE #16 @26": 9,
+      "Pre-cap plan: PIPE #93 @155 \u2192 PIPE #93 @157": 9,
+      "No useful pre-cap attack: prepare East chin 8": 8,
+      "Pre-cap plan: PIPE #93 @147 \u2192 PIPE #93 @149": 8,
+      "No useful pre-cap attack: prepare West magic 13": 8,
+      "Pre-cap plan: PIPE #91 @147 \u2192 PIPE #91 @149": 7,
+      "Pre-cap plan: CHIN #46 @72": 6,
+      "Pre-cap plan: PIPE #93 @159 \u2192 PIPE #93 @161": 6,
+      "Pre-cap plan: EYE #96 @147": 5,
+      "Pre-cap plan: PIPE #19 @23 \u2192 PIPE #19 @25 \u2192 PIPE #16 @27": 5,
+      "Recent MAGIC big": 5,
+      "Pre-cap plan: PIPE #19 @22 \u2192 PIPE #19 @24 \u2192 EYE #15 @26": 4,
+      "Pre-cap plan: EYE #24 @37 \u2192 PIPE #25 @40 \u2192 CLAWS #26 @45": 4,
+      "Pre-cap plan: PIPE #93 @151": 4,
+      "East range 31": 4,
+      "Pre-cap plan: PIPE #25 @51": 4,
+      "Reserve next packet: West north flicker 29": 4,
+      "South bow 23": 4,
+      "West south late 29": 4,
+      "Pre-cap plan: EYE #21 @27": 3,
+      "East chin 21": 3,
+      "Pre-cap plan: EYE #21 @26": 3,
+      "Pre-cap plan: PIPE #27 @59 \u2192 EYE #41 @61 \u2192 PIPE #40 @64": 3,
+      "South east flicker 28": 3,
+      "Pre-cap plan: BOW #34 @52": 3,
+      "West south early 29": 3,
+      "Pre-cap plan: PIPE #19 @22 \u2192 PIPE #19 @24 \u2192 PIPE #14 @26": 3,
+      "Pre-cap plan: PIPE #29 @52 \u2192 PIPE #29 @54 \u2192 PIPE #34 @56": 3,
+      "Pre-cap plan: EYE #74 @109 \u2192 PIPE #73 @112 \u2192 EYE #71 @114": 3,
+      "Pre-cap plan: PIPE #27 @49": 3,
+      "Pre-cap plan: PIPE #25 @52": 3,
+      "Pre-cap plan: PIPE #77 @120 \u2192 EYE #79 @122 \u2192 PIPE #80 @125": 3,
+      "Pre-cap plan: PIPE #69 @102 \u2192 EYE #67 @104 \u2192 EYE #65 @107": 3,
+      "South chin 31": 3,
+      "West north flicker 29": 3,
+      "Pre-cap plan: CHIN #48 @76": 2,
+      "Pre-cap plan: PIPE #27 @50": 2,
+      "Pre-cap plan: CLAWS #28 @47 \u2192 CLAWS #28 @51": 2,
+      "Pre-cap plan: CLAWS #26 @47 \u2192 CLAWS #26 @51": 2,
+      "Pre-cap plan: EYE #74 @110 \u2192 PIPE #73 @113 \u2192 EYE #65 @115": 2,
+      "Pre-cap plan: PIPE #28 @52 \u2192 PIPE #25 @54": 2,
+      "Pre-cap plan: EYE #26 @37 \u2192 PIPE #27 @40 \u2192 CLAWS #28 @45": 2,
+      "Pre-cap plan: PIPE #69 @106 \u2192 EYE #67 @108": 2,
+      "Pre-cap plan: PIPE #25 @49": 2,
+      "Pre-cap plan: PIPE #75 @117 \u2192 EYE #73 @119 \u2192 PIPE #77 @122": 2,
+      "Pre-cap plan: PIPE #28 @50 \u2192 PIPE #25 @52": 2,
+      "Pre-cap plan: BOW #34 @53 \u2192 PIPE #27 @58": 2,
+      "Pre-cap plan: EYE #96 @143": 2,
+      "Pre-cap plan: EYE #71 @109 \u2192 PIPE #73 @112 \u2192 EYE #74 @114": 2,
+      "South chin flicker 30": 2,
+      "Reserve next packet: South chin flicker 30": 2,
+      "Pre-cap plan: EYE #74 @111 \u2192 PIPE #73 @114 \u2192 EYE #71 @116": 2,
+      "Pre-cap plan: BOW #34 @52 \u2192 PIPE #27 @57": 2,
+      "Pre-cap plan: CLAWS #60 @100": 2,
+      "No useful pre-cap attack: prepare South magic 14": 2,
+      "Pre-cap plan: PIPE #27 @55 \u2192 PIPE #34 @57": 2,
+      "Pre-cap plan: PIPE #75 @117 \u2192 EYE #76 @119 \u2192 PIPE #77 @122": 2,
+      "Pre-cap plan: PIPE #93 @167 \u2192 PIPE #93 @169": 2,
+      "Pre-cap plan: EYE #96 @171": 2,
+      "Pre-cap plan: CLAWS #28 @46 \u2192 CLAWS #28 @50": 2,
+      "Pre-cap plan: PIPE #79 @125 \u2192 EYE #81 @127 \u2192 PIPE #82 @130": 2,
+      "Pre-cap plan: PIPE #93 @163 \u2192 PIPE #93 @165": 2,
+      "Pre-cap plan: PIPE #93 @155": 2,
+      "Pre-cap plan: CLAWS #11 @50 \u2192 PIPE #27 @54": 1,
+      "Pre-cap plan: PIPE #27 @52 \u2192 EYE #30 @54 \u2192 PIPE #34 @57": 1,
+      "Pre-cap plan: PIPE #34 @55 \u2192 EYE #35 @57 \u2192 EYE #36 @60": 1,
+      "Pre-cap plan: EYE #74 @105 \u2192 PIPE #73 @108 \u2192 EYE #71 @110": 1,
+      "Pre-cap plan: PIPE #80 @116 \u2192 EYE #79 @118 \u2192 PIPE #77 @121": 1,
+      "Pre-cap plan: EYE #24 @51 \u2192 PIPE #27 @54 \u2192 CLAWS #11 @56": 1,
+      "Pre-cap plan: PIPE #37 @61 \u2192 PIPE #40 @63 \u2192 PIPE #40 @65": 1,
+      "Pre-cap plan: PIPE #73 @121 \u2192 EYE #74 @123 \u2192 PIPE #75 @126": 1,
+      "Pre-cap plan: PIPE #25 @37 \u2192 EYE #22 @39 \u2192 PIPE #27 @42": 1,
+      "Pre-cap plan: PIPE #67 @102 \u2192 EYE #70 @104 \u2192 EYE #65 @107": 1,
+      "Pre-cap plan: PIPE #24 @49 \u2192 PIPE #27 @51 \u2192 EYE #22 @53": 1,
+      "Pre-cap plan: PIPE #73 @117 \u2192 EYE #74 @119 \u2192 PIPE #75 @122": 1,
+      "Pre-cap plan: EYE #23 @50 \u2192 PIPE #27 @53": 1,
+      "Pre-cap plan: PIPE #66 @107 \u2192 EYE #43 @109 \u2192 EYE #56 @112": 1,
+      "Pre-cap plan: CLAWS #31 @49 \u2192 PIPE #27 @53 \u2192 EYE #22 @55": 1,
+      "Pre-cap plan: PIPE #69 @106 \u2192 EYE #67 @108 \u2192 EYE #51 @111": 1,
+      "Pre-cap plan: EYE #83 @133 \u2192 PIPE #84 @136 \u2192 PIPE #85 @138": 1,
+      "Pre-cap plan: CLAWS #11 @51": 1,
+      "Pre-cap plan: PIPE #83 @140 \u2192 EYE #91 @142 \u2192 EYE #92 @145": 1,
+      "Pre-cap plan: EYE #27 @50 \u2192 EYE #28 @53": 1,
+      "Pre-cap plan: PIPE #36 @56 \u2192 EYE #41 @58 \u2192 EYE #37 @61": 1,
+      "Pre-cap plan: PIPE #22 @49 \u2192 PIPE #25 @51 \u2192 EYE #27 @53": 1,
+      "Pre-cap plan: PIPE #82 @136 \u2192 PIPE #83 @138 \u2192 EYE #79 @140": 1,
+      "Pre-cap plan: PIPE #82 @137 \u2192 PIPE #89 @139 \u2192 PIPE #83 @141": 1,
+      "Pre-cap plan: PIPE #82 @138 \u2192 PIPE #89 @140 \u2192 PIPE #83 @142": 1,
+      "Pre-cap plan: CLAWS #60 @104": 1,
+      "Pre-cap plan: PIPE #69 @105": 1,
+      "Pre-cap plan: EYE #81 @128 \u2192 PIPE #83 @131 \u2192 PIPE #84 @133": 1,
+      "Pre-cap plan: PIPE #77 @129 \u2192 PIPE #83 @131 \u2192 PIPE #84 @133": 1,
+      "Pre-cap plan: PIPE #77 @130 \u2192 PIPE #83 @132 \u2192 PIPE #84 @134": 1,
+      "Pre-cap plan: PIPE #77 @112 \u2192 EYE #79 @114 \u2192 PIPE #80 @117": 1,
+      "Pre-cap plan: PIPE #27 @52 \u2192 PIPE #25 @54 \u2192 EYE #30 @56": 1,
+      "Pre-cap plan: PIPE #25 @55 \u2192 PIPE #34 @57 \u2192 EYE #36 @59": 1,
+      "Pre-cap plan: PIPE #30 @49 \u2192 PIPE #23 @51 \u2192 EYE #25 @53": 1,
+      "Pre-cap plan: PIPE #66 @99 \u2192 PIPE #69 @101 \u2192 EYE #67 @103": 1,
+      "Pre-cap plan: PIPE #69 @102 \u2192 EYE #67 @104 \u2192 EYE #43 @107": 1,
+      "Pre-cap plan: EYE #100 @155": 1,
+      "Pre-cap plan: PIPE #28 @51 \u2192 PIPE #25 @53": 1,
+      "Pre-cap plan: PIPE #75 @115 \u2192 PIPE #75 @117 \u2192 PIPE #79 @119": 1,
+      "Pre-cap plan: PIPE #75 @116 \u2192 PIPE #75 @118 \u2192 PIPE #79 @120": 1,
+      "Pre-cap plan: PIPE #75 @117 \u2192 PIPE #75 @119 \u2192 PIPE #79 @121": 1,
+      "Pre-cap plan: PIPE #27 @50 \u2192 PIPE #25 @52 \u2192 PIPE #26 @54": 1,
+      "Pre-cap plan: PIPE #33 @56 \u2192 PIPE #36 @58 \u2192 PIPE #25 @60": 1,
+      "Pre-cap plan: EYE #30 @51 \u2192 PIPE #27 @54": 1,
+      "Pre-cap plan: PIPE #69 @102 \u2192 EYE #67 @104": 1,
+      "Pre-cap plan: CHIN #27 @50": 1,
+      "Pre-cap plan: PIPE #66 @102 \u2192 EYE #67 @104": 1,
+      "Pre-cap plan: EYE #71 @105 \u2192 PIPE #73 @108 \u2192 EYE #74 @110": 1,
+      "Pre-cap plan: PIPE #77 @116 \u2192 EYE #71 @118 \u2192 PIPE #80 @121": 1,
+      "Pre-cap plan: PIPE #24 @50 \u2192 PIPE #27 @52 \u2192 EYE #23 @54": 1,
+      "Pre-cap plan: PIPE #67 @98 \u2192 EYE #43 @100 \u2192 EYE #65 @103": 1,
+      "Pre-cap plan: PIPE #78 @125 \u2192 BOW #79 @127 \u2192 PIPE #80 @132": 1,
+      "Pre-cap plan: PIPE #78 @126 \u2192 EYE #77 @128 \u2192 PIPE #79 @131": 1,
+      "Pre-cap plan: PIPE #78 @127 \u2192 EYE #83 @129 \u2192 PIPE #79 @132": 1,
+      "Pre-cap plan: PIPE #73 @112 \u2192 EYE #74 @114 \u2192 EYE #65 @117": 1,
+      "Pre-cap plan: PIPE #80 @120 \u2192 EYE #79 @122 \u2192 EYE #65 @125": 1,
+      "Pre-cap plan: EYE #30 @50 \u2192 PIPE #28 @53 \u2192 PIPE #25 @55": 1,
+      "Pre-cap plan: PIPE #81 @139 \u2192 EYE #92 @141": 1,
+      "Pre-cap plan: BOW #93 @141 \u2192 PIPE #93 @147": 1,
+      "Pre-cap plan: EYE #22 @34": 1,
+      "Pre-cap plan: PIPE #75 @116 \u2192 PIPE #75 @118": 1,
+      "Pre-cap plan: PIPE #88 @134 \u2192 PIPE #82 @136": 1,
+      "Pre-cap plan: PIPE #24 @50 \u2192 PIPE #27 @52 \u2192 EYE #22 @54": 1,
+      "Pre-cap plan: PIPE #85 @140 \u2192 EYE #81 @142": 1,
+      "Pre-cap plan: PIPE #23 @51 \u2192 PIPE #27 @53": 1,
+      "Pre-cap plan: PIPE #85 @135 \u2192 EYE #67 @137 \u2192 EYE #89 @140": 1,
+      "Pre-cap plan: EYE #24 @50 \u2192 PIPE #27 @53": 1,
+      "Pre-cap plan: PIPE #81 @135 \u2192 PIPE #82 @137 \u2192 PIPE #83 @139": 1,
+      "Pre-cap plan: PIPE #80 @120 \u2192 EYE #74 @122 \u2192 PIPE #77 @125": 1,
+      "Pre-cap plan: CLAWS #31 @49 \u2192 PIPE #25 @53": 1,
+      "Pre-cap plan: PIPE #27 @49 \u2192 EYE #30 @51 \u2192 EYE #22 @54": 1,
+      "Pre-cap plan: PIPE #80 @142 \u2192 EYE #92 @144 \u2192 EYE #90 @147": 1,
+      "Pre-cap plan: PIPE #25 @51 \u2192 EYE #23 @53": 1,
+      "Pre-cap plan: EYE #24 @50": 1,
+      "Pre-cap plan: EYE #74 @102 \u2192 PIPE #73 @105 \u2192 PIPE #75 @108": 1,
+      "Pre-cap plan: EYE #79 @110 \u2192 PIPE #80 @113 \u2192 PIPE #77 @116": 1,
+      "Pre-cap plan: EYE #90 @132": 1,
+      "Pre-cap plan: BOW #91 @133 \u2192 PIPE #91 @139": 1,
+      "Pre-cap plan: PIPE #25 @51 \u2192 PIPE #27 @53": 1,
+      "Pre-cap plan: PIPE #69 @102 \u2192 EYE #67 @104 \u2192 EYE #64 @107": 1,
+      "Pre-cap plan: EYE #76 @110 \u2192 PIPE #75 @113 \u2192 EYE #73 @115": 1,
+      "Pre-cap plan: PIPE #83 @127 \u2192 EYE #64 @129 \u2192 PIPE #84 @132": 1,
+      "Pre-cap plan: PIPE #82 @147 \u2192 EYE #81 @149": 1,
+      "Pre-cap plan: EYE #22 @53 \u2192 PIPE #34 @56 \u2192 EYE #24 @58": 1,
+      "Pre-cap plan: PIPE #28 @50 \u2192 EYE #27 @52": 1,
+      "Pre-cap plan: EYE #76 @122 \u2192 EYE #83 @125 \u2192 CHIN #85 @128": 1,
+      "Pre-cap plan: EYE #76 @123 \u2192 PIPE #82 @126 \u2192 PIPE #83 @128": 1,
+      "Pre-cap plan: EYE #76 @124 \u2192 PIPE #83 @127 \u2192 PIPE #84 @129": 1,
+      "Pre-cap plan: PIPE #82 @127 \u2192 PIPE #84 @129 \u2192 PIPE #85 @131": 1,
+      "Pre-cap plan: PIPE #82 @128 \u2192 PIPE #84 @130 \u2192 PIPE #85 @132": 1,
+      "Pre-cap plan: PIPE #82 @129 \u2192 PIPE #84 @131 \u2192 PIPE #85 @133": 1,
+      "Pre-cap plan: PIPE #27 @49 \u2192 EYE #24 @51 \u2192 EYE #25 @54": 1,
+      "Pre-cap plan: PIPE #36 @56 \u2192 CLAWS #37 @58": 1,
+      "Pre-cap plan: PIPE #69 @113": 1,
+      "Pre-cap plan: EYE #26 @52 \u2192 PIPE #34 @55": 1,
+      "Pre-cap plan: PIPE #83 @134": 1,
+      "Pre-cap plan: PIPE #91 @147": 1,
+      "Pre-cap plan: CLAWS #11 @51 \u2192 PIPE #27 @55 \u2192 PIPE #25 @57": 1,
+      "Pre-cap plan: EYE #74 @114 \u2192 PIPE #73 @117 \u2192 PIPE #75 @120": 1,
+      "Pre-cap plan: EYE #79 @122 \u2192 PIPE #80 @125 \u2192 PIPE #77 @128": 1,
+      "Pre-cap plan: PIPE #83 @138 \u2192 EYE #89 @140 \u2192 EYE #79 @143": 1,
+      "Pre-cap plan: PIPE #28 @51 \u2192 PIPE #23 @53": 1,
+      "Pre-cap plan: PIPE #23 @62 \u2192 PIPE #40 @64": 1,
+      "Pre-cap plan: EYE #15 @52 \u2192 PIPE #34 @55 \u2192 PIPE #31 @57": 1,
+      "Pre-cap plan: PIPE #69 @114 \u2192 EYE #71 @116 \u2192 EYE #67 @119": 1,
+      "Pre-cap plan: EYE #76 @117 \u2192 PIPE #75 @120 \u2192 EYE #73 @122": 1,
+      "Pre-cap plan: BOW #34 @52 \u2192 PIPE #31 @57 \u2192 PIPE #25 @59": 1,
+      "Pre-cap plan: CHIN #27 @49 \u2192 PIPE #25 @52": 1,
+      "Pre-cap plan: PIPE #28 @53 \u2192 PIPE #32 @55 \u2192 PIPE #36 @57": 1,
+      "Pre-cap plan: PIPE #27 @51 \u2192 PIPE #23 @53": 1,
+      "Pre-cap plan: PIPE #27 @52 \u2192 PIPE #23 @54": 1,
+      "Pre-cap plan: PIPE #25 @52 \u2192 PIPE #26 @54 \u2192 PIPE #34 @56": 1,
+      "Pre-cap plan: PIPE #71 @117 \u2192 PIPE #67 @119 \u2192 EYE #72 @121": 1,
+      "Pre-cap plan: PIPE #83 @130 \u2192 EYE #84 @132": 1,
+      "Pre-cap plan: EYE #26 @37 \u2192 PIPE #27 @40 \u2192 EYE #24 @42": 1,
+      "Pre-cap plan: EYE #30 @51 \u2192 PIPE #28 @54 \u2192 PIPE #25 @56": 1,
+      "Pre-cap plan: PIPE #67 @110 \u2192 EYE #65 @112 \u2192 EYE #69 @115": 1,
+      "Pre-cap plan: PIPE #86 @143 \u2192 PIPE #82 @145 \u2192 EYE #79 @147": 1,
+      "Pre-cap plan: PIPE #75 @116 \u2192 EYE #77 @118 \u2192 PIPE #78 @121": 1,
+      "Pre-cap plan: EYE #80 @129 \u2192 PIPE #81 @132 \u2192 PIPE #82 @134": 1,
+      "Pre-cap plan: PIPE #109 @179 \u2192 PIPE #110 @181 \u2192 PIPE #102 @183": 1,
+      "Pre-cap plan: PIPE #45 @77 \u2192 EYE #41 @79 \u2192 EYE #48 @82": 1,
+      "Pre-cap plan: PIPE #80 @124 \u2192 EYE #79 @126 \u2192 PIPE #77 @129": 1,
+      "Pre-cap plan: PIPE #83 @138 \u2192 PIPE #88 @140 \u2192 EYE #87 @142": 1,
+      "Reserve next packet: West north flicker 23": 1,
+      "Pre-cap plan: PIPE #28 @49 \u2192 PIPE #25 @51": 1,
+      "Pre-cap plan: PIPE #83 @127 \u2192 EYE #84 @129 \u2192 PIPE #85 @132": 1,
+      "Pre-cap plan: EYE #26 @38 \u2192 PIPE #27 @41 \u2192 EYE #24 @43": 1,
+      "Pre-cap plan: PIPE #29 @53 \u2192 PIPE #34 @55 \u2192 EYE #30 @57": 1,
+      "Pre-cap plan: PIPE #27 @56 \u2192 PIPE #34 @58 \u2192 EYE #39 @60": 1,
+      "Pre-cap plan: PIPE #69 @105 \u2192 EYE #64 @107 \u2192 EYE #67 @110": 1,
+      "Pre-cap plan: PIPE #83 @135 \u2192 EYE #90 @137 \u2192 CLAWS #89 @140": 1,
+      "West big 30": 1,
+      "Pre-cap plan: EYE #23 @51 \u2192 PIPE #27 @54 \u2192 EYE #25 @56": 1,
+      "Pre-cap plan: PIPE #77 @119 \u2192 EYE #74 @121 \u2192 PIPE #80 @124": 1,
+      "Pre-cap plan: PIPE #73 @108 \u2192 PIPE #67 @110 \u2192 EYE #69 @112": 1,
+      "Pre-cap plan: CLAWS #28 @48 \u2192 CLAWS #28 @52": 1,
+      "Pre-cap plan: PIPE #69 @109 \u2192 PIPE #66 @111 \u2192 EYE #67 @113": 1,
+      "Pre-cap plan: EYE #81 @126 \u2192 PIPE #82 @129 \u2192 EYE #74 @131": 1,
+      "Pre-cap plan: PIPE #87 @139 \u2192 EYE #88 @141 \u2192 PIPE #89 @144": 1,
+      "Pre-cap plan: PIPE #29 @52 \u2192 PIPE #25 @54 \u2192 EYE #27 @56": 1,
+      "Pre-cap plan: PIPE #25 @55 \u2192 PIPE #34 @57 \u2192 EYE #35 @59": 1,
+      "Pre-cap plan: PIPE #56 @85 \u2192 EYE #54 @87 \u2192 EYE #52 @90": 1,
+      "Pre-cap plan: PIPE #79 @116 \u2192 EYE #81 @118 \u2192 PIPE #82 @121": 1,
+      "Pre-cap plan: PIPE #87 @131 \u2192 EYE #88 @133 \u2192 PIPE #89 @136": 1,
+      "Pre-cap plan: PIPE #89 @142": 1,
+      "Pre-cap plan: PIPE #25 @49 \u2192 PIPE #27 @51": 1,
+      "Pre-cap plan: PIPE #69 @102 \u2192 EYE #43 @104 \u2192 EYE #67 @107": 1,
+      "Pre-cap plan: PIPE #87 @136 \u2192 EYE #83 @138 \u2192 EYE #76 @141": 1,
+      "Pre-cap plan: PIPE #69 @102 \u2192 EYE #65 @104 \u2192 EYE #67 @107": 1,
+      "Pre-cap plan: PIPE #22 @50 \u2192 PIPE #27 @52": 1,
+      "Pre-cap plan: PIPE #66 @103 \u2192 PIPE #69 @105 \u2192 EYE #67 @107": 1,
+      "Pre-cap plan: PIPE #69 @106 \u2192 PIPE #71 @108 \u2192 EYE #61 @110": 1,
+      "Pre-cap plan: PIPE #30 @50 \u2192 PIPE #25 @52": 1,
+      "Pre-cap plan: PIPE #69 @107 \u2192 EYE #51 @109 \u2192 EYE #67 @112": 1,
+      "Pre-cap plan: PIPE #79 @120 \u2192 EYE #81 @122 \u2192 PIPE #82 @125": 1,
+      "Pre-cap plan: EYE #24 @37 \u2192 PIPE #25 @40 \u2192 EYE #22 @42": 1,
+      "Pre-cap plan: EYE #22 @52 \u2192 PIPE #34 @55 \u2192 PIPE #28 @57": 1,
+      "Pre-cap plan: PIPE #73 @108 \u2192 PIPE #77 @110 \u2192 EYE #74 @112": 1,
+      "Pre-cap plan: EYE #74 @101 \u2192 PIPE #73 @104 \u2192 EYE #71 @106": 1,
+      "Pre-cap plan: PIPE #80 @112 \u2192 EYE #64 @114 \u2192 PIPE #77 @117": 1,
+      "Pre-cap plan: EYE #24 @40 \u2192 PIPE #25 @43 \u2192 CLAWS #26 @47": 1,
+      "Pre-cap plan: PIPE #31 @49 \u2192 PIPE #25 @51": 1,
+      "Pre-cap plan: PIPE #66 @106 \u2192 EYE #67 @108": 1,
+      "Pre-cap plan: PIPE #80 @120 \u2192 EYE #79 @122 \u2192 PIPE #77 @125": 1,
+      "Pre-cap plan: PIPE #85 @133 \u2192 PIPE #83 @135 \u2192 EYE #79 @137": 1,
+      "Pre-cap plan: PIPE #43 @90 \u2192 EYE #56 @92 \u2192 EYE #58 @95": 1,
+      "Pre-cap plan: EYE #74 @110 \u2192 PIPE #73 @113 \u2192 EYE #51 @115": 1,
+      "Pre-cap plan: PIPE #19 @23 \u2192 PIPE #19 @25 \u2192 EYE #15 @27": 1,
+      "Pre-cap plan: PIPE #49 @89 \u2192 EYE #53 @91 \u2192 EYE #57 @94": 1,
+      "Pre-cap plan: BOW #34 @52 \u2192 PIPE #25 @57": 1,
+      "Pre-cap plan: PIPE #100 @181 \u2192 PIPE #106 @183 \u2192 EYE #107 @185": 1,
+      "Pre-cap plan: PIPE #69 @106 \u2192 EYE #65 @108 \u2192 EYE #67 @111": 1,
+      "Pre-cap plan: PIPE #31 @50 \u2192 PIPE #16 @52": 1,
+      "Pre-cap plan: PIPE #73 @113 \u2192 EYE #67 @115 \u2192 PIPE #75 @118": 1,
+      "Pre-cap plan: PIPE #83 @134 \u2192 EYE #74 @136 \u2192 EYE #79 @139": 1,
+      "Pre-cap plan: BOW #34 @52 \u2192 PIPE #23 @57 \u2192 PIPE #27 @59": 1,
+      "Pre-cap plan: PIPE #67 @109 \u2192 EYE #65 @111": 1,
+      "Pre-cap plan: EYE #77 @122 \u2192 PIPE #78 @125 \u2192 PIPE #75 @128": 1,
+      "Pre-cap plan: EYE #26 @40 \u2192 PIPE #27 @43 \u2192 CLAWS #28 @47": 1,
+      "Pre-cap plan: PIPE #27 @49 \u2192 EYE #25 @51": 1,
+      "Pre-cap plan: PIPE #48 @89 \u2192 PIPE #49 @91 \u2192 EYE #55 @93": 1,
+      "Pre-cap plan: PIPE #77 @128 \u2192 EYE #67 @130 \u2192 EYE #79 @133": 1,
+      "Pre-cap plan: PIPE #77 @129 \u2192 EYE #67 @131 \u2192 EYE #79 @134": 1,
+      "Pre-cap plan: PIPE #77 @130 \u2192 EYE #67 @132 \u2192 EYE #79 @135": 1,
+      "Pre-cap plan: EYE #85 @145 \u2192 EYE #79 @148 \u2192 EYE #74 @151": 1,
+      "Pre-cap plan: EYE #79 @146 \u2192 EYE #85 @149 \u2192 EYE #74 @152": 1,
+      "Pre-cap plan: EYE #79 @147 \u2192 CHIN #91 @150 \u2192 EYE #74 @153": 1,
+      "Pre-cap plan: PIPE #27 @40 \u2192 CLAWS #28 @45 \u2192 CLAWS #28 @49": 1,
+      "Pre-cap plan: PIPE #73 @113 \u2192 EYE #74 @115 \u2192 PIPE #75 @118": 1,
+      "Pre-cap plan: EYE #21 @33": 1,
+      "Pre-cap plan: PIPE #25 @50 \u2192 PIPE #27 @52 \u2192 PIPE #23 @54": 1,
+      "Pre-cap plan: PIPE #23 @58 \u2192 PIPE #38 @60 \u2192 PIPE #36 @62": 1,
+      "Pre-cap plan: PIPE #69 @110 \u2192 EYE #67 @112": 1,
+      "Pre-cap plan: PIPE #80 @132 \u2192 EYE #79 @134 \u2192 PIPE #81 @137": 1,
+      "Pre-cap plan: PIPE #67 @101 \u2192 EYE #52 @103": 1,
+      "Pre-cap plan: PIPE #29 @52 \u2192 PIPE #34 @55": 1,
+      "Pre-cap plan: PIPE #24 @51 \u2192 PIPE #27 @53 \u2192 EYE #25 @55": 1,
+      "Pre-cap plan: PIPE #27 @54 \u2192 EYE #25 @56 \u2192 PIPE #34 @59": 1,
+      "Pre-cap plan: PIPE #47 @77 \u2192 EYE #53 @79 \u2192 EYE #54 @82": 1,
+      "Pre-cap plan: PIPE #91 @143 \u2192 PIPE #91 @145": 1,
+      "Pre-cap plan: PIPE #47 @77 \u2192 PIPE #49 @79 \u2192 PIPE #43 @81": 1,
+      "Pre-cap plan: PIPE #75 @109 \u2192 EYE #71 @111 \u2192 PIPE #77 @114": 1,
+      "Pre-cap plan: PIPE #93 @147 \u2192 PIPE #93 @149 \u2192 EYE #85 @151": 1,
+      "Pre-cap plan: PIPE #81 @127 \u2192 EYE #82 @129 \u2192 PIPE #83 @132": 1,
+      "Pre-cap plan: PIPE #16 @21 \u2192 PIPE #19 @23 \u2192 PIPE #19 @25": 1,
+      "Pre-cap plan: PIPE #28 @50": 1,
+      "Pre-cap plan: PIPE #73 @115 \u2192 EYE #74 @117 \u2192 PIPE #75 @120": 1,
+      "Pre-cap plan: PIPE #73 @116 \u2192 PIPE #75 @118 \u2192 PIPE #75 @120": 1,
+      "Pre-cap plan: PIPE #73 @117 \u2192 PIPE #75 @119 \u2192 PIPE #75 @121": 1,
+      "Pre-cap plan: PIPE #25 @40 \u2192 CLAWS #26 @45 \u2192 CLAWS #26 @49": 1,
+      "Pre-cap plan: PIPE #25 @49 \u2192 EYE #31 @51": 1,
+      "Pre-cap plan: PIPE #69 @109 \u2192 EYE #67 @111 \u2192 CLAWS #58 @114": 1,
+      "Pre-cap plan: PIPE #42 @86 \u2192 PIPE #43 @88 \u2192 EYE #41 @90": 1,
+      "Pre-cap plan: PIPE #83 @134 \u2192 EYE #89 @136 \u2192 EYE #84 @139": 1,
+      "Pre-cap plan: PIPE #25 @55 \u2192 PIPE #34 @57": 1
+    },
+    {
+      "Clear wave 30 and 31 survivors": 2172,
+      "Fresh MELEE small": 713,
+      "Opening south setup": 500,
+      "Prepare West big 19": 400,
+      "Prepare South opener 20": 227,
+      "Clear complete; stage": 174,
+      "Reserve 22 south Dinh": 165,
+      "Reserve East barrage 11": 147,
+      "Reserve 26 Dinh on 28": 122,
+      "West magic 2": 100,
+      "East magic 3": 87,
+      "South melee 13": 84,
+      "Reserve 12 east scythe": 81,
+      "East melee 4": 78,
+      "Fresh MAGIC small": 77,
+      "South big 19": 77,
+      "Reserve 21 west barrage": 77,
+      "West melee 14": 64,
+      "South big 29": 60,
+      "21 north sulphur": 48,
+      "West magic 14": 47,
+      "South big 24": 41,
+      "East magic 5": 39,
+      "West melee 15": 30,
+      "West melee 9": 25,
+      "West big 27": 24,
+      "East magic 31": 24,
+      "East big 30": 24,
+      "Reserve 21 north sulphur": 20,
+      "South magic 7": 18,
+      "West magic 6": 17,
+      "East melee big 24": 15,
+      "22 south Dinh": 15,
+      "South melee 8": 13,
+      "West big 8": 13,
+      "Fresh MELEE assigned big": 12,
+      "West big 26": 10,
+      "Deferred east big 13": 8,
+      "West ranged 15": 7,
+      "12 east scythe": 6,
+      "West melee big 25": 4,
+      "South opener 20": 4,
+      "Prepare South big 24": 4,
+      "Prepare West big 8": 3,
+      "12 west Dinh": 3,
+      "West big 11": 3,
+      "Fresh MAGIC assigned big": 2,
+      "26 Dinh on 28": 1,
+      "East big 19": 1
+    }
+  ],
+  "old_cleanup_attacks": 0,
+  "null_observation_records": 13433,
+  "player_resources": [
+    {
+      "minimum_hp": [
+        91,
+        92
+      ],
+      "minimum_energy": [
+        8998,
+        4072
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        80,
+        53
+      ],
+      "minimum_energy": [
+        9094,
+        5077
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        84,
+        73
+      ],
+      "minimum_energy": [
+        9448,
+        3080
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        65,
+        79
+      ],
+      "minimum_energy": [
+        9379,
+        2662
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        81,
+        78
+      ],
+      "minimum_energy": [
+        8917,
+        5709
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        58,
+        82
+      ],
+      "minimum_energy": [
+        9055,
+        5443
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        69,
+        64
+      ],
+      "minimum_energy": [
+        9208,
+        3320
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        85,
+        70
+      ],
+      "minimum_energy": [
+        9079,
+        2165
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        59,
+        61
+      ],
+      "minimum_energy": [
+        9055,
+        3235
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        61,
+        86
+      ],
+      "minimum_energy": [
+        9427,
+        3148
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        54,
+        66
+      ],
+      "minimum_energy": [
+        9136,
+        2276
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        67,
+        75
+      ],
+      "minimum_energy": [
+        9031,
+        4013
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        59,
+        58
+      ],
+      "minimum_energy": [
+        8974,
+        3736
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        32,
+        62
+      ],
+      "minimum_energy": [
+        8908,
+        4493
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        70,
+        85
+      ],
+      "minimum_energy": [
+        9127,
+        3342
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        59,
+        57
+      ],
+      "minimum_energy": [
+        8575,
+        3272
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        64,
+        72
+      ],
+      "minimum_energy": [
+        9055,
+        4214
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        69,
+        77
+      ],
+      "minimum_energy": [
+        9094,
+        2747
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        74,
+        86
+      ],
+      "minimum_energy": [
+        8752,
+        4138
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        92,
+        67
+      ],
+      "minimum_energy": [
+        8968,
+        4421
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        58,
+        63
+      ],
+      "minimum_energy": [
+        8626,
+        2769
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        58,
+        59
+      ],
+      "minimum_energy": [
+        8704,
+        870
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        57,
+        70
+      ],
+      "minimum_energy": [
+        8893,
+        4111
+      ],
+      "prayer_increases": [
+        2,
+        2
+      ]
+    },
+    {
+      "minimum_hp": [
+        67,
+        54
+      ],
+      "minimum_energy": [
+        8893,
+        3356
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        60,
+        76
+      ],
+      "minimum_energy": [
+        9394,
+        2904
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        70,
+        59
+      ],
+      "minimum_energy": [
+        9055,
+        4516
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        86,
+        48
+      ],
+      "minimum_energy": [
+        9379,
+        4451
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        84,
+        76
+      ],
+      "minimum_energy": [
+        8809,
+        3989
+      ],
+      "prayer_increases": [
+        3,
+        2
+      ]
+    },
+    {
+      "minimum_hp": [
+        62,
+        81
+      ],
+      "minimum_energy": [
+        8836,
+        3063
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        87,
+        73
+      ],
+      "minimum_energy": [
+        9298,
+        996
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        68,
+        53
+      ],
+      "minimum_energy": [
+        9460,
+        4744
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        59,
+        74
+      ],
+      "minimum_energy": [
+        9241,
+        992
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        82,
+        71
+      ],
+      "minimum_energy": [
+        9136,
+        1836
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        96,
+        57
+      ],
+      "minimum_energy": [
+        9298,
+        4502
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        82,
+        89
+      ],
+      "minimum_energy": [
+        9241,
+        4131
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        68,
+        80
+      ],
+      "minimum_energy": [
+        8836,
+        4355
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        81,
+        74
+      ],
+      "minimum_energy": [
+        8986,
+        2688
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        63,
+        87
+      ],
+      "minimum_energy": [
+        9211,
+        4552
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        55,
+        85
+      ],
+      "minimum_energy": [
+        8836,
+        2725
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        58,
+        81
+      ],
+      "minimum_energy": [
+        9217,
+        3577
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        83,
+        67
+      ],
+      "minimum_energy": [
+        8770,
+        809
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        76,
+        74
+      ],
+      "minimum_energy": [
+        9451,
+        4144
+      ],
+      "prayer_increases": [
+        2,
+        2
+      ]
+    },
+    {
+      "minimum_hp": [
+        65,
+        79
+      ],
+      "minimum_energy": [
+        9484,
+        5557
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        70,
+        67
+      ],
+      "minimum_energy": [
+        9265,
+        1842
+      ],
+      "prayer_increases": [
+        2,
+        2
+      ]
+    },
+    {
+      "minimum_hp": [
+        61,
+        61
+      ],
+      "minimum_energy": [
+        8998,
+        4059
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        53,
+        51
+      ],
+      "minimum_energy": [
+        9394,
+        3884
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        69,
+        82
+      ],
+      "minimum_energy": [
+        9265,
+        3067
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        64,
+        56
+      ],
+      "minimum_energy": [
+        8950,
+        2250
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        98,
+        64
+      ],
+      "minimum_energy": [
+        8851,
+        5197
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        56,
+        71
+      ],
+      "minimum_energy": [
+        9094,
+        4421
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        78,
+        99
+      ],
+      "minimum_energy": [
+        8689,
+        2084
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        67,
+        66
+      ],
+      "minimum_energy": [
+        9457,
+        3847
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        86,
+        66
+      ],
+      "minimum_energy": [
+        9139,
+        3643
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        72,
+        75
+      ],
+      "minimum_energy": [
+        8884,
+        3392
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        56,
+        63
+      ],
+      "minimum_energy": [
+        9136,
+        4687
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        83,
+        61
+      ],
+      "minimum_energy": [
+        9136,
+        5277
+      ],
+      "prayer_increases": [
+        2,
+        2
+      ]
+    },
+    {
+      "minimum_hp": [
+        64,
+        86
+      ],
+      "minimum_energy": [
+        8836,
+        1940
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        79,
+        86
+      ],
+      "minimum_energy": [
+        9055,
+        3172
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        51,
+        51
+      ],
+      "minimum_energy": [
+        9028,
+        2782
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        58,
+        76
+      ],
+      "minimum_energy": [
+        9055,
+        5364
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        66,
+        43
+      ],
+      "minimum_energy": [
+        9583,
+        3120
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        62,
+        53
+      ],
+      "minimum_energy": [
+        9079,
+        2945
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        57,
+        83
+      ],
+      "minimum_energy": [
+        8476,
+        2472
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        64,
+        62
+      ],
+      "minimum_energy": [
+        9334,
+        2252
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        47,
+        80
+      ],
+      "minimum_energy": [
+        8632,
+        3139
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        62,
+        59
+      ],
+      "minimum_energy": [
+        8812,
+        2677
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        58,
+        70
+      ],
+      "minimum_energy": [
+        9013,
+        2823
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        84,
+        65
+      ],
+      "minimum_energy": [
+        9055,
+        4181
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        85,
+        71
+      ],
+      "minimum_energy": [
+        9370,
+        3535
+      ],
+      "prayer_increases": [
+        3,
+        2
+      ]
+    },
+    {
+      "minimum_hp": [
+        63,
+        60
+      ],
+      "minimum_energy": [
+        9583,
+        0
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        83,
+        56
+      ],
+      "minimum_energy": [
+        8812,
+        1986
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        80,
+        71
+      ],
+      "minimum_energy": [
+        8827,
+        4520
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        79,
+        92
+      ],
+      "minimum_energy": [
+        9028,
+        3427
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        41,
+        83
+      ],
+      "minimum_energy": [
+        9055,
+        3991
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        62,
+        42
+      ],
+      "minimum_energy": [
+        9208,
+        3514
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        88,
+        58
+      ],
+      "minimum_energy": [
+        9136,
+        3654
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        89,
+        77
+      ],
+      "minimum_energy": [
+        9415,
+        1295
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        66,
+        53
+      ],
+      "minimum_energy": [
+        9463,
+        5027
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        98,
+        72
+      ],
+      "minimum_energy": [
+        8542,
+        2847
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        65,
+        55
+      ],
+      "minimum_energy": [
+        9298,
+        4698
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        62,
+        76
+      ],
+      "minimum_energy": [
+        9322,
+        4351
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        68,
+        63
+      ],
+      "minimum_energy": [
+        9160,
+        3368
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        60,
+        61
+      ],
+      "minimum_energy": [
+        9055,
+        2649
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        80,
+        87
+      ],
+      "minimum_energy": [
+        8812,
+        2627
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        82,
+        67
+      ],
+      "minimum_energy": [
+        8836,
+        1500
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        49,
+        72
+      ],
+      "minimum_energy": [
+        9241,
+        3372
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        80,
+        55
+      ],
+      "minimum_energy": [
+        8887,
+        2309
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        58,
+        74
+      ],
+      "minimum_energy": [
+        9385,
+        3608
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        99,
+        55
+      ],
+      "minimum_energy": [
+        8812,
+        4624
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        61,
+        55
+      ],
+      "minimum_energy": [
+        9217,
+        3582
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        78,
+        66
+      ],
+      "minimum_energy": [
+        9328,
+        2622
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        79,
+        79
+      ],
+      "minimum_energy": [
+        9055,
+        3141
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        54,
+        82
+      ],
+      "minimum_energy": [
+        9298,
+        2485
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        60,
+        68
+      ],
+      "minimum_energy": [
+        9460,
+        4131
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        56,
+        83
+      ],
+      "minimum_energy": [
+        8752,
+        4061
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        59,
+        54
+      ],
+      "minimum_energy": [
+        8965,
+        3898
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        62,
+        57
+      ],
+      "minimum_energy": [
+        9136,
+        3935
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        54,
+        78
+      ],
+      "minimum_energy": [
+        8974,
+        3505
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        83,
+        53
+      ],
+      "minimum_energy": [
+        9298,
+        1705
+      ],
+      "prayer_increases": [
+        3,
+        3
+      ]
+    },
+    {
+      "minimum_hp": [
+        54,
+        58
+      ],
+      "minimum_energy": [
+        8731,
+        2062
+      ],
+      "prayer_increases": [
+        2,
+        3
+      ]
+    }
+  ],
+  "observed_null_target_lifetimes": [
+    428,
+    784
+  ],
+  "confirmed_attacks_on_known_nulled_targets": 0,
+  "transition_goal_at_wave21": {
+    "met": 35,
+    "observed": 100
+  },
+  "per_trial": [
+    {
+      "seed": 131,
+      "status": "completed",
+      "ticks": 324,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 92,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 244,
+        "30": 260,
+        "31": 264
+      },
+      "transition_remaining": [
+        {
+          "key": 94,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 1
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 132,
+      "status": "completed",
+      "ticks": 320,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 60,
+        "10": 72,
+        "11": 80,
+        "12": 88,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 236,
+        "30": 256,
+        "31": 264
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 133,
+      "status": "completed",
+      "ticks": 340,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 96,
+        "13": 108,
+        "14": 116,
+        "15": 124,
+        "16": 132,
+        "17": 144,
+        "18": 156,
+        "19": 164,
+        "20": 176,
+        "21": 192,
+        "22": 200,
+        "23": 212,
+        "24": 220,
+        "25": 228,
+        "26": 236,
+        "27": 240,
+        "28": 248,
+        "29": 260,
+        "30": 272,
+        "31": 276
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 134,
+      "status": "completed",
+      "ticks": 352,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 124,
+        "18": 136,
+        "19": 144,
+        "20": 176,
+        "21": 192,
+        "22": 200,
+        "23": 212,
+        "24": 220,
+        "25": 228,
+        "26": 236,
+        "27": 240,
+        "28": 248,
+        "29": 272,
+        "30": 284,
+        "31": 288
+      },
+      "transition_remaining": [
+        {
+          "key": 108,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 135,
+      "status": "completed",
+      "ticks": 344,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 84,
+        "12": 92,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 180,
+        "21": 196,
+        "22": 204,
+        "23": 216,
+        "24": 224,
+        "25": 232,
+        "26": 240,
+        "27": 244,
+        "28": 252,
+        "29": 264,
+        "30": 276,
+        "31": 288
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 136,
+      "status": "completed",
+      "ticks": 332,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 80,
+        "12": 88,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 256,
+        "30": 264,
+        "31": 268
+      },
+      "transition_remaining": [
+        {
+          "key": 94,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 15
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 137,
+      "status": "completed",
+      "ticks": 340,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 88,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 128,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 176,
+        "21": 192,
+        "22": 200,
+        "23": 212,
+        "24": 220,
+        "25": 228,
+        "26": 236,
+        "27": 240,
+        "28": 248,
+        "29": 260,
+        "30": 272,
+        "31": 288
+      },
+      "transition_remaining": [
+        {
+          "key": 108,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 138,
+      "status": "completed",
+      "ticks": 344,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 128,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 180,
+        "21": 196,
+        "22": 204,
+        "23": 216,
+        "24": 224,
+        "25": 232,
+        "26": 240,
+        "27": 244,
+        "28": 252,
+        "29": 268,
+        "30": 280,
+        "31": 288
+      },
+      "transition_remaining": [
+        {
+          "key": 108,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 139,
+      "status": "completed",
+      "ticks": 320,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 124,
+        "18": 136,
+        "19": 144,
+        "20": 156,
+        "21": 172,
+        "22": 180,
+        "23": 192,
+        "24": 200,
+        "25": 208,
+        "26": 216,
+        "27": 220,
+        "28": 228,
+        "29": 240,
+        "30": 252,
+        "31": 256
+      },
+      "transition_remaining": [
+        {
+          "key": 96,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 8
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 140,
+      "status": "completed",
+      "ticks": 332,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 124,
+        "18": 136,
+        "19": 148,
+        "20": 176,
+        "21": 192,
+        "22": 200,
+        "23": 212,
+        "24": 220,
+        "25": 228,
+        "26": 236,
+        "27": 240,
+        "28": 248,
+        "29": 252,
+        "30": 268,
+        "31": 280
+      },
+      "transition_remaining": [
+        {
+          "key": 106,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 15
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 141,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 88,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 176,
+        "21": 192,
+        "22": 200,
+        "23": 212,
+        "24": 220,
+        "25": 228,
+        "26": 236,
+        "27": 240,
+        "28": 248,
+        "29": 260,
+        "30": 272,
+        "31": 280
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 142,
+      "status": "completed",
+      "ticks": 324,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 116,
+        "17": 120,
+        "18": 132,
+        "19": 140,
+        "20": 152,
+        "21": 168,
+        "22": 176,
+        "23": 188,
+        "24": 196,
+        "25": 204,
+        "26": 212,
+        "27": 216,
+        "28": 224,
+        "29": 236,
+        "30": 252,
+        "31": 260
+      },
+      "transition_remaining": [
+        {
+          "key": 96,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 8
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 143,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 88,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 244,
+        "30": 256,
+        "31": 264
+      },
+      "transition_remaining": [
+        {
+          "key": 94,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 144,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 60,
+        "10": 72,
+        "11": 80,
+        "12": 88,
+        "13": 96,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 136,
+        "18": 148,
+        "19": 156,
+        "20": 168,
+        "21": 184,
+        "22": 192,
+        "23": 204,
+        "24": 212,
+        "25": 220,
+        "26": 228,
+        "27": 232,
+        "28": 240,
+        "29": 252,
+        "30": 272,
+        "31": 276
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 145,
+      "status": "completed",
+      "ticks": 352,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 124,
+        "18": 136,
+        "19": 144,
+        "20": 184,
+        "21": 200,
+        "22": 208,
+        "23": 220,
+        "24": 228,
+        "25": 236,
+        "26": 244,
+        "27": 248,
+        "28": 268,
+        "29": 284,
+        "30": 288,
+        "31": 292
+      },
+      "transition_remaining": [
+        {
+          "key": 113,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 10
+        },
+        {
+          "key": 114,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 146,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 112,
+        "16": 120,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 256,
+        "30": 268,
+        "31": 272
+      },
+      "transition_remaining": [
+        {
+          "key": 97,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 12
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 147,
+      "status": "completed",
+      "ticks": 360,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 128,
+        "17": 140,
+        "18": 152,
+        "19": 160,
+        "20": 192,
+        "21": 208,
+        "22": 216,
+        "23": 228,
+        "24": 236,
+        "25": 244,
+        "26": 252,
+        "27": 256,
+        "28": 264,
+        "29": 276,
+        "30": 292,
+        "31": 308
+      },
+      "transition_remaining": [
+        {
+          "key": 106,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 148,
+      "status": "completed",
+      "ticks": 340,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 172,
+        "21": 188,
+        "22": 196,
+        "23": 208,
+        "24": 216,
+        "25": 224,
+        "26": 232,
+        "27": 236,
+        "28": 244,
+        "29": 248,
+        "30": 268,
+        "31": 272
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 149,
+      "status": "completed",
+      "ticks": 344,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 124,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 240,
+        "30": 264,
+        "31": 272
+      },
+      "transition_remaining": [
+        {
+          "key": 96,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 11
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 150,
+      "status": "completed",
+      "ticks": 328,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 136,
+        "18": 148,
+        "19": 156,
+        "20": 168,
+        "21": 184,
+        "22": 196,
+        "23": 208,
+        "24": 216,
+        "25": 224,
+        "26": 232,
+        "27": 236,
+        "28": 244,
+        "29": 256,
+        "30": 268,
+        "31": 272
+      },
+      "transition_remaining": [
+        {
+          "key": 95,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 7
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 151,
+      "status": "completed",
+      "ticks": 348,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 104,
+        "15": 112,
+        "16": 124,
+        "17": 140,
+        "18": 152,
+        "19": 160,
+        "20": 180,
+        "21": 196,
+        "22": 204,
+        "23": 216,
+        "24": 224,
+        "25": 232,
+        "26": 240,
+        "27": 244,
+        "28": 252,
+        "29": 268,
+        "30": 276,
+        "31": 288
+      },
+      "transition_remaining": [
+        {
+          "key": 101,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 2
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 152,
+      "status": "completed",
+      "ticks": 348,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 136,
+        "18": 148,
+        "19": 156,
+        "20": 176,
+        "21": 192,
+        "22": 200,
+        "23": 212,
+        "24": 220,
+        "25": 228,
+        "26": 236,
+        "27": 240,
+        "28": 248,
+        "29": 252,
+        "30": 268,
+        "31": 280
+      },
+      "transition_remaining": [
+        {
+          "key": 89,
+          "birth_wave": 18,
+          "lane": "east",
+          "hp": 7
+        },
+        {
+          "key": 103,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 11
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 153,
+      "status": "completed",
+      "ticks": 328,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 120,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 236,
+        "30": 252,
+        "31": 268
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 154,
+      "status": "completed",
+      "ticks": 328,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 88,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 244,
+        "30": 256,
+        "31": 260
+      },
+      "transition_remaining": [
+        {
+          "key": 87,
+          "birth_wave": 18,
+          "lane": "east",
+          "hp": 5
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 155,
+      "status": "completed",
+      "ticks": 356,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 136,
+        "18": 148,
+        "19": 156,
+        "20": 188,
+        "21": 204,
+        "22": 212,
+        "23": 224,
+        "24": 232,
+        "25": 240,
+        "26": 248,
+        "27": 252,
+        "28": 260,
+        "29": 272,
+        "30": 284,
+        "31": 308
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 156,
+      "status": "completed",
+      "ticks": 328,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 92,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 248,
+        "30": 260,
+        "31": 268
+      },
+      "transition_remaining": [
+        {
+          "key": 95,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 2
+        },
+        {
+          "key": 96,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 157,
+      "status": "completed",
+      "ticks": 324,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 124,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 240,
+        "30": 248,
+        "31": 268
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 158,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 180,
+        "21": 196,
+        "22": 204,
+        "23": 216,
+        "24": 224,
+        "25": 232,
+        "26": 240,
+        "27": 244,
+        "28": 252,
+        "29": 264,
+        "30": 268,
+        "31": 288
+      },
+      "transition_remaining": [
+        {
+          "key": 108,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 159,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 92,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 192,
+        "23": 204,
+        "24": 212,
+        "25": 220,
+        "26": 228,
+        "27": 232,
+        "28": 244,
+        "29": 264,
+        "30": 272,
+        "31": 284
+      },
+      "transition_remaining": [
+        {
+          "key": 96,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 6
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 160,
+      "status": "completed",
+      "ticks": 328,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 92,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 128,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 204,
+        "24": 212,
+        "25": 224,
+        "26": 232,
+        "27": 236,
+        "28": 244,
+        "29": 256,
+        "30": 260,
+        "31": 276
+      },
+      "transition_remaining": [
+        {
+          "key": 87,
+          "birth_wave": 18,
+          "lane": "east",
+          "hp": 8
+        },
+        {
+          "key": 96,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 10
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 161,
+      "status": "completed",
+      "ticks": 348,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 88,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 180,
+        "21": 196,
+        "22": 204,
+        "23": 216,
+        "24": 224,
+        "25": 232,
+        "26": 240,
+        "27": 244,
+        "28": 252,
+        "29": 272,
+        "30": 280,
+        "31": 288
+      },
+      "transition_remaining": [
+        {
+          "key": 105,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 8
+        },
+        {
+          "key": 106,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 7
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 162,
+      "status": "completed",
+      "ticks": 344,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 144,
+        "19": 152,
+        "20": 180,
+        "21": 196,
+        "22": 204,
+        "23": 216,
+        "24": 224,
+        "25": 232,
+        "26": 240,
+        "27": 244,
+        "28": 252,
+        "29": 256,
+        "30": 268,
+        "31": 284
+      },
+      "transition_remaining": [
+        {
+          "key": 108,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 11
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 163,
+      "status": "completed",
+      "ticks": 352,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 144,
+        "19": 152,
+        "20": 192,
+        "21": 208,
+        "22": 216,
+        "23": 228,
+        "24": 236,
+        "25": 244,
+        "26": 252,
+        "27": 256,
+        "28": 264,
+        "29": 272,
+        "30": 276,
+        "31": 300
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 164,
+      "status": "completed",
+      "ticks": 352,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 80,
+        "12": 88,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 180,
+        "21": 196,
+        "22": 204,
+        "23": 216,
+        "24": 224,
+        "25": 232,
+        "26": 240,
+        "27": 244,
+        "28": 252,
+        "29": 272,
+        "30": 280,
+        "31": 288
+      },
+      "transition_remaining": [
+        {
+          "key": 108,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 165,
+      "status": "completed",
+      "ticks": 328,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 80,
+        "12": 88,
+        "13": 96,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 192,
+        "23": 204,
+        "24": 212,
+        "25": 220,
+        "26": 228,
+        "27": 232,
+        "28": 240,
+        "29": 248,
+        "30": 268,
+        "31": 272
+      },
+      "transition_remaining": [
+        {
+          "key": 88,
+          "birth_wave": 18,
+          "lane": "south",
+          "hp": 7
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 166,
+      "status": "completed",
+      "ticks": 320,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 116,
+        "17": 120,
+        "18": 132,
+        "19": 140,
+        "20": 152,
+        "21": 168,
+        "22": 176,
+        "23": 188,
+        "24": 196,
+        "25": 204,
+        "26": 212,
+        "27": 216,
+        "28": 224,
+        "29": 240,
+        "30": 252,
+        "31": 264
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 167,
+      "status": "completed",
+      "ticks": 352,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 140,
+        "18": 152,
+        "19": 160,
+        "20": 188,
+        "21": 204,
+        "22": 212,
+        "23": 224,
+        "24": 232,
+        "25": 240,
+        "26": 248,
+        "27": 252,
+        "28": 260,
+        "29": 272,
+        "30": 288,
+        "31": 292
+      },
+      "transition_remaining": [
+        {
+          "key": 107,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 4
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 168,
+      "status": "completed",
+      "ticks": 332,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 80,
+        "12": 88,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 244,
+        "30": 256,
+        "31": 288
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 169,
+      "status": "completed",
+      "ticks": 348,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 136,
+        "18": 148,
+        "19": 156,
+        "20": 184,
+        "21": 200,
+        "22": 208,
+        "23": 220,
+        "24": 228,
+        "25": 236,
+        "26": 244,
+        "27": 248,
+        "28": 256,
+        "29": 260,
+        "30": 276,
+        "31": 292
+      },
+      "transition_remaining": [
+        {
+          "key": 108,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 3
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 170,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 120,
+        "17": 136,
+        "18": 148,
+        "19": 156,
+        "20": 176,
+        "21": 192,
+        "22": 200,
+        "23": 212,
+        "24": 220,
+        "25": 228,
+        "26": 236,
+        "27": 240,
+        "28": 248,
+        "29": 260,
+        "30": 272,
+        "31": 280
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 171,
+      "status": "completed",
+      "ticks": 348,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 80,
+        "12": 100,
+        "13": 108,
+        "14": 116,
+        "15": 124,
+        "16": 132,
+        "17": 136,
+        "18": 148,
+        "19": 156,
+        "20": 184,
+        "21": 200,
+        "22": 208,
+        "23": 220,
+        "24": 228,
+        "25": 236,
+        "26": 244,
+        "27": 248,
+        "28": 256,
+        "29": 268,
+        "30": 280,
+        "31": 288
+      },
+      "transition_remaining": [
+        {
+          "key": 86,
+          "birth_wave": 18,
+          "lane": "south",
+          "hp": 6
+        },
+        {
+          "key": 106,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 14
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 172,
+      "status": "completed",
+      "ticks": 320,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 80,
+        "12": 92,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 248,
+        "30": 260,
+        "31": 264
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 173,
+      "status": "completed",
+      "ticks": 364,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 84,
+        "12": 96,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 144,
+        "18": 156,
+        "19": 164,
+        "20": 192,
+        "21": 208,
+        "22": 216,
+        "23": 228,
+        "24": 236,
+        "25": 244,
+        "26": 252,
+        "27": 256,
+        "28": 264,
+        "29": 276,
+        "30": 284,
+        "31": 292
+      },
+      "transition_remaining": [
+        {
+          "key": 108,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 174,
+      "status": "completed",
+      "ticks": 324,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 80,
+        "12": 88,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 228,
+        "28": 236,
+        "29": 248,
+        "30": 260,
+        "31": 272
+      },
+      "transition_remaining": [
+        {
+          "key": 96,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 8
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 175,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 84,
+        "12": 92,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 136,
+        "18": 148,
+        "19": 156,
+        "20": 168,
+        "21": 184,
+        "22": 192,
+        "23": 204,
+        "24": 212,
+        "25": 220,
+        "26": 228,
+        "27": 232,
+        "28": 240,
+        "29": 244,
+        "30": 268,
+        "31": 276
+      },
+      "transition_remaining": [
+        {
+          "key": 92,
+          "birth_wave": 19,
+          "lane": "east",
+          "hp": 7
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 176,
+      "status": "completed",
+      "ticks": 340,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 60,
+        "10": 72,
+        "11": 84,
+        "12": 92,
+        "13": 108,
+        "14": 116,
+        "15": 124,
+        "16": 136,
+        "17": 144,
+        "18": 156,
+        "19": 164,
+        "20": 176,
+        "21": 192,
+        "22": 204,
+        "23": 216,
+        "24": 224,
+        "25": 232,
+        "26": 240,
+        "27": 244,
+        "28": 252,
+        "29": 260,
+        "30": 272,
+        "31": 276
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 177,
+      "status": "completed",
+      "ticks": 328,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 80,
+        "12": 88,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 244,
+        "30": 260,
+        "31": 264
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 178,
+      "status": "completed",
+      "ticks": 340,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 140,
+        "18": 152,
+        "19": 160,
+        "20": 172,
+        "21": 188,
+        "22": 196,
+        "23": 208,
+        "24": 216,
+        "25": 224,
+        "26": 232,
+        "27": 240,
+        "28": 248,
+        "29": 260,
+        "30": 268,
+        "31": 276
+      },
+      "transition_remaining": [
+        {
+          "key": 96,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 179,
+      "status": "completed",
+      "ticks": 340,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 124,
+        "18": 136,
+        "19": 144,
+        "20": 172,
+        "21": 188,
+        "22": 196,
+        "23": 208,
+        "24": 216,
+        "25": 224,
+        "26": 232,
+        "27": 236,
+        "28": 244,
+        "29": 248,
+        "30": 256,
+        "31": 288
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 180,
+      "status": "completed",
+      "ticks": 348,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 60,
+        "10": 72,
+        "11": 80,
+        "12": 88,
+        "13": 104,
+        "14": 112,
+        "15": 124,
+        "16": 132,
+        "17": 144,
+        "18": 156,
+        "19": 164,
+        "20": 176,
+        "21": 192,
+        "22": 200,
+        "23": 212,
+        "24": 220,
+        "25": 228,
+        "26": 236,
+        "27": 240,
+        "28": 248,
+        "29": 264,
+        "30": 280,
+        "31": 284
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 181,
+      "status": "completed",
+      "ticks": 328,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 244,
+        "30": 248,
+        "31": 276
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 182,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 248,
+        "30": 256,
+        "31": 264
+      },
+      "transition_remaining": [
+        {
+          "key": 89,
+          "birth_wave": 18,
+          "lane": "east",
+          "hp": 7
+        },
+        {
+          "key": 95,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 3
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 183,
+      "status": "completed",
+      "ticks": 344,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 84,
+        "12": 92,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 140,
+        "18": 152,
+        "19": 160,
+        "20": 188,
+        "21": 204,
+        "22": 212,
+        "23": 224,
+        "24": 232,
+        "25": 240,
+        "26": 248,
+        "27": 252,
+        "28": 260,
+        "29": 264,
+        "30": 272,
+        "31": 288
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 184,
+      "status": "completed",
+      "ticks": 340,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 124,
+        "17": 128,
+        "18": 144,
+        "19": 152,
+        "20": 180,
+        "21": 196,
+        "22": 204,
+        "23": 216,
+        "24": 224,
+        "25": 232,
+        "26": 240,
+        "27": 244,
+        "28": 252,
+        "29": 264,
+        "30": 268,
+        "31": 288
+      },
+      "transition_remaining": [
+        {
+          "key": 106,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 3
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 185,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 84,
+        "12": 92,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 136,
+        "18": 148,
+        "19": 156,
+        "20": 168,
+        "21": 184,
+        "22": 192,
+        "23": 204,
+        "24": 212,
+        "25": 220,
+        "26": 228,
+        "27": 232,
+        "28": 240,
+        "29": 252,
+        "30": 268,
+        "31": 280
+      },
+      "transition_remaining": [
+        {
+          "key": 87,
+          "birth_wave": 18,
+          "lane": "west",
+          "hp": 12
+        },
+        {
+          "key": 93,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 1
+        },
+        {
+          "key": 94,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 15
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 186,
+      "status": "completed",
+      "ticks": 320,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 244,
+        "30": 256,
+        "31": 260
+      },
+      "transition_remaining": [
+        {
+          "key": 96,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 2
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 187,
+      "status": "completed",
+      "ticks": 344,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 176,
+        "21": 192,
+        "22": 200,
+        "23": 212,
+        "24": 220,
+        "25": 228,
+        "26": 236,
+        "27": 240,
+        "28": 248,
+        "29": 252,
+        "30": 268,
+        "31": 276
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 188,
+      "status": "completed",
+      "ticks": 332,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 92,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 232,
+        "28": 240,
+        "29": 252,
+        "30": 264,
+        "31": 280
+      },
+      "transition_remaining": [
+        {
+          "key": 89,
+          "birth_wave": 18,
+          "lane": "east",
+          "hp": 12
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 189,
+      "status": "completed",
+      "ticks": 352,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 116,
+        "16": 128,
+        "17": 136,
+        "18": 148,
+        "19": 156,
+        "20": 184,
+        "21": 200,
+        "22": 208,
+        "23": 220,
+        "24": 228,
+        "25": 236,
+        "26": 244,
+        "27": 248,
+        "28": 256,
+        "29": 276,
+        "30": 284,
+        "31": 296
+      },
+      "transition_remaining": [
+        {
+          "key": 107,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 13
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 190,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 228,
+        "28": 236,
+        "29": 256,
+        "30": 268,
+        "31": 280
+      },
+      "transition_remaining": [
+        {
+          "key": 97,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 13
+        },
+        {
+          "key": 98,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 9
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 191,
+      "status": "completed",
+      "ticks": 368,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 92,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 132,
+        "17": 148,
+        "18": 160,
+        "19": 168,
+        "20": 200,
+        "21": 216,
+        "22": 224,
+        "23": 236,
+        "24": 244,
+        "25": 252,
+        "26": 260,
+        "27": 264,
+        "28": 272,
+        "29": 288,
+        "30": 304,
+        "31": 308
+      },
+      "transition_remaining": [
+        {
+          "key": 107,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 16
+        },
+        {
+          "key": 108,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 192,
+      "status": "completed",
+      "ticks": 344,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 92,
+        "13": 100,
+        "14": 108,
+        "15": 124,
+        "16": 136,
+        "17": 144,
+        "18": 156,
+        "19": 164,
+        "20": 176,
+        "21": 192,
+        "22": 200,
+        "23": 212,
+        "24": 220,
+        "25": 228,
+        "26": 236,
+        "27": 240,
+        "28": 248,
+        "29": 260,
+        "30": 272,
+        "31": 292
+      },
+      "transition_remaining": [
+        {
+          "key": 98,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 10
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 193,
+      "status": "completed",
+      "ticks": 344,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 112,
+        "16": 128,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 176,
+        "21": 192,
+        "22": 200,
+        "23": 212,
+        "24": 220,
+        "25": 228,
+        "26": 236,
+        "27": 240,
+        "28": 248,
+        "29": 256,
+        "30": 268,
+        "31": 292
+      },
+      "transition_remaining": [
+        {
+          "key": 107,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 5
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 194,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 116,
+        "16": 124,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 248,
+        "30": 260,
+        "31": 268
+      },
+      "transition_remaining": [
+        {
+          "key": 95,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 12
+        },
+        {
+          "key": 96,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 6
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 195,
+      "status": "completed",
+      "ticks": 352,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 124,
+        "18": 136,
+        "19": 144,
+        "20": 172,
+        "21": 188,
+        "22": 196,
+        "23": 208,
+        "24": 216,
+        "25": 224,
+        "26": 232,
+        "27": 236,
+        "28": 244,
+        "29": 248,
+        "30": 272,
+        "31": 284
+      },
+      "transition_remaining": [
+        {
+          "key": 105,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 196,
+      "status": "completed",
+      "ticks": 328,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 116,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 244,
+        "30": 260,
+        "31": 264
+      },
+      "transition_remaining": [
+        {
+          "key": 88,
+          "birth_wave": 18,
+          "lane": "south",
+          "hp": 4
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 197,
+      "status": "completed",
+      "ticks": 324,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 92,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 252,
+        "30": 264,
+        "31": 272
+      },
+      "transition_remaining": [
+        {
+          "key": 96,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 13
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 198,
+      "status": "completed",
+      "ticks": 324,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 100,
+        "14": 108,
+        "15": 120,
+        "16": 128,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 248,
+        "30": 260,
+        "31": 272
+      },
+      "transition_remaining": [
+        {
+          "key": 96,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 8
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 199,
+      "status": "completed",
+      "ticks": 328,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 240,
+        "30": 260,
+        "31": 272
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 200,
+      "status": "completed",
+      "ticks": 340,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 248,
+        "30": 260,
+        "31": 264
+      },
+      "transition_remaining": [
+        {
+          "key": 95,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 1
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 201,
+      "status": "completed",
+      "ticks": 344,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 124,
+        "18": 136,
+        "19": 144,
+        "20": 176,
+        "21": 192,
+        "22": 200,
+        "23": 212,
+        "24": 220,
+        "25": 228,
+        "26": 236,
+        "27": 240,
+        "28": 248,
+        "29": 260,
+        "30": 276,
+        "31": 288
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 202,
+      "status": "completed",
+      "ticks": 332,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 60,
+        "10": 72,
+        "11": 80,
+        "12": 88,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 124,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 240,
+        "30": 252,
+        "31": 264
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 203,
+      "status": "completed",
+      "ticks": 332,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 116,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 244,
+        "29": 256,
+        "30": 260,
+        "31": 264
+      },
+      "transition_remaining": [
+        {
+          "key": 92,
+          "birth_wave": 19,
+          "lane": "east",
+          "hp": 5
+        },
+        {
+          "key": 98,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 1
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 204,
+      "status": "completed",
+      "ticks": 332,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 92,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 248,
+        "30": 260,
+        "31": 280
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 205,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 92,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 236,
+        "28": 244,
+        "29": 264,
+        "30": 268,
+        "31": 280
+      },
+      "transition_remaining": [
+        {
+          "key": 86,
+          "birth_wave": 18,
+          "lane": "south",
+          "hp": 5
+        },
+        {
+          "key": 94,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 12
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 206,
+      "status": "completed",
+      "ticks": 344,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 136,
+        "18": 148,
+        "19": 156,
+        "20": 168,
+        "21": 184,
+        "22": 192,
+        "23": 204,
+        "24": 212,
+        "25": 220,
+        "26": 228,
+        "27": 232,
+        "28": 240,
+        "29": 264,
+        "30": 268,
+        "31": 272
+      },
+      "transition_remaining": [
+        {
+          "key": 88,
+          "birth_wave": 18,
+          "lane": "south",
+          "hp": 13
+        },
+        {
+          "key": 95,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 7
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 207,
+      "status": "completed",
+      "ticks": 360,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 140,
+        "18": 152,
+        "19": 160,
+        "20": 192,
+        "21": 208,
+        "22": 216,
+        "23": 228,
+        "24": 236,
+        "25": 244,
+        "26": 252,
+        "27": 256,
+        "28": 264,
+        "29": 276,
+        "30": 288,
+        "31": 308
+      },
+      "transition_remaining": [
+        {
+          "key": 107,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 16
+        },
+        {
+          "key": 108,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 208,
+      "status": "completed",
+      "ticks": 328,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 192,
+        "23": 204,
+        "24": 212,
+        "25": 220,
+        "26": 228,
+        "27": 232,
+        "28": 240,
+        "29": 252,
+        "30": 264,
+        "31": 268
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 209,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 60,
+        "10": 72,
+        "11": 80,
+        "12": 88,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 136,
+        "18": 148,
+        "19": 156,
+        "20": 168,
+        "21": 184,
+        "22": 192,
+        "23": 204,
+        "24": 212,
+        "25": 220,
+        "26": 228,
+        "27": 232,
+        "28": 240,
+        "29": 252,
+        "30": 256,
+        "31": 268
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 210,
+      "status": "completed",
+      "ticks": 332,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 88,
+        "12": 96,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 132,
+        "18": 148,
+        "19": 156,
+        "20": 168,
+        "21": 184,
+        "22": 196,
+        "23": 208,
+        "24": 216,
+        "25": 224,
+        "26": 232,
+        "27": 236,
+        "28": 244,
+        "29": 248,
+        "30": 268,
+        "31": 272
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 211,
+      "status": "completed",
+      "ticks": 316,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 124,
+        "18": 136,
+        "19": 144,
+        "20": 156,
+        "21": 172,
+        "22": 180,
+        "23": 192,
+        "24": 200,
+        "25": 208,
+        "26": 216,
+        "27": 220,
+        "28": 228,
+        "29": 232,
+        "30": 248,
+        "31": 252
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 212,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 124,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 196,
+        "23": 208,
+        "24": 216,
+        "25": 224,
+        "26": 232,
+        "27": 236,
+        "28": 244,
+        "29": 248,
+        "30": 260,
+        "31": 276
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 213,
+      "status": "completed",
+      "ticks": 344,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 92,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 132,
+        "17": 144,
+        "18": 156,
+        "19": 164,
+        "20": 176,
+        "21": 192,
+        "22": 200,
+        "23": 212,
+        "24": 220,
+        "25": 228,
+        "26": 236,
+        "27": 240,
+        "28": 248,
+        "29": 264,
+        "30": 276,
+        "31": 296
+      },
+      "transition_remaining": [
+        {
+          "key": 88,
+          "birth_wave": 18,
+          "lane": "south",
+          "hp": 7
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 214,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 124,
+        "18": 136,
+        "19": 144,
+        "20": 172,
+        "21": 188,
+        "22": 196,
+        "23": 208,
+        "24": 216,
+        "25": 224,
+        "26": 232,
+        "27": 236,
+        "28": 244,
+        "29": 248,
+        "30": 260,
+        "31": 276
+      },
+      "transition_remaining": [
+        {
+          "key": 108,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 215,
+      "status": "completed",
+      "ticks": 352,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 128,
+        "17": 144,
+        "18": 156,
+        "19": 164,
+        "20": 192,
+        "21": 208,
+        "22": 216,
+        "23": 228,
+        "24": 236,
+        "25": 244,
+        "26": 252,
+        "27": 256,
+        "28": 264,
+        "29": 276,
+        "30": 288,
+        "31": 292
+      },
+      "transition_remaining": [
+        {
+          "key": 107,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 216,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 88,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 136,
+        "18": 148,
+        "19": 156,
+        "20": 168,
+        "21": 184,
+        "22": 192,
+        "23": 204,
+        "24": 212,
+        "25": 220,
+        "26": 228,
+        "27": 232,
+        "28": 240,
+        "29": 260,
+        "30": 268,
+        "31": 276
+      },
+      "transition_remaining": [
+        {
+          "key": 88,
+          "birth_wave": 18,
+          "lane": "south",
+          "hp": 4
+        },
+        {
+          "key": 94,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 217,
+      "status": "completed",
+      "ticks": 348,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 80,
+        "12": 88,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 124,
+        "17": 136,
+        "18": 148,
+        "19": 156,
+        "20": 180,
+        "21": 196,
+        "22": 204,
+        "23": 216,
+        "24": 224,
+        "25": 232,
+        "26": 240,
+        "27": 244,
+        "28": 252,
+        "29": 268,
+        "30": 284,
+        "31": 288
+      },
+      "transition_remaining": [
+        {
+          "key": 107,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 11
+        },
+        {
+          "key": 108,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 218,
+      "status": "completed",
+      "ticks": 360,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 92,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 132,
+        "18": 148,
+        "19": 156,
+        "20": 192,
+        "21": 208,
+        "22": 216,
+        "23": 228,
+        "24": 236,
+        "25": 244,
+        "26": 252,
+        "27": 256,
+        "28": 264,
+        "29": 268,
+        "30": 280,
+        "31": 288
+      },
+      "transition_remaining": [
+        {
+          "key": 113,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 219,
+      "status": "completed",
+      "ticks": 340,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 80,
+        "12": 88,
+        "13": 100,
+        "14": 108,
+        "15": 120,
+        "16": 128,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 240,
+        "30": 248,
+        "31": 276
+      },
+      "transition_remaining": [
+        {
+          "key": 89,
+          "birth_wave": 18,
+          "lane": "east",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 220,
+      "status": "completed",
+      "ticks": 340,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 80,
+        "12": 92,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 180,
+        "21": 196,
+        "22": 204,
+        "23": 216,
+        "24": 224,
+        "25": 232,
+        "26": 240,
+        "27": 244,
+        "28": 252,
+        "29": 260,
+        "30": 272,
+        "31": 280
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 221,
+      "status": "completed",
+      "ticks": 320,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 116,
+        "17": 120,
+        "18": 136,
+        "19": 144,
+        "20": 156,
+        "21": 172,
+        "22": 180,
+        "23": 192,
+        "24": 200,
+        "25": 208,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 244,
+        "30": 252,
+        "31": 260
+      },
+      "transition_remaining": [
+        {
+          "key": 94,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 7
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 222,
+      "status": "completed",
+      "ticks": 324,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 240,
+        "30": 260,
+        "31": 272
+      },
+      "transition_remaining": [
+        {
+          "key": 96,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 8
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 223,
+      "status": "completed",
+      "ticks": 332,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 192,
+        "23": 204,
+        "24": 212,
+        "25": 220,
+        "26": 228,
+        "27": 232,
+        "28": 240,
+        "29": 264,
+        "30": 268,
+        "31": 284
+      },
+      "transition_remaining": [
+        {
+          "key": 94,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 11
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 224,
+      "status": "completed",
+      "ticks": 328,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 92,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 240,
+        "30": 248,
+        "31": 264
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 225,
+      "status": "completed",
+      "ticks": 316,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 124,
+        "18": 136,
+        "19": 144,
+        "20": 156,
+        "21": 172,
+        "22": 180,
+        "23": 192,
+        "24": 200,
+        "25": 208,
+        "26": 216,
+        "27": 220,
+        "28": 228,
+        "29": 240,
+        "30": 252,
+        "31": 264
+      },
+      "transition_remaining": [
+        {
+          "key": 96,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 11
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 226,
+      "status": "completed",
+      "ticks": 332,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 88,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 248,
+        "30": 256,
+        "31": 284
+      },
+      "transition_remaining": [
+        {
+          "key": 87,
+          "birth_wave": 18,
+          "lane": "east",
+          "hp": 16
+        }
+      ],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 227,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 96,
+        "13": 104,
+        "14": 112,
+        "15": 120,
+        "16": 128,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 192,
+        "23": 204,
+        "24": 212,
+        "25": 220,
+        "26": 228,
+        "27": 232,
+        "28": 240,
+        "29": 244,
+        "30": 264,
+        "31": 276
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 228,
+      "status": "completed",
+      "ticks": 324,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 80,
+        "12": 92,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 132,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 240,
+        "30": 248,
+        "31": 252
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 229,
+      "status": "completed",
+      "ticks": 336,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 136,
+        "18": 148,
+        "19": 156,
+        "20": 168,
+        "21": 184,
+        "22": 192,
+        "23": 204,
+        "24": 212,
+        "25": 220,
+        "26": 228,
+        "27": 232,
+        "28": 240,
+        "29": 244,
+        "30": 264,
+        "31": 268
+      },
+      "transition_remaining": [],
+      "old_cleanup_attacks": []
+    },
+    {
+      "seed": 230,
+      "status": "completed",
+      "ticks": 332,
+      "wave_spawn_ticks": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 144,
+        "19": 152,
+        "20": 164,
+        "21": 180,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 248,
+        "30": 268,
+        "31": 276
+      },
+      "transition_remaining": [
+        {
+          "key": 93,
+          "birth_wave": 20,
+          "lane": "west",
+          "hp": 7
+        },
+        {
+          "key": 94,
+          "birth_wave": 20,
+          "lane": "south",
+          "hp": 9
+        }
+      ],
+      "old_cleanup_attacks": []
+    }
+  ]
+}

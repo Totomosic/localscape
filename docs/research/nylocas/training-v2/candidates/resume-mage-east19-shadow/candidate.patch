@@ -1,0 +1,16 @@
+--- upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java
++++ upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java
+@@ -391,6 +391,13 @@
+ 				// An unopened east/south19 parent keeps one cap slot until its first age3 request.
+ 				if (c.wave == 19 && c.big && !opened.contains(c.key) && (c.lane == Lane.EAST || c.lane == Lane.SOUTH))
+ 					first = Math.max(first, c.born + 3);
++				// Vetted duos use a first East19 Shadow. Keep Eye available when its shorter
++				// cooldown fits a packet that Shadow cannot; confirmed survivors revert to Eye.
++				if (room.shadowOpening && a.name.equals("East big 19") && !opened.contains(c.key))
++				{
++					Decision shadow = new Decision(c, Weapon.SHADOW, a.stage, false, a.name, "East big 19 Shadow opening");
++					add(candidates, room, next, shadow, score, tick, first, c.born + a.last);
++				}
+ 				add(candidates, room, next, d, score, tick, first, c.born + a.last);
+ 			}
+ 			Weapon weapon = c.style == Style.MAGIC ? Weapon.EYE : c.style == Style.MELEE ? Weapon.SULPHUR : Weapon.PIPE;

@@ -1,0 +1,1740 @@
+[
+  {
+    "run": ".state/simulations/training-v3-forecast-guidance-refined-random-200",
+    "trials": 200,
+    "counts": {
+      "18_frames": 61,
+      "18_policy_ready_frames": 36,
+      "18_other_native_attack_frames": 36,
+      "19_frames": 48,
+      "19_policy_ready_frames": 29,
+      "19_other_native_attack_frames": 29,
+      "19_other_native_eye_frames": 7,
+      "18_other_native_eye_frames": 2
+    },
+    "rooms": {
+      "18": 15,
+      "19": 19
+    },
+    "examples": {
+      "18": [
+        {
+          "seed": 201945272171969,
+          "tick": 178,
+          "target": {
+            "key": 88,
+            "wave": 18,
+            "born": 148,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 30,
+            "style": "MAGIC",
+            "hp": 10,
+            "x": 3292,
+            "y": 4244,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            10,
+            0
+          ],
+          "bow_tick": 173,
+          "normal21_due": 184,
+          "player": "3293,4248,0",
+          "selected": [
+            "CHIN",
+            103,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272171969,
+          "tick": 178,
+          "target": {
+            "key": 89,
+            "wave": 18,
+            "born": 148,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 30,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 173,
+          "normal21_due": 184,
+          "player": "3293,4248,0",
+          "selected": [
+            "CHIN",
+            103,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272171969,
+          "tick": 181,
+          "target": {
+            "key": 88,
+            "wave": 18,
+            "born": 148,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 33,
+            "style": "MAGIC",
+            "hp": 10,
+            "x": 3292,
+            "y": 4244,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            10,
+            0
+          ],
+          "bow_tick": 173,
+          "normal21_due": 184,
+          "player": "3295,4248,0",
+          "selected": [
+            "CHIN",
+            100,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272171969,
+          "tick": 181,
+          "target": {
+            "key": 89,
+            "wave": 18,
+            "born": 148,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 33,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 173,
+          "normal21_due": 184,
+          "player": "3295,4248,0",
+          "selected": [
+            "CHIN",
+            100,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272171973,
+          "tick": 166,
+          "target": {
+            "key": 86,
+            "wave": 18,
+            "born": 136,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 30,
+            "style": "MAGIC",
+            "hp": 4,
+            "x": 3292,
+            "y": 4244,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            4,
+            0
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3293,4248,0",
+          "selected": [
+            "PIPE",
+            96,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272171973,
+          "tick": 166,
+          "target": {
+            "key": 87,
+            "wave": 18,
+            "born": 136,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 30,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3293,4248,0",
+          "selected": [
+            "PIPE",
+            96,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272171973,
+          "tick": 168,
+          "target": {
+            "key": 86,
+            "wave": 18,
+            "born": 136,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 32,
+            "style": "MAGIC",
+            "hp": 4,
+            "x": 3292,
+            "y": 4244,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            4,
+            0
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3293,4248,0",
+          "selected": [
+            "CHIN",
+            103,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272171973,
+          "tick": 168,
+          "target": {
+            "key": 87,
+            "wave": 18,
+            "born": 136,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 32,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3293,4248,0",
+          "selected": [
+            "CHIN",
+            103,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272171977,
+          "tick": 174,
+          "target": {
+            "key": 89,
+            "wave": 18,
+            "born": 144,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 30,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 169,
+          "normal21_due": 180,
+          "player": "3294,4248,0",
+          "selected": [
+            "PIPE",
+            103,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272171977,
+          "tick": 176,
+          "target": {
+            "key": 89,
+            "wave": 18,
+            "born": 144,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 32,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 169,
+          "normal21_due": 180,
+          "player": "3296,4249,0",
+          "selected": [
+            "CHIN",
+            103,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272171991,
+          "tick": 170,
+          "target": {
+            "key": 89,
+            "wave": 18,
+            "born": 140,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 30,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 165,
+          "normal21_due": 176,
+          "player": "3293,4248,0",
+          "selected": [
+            "PIPE",
+            97,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272171991,
+          "tick": 172,
+          "target": {
+            "key": 89,
+            "wave": 18,
+            "born": 140,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 32,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 165,
+          "normal21_due": 176,
+          "player": "3293,4248,0",
+          "selected": [
+            "PIPE",
+            97,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        }
+      ],
+      "19": [
+        {
+          "seed": 201945272171973,
+          "tick": 166,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 144,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 8,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 199,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            8,
+            0
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3293,4248,0",
+          "selected": [
+            "PIPE",
+            96,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272171973,
+          "tick": 168,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 144,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 24,
+            "style": "MAGIC",
+            "hp": 8,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 199,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            8,
+            3
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3293,4248,0",
+          "selected": [
+            "CHIN",
+            103,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272171978,
+          "tick": 166,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 144,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 199,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3293,4248,0",
+          "selected": [
+            "EYE",
+            99,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent MAGIC small"
+        },
+        {
+          "seed": 201945272171979,
+          "tick": 174,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 152,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 11,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 207,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            11,
+            0
+          ],
+          "bow_tick": 169,
+          "normal21_due": 180,
+          "player": "3293,4248,0",
+          "selected": [
+            "PIPE",
+            100,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272171994,
+          "tick": 166,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 144,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3293,4248,0",
+          "selected": [
+            "EYE",
+            94,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent MAGIC small"
+        },
+        {
+          "seed": 201945272171994,
+          "tick": 166,
+          "target": {
+            "key": 92,
+            "wave": 19,
+            "born": 144,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3294,
+            "y": 4247,
+            "claimed_until": 198,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            9
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3293,4248,0",
+          "selected": [
+            "EYE",
+            94,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent MAGIC small"
+        },
+        {
+          "seed": 201945272171995,
+          "tick": 170,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 148,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 203,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 165,
+          "normal21_due": 176,
+          "player": "3293,4248,0",
+          "selected": [
+            "EYE",
+            98,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent MAGIC small"
+        },
+        {
+          "seed": 201945272172003,
+          "tick": 166,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 144,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 197,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            12
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3295,4248,0",
+          "selected": [
+            "CHIN",
+            100,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272172034,
+          "tick": 166,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 144,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 2,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 199,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            2,
+            0
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3293,4248,0",
+          "selected": [
+            "PIPE",
+            104,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272172034,
+          "tick": 168,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 144,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 24,
+            "style": "MAGIC",
+            "hp": 2,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 199,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            2,
+            0
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3293,4248,0",
+          "selected": [
+            "PIPE",
+            100,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272172036,
+          "tick": 178,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 156,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 211,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            6
+          ],
+          "bow_tick": 173,
+          "normal21_due": 184,
+          "player": "3295,4248,0",
+          "selected": [
+            "PIPE",
+            100,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 201945272172036,
+          "tick": 180,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 156,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 24,
+            "style": "MAGIC",
+            "hp": 10,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 211,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            10,
+            1
+          ],
+          "bow_tick": 173,
+          "normal21_due": 184,
+          "player": "3295,4248,0",
+          "selected": [
+            "PIPE",
+            100,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        }
+      ]
+    },
+    "caveat": "Find normal-wave21-return opportunities for settled transition parent recovery.\n\nThese are review candidates, not claims that every frame had an unobstructed ray.\nA same-tick native Eye at another target provides stronger evidence of readiness.\n",
+    "sources": {
+      ".state/simulations/training-v3-forecast-guidance-refined-random-200/server.log": "848308ccbf22994d519e1ad49851ec2535a93d40396b4ee1ad6a46471e0bb5b1",
+      ".state/simulations/training-v3-forecast-guidance-refined-random-200/trials.csv": "9e7df286fb75c4ec1b1c8c0a0ef73e841f7ce26d99310446ed2f4502b931a665"
+    }
+  },
+  {
+    "run": ".state/simulations/training-v3-forecast-guidance-refined-fresh-300",
+    "trials": 300,
+    "counts": {
+      "19_frames": 51,
+      "19_policy_ready_frames": 34,
+      "19_other_native_attack_frames": 34,
+      "18_frames": 63,
+      "18_policy_ready_frames": 37,
+      "18_other_native_attack_frames": 37,
+      "18_other_native_eye_frames": 1,
+      "19_other_native_eye_frames": 5
+    },
+    "rooms": {
+      "18": 18,
+      "19": 24
+    },
+    "examples": {
+      "18": [
+        {
+          "seed": 222206795139651,
+          "tick": 170,
+          "target": {
+            "key": 89,
+            "wave": 18,
+            "born": 140,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 30,
+            "style": "MAGIC",
+            "hp": 4,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            4,
+            0
+          ],
+          "bow_tick": 165,
+          "normal21_due": 176,
+          "player": "3293,4248,0",
+          "selected": [
+            "PIPE",
+            102,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139651,
+          "tick": 172,
+          "target": {
+            "key": 89,
+            "wave": 18,
+            "born": 140,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 32,
+            "style": "MAGIC",
+            "hp": 4,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            4,
+            0
+          ],
+          "bow_tick": 165,
+          "normal21_due": 176,
+          "player": "3293,4248,0",
+          "selected": [
+            "PIPE",
+            103,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139654,
+          "tick": 170,
+          "target": {
+            "key": 89,
+            "wave": 18,
+            "born": 140,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 30,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 165,
+          "normal21_due": 176,
+          "player": "3293,4248,0",
+          "selected": [
+            "CHIN",
+            98,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139654,
+          "tick": 173,
+          "target": {
+            "key": 89,
+            "wave": 18,
+            "born": 140,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 33,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 165,
+          "normal21_due": 176,
+          "player": "3295,4246,0",
+          "selected": [
+            "PIPE",
+            109,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139656,
+          "tick": 166,
+          "target": {
+            "key": 89,
+            "wave": 18,
+            "born": 136,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 30,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3293,4248,0",
+          "selected": [
+            "CHIN",
+            96,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139656,
+          "tick": 169,
+          "target": {
+            "key": 89,
+            "wave": 18,
+            "born": 136,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 33,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3295,4248,0",
+          "selected": [
+            "PIPE",
+            103,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139658,
+          "tick": 162,
+          "target": {
+            "key": 87,
+            "wave": 18,
+            "born": 132,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 30,
+            "style": "MAGIC",
+            "hp": 4,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            4,
+            0
+          ],
+          "bow_tick": 157,
+          "normal21_due": 168,
+          "player": "3293,4248,0",
+          "selected": [
+            "CHIN",
+            100,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139658,
+          "tick": 165,
+          "target": {
+            "key": 87,
+            "wave": 18,
+            "born": 132,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 33,
+            "style": "MAGIC",
+            "hp": 4,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            4,
+            0
+          ],
+          "bow_tick": 157,
+          "normal21_due": 168,
+          "player": "3295,4247,0",
+          "selected": [
+            "CHIN",
+            108,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139659,
+          "tick": 174,
+          "target": {
+            "key": 87,
+            "wave": 18,
+            "born": 144,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 30,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 169,
+          "normal21_due": 180,
+          "player": "3293,4248,0",
+          "selected": [
+            "PIPE",
+            101,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139659,
+          "tick": 176,
+          "target": {
+            "key": 87,
+            "wave": 18,
+            "born": 144,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 32,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 169,
+          "normal21_due": 180,
+          "player": "3293,4248,0",
+          "selected": [
+            "PIPE",
+            105,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139678,
+          "tick": 178,
+          "target": {
+            "key": 89,
+            "wave": 18,
+            "born": 148,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 30,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 173,
+          "normal21_due": 184,
+          "player": "3292,4247,0",
+          "selected": [
+            "PIPE",
+            102,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139678,
+          "tick": 180,
+          "target": {
+            "key": 89,
+            "wave": 18,
+            "born": 148,
+            "lane": "east",
+            "slot": "S",
+            "big": true,
+            "age": 32,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3292,
+            "y": 4253,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 173,
+          "normal21_due": 184,
+          "player": "3294,4247,0",
+          "selected": [
+            "PIPE",
+            99,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        }
+      ],
+      "19": [
+        {
+          "seed": 222206795139648,
+          "tick": 162,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 140,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 10,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 193,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            10,
+            1
+          ],
+          "bow_tick": 157,
+          "normal21_due": 168,
+          "player": "3294,4248,0",
+          "selected": [
+            "PIPE",
+            102,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139649,
+          "tick": 174,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 152,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 7,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 207,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            7,
+            1
+          ],
+          "bow_tick": 169,
+          "normal21_due": 180,
+          "player": "3293,4248,0",
+          "selected": [
+            "CHIN",
+            96,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139667,
+          "tick": 166,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 144,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 199,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            14
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3293,4249,0",
+          "selected": [
+            "PIPE",
+            101,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139672,
+          "tick": 174,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 152,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 10,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 207,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            10,
+            0
+          ],
+          "bow_tick": 169,
+          "normal21_due": 180,
+          "player": "3293,4248,0",
+          "selected": [
+            "PIPE",
+            99,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139676,
+          "tick": 166,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 144,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 13,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            13,
+            0
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3294,4248,0",
+          "selected": [
+            "PIPE",
+            93,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139676,
+          "tick": 168,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 144,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 24,
+            "style": "MAGIC",
+            "hp": 13,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 201,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            13,
+            0
+          ],
+          "bow_tick": 161,
+          "normal21_due": 172,
+          "player": "3294,4248,0",
+          "selected": [
+            "PIPE",
+            104,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139707,
+          "tick": 162,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 140,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            3
+          ],
+          "bow_tick": 157,
+          "normal21_due": 168,
+          "player": "3293,4248,0",
+          "selected": [
+            "EYE",
+            98,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent MAGIC small"
+        },
+        {
+          "seed": 222206795139710,
+          "tick": 174,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 152,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 207,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            1
+          ],
+          "bow_tick": 169,
+          "normal21_due": 180,
+          "player": "3294,4248,0",
+          "selected": [
+            "PIPE",
+            94,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139710,
+          "tick": 176,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 152,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 24,
+            "style": "MAGIC",
+            "hp": 15,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 207,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            15,
+            12
+          ],
+          "bow_tick": 169,
+          "normal21_due": 180,
+          "player": "3294,4248,0",
+          "selected": [
+            "PIPE",
+            104,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139711,
+          "tick": 174,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 152,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 169,
+          "normal21_due": 180,
+          "player": "3293,4248,0",
+          "selected": [
+            "EYE",
+            98,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent MAGIC small"
+        },
+        {
+          "seed": 222206795139712,
+          "tick": 174,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 152,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 22,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 169,
+          "normal21_due": 180,
+          "player": "3293,4248,0",
+          "selected": [
+            "PIPE",
+            100,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        },
+        {
+          "seed": 222206795139712,
+          "tick": 176,
+          "target": {
+            "key": 91,
+            "wave": 19,
+            "born": 152,
+            "lane": "south",
+            "slot": "W",
+            "big": true,
+            "age": 24,
+            "style": "MAGIC",
+            "hp": 16,
+            "x": 3298,
+            "y": 4244,
+            "claimed_until": 209,
+            "own_hit_until": 0,
+            "dying": false,
+            "nulled": false
+          },
+          "forecast": [
+            16,
+            0
+          ],
+          "bow_tick": 169,
+          "normal21_due": 180,
+          "player": "3293,4248,0",
+          "selected": [
+            "PIPE",
+            100,
+            "null"
+          ],
+          "native_attack": true,
+          "reason": "Recent RANGE small"
+        }
+      ]
+    },
+    "caveat": "Find normal-wave21-return opportunities for settled transition parent recovery.\n\nThese are review candidates, not claims that every frame had an unobstructed ray.\nA same-tick native Eye at another target provides stronger evidence of readiness.\n",
+    "sources": {
+      ".state/simulations/training-v3-forecast-guidance-refined-fresh-300/server.log": "cfb18935fe22967695a035971b73762af30fb6301bc58ebe5a73a236220ef503",
+      ".state/simulations/training-v3-forecast-guidance-refined-fresh-300/trials.csv": "9729c7d98eed36b696fa43f6277d3c5d657eab02dfdc48c70766f7e723eb44cd"
+    }
+  }
+]

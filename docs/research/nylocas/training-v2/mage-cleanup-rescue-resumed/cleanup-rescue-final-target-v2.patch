@@ -1,0 +1,82 @@
+--- retainedSouth20/MageStrategy.java
++++ cleanup-rescue-final-v2/MageStrategy.java
+@@ -187,9 +187,10 @@
+ 
+ 	static boolean eligible(Room room, Crab c, int tick)
+ 	{
+-		return !c.dying && !c.nulled && !c.claimed(tick) && !c.awaitingHit(tick) && tick - c.born < 49
+-			&& (room.wave - c.wave <= MAX_WAVE_AGE || requiredBig(c)) && !rangerOwned(c)
+-			&& !rangerPacket(c, tick) && (room.wave < 31 || c.wave > 29);
++		return !c.dying && !c.nulled && (!c.claimed(tick) || cleanupCooperation(room, c)) && !c.awaitingHit(tick) && tick - c.born < 49
++			&& (room.wave - c.wave <= MAX_WAVE_AGE || requiredBig(c))
++			&& (cleanupCooperation(room, c) || !rangerOwned(c) && !rangerPacket(c, tick))
++			&& (room.wave < 31 || c.wave > 29);
+ 	}
+ 
+ 	public static boolean matchesNext(Crab c, Style style, int tick)
+@@ -378,7 +379,8 @@
+ 		List<Candidate> idleRange = new ArrayList<>();
+ 		for (Crab c : room.crabs)
+ 		{
+-			if (!eligible(room, c, tick) || protectedTarget(room, c, tick) || guidanceDeferred(room, c, tick)) continue;
++			if (!eligible(room, c, tick) || !cleanupCooperation(room, c) && protectedTarget(room, c, tick)
++				|| guidanceDeferred(room, c, tick)) continue;
+ 			int age = tick - c.born;
+ 			for (Assignment a : ASSIGNMENTS)
+ 			{
+@@ -419,10 +421,12 @@
+ 				Decision fallback = new Decision(c, Weapon.PIPE, c.point, false, null, "Idle ranged split support");
+ 				add(idleRange, room, next, fallback, 500 - age * 100, tick, tick, tick);
+ 			}
+-			if (c.big && !finishBig(c, room, tick) || c.style == Style.RANGE && (c.big || !c.partnerNulled)) continue;
++			boolean cooperate = cleanupCooperation(room, c);
++			if (c.big && !finishBig(c, room, tick) && !cooperate
++				|| c.style == Style.RANGE && (c.big || !c.partnerNulled) && !cooperate) continue;
+ 			// Lane assignments own their opening offset and weapon. Generic cleanup
+ 			// must not bypass the rotation while that assignment is still pending.
+-			if (ASSIGNMENTS.stream().anyMatch(a -> a.matches(c) && !completed.contains(a.name) && age <= a.last)) continue;
++			if (!cooperate && ASSIGNMENTS.stream().anyMatch(a -> a.matches(c) && !completed.contains(a.name) && age <= a.last)) continue;
+ 			int score = (c.style == Style.MELEE ? 9000 : c.style == Style.MAGIC ? 6500 : 500) - age * 100;
+ 			if (c.big) score = 10000 - age * 70;
+ 			// Preserve the named parent's finish priority after its opening window.
+@@ -438,7 +442,8 @@
+ 			add(candidates, room, next, d, score, tick, tick, c.born + 48);
+ 		}
+ 		if (candidates.isEmpty()) candidates.addAll(idleRange);
+-		Comparator<Candidate> priority = Comparator.comparingInt((Candidate c) -> deferred(c, tick) ? 0 : 1)
++		Comparator<Candidate> priority = Comparator.comparingInt((Candidate c) -> cleanupRescue(room, c.decision.target) ? 0 : 1)
++			.thenComparingInt(c -> deferred(c, tick) ? 0 : 1)
+ 			.thenComparingInt(c -> c.at)
+ 			.thenComparingInt(c -> -c.score)
+ 			.thenComparingInt(c -> -c.decision.target.wave)
+@@ -454,6 +459,7 @@
+ 				&& (c.decision.rule == null) == (selected.decision.rule == null)
+ 				&& c.first == selected.first && deferred(c, tick) == deferred(selected, tick)
+ 				&& (c.decision.weapon.style != Style.RANGE || selected.decision.weapon.style == Style.RANGE)
++				&& (!cleanupRescue(room, selected.decision.target) || cleanupRescue(room, c.decision.target))
+ 				// A tentative small approach chosen during the last projectile must
+ 				// yield to a known surviving 4/8 parent or required 24–26 recovery.
+ 				&& !(selected.decision.target.big
+@@ -631,6 +637,22 @@
+ 		return false;
+ 	}
+ 
++	private static boolean cleanupRescue(Room room, Crab target)
++	{
++		return room.wave >= 30 && target.wave >= 30 && target.partnerNulled && target.hp > 0 && !target.dying;
++	}
++
++	private static boolean finalLivingCleanup(Room room, Crab target)
++	{
++		return room.wave == 31 && target.hp > 0 && !target.dying
++			&& room.crabs.stream().noneMatch(other -> other.key != target.key && other.hp > 0 && !other.dying);
++	}
++
++	private static boolean cleanupCooperation(Room room, Crab target)
++	{
++		return cleanupRescue(room, target) || finalLivingCleanup(room, target);
++	}
++
+ 	private static boolean requiredBig(Crab c)
+ 	{
+ 		return c.big && (c.wave == 23 && c.lane == Lane.SOUTH || c.wave == 24 && (c.lane == Lane.SOUTH || c.lane == Lane.EAST || c.lane == Lane.WEST)

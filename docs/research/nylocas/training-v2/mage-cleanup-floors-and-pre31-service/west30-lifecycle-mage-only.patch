@@ -1,0 +1,54 @@
+--- .state/simulations/training-v4-candidate-cooperation-early29-separated-claims-combined-dims/policy-source/org/localscape/nylocas/mage/MageStrategy.java
++++ .state/simulations/training-v4-candidate-mage-west30-parent-lifecycle/policy-source/org/localscape/nylocas/mage/MageStrategy.java
+@@ -451,7 +451,7 @@
+ 		}
+ 		// A surviving partner-owned melee parent can still be killed normally.
+ 		// Begin its approach only after all own candidates and packets are clear.
+-		if (candidates.isEmpty() && next == null && room.wave == 31 && tick >= room.ready)
++		if (candidates.isEmpty() && next == null && room.wave == 31)
+ 		{
+ 			for (Crab c : room.crabs)
+ 			{
+@@ -477,7 +477,8 @@
+ 			}
+ 		}
+ 		if (candidates.isEmpty()) candidates.addAll(idleRange);
+-		Comparator<Candidate> priority = Comparator.comparingInt((Candidate c) -> cleanupRescue(room, c.decision.target) ? 0 : 1)
++		Comparator<Candidate> priority = Comparator.comparingInt((Candidate c) -> cleanupRescue(room, c.decision.target) ? 0
++			: west30MeleeTakeover(room, c.decision.target, tick) ? 1 : 2)
+ 			.thenComparingInt(c -> deferred(c, tick) ? 0 : 1)
+ 			.thenComparingInt(c -> c.at)
+ 			.thenComparingInt(c -> -c.score)
+@@ -495,6 +496,7 @@
+ 				&& c.first == selected.first && deferred(c, tick) == deferred(selected, tick)
+ 				&& (c.decision.weapon.style != Style.RANGE || selected.decision.weapon.style == Style.RANGE)
+ 				&& (!cleanupRescue(room, selected.decision.target) || cleanupRescue(room, c.decision.target))
++				&& (!west30MeleeTakeover(room, selected.decision.target, tick) || west30MeleeTakeover(room, c.decision.target, tick))
+ 				// A tentative small approach chosen during the last projectile must
+ 				// yield to a known surviving 4/8 parent or required 24–26 recovery.
+ 				&& !(selected.decision.target.big
+@@ -698,9 +700,24 @@
+ 		return room.wave == 20 && c.big && c.wave == 20 && c.lane == Lane.SOUTH;
+ 	}
+ 
++	private static boolean west30MeleeTakeover(Room room, Crab target, int tick)
++	{
++		int age = tick - target.born;
++		if (room.wave != 31 || target.wave != 30 || target.lane != Lane.WEST || !target.big
++			|| target.style != Style.MELEE || age < 26 || age >= 49) return false;
++		// The partner's complete range window has ended. Finish a surviving
++		// parent before it expires and creates another late pair, while keeping
++		// serviceable own east30/31 work and all partner-NULL rescue ahead.
++		return room.crabs.stream().noneMatch(own -> own.lane == Lane.EAST
++			&& (own.wave == 30 && own.big || own.wave == 31 && !own.big && own.slot == 'N')
++			&& own.style == Style.MAGIC && own.hp > 0 && !own.dying && !own.nulled
++			&& !dimmed(room, own) && tick - own.born < 49 && own.pendingDamage < own.hp);
++	}
++
+ 	private boolean finishBig(Crab c, Room room, int tick)
+ 	{
+ 		int age = tick - c.born;
++		if (west30MeleeTakeover(room, c, tick)) return true;
+ 		// These parents remain assigned after their initial rotation window.
+ 		// Bad damage, travel or a blocked packet must not abandon an unopened big.
+ 		if (requiredBig(c) && (c.wave != 23 || age >= 7)) return true;

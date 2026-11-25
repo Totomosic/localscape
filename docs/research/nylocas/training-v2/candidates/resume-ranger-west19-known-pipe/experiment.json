@@ -1,0 +1,27 @@
+{
+  "status": "SOFT prospective scheduling variant; not promoted; root owns simulations",
+  "baseline": "Inactive clean ranger-West19-followup candidate; copied unchanged, no diagnostic logging. Mageguard absent for root overlay.",
+  "policySource": "candidate/policy-source",
+  "isolatedDelta": "known-pipe.patch (relative to inactive followup, not canonical)",
+  "semantics": "Private last confirmed PIPE target+launch tick (attacked observationtick minus1). Only prospective18 return scheduling may treat that exact last PIPE as normally due at request+2. Actual own/partner leases remain untouched; normal planner cannot attack18 again before actualApplied. Full observedHP remains in work budget.",
+  "softScheduleCaveat": "Current followupEye and return must fit next reservation. Future18 schedule is a policy work estimate, not promised completion or joint feasibility with future20bow. Later real18 shots still pass normal reservations; actual20bow165 preempts hypothetical18pipe164 in the role regression.",
+  "markerSafety": "Other target PIPE replaces identity; any confirmed nonPIPE clears marker; reset clears marker; future impact not admitted; personalNULL/currentLOS/claims/native readiness/cutoff checks unchanged.",
+  "nativeTimingModel": "Normal rapid pipe native thrown projectile at range<=5 has2tick queued impact; due is a work-model input, not guaranteed timing if cancellation/movement intervenes and not guaranteed damage.",
+  "tests": {
+    "candidatePassed": 220,
+    "publicBaselineTests": 219,
+    "baselineExpectedFailures": 1,
+    "newPublicBehaviorTests": 11,
+    "newMarkerTimingResetTest": 1,
+    "note": "Marker predicate reset test needs new package method, so --baseline excludes only that1 added test."
+  },
+  "phaseCorrectAudit": {
+    "coupled100SoftRooms": 11,
+    "guidance100SoftRooms": 13,
+    "guidance200SoftRooms": 15,
+    "strictJointFutureReservationFrames": 0,
+    "script": ".state/simulations/training-v2-ranger-west19-followup-audit/audit-known-pipe.py"
+  },
+  "reproduce": "python3 .state/simulations/training-v2-candidate-ranger-west19-known-pipe/run-check.py; --baseline tests inactive prior followup policies",
+  "limits": "No canonical edits, native run or simulation by ranger agent. No performance claim; root must validate actual transition and20packet coverage."
+}

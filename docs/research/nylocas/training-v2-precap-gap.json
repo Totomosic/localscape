@@ -1,0 +1,2849 @@
+{
+  "scope": "actual current wave <20; confirmed primary launches only",
+  "human": {
+    "mage": {
+      "rooms": 46,
+      "precapAttacks": 1704,
+      "precapWeapons": {
+        "DART": 57,
+        "DINHS_SPEC": 46,
+        "EYE_OF_AYAK_AUTO": 854,
+        "SCYTHE": 96,
+        "SHADOW": 61,
+        "SULPHUR_BLADES": 570,
+        "UNKNOWN_BARRAGE": 20
+      },
+      "meanSpawnTicks": {
+        "8": 52,
+        "10": 68,
+        "12": 84.34782608695652,
+        "14": 101.91304347826087,
+        "16": 118.69565217391305,
+        "18": 135.47826086956522,
+        "19": 143.7391304347826,
+        "20": 155.82608695652175,
+        "21": 171.82608695652175,
+        "31": 264.2608695652174
+      },
+      "west19": {
+        "rooms": 46,
+        "ownershipRooms": {
+          "mage": 5,
+          "mage+ranger": 7,
+          "neither": 5,
+          "ranger": 29
+        },
+        "west19PrimaryAttacks": {
+          "mage": 12,
+          "ranger": 45
+        },
+        "rangerWest19Rooms": 36,
+        "firstRangerAge": {
+          "4": 22,
+          "9": 4,
+          "10": 1,
+          "11": 2,
+          "12": 3,
+          "13": 1,
+          "14": 1,
+          "15": 2
+        },
+        "firstRangerCurrentWave": {
+          "19": 29,
+          "20": 7
+        },
+        "medianDeltaFromFirstWave18": {
+          "west": 8.0,
+          "south": -3.0,
+          "east": -5.0
+        },
+        "examples": [
+          {
+            "uuid": "0783d870-5e9e-4227-98bf-3a2d495cd66e",
+            "firstTick": 144,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 11,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "0984071b-92ac-4bb7-aa3f-a1615bbca5e3",
+            "firstTick": 153,
+            "age": 9,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": 4,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "0c25e13d-045e-4362-a7e3-e4cf83f229a8",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 6,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "18b55b89-579b-4e7a-bb84-0d340fcceb2d",
+            "firstTick": 155,
+            "age": 15,
+            "currentWave": 20,
+            "deltaFromFirstWave18": {
+              "west": 15,
+              "south": 6,
+              "east": 4
+            }
+          },
+          {
+            "uuid": "1a0af441-a721-49d9-a579-d769c918cb69",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 4,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "282af10b-fa84-41fa-b021-14c0efbec5bc",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "3650ae9e-8234-4d76-b1a7-4bb879d7aa70",
+            "firstTick": 152,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 4,
+              "south": -3,
+              "east": -7
+            }
+          },
+          {
+            "uuid": "36e9d7cf-3953-4beb-b06d-7d04ec4fad58",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 2,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "3dce9472-ae63-4abb-a5f5-6218fdb47191",
+            "firstTick": 155,
+            "age": 11,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 13,
+              "south": 4,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "3f180e70-43b8-4dbf-aab5-73de891f85bf",
+            "firstTick": 152,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 6,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "4195844f-b13e-451f-916a-9b8ffd17b009",
+            "firstTick": 152,
+            "age": 12,
+            "currentWave": 20,
+            "deltaFromFirstWave18": {
+              "west": 14,
+              "south": 6,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "4374381d-f598-4d96-90b6-e5204385bc46",
+            "firstTick": 152,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 6,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "6293ac0f-925c-4ffa-9f57-9489bed6ab37",
+            "firstTick": 152,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": -3,
+              "east": -7
+            }
+          },
+          {
+            "uuid": "697c58b5-647b-4204-a039-30249ac4f04a",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 6,
+              "south": -3,
+              "east": -6
+            }
+          },
+          {
+            "uuid": "6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92",
+            "firstTick": 144,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 6,
+              "south": -3,
+              "east": -8
+            }
+          },
+          {
+            "uuid": "73687cf8-5599-4f4d-a92c-d663a3e9e78a",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": -3,
+              "east": -9
+            }
+          },
+          {
+            "uuid": "747b0a15-bdf7-4f83-aa41-6d2d4b214734",
+            "firstTick": 144,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 9,
+              "south": -3,
+              "east": -9
+            }
+          },
+          {
+            "uuid": "7aae7cc1-113d-4215-98e8-3df6912d99fe",
+            "firstTick": 151,
+            "age": 11,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": 6,
+              "east": 4
+            }
+          },
+          {
+            "uuid": "7c5d2999-85db-46aa-912e-5fe3a7b0904f",
+            "firstTick": 157,
+            "age": 9,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 11,
+              "south": 4,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "7dd836cc-c62c-4272-8cd7-b6e2014d7092",
+            "firstTick": 152,
+            "age": 12,
+            "currentWave": 20,
+            "deltaFromFirstWave18": {
+              "west": 16,
+              "south": 6,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "8a5b5f0c-57ef-4f4d-b554-a0d6f0c96e77",
+            "firstTick": 156,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 4,
+              "south": -3,
+              "east": -11
+            }
+          },
+          {
+            "uuid": "8d1f397b-2cf3-4540-8351-d945e33a0965",
+            "firstTick": 152,
+            "age": 12,
+            "currentWave": 20,
+            "deltaFromFirstWave18": {
+              "west": 14,
+              "south": 6,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "934cff40-3524-4711-b02e-86e029798465",
+            "firstTick": 159,
+            "age": 15,
+            "currentWave": 20,
+            "deltaFromFirstWave18": {
+              "west": 15,
+              "south": 10,
+              "east": 6
+            }
+          },
+          {
+            "uuid": "93acd8c7-85fb-4eb7-987e-44ad81636976",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 3,
+              "south": -3,
+              "east": -9
+            }
+          },
+          {
+            "uuid": "97778429-1912-47db-a6b0-45c0be484ca1",
+            "firstTick": 144,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 4,
+              "south": -3,
+              "east": -7
+            }
+          },
+          {
+            "uuid": "c052bfe0-61a9-45a6-8544-435ef6592bcd",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "c112f942-5558-4ed3-af57-2118458aea8a",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "c3f1e4ec-347d-411f-96bf-e5e2ed397d7d",
+            "firstTick": 153,
+            "age": 9,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": 4,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "e6e5e3fc-1218-4910-b488-383df243a8bf",
+            "firstTick": 158,
+            "age": 14,
+            "currentWave": 20,
+            "deltaFromFirstWave18": {
+              "west": 12,
+              "south": 8,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "ee0853e5-9652-467b-8606-c19f17f1768e",
+            "firstTick": 157,
+            "age": 13,
+            "currentWave": 20,
+            "deltaFromFirstWave18": {
+              "west": 18,
+              "south": 6,
+              "east": 4
+            }
+          },
+          {
+            "uuid": "f5cd51b6-7834-41b9-9861-14f03fbf2cf5",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 13,
+              "south": -5,
+              "east": -11
+            }
+          },
+          {
+            "uuid": "fc3ae6ed-cc38-4901-898e-8facd01cb9fc",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 4,
+              "south": -3,
+              "east": -7
+            }
+          },
+          {
+            "uuid": "fd1f3c04-9543-4d6c-aeed-721c5b22e14a",
+            "firstTick": 154,
+            "age": 10,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 15,
+              "south": 4,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "fe01a37b-1ca3-4b44-9793-a16e803c9a8a",
+            "firstTick": 153,
+            "age": 9,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 11,
+              "south": 4,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "fe97da07-8197-4625-bf23-31538d7e64fa",
+            "firstTick": 152,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 11,
+              "south": -5,
+              "east": -9
+            }
+          },
+          {
+            "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 4,
+              "south": -3,
+              "east": -5
+            }
+          }
+        ]
+      }
+    },
+    "thrallCastsFromMage46": [
+      {
+        "uuid": "0783d870-5e9e-4227-98bf-3a2d495cd66e",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -165,
+        "relative31": -261,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "0783d870-5e9e-4227-98bf-3a2d495cd66e",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -164,
+        "relative31": -260,
+        "relativeBoss": -312
+      },
+      {
+        "uuid": "0984071b-92ac-4bb7-aa3f-a1615bbca5e3",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -257,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "0984071b-92ac-4bb7-aa3f-a1615bbca5e3",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -257,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "0c25e13d-045e-4362-a7e3-e4cf83f229a8",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -253,
+        "relativeBoss": -305
+      },
+      {
+        "uuid": "0c25e13d-045e-4362-a7e3-e4cf83f229a8",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -168,
+        "relative31": -252,
+        "relativeBoss": -304
+      },
+      {
+        "uuid": "16732a46-4067-47f9-8c18-c4d60056726e",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -269,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "16732a46-4067-47f9-8c18-c4d60056726e",
+        "role": "ranger",
+        "tick": 7,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -165,
+        "relative31": -265,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "18b55b89-579b-4e7a-bb84-0d340fcceb2d",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -165,
+        "relative31": -261,
+        "relativeBoss": -305
+      },
+      {
+        "uuid": "18b55b89-579b-4e7a-bb84-0d340fcceb2d",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -165,
+        "relative31": -261,
+        "relativeBoss": -305
+      },
+      {
+        "uuid": "1a0af441-a721-49d9-a579-d769c918cb69",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -261,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "1a0af441-a721-49d9-a579-d769c918cb69",
+        "role": "mage",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 1,
+        "relative21": -168,
+        "relative31": -260,
+        "relativeBoss": -320
+      },
+      {
+        "uuid": "282af10b-fa84-41fa-b021-14c0efbec5bc",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -261,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "282af10b-fa84-41fa-b021-14c0efbec5bc",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -261,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "307224ee-7a6a-4246-8e56-e6bf85eaf701",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -173,
+        "relative31": -261,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "307224ee-7a6a-4246-8e56-e6bf85eaf701",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -173,
+        "relative31": -261,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "307224ee-7a6a-4246-8e56-e6bf85eaf701",
+        "role": "ranger",
+        "tick": 219,
+        "ordinal": 2,
+        "spell": 16,
+        "currentWave": 25,
+        "relative21": 43,
+        "relative31": -45,
+        "relativeBoss": -105
+      },
+      {
+        "uuid": "3650ae9e-8234-4d76-b1a7-4bb879d7aa70",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -173,
+        "relative31": -265,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "3650ae9e-8234-4d76-b1a7-4bb879d7aa70",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -172,
+        "relative31": -264,
+        "relativeBoss": -320
+      },
+      {
+        "uuid": "36e9d7cf-3953-4beb-b06d-7d04ec4fad58",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -269,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "36e9d7cf-3953-4beb-b06d-7d04ec4fad58",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -168,
+        "relative31": -268,
+        "relativeBoss": -320
+      },
+      {
+        "uuid": "378cf375-2692-4a32-b48c-8bd12333df81",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -265,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "378cf375-2692-4a32-b48c-8bd12333df81",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -265,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "378cf375-2692-4a32-b48c-8bd12333df81",
+        "role": "ranger",
+        "tick": 198,
+        "ordinal": 2,
+        "spell": 16,
+        "currentWave": 23,
+        "relative21": 26,
+        "relative31": -70,
+        "relativeBoss": -118
+      },
+      {
+        "uuid": "3dce9472-ae63-4abb-a5f5-6218fdb47191",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -257,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "3dce9472-ae63-4abb-a5f5-6218fdb47191",
+        "role": "mage",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 1,
+        "relative21": -168,
+        "relative31": -256,
+        "relativeBoss": -312
+      },
+      {
+        "uuid": "3dce9472-ae63-4abb-a5f5-6218fdb47191",
+        "role": "ranger",
+        "tick": 200,
+        "ordinal": 2,
+        "spell": 16,
+        "currentWave": 24,
+        "relative21": 28,
+        "relative31": -60,
+        "relativeBoss": -116
+      },
+      {
+        "uuid": "3f180e70-43b8-4dbf-aab5-73de891f85bf",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -173,
+        "relative31": -257,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "3f180e70-43b8-4dbf-aab5-73de891f85bf",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -173,
+        "relative31": -257,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "4195844f-b13e-451f-916a-9b8ffd17b009",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -165,
+        "relative31": -265,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "4195844f-b13e-451f-916a-9b8ffd17b009",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -164,
+        "relative31": -264,
+        "relativeBoss": -312
+      },
+      {
+        "uuid": "4374381d-f598-4d96-90b6-e5204385bc46",
+        "role": "mage",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 1,
+        "relative21": -172,
+        "relative31": -260,
+        "relativeBoss": -316
+      },
+      {
+        "uuid": "4374381d-f598-4d96-90b6-e5204385bc46",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -172,
+        "relative31": -260,
+        "relativeBoss": -316
+      },
+      {
+        "uuid": "6293ac0f-925c-4ffa-9f57-9489bed6ab37",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -173,
+        "relative31": -261,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "6293ac0f-925c-4ffa-9f57-9489bed6ab37",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -173,
+        "relative31": -261,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "697c58b5-647b-4204-a039-30249ac4f04a",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -261,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "697c58b5-647b-4204-a039-30249ac4f04a",
+        "role": "mage",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 1,
+        "relative21": -168,
+        "relative31": -260,
+        "relativeBoss": -316
+      },
+      {
+        "uuid": "6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92",
+        "role": "mage",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 1,
+        "relative21": -164,
+        "relative31": -260,
+        "relativeBoss": -316
+      },
+      {
+        "uuid": "6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -164,
+        "relative31": -260,
+        "relativeBoss": -316
+      },
+      {
+        "uuid": "73687cf8-5599-4f4d-a92c-d663a3e9e78a",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -261,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "73687cf8-5599-4f4d-a92c-d663a3e9e78a",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -168,
+        "relative31": -260,
+        "relativeBoss": -316
+      },
+      {
+        "uuid": "747b0a15-bdf7-4f83-aa41-6d2d4b214734",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -165,
+        "relative31": -261,
+        "relativeBoss": -309
+      },
+      {
+        "uuid": "747b0a15-bdf7-4f83-aa41-6d2d4b214734",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -164,
+        "relative31": -260,
+        "relativeBoss": -308
+      },
+      {
+        "uuid": "7aae7cc1-113d-4215-98e8-3df6912d99fe",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -165,
+        "relative31": -253,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "7aae7cc1-113d-4215-98e8-3df6912d99fe",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -165,
+        "relative31": -253,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "7aae7cc1-113d-4215-98e8-3df6912d99fe",
+        "role": "ranger",
+        "tick": 174,
+        "ordinal": 2,
+        "spell": 16,
+        "currentWave": 21,
+        "relative21": 6,
+        "relative31": -82,
+        "relativeBoss": -146
+      },
+      {
+        "uuid": "7b81bb5a-2c03-49c7-a556-cd202d0cf6da",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -253,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "7b81bb5a-2c03-49c7-a556-cd202d0cf6da",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -253,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "7c5d2999-85db-46aa-912e-5fe3a7b0904f",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -173,
+        "relative31": -265,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "7c5d2999-85db-46aa-912e-5fe3a7b0904f",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -173,
+        "relative31": -265,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "7dd836cc-c62c-4272-8cd7-b6e2014d7092",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -165,
+        "relative31": -269,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "7dd836cc-c62c-4272-8cd7-b6e2014d7092",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -165,
+        "relative31": -269,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "7dd836cc-c62c-4272-8cd7-b6e2014d7092",
+        "role": "ranger",
+        "tick": 149,
+        "ordinal": 2,
+        "spell": 16,
+        "currentWave": 19,
+        "relative21": -19,
+        "relative31": -123,
+        "relativeBoss": -167
+      },
+      {
+        "uuid": "82b37d8a-030f-40b1-85f1-14ef639f2787",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -265,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "82b37d8a-030f-40b1-85f1-14ef639f2787",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -265,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "8a5b5f0c-57ef-4f4d-b554-a0d6f0c96e77",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -177,
+        "relative31": -269,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "8a5b5f0c-57ef-4f4d-b554-a0d6f0c96e77",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -177,
+        "relative31": -269,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "8ad57d05-e365-4e4f-a2da-7dc2cc2f2730",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -261,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "8ad57d05-e365-4e4f-a2da-7dc2cc2f2730",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -261,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "8d1f397b-2cf3-4540-8351-d945e33a0965",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -165,
+        "relative31": -277,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "8d1f397b-2cf3-4540-8351-d945e33a0965",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -165,
+        "relative31": -277,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "934cff40-3524-4711-b02e-86e029798465",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -253,
+        "relativeBoss": -309
+      },
+      {
+        "uuid": "934cff40-3524-4711-b02e-86e029798465",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -168,
+        "relative31": -252,
+        "relativeBoss": -308
+      },
+      {
+        "uuid": "93acd8c7-85fb-4eb7-987e-44ad81636976",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -261,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "93acd8c7-85fb-4eb7-987e-44ad81636976",
+        "role": "mage",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 1,
+        "relative21": -168,
+        "relative31": -260,
+        "relativeBoss": -320
+      },
+      {
+        "uuid": "97778429-1912-47db-a6b0-45c0be484ca1",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -165,
+        "relative31": -257,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "97778429-1912-47db-a6b0-45c0be484ca1",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -164,
+        "relative31": -256,
+        "relativeBoss": -320
+      },
+      {
+        "uuid": "bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -165,
+        "relative31": -261,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14",
+        "role": "ranger",
+        "tick": 16,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 4,
+        "relative21": -152,
+        "relative31": -248,
+        "relativeBoss": -300
+      },
+      {
+        "uuid": "c052bfe0-61a9-45a6-8544-435ef6592bcd",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -261,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "c052bfe0-61a9-45a6-8544-435ef6592bcd",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -168,
+        "relative31": -260,
+        "relativeBoss": -320
+      },
+      {
+        "uuid": "c112f942-5558-4ed3-af57-2118458aea8a",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -257,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "c112f942-5558-4ed3-af57-2118458aea8a",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -168,
+        "relative31": -256,
+        "relativeBoss": -312
+      },
+      {
+        "uuid": "c3f1e4ec-347d-411f-96bf-e5e2ed397d7d",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -253,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "c3f1e4ec-347d-411f-96bf-e5e2ed397d7d",
+        "role": "mage",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 1,
+        "relative21": -168,
+        "relative31": -252,
+        "relativeBoss": -312
+      },
+      {
+        "uuid": "c3f1e4ec-347d-411f-96bf-e5e2ed397d7d",
+        "role": "ranger",
+        "tick": 187,
+        "ordinal": 2,
+        "spell": 16,
+        "currentWave": 22,
+        "relative21": 15,
+        "relative31": -69,
+        "relativeBoss": -129
+      },
+      {
+        "uuid": "e6e5e3fc-1218-4910-b488-383df243a8bf",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -257,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "e6e5e3fc-1218-4910-b488-383df243a8bf",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -257,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "e6e5e3fc-1218-4910-b488-383df243a8bf",
+        "role": "ranger",
+        "tick": 177,
+        "ordinal": 2,
+        "spell": 16,
+        "currentWave": 21,
+        "relative21": 5,
+        "relative31": -83,
+        "relativeBoss": -143
+      },
+      {
+        "uuid": "ee0853e5-9652-467b-8606-c19f17f1768e",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -257,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "ee0853e5-9652-467b-8606-c19f17f1768e",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -257,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "efa27528-eecf-48ba-8253-4815ef976eb7",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -165,
+        "relative31": -257,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "efa27528-eecf-48ba-8253-4815ef976eb7",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -165,
+        "relative31": -257,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "f5aab638-bf14-4511-8a83-026ea46cc37f",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -261,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "f5aab638-bf14-4511-8a83-026ea46cc37f",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -168,
+        "relative31": -260,
+        "relativeBoss": -316
+      },
+      {
+        "uuid": "f5cd51b6-7834-41b9-9861-14f03fbf2cf5",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -269,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "f5cd51b6-7834-41b9-9861-14f03fbf2cf5",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -269,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "fc3ae6ed-cc38-4901-898e-8facd01cb9fc",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -261,
+        "relativeBoss": -313
+      },
+      {
+        "uuid": "fc3ae6ed-cc38-4901-898e-8facd01cb9fc",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -168,
+        "relative31": -260,
+        "relativeBoss": -312
+      },
+      {
+        "uuid": "fd1f3c04-9543-4d6c-aeed-721c5b22e14a",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -265,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "fd1f3c04-9543-4d6c-aeed-721c5b22e14a",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -265,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "fe01a37b-1ca3-4b44-9793-a16e803c9a8a",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -257,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "fe01a37b-1ca3-4b44-9793-a16e803c9a8a",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -257,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "fe612bd5-cb4b-4943-89e5-1f6ca4af63a2",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -269,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "fe612bd5-cb4b-4943-89e5-1f6ca4af63a2",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -269,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "fe97da07-8197-4625-bf23-31538d7e64fa",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -173,
+        "relative31": -261,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "fe97da07-8197-4625-bf23-31538d7e64fa",
+        "role": "ranger",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 0,
+        "relative21": -173,
+        "relative31": -261,
+        "relativeBoss": -321
+      },
+      {
+        "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+        "role": "mage",
+        "tick": 3,
+        "ordinal": 1,
+        "spell": 15,
+        "currentWave": 0,
+        "relative21": -169,
+        "relative31": -261,
+        "relativeBoss": -317
+      },
+      {
+        "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+        "role": "ranger",
+        "tick": 4,
+        "ordinal": 1,
+        "spell": 16,
+        "currentWave": 1,
+        "relative21": -168,
+        "relative31": -260,
+        "relativeBoss": -316
+      }
+    ],
+    "ranger": {
+      "rooms": 42,
+      "precapAttacks": 2245,
+      "precapWeapons": {
+        "BOW": 119,
+        "CHIN": 192,
+        "CLAWS": 111,
+        "EYE": 512,
+        "PIPE": 1311
+      },
+      "meanSpawnTicks": {
+        "8": 52,
+        "10": 68,
+        "12": 84.76190476190476,
+        "14": 102.57142857142857,
+        "16": 119.42857142857143,
+        "18": 136.1904761904762,
+        "19": 144.28571428571428,
+        "20": 156.28571428571428,
+        "21": 172.28571428571428,
+        "31": 264.85714285714283
+      },
+      "west19": {
+        "rooms": 42,
+        "ownershipRooms": {
+          "mage": 6,
+          "mage+ranger": 7,
+          "neither": 6,
+          "ranger": 23
+        },
+        "west19PrimaryAttacks": {
+          "mage": 15,
+          "ranger": 42
+        },
+        "rangerWest19Rooms": 30,
+        "firstRangerAge": {
+          "3": 1,
+          "4": 20,
+          "9": 1,
+          "10": 1,
+          "11": 2,
+          "12": 2,
+          "13": 1,
+          "15": 2
+        },
+        "firstRangerCurrentWave": {
+          "19": 25,
+          "20": 5
+        },
+        "medianDeltaFromFirstWave18": {
+          "west": 8.0,
+          "south": -3.0,
+          "east": -5.0
+        },
+        "examples": [
+          {
+            "uuid": "0783d870-5e9e-4227-98bf-3a2d495cd66e",
+            "firstTick": 144,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 11,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "0a39a906-2984-4851-ace0-cd1e9b104aea",
+            "firstTick": 156,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 4,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "0c25e13d-045e-4362-a7e3-e4cf83f229a8",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 6,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "14aa975a-a31a-413e-b0dc-7b62c8f16fc9",
+            "firstTick": 152,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 4,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "3650ae9e-8234-4d76-b1a7-4bb879d7aa70",
+            "firstTick": 152,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 4,
+              "south": -3,
+              "east": -7
+            }
+          },
+          {
+            "uuid": "36e9d7cf-3953-4beb-b06d-7d04ec4fad58",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 2,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "3709bee9-ef63-4652-b065-94378dfc1343",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 4,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "4195844f-b13e-451f-916a-9b8ffd17b009",
+            "firstTick": 152,
+            "age": 12,
+            "currentWave": 20,
+            "deltaFromFirstWave18": {
+              "west": 14,
+              "south": 6,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "4374381d-f598-4d96-90b6-e5204385bc46",
+            "firstTick": 152,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 6,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "4e00043b-b6b6-4cd2-b43d-7149636e04cf",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "4f90fa47-6f60-4935-9914-adcbb67a7564",
+            "firstTick": 152,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": -3,
+              "east": -9
+            }
+          },
+          {
+            "uuid": "6117f746-6276-43dd-8195-0541d6ca719c",
+            "firstTick": 152,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": -3,
+              "east": -7
+            }
+          },
+          {
+            "uuid": "63ca9240-d989-4989-b27a-56b646883abe",
+            "firstTick": 151,
+            "age": 3,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": -3,
+              "east": -9
+            }
+          },
+          {
+            "uuid": "6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92",
+            "firstTick": 144,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 6,
+              "south": -3,
+              "east": -8
+            }
+          },
+          {
+            "uuid": "73687cf8-5599-4f4d-a92c-d663a3e9e78a",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": -3,
+              "east": -9
+            }
+          },
+          {
+            "uuid": "747b0a15-bdf7-4f83-aa41-6d2d4b214734",
+            "firstTick": 144,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 9,
+              "south": -3,
+              "east": -9
+            }
+          },
+          {
+            "uuid": "82f0c657-82bc-4b1c-a19e-ae80175dcc08",
+            "firstTick": 152,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 4,
+              "south": -4,
+              "east": -8
+            }
+          },
+          {
+            "uuid": "934cff40-3524-4711-b02e-86e029798465",
+            "firstTick": 159,
+            "age": 15,
+            "currentWave": 20,
+            "deltaFromFirstWave18": {
+              "west": 15,
+              "south": 10,
+              "east": 6
+            }
+          },
+          {
+            "uuid": "97778429-1912-47db-a6b0-45c0be484ca1",
+            "firstTick": 144,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 4,
+              "south": -3,
+              "east": -7
+            }
+          },
+          {
+            "uuid": "b4ba2dd6-abe5-485c-b99c-b8b872d4d290",
+            "firstTick": 159,
+            "age": 15,
+            "currentWave": 20,
+            "deltaFromFirstWave18": {
+              "west": 10,
+              "south": 4,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "c052bfe0-61a9-45a6-8544-435ef6592bcd",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "c112f942-5558-4ed3-af57-2118458aea8a",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "cf64d5dd-05d8-49c4-b854-1ac7235923e0",
+            "firstTick": 151,
+            "age": 11,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 10,
+              "south": 4,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "d5cbc4b0-1aa1-4586-b599-7875c131d34d",
+            "firstTick": 152,
+            "age": 12,
+            "currentWave": 20,
+            "deltaFromFirstWave18": {
+              "west": 17,
+              "south": 6,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "dae05a58-6d36-40fe-8463-1d0a66f78a5c",
+            "firstTick": 151,
+            "age": 11,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 7,
+              "south": 4,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "df3a8a7a-446c-481d-948f-615d12c061e8",
+            "firstTick": 161,
+            "age": 13,
+            "currentWave": 20,
+            "deltaFromFirstWave18": {
+              "west": 9,
+              "south": 6,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "e258f37f-09c9-4df6-96c2-86a6fd828818",
+            "firstTick": 154,
+            "age": 10,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 6,
+              "south": 4,
+              "east": 2
+            }
+          },
+          {
+            "uuid": "f3b4982c-c20f-4b79-9e71-0a506ffe06ba",
+            "firstTick": 153,
+            "age": 9,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 8,
+              "south": -3,
+              "east": -5
+            }
+          },
+          {
+            "uuid": "fc3ae6ed-cc38-4901-898e-8facd01cb9fc",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 4,
+              "south": -3,
+              "east": -7
+            }
+          },
+          {
+            "uuid": "ff40985c-663c-4119-8070-9434283cb671",
+            "firstTick": 148,
+            "age": 4,
+            "currentWave": 19,
+            "deltaFromFirstWave18": {
+              "west": 4,
+              "south": -3,
+              "east": -5
+            }
+          }
+        ]
+      },
+      "precapChinPrimaryBirthLane": {
+        "10:east": 27,
+        "10:south": 32,
+        "10:split": 1,
+        "10:west": 33,
+        "16:west": 8,
+        "3:south": 40,
+        "6:south": 22,
+        "7:split": 2,
+        "8:east": 24,
+        "8:split": 2,
+        "9:split": 1
+      }
+    }
+  },
+  "bot": {
+    "trials": 30,
+    "precapWeapons": {
+      "ranger": {
+        "BOW": 173,
+        "EYE": 447,
+        "PIPE": 969,
+        "CLAWS": 60,
+        "CHIN": 117
+      },
+      "mage": {
+        "SHADOW": 30,
+        "EYE": 615,
+        "SULPHUR": 441,
+        "BARRAGE": 30,
+        "SCYTHE": 65,
+        "DINH": 29,
+        "PIPE": 26
+      }
+    },
+    "precapChinPrimaryBirthLane": {
+      "10:west": 32,
+      "10:east": 30,
+      "10:south": 32,
+      "11:split": 3,
+      "7:split": 1,
+      "8:split": 4,
+      "19:split": 3,
+      "16:east": 1,
+      "17:split": 2,
+      "5:split": 2,
+      "16:split": 1,
+      "12:split": 3,
+      "10:split": 2,
+      "8:east": 1
+    },
+    "west19PrimaryAttacks": {
+      "1:19:EYE": 43,
+      "1:20:EYE": 3,
+      "0:20:EYE": 1
+    },
+    "west19Examples": [
+      {
+        "seed": 1,
+        "tick": 148,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 2,
+        "tick": 149,
+        "role": 1,
+        "wave": 19,
+        "age": 1,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 2,
+        "tick": 155,
+        "role": 1,
+        "wave": 19,
+        "age": 7,
+        "rule": "West big 19",
+        "hp": 5
+      },
+      {
+        "seed": 3,
+        "tick": 152,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 3,
+        "tick": 159,
+        "role": 1,
+        "wave": 19,
+        "age": 7,
+        "rule": "West big 19",
+        "hp": 4
+      },
+      {
+        "seed": 4,
+        "tick": 152,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 4,
+        "tick": 159,
+        "role": 1,
+        "wave": 19,
+        "age": 7,
+        "rule": "West big 19",
+        "hp": 2
+      },
+      {
+        "seed": 5,
+        "tick": 156,
+        "role": 1,
+        "wave": 19,
+        "age": 8,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 6,
+        "tick": 148,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 7,
+        "tick": 154,
+        "role": 1,
+        "wave": 19,
+        "age": 2,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 8,
+        "tick": 152,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 8,
+        "tick": 161,
+        "role": 1,
+        "wave": 19,
+        "age": 9,
+        "rule": "West big 19",
+        "hp": 15
+      },
+      {
+        "seed": 8,
+        "tick": 167,
+        "role": 1,
+        "wave": 20,
+        "age": 15,
+        "rule": "West big 19",
+        "hp": 6
+      },
+      {
+        "seed": 9,
+        "tick": 148,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 10,
+        "tick": 152,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 11,
+        "tick": 160,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 12,
+        "tick": 148,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 12,
+        "tick": 158,
+        "role": 1,
+        "wave": 19,
+        "age": 10,
+        "rule": "West big 19",
+        "hp": 15
+      },
+      {
+        "seed": 13,
+        "tick": 148,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 13,
+        "tick": 155,
+        "role": 1,
+        "wave": 19,
+        "age": 7,
+        "rule": "West big 19",
+        "hp": 12
+      },
+      {
+        "seed": 14,
+        "tick": 152,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 15,
+        "tick": 152,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 16,
+        "tick": 148,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 16,
+        "tick": 158,
+        "role": 1,
+        "wave": 19,
+        "age": 10,
+        "rule": "West big 19",
+        "hp": 12
+      },
+      {
+        "seed": 16,
+        "tick": 164,
+        "role": 1,
+        "wave": 19,
+        "age": 16,
+        "rule": "West big 19",
+        "hp": 4
+      },
+      {
+        "seed": 17,
+        "tick": 152,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 18,
+        "tick": 152,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 18,
+        "tick": 159,
+        "role": 1,
+        "wave": 19,
+        "age": 7,
+        "rule": "West big 19",
+        "hp": 15
+      },
+      {
+        "seed": 18,
+        "tick": 165,
+        "role": 0,
+        "wave": 20,
+        "age": 13,
+        "rule": "null",
+        "hp": 4
+      },
+      {
+        "seed": 19,
+        "tick": 152,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 19,
+        "tick": 159,
+        "role": 1,
+        "wave": 19,
+        "age": 7,
+        "rule": "West big 19",
+        "hp": 2
+      },
+      {
+        "seed": 20,
+        "tick": 156,
+        "role": 1,
+        "wave": 19,
+        "age": 8,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 21,
+        "tick": 164,
+        "role": 1,
+        "wave": 20,
+        "age": 16,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 22,
+        "tick": 152,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 23,
+        "tick": 160,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 23,
+        "tick": 167,
+        "role": 1,
+        "wave": 19,
+        "age": 7,
+        "rule": "West big 19",
+        "hp": 3
+      },
+      {
+        "seed": 24,
+        "tick": 156,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 25,
+        "tick": 164,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 25,
+        "tick": 171,
+        "role": 1,
+        "wave": 19,
+        "age": 7,
+        "rule": "West big 19",
+        "hp": 14
+      },
+      {
+        "seed": 25,
+        "tick": 180,
+        "role": 1,
+        "wave": 20,
+        "age": 16,
+        "rule": "West big 19",
+        "hp": 12
+      },
+      {
+        "seed": 26,
+        "tick": 152,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 26,
+        "tick": 159,
+        "role": 1,
+        "wave": 19,
+        "age": 7,
+        "rule": "West big 19",
+        "hp": 3
+      },
+      {
+        "seed": 27,
+        "tick": 160,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 28,
+        "tick": 152,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 28,
+        "tick": 159,
+        "role": 1,
+        "wave": 19,
+        "age": 7,
+        "rule": "West big 19",
+        "hp": 3
+      },
+      {
+        "seed": 29,
+        "tick": 152,
+        "role": 1,
+        "wave": 19,
+        "age": 0,
+        "rule": "West big 19",
+        "hp": 16
+      },
+      {
+        "seed": 30,
+        "tick": 149,
+        "role": 1,
+        "wave": 19,
+        "age": 1,
+        "rule": "West big 19",
+        "hp": 16
+      }
+    ],
+    "meanSpawnTicks": {
+      "0": 0,
+      "1": 4,
+      "2": 8,
+      "3": 12,
+      "4": 16,
+      "5": 20,
+      "6": 36,
+      "7": 40,
+      "8": 52,
+      "9": 56.666666666666664,
+      "10": 68.66666666666667,
+      "11": 78.53333333333333,
+      "12": 88.26666666666667,
+      "13": 99.33333333333333,
+      "14": 107.6,
+      "15": 116.26666666666667,
+      "16": 124.93333333333334,
+      "17": 130.53333333333333,
+      "18": 143.33333333333334,
+      "19": 151.86666666666667,
+      "20": 170.26666666666668,
+      "21": 186.26666666666668,
+      "22": 195.2,
+      "23": 207.2,
+      "24": 215.73333333333332,
+      "25": 224,
+      "26": 232,
+      "27": 236,
+      "28": 244,
+      "29": 255.73333333333332,
+      "30": 266.8,
+      "31": 277.8666666666667
+    },
+    "thrallRenewalRequests": [
+      {
+        "role": 1,
+        "tick": 208,
+        "wave": 24
+      },
+      {
+        "role": 0,
+        "tick": 309,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 209,
+        "wave": 24
+      },
+      {
+        "role": 0,
+        "tick": 312,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 207,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 301,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 207,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 314,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 212,
+        "wave": 24
+      },
+      {
+        "role": 0,
+        "tick": 307,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 211,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 317,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 207,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 314,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 207,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 318,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 210,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 281,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 223,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 319,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 231,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 243,
+        "wave": 25
+      },
+      {
+        "role": 1,
+        "tick": 236,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 334,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 208,
+        "wave": 24
+      },
+      {
+        "role": 0,
+        "tick": 308,
+        "wave": 31
+      },
+      {
+        "role": 0,
+        "tick": 215,
+        "wave": 22
+      },
+      {
+        "role": 1,
+        "tick": 228,
+        "wave": 23
+      },
+      {
+        "role": 1,
+        "tick": 207,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 299,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 220,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 321,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 211,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 311,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 207,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 306,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 210,
+        "wave": 24
+      },
+      {
+        "role": 0,
+        "tick": 303,
+        "wave": 31
+      },
+      {
+        "role": 0,
+        "tick": 221,
+        "wave": 23
+      },
+      {
+        "role": 1,
+        "tick": 227,
+        "wave": 23
+      },
+      {
+        "role": 1,
+        "tick": 208,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 308,
+        "wave": 31
+      },
+      {
+        "role": 0,
+        "tick": 308,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 220,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 321,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 223,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 330,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 220,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 322,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 211,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 310,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 212,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 319,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 207,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 314,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 215,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 322,
+        "wave": 31
+      },
+      {
+        "role": 1,
+        "tick": 227,
+        "wave": 23
+      },
+      {
+        "role": 0,
+        "tick": 321,
+        "wave": 31
+      }
+    ],
+    "meanPrecapStalls": 4.566666666666666,
+    "meanStallsByLastSpawnedWave": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0.16666666666666666,
+      "9": 0,
+      "10": 0.4666666666666667,
+      "11": 0.43333333333333335,
+      "12": 0.7666666666666667,
+      "13": 0.06666666666666667,
+      "14": 0.16666666666666666,
+      "15": 0.16666666666666666,
+      "16": 0.4,
+      "17": 0.2,
+      "18": 0.13333333333333333,
+      "19": 1.6,
+      "20": 0,
+      "21": 0.23333333333333334,
+      "22": 0,
+      "23": 0.13333333333333333,
+      "24": 0.06666666666666667,
+      "25": 0,
+      "26": 0,
+      "27": 0,
+      "28": 1.9333333333333333,
+      "29": 1.7666666666666666,
+      "30": 1.7666666666666666
+    }
+  },
+  "sources": {
+    "docs/research/nylocas/vetting/summary.json": "664c0094b48e54c62a18a8141a05c73eb7686178ebd7be252158ae9e562d78db",
+    ".state/simulations/training-v2-utility-instrumented-30/server.log": "fbb784b35ffc803b07d9fdfe4315724aef49c1ce81b4ca4b1a58892eabaaad4f",
+    ".state/simulations/training-v2-utility-instrumented-30/trials.csv": "2a5c18c96f913f4b741d4d62fc9f9953276fa75fef2726038521c8160b6f434d",
+    ".state/simulations/training-v2-utility-instrumented-30/policy-source/org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+    ".state/simulations/training-v2-utility-instrumented-30/policy-source/org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+    ".state/simulations/training-v2-utility-instrumented-30/policy-source/org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+    ".state/simulations/training-v2-utility-instrumented-30/policy-source/org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+    ".state/simulations/training-v2-utility-instrumented-30/policy-source/org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+    ".state/simulations/training-v2-utility-instrumented-30/policy-source/org/localscape/nylocas/mage/MageStrategy.java": "50541106b6d03051bf8dbf266e44236bd93f090d072af434fb136c87890d1466",
+    ".state/simulations/training-v2-utility-instrumented-30/policy-source/org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+    ".state/simulations/training-v2-utility-instrumented-30/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "e4f3dc9f4e2ec72a9d21e61519442b51a92d1fc84a8d6250ff907a757b1aa09b",
+    ".state/simulations/training-v2-utility-instrumented-30/policy-source/org/localscape/nylocas/ranger/RangerStrategy.java": "d27dbe505cd41c13a3810e34e1a4634fbfa1eee300eae231feb08bfa55ef6368",
+    "docs/research/nylocas/mage/attacks.csv": "b97565e0dd780c3c1e70eb96cab5244480603e2b95943bb5a647524d8ffddb46",
+    "docs/research/nylocas/mage/waves.csv": "9c2517629e6c794711f6a85f523d863484bca7bd4cc776f350756e6ac885d653",
+    "docs/research/nylocas/mage/recordings/0783d870-5e9e-4227-98bf-3a2d495cd66e.events.json.gz": "f6595fad59b0c68af3b1794d49cfe4978116e8cc49d9c1413012237fff07c969",
+    "docs/research/nylocas/mage/recordings/0984071b-92ac-4bb7-aa3f-a1615bbca5e3.events.json.gz": "5e925e392f39f21a929f9d1f446dc805c1417b0e1e686721ec9edfdc64faeed6",
+    "docs/research/nylocas/mage/recordings/0c25e13d-045e-4362-a7e3-e4cf83f229a8.events.json.gz": "6a615da282a229e39b6754c8ed1d7869ac83b75142f6045ce39c88f88941736f",
+    "docs/research/nylocas/mage/recordings/16732a46-4067-47f9-8c18-c4d60056726e.events.json.gz": "8673f463c79192146c047ba1d3697a6fc9ac804a766a9966129b65cd7e5eb554",
+    "docs/research/nylocas/mage/recordings/18b55b89-579b-4e7a-bb84-0d340fcceb2d.events.json.gz": "eab0f2b7f23b9465bcb054c143d114e1814c2fbbb6ce0fafa71f08ec1d07bfb9",
+    "docs/research/nylocas/mage/recordings/1a0af441-a721-49d9-a579-d769c918cb69.events.json.gz": "c1e21f4c7077ff72f7bce31f64a80803e41077a7208a9de3c6773a19565c6384",
+    "docs/research/nylocas/mage/recordings/282af10b-fa84-41fa-b021-14c0efbec5bc.events.json.gz": "37e46b99337ea7052cd6b6a991695b131c4298ea9590b2c21d6501f8ec33f60b",
+    "docs/research/nylocas/mage/recordings/307224ee-7a6a-4246-8e56-e6bf85eaf701.events.json.gz": "955945fafb67311f755363fcff98c877c1c44404c69b0e9a1f1561c1701ae0e2",
+    "docs/research/nylocas/mage/recordings/3650ae9e-8234-4d76-b1a7-4bb879d7aa70.events.json.gz": "82bb2fa41609786881100e9497447ff3fb4db67bdfbd4caa979dc7c246ee9124",
+    "docs/research/nylocas/mage/recordings/36e9d7cf-3953-4beb-b06d-7d04ec4fad58.events.json.gz": "b333cad66b145bbeaa46d3874872a4faf66bcd165c96ba9e2ab986e8b18e2267",
+    "docs/research/nylocas/mage/recordings/378cf375-2692-4a32-b48c-8bd12333df81.events.json.gz": "3fb5ab84d0aae117cabf6805d31f13c6e7b8b27e571eab6f6b3278f6698a2985",
+    "docs/research/nylocas/mage/recordings/3dce9472-ae63-4abb-a5f5-6218fdb47191.events.json.gz": "3dce0243c08edaa98b3ba41157ddb35ee66c7e937d1a49c1d1631890b85e4701",
+    "docs/research/nylocas/mage/recordings/3f180e70-43b8-4dbf-aab5-73de891f85bf.events.json.gz": "bb2ad2c31f62adf44c809167924e20b7cbc5b9e78577ec0e394440469c2dc4cc",
+    "docs/research/nylocas/mage/recordings/4195844f-b13e-451f-916a-9b8ffd17b009.events.json.gz": "42bea91bd4f6e35ce93ec24a1ef0024be81fe98fdca59434f339b4f3b5f377d6",
+    "docs/research/nylocas/mage/recordings/4374381d-f598-4d96-90b6-e5204385bc46.events.json.gz": "d3dcd71de36aaabdb85ef63b8cc2fb298f94e2388a13699f5b08a16c9164e8e7",
+    "docs/research/nylocas/mage/recordings/6293ac0f-925c-4ffa-9f57-9489bed6ab37.events.json.gz": "fe451fa3a3a4231fdcf48a5d2d74e128b2cae50f9aa32bba139fd07e26f285ec",
+    "docs/research/nylocas/mage/recordings/697c58b5-647b-4204-a039-30249ac4f04a.events.json.gz": "621d451be8d12d7ff7ef6d3ab6873d69b1cc8672ec01455ae68402785419e1bd",
+    "docs/research/nylocas/mage/recordings/6c9cb37e-45cd-4c41-92fd-8f4dd21e6f92.events.json.gz": "f69fbc854c8e4c8ec2f7ad4881a22695abaa6ae8c9ff7c1e53ae4e25768c6bb2",
+    "docs/research/nylocas/mage/recordings/73687cf8-5599-4f4d-a92c-d663a3e9e78a.events.json.gz": "e3c55ce54d1a403af4969491cb6193571b8c038af9e8c1ab32ef812e922c61e7",
+    "docs/research/nylocas/mage/recordings/747b0a15-bdf7-4f83-aa41-6d2d4b214734.events.json.gz": "06c1c62a25e0df07aa4d29302e894a98b818ff9629897fe026ad47208c8a8fe7",
+    "docs/research/nylocas/mage/recordings/7aae7cc1-113d-4215-98e8-3df6912d99fe.events.json.gz": "de260299fce0ab345efe14e4b567dcc0fc19a3c4733cb9149e171da0ef4ac335",
+    "docs/research/nylocas/mage/recordings/7b81bb5a-2c03-49c7-a556-cd202d0cf6da.events.json.gz": "df28e55ee6090160b6fd4f99e94aa6d41c28a2c539f2b88f57395608a75f3e7e",
+    "docs/research/nylocas/mage/recordings/7c5d2999-85db-46aa-912e-5fe3a7b0904f.events.json.gz": "e8deb7f9333b5333aac416a125502fdc236eec420014ca646f511d6eeeb795a6",
+    "docs/research/nylocas/mage/recordings/7dd836cc-c62c-4272-8cd7-b6e2014d7092.events.json.gz": "dc90f579a8e72af7f98e0480082b5d9e196658bc1ecf4694256eead11c1ef6d3",
+    "docs/research/nylocas/mage/recordings/82b37d8a-030f-40b1-85f1-14ef639f2787.events.json.gz": "bc0811b3a147b40e34ad8ceb9124897cfa5602b5bd2bec618c1df0cb6aa4cecf",
+    "docs/research/nylocas/mage/recordings/8a5b5f0c-57ef-4f4d-b554-a0d6f0c96e77.events.json.gz": "7ab7850657ccf7bded9c2db1435782997cd02af4d35c6e782094b100d803ef1b",
+    "docs/research/nylocas/mage/recordings/8ad57d05-e365-4e4f-a2da-7dc2cc2f2730.events.json.gz": "a4c7accc7a98dd4025138d18a0c87d9f63a8db71b2f85ee114f833b444bfe430",
+    "docs/research/nylocas/mage/recordings/8d1f397b-2cf3-4540-8351-d945e33a0965.events.json.gz": "2892aa1d6c9f6edde46221144c8038de245220897200e3dd397635697f9f1534",
+    "docs/research/nylocas/mage/recordings/934cff40-3524-4711-b02e-86e029798465.events.json.gz": "b974cbf68e40ac52e469ca959c6d1e76a5b5fa8740e3a11f0e7048983c007f17",
+    "docs/research/nylocas/mage/recordings/93acd8c7-85fb-4eb7-987e-44ad81636976.events.json.gz": "dc69e07eea4cb1afbe2f8d44f5951229bf3622147ec82c08cc38a70b486fb867",
+    "docs/research/nylocas/mage/recordings/97778429-1912-47db-a6b0-45c0be484ca1.events.json.gz": "004a09ec16f27226e7af1008c66924e36df0c3396f06163cef2013ac47e88892",
+    "docs/research/nylocas/mage/recordings/bf4ebc82-56cb-4cb5-9df7-9a8342cf2e14.events.json.gz": "1ed2e7768f054396f82e7b0fa5168587d15504618e146cf8a2cd01fac0c0100a",
+    "docs/research/nylocas/mage/recordings/c052bfe0-61a9-45a6-8544-435ef6592bcd.events.json.gz": "bfc80b5f52f76eb7475c315c8efd045303a2cba30559f290768fdfc3dc443cd0",
+    "docs/research/nylocas/mage/recordings/c112f942-5558-4ed3-af57-2118458aea8a.events.json.gz": "1fa5f04f0b20c05a456b7848382b4c0a3e76f2978d3965f182217954a32658cf",
+    "docs/research/nylocas/mage/recordings/c3f1e4ec-347d-411f-96bf-e5e2ed397d7d.events.json.gz": "9da8353f8bdac92b6d28a815dbdbf8700b7b33b771d4ae70c892bed88e966a2a",
+    "docs/research/nylocas/mage/recordings/e6e5e3fc-1218-4910-b488-383df243a8bf.events.json.gz": "fd60d64f327c215acaadd347dc84f0b784ba6ecb2003d4ef57b03c799c53b243",
+    "docs/research/nylocas/mage/recordings/ee0853e5-9652-467b-8606-c19f17f1768e.events.json.gz": "6272bf142c1d0d9d996010fda7afaea4de4513769749af8fd64ab588cb89d7ac",
+    "docs/research/nylocas/mage/recordings/efa27528-eecf-48ba-8253-4815ef976eb7.events.json.gz": "47e739c6eec0990f7581b6f7bd8c9b48b1ab198532d4cacff03836fe2ca4488d",
+    "docs/research/nylocas/mage/recordings/f5aab638-bf14-4511-8a83-026ea46cc37f.events.json.gz": "278bf463dda6c3040f7b39f59cbc6f7456554181c9470373dd4b154600fec8a9",
+    "docs/research/nylocas/mage/recordings/f5cd51b6-7834-41b9-9861-14f03fbf2cf5.events.json.gz": "fa18612cb2e74f5244aa8d1135f175325d1427e575c60c523339a169a67e064a",
+    "docs/research/nylocas/mage/recordings/fc3ae6ed-cc38-4901-898e-8facd01cb9fc.events.json.gz": "101ee59349bbd6b8aca68358c82f5897685c0849ef5abab7558b5f8c4b66b80d",
+    "docs/research/nylocas/mage/recordings/fd1f3c04-9543-4d6c-aeed-721c5b22e14a.events.json.gz": "877bc5fe350870c6815db40b517289a3ea11f7102879463d6b87a469514c9120",
+    "docs/research/nylocas/mage/recordings/fe01a37b-1ca3-4b44-9793-a16e803c9a8a.events.json.gz": "6a690b35386f028a65eeee0e320f774ad73b2b710d6b1086b6dc8d768968afd3",
+    "docs/research/nylocas/mage/recordings/fe612bd5-cb4b-4943-89e5-1f6ca4af63a2.events.json.gz": "fe96e1d231d6470813b520df26815310a6eed6828a55ac1906686341d519e1e9",
+    "docs/research/nylocas/mage/recordings/fe97da07-8197-4625-bf23-31538d7e64fa.events.json.gz": "31658118ae16ae51fb3895c1b215767c52bfba8b08d5455c8f8a5742f5be399a",
+    "docs/research/nylocas/mage/recordings/ff40985c-663c-4119-8070-9434283cb671.events.json.gz": "970105810a62599e3d166bd7a2c900c4bc883136a7900d73b315f4b130daec1e",
+    "docs/research/nylocas/training-v2/training-v2-spell-definitions.json": "c1f3443b9689a9ab0e096c4e904f4b88aaea6866f4a68feb2bf6357d3b000d69",
+    "docs/research/nylocas/ranger/attacks.csv": "37c1681d6a8735cc0031e7a2537d7c2bfe445f2a45732acc7baa79774010d16a",
+    "docs/research/nylocas/ranger/waves.csv": "74cfee3eed286725f6f0f9c0693c38fbce4a6d9c1b4c6f620b84e22a4d6b987c"
+  }
+}

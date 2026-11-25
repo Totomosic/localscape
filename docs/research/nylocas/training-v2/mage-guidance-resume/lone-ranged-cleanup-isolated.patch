@@ -1,0 +1,42 @@
+--- .state/simulations/training-v3-candidate-mage-required-parent-age/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:42:10.370703920 +0800
++++ .state/simulations/training-v3-candidate-mage-lone-ranged-cleanup-v2/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:51:47.536391060 +0800
+@@ -181,8 +181,9 @@
+ 	static boolean eligible(Room room, Crab c, int tick)
+ 	{
+ 		return !c.dying && !c.nulled && c.claimedUntil <= tick && !c.awaitingHit(tick) && tick - c.born < 49
+-			&& (room.wave - c.wave <= MAX_WAVE_AGE || requiredBig(c)) && !rangerOwned(c)
+-			&& !rangerPacket(c, tick) && (room.wave < 31 || c.wave > 29);
++			&& (room.wave - c.wave <= MAX_WAVE_AGE || requiredBig(c))
++			&& (loneRangedCleanup(room, c) || !rangerOwned(c) && !rangerPacket(c, tick))
++			&& (room.wave < 31 || c.wave > 29);
+ 	}
+ 
+ 	public static boolean matchesNext(Crab c, Style style, int tick)
+@@ -404,7 +405,9 @@
+ 				Decision fallback = new Decision(c, Weapon.PIPE, c.point, false, null, "Idle ranged split support");
+ 				add(idleRange, room, next, fallback, 500 - age * 100, tick, tick, tick);
+ 			}
+-			if (c.big && !finishBig(c, room, tick) || c.style == Style.RANGE && (c.big || !c.partnerNulled)) continue;
++			boolean loneRange = loneRangedCleanup(room, c);
++			if (c.big && !finishBig(c, room, tick) && !loneRange
++				|| c.style == Style.RANGE && (c.big || !c.partnerNulled) && !loneRange) continue;
+ 			// Lane assignments own their opening offset and weapon. Generic cleanup
+ 			// must not bypass the rotation while that assignment is still pending.
+ 			if (ASSIGNMENTS.stream().anyMatch(a -> a.matches(c) && !completed.contains(a.name) && age <= a.last)) continue;
+@@ -602,6 +605,16 @@
+ 		return false;
+ 	}
+ 
++	private static boolean loneRangedCleanup(Room room, Crab target)
++	{
++		// Jordan's last-crab rule counts every living crab, including old
++		// births otherwise ignored by the cleanup cutoff. Claims/NULL/expiry
++		// are still checked by eligible before ordinary pipe selection.
++		return room.wave == 31 && target.wave >= 30 && target.style == Style.RANGE
++			&& target.hp > 0 && !target.dying
++			&& room.crabs.stream().filter(c -> c.hp > 0 && !c.dying).count() == 1;
++	}
++
+ 	private static boolean requiredBig(Crab c)
+ 	{
+ 		return c.big && (c.wave == 23 && c.lane == Lane.SOUTH || c.wave == 24 && (c.lane == Lane.SOUTH || c.lane == Lane.EAST || c.lane == Lane.WEST)

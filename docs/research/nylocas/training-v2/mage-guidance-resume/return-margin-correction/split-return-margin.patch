@@ -1,0 +1,12 @@
+--- .state/simulations/training-v3-forecast-guidance-refined-fresh-300/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 19:02:43.963391532 +0800
++++ .state/simulations/training-v3-candidate-mage-22-split-return-budget/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 19:36:57.433115220 +0800
+@@ -523,7 +523,8 @@
+ 			// Travel during cooldown overlaps it, both on approach and on return to a packet.
+ 			int returnTravel = next == null ? 0 : (position.distanceTo(next.stage) + 1) / 2;
+ 			// Leave a native movement tick when a fighting melee filler can move before impact.
+-			if (next != null && next.name.equals("22 south Dinh") && d.weapon.style == Style.MELEE && c.fighting)
++			if (next != null && next.name.equals("22 south Dinh") && d.weapon.style == Style.MELEE
++				&& (c.fighting || c.lane == Lane.SPLIT))
+ 				returnTravel++;
+ 			if (next != null && !next.name.equals(d.rule) && !(next.name.equals("22 south Dinh") && tick > next.due + 1)
+ 				&& at + Math.max(d.weapon.cooldown, returnTravel) > next.due) return;

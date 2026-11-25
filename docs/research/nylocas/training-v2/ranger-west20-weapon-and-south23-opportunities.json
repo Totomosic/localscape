@@ -1,0 +1,648 @@
+[
+  {
+    "run": "training-v3-forecast-guidance-refined-random-200",
+    "counts": {
+      "west20_survivors_at21_MELEE": 47,
+      "postbow_west20_style_MELEE": 282,
+      "south23_nonlethal_age5": 35,
+      "south23_age5_native_PIPE": 34
+    },
+    "west20_examples": [
+      {
+        "seed": 201945272171965,
+        "tick": 178,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "born": 168,
+          "lane": "west",
+          "slot": "S",
+          "big": true,
+          "age": 10,
+          "style": "MELEE",
+          "hp": 11,
+          "x": 3291,
+          "y": 4248,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "player": "3293,4248,0",
+        "attack": true,
+        "weapon": "CHIN",
+        "reason": "Recent RANGE small"
+      },
+      {
+        "seed": 201945272171965,
+        "tick": 181,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "born": 168,
+          "lane": "west",
+          "slot": "S",
+          "big": true,
+          "age": 13,
+          "style": "MELEE",
+          "hp": 11,
+          "x": 3290,
+          "y": 4251,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "player": "3295,4248,0",
+        "attack": true,
+        "weapon": "CHIN",
+        "reason": "Recent RANGE small"
+      },
+      {
+        "seed": 201945272171972,
+        "tick": 182,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "born": 172,
+          "lane": "west",
+          "slot": "S",
+          "big": true,
+          "age": 10,
+          "style": "MELEE",
+          "hp": 13,
+          "x": 3291,
+          "y": 4248,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "player": "3293,4248,0",
+        "attack": true,
+        "weapon": "PIPE",
+        "reason": "Recent RANGE small"
+      },
+      {
+        "seed": 201945272171972,
+        "tick": 184,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "born": 172,
+          "lane": "west",
+          "slot": "S",
+          "big": true,
+          "age": 12,
+          "style": "MELEE",
+          "hp": 13,
+          "x": 3290,
+          "y": 4250,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "player": "3293,4248,0",
+        "attack": true,
+        "weapon": "PIPE",
+        "reason": "Recent RANGE small"
+      },
+      {
+        "seed": 201945272171972,
+        "tick": 186,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "born": 172,
+          "lane": "west",
+          "slot": "S",
+          "big": true,
+          "age": 14,
+          "style": "MELEE",
+          "hp": 13,
+          "x": 3290,
+          "y": 4251,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "player": "3297,4247,0",
+        "attack": true,
+        "weapon": "PIPE",
+        "reason": "Recent RANGE small"
+      },
+      {
+        "seed": 201945272171974,
+        "tick": 162,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "born": 152,
+          "lane": "west",
+          "slot": "S",
+          "big": true,
+          "age": 10,
+          "style": "MELEE",
+          "hp": 12,
+          "x": 3290,
+          "y": 4249,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "player": "3293,4248,0",
+        "attack": true,
+        "weapon": "PIPE",
+        "reason": "Recent RANGE small"
+      }
+    ],
+    "south23_examples": [
+      {
+        "seed": 201945272171971,
+        "tick": 225,
+        "parent": {
+          "key": 132,
+          "wave": 23,
+          "born": 220,
+          "lane": "south",
+          "slot": "W",
+          "big": true,
+          "age": 5,
+          "style": "MAGIC",
+          "hp": 13,
+          "x": 3295,
+          "y": 4238,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "forecast": [
+          13,
+          0
+        ],
+        "selected": [
+          "PIPE",
+          130,
+          "West north flicker 23"
+        ],
+        "attack": true,
+        "reason": "West north flicker 23"
+      },
+      {
+        "seed": 201945272171972,
+        "tick": 213,
+        "parent": {
+          "key": 132,
+          "wave": 23,
+          "born": 208,
+          "lane": "south",
+          "slot": "W",
+          "big": true,
+          "age": 5,
+          "style": "MAGIC",
+          "hp": 2,
+          "x": 3295,
+          "y": 4238,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "forecast": [
+          2,
+          0
+        ],
+        "selected": [
+          "PIPE",
+          130,
+          "West north flicker 23"
+        ],
+        "attack": true,
+        "reason": "West north flicker 23"
+      },
+      {
+        "seed": 201945272171982,
+        "tick": 205,
+        "parent": {
+          "key": 130,
+          "wave": 23,
+          "born": 200,
+          "lane": "south",
+          "slot": "W",
+          "big": true,
+          "age": 5,
+          "style": "MAGIC",
+          "hp": 13,
+          "x": 3295,
+          "y": 4238,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "forecast": [
+          13,
+          0
+        ],
+        "selected": [
+          "PIPE",
+          128,
+          "West north flicker 23"
+        ],
+        "attack": true,
+        "reason": "West north flicker 23"
+      },
+      {
+        "seed": 201945272171986,
+        "tick": 229,
+        "parent": {
+          "key": 132,
+          "wave": 23,
+          "born": 224,
+          "lane": "south",
+          "slot": "W",
+          "big": true,
+          "age": 5,
+          "style": "MAGIC",
+          "hp": 16,
+          "x": 3295,
+          "y": 4238,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "forecast": [
+          16,
+          0
+        ],
+        "selected": [
+          "PIPE",
+          130,
+          "West north flicker 23"
+        ],
+        "attack": true,
+        "reason": "West north flicker 23"
+      },
+      {
+        "seed": 201945272171990,
+        "tick": 197,
+        "parent": {
+          "key": 132,
+          "wave": 23,
+          "born": 192,
+          "lane": "south",
+          "slot": "W",
+          "big": true,
+          "age": 5,
+          "style": "MAGIC",
+          "hp": 3,
+          "x": 3295,
+          "y": 4238,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "forecast": [
+          3,
+          0
+        ],
+        "selected": [
+          "PIPE",
+          -1,
+          "null"
+        ],
+        "attack": false,
+        "reason": "Reserve next packet: West north flicker 23"
+      }
+    ]
+  },
+  {
+    "run": "training-v3-forecast-guidance-refined-fresh-300",
+    "counts": {
+      "west20_survivors_at21_MELEE": 64,
+      "postbow_west20_style_MELEE": 384,
+      "south23_nonlethal_age5": 64,
+      "south23_age5_native_PIPE": 63
+    },
+    "west20_examples": [
+      {
+        "seed": 222206795139630,
+        "tick": 178,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "born": 168,
+          "lane": "west",
+          "slot": "S",
+          "big": true,
+          "age": 10,
+          "style": "MELEE",
+          "hp": 9,
+          "x": 3290,
+          "y": 4249,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "player": "3293,4248,0",
+        "attack": true,
+        "weapon": "EYE",
+        "reason": "Recent MAGIC small"
+      },
+      {
+        "seed": 222206795139630,
+        "tick": 181,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "born": 168,
+          "lane": "west",
+          "slot": "S",
+          "big": true,
+          "age": 13,
+          "style": "MELEE",
+          "hp": 9,
+          "x": 3290,
+          "y": 4251,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "player": "3296,4248,0",
+        "attack": true,
+        "weapon": "PIPE",
+        "reason": "Recent RANGE small"
+      },
+      {
+        "seed": 222206795139630,
+        "tick": 183,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "born": 168,
+          "lane": "west",
+          "slot": "S",
+          "big": true,
+          "age": 15,
+          "style": "MELEE",
+          "hp": 9,
+          "x": 3290,
+          "y": 4251,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "player": "3298,4248,0",
+        "attack": false,
+        "weapon": "CHIN",
+        "reason": "Reserve next packet: East chin 21"
+      },
+      {
+        "seed": 222206795139634,
+        "tick": 166,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "born": 156,
+          "lane": "west",
+          "slot": "S",
+          "big": true,
+          "age": 10,
+          "style": "MELEE",
+          "hp": 9,
+          "x": 3291,
+          "y": 4248,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "player": "3293,4248,0",
+        "attack": true,
+        "weapon": "PIPE",
+        "reason": "Recent RANGE small"
+      },
+      {
+        "seed": 222206795139634,
+        "tick": 168,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "born": 156,
+          "lane": "west",
+          "slot": "S",
+          "big": true,
+          "age": 12,
+          "style": "MELEE",
+          "hp": 9,
+          "x": 3291,
+          "y": 4248,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "player": "3295,4246,0",
+        "attack": true,
+        "weapon": "CHIN",
+        "reason": "Recent RANGE small"
+      },
+      {
+        "seed": 222206795139634,
+        "tick": 171,
+        "parent": {
+          "key": 95,
+          "wave": 20,
+          "born": 156,
+          "lane": "west",
+          "slot": "S",
+          "big": true,
+          "age": 15,
+          "style": "MELEE",
+          "hp": 9,
+          "x": 3290,
+          "y": 4247,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "player": "3299,4246,0",
+        "attack": false,
+        "weapon": "CHIN",
+        "reason": "Reserve next packet: East chin 21"
+      }
+    ],
+    "south23_examples": [
+      {
+        "seed": 222206795139630,
+        "tick": 209,
+        "parent": {
+          "key": 130,
+          "wave": 23,
+          "born": 204,
+          "lane": "south",
+          "slot": "W",
+          "big": true,
+          "age": 5,
+          "style": "MAGIC",
+          "hp": 7,
+          "x": 3295,
+          "y": 4238,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "forecast": [
+          7,
+          0
+        ],
+        "selected": [
+          "PIPE",
+          128,
+          "West north flicker 23"
+        ],
+        "attack": true,
+        "reason": "West north flicker 23"
+      },
+      {
+        "seed": 222206795139635,
+        "tick": 201,
+        "parent": {
+          "key": 132,
+          "wave": 23,
+          "born": 196,
+          "lane": "south",
+          "slot": "W",
+          "big": true,
+          "age": 5,
+          "style": "MAGIC",
+          "hp": 5,
+          "x": 3295,
+          "y": 4238,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "forecast": [
+          5,
+          0
+        ],
+        "selected": [
+          "PIPE",
+          130,
+          "West north flicker 23"
+        ],
+        "attack": true,
+        "reason": "West north flicker 23"
+      },
+      {
+        "seed": 222206795139639,
+        "tick": 205,
+        "parent": {
+          "key": 132,
+          "wave": 23,
+          "born": 200,
+          "lane": "south",
+          "slot": "W",
+          "big": true,
+          "age": 5,
+          "style": "MAGIC",
+          "hp": 13,
+          "x": 3295,
+          "y": 4238,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "forecast": [
+          13,
+          0
+        ],
+        "selected": [
+          "PIPE",
+          130,
+          "West north flicker 23"
+        ],
+        "attack": true,
+        "reason": "West north flicker 23"
+      },
+      {
+        "seed": 222206795139640,
+        "tick": 197,
+        "parent": {
+          "key": 130,
+          "wave": 23,
+          "born": 192,
+          "lane": "south",
+          "slot": "W",
+          "big": true,
+          "age": 5,
+          "style": "MAGIC",
+          "hp": 12,
+          "x": 3295,
+          "y": 4238,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "forecast": [
+          12,
+          0
+        ],
+        "selected": [
+          "PIPE",
+          128,
+          "West north flicker 23"
+        ],
+        "attack": true,
+        "reason": "West north flicker 23"
+      },
+      {
+        "seed": 222206795139641,
+        "tick": 205,
+        "parent": {
+          "key": 132,
+          "wave": 23,
+          "born": 200,
+          "lane": "south",
+          "slot": "W",
+          "big": true,
+          "age": 5,
+          "style": "MAGIC",
+          "hp": 12,
+          "x": 3295,
+          "y": 4238,
+          "claimed_until": 0,
+          "own_hit_until": 0,
+          "dying": false,
+          "nulled": false
+        },
+        "forecast": [
+          12,
+          0
+        ],
+        "selected": [
+          "PIPE",
+          130,
+          "West north flicker 23"
+        ],
+        "attack": true,
+        "reason": "West north flicker 23"
+      }
+    ]
+  }
+]

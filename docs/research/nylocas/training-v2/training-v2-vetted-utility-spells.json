@@ -1,0 +1,71 @@
+{
+  "rooms": 46,
+  "endpoint": "strictly before boss spawn",
+  "spell_definitions_commit": "3c5bc5cfc315ff4266128601829e66615f3ef83d",
+  "stats": {
+    "mage": {
+      "SpellbookSwap": {
+        "rooms": 46,
+        "casts": 183,
+        "mean": 3.9782608695652173
+      },
+      "DeathCharge": {
+        "rooms": 46,
+        "casts": 87,
+        "mean": 1.891304347826087
+      },
+      "GreaterGhost": {
+        "rooms": 46,
+        "casts": 46,
+        "mean": 1.0
+      },
+      "GreaterSkeleton": {
+        "rooms": 0,
+        "casts": 0,
+        "mean": 0.0
+      },
+      "Vengeance": {
+        "rooms": 37,
+        "casts": 56,
+        "mean": 1.2173913043478262
+      },
+      "HealOther": {
+        "rooms": 43,
+        "casts": 66,
+        "mean": 1.434782608695652
+      }
+    },
+    "ranger": {
+      "SpellbookSwap": {
+        "rooms": 46,
+        "casts": 132,
+        "mean": 2.869565217391304
+      },
+      "DeathCharge": {
+        "rooms": 44,
+        "casts": 76,
+        "mean": 1.6521739130434783
+      },
+      "GreaterGhost": {
+        "rooms": 0,
+        "casts": 0,
+        "mean": 0.0
+      },
+      "GreaterSkeleton": {
+        "rooms": 46,
+        "casts": 53,
+        "mean": 1.1521739130434783
+      },
+      "Vengeance": {
+        "rooms": 39,
+        "casts": 70,
+        "mean": 1.5217391304347827
+      },
+      "HealOther": {
+        "rooms": 0,
+        "casts": 0,
+        "mean": 0.0
+      }
+    }
+  }
+}

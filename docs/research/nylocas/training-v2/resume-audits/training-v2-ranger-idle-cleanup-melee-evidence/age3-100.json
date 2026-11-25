@@ -1,0 +1,1017 @@
+{
+  "run": ".state/simulations/training-v2-flight-mage-19-age3-100",
+  "semantics": "Find local fresh melee work during Ranger ready/empty cleanup decisions.\n\nClaims/own leases use previous after-cycle snapshots. HP/style/positions use current\npre-cycle copied fields. Mage-ready same-target plans conservatively exclude\nprovisional claims. Native current LOS and remaining final-rule completion are not\nin this trace; candidates require policy replay/native confirmation.\n",
+  "trials": 100,
+  "opportunityRooms": 16,
+  "frames": 25,
+  "terminalFreshRooms": 4,
+  "freshOutlastsOldRooms": 12,
+  "terminalFreshAfterOldRooms": 2,
+  "framesAfterAllOldGone": 0,
+  "rooms": [
+    {
+      "seed": 133,
+      "windows": [
+        {
+          "tick": 293,
+          "position": "3293,4250,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 194,
+              "wave": 30,
+              "age": 6,
+              "style": "MELEE",
+              "big": false,
+              "hp": 5,
+              "x": 3290,
+              "y": 4250,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 321,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 203,
+            "weapon": "EYE",
+            "reason": "Plan EYE #211 @295: East magic 31"
+          }
+        },
+        {
+          "tick": 294,
+          "position": "3291,4248,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 194,
+              "wave": 30,
+              "age": 7,
+              "style": "MELEE",
+              "big": false,
+              "hp": 5,
+              "x": 3290,
+              "y": 4251,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 321,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 203,
+            "weapon": "EYE",
+            "reason": "Plan EYE #211 @295: East magic 31"
+          }
+        }
+      ],
+      "lastFreshPresent": 321,
+      "lastOldPresent": 314,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 145,
+      "windows": [
+        {
+          "tick": 274,
+          "position": "3291,4248,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 187,
+              "wave": 30,
+              "age": 3,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3291,
+              "y": 4245,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 283,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 193,
+            "weapon": "EYE",
+            "reason": "East magic 31"
+          }
+        }
+      ],
+      "lastFreshPresent": 315,
+      "lastOldPresent": 314,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 146,
+      "windows": [
+        {
+          "tick": 276,
+          "position": "3291,4248,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 196,
+              "wave": 31,
+              "age": 1,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3294,
+              "y": 4245,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 298,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 188,
+            "weapon": "EYE",
+            "reason": "Plan EYE #194 @278: East big 30"
+          }
+        }
+      ],
+      "lastFreshPresent": 319,
+      "lastOldPresent": 318,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 164,
+      "windows": [
+        {
+          "tick": 281,
+          "position": "3294,4248,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 195,
+              "wave": 31,
+              "age": 1,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3292,
+              "y": 4247,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 2,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 290,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 201,
+            "weapon": "EYE",
+            "reason": "East magic 31"
+          }
+        }
+      ],
+      "lastFreshPresent": 307,
+      "lastOldPresent": 310,
+      "freshOutlastsOld": false
+    },
+    {
+      "seed": 169,
+      "windows": [
+        {
+          "tick": 306,
+          "position": "3294,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 34,
+              "style": "MELEE",
+              "big": false,
+              "hp": 3,
+              "x": 3291,
+              "y": 4245,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 313,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 204,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #211 @307: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 307,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 35,
+              "style": "MELEE",
+              "big": false,
+              "hp": 3,
+              "x": 3291,
+              "y": 4245,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 313,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 204,
+            "weapon": "SULPHUR",
+            "reason": "Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 308,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 36,
+              "style": "MELEE",
+              "big": false,
+              "hp": 3,
+              "x": 3291,
+              "y": 4245,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 313,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 193,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #200 @311: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 309,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 37,
+              "style": "MELEE",
+              "big": false,
+              "hp": 3,
+              "x": 3291,
+              "y": 4245,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 313,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 193,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #200 @311: Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 310,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 31,
+              "age": 38,
+              "style": "MELEE",
+              "big": false,
+              "hp": 3,
+              "x": 3291,
+              "y": 4245,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 313,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 193,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #200 @311: Fresh MELEE small"
+          }
+        }
+      ],
+      "lastFreshPresent": 313,
+      "lastOldPresent": 318,
+      "freshOutlastsOld": false
+    },
+    {
+      "seed": 173,
+      "windows": [
+        {
+          "tick": 289,
+          "position": "3292,4248,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 30,
+              "age": 4,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3290,
+              "y": 4249,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 2,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 323,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 201,
+            "weapon": "EYE",
+            "reason": "Plan EYE #208 @291: East magic 31"
+          }
+        },
+        {
+          "tick": 290,
+          "position": "3291,4248,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 30,
+              "age": 5,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3290,
+              "y": 4250,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 2,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 323,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 201,
+            "weapon": "EYE",
+            "reason": "Plan EYE #208 @291: East magic 31"
+          }
+        }
+      ],
+      "lastFreshPresent": 323,
+      "lastOldPresent": 322,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 174,
+      "windows": [
+        {
+          "tick": 274,
+          "position": "3291,4248,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 200,
+              "wave": 31,
+              "age": 1,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3289,
+              "y": 4249,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 2,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 287,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 197,
+            "weapon": "EYE",
+            "reason": "East magic 31"
+          }
+        }
+      ],
+      "lastFreshPresent": 305,
+      "lastOldPresent": 302,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 186,
+      "windows": [
+        {
+          "tick": 271,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 200,
+              "wave": 31,
+              "age": 2,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3290,
+              "y": 4249,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 283,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 197,
+            "weapon": "EYE",
+            "reason": "East magic 31"
+          }
+        }
+      ],
+      "lastFreshPresent": 307,
+      "lastOldPresent": 303,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 187,
+      "windows": [
+        {
+          "tick": 285,
+          "position": "3293,4248,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 186,
+              "wave": 30,
+              "age": 14,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3291,
+              "y": 4245,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 304,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": false,
+            "target": 196,
+            "weapon": "SULPHUR",
+            "reason": "Fresh MELEE small"
+          }
+        },
+        {
+          "tick": 286,
+          "position": "3291,4248,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 186,
+              "wave": 30,
+              "age": 15,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3291,
+              "y": 4245,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 304,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": false,
+            "target": 196,
+            "weapon": "SULPHUR",
+            "reason": "Fresh MELEE small"
+          }
+        }
+      ],
+      "lastFreshPresent": 327,
+      "lastOldPresent": 306,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 189,
+      "windows": [
+        {
+          "tick": 278,
+          "position": "3292,4248,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 194,
+              "wave": 30,
+              "age": 7,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3290,
+              "y": 4245,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 298,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 194,
+            "weapon": "SULPHUR",
+            "reason": "Plan SULPHUR #201 @281: Fresh MELEE small"
+          }
+        }
+      ],
+      "lastFreshPresent": 311,
+      "lastOldPresent": 302,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 190,
+      "windows": [
+        {
+          "tick": 293,
+          "position": "3293,4249,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 197,
+              "wave": 30,
+              "age": 4,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3291,
+              "y": 4247,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 2,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 307,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 193,
+            "weapon": "EYE",
+            "reason": "Plan EYE #200 @296: Fresh MAGIC small"
+          }
+        },
+        {
+          "tick": 294,
+          "position": "3291,4248,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 197,
+              "wave": 30,
+              "age": 5,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3292,
+              "y": 4246,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 2,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 307,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 193,
+            "weapon": "EYE",
+            "reason": "Plan EYE #200 @296: Fresh MAGIC small"
+          }
+        }
+      ],
+      "lastFreshPresent": 334,
+      "lastOldPresent": 326,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 192,
+      "windows": [
+        {
+          "tick": 261,
+          "position": "3291,4248,0",
+          "rangerReason": "Reserve next packet: West big 30",
+          "candidates": [
+            {
+              "key": 187,
+              "wave": 30,
+              "age": 2,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3290,
+              "y": 4250,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 2,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 273,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 186,
+            "weapon": "EYE",
+            "reason": "Plan EYE #193 @264: East big 30"
+          }
+        },
+        {
+          "tick": 262,
+          "position": "3291,4248,0",
+          "rangerReason": "Reserve next packet: West big 30",
+          "candidates": [
+            {
+              "key": 187,
+              "wave": 30,
+              "age": 3,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3290,
+              "y": 4251,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 273,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 186,
+            "weapon": "EYE",
+            "reason": "Plan EYE #193 @264: East big 30"
+          }
+        }
+      ],
+      "lastFreshPresent": 303,
+      "lastOldPresent": 302,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 201,
+      "windows": [
+        {
+          "tick": 273,
+          "position": "3294,4248,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 192,
+              "wave": 30,
+              "age": 6,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3295,
+              "y": 4251,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 293,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 197,
+            "weapon": "EYE",
+            "reason": "Plan EYE #203 @275: East magic 31"
+          }
+        }
+      ],
+      "lastFreshPresent": 321,
+      "lastOldPresent": 302,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 202,
+      "windows": [
+        {
+          "tick": 268,
+          "position": "3291,4248,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 185,
+              "wave": 30,
+              "age": 5,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3291,
+              "y": 4251,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 306,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 182,
+            "weapon": "EYE",
+            "reason": "East big 30"
+          }
+        }
+      ],
+      "lastFreshPresent": 312,
+      "lastOldPresent": 306,
+      "freshOutlastsOld": true
+    },
+    {
+      "seed": 205,
+      "windows": [
+        {
+          "tick": 281,
+          "position": "3293,4250,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 193,
+              "wave": 30,
+              "age": 8,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3290,
+              "y": 4251,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": false,
+              "lastPresent": 303,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": false,
+            "attacked": false,
+            "target": 203,
+            "weapon": "EYE",
+            "reason": "Plan EYE #210 @283: East magic 31"
+          }
+        }
+      ],
+      "lastFreshPresent": 309,
+      "lastOldPresent": 310,
+      "freshOutlastsOld": false
+    },
+    {
+      "seed": 206,
+      "windows": [
+        {
+          "tick": 272,
+          "position": "3295,4248,0",
+          "rangerReason": "Reserve next packet: West south early 31",
+          "candidates": [
+            {
+              "key": 190,
+              "wave": 30,
+              "age": 5,
+              "style": "MELEE",
+              "big": false,
+              "hp": 8,
+              "x": 3295,
+              "y": 4251,
+              "claim": 0,
+              "own": 0,
+              "dead": false,
+              "distance": 3,
+              "preClaim": 0,
+              "preOwn": 0,
+              "mageNull": false,
+              "mageProvisionalPlanExcluded": false,
+              "terminalFresh": true,
+              "lastPresent": 309,
+              "afterAllOldGone": false
+            }
+          ],
+          "mage": {
+            "ready": true,
+            "attacked": true,
+            "target": 188,
+            "weapon": "EYE",
+            "reason": "East big 30"
+          }
+        }
+      ],
+      "lastFreshPresent": 309,
+      "lastOldPresent": 314,
+      "freshOutlastsOld": false
+    }
+  ],
+  "sourceLogSha256": "3a568d614cacc9d0b9f3fa86dd202874f5ffd7435ce653d6f2306b7711cce717"
+}

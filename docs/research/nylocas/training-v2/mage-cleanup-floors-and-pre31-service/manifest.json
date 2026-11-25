@@ -1,0 +1,145 @@
+{
+  "semantics": "Historical files prefixed historical use whole-wave dim; all newer timestamp audits use confirmed inclusive birth-time cutoff at actual31. See accompanying note.",
+  "files": [
+    {
+      "file": "human23east-admission-and-mage29-range.json",
+      "source": ".state/simulations/training-v3-mage-guidance-checks/human23east-admission-and-mage29-range.json",
+      "sha256": "6ef94cc40175c7006c47704c5c24ba8924cf4f3a4cc4d133bbec559e484bde05"
+    },
+    {
+      "file": "human-late-dinh-review.json",
+      "source": ".state/simulations/training-v3-mage-guidance-checks/human-late-dinh-review.json",
+      "sha256": "48e3f2b15f5e77f86675cb2c84e5e0c0c83c4507a6dd99501bad46e031abe65e"
+    },
+    {
+      "file": "human_late_dinh_review.py",
+      "source": ".state/simulations/training-v3-mage-guidance-checks/human_late_dinh_review.py",
+      "sha256": "1a0ef8faf17d5e942337273825d357d5240b2da74f2cc69940b46e6c08cbba80"
+    },
+    {
+      "file": "historical-combined-cleanup-floor-audit.json",
+      "source": ".state/simulations/training-v4-cooperation-combined-dims-random-200/cleanup-floor-audit.json",
+      "sha256": "6dbd0aa73b5b8664bd85a51d21dc8778933d16abc9f16e868069fb99e6cb7f4e"
+    },
+    {
+      "file": "historical-29only-cleanup-floor-audit.json",
+      "source": ".state/simulations/training-v4-cooperation-dim29-random-200/cleanup-floor-audit.json",
+      "sha256": "f5b704d830916f9beedcc8a5401d318e59cc5ff81d55d4b8c79fb8a9ffe571ce"
+    },
+    {
+      "file": "mage29-gap-screen.json",
+      "source": ".state/simulations/training-v4-west30-parent-lifecycle-random-200/mage29-gap-screen.json",
+      "sha256": "614c9a1c887e8dd0c797b64d31cb2f0ba70a5e204d16c3dd705da952654bc8a9"
+    },
+    {
+      "file": "mage29_gap_screen.py",
+      "source": ".state/simulations/training-v3-mage-guidance-checks/mage29_gap_screen.py",
+      "sha256": "1fd5d81b256b46974ce0e6f6004bd53426fce97f7b9d03f98574c5bf67f7d52e"
+    },
+    {
+      "file": "west30-lifecycle-mage-only.patch",
+      "source": ".state/simulations/training-v4-candidate-mage-west30-parent-lifecycle/mage-only.patch",
+      "sha256": "af1974b9a8b2a92103cba69e6f8e4c4bf6de57876e50ac59905473083ae3e1c8"
+    },
+    {
+      "file": "west30-lifecycle-role-checks.log",
+      "source": ".state/simulations/training-v4-candidate-mage-west30-parent-lifecycle/role-checks.log",
+      "sha256": "3774653c466698aeb46860ed9843d8709f0d4b72ca9eca1381ce269d2f2fa0f1"
+    },
+    {
+      "file": "west30-lifecycle-base-source-sha256.json",
+      "source": ".state/simulations/training-v4-candidate-mage-west30-parent-lifecycle/base-source-sha256.json",
+      "sha256": "97fbf13ff814328722c86847c25c1042376c106e15791a57dc5e120b38daaba6"
+    },
+    {
+      "file": "MageWest30MeleeTakeoverProbe.java",
+      "source": ".state/simulations/training-v4-candidate-mage-west30-parent-lifecycle/role-tests/MageWest30MeleeTakeoverProbe.java",
+      "sha256": "e0a9d299318bac02d902d7af4c0efb5234a65748bb1baf81faced8fb506c3be2"
+    },
+    {
+      "file": "MageIdleParentCooldownProbe.java",
+      "source": ".state/simulations/training-v4-candidate-mage-west30-parent-lifecycle/role-tests/MageIdleParentCooldownProbe.java",
+      "sha256": "690e7645c8585dd7d4d2f6a7cbca0dfc219665b0d56c91fca0b7d2a0db7b7a68"
+    },
+    {
+      "file": "MageReadyMagicChaseProbe.java",
+      "source": ".state/simulations/training-v4-candidate-mage-ready-magic-before-melee-chase/role-tests/MageReadyMagicChaseProbe.java",
+      "sha256": "af8f9d76101867336870ff34e9fdacc1173b0c49c3600147d3f90906d7ff478d"
+    },
+    {
+      "file": "ready-magic-mage-only.patch",
+      "source": ".state/simulations/training-v4-candidate-mage-ready-magic-before-melee-chase/mage-only.patch",
+      "sha256": "5233b6294321662e1a7f4100dff41e61d9e37923a0e7f350cbd806bd064795de"
+    },
+    {
+      "file": "ready-magic-role-checks.log",
+      "source": ".state/simulations/training-v4-candidate-mage-ready-magic-before-melee-chase/role-checks.log",
+      "sha256": "a0d0d6a844da18f14c0c8bc5f6fed59f958771aa58c70e360bc5857f3b9fcb22"
+    },
+    {
+      "file": "MageMixedCleanupCleaveProbe.java",
+      "source": ".state/simulations/training-v4-candidate-mage-cleanup-mixed-cleave-safety/role-tests/MageMixedCleanupCleaveProbe.java",
+      "sha256": "481aa686f381bc93aa456d76f2cc8da3e0b190e3690815af5709835955b7dc93"
+    },
+    {
+      "file": "mixed-cleave-mage-only.patch",
+      "source": ".state/simulations/training-v4-candidate-mage-cleanup-mixed-cleave-safety/mage-only.patch",
+      "sha256": "3092918567d73713742481973f1e7652c2851ca25569d4ce6d905a8f87948cde"
+    },
+    {
+      "file": "mixed-cleave-role-checks.log",
+      "source": ".state/simulations/training-v4-candidate-mage-cleanup-mixed-cleave-safety/role-checks.log",
+      "sha256": "c42123a52ab38c98d37efce4a1c406edf87f83e8e660051a18f9e5ea07ca34d8"
+    },
+    {
+      "file": "mixed-cleave-base-probes.log",
+      "source": ".state/simulations/training-v4-candidate-mage-cleanup-mixed-cleave-safety/base-probes.log",
+      "sha256": "334d98cf8c0425474e6bca5f8bdcca68093f4f9f3fc1212807bc0057b97e2ccd"
+    },
+    {
+      "file": "mage-final-mixed-chase-audit.json",
+      "source": ".state/simulations/training-v4-mage-cleanup-mixed-cleave-safety-random-200/mage-cleanup-chase-audit.json",
+      "sha256": "aadcf863233d32667813fe370c9765fb4336bc0aacfa3393abe695ad52152291"
+    },
+    {
+      "file": "mage-final-mixed-guidance-audit.json",
+      "source": ".state/simulations/training-v4-mage-cleanup-mixed-cleave-safety-random-200/mage-final-guidance-audit.json",
+      "sha256": "8785c33f86222606fb1b7bf4b8c159380d6e164f05a79b09847e2f98d60cab14"
+    },
+    {
+      "file": "mage-final-mixed-movement-audit.json",
+      "source": ".state/simulations/training-v4-mage-cleanup-mixed-cleave-safety-random-200/mage-final-movement-audit.json",
+      "sha256": "807a0389eac5b62bca32afa94b130b31cb90533a5188c9f5fe27c6bb09fb3544"
+    },
+    {
+      "file": "mage-final-mixed-weapon-counts.json",
+      "source": ".state/simulations/training-v4-mage-cleanup-mixed-cleave-safety-random-200/mage-cleanup-weapon-counts.json",
+      "sha256": "2fde3e26b6bc3cfd38f4df8159af5ddff53a41e5901bb5a42e87599a97daeb0a"
+    },
+    {
+      "file": "mage-final-mixed-own-null-classification.json",
+      "source": ".state/simulations/training-v4-mage-cleanup-mixed-cleave-safety-random-200/mage-fresh-own-null-classification.json",
+      "sha256": "fe4bf615161af12bd6958282d06a6f448e06934d61c5321a8c10c85b58a5abe6"
+    },
+    {
+      "file": "mage-v1-own-null-classification.json",
+      "source": ".state/simulations/training-v4-mage-ready-magic-before-melee-chase-random-200/mage-fresh-own-null-classification.json",
+      "sha256": "9eaa350c0108eb2c0cdf52767c490943a9df3058738e0fb1f9cd40ee8add7062"
+    },
+    {
+      "file": "mage-precap-split-chase-screen.json",
+      "source": ".state/simulations/training-v4-timestamp-dim29-and-28plus16-random-200/mage-precap-split-chase-screen.json",
+      "sha256": "1e9ef6a3700bd48300e91c60e816fdcd33359968870922972b58b6d60d05fffc"
+    },
+    {
+      "file": "precap_split_chase_screen.py",
+      "source": ".state/simulations/training-v3-mage-guidance-checks/precap_split_chase_screen.py",
+      "sha256": "e802852a3957c7632af5b1c79729cbba1c263930b668e78b2c91a88bac8e667e"
+    },
+    {
+      "file": "NylocasMageCleanupRayTest.kt",
+      "source": "upstream/rsmod/content/other/nylocas-bots/src/integration/kotlin/org/rsmod/content/other/nylocas/bots/NylocasMageCleanupRayTest.kt",
+      "sha256": "ee2e5f25f1ae89c60fc595020bfb80ec54d8ea387ecc3a90b1d62402c5b1961a"
+    }
+  ]
+}

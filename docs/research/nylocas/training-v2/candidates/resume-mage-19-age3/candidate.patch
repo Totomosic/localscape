@@ -1,0 +1,15 @@
+--- upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java
++++ upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/mage/MageStrategy.java
+@@ -386,8 +386,11 @@
+ 				if (a.name.equals("South opener 20")) score += 10000;
+ 				if (a.name.equals("South big 29") && room.wave == 30) score += 6000;
+ 				Decision d = new Decision(c, weapon, a.stage, false, a.name, a.name);
+-				// Ordinary recorded offsets are observations, not reasons to lose a ready tick.
++				// Most ordinary offsets are observations, not reasons to lose a ready tick.
+ 				int first = a.name.equals("Deferred east big 13") ? c.born + a.first : tick;
++				// An unopened east/south19 parent keeps one cap slot until its first age3 request.
++				if (c.wave == 19 && c.big && !opened.contains(c.key) && (c.lane == Lane.EAST || c.lane == Lane.SOUTH))
++					first = Math.max(first, c.born + 3);
+ 				add(candidates, room, next, d, score, tick, first, c.born + a.last);
+ 			}
+ 			Weapon weapon = c.style == Style.MAGIC ? Weapon.EYE : c.style == Style.MELEE ? Weapon.SULPHUR : Weapon.PIPE;

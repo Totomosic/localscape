@@ -1,0 +1,1608 @@
+{
+  "run": ".state/simulations/training-v2-flight-fresh-intent-100",
+  "serverLogSha256": "f2c6c1ffe4343dda3977ef8a08de102feb3e74e6215ae0c47f35eff829fcf223",
+  "rooms": 100,
+  "lastSpawned19FailedChecks": 115,
+  "failedCheckPopulation": {
+    "12": 55,
+    "13": 35,
+    "16": 1,
+    "14": 17,
+    "15": 6,
+    "17": 1
+  },
+  "living19BigsAtFailedChecks": {
+    "east": 34,
+    "south": 4,
+    "west": 7
+  },
+  "potentialRescueFrames": 61,
+  "potentialRescueRooms": 16,
+  "nativeReadyAndConservativeReturnFrames": 41,
+  "nativeReadyAndConservativeReturnRooms": 11,
+  "opportunities": [
+    {
+      "seed": 140,
+      "tick": 192,
+      "wave": 19,
+      "key": 89,
+      "lane": "east",
+      "age": 28,
+      "hp": 6,
+      "distance": 5,
+      "magePoint": "3293,4248,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 140,
+      "tick": 195,
+      "wave": 19,
+      "key": 89,
+      "lane": "east",
+      "age": 31,
+      "hp": 6,
+      "distance": 8,
+      "magePoint": "3296,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 146,
+      "tick": 171,
+      "wave": 19,
+      "key": 89,
+      "lane": "east",
+      "age": 27,
+      "hp": 11,
+      "distance": 8,
+      "magePoint": "3292,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 146,
+      "tick": 172,
+      "wave": 19,
+      "key": 89,
+      "lane": "east",
+      "age": 28,
+      "hp": 11,
+      "distance": 6,
+      "magePoint": "3291,4247,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": -1,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 146,
+      "tick": 176,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 32,
+      "hp": 11,
+      "distance": 4,
+      "magePoint": "3296,4249,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 146,
+      "tick": 177,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 33,
+      "hp": 11,
+      "distance": 6,
+      "magePoint": "3298,4247,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": -1,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 146,
+      "tick": 181,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 37,
+      "hp": 11,
+      "distance": 8,
+      "magePoint": "3300,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 146,
+      "tick": 184,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 40,
+      "hp": 11,
+      "distance": 8,
+      "magePoint": "3300,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 146,
+      "tick": 188,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 44,
+      "hp": 11,
+      "distance": 8,
+      "magePoint": "3298,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 146,
+      "tick": 191,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 47,
+      "hp": 11,
+      "distance": 8,
+      "magePoint": "3294,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": false
+    },
+    {
+      "seed": 147,
+      "tick": 170,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 26,
+      "hp": 8,
+      "distance": 7,
+      "magePoint": "3300,4249,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": -1,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 147,
+      "tick": 170,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 26,
+      "hp": 2,
+      "distance": 7,
+      "magePoint": "3300,4249,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": -1,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 147,
+      "tick": 174,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 30,
+      "hp": 8,
+      "distance": 7,
+      "magePoint": "3295,4251,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 147,
+      "tick": 174,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 30,
+      "hp": 2,
+      "distance": 2,
+      "magePoint": "3295,4251,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 147,
+      "tick": 177,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 33,
+      "hp": 8,
+      "distance": 7,
+      "magePoint": "3295,4251,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 147,
+      "tick": 177,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 33,
+      "hp": 2,
+      "distance": 2,
+      "magePoint": "3295,4251,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 148,
+      "tick": 171,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 35,
+      "hp": 16,
+      "distance": 6,
+      "magePoint": "3292,4247,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": false
+    },
+    {
+      "seed": 154,
+      "tick": 175,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 35,
+      "hp": 5,
+      "distance": 5,
+      "magePoint": "3291,4248,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": false
+    },
+    {
+      "seed": 158,
+      "tick": 170,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 34,
+      "hp": 6,
+      "distance": 4,
+      "magePoint": "3297,4249,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 158,
+      "tick": 171,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 35,
+      "hp": 6,
+      "distance": 6,
+      "magePoint": "3299,4250,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": -1,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 158,
+      "tick": 175,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 39,
+      "hp": 6,
+      "distance": 7,
+      "magePoint": "3300,4251,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 158,
+      "tick": 178,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 42,
+      "hp": 6,
+      "distance": 2,
+      "magePoint": "3294,4251,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": false
+    },
+    {
+      "seed": 158,
+      "tick": 179,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 43,
+      "hp": 6,
+      "distance": 2,
+      "magePoint": "3292,4251,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": -1,
+      "conservativeReturnFits21": false
+    },
+    {
+      "seed": 182,
+      "tick": 171,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 35,
+      "hp": 14,
+      "distance": 5,
+      "magePoint": "3291,4248,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": false
+    },
+    {
+      "seed": 184,
+      "tick": 167,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 27,
+      "hp": 14,
+      "distance": 8,
+      "magePoint": "3294,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 184,
+      "tick": 170,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 30,
+      "hp": 14,
+      "distance": 8,
+      "magePoint": "3294,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 184,
+      "tick": 173,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 33,
+      "hp": 14,
+      "distance": 8,
+      "magePoint": "3294,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 187,
+      "tick": 172,
+      "wave": 19,
+      "key": 89,
+      "lane": "east",
+      "age": 28,
+      "hp": 4,
+      "distance": 6,
+      "magePoint": "3291,4247,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 187,
+      "tick": 175,
+      "wave": 19,
+      "key": 89,
+      "lane": "east",
+      "age": 31,
+      "hp": 4,
+      "distance": 7,
+      "magePoint": "3295,4246,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 187,
+      "tick": 178,
+      "wave": 19,
+      "key": 89,
+      "lane": "east",
+      "age": 34,
+      "hp": 4,
+      "distance": 8,
+      "magePoint": "3298,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 189,
+      "tick": 171,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 35,
+      "hp": 16,
+      "distance": 6,
+      "magePoint": "3292,4247,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": false
+    },
+    {
+      "seed": 202,
+      "tick": 174,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 34,
+      "hp": 4,
+      "distance": 4,
+      "magePoint": "3290,4249,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": false
+    },
+    {
+      "seed": 202,
+      "tick": 175,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 35,
+      "hp": 4,
+      "distance": 4,
+      "magePoint": "3290,4249,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": -1,
+      "conservativeReturnFits21": false
+    },
+    {
+      "seed": 203,
+      "tick": 162,
+      "wave": 19,
+      "key": 86,
+      "lane": "south",
+      "age": 26,
+      "hp": 13,
+      "distance": 0,
+      "magePoint": "3293,4244,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 203,
+      "tick": 166,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 30,
+      "hp": 13,
+      "distance": 3,
+      "magePoint": "3296,4243,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": true,
+      "mageReason": "South opener 20",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 203,
+      "tick": 169,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 33,
+      "hp": 13,
+      "distance": 3,
+      "magePoint": "3296,4243,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 203,
+      "tick": 172,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 36,
+      "hp": 13,
+      "distance": 2,
+      "magePoint": "3295,4243,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 203,
+      "tick": 175,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 39,
+      "hp": 13,
+      "distance": 2,
+      "magePoint": "3295,4243,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 203,
+      "tick": 178,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 42,
+      "hp": 13,
+      "distance": 3,
+      "magePoint": "3292,4247,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": false
+    },
+    {
+      "seed": 203,
+      "tick": 178,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 42,
+      "hp": 5,
+      "distance": 6,
+      "magePoint": "3292,4247,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": false
+    },
+    {
+      "seed": 203,
+      "tick": 179,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 43,
+      "hp": 13,
+      "distance": 5,
+      "magePoint": "3290,4249,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": -1,
+      "conservativeReturnFits21": false
+    },
+    {
+      "seed": 203,
+      "tick": 179,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 43,
+      "hp": 5,
+      "distance": 4,
+      "magePoint": "3290,4249,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": -1,
+      "conservativeReturnFits21": false
+    },
+    {
+      "seed": 205,
+      "tick": 166,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 26,
+      "hp": 5,
+      "distance": 3,
+      "magePoint": "3291,4247,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": false,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 2,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 205,
+      "tick": 166,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 26,
+      "hp": 15,
+      "distance": 6,
+      "magePoint": "3291,4247,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 2,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 205,
+      "tick": 167,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 27,
+      "hp": 5,
+      "distance": 2,
+      "magePoint": "3292,4246,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": false,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 1,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 205,
+      "tick": 167,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 27,
+      "hp": 15,
+      "distance": 7,
+      "magePoint": "3292,4246,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 1,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 205,
+      "tick": 168,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 28,
+      "hp": 5,
+      "distance": 2,
+      "magePoint": "3293,4246,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 205,
+      "tick": 168,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 28,
+      "hp": 15,
+      "distance": 7,
+      "magePoint": "3293,4246,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 205,
+      "tick": 173,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 33,
+      "hp": 5,
+      "distance": 2,
+      "magePoint": "3293,4246,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 205,
+      "tick": 173,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 33,
+      "hp": 15,
+      "distance": 7,
+      "magePoint": "3293,4246,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 215,
+      "tick": 163,
+      "wave": 20,
+      "key": 88,
+      "lane": "south",
+      "age": 27,
+      "hp": 9,
+      "distance": 3,
+      "magePoint": "3296,4245,0",
+      "crabPoint": [
+        3292,
+        4244
+      ],
+      "mageAtk": true,
+      "mageReason": "East big 19",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 215,
+      "tick": 166,
+      "wave": 20,
+      "key": 88,
+      "lane": "south",
+      "age": 30,
+      "hp": 9,
+      "distance": 3,
+      "magePoint": "3296,4245,0",
+      "crabPoint": [
+        3292,
+        4244
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 215,
+      "tick": 169,
+      "wave": 20,
+      "key": 88,
+      "lane": "south",
+      "age": 33,
+      "hp": 9,
+      "distance": 2,
+      "magePoint": "3292,4247,0",
+      "crabPoint": [
+        3292,
+        4244
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 215,
+      "tick": 170,
+      "wave": 20,
+      "key": 88,
+      "lane": "south",
+      "age": 34,
+      "hp": 9,
+      "distance": 4,
+      "magePoint": "3290,4249,0",
+      "crabPoint": [
+        3292,
+        4244
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": -1,
+      "conservativeReturnFits21": false
+    },
+    {
+      "seed": 215,
+      "tick": 171,
+      "wave": 20,
+      "key": 88,
+      "lane": "south",
+      "age": 35,
+      "hp": 9,
+      "distance": 4,
+      "magePoint": "3290,4249,0",
+      "crabPoint": [
+        3292,
+        4244
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": -2,
+      "conservativeReturnFits21": false
+    },
+    {
+      "seed": 216,
+      "tick": 163,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 27,
+      "hp": 7,
+      "distance": 6,
+      "magePoint": "3295,4247,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 216,
+      "tick": 166,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 30,
+      "hp": 7,
+      "distance": 7,
+      "magePoint": "3294,4246,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 216,
+      "tick": 169,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 33,
+      "hp": 7,
+      "distance": 7,
+      "magePoint": "3294,4246,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 227,
+      "tick": 170,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 30,
+      "hp": 16,
+      "distance": 8,
+      "magePoint": "3299,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 227,
+      "tick": 171,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 31,
+      "hp": 16,
+      "distance": 7,
+      "magePoint": "3300,4247,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": -1,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 227,
+      "tick": 175,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 35,
+      "hp": 16,
+      "distance": 4,
+      "magePoint": "3295,4249,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Reserve 21 west barrage",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": false
+    }
+  ],
+  "semantics": "Check snapshots use s19+12+4i, after failed native admission, verified against CSV stall count and wave20 delay. Potential rescue screen: actual19/20, birth18 big, magic, age26..48, positiveHP/notdying, no ownflight/partnerclaim/mageNULL, geometricEye8. Native input delay<=0 plus conservative no-movement Eye cooldown and return to21 stage refine witnesses. Trace does not expose native LOS, so full LOS/planner feasibility is not asserted.",
+  "witnesses": [
+    {
+      "seed": 140,
+      "tick": 192,
+      "wave": 19,
+      "key": 89,
+      "lane": "east",
+      "age": 28,
+      "hp": 6,
+      "distance": 5,
+      "magePoint": "3293,4248,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 140,
+      "tick": 195,
+      "wave": 19,
+      "key": 89,
+      "lane": "east",
+      "age": 31,
+      "hp": 6,
+      "distance": 8,
+      "magePoint": "3296,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 146,
+      "tick": 171,
+      "wave": 19,
+      "key": 89,
+      "lane": "east",
+      "age": 27,
+      "hp": 11,
+      "distance": 8,
+      "magePoint": "3292,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 146,
+      "tick": 172,
+      "wave": 19,
+      "key": 89,
+      "lane": "east",
+      "age": 28,
+      "hp": 11,
+      "distance": 6,
+      "magePoint": "3291,4247,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": -1,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 146,
+      "tick": 176,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 32,
+      "hp": 11,
+      "distance": 4,
+      "magePoint": "3296,4249,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": false,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 146,
+      "tick": 177,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 33,
+      "hp": 11,
+      "distance": 6,
+      "magePoint": "3298,4247,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": -1,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 146,
+      "tick": 181,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 37,
+      "hp": 11,
+      "distance": 8,
+      "magePoint": "3300,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 146,
+      "tick": 184,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 40,
+      "hp": 11,
+      "distance": 8,
+      "magePoint": "3300,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 146,
+      "tick": 188,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 44,
+      "hp": 11,
+      "distance": 8,
+      "magePoint": "3298,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 147,
+      "tick": 170,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 26,
+      "hp": 8,
+      "distance": 7,
+      "magePoint": "3300,4249,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": -1,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 147,
+      "tick": 170,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 26,
+      "hp": 2,
+      "distance": 7,
+      "magePoint": "3300,4249,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MELEE small",
+      "rangerNull": false,
+      "nativeDelay": -1,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 147,
+      "tick": 174,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 30,
+      "hp": 8,
+      "distance": 7,
+      "magePoint": "3295,4251,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 147,
+      "tick": 174,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 30,
+      "hp": 2,
+      "distance": 2,
+      "magePoint": "3295,4251,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 147,
+      "tick": 177,
+      "wave": 20,
+      "key": 86,
+      "lane": "south",
+      "age": 33,
+      "hp": 8,
+      "distance": 7,
+      "magePoint": "3295,4251,0",
+      "crabPoint": [
+        3292,
+        4243
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 147,
+      "tick": 177,
+      "wave": 20,
+      "key": 87,
+      "lane": "east",
+      "age": 33,
+      "hp": 2,
+      "distance": 2,
+      "magePoint": "3295,4251,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 184,
+      "tick": 167,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 27,
+      "hp": 14,
+      "distance": 8,
+      "magePoint": "3294,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 184,
+      "tick": 170,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 30,
+      "hp": 14,
+      "distance": 8,
+      "magePoint": "3294,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    },
+    {
+      "seed": 184,
+      "tick": 173,
+      "wave": 20,
+      "key": 89,
+      "lane": "east",
+      "age": 33,
+      "hp": 14,
+      "distance": 8,
+      "magePoint": "3294,4245,0",
+      "crabPoint": [
+        3292,
+        4253
+      ],
+      "mageAtk": true,
+      "mageReason": "Fresh MAGIC small",
+      "rangerNull": false,
+      "nativeDelay": 0,
+      "conservativeReturnFits21": true
+    }
+  ]
+}

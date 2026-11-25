@@ -200,6 +200,17 @@ Publish the fix commit to your fork before others clone the workspace.
 
 ## Change the custom client
 
+To add a server-controlled duo partner, create a solo lobby with `::theatrecreate`,
+then use `::nylobot range` or `::nylobot mage` before starting. See
+[bot commands and lifecycle](docs/nylocas-bots.md) and
+[training progress](docs/nylocas-training-v2.md).
+Use `::nylobot spectate` instead to watch a ranger and mage bot: start the raid,
+pass the Bloat exit, and stay outside the Nylocas barrier while both bots enter
+automatically after preparation.
+To continue the paused training, start with the
+[resume handoff](docs/nylocas-training-resume.md) and
+[editable guidance](docs/nylocas-training-guidance.md).
+
 The mage and ranger strategies run through the
 [headless Nylocas simulation runner](docs/nylocas-simulations.md):
 

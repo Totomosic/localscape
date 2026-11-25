@@ -1,0 +1,26 @@
+--- .state/simulations/training-v3-forecast-guidance-refined-fresh-300/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 19:02:43.963391532 +0800
++++ .state/simulations/training-v3-candidate-mage-21-north-approach/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 19:17:05.027868917 +0800
+@@ -479,7 +479,22 @@
+ 			return action;
+ 		}
+ 		intent.clear();
+-		if (next != null) return stage(next.weapon, next.stage, "Reserve " + next.name);
++		if (next != null)
++		{
++			// The northern overkill small is a moving survivor, not a fixed lane
++			// spawn. Track its real position during the barrage cooldown.
++			if (next.name.equals("21 north sulphur"))
++			{
++				Crab target = packetTarget(room, next, tick);
++				if (target != null)
++				{
++					Decision d = stage(next.weapon, next.stage, "Approach " + next.name);
++					d.approach = target;
++					return d;
++				}
++			}
++			return stage(next.weapon, next.stage, "Reserve " + next.name);
++		}
+ 		Assignment upcoming = ASSIGNMENTS.stream().filter(a -> a.wave == room.wave + 1)
+ 			.min(Comparator.comparingInt(a -> a.first)).orElse(null);
+ 		if (upcoming != null) return stage(upcoming.weapon, upcoming.stage, "Prepare " + upcoming.name);

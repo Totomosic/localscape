@@ -1,0 +1,11 @@
+--- .state/simulations/training-v3-candidate-mage-asap-followup/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:27:57.225635510 +0800
++++ .state/simulations/training-v3-candidate-mage-barrage21-recovery/policy-source/org/localscape/nylocas/mage/MageStrategy.java	2026-11-25 18:35:23.177649248 +0800
+@@ -232,7 +232,7 @@
+ 		}
+ 		if (s21 >= 0 && room.wave < 29)
+ 		{
+-			result.add(new Window("21 west barrage", s21, s21 + 1, Weapon.BARRAGE, 3290, 4249));
++			result.add(new Window("21 west barrage", s21, s21 + 3, Weapon.BARRAGE, 3290, 4249));
+ 			int due = barrage21 < 0 ? s21 + 5 : barrage21 + 5;
+ 			result.add(new Window("21 north sulphur", due, due + 1, Weapon.SULPHUR, 3291, 4251));
+ 		}

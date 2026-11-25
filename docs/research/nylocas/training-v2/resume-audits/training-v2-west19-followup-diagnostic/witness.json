@@ -1,0 +1,11 @@
+{
+  "seed": 143,
+  "run": ".state/simulations/training-v2-flight-west19-followup-100",
+  "tick": 158,
+  "phase": "actual19 age10",
+  "expected": "First INPUT shows westopened true/own0; BUDGET east18 own188 stillactive before cycle, although ordinary TRACE158 prints own0 after release.",
+  "sourcePolicy": ".state/simulations/training-v2-candidate-west19-coupled/policy-source",
+  "diagnosticPolicy": ".state/simulations/training-v2-west19-followup-diagnostic/diagnostic-policy-source",
+  "diagnosticOnly": true,
+  "changedFile": "org/localscape/nylocas/ranger/RangerPreCapPlanner.java"
+}
