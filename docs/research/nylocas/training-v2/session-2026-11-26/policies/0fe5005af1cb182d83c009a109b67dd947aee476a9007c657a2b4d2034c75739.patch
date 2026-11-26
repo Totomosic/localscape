@@ -1,0 +1,34 @@
+--- a/org/localscape/nylocas/mage/MageStrategy.java
++++ b/org/localscape/nylocas/mage/MageStrategy.java
+@@ -490,6 +490,31 @@
+ 			.thenComparingInt(c -> -c.decision.target.wave)
+ 			.thenComparingInt(c -> c.decision.target.key);
+ 		Candidate best = candidates.stream().min(priority).orElse(null);
++		// An East 27 Eye can fit while a moving split takes another cycle to reach.
++		// Vetted casts open during the parent's second magic phase, before the late Dinh.
++		if (room.wave >= 27 && room.wave <= 28 && tick >= room.ready
++			&& (best == null || best.decision.rule == null && best.decision.weapon == Weapon.SULPHUR
++				&& !best.decision.target.big && best.decision.target.lane == Lane.SPLIT
++				&& best.decision.target.hp >= 8 && !opened.contains(best.decision.target.key)
++				&& !best.decision.target.partnerNulled && best.decision.target.distance(room.player) > 1)
++			&& room.crabs.stream().noneMatch(c -> c.big && c.wave == 26 && c.lane == Lane.WEST
++				&& c.hp > 0 && !c.dying && !c.nulled && !c.awaitingHit(tick)))
++		{
++			for (Crab c : room.crabs)
++			{
++				if (c.wave != 27 || c.lane != Lane.EAST || !c.big || c.hp <= 0 || !eligible(room, c, tick)
++					|| tick - c.born < 7 || tick - c.born > 13 || !matchesNext(c, Style.MAGIC, tick)
++					|| c.distance(room.player) >= Weapon.EYE.range || room.obstructed.contains(c.key)) continue;
++				Decision eye = new Decision(c, Weapon.EYE, c.point, false, null, "Spare East 27 Eye");
++				List<Candidate> spare = new ArrayList<>();
++				add(spare, room, next, eye, 0, tick, tick, tick);
++				if (!spare.isEmpty())
++				{
++					intent.select(c.key, Weapon.EYE, tick);
++					return eye;
++				}
++			}
++		}
+ 		if (best != null)
+ 		{
+ 			Candidate selected = best;

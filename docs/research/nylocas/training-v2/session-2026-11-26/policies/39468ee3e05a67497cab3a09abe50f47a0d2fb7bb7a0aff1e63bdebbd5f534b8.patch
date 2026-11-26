@@ -1,0 +1,48 @@
+--- a/org/localscape/nylocas/mage/MageStrategy.java
++++ b/org/localscape/nylocas/mage/MageStrategy.java
+@@ -511,6 +511,21 @@
+ 				&& !west19Handoff(c.decision.target, tick)
+ 				&& intent.matches(c.decision.target.key, c.decision.weapon, tick))
+ 				.min(priority).orElse(best);
++			// Service a newly split magic small before an older unhit single-target attack.
++			// Named packets and confirmed survivor follow-ups keep their original priority.
++			Crab older = best.decision.target;
++			if (room.wave >= 28 && room.wave <= 30 && tick >= room.ready && best.at <= tick
++				&& best.decision.rule == null && best.decision.weapon == Weapon.SULPHUR
++				&& !older.big && older.hp >= 8 && !older.partnerNulled && !opened.contains(older.key))
++			{
++				best = candidates.stream().filter(c -> c.at <= tick && c.decision.rule == null
++					&& c.decision.weapon == Weapon.EYE && !c.decision.target.big && c.decision.target.lane == Lane.SPLIT
++					&& c.decision.target.born >= older.born + 4 && tick - c.decision.target.born <= 12
++					&& c.decision.target.distance(room.player) < Weapon.EYE.range
++					&& !room.obstructed.contains(c.decision.target.key))
++					.min(Comparator.comparingInt((Candidate c) -> -c.decision.target.born)
++						.thenComparingInt(c -> -c.score).thenComparingInt(c -> c.decision.target.key)).orElse(best);
++			}
+ 			Decision action = best.decision;
+ 			action.pathToTarget = best.at > tick && tick >= best.first && tick >= room.ready && !room.obstructed.contains(action.target.key);
+ 			intent.select(action.target.key, action.weapon, tick);
+--- a/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -454,6 +454,21 @@
+ 		else if (!(room.wave == 31 && best.decision.target.partnerNulled))
+ 			best = candidates.stream().filter(c -> c.at == earliest && committed(c.decision, tick))
+ 			.min(Comparator.comparingInt((Candidate c) -> -c.score)).orElse(best);
++		// Service a newly split magic small before an older unhit single-target attack.
++		// Named packets and confirmed survivor follow-ups keep their original priority.
++		Crab older = best.decision.target;
++		if (room.wave >= 28 && room.wave <= 30 && tick >= room.ready && best.at <= tick
++			&& best.decision.rule == null && best.decision.weapon == Weapon.PIPE
++			&& !older.big && older.hp >= 8 && !older.partnerNulled && !opened.contains(older.key))
++		{
++			best = candidates.stream().filter(c -> c.at <= tick && c.decision.rule == null
++				&& c.decision.weapon == Weapon.EYE && !c.decision.target.big && c.decision.target.lane == Lane.SPLIT
++				&& c.decision.target.born >= older.born + 4 && tick - c.decision.target.born <= 12
++				&& c.decision.target.distance(room.player) < Weapon.EYE.range
++				&& !room.obstructed.contains(c.decision.target.key))
++				.min(Comparator.comparingInt((Candidate c) -> -c.decision.target.born)
++					.thenComparingInt(c -> -c.score).thenComparingInt(c -> c.decision.target.key)).orElse(best);
++		}
+ 		if (best.at <= tick || tick >= room.ready && !room.obstructed.contains(best.decision.target.key))
+ 		{
+ 			best.decision.pathToTarget = best.at > tick;

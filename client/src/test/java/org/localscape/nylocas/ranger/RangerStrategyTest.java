@@ -45,7 +45,7 @@ public class RangerStrategyTest
 	}
 
 	@Test
-	public void damagedRangedSmallOutranksFreshFullHpSmall()
+	public void freshSplitOutranksAFourWaveOldSmallTheRangerHasNeverHit()
 	{
 		Room room = room(12, 100);
 		Crab damaged = crab(room, 8, 75, Lane.SPLIT, (char) 0, false, Style.RANGE);
@@ -53,7 +53,7 @@ public class RangerStrategyTest
 		damaged.point = room.player.dx(-3);
 		Crab fresh = crab(room, 12, 100, Lane.SPLIT, (char) 0, false, Style.RANGE);
 		fresh.point = room.player.dx(3);
-		assertSame(damaged, strategy.decide(room, 101).target);
+		assertSame(fresh, strategy.decide(room, 101).target);
 		assertEquals(Weapon.PIPE, strategy.decide(room, 101).weapon);
 	}
 
@@ -122,9 +122,10 @@ public class RangerStrategyTest
 		Crab distant = crab(room, 12, 105, Lane.SPLIT, (char) 0, false, Style.RANGE);
 		distant.point = RangerStrategy.tile(3300, 4248);
 		Decision decision = strategy.decide(room, 108);
-		assertSame(distant, decision.target);
+		assertNull(decision.target);
+		assertSame(distant, decision.approach);
 		assertEquals(Weapon.PIPE, decision.weapon);
-		assertTrue(decision.pathToTarget);
+		assertFalse(decision.pathToTarget);
 	}
 
 	@Test
@@ -165,7 +166,9 @@ public class RangerStrategyTest
 		distant.point = room.player.dx(8);
 		Decision decision = strategy.decide(room, 100);
 		assertEquals(Weapon.PIPE, decision.weapon);
-		assertTrue(decision.pathToTarget);
+		assertNull(decision.target);
+		assertSame(distant, decision.approach);
+		assertFalse(decision.pathToTarget);
 	}
 
 	@Test
@@ -452,6 +455,33 @@ public class RangerStrategyTest
 	}
 
 	@Test
+	public void west9GetsTheFirstLegalPipeBeforeOrdinarySmalls()
+	{
+		Room room = room(9, 100);
+		room.player = RangerStrategy.tile(3292, 4248);
+		Crab parent = crab(room, 9, 100, Lane.WEST, 'S', true, Style.RANGE);
+		parent.point = RangerStrategy.tile(3286, 4248);
+		Crab small = crab(room, 9, 103, Lane.SPLIT, (char) 0, false, Style.RANGE);
+		small.hp = 1;
+		small.point = room.player;
+		Decision attack = strategy.decide(room, 105);
+		assertSame(parent, attack.target);
+		assertEquals(Weapon.PIPE, attack.weapon);
+	}
+
+	@Test
+	public void west9DoesNotReplaceAUsefulSmallWithATooEarlyBow()
+	{
+		Room room = room(9, 100);
+		room.player = RangerStrategy.tile(3298, 4248);
+		Crab parent = crab(room, 9, 100, Lane.WEST, 'S', true, Style.RANGE);
+		parent.point = RangerStrategy.tile(3286, 4248);
+		Crab small = crab(room, 9, 103, Lane.SPLIT, (char) 0, false, Style.RANGE);
+		small.point = room.player;
+		assertSame(small, strategy.decide(room, 105).target);
+	}
+
+	@Test
 	public void everyAssignedPreCapBigGetsServiceBeforeItsDeadlineDespiteFreshSmalls()
 	{
 		int[][] assignments = {
@@ -459,8 +489,7 @@ public class RangerStrategyTest
 			{6, Lane.EAST.ordinal(), 9, Style.MELEE.ordinal()},
 			{7, Lane.SOUTH.ordinal(), 0, Style.RANGE.ordinal()},
 			{9, Lane.WEST.ordinal(), 7, Style.RANGE.ordinal()},
-			{10, Lane.EAST.ordinal(), 9, Style.RANGE.ordinal()},
-			{14, Lane.EAST.ordinal(), 10, Style.RANGE.ordinal()}
+			{10, Lane.EAST.ordinal(), 9, Style.RANGE.ordinal()}
 		};
 		for (int[] assignment : assignments)
 		{
@@ -980,7 +1009,7 @@ public class RangerStrategyTest
 	public void recentMageBigOnlyBecomesFallbackWhenPartnerIsNulled()
 	{
 		Room room = room(28, 108);
-		Crab big = crab(room, 27, 100, Lane.WEST, 'S', true, Style.MAGIC);
+		Crab big = crab(room, 26, 100, Lane.WEST, 'S', true, Style.MAGIC);
 		assertNull(strategy.decide(room, 110).target);
 		big.partnerNulled = true;
 		assertSame(big, strategy.decide(room, 110).target);

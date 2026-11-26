@@ -1,0 +1,48 @@
+--- a/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -387,7 +387,8 @@
+ 			{
+ 				if (!crab.big || crab.wave >= 20 || crab.dying || crab.nulled || crab.claimed(tick)
+ 					|| crab.awaitingHit(tick) || tick - crab.born >= 49 || crab.style == Style.MELEE) continue;
+-				if (crab.wave == 18 && (crab.style != Style.RANGE || !wave18Available(crab, room, tick))) continue;
++				if (crab.wave == 18 && (crab.style != Style.RANGE && !(room.wave == 20 && crab.style == Style.MAGIC
++					&& tick - crab.born >= 26) || !wave18Available(crab, room, tick))) continue;
+ 				Weapon weapon = crab.style == Style.RANGE ? Weapon.PIPE : Weapon.EYE;
+ 				if (!RangerFlickers.matchesNext(crab, weapon.style, tick)) continue;
+ 				Decision action = new Decision(crab, weapon, CENTER, false, null, "Spare time on old big");
+@@ -452,8 +453,13 @@
+ 		// The conditional west-24 Eye window takes priority over filler planned before the flicker.
+ 		if (west24 != null) best = west24;
+ 		else if (!(room.wave == 31 && best.decision.target.partnerNulled))
+-			best = candidates.stream().filter(c -> c.at == earliest && committed(c.decision, tick))
+-			.min(Comparator.comparingInt((Candidate c) -> -c.score)).orElse(best);
++		{
++			Candidate selected = best;
++			best = candidates.stream().filter(c -> c.at == earliest && committed(c.decision, tick)
++				&& !(room.wave == 20 && selected.decision.target.big && selected.decision.target.wave == 18
++					&& c.decision.target.key != selected.decision.target.key))
++				.min(Comparator.comparingInt((Candidate c) -> -c.score)).orElse(best);
++		}
+ 		if (best.at <= tick || tick >= room.ready && !room.obstructed.contains(best.decision.target.key))
+ 		{
+ 			best.decision.pathToTarget = best.at > tick;
+@@ -524,7 +530,8 @@
+ 	{
+ 		if (room.wave >= 29 && c.style == Style.RANGE) return true;
+ 		if (room.wave == 20 && c.wave == 18)
+-			return c.style == Style.RANGE && wave18Available(c, room, c.born + age);
++			return (c.style == Style.RANGE || c.style == Style.MAGIC && age >= 26)
++				&& wave18Available(c, room, c.born + age);
+ 		if (room.wave >= 20 && c.wave < 20) return false;
+ 		if (waveTwelveBackup(c, room) || partnerMagicBig(c, room, age)) return true;
+ 		BigAssignment assignment = BigAssignment.of(c);
+@@ -607,7 +614,8 @@
+ 
+ 	static boolean wave18Available(Crab crab, Room room, int tick)
+ 	{
+-		if (room.wave >= 21 || tick - crab.born >= 26) return false;
++		if (room.wave >= 21) return false;
++		if (tick - crab.born >= 26) return room.wave == 20 && crab.style == Style.MAGIC && tick - crab.born < 49;
+ 		// Vetted rooms prefire west even with living smalls; south/east retain the late entry guide.
+ 		return crab.lane == Lane.WEST || enteredRoom(crab) && wave18Released(room, tick);
+ 	}

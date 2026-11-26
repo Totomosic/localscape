@@ -103,8 +103,33 @@ class SimulationReportTests(unittest.TestCase):
             markdown = (root / "report.md").read_text()
             self.assertIn("always-max-hit diagnostic", markdown)
             self.assertIn("excluded from randomized benchmarks", markdown)
-            self.assertIn("minimum **182.40**", markdown)
-            self.assertIn("maximum **182.40**", markdown)
+            self.assertIn("P5 **182.40** and P95 **182.40**", markdown)
+            self.assertIn("P5 **n/a** and P95 **n/a**", markdown)
+
+    def test_reported_boss_percentiles_use_nearest_ranks_among_eligible_rooms(self):
+        clean = dict(self.row("completed", 300), stalls_by_last_spawned_wave=";".join(["0"] * 31))
+        rows = [dict(clean, ticks=str(tick)) for tick in reversed(range(300, 340))]
+        stalled = ["0"] * 31
+        stalled[19] = "1"
+        rows.extend([dict(clean, ticks="900", stalls_by_last_spawned_wave=";".join(stalled)),
+                     dict(clean, ticks="950", stalls_by_last_spawned_wave=""),
+                     dict(clean, status="death", ticks="1"), dict(clean, status="timeout", ticks="1000")])
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "trials.csv"
+            with source.open("w", newline="") as output:
+                writer = csv.DictWriter(output, fieldnames=list(clean))
+                writer.writeheader()
+                writer.writerows(rows)
+            report = simulation.write_report(source, root, {})
+            markdown = (root / "report.md").read_text()
+
+        benchmark = report["boss_time_benchmark"]
+        self.assertEqual(benchmark["eligible_completed_trials"], 40)
+        self.assertEqual(benchmark["completion_ticks"]["p5"], 301)
+        self.assertEqual(benchmark["completion_ticks"]["p95"], 337)
+        self.assertIn("P5 **180.60** and P95 **202.20**", markdown)
+        self.assertIn("P5 **181.20** and P95 **203.40**", markdown)
 
     def test_training_uses_last_spawned_names_and_failures_cannot_meet_goals(self):
         completed = self.row("completed", 315)
@@ -150,6 +175,19 @@ class SimulationReportTests(unittest.TestCase):
         self.assertEqual(benchmark["completed_without_wave_counter_evidence"], 1)
         self.assertFalse(benchmark["wave19_zero_stall_goal_met"])
         self.assertIsNone(benchmark["completion_ticks"]["mean"])
+        self.assertIsNone(benchmark["p95_target_met"])
+
+    def test_3m16_8_target_uses_eligible_p95_and_reports_all_trial_successes(self):
+        boundary = dict(self.row("completed", 328), stalls_by_last_spawned_wave=";".join(["0"] * 31))
+        over = dict(boundary, ticks="329")
+        stalls = [0] * 31
+        stalls[19] = 1
+        stalled = dict(boundary, stalls_by_last_spawned_wave=";".join(map(str, stalls)))
+        rows = [boundary] * 19 + [over, stalled, self.row("death", 100)]
+        report = simulation.summarize(rows)
+        self.assertTrue(report["boss_time_benchmark"]["p95_target_met"])
+        self.assertEqual(report["training"]["completed_boss_at_most_3m16_8"], 20)
+        self.assertFalse(simulation.summarize(rows + [over])["boss_time_benchmark"]["p95_target_met"])
 
     def test_3m22_reliability_counts_all_rooms_and_respects_tick_boundary(self):
         clean = self.row("completed", 336)

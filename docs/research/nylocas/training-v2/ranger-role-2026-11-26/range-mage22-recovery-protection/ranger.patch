@@ -1,0 +1,11 @@
+--- upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/ranger/RangerStrategy.java
++++ .state/simulations/training-v5-20261126-range-mage22-recovery-protection/policy-source/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -632,7 +632,7 @@
+ 		int age = tick - crab.born;
+ 		if (crab.big || crab.partnerNulled || age < 0) return false;
+ 		return crab.wave == 12 && crab.lane == Lane.WEST && crab.slot == 'S' && age <= 15
+-			|| crab.wave == 22 && crab.lane == Lane.SOUTH && crab.slot == 'W' && age <= 10;
++			|| crab.wave == 22 && crab.lane == Lane.SOUTH && crab.slot == 'W' && age <= 13;
+ 	}
+ 
+ 	public static final class Reservation

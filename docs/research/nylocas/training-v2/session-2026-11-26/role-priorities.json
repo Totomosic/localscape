@@ -1,0 +1,411 @@
+{
+  "method": {
+    "recorded": "2026-11-27 AWST",
+    "agents": "One GPT-6.1-Sol agent at high reasoning for each role",
+    "fixture": "Native packed room, ordinary randomized hits, 99 starting HP, five finite mantas per player and the documented duo loadouts",
+    "cohorts": "Two independently drawn 150-room cohorts compared with the earlier packed-map 400- and 500-room cohorts. The historical replays are outside both fresh denominators.",
+    "parents": "Track each original big by birth, lane and entity key until its first zero HP or death queue. Age is measured in ticks after spawn. An expiry at positive HP is counted separately.",
+    "west27": "A living body with a lethal hit in flight still blocks west 27. The mage permits the optional parent at age 0 through 9 in its lane or crossing the doorway while alone and out of combat.",
+    "ranger": "Record the first-green throw at age 5 and match the same ranger attack ID on both original south smalls at impact. Count other primaries while west 30 is alive without lethal damage in flight and available to the ranger.",
+    "waits": "Count only explicit ready-tick decisions to wait for or prepare a near-term fresh target before wave 20. Cooldown movement is separate.",
+    "movement": "Match ground inputs to actual movement in the same native cycle. NPC click range uses the weapon reach plus the maximum one-cycle closing distance of two player tiles and one incoming nylo tile. The earlier baseline predates native input tracing.",
+    "timing": "One tick is 0.6 seconds. Eligible times and nearest-rank P5 and P95 exclude whole rooms with a last-spawned wave-19 stall. Deadline counts include every trial.",
+    "audit": "tools/research/nylocas_role_priorities_audit.py",
+    "local_raw": ".state/simulations/role-priorities-20261126"
+  },
+  "prior_packed_900": {
+    "rooms": 900,
+    "statuses": {
+      "completed": 900
+    },
+    "counts": {
+      "wave19_failure_rooms": 25,
+      "west8_eye_at_birth": 900,
+      "south20_post_barrage_scythe": 0,
+      "west27_selections": 3558,
+      "west27_outside_exception_selections": 3558,
+      "west27_positive_impacts": 1085,
+      "south30_first_green": 900,
+      "south30_both_hit_by_same_chin": 900,
+      "west30_uncovered_after_chin": 410,
+      "west30_rooms_with_uncovered_ranger_shot": 410,
+      "west30_first_uncovered_shot_on_parent": 233,
+      "west30_rooms_with_intervening_filler": 192,
+      "west8_uncovered_three_ticks_later": 389,
+      "west8_eye_retry_on_that_tick": 389
+    },
+    "precap": {
+      "ranger_ordinary_small_two_or_more_waves_old": 4683,
+      "ranger_fresh_ready_waits": 55,
+      "mage_ordinary_small_two_or_more_waves_old": 2100,
+      "mage_fresh_ready_waits": 359
+    },
+    "max_fresh_ready_ticks_between_primaries": {
+      "ranger": 2,
+      "mage": 2
+    },
+    "parents": {
+      "20S": {
+        "combat_deaths": 834,
+        "mean_age_at_zero_hp": 8.91,
+        "median_age_at_zero_hp": 9.0
+      },
+      "23S": {
+        "combat_deaths": 900,
+        "mean_age_at_zero_hp": 6.45,
+        "median_age_at_zero_hp": 5.0
+      },
+      "24E": {
+        "combat_deaths": 899,
+        "mean_age_at_zero_hp": 16.2,
+        "median_age_at_zero_hp": 13
+      },
+      "24S": {
+        "combat_deaths": 900,
+        "mean_age_at_zero_hp": 10.35,
+        "median_age_at_zero_hp": 9.0
+      },
+      "24W": {
+        "combat_deaths": 899,
+        "mean_age_at_zero_hp": 8.5,
+        "median_age_at_zero_hp": 6
+      },
+      "25W": {
+        "combat_deaths": 900,
+        "mean_age_at_zero_hp": 17.92,
+        "median_age_at_zero_hp": 18.0
+      },
+      "26W": {
+        "combat_deaths": 895,
+        "mean_age_at_zero_hp": 9.35,
+        "median_age_at_zero_hp": 8
+      },
+      "27W": {
+        "combat_deaths": 697,
+        "mean_age_at_zero_hp": 10.49,
+        "median_age_at_zero_hp": 9
+      },
+      "29S": {
+        "combat_deaths": 880,
+        "mean_age_at_zero_hp": 9.85,
+        "median_age_at_zero_hp": 9.0
+      },
+      "30E": {
+        "combat_deaths": 885,
+        "mean_age_at_zero_hp": 11.39,
+        "median_age_at_zero_hp": 11
+      },
+      "30W": {
+        "combat_deaths": 893,
+        "mean_age_at_zero_hp": 11.18,
+        "median_age_at_zero_hp": 6
+      }
+    },
+    "boss": {
+      "eligible": 875,
+      "min_ticks": 308,
+      "mean_ticks": 324.8914,
+      "p5_ticks": 312,
+      "p95_ticks": 336,
+      "max_ticks": 356,
+      "eligible_tick_histogram": {
+        "308": 8,
+        "312": 47,
+        "316": 101,
+        "320": 184,
+        "324": 160,
+        "328": 168,
+        "332": 112,
+        "336": 53,
+        "340": 24,
+        "344": 6,
+        "348": 8,
+        "352": 3,
+        "356": 1
+      },
+      "all_by_328": 672,
+      "all_by_3m22": 847
+    },
+    "cohorts": {
+      "retained-fresh-400": {
+        "rooms": 400,
+        "first_seed": 117919208328818,
+        "last_seed": 117919208329217,
+        "trials_sha256": "06bebb9e9f11cfa3dc6d19001b7ea9b250487ba8bc355cdafec7a193bf8c6db0",
+        "trace_sha256": "fb01887ce7d2165d96d8412835efff9ee58f380beec2c4713d23d0ecd2eb84d7"
+      },
+      "retained-fresh-500": {
+        "rooms": 500,
+        "first_seed": 14403012897928,
+        "last_seed": 14403012898427,
+        "trials_sha256": "556ef8981d50c31699908f89f1f6200b11170a5883345fdb308ba1f76a28c5c8",
+        "trace_sha256": "1b40aa4493dad6788c6ae69fea0fc5f95457afb872f066ec0b239439807da05e"
+      }
+    },
+    "expired_required_parent_count": 115
+  },
+  "final_300": {
+    "rooms": 300,
+    "statuses": {
+      "completed": 300
+    },
+    "counts": {
+      "wave19_failure_rooms": 9,
+      "west8_eye_at_birth": 299,
+      "west8_uncovered_three_ticks_later": 111,
+      "west8_eye_retry_on_that_tick": 111,
+      "south20_post_barrage_scythe": 0,
+      "west27_selections": 0,
+      "west27_outside_exception_selections": 0,
+      "west27_positive_impacts": 0,
+      "south30_first_green": 300,
+      "south30_both_hit_by_same_chin": 300,
+      "west30_uncovered_after_chin": 161,
+      "west30_rooms_with_uncovered_ranger_shot": 161,
+      "west30_first_uncovered_shot_on_parent": 161,
+      "west30_rooms_with_intervening_filler": 0
+    },
+    "precap": {
+      "ranger_ordinary_small_two_or_more_waves_old": 1531,
+      "mage_ordinary_small_two_or_more_waves_old": 683,
+      "mage_fresh_ready_waits": 252,
+      "ranger_fresh_ready_waits": 25
+    },
+    "movement": {
+      "ranger_npc_clicks": 33842,
+      "ranger_blocked_npc_clicks": 0,
+      "ranger_beyond_one_cycle_npc_clicks": 0,
+      "ranger_precap_cooldown_ground_moves": 13966,
+      "mage_npc_clicks": 22802,
+      "mage_blocked_npc_clicks": 0,
+      "mage_beyond_one_cycle_npc_clicks": 0,
+      "ranger_precap_cooldown_ground_moves_with_step": 13966,
+      "mage_precap_cooldown_ground_moves": 20636,
+      "mage_precap_cooldown_ground_moves_with_step": 20636
+    },
+    "max_fresh_ready_ticks_between_primaries": {
+      "ranger": 2,
+      "mage": 2
+    },
+    "parents": {
+      "20S": {
+        "combat_deaths": 300,
+        "mean_age_at_zero_hp": 7.09,
+        "median_age_at_zero_hp": 6.0
+      },
+      "23S": {
+        "combat_deaths": 300,
+        "mean_age_at_zero_hp": 6.23,
+        "median_age_at_zero_hp": 5.0
+      },
+      "24E": {
+        "combat_deaths": 300,
+        "mean_age_at_zero_hp": 13.18,
+        "median_age_at_zero_hp": 11.0
+      },
+      "24S": {
+        "combat_deaths": 300,
+        "mean_age_at_zero_hp": 8.77,
+        "median_age_at_zero_hp": 8.0
+      },
+      "24W": {
+        "combat_deaths": 300,
+        "mean_age_at_zero_hp": 8.84,
+        "median_age_at_zero_hp": 9.0
+      },
+      "25W": {
+        "combat_deaths": 300,
+        "mean_age_at_zero_hp": 13.15,
+        "median_age_at_zero_hp": 13.0
+      },
+      "26W": {
+        "combat_deaths": 300,
+        "mean_age_at_zero_hp": 8.79,
+        "median_age_at_zero_hp": 8.0
+      },
+      "27W": {
+        "combat_deaths": 0,
+        "mean_age_at_zero_hp": null,
+        "median_age_at_zero_hp": null
+      },
+      "29S": {
+        "combat_deaths": 300,
+        "mean_age_at_zero_hp": 9.9,
+        "median_age_at_zero_hp": 9.0
+      },
+      "30E": {
+        "combat_deaths": 300,
+        "mean_age_at_zero_hp": 9.21,
+        "median_age_at_zero_hp": 8.0
+      },
+      "30W": {
+        "combat_deaths": 300,
+        "mean_age_at_zero_hp": 9.03,
+        "median_age_at_zero_hp": 11.0
+      }
+    },
+    "expired_required_parents": [],
+    "order_exceptions": [],
+    "boss": {
+      "eligible": 291,
+      "min_ticks": 308,
+      "mean_ticks": 326.1856,
+      "p5_ticks": 316,
+      "p95_ticks": 340,
+      "max_ticks": 352,
+      "eligible_tick_histogram": {
+        "308": 1,
+        "312": 8,
+        "316": 23,
+        "320": 48,
+        "324": 69,
+        "328": 59,
+        "332": 51,
+        "336": 16,
+        "340": 11,
+        "344": 3,
+        "348": 1,
+        "352": 1
+      },
+      "all_by_328": 209,
+      "all_by_3m22": 279
+    },
+    "cohorts": {
+      "final-a-150": {
+        "rooms": 150,
+        "first_seed": 50266378178048,
+        "last_seed": 50266378178197,
+        "trials_sha256": "009fa4dc8ebe1f341260e9b1a7b478dd0a525f26e1f60bf402b17a96f300a0a5",
+        "trace_sha256": "c9b2889ad614adbe62ea1115f7fe7829728bbbb2605a999ad5301f0042cf5f1d"
+      },
+      "final-b-150": {
+        "rooms": 150,
+        "first_seed": 26778984479982,
+        "last_seed": 26778984480131,
+        "trials_sha256": "f8039406a004e3f5d2aa3168f6e5a64bf4bdbad4c210ec50e886ece9a7e97373",
+        "trace_sha256": "c5fc7645721dd90b834b6e002001975d2043cf2b80b9bdc143cd9b3e8126e361"
+      }
+    },
+    "sources": {
+      "fixture": {
+        "base_stats": 99,
+        "agility": 99,
+        "starting_run_energy": 10000,
+        "starting_hitpoints": 99,
+        "prayer_potions_four_dose_per_player": 4,
+        "prayer_threshold": 25,
+        "special_energy": "normal regeneration with Lightbearer",
+        "inventory_input_bridge": "HeldOpScript; shared supply-fixture contract verified",
+        "prepot": true,
+        "server_boosts": true,
+        "native_utilities": true,
+        "queued_damage_forecast": true,
+        "extra_dinh_25": false,
+        "defer_mage_thrall_renewal": false,
+        "manta_rays_once_per_player": 5,
+        "food_hp_threshold": 65,
+        "damage": "randomized",
+        "gear": "role loadouts from mage-strategy.md and range-strategy.md; see adapter"
+      },
+      "policy_sha256": {
+        "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+        "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+        "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+        "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+        "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+        "org/localscape/nylocas/mage/MageStrategy.java": "c84c7b065ea1d9c77b514c91bf2ded063c56b3dab53b92c97f8508becaa4c93a",
+        "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+        "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "0a3cceaad1c244122832484ec712aeb751aa6b72b3124ec3d752210bef53cf03",
+        "org/localscape/nylocas/ranger/RangerStrategy.java": "662e94ff411732058063aca15d8475043dde194c83ad32a27413848c9f4835c3"
+      },
+      "adapter_sha256": {
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasServerAgents.kt": "9aaacf4e2f517cba97d7f6a196ece73004ce14318de15133f2b7315811399bb2",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationTest.kt": "ccc8e3db8876263ca98611b217d7255cfa5b7011066555f9097314971a3a70e4",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationAreas.kt": "d37dacf487cfbabbdcb9ebd6b05b2c1d702040c2b6c16be727a16fb269d95cdc",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationStalls.kt": "329a5e818dc2468b408f1a60e4038845a06e20b700611eb9c456f928d86e0149",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationSupplies.kt": "c8dfa7b030428845b720ee3f682ad01c1cc85011c6ec8f0868beb5068e18cc41",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotClient.kt": "9ddb23023dde2cc1e68fde50393ec78261ee98a35bb7a5e28aff4a4037dee507",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotController.kt": "12371fb4718cd9244fe8a05391616a51a5f6439b9ddd5279b51d345e81ec08ba",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotGroupInputs.kt": "75c1cdec5adc9916bab747ab6d9886274339ce8f8a6196471f27da60c1cf413f",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotInputs.kt": "95146bf352cf71037add4d007556f8c49758b9910959cb3d71316671cb311908",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotService.kt": "39060c587fb27b547a99f9a52c2c239ffff5400a07a38765a84551105e6e5421",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotUtilities.kt": "ac81420eac2aa8e7c27036d12fda35a7e0ccc7cf01da90dcfe489298e61fb669",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotUtilitySupplies.kt": "937de43b61928fda25e638630dabe5dabc22c28826db5704ceeb5bfde916d6f2",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasCombatIdle.kt": "ba19211218d4ac9cc21c623ae91d79cfe9cac43e55f6313a36850f531994413f",
+        "content/other/login/src/main/kotlin/org/rsmod/content/other/login/LoginScript.kt": "ed82d01a241076816811ea3208a8792ee8c3518d1232120e3e22e5a35985a99f",
+        "api/stats-plugin/src/main/kotlin/org/rsmod/api/stats/plugin/StatRegenScript.kt": "2ea612b185d3052ec9e80e0abb98bde3509e9ddf8220bd7f17a9dcdd22ed33c9",
+        "api/testing/src/main/kotlin/org/rsmod/api/testing/scope/GameTestScope.kt": "521d83fff56aba2b6cc8293996467dec80f767537d366ed9cb7e5d44bede6854"
+      }
+    }
+  },
+  "historical_seed_replays": [
+    {
+      "seed": 135959225567683,
+      "parent": "24E",
+      "intermediate": {
+        "directory": "fresh-300",
+        "born": 212,
+        "first_zero_hp_or_death_queue": null,
+        "last_observed_hp": 16,
+        "primary_attacks": []
+      },
+      "final": {
+        "directory": "final-east24",
+        "born": 212,
+        "first_zero_hp_or_death_queue": 255,
+        "last_observed_hp": 0,
+        "primary_attacks": [
+          {
+            "tick": 253,
+            "role": "mage",
+            "weapon_id": 22325,
+            "rule": null
+          }
+        ],
+        "trace_sha256": "15a78d0ef78061eed9a850440c71653ef8ef8c6addb018373ef925e163ec39c8"
+      }
+    },
+    {
+      "seed": 264763169323360,
+      "parent": "20S",
+      "intermediate": {
+        "directory": "fresh-200",
+        "born": 156,
+        "first_zero_hp_or_death_queue": null,
+        "last_observed_hp": 16,
+        "primary_attacks": []
+      },
+      "final": {
+        "directory": "final-south20",
+        "born": 156,
+        "first_zero_hp_or_death_queue": 162,
+        "last_observed_hp": 0,
+        "primary_attacks": [
+          {
+            "tick": 158,
+            "role": "mage",
+            "weapon_id": 31113,
+            "rule": "South opener 20"
+          }
+        ],
+        "trace_sha256": "1fc59e17093c443e8e855830511d463592cce9563f91fa781899d9052cce70b3"
+      }
+    }
+  ],
+  "west8_late_opener": {
+    "seed": 50266378178168,
+    "born": 52,
+    "first_eye": 53
+  },
+  "verification": {
+    "role_tests_passed": 507,
+    "native": {
+      "tests": 73,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "python_tests_run": 59,
+    "python_tests_skipped": 4
+  }
+}

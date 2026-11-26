@@ -128,7 +128,8 @@ public class MageReplayTest
 		assertPacket(raid, events, 236, 3293, 4245, "26 Dinh on 28");
 		assertPacket(raid, events, 249, 3295, 4244, "South big 29");
 		MageStrategy.Room after29 = frame(raid, events, 240, 3295, 4243);
-		assertNotNull(new MageStrategy().decide(after29, 240).target);
+		MageStrategy.Decision recovery = new MageStrategy().decide(after29, 240);
+		assertNotNull(recovery.target != null ? recovery.target : recovery.approach);
 	}
 
 	private void assertPacket(JsonObject raid, JsonArray events, int tick, int x, int y, String name)

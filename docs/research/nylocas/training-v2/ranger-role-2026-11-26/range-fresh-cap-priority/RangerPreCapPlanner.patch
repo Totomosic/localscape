@@ -1,0 +1,11 @@
+--- .state/simulations/training-v5-20261126-dual-fresh-cap-v2-300/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ .state/simulations/training-v5-20261126-range-fresh-cap-priority/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -154,6 +154,8 @@
+ 	{
+ 		if (choices.get(0).shots.size() != 1) return;
+ 		int earliest = choices.stream().mapToInt(p -> p.shots.get(0).tick).min().getAsInt();
++		// First20 cap relief is protected work, not ordinary old clearing.
++		if (choices.stream().anyMatch(p -> p.shots.get(0).tick == earliest && capClearanceSmall(p, room))) return;
+ 		if (choices.stream().noneMatch(p -> p.shots.get(0).tick == earliest && ordinaryOldUnhit(last(p), room))) return;
+ 		if (choices.stream().anyMatch(p -> p.shots.get(0).tick == earliest && last(p).target.wave < room.wave - 1
+ 			&& !ordinaryOldUnhit(last(p), room))) return;

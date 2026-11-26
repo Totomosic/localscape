@@ -1,0 +1,35 @@
+--- a/RangerPreCapPlanner.java
++++ b/RangerPreCapPlanner.java
+@@ -116,7 +116,32 @@
+ 			first.position, action.special, action.rule, "Pre-cap plan: " + sequence);
+ 		decision.pathToTarget = first.tick > tick && queue;
+ 		if (decision.target == null) decision.approach = action.target;
++		Tile westStage = coveredWest9CooldownStage(room, tick, first);
++		if (decision.target == null && westStage != null)
++			return new Decision(null, action.weapon, westStage, false, null, "Stage West9 while covering the next small shot");
+ 		return decision;
++	}
++
++	private Tile coveredWest9CooldownStage(Room room, int tick, Shot first)
++	{
++		Crab current = first.decision.target;
++		Weapon weapon = first.decision.weapon;
++		if (room.wave != 9 || room.spawns[9] < 0 || tick - room.spawns[9] > 6
++			|| room.ready != tick + 1 || first.tick != room.ready || current.big
++			|| weapon != Weapon.PIPE && weapon != Weapon.EYE || current.pendingDamage < 0
++			|| current.pendingDamage >= current.hp || room.obstructed.contains(current.key)) return null;
++		Crab west = room.crabs.stream().filter(c -> c.wave == 9 && c.lane == Lane.WEST && c.big
++			&& c.hp > 0 && !c.dying && !c.nulled && !c.claimed(tick) && !c.awaitingHit(tick)
++			&& !strategy.opened(c)).findFirst().orElse(null);
++		if (west == null) return null;
++		Tile stage = RangerStrategy.tile(Math.max(3292, room.player.getX() - 2),
++			Math.max(4247, Math.min(4249, room.player.getY())));
++		if (stage.getX() >= room.player.getX() || room.player.distanceTo(stage) > 2
++			|| distance(stage, west.point, true) >= distance(room.player, west.point, true)
++			|| distance(stage, current.point, false) > weapon.range - 1) return null;
++		// Only the final cooldown tick moves, with one full tile of target-motion margin.
++		// Keep the already selected shot covered; a pure move avoids the adapter's zero-step approach bias.
++		return stage;
+ 	}
+ 
+ 	private static void keepEarliest(List<Plan> choices)

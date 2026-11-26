@@ -73,6 +73,12 @@ VERY VERY IMPORTANT - heavy focus on newer nylos instead of older one, especiall
 
 What should the next training session focus on?
 
+### Pre-cap parent timing and P95 goal, 26 November
+
+- The mage should attack the wave-8 west big on its spawn tick and take the next available hit if it survives.
+- Clear both original wave-15 east smalls, then have the ranger kill the wave-14 east ranged big and the mage kill the wave-13 east melee big. A small with a confirmed lethal hit already in flight is covered. Each role should finish a surviving parent in combat. Waiting for natural expiry is a failure.
+- Use P5 and P95 for the lower and upper reported boss-spawn times. The current upper target is **3:16.8** (328 ticks). Also count every trial that meets the deadline and report wave-19 failures separately.
+
 - Highest priority: Pre-cap and cleanup
 - Next priority: Coordination between players, even before the projectile has landed, both players should know if the nylocas is dead or not.
 - Strategies or packets that must be preserved:
@@ -173,3 +179,36 @@ Historical whole-wave29measurements remain valid measurements of their saved pol
 Jordan: “ok lets start to wrap up, finish the current experiment and record a document for another agent to continue the training”.
 
 The running mixed-cleave native200completed and its behavior was audited. No further training batch was started. Training is paused at Jordan’s request; resume only on explicit instruction. See [the latest continuation handoff](nylocas-training-handoff-2026-11-25.md) for retained source, normal average/minimum/maximum, pending candidates and evidence. The goals remain unmet. Preserve all earlier guidance; this entry changes training status, not the performance goals.
+
+## Pre-cap target choice — 26 November 2026
+
+Never hit the original wave-1 melee nylo. It is the small that spawns east in the north slot. During pre-cap, both players can spend one or two ticks waiting or moving into position for a new lane spawn or split when the alternative is a crab four waves old. This is especially important for the mage.
+
+Jordan saw the mage run over to hit the wave-1 melee one tick before the wave-6 west magic small spawned. In that situation the mage should use the tick to get ready for the west small. Track the target of the approach as well as the eventual attack when checking this behavior.
+
+## Boss-spawn reporting after the 26 November checkpoint
+
+Report the mean, **P5** and **P95** boss-spawn times for completed rooms with known zero wave-19 stalls. Sort the individual room times across the cohorts being combined and use the nearest-rank 5th and 95th percentiles. One tick is 0.6 seconds.
+
+Jordan accepted the observed **9/500 (1.8%)** wave-19 failure rate at this checkpoint. Continue to show the wave-19 count and the fraction of all trials reaching boss spawn by 3:22. The 3:09 target applies to the eligible mean. [Retained checkpoint](nylocas-training-handoff-2026-11-25.md)
+
+## Ranger opening and south-30 chin — 26 November 2026
+
+After the confirmed west-1 Twisted bow shot, keep the bow equipped and run east immediately. Use the five-tick bow cooldown to cross the room and bow the east-2 ranger on the first ready tick.
+
+Reach (3291, 4248) before the west-30 blowpipe shot. Use its cooldown to run to (3293, 4249), which has line of sight to the east small on the first green tick. The tile one south blocks both shots on the packed map. Throw one black chin at the original south pair as they turn ranged. Jordan explicitly wants this scheduled throw even when wave 31 has already dimmed the pair. Either green small can be the primary. If both already have lethal hits in flight, use the tick on another target. After the throw or the end of the flicker, the usual dim rules apply to survivors.
+
+Eating a manta on the first green tick can consume the entire throwing window. The ranger waits one tick to eat when the named chin is ready, it has 60–65 HP and prayer, and damage already queued through the following tick leaves at least 55 HP. At lower health or with more incoming damage, it eats immediately.
+
+When reviewing a room, follow the two original south crabs across the wave-counter change. Check the throw while both are green, then check the two hitsplats and remaining HP after projectile flight. [Ranger replay and counts](research/nylocas/training-v2/session-2026-11-26/ranger-opening-south30.json)
+
+## Pre-cap movement and assigned bigs, 26–27 November
+
+- **Mage before cap.** When a fresh spawn or split is one or two attack-ready ticks away, spend those ticks getting into position. An untouched ordinary small from two waves ago can wait. A due packet or an immediate cap-clearance duty still takes its own tick. Reset the two-tick allowance on a confirmed attack.
+- **Ranger before cap.** Move for the next spawn or split during cooldown. A one-tick wait can pay off. If a healthy old target is already in clear blowpipe range and the fresh target is two ticks away, fire now. The blowpipe will be ready again for the fresh target.
+- **Both roles.** Plan the next firing square before the weapon is ready. Use ground clicks around the pillars until the target is in sight and can be reached in the launch cycle. A visible incoming nylo can close the final tile during that cycle.
+- **Mage after cap.** Finish the assigned originals promptly, starting with south 20 during the transition. Finish south 23 if it survives the ranger, all three 24s, west 25, west 26, south 29 and east 30. Continue on a bad roll. If a Dinh would permanently null an uncovered assigned magic big, finish it first. Late assigned parents retain their recovery across the wave-31 dim.
+- **West 27 is optional.** Leave it to expire unless the team is very far ahead and every other nylo is already dead. A lethal hit still in flight on another nylo is too early. The mage may take west 27 only while it is alone and still in the west lane or just crossing the doorway. The policy closes that window after age nine even if it appears close to the door. The ranger leaves this big to the mage.
+- **Ranger on wave 30.** Keep the west blowpipe and the first-green south chin. Immediately after the chin, the original west-30 big has first claim on every attack it still needs, including during wave 31. Move west during the chin cooldown. Once the big dies or a lethal hit is on the way, resume cleanup.
+
+For the first-green chin, the current ranger can defer a manta for one tick when it has prayer and damage already queued through the following tick leaves at least 55 HP. The same floor applies if it starts the tick at 59 HP. This updates the earlier 60–65 HP condition.

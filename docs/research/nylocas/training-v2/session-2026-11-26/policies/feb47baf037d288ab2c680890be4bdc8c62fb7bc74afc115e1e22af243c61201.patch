@@ -1,0 +1,12 @@
+--- a/org/localscape/nylocas/mage/MageStrategy.java
++++ b/org/localscape/nylocas/mage/MageStrategy.java
+@@ -410,6 +410,9 @@
+ 				Decision d = new Decision(c, weapon, a.stage, false, a.name, a.name);
+ 				// Most ordinary offsets are observations, not reasons to lose a ready tick.
+ 				int first = a.name.equals("Deferred east big 13") ? c.born + a.first : tick;
++				// One later first request keeps the west11 child pair closer to
++				// the vetted post13 timing; confirmed survivor follow-ups stay immediate.
++				if (a.name.equals("West big 11") && !opened.contains(c.key)) first = Math.max(first, c.born + 9);
+ 				// An unopened east/south19 parent keeps one cap slot until its first age3 request.
+ 				if (c.wave == 19 && c.big && !opened.contains(c.key) && (c.lane == Lane.EAST || c.lane == Lane.SOUTH))
+ 					first = Math.max(first, c.born + 3);

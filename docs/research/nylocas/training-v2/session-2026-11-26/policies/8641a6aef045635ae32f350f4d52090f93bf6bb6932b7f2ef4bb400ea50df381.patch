@@ -1,0 +1,35 @@
+--- a/org/localscape/nylocas/mage/MageStrategy.java
++++ b/org/localscape/nylocas/mage/MageStrategy.java
+@@ -492,10 +492,32 @@
+ 		Candidate best = candidates.stream().min(priority).orElse(null);
+ 		if (best != null)
+ 		{
++			// The split position model cannot predict native pillar walking. On
++			// a ready tick, use an already-reachable newer magic split before an
++			// ordinary unhit melee chase. Named work, follow-ups and cleave stay first.
++			boolean readyNewerMagic = room.wave < 20 && tick >= room.ready && best.at <= tick
++				&& best.decision.rule == null && best.decision.weapon == Weapon.SULPHUR
++				&& !best.decision.target.big && best.decision.target.lane == Lane.SPLIT
++				&& !best.decision.target.partnerNulled && !opened.contains(best.decision.target.key)
++				&& best.decision.target.hp >= 8 && best.decision.target.distance(room.player) > 1;
++			if (readyNewerMagic)
++			{
++				final int chasedBorn = best.decision.target.born;
++				Candidate cast = candidates.stream().filter(c -> c.at <= tick && c.first <= tick
++					&& c.decision.rule == null && c.decision.weapon == Weapon.EYE
++					&& !c.decision.target.big && c.decision.target.lane == Lane.SPLIT
++					&& c.decision.target.born > chasedBorn
++					&& c.decision.target.distance(room.player) < Weapon.EYE.range
++					&& !room.obstructed.contains(c.decision.target.key)).min(priority).orElse(null);
++				if (cast == null) readyNewerMagic = false;
++				else best = cast;
++			}
+ 			Candidate selected = best;
++			final boolean preserveReadyNewerMagic = readyNewerMagic;
+ 			// Keep an equally early commitment within the same rotation step;
+ 			// useful earlier attacks and reserved packets can replace an approach.
+ 			best = candidates.stream().filter(c -> c.at <= selected.at
++				&& (!preserveReadyNewerMagic || c.decision.target.key == selected.decision.target.key)
+ 				&& c.decision.target.wave == selected.decision.target.wave
+ 				&& (c.decision.rule == null) == (selected.decision.rule == null)
+ 				&& c.first == selected.first && deferred(c, tick) == deferred(selected, tick)

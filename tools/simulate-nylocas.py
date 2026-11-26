@@ -17,6 +17,7 @@ import time
 import dev
 
 
+BOSS_P95_TARGET_TICKS = 328
 STALL_METRICS = {
     "pre_cap_stalls": "Pre-cap stalls (last spawned 1–19)",
     "post_cap_stalls": "Post-cap stalls (last spawned 20–30)",
@@ -26,12 +27,14 @@ STALL_METRICS = {
 
 
 def distribution(values):
+    ordered = sorted(values)
     return {
-        "mean": statistics.mean(values) if values else None,
-        "median": statistics.median(values) if values else None,
-        "min": min(values) if values else None,
-        "max": max(values) if values else None,
-        "p95": sorted(values)[math.ceil(len(values) * 0.95) - 1] if values else None,
+        "mean": statistics.mean(ordered) if ordered else None,
+        "median": statistics.median(ordered) if ordered else None,
+        "min": ordered[0] if ordered else None,
+        "max": ordered[-1] if ordered else None,
+        "p5": ordered[math.ceil(5 * len(ordered) / 100) - 1] if ordered else None,
+        "p95": ordered[math.ceil(95 * len(ordered) / 100) - 1] if ordered else None,
     }
 
 
@@ -54,6 +57,7 @@ def training_metrics(rows):
         "completed_boss_over_3m14": sum(int(row["ticks"]) * 0.6 > 194 for row in completed),
         "consistency_denominator_all_trials": len(rows),
         "boss_mean_target_ticks": 315,
+        "completed_boss_at_most_3m16_8": sum(int(row["ticks"]) <= BOSS_P95_TARGET_TICKS for row in completed),
         "boss_reliability_target_seconds": 202,
         "boss_reliability_target_rate": 0.95,
         "completed_boss_at_most_3m22": timely,
@@ -120,6 +124,7 @@ def boss_time_benchmark(rows):
     eligible = [row for row in completed if row.get("stalls_by_last_spawned_wave")
                 and int(row["stalls_by_last_spawned_wave"].split(";")[19]) == 0]
     ticks = [int(row["ticks"]) for row in eligible]
+    timing = distribution(ticks)
     return {
         "rule": "Exclude entire rooms with any last-spawned-wave-19 stall; require known wave counters",
         "eligible_completed_trials": len(eligible),
@@ -128,7 +133,9 @@ def boss_time_benchmark(rows):
         "wave19_policy_failure_trials": len(stalled),
         "all_trials_with_wave_counter_evidence": len(measured),
         "wave19_zero_stall_goal_met": bool(rows) and len(measured) == len(rows) and not stalled,
-        "completion_ticks": distribution(ticks),
+        "p95_target_ticks": BOSS_P95_TARGET_TICKS,
+        "p95_target_met": timing["p95"] <= BOSS_P95_TARGET_TICKS if ticks else None,
+        "completion_ticks": timing,
         "completion_game_seconds": distribution([tick * 0.6 for tick in ticks]),
     }
 
@@ -151,9 +158,16 @@ def write_report(csv_path, output, metadata):
         f"Endpoint: {report['endpoint']}.", "",
         "Damage profile: **always-max-hit diagnostic — excluded from randomized benchmarks**." if metadata.get("max_hit_diagnostic") else "Damage profile: randomized (unless legacy metadata states otherwise).", "",
         f"Trials: {report['trials']}; completed: {report['completed']}; deaths: {report['deaths']}; timeouts: {report['timeouts']}.", "",
-        f"Reported boss spawn game seconds (completed rooms with zero wave-19 stalls): average **{fmt(boss_seconds['mean'])}**, minimum **{fmt(boss_seconds['min'])}**, maximum **{fmt(boss_seconds['max'])}**; eligible **{benchmark['eligible_completed_trials']}/{report['completed']}**, excluded for wave-19 stalls **{benchmark['excluded_completed_wave19_stall_trials']}**, unknown wave counters **{benchmark['completed_without_wave_counter_evidence']}**.", "",
-        f"Wave-19 policy failures: **{benchmark['wave19_policy_failure_trials']}** (target zero; exclusion from the time average does not excuse these failures).", "",
-        f"Raw completion ticks (all successful trials): mean **{fmt(completion['mean'])}**, median **{fmt(completion['median'])}**, minimum **{fmt(completion['min'])}**, maximum **{fmt(completion['max'])}**.", "",
+        f"Reported boss spawn time in game seconds was **{fmt(boss_seconds['mean'])}** on average, "
+        f"with P5 **{fmt(boss_seconds['p5'])}** and P95 **{fmt(boss_seconds['p95'])}**. "
+        f"The sample includes **{benchmark['eligible_completed_trials']}/{report['completed']}** completed rooms. "
+        f"Wave-19 stalls excluded **{benchmark['excluded_completed_wave19_stall_trials']}** completed rooms. "
+        f"**{benchmark['completed_without_wave_counter_evidence']}** completed rooms had unknown wave counters.", "",
+        f"Wave-19 policy failures occurred in **{benchmark['wave19_policy_failure_trials']}/{report['trials']}** trials.", "",
+        f"The eligible P95 target is **3:16.8** ({BOSS_P95_TARGET_TICKS} ticks). "
+        f"Across all trials, **{report['training']['completed_boss_at_most_3m16_8']}/{len(rows)}** reached boss spawn by that time.", "",
+        f"Across all completed rooms, completion ticks averaged **{fmt(completion['mean'])}**, "
+        f"with median **{fmt(completion['median'])}**, P5 **{fmt(completion['p5'])}** and P95 **{fmt(completion['p95'])}**.", "",
         "Average stalls per trial: " + "; ".join(
             f"{STALL_METRICS[metric]} **{fmt(report['metrics_all_trials'][metric]['mean'])}**"
             for metric in STALL_METRICS
@@ -168,8 +182,14 @@ def write_report(csv_path, output, metadata):
         lines.append("")
         lines.append(f"{role.capitalize()} completed trials with fewer than 20 ready-idle ticks: **{stats['under_20']}/{stats['trials']}**; 95th percentile **{fmt(stats['p95'])}**.")
     goals = report["training"]
-    lines += ["", f"Boss-time reliability: **{goals['completed_boss_at_most_3m22']}/{len(rows)}** completed at **3:22** or faster, **{fmt(None if goals['boss_at_most_3m22_rate_all_trials'] is None else goals['boss_at_most_3m22_rate_all_trials'] * 100)}%** (target **95%**). This denominator includes wave-19 failure rooms, deaths and timeouts; only the reported average excludes wave-19 rooms."]
-    lines += ["", f"Raw boss spawn game seconds (all completed rooms): average **{fmt(report['completion_game_seconds']['mean'])}**, minimum **{fmt(report['completion_game_seconds']['min'])}**, maximum **{fmt(report['completion_game_seconds']['max'])}**. Reported target average is189 seconds over completed rooms with known zero wave-19 stalls; the wave-19 policy-failure target remains zero.", "", f"Completed trials with at most one pre-cap stall: **{goals['completed_pre_cap_at_most_one']}/{len(rows)}**. Completed without wave 21–27 stalls: **{goals['completed_without_wave_21_to_27_stalls']}/{len(rows)}**. Completed with two or three wave-28 stalls: **{goals['completed_with_two_or_three_wave_28_stalls']}/{len(rows)}**. Wave-counter coverage: {goals['completed_with_wave_counters']} completed trials."]
+    lines += ["", f"**{goals['completed_boss_at_most_3m22']}/{len(rows)}** trials reached boss spawn by **3:22**, "
+              f"or **{fmt(None if goals['boss_at_most_3m22_rate_all_trials'] is None else goals['boss_at_most_3m22_rate_all_trials'] * 100)}%** "
+              "(target **95%**). The denominator includes wave-19 failure rooms, deaths and timeouts."]
+    all_seconds = report["completion_game_seconds"]
+    lines += ["", f"Across all completed rooms, boss spawn averaged **{fmt(all_seconds['mean'])}** game seconds, "
+              f"with P5 **{fmt(all_seconds['p5'])}** and P95 **{fmt(all_seconds['p95'])}**. "
+              "The target mean is 189 seconds among eligible rooms.", "",
+              f"Completed trials with at most one pre-cap stall: **{goals['completed_pre_cap_at_most_one']}/{len(rows)}**. Completed without wave 21–27 stalls: **{goals['completed_without_wave_21_to_27_stalls']}/{len(rows)}**. Completed with two or three wave-28 stalls: **{goals['completed_with_two_or_three_wave_28_stalls']}/{len(rows)}**. Wave-counter coverage: {goals['completed_with_wave_counters']} completed trials."]
     lines += ["", "Idle ticks count ticks without a confirmed primary attack, including cooldown and movement. Ready idle ticks exclude policy cooldown. Current simulations count from each role's first confirmed attack through the final living nylo's death, excluding entrance and terminal death-animation/boss waits. Older reports used the entire encounter; check the run metadata before comparing.", "",
               "Stalls count failed population-cap admission checks, each delaying admission by four ticks. Training names stalls by the last wave spawned: pre-cap 1–19, post-cap 20–30, and wave 28 delays admission to 29. Legacy CSV column wave_29_stalls retains its incoming-wave name. The wave 21–27 consistency check excludes the intentional wave-28 retries. Averages include failed and timed-out trials; legacy missing counters are unknown.", "",
               "Same-tick double ups count both agents launching a primary attack at the same NPC on one tick. Overlapping primary flights count confirmed launches while the partner still awaits a real primary impact; overlaps are not proof of wasted damage. Legacy missing overlap counters are unknown. Shared targets count distinct NPC lifetimes attacked by both agents at any time; this can include useful follow-up hits.", "",
@@ -248,6 +268,7 @@ def main():
     adapter_files += [dev.UPSTREAM / "rsmod" / path for path in (
         "content/other/login/src/main/kotlin/org/rsmod/content/other/login/LoginScript.kt",
         "api/stats-plugin/src/main/kotlin/org/rsmod/api/stats/plugin/StatRegenScript.kt",
+        "api/testing/src/main/kotlin/org/rsmod/api/testing/scope/GameTestScope.kt",
     )]
     adapter_hashes = {str(path.relative_to(dev.UPSTREAM / "rsmod")): hashlib.sha256(path.read_bytes()).hexdigest() for path in adapter_files}
     adapter_snapshot = output / "adapter-source"

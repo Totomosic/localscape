@@ -1,0 +1,14 @@
+package org.localscape.nylocas.ranger;
+import org.junit.Test;import org.localscape.nylocas.ranger.RangerStrategy.*;import static org.junit.Assert.*;
+public class RangerNamedSingleChinTest {
+ private Crab add(Room r,int key,int born,int wave,Lane lane,char slot,boolean big,Style style,int x,int y){Crab c=new Crab(key,key,born,wave,lane,slot,big,style,RangerStrategy.tile(x,y));c.pendingDamage=0;r.crabs.add(c);return c;}
+ private Room south(){Room r=new Room();r.wave=6;r.spawns[6]=40;r.ready=40;r.player=RangerStrategy.tile(3295,4243);add(r,22,40,6,Lane.SOUTH,'W',false,Style.RANGE,3297,4235);return r;}
+ private Room east(){Room r=new Room();r.wave=8;r.spawns[8]=52;r.ready=52;r.player=RangerStrategy.tile(3300,4248);add(r,31,52,8,Lane.EAST,'S',false,Style.RANGE,3310,4248);return r;}
+ @Test public void southSixMayChinItsActualSingleVictimAtSpawn(){Room r=south();Decision d=new RangerStrategy().decide(r,40);assertSame(d.reason,r.crabs.get(0),d.target);assertEquals(Weapon.CHIN,d.weapon);assertEquals("South chin 6",d.rule);}
+ @Test public void eastEightMayChinItsActualSingleVictimAtSpawn(){Room r=east();Decision d=new RangerStrategy().decide(r,52);assertSame(d.reason,r.crabs.get(0),d.target);assertEquals(Weapon.CHIN,d.weapon);assertEquals("East chin 8",d.rule);}
+ @Test public void theSingleVictimExceptionEndsWithEachNamedWindow(){Room r=south();r.ready=46;r.crabs.get(0).point=RangerStrategy.tile(3297,4242);assertNotEquals(Weapon.CHIN,new RangerStrategy().decide(r,46).weapon);r=east();r.ready=57;r.crabs.get(0).point=RangerStrategy.tile(3305,4248);assertNotEquals(Weapon.CHIN,new RangerStrategy().decide(r,57).weapon);}
+ @Test public void genericSingleRangedVictimStillUsesNormalDirectWeapon(){Room r=east();Crab c=r.crabs.get(0);r.crabs.clear();add(r,c.key,c.born,8,Lane.SPLIT,(char)0,false,Style.RANGE,3300,4248);assertNotEquals(Weapon.CHIN,new RangerStrategy().decide(r,52).weapon);}
+ @Test public void pendingLethalAndNullDoNotSpendTheNamedChin(){for(int g=0;g<2;g++){Room r=south();if(g==0)r.crabs.get(0).pendingDamage=8;else r.crabs.get(0).nulled=true;assertNull(new RangerStrategy().decide(r,40).target);}}
+ @Test public void actualSouthSevenBowServiceKeepsItsDeadline(){Room r=south();r.wave=7;r.spawns[7]=44;r.ready=44;Crab big=add(r,26,44,7,Lane.SOUTH,'E',true,Style.RANGE,3294,4235);Decision d=new RangerStrategy().decide(r,44);assertSame(d.reason,big,d.target);assertEquals(Weapon.BOW,d.weapon);}
+ @Test public void actualSixClawsDeadlineRemainsEligibleAfterSouthChinWindow(){Room r=south();r.wave=7;r.spawns[7]=44;r.ready=49;r.crabs.get(0).point=RangerStrategy.tile(3297,4244);Crab big=add(r,24,40,6,Lane.EAST,'S',true,Style.MELEE,3298,4245);r.player=RangerStrategy.tile(3300,4246);r.specialEnergy=1000;Decision d=new RangerStrategy().decide(r,49);assertSame(d.reason,big,d.target);assertEquals(Weapon.CLAWS,d.weapon);}
+}

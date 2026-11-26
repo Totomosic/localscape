@@ -1,0 +1,12 @@
+--- a/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ b/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -247,7 +247,8 @@
+ 		if (weapon == Weapon.BOW && !crab.big && crab.wave > 2) return false;
+ 		if (crab.big)
+ 		{
+-			if (crab.wave == 18) return weapon.style == Style.RANGE && weapon != Weapon.CHIN
++			if (crab.wave == 18) return (weapon.style == Style.RANGE || weapon == Weapon.EYE && age == 5 && crab.lane == Lane.WEST)
++				&& weapon != Weapon.CHIN
+ 				&& RangerStrategy.wave18Available(crab, room, crab.born + age);
+ 			boolean clawAssignment = crab.wave == 6 && crab.lane == Lane.EAST && age >= 9;
+ 			return (clawAssignment || strategy.assignedBig(crab, room, age))

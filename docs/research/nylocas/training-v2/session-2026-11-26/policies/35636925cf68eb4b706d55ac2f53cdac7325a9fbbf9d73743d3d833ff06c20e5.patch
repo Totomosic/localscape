@@ -1,0 +1,20 @@
+--- a/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -292,6 +292,17 @@
+ 		Crab target = decision.target != null ? decision.target : decision.approach;
+ 		if (target == null) intent.clear();
+ 		else intent.select(target.key, decision.weapon, tick);
++		// A nearby Eye has a shorter projectile flight. Use spare cooldown movement
++		// after the last lane packet while keeping the intended target for the shot.
++		if (room.wave == 31 && room.cleanup && tick < room.ready && decision.approach != null
++			&& decision.weapon == Weapon.EYE && !room.obstructed.contains(target.key)
++			&& target.distance(room.player) > 2 && target.distance(room.player) <= Weapon.EYE.range)
++		{
++			Tile close = AttackTiming.attackTile(room.player, target.point, target.big, 2);
++			int steps = room.player.distanceTo(close);
++			if (steps > 0 && (steps + 1) / 2 <= room.ready - tick)
++				return prepare(Weapon.EYE, close, "Close during Eye cooldown");
++		}
+ 		return decision;
+ 	}
+ 

@@ -1,0 +1,36 @@
+--- .state/simulations/training-v5-20261126-law-cap-v2-200/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ .state/simulations/training-v5-20261126-range-cap20-nearby-melee/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -135,7 +135,7 @@
+ 		if (room.wave != 19 || room.spawns[19] < 0 || room.spawns[18] < 0 || room.crabs.size() < 11
+ 			|| shot.tick < room.spawns[19] + 5 || shot.tick > room.spawns[19] + 8
+ 			|| small.big || small.born + 49 <= room.spawns[19] + 12
+-			|| shot.decision.weapon.style == Style.MELEE || small.pendingDamage < 0
++			|| shot.decision.weapon.style == Style.MELEE && !nearbyCapMelee(room, small, shot.tick) || small.pendingDamage < 0
+ 			|| small.pendingDamage >= small.hp) return false;
+ 		List<Crab> parents = room.crabs.stream().filter(c -> c.big && c.wave == 18
+ 			&& c.hp > 0 && !c.dying && !c.nulled && !c.claimed(shot.tick) && !c.awaitingHit(shot.tick))
+@@ -147,6 +147,14 @@
+ 		// This is a service budget using the planner's existing eight-HP work estimate,
+ 		// not a promise that a normal roll kills. Keep time for all remaining parents.
+ 		return shot.tick + shot.decision.weapon.cooldown + (shots - 1) * Weapon.PIPE.cooldown + 2 <= deadline;
++	}
++
++	private static boolean nearbyCapMelee(Room room, Crab small, int tick)
++	{
++		return room.wave == 19 && room.spawns[19] >= 0 && tick >= room.spawns[19] + 5
++			&& tick <= room.spawns[19] + 8 && room.crabs.size() >= 11 && !small.big
++			&& small.lane == Lane.SPLIT && small.style == Style.MELEE && small.distance(room.player) <= 3
++			&& small.pendingDamage >= 0 && small.pendingDamage < small.hp;
+ 	}
+ 
+ 	private int openingOrder(Decision decision)
+@@ -278,7 +286,8 @@
+ 		}
+ 		if (weapon == Weapon.EYE) return !RangerStrategy.magePacket(crab, crab.born + age);
+ 		// No cross-room melee chasing; melee is local fallback work.
+-		if (weapon == Weapon.CLAWS) return crab.distance(room.player) <= 1 || rule(crab, weapon, age) != null;
++		if (weapon == Weapon.CLAWS) return crab.distance(room.player) <= 1 || rule(crab, weapon, age) != null
++			|| nearbyCapMelee(room, crab, crab.born + age);
+ 		return true;
+ 	}
+ 

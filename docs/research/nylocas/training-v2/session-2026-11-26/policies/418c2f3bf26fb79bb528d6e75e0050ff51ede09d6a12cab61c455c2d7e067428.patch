@@ -1,0 +1,32 @@
+--- a/org/localscape/nylocas/mage/MageStrategy.java
++++ b/org/localscape/nylocas/mage/MageStrategy.java
+@@ -243,7 +243,12 @@
+ 	private List<Window> windows(Room room, int tick)
+ 	{
+ 		List<Window> result = new ArrayList<>();
+-		int s11 = spawn(room, 11, tick), s12 = spawn(room, 12, tick), s21 = spawn(room, 21, tick), s22 = spawn(room, 22, tick), s28 = spawn(room, 28, tick);
++		int s8 = spawn(room, 8, tick), s11 = spawn(room, 11, tick), s12 = spawn(room, 12, tick), s21 = spawn(room, 21, tick), s22 = spawn(room, 22, tick), s28 = spawn(room, 28, tick);
++		// Do not spend the urgent 8 opening chasing an older melee. The
++		// preceding spare ticks can cover both cooldown and the west return.
++		if (s8 >= 0 && room.wave <= 8 && (room.wave < 8 || room.crabs.stream().anyMatch(c ->
++			c.wave == 8 && c.lane == Lane.WEST && c.big && !opened.contains(c.key) && eligible(room, c, tick))))
++			result.add(new Window("West big 8", s8, s8 + 2, Weapon.EYE, 3290, 4249));
+ 		if (s11 >= 0 && room.wave < 29) result.add(new Window("East barrage 11", s11, s11 + 1, Weapon.BARRAGE, 3301, 4249));
+ 		if (s12 >= 0 && room.wave < 29)
+ 		{
+@@ -277,6 +282,7 @@
+ 			boolean identity;
+ 			switch (window.name)
+ 			{
++				case "West big 8": identity = c.wave == 8 && c.lane == Lane.WEST && c.big; break;
+ 				case "South big 29": identity = c.wave == 29 && c.lane == Lane.SOUTH && c.big; break;
+ 				case "East barrage 11": identity = c.wave == 11 && c.lane == Lane.EAST && !c.big; break;
+ 				case "12 east scythe": identity = c.wave == 12 && c.lane == Lane.EAST && !c.big; break;
+@@ -303,6 +309,7 @@
+ 			{
+ 				switch (window.name)
+ 				{
++					case "West big 8": return c.wave == 8 && c.lane == Lane.WEST && c.big;
+ 					case "South big 29": return c.wave == 29 && c.lane == Lane.SOUTH && c.big;
+ 					case "East barrage 11": return c.wave == 11 && c.lane == Lane.EAST && !c.big;
+ 					case "12 east scythe": return c.wave == 12 && c.lane == Lane.EAST && !c.big;

@@ -1,0 +1,738 @@
+{
+  "split-birth-locked": {
+    "policy_match": true,
+    "adapter_match": true,
+    "fixture_match": true,
+    "trials": 500,
+    "eligible": 495,
+    "wave19_failures": 5,
+    "timely": 480,
+    "eligible_mean_seconds": 193.75030303030303,
+    "eligible_min_seconds": 184.79999999999998,
+    "eligible_max_seconds": 211.2,
+    "cohorts": [
+      {
+        "cohort": 200,
+        "guidance": {
+          "forbidden_small_bows": {
+            "launches": 0,
+            "rooms": 0,
+            "ages": {},
+            "weapons": {}
+          },
+          "opening_named_rule_rooms": {
+            "Opening west": 200,
+            "Opening east": 200,
+            "South chin 3": 200,
+            "Opening scratch": 200,
+            "West big 5": 200,
+            "West small 4": 200
+          },
+          "opening_first_six_in_order_rooms": 200,
+          "west24_eye_without_prior_pipe": [],
+          "south30_chin_missing_seeds": [
+            185803548212841
+          ],
+          "wave31_alive_at_permanent_melee": []
+        },
+        "freshness": {
+          "rooms": 200,
+          "role_order": [
+            "ranger",
+            "mage"
+          ],
+          "counts": {
+            "role0_primary_on_age_zero_to_two": 2597,
+            "role1_primary_on_age_zero_to_two": 1733,
+            "role1_ordinary_old_small_requests": 81,
+            "role0_ordinary_old_small_requests": 169,
+            "role0_old_small_with_observed_birth_next_two": 63,
+            "role0_fresh_cooldown_stage_frames": 35,
+            "role1_fresh_cooldown_stage_frames": 63,
+            "role1_fresh_ready_wait_frames": 48,
+            "role0_fresh_ready_wait_frames": 5,
+            "role1_old_small_with_observed_birth_next_two": 10
+          },
+          "rooms_with_event": {
+            "role0_primary_on_age_zero_to_two": 200,
+            "role1_primary_on_age_zero_to_two": 200,
+            "role1_ordinary_old_small_requests": 65,
+            "role0_ordinary_old_small_requests": 107,
+            "role0_old_small_with_observed_birth_next_two": 54,
+            "role0_fresh_cooldown_stage_frames": 25,
+            "role1_fresh_cooldown_stage_frames": 37,
+            "role1_fresh_ready_wait_frames": 34,
+            "role0_fresh_ready_wait_frames": 5,
+            "role1_old_small_with_observed_birth_next_two": 10
+          },
+          "first_west6_request_age_histogram": {
+            "0": {
+              "none": 144,
+              "2": 29,
+              "1": 13,
+              "3": 13,
+              "0": 1
+            },
+            "1": {
+              "0": 33,
+              "9": 3,
+              "3": 51,
+              "none": 36,
+              "2": 47,
+              "1": 17,
+              "8": 4,
+              "6": 3,
+              "4": 5,
+              "10": 1
+            }
+          },
+          "pre_cap_observed_split_clock": {
+            "observed_removals": 2529,
+            "both_children_at_predicted_squares": 2529,
+            "all_forecasts_equal_observed_removal": 2529
+          },
+          "maximum_explicit_ready_waits_between_primaries_per_room": {
+            "0": {
+              "0": 195,
+              "1": 5
+            },
+            "1": {
+              "0": 166,
+              "1": 22,
+              "2": 12
+            }
+          },
+          "note": "The old-small screen uses subsequently observed births. Their presence alone does not establish advance knowledge, line of sight or a spare packet budget."
+        },
+        "sources": {
+          ".state/simulations/training-v5-20261126-split-birth-locked-200/server.log": "f833b561ffd3085308d213f9e926eaf7237530ec12cfa7e7c8fd5f8cdf1fdfe8",
+          ".state/simulations/training-v5-20261126-split-birth-locked-200/trials.csv": "8c46ba8671e47495baf6d1480cf324288f6e64b748d1b9af2022660df7128789",
+          ".state/simulations/training-v5-20261126-split-birth-locked-200/policy-source/org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+          ".state/simulations/training-v5-20261126-split-birth-locked-200/policy-source/org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+          ".state/simulations/training-v5-20261126-split-birth-locked-200/policy-source/org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+          ".state/simulations/training-v5-20261126-split-birth-locked-200/policy-source/org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+          ".state/simulations/training-v5-20261126-split-birth-locked-200/policy-source/org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+          ".state/simulations/training-v5-20261126-split-birth-locked-200/policy-source/org/localscape/nylocas/mage/MageStrategy.java": "81a3a9679f50383f8ab8fbd558b0f1ebc8e6e07f178f79185070f78051396d51",
+          ".state/simulations/training-v5-20261126-split-birth-locked-200/policy-source/org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+          ".state/simulations/training-v5-20261126-split-birth-locked-200/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "ae381014c479ebe45669113d2b962d876b4a2ad97134691bd94019945a52626f",
+          ".state/simulations/training-v5-20261126-split-birth-locked-200/policy-source/org/localscape/nylocas/ranger/RangerStrategy.java": "5f8ef5e33a84dbba553d5e3415f2b3538a9dbe8463ad89c01c212d9ce28a3822"
+        }
+      },
+      {
+        "cohort": 300,
+        "guidance": {
+          "forbidden_small_bows": {
+            "launches": 0,
+            "rooms": 0,
+            "ages": {},
+            "weapons": {}
+          },
+          "opening_named_rule_rooms": {
+            "Opening west": 300,
+            "Opening east": 300,
+            "South chin 3": 300,
+            "Opening scratch": 300,
+            "West big 5": 300,
+            "West small 4": 300
+          },
+          "opening_first_six_in_order_rooms": 300,
+          "west24_eye_without_prior_pipe": [
+            {
+              "seed": 223990333836644,
+              "tick": 221,
+              "wave": 24,
+              "target_wave": 24,
+              "lane": "west",
+              "age": 5,
+              "weapon": "EYE",
+              "hp": 16,
+              "rule": "West big magic fallback 24",
+              "reason": "West big magic fallback 24"
+            }
+          ],
+          "south30_chin_missing_seeds": [
+            223990333836472,
+            223990333836542,
+            223990333836618,
+            223990333836651,
+            223990333836754
+          ],
+          "wave31_alive_at_permanent_melee": [
+            {
+              "seed": 223990333836472,
+              "tick": 282,
+              "lane": "east",
+              "hp": 8,
+              "key": 188
+            },
+            {
+              "seed": 223990333836577,
+              "tick": 290,
+              "lane": "east",
+              "hp": 8,
+              "key": 194
+            }
+          ]
+        },
+        "freshness": {
+          "rooms": 300,
+          "role_order": [
+            "ranger",
+            "mage"
+          ],
+          "counts": {
+            "role0_primary_on_age_zero_to_two": 3937,
+            "role1_primary_on_age_zero_to_two": 2632,
+            "role0_ordinary_old_small_requests": 243,
+            "role0_old_small_with_observed_birth_next_two": 111,
+            "role1_fresh_cooldown_stage_frames": 97,
+            "role1_fresh_ready_wait_frames": 75,
+            "role0_fresh_cooldown_stage_frames": 62,
+            "role1_ordinary_old_small_requests": 119,
+            "role0_fresh_ready_wait_frames": 43,
+            "role1_old_small_with_observed_birth_next_two": 10
+          },
+          "rooms_with_event": {
+            "role0_primary_on_age_zero_to_two": 300,
+            "role1_primary_on_age_zero_to_two": 300,
+            "role0_ordinary_old_small_requests": 152,
+            "role0_old_small_with_observed_birth_next_two": 88,
+            "role1_fresh_cooldown_stage_frames": 57,
+            "role1_fresh_ready_wait_frames": 46,
+            "role0_fresh_cooldown_stage_frames": 42,
+            "role1_ordinary_old_small_requests": 98,
+            "role0_fresh_ready_wait_frames": 29,
+            "role1_old_small_with_observed_birth_next_two": 10
+          },
+          "first_west6_request_age_histogram": {
+            "0": {
+              "none": 206,
+              "3": 12,
+              "1": 29,
+              "2": 53
+            },
+            "1": {
+              "2": 71,
+              "3": 76,
+              "none": 57,
+              "5": 7,
+              "1": 29,
+              "0": 48,
+              "4": 7,
+              "6": 1,
+              "8": 2,
+              "9": 1,
+              "13": 1
+            }
+          },
+          "pre_cap_observed_split_clock": {
+            "observed_removals": 3811,
+            "both_children_at_predicted_squares": 3811,
+            "all_forecasts_equal_observed_removal": 3811
+          },
+          "maximum_explicit_ready_waits_between_primaries_per_room": {
+            "0": {
+              "0": 271,
+              "1": 18,
+              "2": 11
+            },
+            "1": {
+              "0": 254,
+              "1": 23,
+              "2": 23
+            }
+          },
+          "note": "The old-small screen uses subsequently observed births. Their presence alone does not establish advance knowledge, line of sight or a spare packet budget."
+        },
+        "sources": {
+          ".state/simulations/training-v5-20261126-split-birth-locked-300/server.log": "68a153cb53ffd7ca9152d264f5e6348843c42b3f1694a268eeee2658bd6033b3",
+          ".state/simulations/training-v5-20261126-split-birth-locked-300/trials.csv": "47048be0f1993e605cdcee9a13508523707759ee58368250539a5ed658abc9c2",
+          ".state/simulations/training-v5-20261126-split-birth-locked-300/policy-source/org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+          ".state/simulations/training-v5-20261126-split-birth-locked-300/policy-source/org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+          ".state/simulations/training-v5-20261126-split-birth-locked-300/policy-source/org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+          ".state/simulations/training-v5-20261126-split-birth-locked-300/policy-source/org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+          ".state/simulations/training-v5-20261126-split-birth-locked-300/policy-source/org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+          ".state/simulations/training-v5-20261126-split-birth-locked-300/policy-source/org/localscape/nylocas/mage/MageStrategy.java": "81a3a9679f50383f8ab8fbd558b0f1ebc8e6e07f178f79185070f78051396d51",
+          ".state/simulations/training-v5-20261126-split-birth-locked-300/policy-source/org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+          ".state/simulations/training-v5-20261126-split-birth-locked-300/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "ae381014c479ebe45669113d2b962d876b4a2ad97134691bd94019945a52626f",
+          ".state/simulations/training-v5-20261126-split-birth-locked-300/policy-source/org/localscape/nylocas/ranger/RangerStrategy.java": "5f8ef5e33a84dbba553d5e3415f2b3538a9dbe8463ad89c01c212d9ce28a3822"
+        }
+      }
+    ]
+  },
+  "split-transition-v2": {
+    "policy_match": true,
+    "adapter_match": true,
+    "fixture_match": true,
+    "trials": 500,
+    "eligible": 491,
+    "wave19_failures": 9,
+    "timely": 475,
+    "eligible_mean_seconds": 194.01873727087573,
+    "eligible_min_seconds": 184.79999999999998,
+    "eligible_max_seconds": 213.6,
+    "cohorts": [
+      {
+        "cohort": 200,
+        "guidance": {
+          "forbidden_small_bows": {
+            "launches": 0,
+            "rooms": 0,
+            "ages": {},
+            "weapons": {}
+          },
+          "opening_named_rule_rooms": {
+            "Opening west": 200,
+            "Opening east": 200,
+            "South chin 3": 200,
+            "Opening scratch": 200,
+            "West big 5": 200,
+            "West small 4": 200
+          },
+          "opening_first_six_in_order_rooms": 200,
+          "west24_eye_without_prior_pipe": [],
+          "south30_chin_missing_seeds": [
+            264571632593983
+          ],
+          "wave31_alive_at_permanent_melee": []
+        },
+        "freshness": {
+          "rooms": 200,
+          "role_order": [
+            "ranger",
+            "mage"
+          ],
+          "counts": {
+            "role0_primary_on_age_zero_to_two": 2623,
+            "role1_primary_on_age_zero_to_two": 1730,
+            "role0_fresh_cooldown_stage_frames": 33,
+            "role0_ordinary_old_small_requests": 142,
+            "role0_old_small_with_observed_birth_next_two": 51,
+            "role1_fresh_cooldown_stage_frames": 59,
+            "role1_fresh_ready_wait_frames": 55,
+            "role0_fresh_ready_wait_frames": 15,
+            "role1_ordinary_old_small_requests": 66,
+            "role1_old_small_with_observed_birth_next_two": 7
+          },
+          "rooms_with_event": {
+            "role0_primary_on_age_zero_to_two": 200,
+            "role1_primary_on_age_zero_to_two": 200,
+            "role0_fresh_cooldown_stage_frames": 19,
+            "role0_ordinary_old_small_requests": 95,
+            "role0_old_small_with_observed_birth_next_two": 39,
+            "role1_fresh_cooldown_stage_frames": 35,
+            "role1_fresh_ready_wait_frames": 37,
+            "role0_fresh_ready_wait_frames": 11,
+            "role1_ordinary_old_small_requests": 64,
+            "role1_old_small_with_observed_birth_next_two": 7
+          },
+          "first_west6_request_age_histogram": {
+            "0": {
+              "none": 148,
+              "2": 31,
+              "3": 7,
+              "1": 13,
+              "11": 1
+            },
+            "1": {
+              "2": 54,
+              "1": 15,
+              "3": 48,
+              "0": 37,
+              "5": 2,
+              "4": 6,
+              "none": 32,
+              "8": 4,
+              "6": 2
+            }
+          },
+          "pre_cap_observed_split_clock": {
+            "observed_removals": 2572,
+            "both_children_at_predicted_squares": 2572,
+            "all_forecasts_equal_observed_removal": 2572
+          },
+          "maximum_explicit_ready_waits_between_primaries_per_room": {
+            "0": {
+              "0": 189,
+              "1": 7,
+              "2": 4
+            },
+            "1": {
+              "0": 163,
+              "1": 22,
+              "2": 15
+            }
+          },
+          "note": "The old-small screen uses subsequently observed births. Their presence alone does not establish advance knowledge, line of sight or a spare packet budget."
+        },
+        "sources": {
+          ".state/simulations/training-v5-20261126-split-transition-v2-200/server.log": "fd65d42ab00688ef48721bed07cf6b31b45ed6661966819eaacf6d4e1381d105",
+          ".state/simulations/training-v5-20261126-split-transition-v2-200/trials.csv": "b1e07bbeba51a477222712b2eac2ad2d856b0369e699c34c6251908644ae81f4",
+          ".state/simulations/training-v5-20261126-split-transition-v2-200/policy-source/org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+          ".state/simulations/training-v5-20261126-split-transition-v2-200/policy-source/org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+          ".state/simulations/training-v5-20261126-split-transition-v2-200/policy-source/org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+          ".state/simulations/training-v5-20261126-split-transition-v2-200/policy-source/org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+          ".state/simulations/training-v5-20261126-split-transition-v2-200/policy-source/org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+          ".state/simulations/training-v5-20261126-split-transition-v2-200/policy-source/org/localscape/nylocas/mage/MageStrategy.java": "5f88447a7e9509b552c6571bfc7f0ad057a2f4583a03d827e67eea9456ad6a5f",
+          ".state/simulations/training-v5-20261126-split-transition-v2-200/policy-source/org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+          ".state/simulations/training-v5-20261126-split-transition-v2-200/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "2e97a3a066fdf8298d7cc7f6c7c674cdaca67783271006536eb6f2030f1c4ac7",
+          ".state/simulations/training-v5-20261126-split-transition-v2-200/policy-source/org/localscape/nylocas/ranger/RangerStrategy.java": "c22eefcb3bfb3eeebe0023c502c6cc0cec6b9f174021fb8af682121ab3ece30e"
+        }
+      },
+      {
+        "cohort": 300,
+        "guidance": {
+          "forbidden_small_bows": {
+            "launches": 0,
+            "rooms": 0,
+            "ages": {},
+            "weapons": {}
+          },
+          "opening_named_rule_rooms": {
+            "Opening west": 300,
+            "Opening east": 300,
+            "South chin 3": 300,
+            "Opening scratch": 300,
+            "West big 5": 300,
+            "West small 4": 300
+          },
+          "opening_first_six_in_order_rooms": 300,
+          "west24_eye_without_prior_pipe": [],
+          "south30_chin_missing_seeds": [
+            154671486830469
+          ],
+          "wave31_alive_at_permanent_melee": [
+            {
+              "seed": 154671486830469,
+              "tick": 290,
+              "lane": "east",
+              "hp": 8,
+              "key": 192
+            },
+            {
+              "seed": 154671486830520,
+              "tick": 310,
+              "lane": "east",
+              "hp": 8,
+              "key": 194
+            }
+          ]
+        },
+        "freshness": {
+          "rooms": 300,
+          "role_order": [
+            "ranger",
+            "mage"
+          ],
+          "counts": {
+            "role1_fresh_ready_wait_frames": 65,
+            "role0_primary_on_age_zero_to_two": 3877,
+            "role1_primary_on_age_zero_to_two": 2513,
+            "role0_ordinary_old_small_requests": 245,
+            "role0_old_small_with_observed_birth_next_two": 98,
+            "role1_fresh_cooldown_stage_frames": 94,
+            "role1_ordinary_old_small_requests": 110,
+            "role0_fresh_cooldown_stage_frames": 76,
+            "role0_fresh_ready_wait_frames": 42,
+            "role1_old_small_with_observed_birth_next_two": 14
+          },
+          "rooms_with_event": {
+            "role1_fresh_ready_wait_frames": 48,
+            "role0_primary_on_age_zero_to_two": 300,
+            "role1_primary_on_age_zero_to_two": 300,
+            "role0_ordinary_old_small_requests": 155,
+            "role0_old_small_with_observed_birth_next_two": 83,
+            "role1_fresh_cooldown_stage_frames": 56,
+            "role1_ordinary_old_small_requests": 95,
+            "role0_fresh_cooldown_stage_frames": 58,
+            "role0_fresh_ready_wait_frames": 28,
+            "role1_old_small_with_observed_birth_next_two": 13
+          },
+          "first_west6_request_age_histogram": {
+            "0": {
+              "1": 13,
+              "none": 205,
+              "2": 57,
+              "3": 23,
+              "0": 2
+            },
+            "1": {
+              "none": 63,
+              "2": 73,
+              "0": 38,
+              "3": 66,
+              "12": 1,
+              "4": 8,
+              "1": 38,
+              "5": 5,
+              "9": 2,
+              "8": 4,
+              "6": 2
+            }
+          },
+          "pre_cap_observed_split_clock": {
+            "observed_removals": 3837,
+            "both_children_at_predicted_squares": 3837,
+            "all_forecasts_equal_observed_removal": 3837
+          },
+          "maximum_explicit_ready_waits_between_primaries_per_room": {
+            "0": {
+              "0": 272,
+              "1": 15,
+              "2": 13
+            },
+            "1": {
+              "1": 31,
+              "0": 252,
+              "2": 17
+            }
+          },
+          "note": "The old-small screen uses subsequently observed births. Their presence alone does not establish advance knowledge, line of sight or a spare packet budget."
+        },
+        "sources": {
+          ".state/simulations/training-v5-20261126-split-transition-v2-300/server.log": "aae301e6a4c51f3f76acc9ef37e3235964448d058e15c13e1efcfee09828b414",
+          ".state/simulations/training-v5-20261126-split-transition-v2-300/trials.csv": "8c8583d7b586f945b3fb87fec8ae9ab846fe9b56dec98a9738c0b79320d57d01",
+          ".state/simulations/training-v5-20261126-split-transition-v2-300/policy-source/org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+          ".state/simulations/training-v5-20261126-split-transition-v2-300/policy-source/org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+          ".state/simulations/training-v5-20261126-split-transition-v2-300/policy-source/org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+          ".state/simulations/training-v5-20261126-split-transition-v2-300/policy-source/org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+          ".state/simulations/training-v5-20261126-split-transition-v2-300/policy-source/org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+          ".state/simulations/training-v5-20261126-split-transition-v2-300/policy-source/org/localscape/nylocas/mage/MageStrategy.java": "5f88447a7e9509b552c6571bfc7f0ad057a2f4583a03d827e67eea9456ad6a5f",
+          ".state/simulations/training-v5-20261126-split-transition-v2-300/policy-source/org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+          ".state/simulations/training-v5-20261126-split-transition-v2-300/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "2e97a3a066fdf8298d7cc7f6c7c674cdaca67783271006536eb6f2030f1c4ac7",
+          ".state/simulations/training-v5-20261126-split-transition-v2-300/policy-source/org/localscape/nylocas/ranger/RangerStrategy.java": "c22eefcb3bfb3eeebe0023c502c6cc0cec6b9f174021fb8af682121ab3ece30e"
+        }
+      }
+    ]
+  },
+  "split-transition-dinh": {
+    "policy_match": true,
+    "adapter_match": true,
+    "fixture_match": true,
+    "trials": 500,
+    "eligible": 491,
+    "wave19_failures": 9,
+    "timely": 487,
+    "eligible_mean_seconds": 193.36863543788186,
+    "eligible_min_seconds": 182.4,
+    "eligible_max_seconds": 208.79999999999998,
+    "cohorts": [
+      {
+        "cohort": 200,
+        "guidance": {
+          "forbidden_small_bows": {
+            "launches": 0,
+            "rooms": 0,
+            "ages": {},
+            "weapons": {}
+          },
+          "opening_named_rule_rooms": {
+            "Opening west": 200,
+            "Opening east": 200,
+            "South chin 3": 200,
+            "Opening scratch": 200,
+            "West big 5": 200,
+            "West small 4": 200
+          },
+          "opening_first_six_in_order_rooms": 200,
+          "west24_eye_without_prior_pipe": [],
+          "south30_chin_missing_seeds": [],
+          "wave31_alive_at_permanent_melee": []
+        },
+        "freshness": {
+          "rooms": 200,
+          "role_order": [
+            "ranger",
+            "mage"
+          ],
+          "counts": {
+            "role0_primary_on_age_zero_to_two": 2578,
+            "role1_primary_on_age_zero_to_two": 1694,
+            "role1_ordinary_old_small_requests": 70,
+            "role0_ordinary_old_small_requests": 169,
+            "role0_old_small_with_observed_birth_next_two": 64,
+            "role0_fresh_cooldown_stage_frames": 44,
+            "role0_fresh_ready_wait_frames": 16,
+            "role1_fresh_cooldown_stage_frames": 53,
+            "role1_old_small_with_observed_birth_next_two": 6,
+            "role1_fresh_ready_wait_frames": 36
+          },
+          "rooms_with_event": {
+            "role0_primary_on_age_zero_to_two": 200,
+            "role1_primary_on_age_zero_to_two": 200,
+            "role1_ordinary_old_small_requests": 61,
+            "role0_ordinary_old_small_requests": 109,
+            "role0_old_small_with_observed_birth_next_two": 55,
+            "role0_fresh_cooldown_stage_frames": 25,
+            "role0_fresh_ready_wait_frames": 14,
+            "role1_fresh_cooldown_stage_frames": 34,
+            "role1_old_small_with_observed_birth_next_two": 6,
+            "role1_fresh_ready_wait_frames": 27
+          },
+          "first_west6_request_age_histogram": {
+            "0": {
+              "none": 144,
+              "11": 1,
+              "2": 39,
+              "3": 10,
+              "1": 6
+            },
+            "1": {
+              "3": 39,
+              "1": 15,
+              "2": 56,
+              "14": 1,
+              "0": 34,
+              "5": 4,
+              "none": 31,
+              "4": 12,
+              "8": 2,
+              "9": 3,
+              "6": 2,
+              "11": 1
+            }
+          },
+          "pre_cap_observed_split_clock": {
+            "observed_removals": 2560,
+            "both_children_at_predicted_squares": 2560,
+            "all_forecasts_equal_observed_removal": 2560
+          },
+          "maximum_explicit_ready_waits_between_primaries_per_room": {
+            "0": {
+              "0": 186,
+              "1": 12,
+              "2": 2
+            },
+            "1": {
+              "0": 173,
+              "1": 20,
+              "2": 7
+            }
+          },
+          "note": "The old-small screen uses subsequently observed births. Their presence alone does not establish advance knowledge, line of sight or a spare packet budget."
+        },
+        "sources": {
+          ".state/simulations/training-v5-20261126-split-transition-dinh-200/server.log": "08097dde9e8044104ccaff3d1366b46308f9afe3f293709964d6a4564a16e29d",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-200/trials.csv": "726f1a3e3064215f5a50bac3e097856f2d1da5423df6d3fedbc48c4eca666180",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-200/policy-source/org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-200/policy-source/org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-200/policy-source/org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-200/policy-source/org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-200/policy-source/org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-200/policy-source/org/localscape/nylocas/mage/MageStrategy.java": "5f928c2b899dfc14f6cebf9cbafcf5b5e7163898091040108f9b2ce6f9e64cfc",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-200/policy-source/org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-200/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "2e97a3a066fdf8298d7cc7f6c7c674cdaca67783271006536eb6f2030f1c4ac7",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-200/policy-source/org/localscape/nylocas/ranger/RangerStrategy.java": "c22eefcb3bfb3eeebe0023c502c6cc0cec6b9f174021fb8af682121ab3ece30e"
+        }
+      },
+      {
+        "cohort": 300,
+        "guidance": {
+          "forbidden_small_bows": {
+            "launches": 0,
+            "rooms": 0,
+            "ages": {},
+            "weapons": {}
+          },
+          "opening_named_rule_rooms": {
+            "Opening west": 300,
+            "Opening east": 300,
+            "South chin 3": 300,
+            "Opening scratch": 300,
+            "West big 5": 300,
+            "West small 4": 300
+          },
+          "opening_first_six_in_order_rooms": 300,
+          "west24_eye_without_prior_pipe": [],
+          "south30_chin_missing_seeds": [
+            152274597635335
+          ],
+          "wave31_alive_at_permanent_melee": []
+        },
+        "freshness": {
+          "rooms": 300,
+          "role_order": [
+            "ranger",
+            "mage"
+          ],
+          "counts": {
+            "role0_primary_on_age_zero_to_two": 3930,
+            "role1_primary_on_age_zero_to_two": 2510,
+            "role1_ordinary_old_small_requests": 105,
+            "role0_fresh_cooldown_stage_frames": 72,
+            "role1_fresh_cooldown_stage_frames": 92,
+            "role1_fresh_ready_wait_frames": 61,
+            "role0_ordinary_old_small_requests": 240,
+            "role0_old_small_with_observed_birth_next_two": 99,
+            "role1_old_small_with_observed_birth_next_two": 13,
+            "role0_fresh_ready_wait_frames": 29
+          },
+          "rooms_with_event": {
+            "role0_primary_on_age_zero_to_two": 300,
+            "role1_primary_on_age_zero_to_two": 300,
+            "role1_ordinary_old_small_requests": 90,
+            "role0_fresh_cooldown_stage_frames": 45,
+            "role1_fresh_cooldown_stage_frames": 57,
+            "role1_fresh_ready_wait_frames": 46,
+            "role0_ordinary_old_small_requests": 154,
+            "role0_old_small_with_observed_birth_next_two": 87,
+            "role1_old_small_with_observed_birth_next_two": 12,
+            "role0_fresh_ready_wait_frames": 20
+          },
+          "first_west6_request_age_histogram": {
+            "0": {
+              "none": 211,
+              "2": 54,
+              "1": 20,
+              "3": 14,
+              "16": 1
+            },
+            "1": {
+              "3": 64,
+              "1": 37,
+              "0": 45,
+              "2": 77,
+              "9": 4,
+              "none": 51,
+              "4": 11,
+              "5": 6,
+              "8": 2,
+              "6": 3
+            }
+          },
+          "pre_cap_observed_split_clock": {
+            "observed_removals": 3864,
+            "both_children_at_predicted_squares": 3864,
+            "all_forecasts_equal_observed_removal": 3864
+          },
+          "maximum_explicit_ready_waits_between_primaries_per_room": {
+            "0": {
+              "0": 280,
+              "2": 5,
+              "1": 15
+            },
+            "1": {
+              "0": 254,
+              "1": 35,
+              "2": 11
+            }
+          },
+          "note": "The old-small screen uses subsequently observed births. Their presence alone does not establish advance knowledge, line of sight or a spare packet budget."
+        },
+        "sources": {
+          ".state/simulations/training-v5-20261126-split-transition-dinh-300/server.log": "0b8cd6566a77a810f27f2681f6893b1b67a5e65a0285c10465d4d80044b23599",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-300/trials.csv": "5b10f34d52829dd3697acb0bcf6a67e1b5231ef4fa11edc59fa253e9ed93de37",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-300/policy-source/org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-300/policy-source/org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-300/policy-source/org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-300/policy-source/org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-300/policy-source/org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-300/policy-source/org/localscape/nylocas/mage/MageStrategy.java": "5f928c2b899dfc14f6cebf9cbafcf5b5e7163898091040108f9b2ce6f9e64cfc",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-300/policy-source/org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-300/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "2e97a3a066fdf8298d7cc7f6c7c674cdaca67783271006536eb6f2030f1c4ac7",
+          ".state/simulations/training-v5-20261126-split-transition-dinh-300/policy-source/org/localscape/nylocas/ranger/RangerStrategy.java": "c22eefcb3bfb3eeebe0023c502c6cc0cec6b9f174021fb8af682121ab3ece30e"
+        }
+      }
+    ]
+  }
+}

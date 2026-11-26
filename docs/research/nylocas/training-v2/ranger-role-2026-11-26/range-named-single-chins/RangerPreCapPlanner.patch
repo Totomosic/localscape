@@ -1,0 +1,14 @@
+--- a/RangerPreCapPlanner.java
++++ b/RangerPreCapPlanner.java
+@@ -211,8 +211,9 @@
+ 					if (crab.wave == 10 && crab.lane != Lane.SPLIT && !hard
+ 						&& RangerStrategy.RULES.stream().anyMatch(r -> r.wave == 10 && r.matches(crab)
+ 							&& !strategy.completed(r) && age <= r.last)) continue;
+-					// All 40 vetted south-3 witnesses chin one matching ranged victim in this opening window.
+-					boolean singleSouthOpening = rule != null && "South chin 3".equals(rule.name);
++					// Vetted named early chins may serve a single ranged victim in their bounded windows.
++					boolean singleSouthOpening = rule != null && ("South chin 3".equals(rule.name)
++						|| "South chin 6".equals(rule.name) || "East chin 8".equals(rule.name));
+ 					if (weapon == Weapon.CHIN && !hard && !singleSouthOpening
+ 						&& victims(room, plan, crab, weapon, now, at).size() < 2) continue;
+ 					Decision action = new Decision(crab, weapon, destination,

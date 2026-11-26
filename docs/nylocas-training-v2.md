@@ -80,6 +80,13 @@ Portable per-seed CSVs, summaries and trace-derived audits for these verified ru
 
 ## Native utilities and transition ordering
 
+The iterations below are historical pre-entry utility runs. The current controller
+completes Spellbook Swap before entry and summons initial thralls inside while
+moving, without an added wait or attack delay. Every in-arena cycle counts in room
+time. The old flow left the initial summons outside the complete barrier; the
+single-barrier live fixture did not catch this. Retain these results as historical
+evidence and rerun comparisons before applying them to the corrected flow.
+
 The eighth iteration uses native greater ghost/skeleton, Spellbook Swap and Death Charge with finite runes and the Book of the Dead. Preparation occurs before the timed room; expired thralls may be renewed through the same native spell. Native integration checks cover summon costs, positive thrall damage, Death Charge energy recovery, expiry/resummoning and live preparation/barrier entry. No energy, spellbook or HP is granted during combat.
 
 | Run, seeds 1–30, normal HP and native pre-pot | Completed | Mean boss spawn | Mean pre-cap stalls | Transition complete at 21 |

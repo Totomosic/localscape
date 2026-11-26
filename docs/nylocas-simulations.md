@@ -25,6 +25,14 @@ can include NPCs that expire naturally; it does not mean every NPC was killed.
 Live companions also have a basic boss phase; the benchmark still stops at spawn. Deaths and tick-limit timeouts are reported separately. Setup errors abort the
 batch instead of producing misleading performance results.
 
+With `--utilities`, both agents summon their initial thralls **inside the arena**
+after crossing the barrier. Spellbook Swap completes outside first; the summon
+shares a cycle with normal movement and does not add a wait or attack cooldown.
+Both spells use native handlers and finite runes, and every in-arena cycle counts
+toward reported room time. `--prepot` still drinks potions outside the timed encounter. Earlier
+pre-entry thrall runs left their initial summons outside the complete barrier and
+must be kept separate from results using the corrected flow.
+
 ## Reports
 
 Each output directory contains:
@@ -35,8 +43,9 @@ Each output directory contains:
 - `report.md`: readable statistics table.
 - `server.log`: Gradle and server diagnostics.
 
-Completion mean/median/min/max use successful trials only. Times are reported in
-ticks and game seconds (0.6 seconds per tick). Throughput includes per-trial
+Boss-spawn times use the mean and nearest-rank P5 and P95. The headline covers
+completed trials with known zero wave-19 stalls. Raw timing statistics cover all
+completed trials. One tick is 0.6 game seconds. Throughput includes per-trial
 setup but excludes compilation and the initial cache load. The invocation time
 in JSON includes those startup costs.
 
@@ -164,6 +173,8 @@ attacks. Ice Barrage uses the spell's fixed ten-tile range, independent of the
 Ancient sceptre's melee stance. Server regression tests resolve every applicable
 weapon against its actual weapon category.
 
+The simulator copies the packed Nylocas map objects into each trial instance so movement and projectile sight lines match the arena. Trials run before the 26 November south-30 correction used a room missing those objects. Compare movement and attack timing using the same map fixture.
+
 The initial fixture is deliberately independent of saved client equipment.
 Change the explicit fixture in `NylocasBotController.kt` and trial setup when
 comparing gear/supply conditions. Keep seeds, source hashes, and conditions with
@@ -206,8 +217,10 @@ not be treated as valid multi-combat training results.
 
 ## Reported boss-time sample after the wave-19 review
 
-Jordan's review rule excludes entire completed rooms with any last-spawned-wave19 stall from the reported boss-time average. `boss_time_benchmark` records eligible completion ticks/seconds, excluded completed rooms, unknown wave-counter coverage, and wave19 policy-failure counts. Missing counters cannot establish a clean sample. The Markdown headline uses this eligible sample for average/minimum/maximum; every excluded room remains a policy failure with a zero-failure target.
+The Markdown headline and `boss_time_benchmark` use completed rooms with a known zero count for last-spawned wave 19. The mean, P5 and P95 all use this sample. For a combined checkpoint, pool individual room times, sort them and take the observations at one-based ranks `ceil(0.05 × N)` and `ceil(0.95 × N)`. Report unknown wave counters and wave-19 failures separately. Jordan accepted the nine wave-19 failures in the 500-room checkpoint on 26 November.
+
+The current upper target is **3:16.8** (328 ticks). `boss_time_benchmark.p95_target_met` compares the eligible P95 with this target. `training.completed_boss_at_most_3m16_8` counts all trials that reached the boss by the same deadline, including rooms that stalled on wave 19.
 
 `completion_ticks`, `completion_game_seconds`, original CSV rows, completion rate, deaths and all-room consistency/stall metrics retain their raw definitions. Reports show raw timings separately. This reporting rule does not alter native encounter caps, damage, resources or simulation behavior. Historical immutable reports retain the definitions used when generated.
 
-The cleanup reliability objective is at least95% of **all trials** completing boss spawn by202seconds/3:22. `training.completed_boss_at_most_3m22`, `boss_at_most_3m22_rate_all_trials` and `boss_95pct_at_most_3m22_goal_met` report it. Deaths/timeouts do not qualify. Wave19stall rooms stay in this timing denominator and remain separate policy failures, even though they are excluded from the reported boss-time average.
+The reliability objective is for at least 95% of **all trials** to reach boss spawn by 3:22. `training.completed_boss_at_most_3m22`, `boss_at_most_3m22_rate_all_trials` and `boss_95pct_at_most_3m22_goal_met` report it. A completed room with a wave-19 stall can still meet the time cutoff. Deaths and timeouts stay in the denominator.

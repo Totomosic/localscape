@@ -1,0 +1,446 @@
+{
+  "range-user-no-wave1": {
+    "state": ".state/simulations/training-v5-20261126-range-user-no-wave1",
+    "portable_files": [
+      "range-user-no-wave1/RangerPreCapPlanner.patch",
+      "range-user-no-wave1/RangerStrategy.patch",
+      "range-user-no-wave1/role-checks.log",
+      "range-user-no-wave1/focused-checks.log",
+      "range-user-no-wave1/baseline-red.log",
+      "range-user-no-wave1/tests/RangerNoOriginalWaveOneMeleeTest.java",
+      "range-user-no-wave1/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/mage/MageStrategy.java": "1af7387a948c48945e95637eb0c11e0d902683d168977c6f75016b2ddd901f8a",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "cc2e6abebd61bd37be12d5a9ba4a5be3479238152e22233b7e7a51511f19cc9f",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "692e4ed60a99a30e1b8c16a8f7bbb7cd50a54e97e35db5b6d698dffec78b77fc"
+    }
+  },
+  "range-user-fresh-priority-v2": {
+    "state": ".state/simulations/training-v5-20261126-range-user-fresh-priority-v2",
+    "portable_files": [
+      "range-user-fresh-priority-v2/RangerPreCapPlanner-v1-to-v2.patch",
+      "range-user-fresh-priority-v2/RangerStrategy-v1-to-v2.patch",
+      "range-user-fresh-priority-v2/role-checks.log",
+      "range-user-fresh-priority-v2/focused-checks.log",
+      "range-user-fresh-priority-v2/v1-baseline-red.log",
+      "range-user-fresh-priority-v2/tests/RangerFiniteFreshOpportunityTest.java",
+      "range-user-fresh-priority-v2/tests/RangerNoOriginalWaveOneMeleeTest.java",
+      "range-user-fresh-priority-v2/tests/RangerFreshWithinTwoTest.java",
+      "range-user-fresh-priority-v2/source-hashes.json",
+      "range-user-fresh-priority-v2/verification.md"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/mage/MageStrategy.java": "1af7387a948c48945e95637eb0c11e0d902683d168977c6f75016b2ddd901f8a",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "03f7bb2528d8adc1ec3048892f9a1b10a6c3df3bc71a9cda417e0c208340c05a",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "ca06eb4c8be4f452e4d0207f40cd1245bd032f0e158e0df7cd6d06f0d1ff6534"
+    }
+  },
+  "range-cap20-nearby-melee": {
+    "state": ".state/simulations/training-v5-20261126-range-cap20-nearby-melee",
+    "portable_files": [
+      "range-cap20-nearby-melee/RangerPreCapPlanner.patch",
+      "range-cap20-nearby-melee/role-checks.log",
+      "range-cap20-nearby-melee/focused-checks.log",
+      "range-cap20-nearby-melee/baseline-red.log",
+      "range-cap20-nearby-melee/tests/RangerCap20SmallClearanceTest.java",
+      "range-cap20-nearby-melee/tests/RangerNearbyCapMeleeTest.java",
+      "range-cap20-nearby-melee/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/mage/MageStrategy.java": "74d6de720f15738e9a4effed3fafb1ff764c135175094ea4721d5f3553130518",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "a2056ead02d8286d5ccd6c3f2c3ce7cdb7725b82b8c0cd12b502e0ca80b6200b",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "692e4ed60a99a30e1b8c16a8f7bbb7cd50a54e97e35db5b6d698dffec78b77fc"
+    }
+  },
+  "range-fresh-cap-priority": {
+    "state": ".state/simulations/training-v5-20261126-range-fresh-cap-priority",
+    "portable_files": [
+      "range-fresh-cap-priority/RangerPreCapPlanner.patch",
+      "range-fresh-cap-priority/role-checks.log",
+      "range-fresh-cap-priority/focused-checks.log",
+      "range-fresh-cap-priority/baseline-red.log",
+      "range-fresh-cap-priority/tests/RangerFreshCapPriorityTest.java",
+      "range-fresh-cap-priority/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/mage/MageStrategy.java": "98b185c1c1c56210d9963e2c91f222a534d1190cb3eca3c4e561d8cebf5cfdc5",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "d87f2a116e5fbccc1eb4e1c66291de39483c2a72c9adc7729621ee12cda6ca28",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "ca06eb4c8be4f452e4d0207f40cd1245bd032f0e158e0df7cd6d06f0d1ff6534"
+    }
+  },
+  "range-east7-scratch-handoff": {
+    "state": ".state/simulations/training-v5-20261126-range-east7-scratch-handoff",
+    "portable_files": [
+      "range-east7-scratch-handoff/RangerStrategy.patch",
+      "range-east7-scratch-handoff/role-checks.log",
+      "range-east7-scratch-handoff/focused-checks.log",
+      "range-east7-scratch-handoff/baseline-red.log",
+      "range-east7-scratch-handoff/tests/RangerEastSevenPriorityWitnessTest.java",
+      "range-east7-scratch-handoff/tests/RangerEastSevenScratchHandoffTest.java",
+      "range-east7-scratch-handoff/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/mage/MageStrategy.java": "1af7387a948c48945e95637eb0c11e0d902683d168977c6f75016b2ddd901f8a",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "cc2e6abebd61bd37be12d5a9ba4a5be3479238152e22233b7e7a51511f19cc9f",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "7d69913eee00fd760b19988ef5cd25df7de236534aa9226d4fb31b890128ae42"
+    }
+  },
+  "range-east7-scratch-preposition-v2": {
+    "state": ".state/simulations/training-v5-20261126-range-east7-scratch-preposition-v2",
+    "portable_files": [
+      "range-east7-scratch-preposition-v2/RangerStrategy.patch",
+      "range-east7-scratch-preposition-v2/role-checks.log",
+      "range-east7-scratch-preposition-v2/baseline-red.log",
+      "range-east7-scratch-preposition-v2/tests/RangerEastSevenPriorityWitnessTest.java",
+      "range-east7-scratch-preposition-v2/tests/RangerEastSevenCooldownPreparationTest.java",
+      "range-east7-scratch-preposition-v2/tests/RangerEastSevenScratchHandoffTest.java",
+      "range-east7-scratch-preposition-v2/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "cc2e6abebd61bd37be12d5a9ba4a5be3479238152e22233b7e7a51511f19cc9f",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "b5c5b6f2f31657b5c9c6a35463344be37ca112e8b35bf2d4adb882d8b4ebd593",
+      "org/localscape/nylocas/mage/MageStrategy.java": "1af7387a948c48945e95637eb0c11e0d902683d168977c6f75016b2ddd901f8a"
+    }
+  },
+  "range-named-single-chins": {
+    "state": ".state/simulations/training-v5-20261126-range-named-single-chins",
+    "portable_files": [
+      "range-named-single-chins/RangerPreCapPlanner.patch",
+      "range-named-single-chins/role-checks.log",
+      "range-named-single-chins/baseline-red.log",
+      "range-named-single-chins/tests/RangerNamedSingleChinTest.java",
+      "range-named-single-chins/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "07a6dffe1c9d6bf108ed28a2f368dff03c3ea0adf4000e9ce1d78353f78971ba",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "692e4ed60a99a30e1b8c16a8f7bbb7cd50a54e97e35db5b6d698dffec78b77fc",
+      "org/localscape/nylocas/mage/MageStrategy.java": "74d6de720f15738e9a4effed3fafb1ff764c135175094ea4721d5f3553130518"
+    }
+  },
+  "range-west11-continuation": {
+    "state": ".state/simulations/training-v5-20261126-range-west11-continuation",
+    "portable_files": [
+      "range-west11-continuation/ranger.patch",
+      "range-west11-continuation/role-checks.log",
+      "range-west11-continuation/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/mage/MageStrategy.java": "1af7387a948c48945e95637eb0c11e0d902683d168977c6f75016b2ddd901f8a",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "173da44fff26db6179864fbcb19ff084977856418ba0fa2a48d74938c00e6f04",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "43d690ce391926909d0b2e34169f111b03de53d58fb554c0c977742a2c235c4f"
+    }
+  },
+  "range-mage22-recovery-protection": {
+    "state": ".state/simulations/training-v5-20261126-range-mage22-recovery-protection",
+    "portable_files": [
+      "range-mage22-recovery-protection/ranger.patch",
+      "range-mage22-recovery-protection/role-checks.log",
+      "range-mage22-recovery-protection/candidate-checks.log",
+      "range-mage22-recovery-protection/baseline-red.log",
+      "range-mage22-recovery-protection/tests/RangerMage22RecoveryProtectionTest.java",
+      "range-mage22-recovery-protection/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/mage/MageStrategy.java": "1af7387a948c48945e95637eb0c11e0d902683d168977c6f75016b2ddd901f8a",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "173da44fff26db6179864fbcb19ff084977856418ba0fa2a48d74938c00e6f04",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "aae4dad3f67c0835f4ccce5de1aada8e0f64ffd7a9fa621d42c6bac23159f476"
+    }
+  },
+  "range-west23-to24-budget": {
+    "state": ".state/simulations/training-v5-20261126-range-west23-to24-budget",
+    "portable_files": [
+      "range-west23-to24-budget/ranger.patch",
+      "range-west23-to24-budget/role-checks.log",
+      "range-west23-to24-budget/candidate-checks.log",
+      "range-west23-to24-budget/baseline-red.log",
+      "range-west23-to24-budget/tests/RangerWest23To24BudgetTest.java",
+      "range-west23-to24-budget/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/mage/MageStrategy.java": "1af7387a948c48945e95637eb0c11e0d902683d168977c6f75016b2ddd901f8a",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "173da44fff26db6179864fbcb19ff084977856418ba0fa2a48d74938c00e6f04",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "c3d15d8878692dcce918db5b62dcf61eaa6ab26652369a8a473ceb889c20f912"
+    }
+  },
+  "range-late18-magic-recovery": {
+    "state": ".state/simulations/training-v5-20261126-range-late18-magic-recovery",
+    "portable_files": [
+      "range-late18-magic-recovery/ranger.patch",
+      "range-late18-magic-recovery/role-checks.log",
+      "range-late18-magic-recovery/tests/RangerTransitionRecoveryTest.java",
+      "range-late18-magic-recovery/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/mage/MageStrategy.java": "1af7387a948c48945e95637eb0c11e0d902683d168977c6f75016b2ddd901f8a",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "173da44fff26db6179864fbcb19ff084977856418ba0fa2a48d74938c00e6f04",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "df0bc573d0d5df38c72fde15166d489988b38ff18ecd9aba4467b89a805807a6"
+    }
+  },
+  "range-cap20-small-clearance-v2": {
+    "state": ".state/simulations/training-v5-20261126-range-cap20-small-clearance-v2",
+    "portable_files": [
+      "range-cap20-small-clearance-v2/v1-to-v2.patch",
+      "range-cap20-small-clearance-v2/role-checks.log",
+      "range-cap20-small-clearance-v2/candidate-checks.log",
+      "range-cap20-small-clearance-v2/v1-red.log",
+      "range-cap20-small-clearance-v2/tests/RangerCap20SmallClearanceTest.java",
+      "range-cap20-small-clearance-v2/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/mage/MageStrategy.java": "1af7387a948c48945e95637eb0c11e0d902683d168977c6f75016b2ddd901f8a",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "848df468b1ac204e319a3e8d9524cc5cf76877bcf2963de76410906e16eafe18",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "ad8e0dec8c8b0070aaee62f5292ef0d1c48c3b92eedac10270f819f1ef12ef6c"
+    }
+  },
+  "range-cap20-small-clearance-v3": {
+    "state": ".state/simulations/training-v5-20261126-range-cap20-small-clearance-v3",
+    "portable_files": [
+      "range-cap20-small-clearance-v3/RangerPreCapPlanner.patch",
+      "range-cap20-small-clearance-v3/RangerStrategy.patch",
+      "range-cap20-small-clearance-v3/role-checks.log",
+      "range-cap20-small-clearance-v3/focused-checks.log",
+      "range-cap20-small-clearance-v3/v2-red.log",
+      "range-cap20-small-clearance-v3/tests/RangerEighteenMagicWindowTest.java",
+      "range-cap20-small-clearance-v3/tests/RangerCap20SmallClearanceTest.java",
+      "range-cap20-small-clearance-v3/tests/RangerCap20V3WitnessTest.java",
+      "range-cap20-small-clearance-v3/tests/RangerTransitionRecoveryTest.java",
+      "range-cap20-small-clearance-v3/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/mage/MageStrategy.java": "1af7387a948c48945e95637eb0c11e0d902683d168977c6f75016b2ddd901f8a",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "ed0a0d0b47ffe14aa3172500b4bd96086d08b35d5770a299e19c2001b3a6b324",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "df0bc573d0d5df38c72fde15166d489988b38ff18ecd9aba4467b89a805807a6"
+    }
+  },
+  "range-east7-scratch-preposition-v3": {
+    "state": ".state/simulations/training-v5-20261126-range-east7-scratch-preposition-v3",
+    "portable_files": [
+      "range-east7-scratch-preposition-v3/RangerStrategy-v2-to-v3.patch",
+      "range-east7-scratch-preposition-v3/role-checks.log",
+      "range-east7-scratch-preposition-v3/v2-baseline-red.log",
+      "range-east7-scratch-preposition-v3/tests/RangerEastSevenPriorityWitnessTest.java",
+      "range-east7-scratch-preposition-v3/tests/RangerEastSevenCooldownPreparationTest.java",
+      "range-east7-scratch-preposition-v3/tests/RangerEastSevenPostTurnCoverageTest.java",
+      "range-east7-scratch-preposition-v3/tests/RangerEastSevenScratchHandoffTest.java",
+      "range-east7-scratch-preposition-v3/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "cc2e6abebd61bd37be12d5a9ba4a5be3479238152e22233b7e7a51511f19cc9f",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "e49e8b4c8d1b147952e498ad7fd82bdeb1db87f502708dffcaea8248b8698eaf",
+      "org/localscape/nylocas/mage/MageStrategy.java": "1af7387a948c48945e95637eb0c11e0d902683d168977c6f75016b2ddd901f8a"
+    }
+  },
+  "range-cap19-one-tick-parent-hold": {
+    "state": ".state/simulations/training-v5-20261126-range-cap19-one-tick-parent-hold",
+    "portable_files": [
+      "range-cap19-one-tick-parent-hold/RangerPreCapPlanner.patch",
+      "range-cap19-one-tick-parent-hold/role-checks.log",
+      "range-cap19-one-tick-parent-hold/baseline-red.log",
+      "range-cap19-one-tick-parent-hold/tests/RangerFirstAdmissionParentHoldTest.java",
+      "range-cap19-one-tick-parent-hold/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "8267dd1662f1a68e62c01660877256193fad50832dc3d4c8267ab383fc8a84cd",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "692e4ed60a99a30e1b8c16a8f7bbb7cd50a54e97e35db5b6d698dffec78b77fc",
+      "org/localscape/nylocas/mage/MageStrategy.java": "74d6de720f15738e9a4effed3fafb1ff764c135175094ea4721d5f3553130518"
+    }
+  },
+  "range-south15-expiry-west18-budget": {
+    "state": ".state/simulations/training-v5-20261126-range-south15-expiry-west18-budget",
+    "portable_files": [
+      "range-south15-expiry-west18-budget/RangerPreCapPlanner.patch",
+      "range-south15-expiry-west18-budget/role-checks.log",
+      "range-south15-expiry-west18-budget/baseline-red.log",
+      "range-south15-expiry-west18-budget/tests/RangerSouthFifteenExpiryBudgetTest.java",
+      "range-south15-expiry-west18-budget/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "be5995c3485a7cd47a056bf0cd05a6c19b7b24f33748274a89727ef62092c5fd",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "692e4ed60a99a30e1b8c16a8f7bbb7cd50a54e97e35db5b6d698dffec78b77fc",
+      "org/localscape/nylocas/mage/MageStrategy.java": "74d6de720f15738e9a4effed3fafb1ff764c135175094ea4721d5f3553130518"
+    }
+  },
+  "range-west9-covered-cooldown-stage": {
+    "state": ".state/simulations/training-v5-20261126-range-west9-covered-cooldown-stage",
+    "portable_files": [
+      "range-west9-covered-cooldown-stage/RangerPreCapPlanner.patch",
+      "range-west9-covered-cooldown-stage/role-checks.log",
+      "range-west9-covered-cooldown-stage/baseline-red.log",
+      "range-west9-covered-cooldown-stage/tests/RangerWestNineCoveredCooldownStageTest.java",
+      "range-west9-covered-cooldown-stage/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "e3d41ec0f82a6b5bf8a2b03bba6c3122e4a08192529530aeaba07d9582fb91dc",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "7b82b2ac8f7d71101eabe68bae9c5c255f7302b604812b92c7e4ba0be23b58d6",
+      "org/localscape/nylocas/mage/MageStrategy.java": "255326ede88c32322ee1d4c8a6790f991f58fe6b39e964f990e700a71b83776d"
+    }
+  },
+  "range-idle-natural-south-stage": {
+    "state": ".state/simulations/training-v5-20261126-range-idle-natural-south-stage",
+    "portable_files": [
+      "range-idle-natural-south-stage/RangerPreCapPlanner.patch",
+      "range-idle-natural-south-stage/role-checks.log",
+      "range-idle-natural-south-stage/baseline-red.log",
+      "range-idle-natural-south-stage/tests/RangerIdleNaturalSouthStageTest.java",
+      "range-idle-natural-south-stage/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "5b096898f9043cff42a97d11e231e54fbe8980a39a20acef1440dfeff0b4bb1d",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "7b82b2ac8f7d71101eabe68bae9c5c255f7302b604812b92c7e4ba0be23b58d6",
+      "org/localscape/nylocas/mage/MageStrategy.java": "255326ede88c32322ee1d4c8a6790f991f58fe6b39e964f990e700a71b83776d"
+    }
+  },
+  "range-idle-south20-permanent-range": {
+    "state": ".state/simulations/training-v5-20261126-range-idle-south20-permanent-range",
+    "portable_files": [
+      "range-idle-south20-permanent-range/RangerStrategy.patch",
+      "range-idle-south20-permanent-range/role-checks.log",
+      "range-idle-south20-permanent-range/ranger-checks.log",
+      "range-idle-south20-permanent-range/baseline-red.log",
+      "range-idle-south20-permanent-range/tests/RangerIdleSouthTwentyRangeBackupTest.java",
+      "range-idle-south20-permanent-range/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "68d7c455fca4311622f42a6c22410e996256ae77edab78e43f9e8625b820b33b",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "a923b7ba3340c2d89610f01175660eba408962c2648071e995a412a4c4ed8c84",
+      "org/localscape/nylocas/mage/MageStrategy.java": "3dd0ed7d9ff3144876a69aec85c281bb95c567c780d074c6fe113a90a88b2ad1"
+    }
+  },
+  "range-west19-covered-followup": {
+    "state": ".state/simulations/training-v5-20261126-range-west19-covered-followup",
+    "portable_files": [
+      "range-west19-covered-followup/RangerPreCapPlanner.patch",
+      "range-west19-covered-followup/role-checks.log",
+      "range-west19-covered-followup/ranger-checks.log",
+      "range-west19-covered-followup/baseline-red.log",
+      "range-west19-covered-followup/tests/RangerWestNineteenCoveredFollowupTest.java",
+      "range-west19-covered-followup/source-hashes.json"
+    ],
+    "source_hashes": {
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "98835ec6cbc81e13a0c2aaccf3948ed483fee26d472318301bfcaf8b72713b6c",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "d7c0a2add2cb9196a1a630f170907c814dbf4ea45e872538e7702f572c70f3fc",
+      "org/localscape/nylocas/mage/MageStrategy.java": "3dd0ed7d9ff3144876a69aec85c281bb95c567c780d074c6fe113a90a88b2ad1"
+    }
+  }
+}

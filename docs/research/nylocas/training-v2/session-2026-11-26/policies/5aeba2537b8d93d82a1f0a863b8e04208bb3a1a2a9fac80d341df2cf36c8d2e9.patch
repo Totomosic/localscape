@@ -1,0 +1,29 @@
+--- a/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ b/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -67,7 +67,8 @@
+ 					// Real survivor feedback takes precedence over an approach selected before impact.
+ 					if (previous == null && extensions.stream().anyMatch(p -> strategy.confirmedFollowup(last(p), tick)))
+ 						extensions.removeIf(p -> !strategy.confirmedFollowup(last(p), tick));
+-					else if (previous == null && extensions.stream().anyMatch(p -> strategy.committed(last(p), tick)))
++					else if (previous == null && !newerUnhitSplitAvailable(extensions, tick)
++						&& extensions.stream().anyMatch(p -> strategy.committed(last(p), tick)))
+ 						extensions.removeIf(p -> !strategy.committed(last(p), tick));
+ 				}
+ 				// A short plan that clears the work must not lose to a longer, less useful one.
+@@ -96,6 +97,16 @@
+ 		decision.pathToTarget = first.tick > tick && queue;
+ 		if (decision.target == null) decision.approach = action.target;
+ 		return decision;
++	}
++
++	private boolean newerUnhitSplitAvailable(List<Plan> choices, int tick)
++	{
++		return choices.stream().anyMatch(old -> strategy.committed(last(old), tick)
++			&& !last(old).target.big && !strategy.opened(last(old).target)
++			&& choices.stream().anyMatch(fresh -> !last(fresh).target.big && last(fresh).target.lane == Lane.SPLIT
++				&& last(fresh).target.born > last(old).target.born
++				&& last(fresh).weapon.style == last(old).weapon.style
++				&& fresh.shots.get(0).tick <= old.shots.get(0).tick));
+ 	}
+ 
+ 	private static void keepEarliest(List<Plan> choices)

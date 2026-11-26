@@ -1,0 +1,28 @@
+--- a/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -451,7 +451,8 @@
+ 			.min(Comparator.comparingInt((Candidate c) -> -c.score)).orElse(null);
+ 		// The conditional west-24 Eye window takes priority over filler planned before the flicker.
+ 		if (west24 != null) best = west24;
+-		else if (!(room.wave == 31 && best.decision.target.partnerNulled))
++		else if (!(room.wave == 31 && best.decision.target.partnerNulled)
++			&& !west30Followup(best.decision, tick))
+ 			best = candidates.stream().filter(c -> c.at == earliest && committed(c.decision, tick))
+ 			.min(Comparator.comparingInt((Candidate c) -> -c.score)).orElse(best);
+ 		if (best.at <= tick || tick >= room.ready && !room.obstructed.contains(best.decision.target.key))
+@@ -464,6 +465,15 @@
+ 			"Plan " + action.weapon + " #" + action.target.index + " @" + best.at + ": " + action.reason);
+ 		approach.approach = action.target;
+ 		return approach;
++	}
++
++	private boolean west30Followup(Decision decision, int tick)
++	{
++		Crab parent = decision.target;
++		int age = tick - parent.born;
++		// A split approach chosen during the melee flicker can yield to the parent's next Pipe.
++		return parent.big && parent.wave == 30 && parent.lane == Lane.WEST && opened.contains(parent.key)
++			&& decision.weapon == Weapon.PIPE && age >= 7 && age <= 24;
+ 	}
+ 
+ 	private static Crab lastLiving(Room room)

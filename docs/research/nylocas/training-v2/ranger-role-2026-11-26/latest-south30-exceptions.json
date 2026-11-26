@@ -1,0 +1,7250 @@
+[
+  {
+    "run": "guided-chase-west9-300",
+    "seed": 2789165362318,
+    "cutoff": 248,
+    "spawns": {
+      "0": 0,
+      "1": 4,
+      "2": 8,
+      "3": 12,
+      "4": 16,
+      "5": 20,
+      "6": 36,
+      "7": 40,
+      "8": 52,
+      "9": 56,
+      "10": 68,
+      "11": 76,
+      "12": 84,
+      "13": 96,
+      "14": 104,
+      "15": 112,
+      "16": 120,
+      "17": 124,
+      "18": 136,
+      "19": 144,
+      "20": 156,
+      "21": 172,
+      "22": 184,
+      "23": 196,
+      "24": 204,
+      "25": 212,
+      "26": 220,
+      "27": 224,
+      "28": 232,
+      "29": 236,
+      "30": 260,
+      "31": 272
+    },
+    "frames": [
+      {
+        "tick": 260,
+        "role": 0,
+        "wave": 30,
+        "ready": true,
+        "attack": true,
+        "player": "3296,4247,0",
+        "weapon": "EYE",
+        "target": 184,
+        "rule": "null",
+        "reason": "Recent MAGIC small",
+        "previous_hp": [
+          68,
+          73
+        ],
+        "native_delay": [
+          0,
+          0
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 0,
+            "born": 260,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3281,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 0,
+            "born": 260,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 0,
+            "born": 260,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 0,
+            "born": 260,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3310,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 261,
+        "role": 0,
+        "wave": 30,
+        "ready": false,
+        "attack": false,
+        "player": "3296,4247,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West big 30",
+        "previous_hp": [
+          68,
+          73
+        ],
+        "native_delay": [
+          2,
+          2
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 1,
+            "born": 260,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3282,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 1,
+            "born": 260,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 1,
+            "born": 260,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 1,
+            "born": 260,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3309,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 262,
+        "role": 0,
+        "wave": 30,
+        "ready": false,
+        "attack": false,
+        "player": "3294,4247,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West big 30",
+        "previous_hp": [
+          53,
+          60
+        ],
+        "native_delay": [
+          1,
+          1
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 2,
+            "born": 260,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3283,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 2,
+            "born": 260,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 2,
+            "born": 260,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 2,
+            "born": 260,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3308,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 263,
+        "role": 0,
+        "wave": 30,
+        "ready": true,
+        "attack": false,
+        "player": "3292,4247,0",
+        "weapon": "PIPE",
+        "target": 185,
+        "rule": "West big 30",
+        "reason": "West big 30",
+        "previous_hp": [
+          75,
+          82
+        ],
+        "native_delay": [
+          3,
+          3
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 3,
+            "born": 260,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3284,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 3,
+            "born": 260,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4236,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 3,
+            "born": 260,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4236,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 3,
+            "born": 260,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3307,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 264,
+        "role": 0,
+        "wave": 30,
+        "ready": true,
+        "attack": false,
+        "player": "3290,4248,0",
+        "weapon": "CHIN",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: South chin flicker 30",
+        "previous_hp": [
+          75,
+          82
+        ],
+        "native_delay": [
+          2,
+          2
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 4,
+            "born": 260,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3285,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 4,
+            "born": 260,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4237,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 4,
+            "born": 260,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4237,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 4,
+            "born": 260,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3306,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 265,
+        "role": 0,
+        "wave": 30,
+        "ready": true,
+        "attack": false,
+        "player": "3292,4248,0",
+        "weapon": "CHIN",
+        "target": 187,
+        "rule": "South chin flicker 30",
+        "reason": "South chin flicker 30",
+        "previous_hp": [
+          75,
+          82
+        ],
+        "native_delay": [
+          1,
+          1
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 5,
+            "born": 260,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3286,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 5,
+            "born": 260,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4238,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 5,
+            "born": 260,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4238,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 5,
+            "born": 260,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3305,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 266,
+        "role": 0,
+        "wave": 30,
+        "ready": true,
+        "attack": false,
+        "player": "3292,4248,0",
+        "weapon": "CHIN",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: South chin flicker 30",
+        "previous_hp": [
+          75,
+          82
+        ],
+        "native_delay": [
+          0,
+          0
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 6,
+            "born": 260,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3287,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 6,
+            "born": 260,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4239,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 6,
+            "born": 260,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4239,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 6,
+            "born": 260,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3304,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 299,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 267,
+        "role": 0,
+        "wave": 30,
+        "ready": true,
+        "attack": true,
+        "player": "3293,4248,0",
+        "weapon": "PIPE",
+        "target": 185,
+        "rule": "West big 30",
+        "reason": "West big 30",
+        "previous_hp": [
+          75,
+          82
+        ],
+        "native_delay": [
+          -1,
+          2
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 7,
+            "born": 260,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3288,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 299,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 7,
+            "born": 260,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4240,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 7,
+            "born": 260,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4240,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 7,
+            "born": 260,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3303,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 299,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              15
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 30,
+            "age": 0,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 30,
+            "age": 0,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3293,
+            "y": 4244,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 30,
+            "age": 0,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4245,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 30,
+            "age": 0,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4246,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 268,
+        "role": 0,
+        "wave": 30,
+        "ready": false,
+        "attack": false,
+        "player": "3293,4248,0",
+        "weapon": "PIPE",
+        "target": 185,
+        "rule": "null",
+        "reason": "Plan PIPE #191 @269: Recent RANGE big",
+        "previous_hp": [
+          75,
+          82
+        ],
+        "native_delay": [
+          1,
+          1
+        ],
+        "crabs": [
+          {
+            "key": 189,
+            "wave": 30,
+            "age": 1,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 30,
+            "age": 1,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3294,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 30,
+            "age": 1,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4245,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 30,
+            "age": 1,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4246,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 269,
+        "role": 0,
+        "wave": 30,
+        "ready": true,
+        "attack": true,
+        "player": "3293,4248,0",
+        "weapon": "PIPE",
+        "target": 185,
+        "rule": "null",
+        "reason": "Recent RANGE big",
+        "previous_hp": [
+          75,
+          82
+        ],
+        "native_delay": [
+          0,
+          0
+        ],
+        "crabs": [
+          {
+            "key": 189,
+            "wave": 30,
+            "age": 2,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 30,
+            "age": 2,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 30,
+            "age": 2,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4245,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 30,
+            "age": 2,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3299,
+            "y": 4245,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 270,
+        "role": 0,
+        "wave": 30,
+        "ready": false,
+        "attack": false,
+        "player": "3293,4248,0",
+        "weapon": "PIPE",
+        "target": 185,
+        "rule": "null",
+        "reason": "Plan PIPE #191 @271: Recent RANGE big",
+        "previous_hp": [
+          75,
+          82
+        ],
+        "native_delay": [
+          1,
+          2
+        ],
+        "crabs": [
+          {
+            "key": 189,
+            "wave": 30,
+            "age": 3,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 30,
+            "age": 3,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3294,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 30,
+            "age": 3,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4245,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 30,
+            "age": 3,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3298,
+            "y": 4244,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 271,
+        "role": 0,
+        "wave": 30,
+        "ready": true,
+        "attack": true,
+        "player": "3293,4248,0",
+        "weapon": "PIPE",
+        "target": 185,
+        "rule": "null",
+        "reason": "Recent RANGE big",
+        "previous_hp": [
+          75,
+          82
+        ],
+        "native_delay": [
+          0,
+          1
+        ],
+        "crabs": [
+          {
+            "key": 189,
+            "wave": 30,
+            "age": 4,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 30,
+            "age": 4,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 30,
+            "age": 4,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4245,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 30,
+            "age": 4,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3297,
+            "y": 4244,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 272,
+        "role": 0,
+        "wave": 31,
+        "ready": false,
+        "attack": false,
+        "player": "3293,4248,0",
+        "weapon": "PIPE",
+        "target": 189,
+        "rule": "null",
+        "reason": "Plan PIPE #195 @273: Recent RANGE small",
+        "previous_hp": [
+          75,
+          71
+        ],
+        "native_delay": [
+          1,
+          0
+        ],
+        "crabs": [
+          {
+            "key": 189,
+            "wave": 30,
+            "age": 5,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 30,
+            "age": 5,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 30,
+            "age": 5,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4245,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 30,
+            "age": 5,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4244,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 0,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 0,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 195,
+            "wave": 31,
+            "age": 0,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 196,
+            "wave": 31,
+            "age": 0,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 197,
+            "wave": 31,
+            "age": 0,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3310,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 305,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 198,
+            "wave": 31,
+            "age": 0,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3310,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 273,
+        "role": 0,
+        "wave": 31,
+        "ready": true,
+        "attack": true,
+        "player": "3293,4248,0",
+        "weapon": "PIPE",
+        "target": 189,
+        "rule": "null",
+        "reason": "Recent RANGE small",
+        "previous_hp": [
+          75,
+          71
+        ],
+        "native_delay": [
+          0,
+          2
+        ],
+        "crabs": [
+          {
+            "key": 189,
+            "wave": 30,
+            "age": 6,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 305,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 30,
+            "age": 6,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3297,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 30,
+            "age": 6,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4245,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 30,
+            "age": 6,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 1,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 1,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 195,
+            "wave": 31,
+            "age": 1,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 196,
+            "wave": 31,
+            "age": 1,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 197,
+            "wave": 31,
+            "age": 1,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3309,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 305,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              5
+            ]
+          },
+          {
+            "key": 198,
+            "wave": 31,
+            "age": 1,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3309,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 274,
+        "role": 0,
+        "wave": 31,
+        "ready": false,
+        "attack": false,
+        "player": "3293,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West south early 31",
+        "previous_hp": [
+          75,
+          71
+        ],
+        "native_delay": [
+          1,
+          1
+        ],
+        "crabs": [
+          {
+            "key": 189,
+            "wave": 30,
+            "age": 7,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 305,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              17
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 30,
+            "age": 7,
+            "born": 267,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3298,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 30,
+            "age": 7,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4245,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 30,
+            "age": 7,
+            "born": 267,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3294,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 2,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 2,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 195,
+            "wave": 31,
+            "age": 2,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 196,
+            "wave": 31,
+            "age": 2,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 197,
+            "wave": 31,
+            "age": 2,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3308,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 305,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              5
+            ]
+          },
+          {
+            "key": 198,
+            "wave": 31,
+            "age": 2,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3308,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": "south20-range-finish-200",
+    "seed": 89501265101268,
+    "cutoff": 248,
+    "spawns": {
+      "0": 0,
+      "1": 4,
+      "2": 8,
+      "3": 12,
+      "4": 16,
+      "5": 20,
+      "6": 36,
+      "7": 40,
+      "8": 52,
+      "9": 56,
+      "10": 68,
+      "11": 76,
+      "12": 84,
+      "13": 96,
+      "14": 104,
+      "15": 112,
+      "16": 120,
+      "17": 124,
+      "18": 136,
+      "19": 144,
+      "20": 156,
+      "21": 172,
+      "22": 180,
+      "23": 192,
+      "24": 200,
+      "25": 208,
+      "26": 220,
+      "27": 224,
+      "28": 232,
+      "29": 244,
+      "30": 248,
+      "31": 252
+    },
+    "frames": [
+      {
+        "tick": 248,
+        "role": 0,
+        "wave": 30,
+        "ready": false,
+        "attack": false,
+        "player": "3290,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West north flicker 29",
+        "previous_hp": [
+          90,
+          99
+        ],
+        "native_delay": [
+          1,
+          1
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 0,
+            "born": 248,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3281,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 0,
+            "born": 248,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 0,
+            "born": 248,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 0,
+            "born": 248,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3310,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 249,
+        "role": 0,
+        "wave": 30,
+        "ready": true,
+        "attack": true,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": 176,
+        "rule": "West north flicker 29",
+        "reason": "West north flicker 29",
+        "previous_hp": [
+          90,
+          99
+        ],
+        "native_delay": [
+          0,
+          0
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 1,
+            "born": 248,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3282,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 1,
+            "born": 248,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 1,
+            "born": 248,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 1,
+            "born": 248,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3309,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 250,
+        "role": 0,
+        "wave": 30,
+        "ready": false,
+        "attack": false,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West big 30",
+        "previous_hp": [
+          90,
+          99
+        ],
+        "native_delay": [
+          1,
+          -1
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 2,
+            "born": 248,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3283,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 2,
+            "born": 248,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 2,
+            "born": 248,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 2,
+            "born": 248,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3308,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 251,
+        "role": 0,
+        "wave": 30,
+        "ready": true,
+        "attack": true,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": 185,
+        "rule": "West big 30",
+        "reason": "West big 30",
+        "previous_hp": [
+          90,
+          99
+        ],
+        "native_delay": [
+          0,
+          -2
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 3,
+            "born": 248,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3284,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 283,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 3,
+            "born": 248,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4236,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 3,
+            "born": 248,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4236,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 3,
+            "born": 248,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3307,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 252,
+        "role": 0,
+        "wave": 31,
+        "ready": false,
+        "attack": false,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West south early 31",
+        "previous_hp": [
+          90,
+          99
+        ],
+        "native_delay": [
+          1,
+          4
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 4,
+            "born": 248,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3285,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 283,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 4,
+            "born": 248,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4237,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 4,
+            "born": 248,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4237,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 4,
+            "born": 248,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3306,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 31,
+            "age": 0,
+            "born": 252,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 31,
+            "age": 0,
+            "born": 252,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 31,
+            "age": 0,
+            "born": 252,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 31,
+            "age": 0,
+            "born": 252,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 0,
+            "born": 252,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3310,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 0,
+            "born": 252,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3310,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 253,
+        "role": 0,
+        "wave": 31,
+        "ready": true,
+        "attack": false,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West south early 31",
+        "previous_hp": [
+          90,
+          99
+        ],
+        "native_delay": [
+          0,
+          3
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 5,
+            "born": 248,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3286,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 5,
+            "born": 248,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4238,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 5,
+            "born": 248,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4238,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 5,
+            "born": 248,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3305,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 31,
+            "age": 1,
+            "born": 252,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 31,
+            "age": 1,
+            "born": 252,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 31,
+            "age": 1,
+            "born": 252,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 31,
+            "age": 1,
+            "born": 252,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 1,
+            "born": 252,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3309,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 1,
+            "born": 252,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3309,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 254,
+        "role": 0,
+        "wave": 31,
+        "ready": true,
+        "attack": false,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West south early 31",
+        "previous_hp": [
+          90,
+          99
+        ],
+        "native_delay": [
+          -1,
+          2
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 6,
+            "born": 248,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3287,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 6,
+            "born": 248,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4239,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 6,
+            "born": 248,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4239,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 6,
+            "born": 248,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3304,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 31,
+            "age": 2,
+            "born": 252,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 31,
+            "age": 2,
+            "born": 252,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 31,
+            "age": 2,
+            "born": 252,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 31,
+            "age": 2,
+            "born": 252,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 2,
+            "born": 252,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3308,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 2,
+            "born": 252,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3308,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 255,
+        "role": 0,
+        "wave": 31,
+        "ready": true,
+        "attack": true,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": 190,
+        "rule": "West south early 31",
+        "reason": "West south early 31",
+        "previous_hp": [
+          90,
+          99
+        ],
+        "native_delay": [
+          -2,
+          1
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 7,
+            "born": 248,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3288,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 7,
+            "born": 248,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4240,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 7,
+            "born": 248,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4240,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 7,
+            "born": 248,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3303,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 31,
+            "age": 3,
+            "born": 252,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3284,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 31,
+            "age": 3,
+            "born": 252,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3284,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 287,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 31,
+            "age": 3,
+            "born": 252,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4236,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 31,
+            "age": 3,
+            "born": 252,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4236,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 3,
+            "born": 252,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3307,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 3,
+            "born": 252,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3307,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": "south20-range-finish-200",
+    "seed": 89501265101411,
+    "cutoff": 268,
+    "spawns": {
+      "0": 0,
+      "1": 4,
+      "2": 8,
+      "3": 12,
+      "4": 16,
+      "5": 20,
+      "6": 36,
+      "7": 40,
+      "8": 52,
+      "9": 56,
+      "10": 68,
+      "11": 80,
+      "12": 88,
+      "13": 104,
+      "14": 112,
+      "15": 120,
+      "16": 128,
+      "17": 140,
+      "18": 152,
+      "19": 160,
+      "20": 172,
+      "21": 188,
+      "22": 204,
+      "23": 216,
+      "24": 224,
+      "25": 232,
+      "26": 240,
+      "27": 244,
+      "28": 252,
+      "29": 260,
+      "30": 268,
+      "31": 272
+    },
+    "frames": [
+      {
+        "tick": 268,
+        "role": 0,
+        "wave": 30,
+        "ready": false,
+        "attack": false,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": 169,
+        "rule": "null",
+        "reason": "Plan PIPE #175 @269: Recent RANGE small",
+        "previous_hp": [
+          81,
+          99
+        ],
+        "native_delay": [
+          1,
+          4
+        ],
+        "crabs": [
+          {
+            "key": 181,
+            "wave": 30,
+            "age": 0,
+            "born": 268,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3281,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 182,
+            "wave": 30,
+            "age": 0,
+            "born": 268,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 183,
+            "wave": 30,
+            "age": 0,
+            "born": 268,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 184,
+            "wave": 30,
+            "age": 0,
+            "born": 268,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3310,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 269,
+        "role": 0,
+        "wave": 30,
+        "ready": true,
+        "attack": true,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": 169,
+        "rule": "null",
+        "reason": "Recent RANGE small",
+        "previous_hp": [
+          81,
+          99
+        ],
+        "native_delay": [
+          0,
+          3
+        ],
+        "crabs": [
+          {
+            "key": 181,
+            "wave": 30,
+            "age": 1,
+            "born": 268,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3282,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 182,
+            "wave": 30,
+            "age": 1,
+            "born": 268,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 183,
+            "wave": 30,
+            "age": 1,
+            "born": 268,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 184,
+            "wave": 30,
+            "age": 1,
+            "born": 268,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3309,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 0,
+            "born": 269,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 0,
+            "born": 269,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3293,
+            "y": 4244,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 270,
+        "role": 0,
+        "wave": 30,
+        "ready": false,
+        "attack": false,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West big 30",
+        "previous_hp": [
+          81,
+          99
+        ],
+        "native_delay": [
+          1,
+          2
+        ],
+        "crabs": [
+          {
+            "key": 181,
+            "wave": 30,
+            "age": 2,
+            "born": 268,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3283,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 182,
+            "wave": 30,
+            "age": 2,
+            "born": 268,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 183,
+            "wave": 30,
+            "age": 2,
+            "born": 268,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 184,
+            "wave": 30,
+            "age": 2,
+            "born": 268,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3308,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 1,
+            "born": 269,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4244,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 1,
+            "born": 269,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 271,
+        "role": 0,
+        "wave": 30,
+        "ready": true,
+        "attack": true,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": 181,
+        "rule": "West big 30",
+        "reason": "West big 30",
+        "previous_hp": [
+          81,
+          99
+        ],
+        "native_delay": [
+          0,
+          1
+        ],
+        "crabs": [
+          {
+            "key": 181,
+            "wave": 30,
+            "age": 3,
+            "born": 268,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3284,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 303,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 182,
+            "wave": 30,
+            "age": 3,
+            "born": 268,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4236,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 183,
+            "wave": 30,
+            "age": 3,
+            "born": 268,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4236,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 184,
+            "wave": 30,
+            "age": 3,
+            "born": 268,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3307,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 2,
+            "born": 269,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4245,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 2,
+            "born": 269,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 0,
+            "born": 271,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4251,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 0,
+            "born": 271,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4252,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 272,
+        "role": 0,
+        "wave": 31,
+        "ready": false,
+        "attack": false,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West south early 31",
+        "previous_hp": [
+          81,
+          99
+        ],
+        "native_delay": [
+          1,
+          0
+        ],
+        "crabs": [
+          {
+            "key": 181,
+            "wave": 30,
+            "age": 4,
+            "born": 268,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3285,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 303,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              31
+            ]
+          },
+          {
+            "key": 182,
+            "wave": 30,
+            "age": 4,
+            "born": 268,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4237,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 183,
+            "wave": 30,
+            "age": 4,
+            "born": 268,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4237,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 184,
+            "wave": 30,
+            "age": 4,
+            "born": 268,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3306,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 3,
+            "born": 269,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3291,
+            "y": 4246,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 3,
+            "born": 269,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 1,
+            "born": 271,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4250,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 1,
+            "born": 271,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4252,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 31,
+            "age": 0,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 31,
+            "age": 0,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 31,
+            "age": 0,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 31,
+            "age": 0,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 0,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3310,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 305,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 0,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3310,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 273,
+        "role": 0,
+        "wave": 31,
+        "ready": true,
+        "attack": false,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West south early 31",
+        "previous_hp": [
+          81,
+          99
+        ],
+        "native_delay": [
+          0,
+          2
+        ],
+        "crabs": [
+          {
+            "key": 181,
+            "wave": 30,
+            "age": 5,
+            "born": 268,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3286,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              31
+            ]
+          },
+          {
+            "key": 182,
+            "wave": 30,
+            "age": 5,
+            "born": 268,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4238,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 183,
+            "wave": 30,
+            "age": 5,
+            "born": 268,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4238,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 184,
+            "wave": 30,
+            "age": 5,
+            "born": 268,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3305,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 4,
+            "born": 269,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3290,
+            "y": 4247,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 4,
+            "born": 269,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 2,
+            "born": 271,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 2,
+            "born": 271,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4252,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 31,
+            "age": 1,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 31,
+            "age": 1,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 31,
+            "age": 1,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 31,
+            "age": 1,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 1,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3309,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 305,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              7
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 1,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3309,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 274,
+        "role": 0,
+        "wave": 31,
+        "ready": true,
+        "attack": false,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West south early 31",
+        "previous_hp": [
+          81,
+          99
+        ],
+        "native_delay": [
+          -1,
+          1
+        ],
+        "crabs": [
+          {
+            "key": 181,
+            "wave": 30,
+            "age": 6,
+            "born": 268,
+            "style": "MELEE",
+            "big": true,
+            "hp": 0,
+            "x": 3287,
+            "y": 4248,
+            "dying": true,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              0,
+              0
+            ]
+          },
+          {
+            "key": 182,
+            "wave": 30,
+            "age": 6,
+            "born": 268,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4239,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 183,
+            "wave": 30,
+            "age": 6,
+            "born": 268,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4239,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 184,
+            "wave": 30,
+            "age": 6,
+            "born": 268,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3304,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 5,
+            "born": 269,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3290,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 5,
+            "born": 269,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 3,
+            "born": 271,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 3,
+            "born": 271,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4252,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 31,
+            "age": 2,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 31,
+            "age": 2,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 31,
+            "age": 2,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 31,
+            "age": 2,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 2,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3308,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 305,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              7
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 2,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3308,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 275,
+        "role": 0,
+        "wave": 31,
+        "ready": true,
+        "attack": true,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": 190,
+        "rule": "West south early 31",
+        "reason": "West south early 31",
+        "previous_hp": [
+          81,
+          99
+        ],
+        "native_delay": [
+          -2,
+          0
+        ],
+        "crabs": [
+          {
+            "key": 181,
+            "wave": 30,
+            "age": 7,
+            "born": 268,
+            "style": "MELEE",
+            "big": true,
+            "hp": 0,
+            "x": 3287,
+            "y": 4248,
+            "dying": true,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              0,
+              0
+            ]
+          },
+          {
+            "key": 182,
+            "wave": 30,
+            "age": 7,
+            "born": 268,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4240,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 183,
+            "wave": 30,
+            "age": 7,
+            "born": 268,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4240,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 184,
+            "wave": 30,
+            "age": 7,
+            "born": 268,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3303,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 6,
+            "born": 269,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3290,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 6,
+            "born": 269,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 4,
+            "born": 271,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4247,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 4,
+            "born": 271,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4252,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 31,
+            "age": 3,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3284,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 31,
+            "age": 3,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3284,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 307,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 31,
+            "age": 3,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4236,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 31,
+            "age": 3,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4236,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 3,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3307,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 308,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              7
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 3,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3307,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 195,
+            "wave": 31,
+            "age": 0,
+            "born": 275,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4241,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 196,
+            "wave": 31,
+            "age": 0,
+            "born": 275,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4242,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 276,
+        "role": 0,
+        "wave": 31,
+        "ready": false,
+        "attack": false,
+        "player": "3290,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West north flicker 31",
+        "previous_hp": [
+          81,
+          99
+        ],
+        "native_delay": [
+          1,
+          2
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 7,
+            "born": 269,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3290,
+            "y": 4250,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 7,
+            "born": 269,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 5,
+            "born": 271,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4246,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 5,
+            "born": 271,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4252,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 31,
+            "age": 4,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3285,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 31,
+            "age": 4,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3285,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 307,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              20
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 31,
+            "age": 4,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4237,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 31,
+            "age": 4,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4237,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 4,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 1,
+            "x": 3306,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 308,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              1,
+              13
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 4,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3306,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 195,
+            "wave": 31,
+            "age": 1,
+            "born": 275,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4242,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 196,
+            "wave": 31,
+            "age": 1,
+            "born": 275,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 277,
+        "role": 0,
+        "wave": 31,
+        "ready": true,
+        "attack": true,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": 189,
+        "rule": "West north flicker 31",
+        "reason": "West north flicker 31",
+        "previous_hp": [
+          82,
+          99
+        ],
+        "native_delay": [
+          0,
+          1
+        ],
+        "crabs": [
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 6,
+            "born": 271,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4246,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 6,
+            "born": 271,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4252,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 31,
+            "age": 5,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3286,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 309,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 31,
+            "age": 5,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3286,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              20
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 31,
+            "age": 5,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4238,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 31,
+            "age": 5,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4238,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 5,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 1,
+            "x": 3305,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 308,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              1,
+              13
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 5,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3305,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 195,
+            "wave": 31,
+            "age": 2,
+            "born": 275,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 196,
+            "wave": 31,
+            "age": 2,
+            "born": 275,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3297,
+            "y": 4244,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 278,
+        "role": 0,
+        "wave": 31,
+        "ready": false,
+        "attack": false,
+        "player": "3291,4248,0",
+        "weapon": "CHIN",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: South chin 31",
+        "previous_hp": [
+          82,
+          99
+        ],
+        "native_delay": [
+          1,
+          0
+        ],
+        "crabs": [
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 7,
+            "born": 271,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4246,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 7,
+            "born": 271,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4252,
+            "dying": false,
+            "claimed_until": 311,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 31,
+            "age": 6,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3287,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 309,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              24
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 31,
+            "age": 6,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 0,
+            "x": 3287,
+            "y": 4248,
+            "dying": true,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              0,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 31,
+            "age": 6,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4239,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 31,
+            "age": 6,
+            "born": 272,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4239,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 6,
+            "born": 272,
+            "style": "RANGE",
+            "big": false,
+            "hp": 1,
+            "x": 3304,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              1,
+              13
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 6,
+            "born": 272,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3304,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 195,
+            "wave": 31,
+            "age": 3,
+            "born": 275,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3294,
+            "y": 4243,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 196,
+            "wave": 31,
+            "age": 3,
+            "born": 275,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3298,
+            "y": 4245,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": "guided-west19-covered-200",
+    "seed": 62645496806152,
+    "cutoff": 252,
+    "spawns": {
+      "0": 0,
+      "1": 4,
+      "2": 8,
+      "3": 12,
+      "4": 16,
+      "5": 20,
+      "6": 36,
+      "7": 40,
+      "8": 52,
+      "9": 56,
+      "10": 68,
+      "11": 76,
+      "12": 84,
+      "13": 96,
+      "14": 104,
+      "15": 112,
+      "16": 120,
+      "17": 124,
+      "18": 136,
+      "19": 144,
+      "20": 156,
+      "21": 172,
+      "22": 180,
+      "23": 192,
+      "24": 200,
+      "25": 216,
+      "26": 224,
+      "27": 228,
+      "28": 236,
+      "29": 248,
+      "30": 252,
+      "31": 256
+    },
+    "frames": [
+      {
+        "tick": 252,
+        "role": 0,
+        "wave": 30,
+        "ready": true,
+        "attack": false,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West south early 29",
+        "previous_hp": [
+          93,
+          83
+        ],
+        "native_delay": [
+          -1,
+          0
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 0,
+            "born": 252,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3281,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 0,
+            "born": 252,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 0,
+            "born": 252,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 0,
+            "born": 252,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3310,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 253,
+        "role": 0,
+        "wave": 30,
+        "ready": true,
+        "attack": true,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": 178,
+        "rule": "West north flicker 29",
+        "reason": "West north flicker 29",
+        "previous_hp": [
+          93,
+          83
+        ],
+        "native_delay": [
+          -2,
+          -1
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 1,
+            "born": 252,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3282,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 1,
+            "born": 252,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 1,
+            "born": 252,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 1,
+            "born": 252,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3309,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 254,
+        "role": 0,
+        "wave": 30,
+        "ready": false,
+        "attack": false,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West big 30",
+        "previous_hp": [
+          93,
+          83
+        ],
+        "native_delay": [
+          1,
+          -2
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 2,
+            "born": 252,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3283,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 2,
+            "born": 252,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 2,
+            "born": 252,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 2,
+            "born": 252,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3308,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 255,
+        "role": 0,
+        "wave": 30,
+        "ready": true,
+        "attack": true,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": 185,
+        "rule": "West big 30",
+        "reason": "West big 30",
+        "previous_hp": [
+          93,
+          83
+        ],
+        "native_delay": [
+          0,
+          -3
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 3,
+            "born": 252,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3284,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 287,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 3,
+            "born": 252,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4236,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 3,
+            "born": 252,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4236,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 3,
+            "born": 252,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3307,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 256,
+        "role": 0,
+        "wave": 31,
+        "ready": false,
+        "attack": false,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West south early 31",
+        "previous_hp": [
+          93,
+          83
+        ],
+        "native_delay": [
+          1,
+          4
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 4,
+            "born": 252,
+            "style": "RANGE",
+            "big": true,
+            "hp": 16,
+            "x": 3285,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 287,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              22
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 4,
+            "born": 252,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4237,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 4,
+            "born": 252,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4237,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 4,
+            "born": 252,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3306,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 31,
+            "age": 0,
+            "born": 256,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 31,
+            "age": 0,
+            "born": 256,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3281,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 31,
+            "age": 0,
+            "born": 256,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 31,
+            "age": 0,
+            "born": 256,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4233,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 0,
+            "born": 256,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3310,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 0,
+            "born": 256,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3310,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 257,
+        "role": 0,
+        "wave": 31,
+        "ready": true,
+        "attack": false,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West south early 31",
+        "previous_hp": [
+          93,
+          83
+        ],
+        "native_delay": [
+          0,
+          3
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 5,
+            "born": 252,
+            "style": "MELEE",
+            "big": true,
+            "hp": 16,
+            "x": 3286,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              22
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 5,
+            "born": 252,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4238,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 5,
+            "born": 252,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4238,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 5,
+            "born": 252,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3305,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 31,
+            "age": 1,
+            "born": 256,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 31,
+            "age": 1,
+            "born": 256,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3282,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 31,
+            "age": 1,
+            "born": 256,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 31,
+            "age": 1,
+            "born": 256,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4234,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 1,
+            "born": 256,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3309,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 1,
+            "born": 256,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3309,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 258,
+        "role": 0,
+        "wave": 31,
+        "ready": true,
+        "attack": false,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": -1,
+        "rule": "null",
+        "reason": "Reserve next packet: West south early 31",
+        "previous_hp": [
+          93,
+          83
+        ],
+        "native_delay": [
+          -1,
+          2
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 6,
+            "born": 252,
+            "style": "MELEE",
+            "big": true,
+            "hp": 0,
+            "x": 3287,
+            "y": 4248,
+            "dying": true,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              0,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 6,
+            "born": 252,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4239,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 6,
+            "born": 252,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4239,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 6,
+            "born": 252,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3304,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 31,
+            "age": 2,
+            "born": 256,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 31,
+            "age": 2,
+            "born": 256,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3283,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 31,
+            "age": 2,
+            "born": 256,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 31,
+            "age": 2,
+            "born": 256,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4235,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 2,
+            "born": 256,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3308,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 2,
+            "born": 256,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3308,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "tick": 259,
+        "role": 0,
+        "wave": 31,
+        "ready": true,
+        "attack": true,
+        "player": "3291,4248,0",
+        "weapon": "PIPE",
+        "target": 190,
+        "rule": "West south early 31",
+        "reason": "West south early 31",
+        "previous_hp": [
+          93,
+          83
+        ],
+        "native_delay": [
+          -2,
+          1
+        ],
+        "crabs": [
+          {
+            "key": 185,
+            "wave": 30,
+            "age": 7,
+            "born": 252,
+            "style": "MELEE",
+            "big": true,
+            "hp": 0,
+            "x": 3287,
+            "y": 4248,
+            "dying": true,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              0,
+              0
+            ]
+          },
+          {
+            "key": 186,
+            "wave": 30,
+            "age": 7,
+            "born": 252,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4240,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 187,
+            "wave": 30,
+            "age": 7,
+            "born": 252,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4240,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 188,
+            "wave": 30,
+            "age": 7,
+            "born": 252,
+            "style": "MAGIC",
+            "big": true,
+            "hp": 16,
+            "x": 3303,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              16,
+              0
+            ]
+          },
+          {
+            "key": 189,
+            "wave": 31,
+            "age": 3,
+            "born": 256,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3284,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 190,
+            "wave": 31,
+            "age": 3,
+            "born": 256,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3284,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 291,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 191,
+            "wave": 31,
+            "age": 3,
+            "born": 256,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4236,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 192,
+            "wave": 31,
+            "age": 3,
+            "born": 256,
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4236,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 193,
+            "wave": 31,
+            "age": 3,
+            "born": 256,
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3307,
+            "y": 4249,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          },
+          {
+            "key": 194,
+            "wave": 31,
+            "age": 3,
+            "born": 256,
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3307,
+            "y": 4248,
+            "dying": false,
+            "claimed_until": 0,
+            "own_hit_until": 0,
+            "own_null": false,
+            "partner_null": false,
+            "forecast": [
+              8,
+              0
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

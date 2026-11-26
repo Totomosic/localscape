@@ -1,0 +1,13 @@
+--- a/RangerStrategy.java
++++ b/RangerStrategy.java
+@@ -317,7 +317,9 @@
+ 		if (due > tick + lookahead) return -1;
+ 		Crab target = room.crabs.stream().filter(c -> c.wave == 7 && c.lane == Lane.EAST && c.slot == 'N' && !c.big
+ 			&& c.style == Style.MELEE && c.hp > 0 && !c.dying && !c.nulled && !c.claimed(tick) && !c.awaitingHit(tick)
+-			&& due - c.born >= 9 && due - c.born <= 12 && east7ScratchStand(room, c, tick, due)
++			&& due - c.born >= 9 && due - c.born <= 12
++			// After age9 native target movement can turn; only promise an already local ready scratch.
++			&& (due == tick || due - c.born == 9) && east7ScratchStand(room, c, tick, due)
+ 			&& !room.obstructed.contains(c.key)).findFirst().orElse(null);
+ 		if (target == null) return -1;
+ 		for (Crab c : room.crabs)

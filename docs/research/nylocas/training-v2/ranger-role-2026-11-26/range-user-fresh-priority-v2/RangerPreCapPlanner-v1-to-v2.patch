@@ -1,0 +1,177 @@
+--- .state/simulations/training-v5-20261126-range-user-fresh-priority/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ .state/simulations/training-v5-20261126-range-user-fresh-priority-v2/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -3,6 +3,8 @@
+ import java.util.ArrayList;
+ import java.util.Comparator;
+ import java.util.List;
++import java.util.Map;
++import java.util.HashMap;
+ import java.util.stream.Collectors;
+ import org.localscape.nylocas.Tile;
+ import org.localscape.nylocas.ranger.RangerStrategy.Crab;
+@@ -21,6 +23,11 @@
+ 	private static final int WIDTH = 6;
+ 	private static final int SHOTS = 3;
+ 	private final RangerStrategy strategy;
++	private final Map<Integer, Integer> dyingSince = new HashMap<>();
++	private int readyFreshWaitTicks, lastFreshWaitTick = -1;
++
++	void reset() { dyingSince.clear(); confirmedAttack(); }
++	void confirmedAttack() { readyFreshWaitTicks = 0; lastFreshWaitTick = -1; }
+ 
+ 	RangerPreCapPlanner(RangerStrategy strategy) { this.strategy = strategy; }
+ 
+@@ -43,12 +50,14 @@
+ 		final List<Shot> shots = new ArrayList<>();
+ 		final int[] hp;
+ 		double value;
++		boolean freshWait;
+ 
+ 		Plan(int[] hp) { this.hp = hp; }
+ 	}
+ 
+ 	Decision decide(Room room, int tick, Reservation reservation)
+ 	{
++		observeDyingParents(room, tick);
+ 		int[] hp = room.crabs.stream().mapToInt(c -> c.hp).toArray();
+ 		List<Plan> beam = new ArrayList<>();
+ 		beam.add(new Plan(hp));
+@@ -81,6 +90,18 @@
+ 		}
+ 		if (best == null) return RangerStrategy.staging(room, reservation, "No useful pre-cap attack");
+ 		Shot first = best.shots.get(0);
++		int available = Math.max(tick, room.ready);
++		if (ordinaryOldUnhit(first.decision, room) && reservation == null
++			&& (tick < room.ready || readyFreshWaitTicks < 2))
++		{
++			Opportunity opportunity = opportunity(room, tick, available);
++			if (opportunity != null)
++			{
++				if (tick >= room.ready) spendFreshWait(tick);
++				return new Decision(null, opportunity.weapon, opportunity.tile, false, null, "Prepare finite fresh opportunity @" + opportunity.due);
++			}
++		}
++		if (best.freshWait && tick >= room.ready && first.tick > tick) spendFreshWait(tick);
+ 		String sequence = best.shots.stream().map(s -> s.decision.weapon + " #" + s.decision.target.index
+ 			+ " @" + s.tick).collect(Collectors.joining(" → "));
+ 		Decision action = first.decision;
+@@ -109,7 +130,7 @@
+ 		// Preserve the explicit opening order, including its one-tick scratch approach.
+ 		int opening = choices.stream().mapToInt(p -> openingOrder(last(p))).min().getAsInt();
+ 		if (opening != Integer.MAX_VALUE) choices.removeIf(p -> openingOrder(last(p)) != opening);
+-		preferFreshWithinTwo(choices, room);
++		preferFreshWithinTwo(choices, room, tick, ready);
+ 		// Keep attacking while ready; use cooldown to reach a big that needs service.
+ 		if (tick >= ready) keepEarliest(choices);
+ 		// Spend the first feasible opening bow tick before ordinary clearing.
+@@ -127,26 +148,83 @@
+ 			&& RangerStrategy.transitionLane(last(p).target) > lane);
+ 	}
+ 
+-	private void preferFreshWithinTwo(List<Plan> choices, Room room)
+-	{
+-		int earliest = choices.stream().mapToInt(p -> p.shots.get(p.shots.size() - 1).tick).min().getAsInt();
+-		if (choices.stream().noneMatch(p -> p.shots.get(p.shots.size() - 1).tick == earliest
+-			&& last(p).rule == null && !last(p).target.big && room.wave - last(p).target.wave >= 4)) return;
+-		if (choices.stream().filter(p -> p.shots.get(p.shots.size() - 1).tick == earliest).anyMatch(p ->
+-			last(p).target.wave < room.wave - 1
+-				&& (last(p).rule != null || last(p).target.big || room.wave - last(p).target.wave < 4))) return;
+-		if (choices.stream().anyMatch(p -> p.shots.get(p.shots.size() - 1).tick <= earliest + 2
+-			&& (last(p).rule != null || last(p).target.big) && last(p).target.wave < room.wave - 1)) return;
+-		List<Plan> fresh = choices.stream().filter(p -> p.shots.get(p.shots.size() - 1).tick <= earliest + 2
+-			&& last(p).target.wave >= room.wave - 1)
+-			.filter(p -> !(last(p).weapon == Weapon.BOW && last(p).rule == null
+-				&& choices.stream().anyMatch(f -> last(f).target.key == last(p).target.key && last(f).weapon == Weapon.PIPE
+-					&& last(f).rule != null && f.shots.get(f.shots.size() - 1).tick <= earliest + 2)))
+-			.collect(Collectors.toList());
+-		if (fresh.isEmpty() || fresh.stream().mapToInt(p -> p.shots.get(p.shots.size() - 1).tick).min().getAsInt() <= earliest) return;
+-		// Only the newly permitted one/two-tick wait changes here. Existing ready
+-		// survivor/cluster choices and protected work retain their normal priorities.
++	private void preferFreshWithinTwo(List<Plan> choices, Room room, int tick, int ready)
++	{
++		if (choices.get(0).shots.size() != 1) return;
++		int earliest = choices.stream().mapToInt(p -> p.shots.get(0).tick).min().getAsInt();
++		if (choices.stream().noneMatch(p -> p.shots.get(0).tick == earliest && ordinaryOldUnhit(last(p), room))) return;
++		if (choices.stream().anyMatch(p -> p.shots.get(0).tick == earliest && last(p).target.wave < room.wave - 1
++			&& !ordinaryOldUnhit(last(p), room))) return;
++		if (choices.stream().anyMatch(p -> p.shots.get(0).tick <= earliest + 2 && last(p).target.wave < room.wave - 1
++			&& (last(p).rule != null || last(p).target.big))) return;
++		List<Plan> fresh = choices.stream().filter(p -> p.shots.get(0).tick <= earliest + 2 && last(p).target.wave >= room.wave - 1)
++			.filter(p -> !(last(p).weapon == Weapon.BOW && last(p).rule == null && choices.stream().anyMatch(f ->
++				last(f).target.key == last(p).target.key && last(f).weapon == Weapon.PIPE && last(f).rule != null
++					&& f.shots.get(0).tick <= earliest + 2))).collect(Collectors.toList());
++		if (fresh.isEmpty()) return;
++		boolean wait = fresh.stream().mapToInt(p -> p.shots.get(0).tick).min().getAsInt() > earliest;
++		if (wait && tick >= ready && readyFreshWaitTicks >= 2) return;
+ 		choices.retainAll(fresh);
++		if (wait) choices.forEach(p -> p.freshWait = true);
++	}
++
++	private boolean ordinaryOldUnhit(Decision decision, Room room)
++	{
++		Crab c = decision.target;
++		return decision.rule == null && !c.big && room.wave - c.wave >= 4 && !strategy.opened(c) && !c.partnerNulled;
++	}
++
++	private void spendFreshWait(int tick)
++	{
++		if (lastFreshWaitTick != tick) { readyFreshWaitTicks++; lastFreshWaitTick = tick; }
++	}
++
++	private void observeDyingParents(Room room, int tick)
++	{
++		dyingSince.keySet().removeIf(key -> room.crabs.stream().noneMatch(c -> c.key == key));
++		for (Crab c : room.crabs) if (c.big && c.hp <= 0 && c.dying) dyingSince.putIfAbsent(c.key, tick);
++	}
++
++	private static final class Opportunity
++	{
++		final int due;
++		final Weapon weapon;
++		final Tile tile;
++		Opportunity(int due, Weapon weapon, Tile tile) { this.due = due; this.weapon = weapon; this.tile = tile; }
++	}
++
++	private Opportunity opportunity(Room room, int tick, int available)
++	{
++		Opportunity best = null;
++		if (room.wave > 0 && room.wave < 19 && room.spawns[room.wave] >= 0)
++		{
++			int spawn = room.spawns[room.wave] + RangerStrategy.naturalDelayAfter(room.wave);
++			if (spawn <= tick) spawn += ((tick - spawn) / 4 + 1) * 4;
++			for (Rule rule : RangerStrategy.RULES)
++			{
++				int due = spawn + rule.first;
++				if (rule.wave != room.wave + 1 || rule.first > 2 || rule.weapon == Weapon.CHIN && rule.wave != 10
++					|| due < available || due > available + 2) continue;
++				Tile source = rule.lane == Lane.WEST ? RangerStrategy.tile(3281, rule.slot == 'N' ? 4249 : 4248)
++					: rule.lane == Lane.SOUTH ? RangerStrategy.tile(rule.slot == 'E' ? 3296 : 3295, 4233)
++					: RangerStrategy.tile(rule.big ? 3309 : 3310, rule.slot == 'N' ? 4249 : 4248);
++				Tile target = org.localscape.nylocas.AttackTiming.position(source, rule.lane.ordinal(), 0, rule.first + 1);
++				Tile stage = attackTile(room.player, target, rule.big, rule.weapon.range);
++				int travel = Math.max(0, (room.player.distanceTo(stage) + 1) / 2 - 1);
++				if (tick + travel <= due && (best == null || due < best.due)) best = new Opportunity(due, rule.weapon, stage);
++			}
++		}
++		for (Crab parent : room.crabs)
++		{
++			if (!parent.big) continue;
++			int due = parent.hp <= 0 && parent.dying && dyingSince.containsKey(parent.key) ? dyingSince.get(parent.key) + 7
++				: parent.hp > 0 && tick - parent.born >= 52 ? parent.born + 55 : -1;
++			if (due < available || due > available + 2) continue;
++			Tile stage = attackTile(room.player, parent.point, true, 1);
++			int travel = Math.max(0, (room.player.distanceTo(stage) + 1) / 2 - 1);
++			if (tick + travel <= due && (best == null || due < best.due)) best = new Opportunity(due, Weapon.PIPE, stage);
++		}
++		return best;
+ 	}
+ 
+ 	private int openingOrder(Decision decision)
+@@ -221,6 +299,7 @@
+ 					if (reservation != null && !reservation.rule.name.equals(action.rule)
+ 						&& at + Math.max(weapon.cooldown, (destination.distanceTo(reservation.rule.stage) + 1) / 2) > reservation.due) continue;
+ 					Plan next = new Plan(plan.hp.clone());
++					next.freshWait = plan.freshWait;
+ 					next.shots.addAll(plan.shots);
+ 					next.shots.add(new Shot(action, at, destination));
+ 					double gain = hard ? 10000 : 0;

@@ -50,11 +50,28 @@ def audit(directory, offset=None, timestamp_wave29=False):
                                last_seen={}, dimmed_at31=[], dimmed_primary_attacks=[])
                 trials.append(current)
                 spawns = {}
+                south30 = set()
+                assigned_parents = {}
+                counted_south_chin = False
             if current is None or fields[0] != 'NYLO_TRACE':
                 continue
             tick, role, wave = map(int, fields[1:4])
             if role == 0:
                 spawns.setdefault(wave, tick)
+                if wave in (23, 24, 25, 26, 29, 30) and tick == spawns[wave]:
+                    for raw in (fields[11] if len(fields) > 11 else '').split(';'):
+                        c = raw.split(',')
+                        if len(c) < 8 or c[1:3] != [str(wave), '0']:
+                            continue
+                        lane = 'W' if c[6] == '3281' else 'E' if c[6] in ('3309', '3310') else 'S' if c[7] == '4233' else ''
+                        if wave == 30 and c[4] == 'false' and lane == 'S' and c[6] in ('3295', '3296'):
+                            south30.add(int(c[0]))
+                        if c[4] == 'true' and lane:
+                            if (wave, lane) == (30, 'W'):
+                                assigned_parents[int(c[0])] = 0
+                            if (wave, lane) in {(23, 'S'), (24, 'W'), (24, 'E'), (24, 'S'),
+                                               (25, 'W'), (26, 'W'), (29, 'S'), (30, 'E')}:
+                                assigned_parents[int(c[0])] = 1
             if wave != 31:
                 continue
             current.setdefault('spawn31', tick)
@@ -76,8 +93,17 @@ def audit(directory, offset=None, timestamp_wave29=False):
             if fields[5] == 'true':
                 target = next((c for c in crabs if c['key'] == int(fields[8])), None)
                 if target and target['dimmed']:
+                    scheduled_chin = (not counted_south_chin and role == 0 and fields[7] == 'CHIN'
+                                      and fields[9] == 'South chin flicker 30'
+                                      and target['key'] in south30 and target['style'] == 'RANGE'
+                                      and target['age'] in (5, 6))
+                    if scheduled_chin:
+                        counted_south_chin = True
+                    assigned_recovery = (assigned_parents.get(target['key']) == role
+                        and (role == 1 or target['age'] >= 7 or counted_south_chin))
                     current['dimmed_primary_attacks'].append(dict(tick=tick, role=role,
-                        weapon=fields[7], target=target))
+                        weapon=fields[7], target=target, scheduled_south30_chin=scheduled_chin,
+                        assigned_parent_recovery=assigned_recovery))
             if role != 0:
                 continue
             living = [c for c in crabs if c['hp'] > 0 and not c['dying']]
@@ -98,12 +124,17 @@ def audit(directory, offset=None, timestamp_wave29=False):
 
     def stats(group):
         eligible = [t for t in group if t['status'] == 'completed' and t['stalls19'] == 0]
+        dimmed_primaries = [hit for t in group for hit in t['dimmed_primary_attacks']]
+        scheduled_chins = sum(hit['scheduled_south30_chin'] for hit in dimmed_primaries)
+        parent_recoveries = sum(hit['assigned_parent_recovery'] for hit in dimmed_primaries)
         return dict(trials=len(group), completed=sum(t['status'] == 'completed' for t in group),
                     eligible=len(eligible), wave19_failure_rooms=sum(t['stalls19'] > 0 for t in group),
                     reported_seconds=distribution(t['boss_ticks'] * .6 for t in eligible),
                     within_3m22=sum(t['status'] == 'completed' and t['boss_ticks'] * 3 <= 1010 for t in group),
                     expiry_status=dict(Counter(t['expiry_status'] for t in group)),
-                    dimmed_primary_attacks=sum(len(t['dimmed_primary_attacks']) for t in group),
+                    dimmed_primary_attacks=len(dimmed_primaries), scheduled_dimmed_south30_chins=scheduled_chins,
+                    assigned_dimmed_parent_attacks=parent_recoveries,
+                    other_dimmed_primary_attacks=len(dimmed_primaries) - scheduled_chins - parent_recoveries,
                     additional_time_dim_rooms=sum(any(c['additional_time_dim'] for c in t['dimmed_at31']) for t in group),
                     undimmed_expiry_rooms=sum(bool(t['undimmed_expiring_lifetimes']) for t in group),
                     dimmed_big_expiry_rooms=sum(bool(t['dimmed_expiring_big_lifetimes']) for t in group),

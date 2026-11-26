@@ -1,0 +1,190 @@
+{
+  "scope": "Focused review of the ranger opening and wave-30 south chin after the training checkpoint on 26 November 2026.",
+  "definitions": {
+    "opening": "Between the confirmed west and east bow launches, the ranger selects the bow throughout, advances east, and holds its starting north/south coordinate until it can approach the spawned east target. The attack interval comes from native primaries.",
+    "south_chin": "The original two smalls are identified on their birth tick at (3295,4233) and (3296,4233). Counts match the native black-chin primary to the two non-thrall ranger impacts with one attack ID and record applied damage, post-hit HP and NPC type. The command regressions additionally check the weapon on each applied hit."
+  },
+  "before": {
+    "cohorts": [
+      {
+        "directory": ".state/simulations/training-v5-20261126-final-east24-west18-200",
+        "rooms": 200,
+        "first_seed": 221387150085157,
+        "last_seed": 221387150085356,
+        "ranger_sha256": "c22eefcb3bfb3eeebe0023c502c6cc0cec6b9f174021fb8af682121ab3ece30e",
+        "server_log_sha256": "ecc25a629cf030fba65ec821251d5a8971d4f94a59acd583369558cdba5aed91"
+      },
+      {
+        "directory": ".state/simulations/training-v5-20261126-final-east24-west18-300",
+        "rooms": 300,
+        "first_seed": 232776541059851,
+        "last_seed": 232776541060150,
+        "ranger_sha256": "c22eefcb3bfb3eeebe0023c502c6cc0cec6b9f174021fb8af682121ab3ece30e",
+        "server_log_sha256": "bd0fc855faf1ea6c1c96cbfcd7934aa56290b07ec8ba5f827eb80da7adaef7a3"
+      }
+    ],
+    "rooms": 500,
+    "both_opening_bows": 500,
+    "eye_selected_between_bows": 446,
+    "bow_held_with_eastward_movement_before_east_shot": 0,
+    "east_shot_five_ticks_after_west": 394,
+    "south_chin": {
+      "pairs_observed": 500,
+      "thrown_age_five": 500,
+      "both_ranged_at_launch": 500,
+      "thrown_during_wave_31": 196,
+      "both_receive_same_ranger_attack_id": 500,
+      "both_positive_damage": 492,
+      "both_killed": 258,
+      "both_melee_at_impact": 500,
+      "both_impacts_three_ticks_after_launch": 500
+    }
+  },
+  "after": {
+    "cohorts": [
+      {
+        "directory": ".state/simulations/ranger-opening-south30-review/verified100",
+        "rooms": 100,
+        "first_seed": 224859062632575,
+        "last_seed": 224859062632674,
+        "ranger_sha256": "240bb1739171df44595a7f4ae15b732756f7a1cd06f5eddca0b82bcdfcadde3e",
+        "server_log_sha256": "ec97c0bda9595325a00ae7f962f005ccfc82d62815352956f33dd023f9ed5a95"
+      }
+    ],
+    "rooms": 100,
+    "both_opening_bows": 100,
+    "eye_selected_between_bows": 0,
+    "bow_held_with_eastward_movement_before_east_shot": 100,
+    "east_shot_five_ticks_after_west": 100,
+    "south_chin": {
+      "pairs_observed": 100,
+      "thrown_age_five": 100,
+      "both_ranged_at_launch": 100,
+      "thrown_during_wave_31": 31,
+      "both_receive_same_ranger_attack_id": 100,
+      "both_positive_damage": 99,
+      "both_killed": 52,
+      "both_melee_at_impact": 100,
+      "both_impacts_three_ticks_after_launch": 100,
+      "scheduled_dimmed_south30_chins": 1,
+      "other_dimmed_primaries": 0
+    },
+    "boss_spawn_seconds": {
+      "eligible": 99,
+      "wave19_failures": 1,
+      "mean": 194.30303030303028,
+      "p5": 187.2,
+      "p95": 201.6,
+      "all_rooms_by_3m22": 97,
+      "deaths": 0,
+      "timeouts": 0
+    },
+    "dimmed_case": [
+      {
+        "seed": 224859062632639,
+        "spawn28": 248,
+        "spawn29": 260,
+        "spawn31": 268,
+        "birth": 264,
+        "chin_tick": 269
+      }
+    ]
+  },
+  "historical_boundary_replay": {
+    "seed": 152274597635335,
+    "control": {
+      "directory": ".state/simulations/training-v5-20261126-split-transition-dinh-300",
+      "rooms": 300,
+      "first_seed": 152274597635126,
+      "last_seed": 152274597635425,
+      "ranger_sha256": "c22eefcb3bfb3eeebe0023c502c6cc0cec6b9f174021fb8af682121ab3ece30e",
+      "server_log_sha256": "0b8cd6566a77a810f27f2681f6893b1b67a5e65a0285c10465d4d80044b23599"
+    },
+    "corrected": {
+      "directory": ".state/simulations/ranger-opening-south30-review/boundary-release",
+      "rooms": 1,
+      "first_seed": 152274597635335,
+      "last_seed": 152274597635335,
+      "ranger_sha256": "8a1491e12eb9f8b31777bedae9c7b9a36ea4774c912d959ac9f6d70d545c39a2",
+      "server_log_sha256": "6b0adca7638bc223bae10d58f91b74f1fb13a0b39aafd6aac97cd9160856a924"
+    },
+    "fixture_and_native_adapter_match": true,
+    "policy_changes": [
+      "South chin through the dim cutoff and either original south small eligible as primary",
+      "Release the reservation if both original south smalls already have lethal pending damage."
+    ],
+    "spawn_ticks": {
+      "28": 240,
+      "29": 252,
+      "30": 256,
+      "31": 260
+    },
+    "dim_cutoff": 256,
+    "west_big_pipe_tick": 259,
+    "control_outcome": "Both originals still had all 8 HP when last observed at tick 307, age 51, before natural expiry.",
+    "corrected_outcome": {
+      "equip_and_step_to_center": 260,
+      "green_chin_launch": 261,
+      "applied_tick": 264,
+      "native_attack_id": 159,
+      "southwest_applied_damage": 8,
+      "southeast_applied_damage": 8,
+      "both_hp_after_hit": 0,
+      "scheduled_dimmed_chins": 1,
+      "other_dimmed_primaries": 0
+    },
+    "boss_ticks": {
+      "control": 336,
+      "corrected": 336
+    }
+  },
+  "command_verification": {
+    "commands": [
+      "::nylobot range",
+      "::nylobot spectate"
+    ],
+    "mode": "Local integration tests through real command handlers, bot input, game cycles and observer zone updates.",
+    "checks": [
+      "First two attacks use the worn Twisted bow on the west and east ranger, five ticks apart. Wave-1 movement after west keeps the bow equipped and proceeds east on the same row.",
+      "The original south pair are both ranged when the black-chin projectile to one of them appears in the ranger’s zone. The observer receives that zone’s enclosed update on the same cycle. Both original NPCs receive one attack ID from the ranger with black chinchompa as the hit weapon."
+    ]
+  },
+  "interim_before_releasing_two_covered_targets": {
+    "cohorts": [
+      {
+        "directory": ".state/simulations/ranger-opening-south30-review/final100",
+        "rooms": 100,
+        "first_seed": 7076676829844,
+        "last_seed": 7076676829943,
+        "ranger_sha256": "69d3bb3efd10af3a9505b27f5b913ae67613683a4f08526d08b78a00800dea73",
+        "server_log_sha256": "0af9b68a1d47b235a91c1bf23f3ce55111b167afcf81e8cbd3854e2f6b39b6d2"
+      }
+    ],
+    "rooms": 100,
+    "both_opening_bows": 100,
+    "eye_selected_between_bows": 0,
+    "bow_held_with_eastward_movement_before_east_shot": 100,
+    "east_shot_five_ticks_after_west": 100,
+    "south_chin": {
+      "pairs_observed": 100,
+      "thrown_age_five": 100,
+      "both_ranged_at_launch": 100,
+      "thrown_during_wave_31": 37,
+      "both_receive_same_ranger_attack_id": 100,
+      "both_positive_damage": 100,
+      "both_killed": 54,
+      "both_melee_at_impact": 100,
+      "both_impacts_three_ticks_after_launch": 100
+    },
+    "boss_spawn_seconds": {
+      "eligible": 98,
+      "wave19_failures": 2,
+      "mean": 194.35102040816327,
+      "p5": 187.2,
+      "p95": 204.0,
+      "all_rooms_by_3m22": 91,
+      "deaths": 0,
+      "timeouts": 0
+    }
+  }
+}

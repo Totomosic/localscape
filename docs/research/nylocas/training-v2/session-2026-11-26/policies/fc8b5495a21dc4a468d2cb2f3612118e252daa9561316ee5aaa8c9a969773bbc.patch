@@ -1,0 +1,25 @@
+--- a/org/localscape/nylocas/mage/MageStrategy.java
++++ b/org/localscape/nylocas/mage/MageStrategy.java
+@@ -251,6 +251,14 @@
+ 			int due = scythe12 < 0 ? s12 + 12 : scythe12 + 5;
+ 			result.add(new Window("12 west Dinh", due, due + 1, Weapon.DINH, 3293, 4249));
+ 		}
++		int s19 = spawn(room, 19, tick);
++		// Keep ordinary filler cooldown out of the brief first East19 magic opening.
++		if (s19 >= 0 && room.wave == 19 && room.rangerWest19PacketFeasible
++			&& room.crabs.stream().anyMatch(c -> c.wave == 19 && c.big && c.lane == Lane.EAST
++				&& !opened.contains(c.key) && eligible(room, c, tick))
++			&& room.crabs.stream().noneMatch(c -> c.wave == 19 && c.big && c.lane == Lane.WEST
++				&& c.partnerNulled && eligible(room, c, tick)))
++			result.add(new Window("East big 19", s19 + 3, s19 + 3, Weapon.EYE, 3296, 4248));
+ 		if (s21 >= 0 && room.wave < 29)
+ 		{
+ 			result.add(new Window("21 west barrage", s21, s21 + 3, Weapon.BARRAGE, 3290, 4249));
+@@ -303,6 +311,7 @@
+ 			{
+ 				switch (window.name)
+ 				{
++					case "East big 19": return c.wave == 19 && c.lane == Lane.EAST && c.big;
+ 					case "South big 29": return c.wave == 29 && c.lane == Lane.SOUTH && c.big;
+ 					case "East barrage 11": return c.wave == 11 && c.lane == Lane.EAST && !c.big;
+ 					case "12 east scythe": return c.wave == 12 && c.lane == Lane.EAST && !c.big;

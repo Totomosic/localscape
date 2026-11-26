@@ -1,0 +1,43 @@
+--- a/RangerPreCapPlanner.java
++++ b/RangerPreCapPlanner.java
+@@ -270,7 +270,8 @@
+ 		if (weapon == Weapon.BOW && !crab.big && crab.wave > 2) return false;
+ 		if (crab.big)
+ 		{
+-			if (crab.wave == 18) return weapon.style == Style.RANGE && weapon != Weapon.CHIN
++			if (crab.wave == 18) return !deferWest18ForSouthExpiry(room, crab, crab.born + age)
++				&& weapon.style == Style.RANGE && weapon != Weapon.CHIN
+ 				&& RangerStrategy.wave18Available(crab, room, crab.born + age);
+ 			boolean clawAssignment = crab.wave == 6 && crab.lane == Lane.EAST && age >= 9;
+ 			return (clawAssignment || strategy.assignedBig(crab, room, age))
+@@ -280,6 +281,30 @@
+ 		// No cross-room melee chasing; melee is local fallback work.
+ 		if (weapon == Weapon.CLAWS) return crab.distance(room.player) <= 1 || rule(crab, weapon, age) != null;
+ 		return true;
++	}
++
++	private boolean deferWest18ForSouthExpiry(Room room, Crab crab, int at)
++	{
++		if (room.wave < 18 || room.wave > 19 || room.spawns[18] < 0 || crab.lane != Lane.WEST
++			|| crab.hp != 16 || crab.pendingDamage != 0 || strategy.opened(crab)) return false;
++		int earliest20 = room.spawns[18] + 20;
++		boolean expiryRisk = room.crabs.stream().anyMatch(c -> c.big && c.wave == 15 && c.lane == Lane.SOUTH
++			&& c.hp > 0 && !c.dying && c.pendingDamage >= 0 && c.pendingDamage < c.hp
++			&& c.born + 55 <= earliest20);
++		if (!expiryRisk) return false;
++		int release = room.spawns[19] >= 0 ? room.spawns[19] + 6 : room.spawns[18] + 14;
++		if (at >= release || room.ready > release) return false;
++		// A real failed18 admission can require this parent now. Do not turn timing into a cap deadlock.
++		if (room.wave == 18 && at >= room.spawns[18] + 8 && room.crabs.size() >= 12) return false;
++		List<Crab> parents = room.crabs.stream().filter(c -> c.big && c.wave == 18 && c.hp > 0 && !c.dying)
++			.collect(Collectors.toList());
++		if (parents.size() != 3 || parents.stream().anyMatch(c -> c.nulled || c.claimed(at)
++			|| c.awaitingHit(at) || c.pendingDamage < 0 || strategy.opened(c))) return false;
++		int shots = parents.stream().mapToInt(c -> Math.max(1, (c.hp - c.pendingDamage + 7) / 8)).sum();
++		int deadline = parents.stream().mapToInt(c -> c.born + 26).min().getAsInt();
++		// Six ordinary eight-HP work units still fit from19+6 through the range window.
++		// This is a finite work budget, not guaranteed normal-roll damage or a kill promise.
++		return release + (shots - 1) * Weapon.PIPE.cooldown + 2 <= deadline;
+ 	}
+ 
+ 	private Rule rule(Crab crab, Weapon weapon, int age)

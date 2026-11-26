@@ -1,0 +1,41 @@
+--- a/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ b/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -115,7 +115,9 @@
+ 		if (choices.stream().anyMatch(p -> openingBow(last(p))))
+ 			choices.removeIf(p -> !openingBow(last(p)));
+ 		int serviceTick = Math.max(tick, ready);
+-		if (RangerStrategy.wave18Released(room, serviceTick) && choices.stream()
++		if (choices.stream().anyMatch(p -> capClearanceSmall(p, room)))
++			choices.removeIf(p -> !capClearanceSmall(p, room));
++		else if (RangerStrategy.wave18Released(room, serviceTick) && choices.stream()
+ 			.anyMatch(p -> last(p).target.big && last(p).target.wave == 18))
+ 			choices.removeIf(p -> !last(p).target.big || last(p).target.wave != 18);
+ 		int deadline = choices.stream().mapToInt(p -> serviceDeadline(p, room, serviceTick)).min().getAsInt();
+@@ -124,6 +126,27 @@
+ 		int lane = choices.stream().mapToInt(p -> RangerStrategy.transitionLane(last(p).target)).min().getAsInt();
+ 		if (lane != Integer.MAX_VALUE) choices.removeIf(p -> RangerStrategy.transitionLane(last(p).target) != Integer.MAX_VALUE
+ 			&& RangerStrategy.transitionLane(last(p).target) > lane);
++	}
++
++	private boolean capClearanceSmall(Plan plan, Room room)
++	{
++		Shot shot = plan.shots.get(plan.shots.size() - 1);
++		Crab small = shot.decision.target;
++		if (room.wave != 19 || room.spawns[19] < 0 || room.spawns[18] < 0 || room.crabs.size() < 11
++			|| shot.tick < room.spawns[19] + 5 || shot.tick > room.spawns[19] + 8
++			|| small.big || small.born + 49 <= room.spawns[19] + 12
++			|| shot.decision.weapon.style == Style.MELEE || small.pendingDamage < 0
++			|| small.pendingDamage >= small.hp) return false;
++		List<Crab> parents = room.crabs.stream().filter(c -> c.big && c.wave == 18
++			&& c.hp > 0 && !c.dying && !c.nulled && !c.claimed(shot.tick) && !c.awaitingHit(shot.tick))
++			.collect(Collectors.toList());
++		// Real parent survivor feedback keeps its existing priority. Defer unopened work only.
++		if (parents.isEmpty() || parents.stream().anyMatch(strategy::opened)) return false;
++		int shots = parents.stream().mapToInt(c -> Math.max(1, (c.hp - Math.max(0, c.pendingDamage) + 7) / 8)).sum();
++		int deadline = parents.stream().mapToInt(c -> c.born + 26).min().getAsInt();
++		// This is a service budget using the planner's existing eight-HP work estimate,
++		// not a promise that a normal roll kills. Keep time for all remaining parents.
++		return shot.tick + shot.decision.weapon.cooldown + (shots - 1) * Weapon.PIPE.cooldown + 2 <= deadline;
+ 	}
+ 
+ 	private int openingOrder(Decision decision)

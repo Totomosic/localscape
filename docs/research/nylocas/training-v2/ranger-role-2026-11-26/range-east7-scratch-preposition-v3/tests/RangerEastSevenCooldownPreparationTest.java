@@ -1,0 +1,11 @@
+package org.localscape.nylocas.ranger;
+import org.junit.Test;import org.localscape.nylocas.ranger.RangerStrategy.*;import static org.junit.Assert.*;
+public class RangerEastSevenCooldownPreparationTest {
+ private Room room(){Room r=new Room();r.wave=7;r.spawns[7]=40;r.ready=49;r.player=RangerStrategy.tile(3300,4247);Crab c=new Crab(27,27,40,7,Lane.EAST,'N',false,Style.MELEE,RangerStrategy.tile(3304,4249));c.pendingDamage=0;r.crabs.add(c);return r;}
+ @Test public void thirdCooldownTickStagesButDoesNotAdvertiseEarly(){Room r=room();r.crabs.get(0).point=RangerStrategy.tile(3303,4249);RangerStrategy s=new RangerStrategy();assertEquals(-1,s.east7ScratchDue(r,46));Decision d=s.decide(r,46);assertNull(d.target);assertEquals("Prepare East7 melee scratch",d.reason);assertTrue(d.tile.getY()>r.player.getY());}
+ @Test public void twoCooldownTicksProveOnlyAReachablePredictedStand(){Room r=room();r.player=RangerStrategy.tile(3300,4248);r.crabs.get(0).point=RangerStrategy.tile(3302,4249);RangerStrategy s=new RangerStrategy();assertEquals(49,s.east7ScratchDue(r,47));Decision d=s.decide(r,47);assertNull(d.target);assertEquals(Weapon.CLAWS,d.weapon);}
+ @Test public void readyScratchStillRequiresActualAdjacency(){Room r=room();r.crabs.get(0).point=RangerStrategy.tile(3301,4249);assertEquals(-1,new RangerStrategy().east7ScratchDue(r,49));r.player=RangerStrategy.tile(3300,4248);assertEquals(49,new RangerStrategy().east7ScratchDue(r,49));}
+ @Test public void fourTileChaseIsNeverAdvertisedOrForced(){Room r=room();r.player=RangerStrategy.tile(3298,4248);assertEquals(-1,new RangerStrategy().east7ScratchDue(r,47));assertNotEquals("Prepare East7 melee scratch",new RangerStrategy().decide(r,46).reason);}
+ @Test public void anActualSurvivorBlocksEarlyPreparation(){Room r=room();r.crabs.get(0).point=RangerStrategy.tile(3303,4249);Crab old=new Crab(22,22,32,5,Lane.SPLIT,(char)0,false,Style.RANGE,r.player);old.pendingDamage=0;old.hp=3;r.crabs.add(old);RangerStrategy s=new RangerStrategy();s.attacked(new Decision(old,Weapon.PIPE,r.player,false,null,"survivor"),45);assertNotEquals("Prepare East7 melee scratch",s.decide(r,46).reason);}
+ @Test public void fourCooldownTicksDoNotDivert(){Room r=room();r.ready=50;assertNotEquals("Prepare East7 melee scratch",new RangerStrategy().decide(r,46).reason);}
+}

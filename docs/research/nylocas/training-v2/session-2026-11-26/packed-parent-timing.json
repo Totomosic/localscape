@@ -1,0 +1,2545 @@
+{
+  "scope": "26 November 2026 evening, native packed Nylocas room. Two role policies and the controller used by the companion commands.",
+  "method": {
+    "tick_seconds": 0.6,
+    "target_seconds": 196.8,
+    "target_ticks": 328,
+    "score": "Nearest-rank P5 and P95 and arithmetic mean among completed rooms with known zero last-wave-19 population-cap stalls. All trial statuses count toward the deadline rate.",
+    "pairing": "The 250-room retained run repeats the 250 starting control seeds. The 400-room and 500-room holdouts drew independent starting seeds after freezing the policy and used disjoint ranges.",
+    "coverage": "Original NPC keys, actual launches, native hit queues and zero HP/death-queue observations. An original east-15 small is covered once dying, at zero HP or with a lethal rolled hit in flight. Post-coverage wait is the time to the first primary on that role\u2019s parent.",
+    "south_chin": "The first green tick is birth+5. Both original NPCs must receive the same native attack ID three ticks after launch. A zero-damage result is included as an impact.",
+    "entry_to_wave20": "Ticks from the simulator room-entry clock to wave-20 spawn",
+    "population": "The split frame contains both newborns on the original parent\u2019s two tiles. Count every physically present nylo, including dying bodies. A 12-body split frame measures crowding whether or not an admission was due on that tick.",
+    "fixture": {
+      "base_stats": 99,
+      "agility": 99,
+      "starting_run_energy": 10000,
+      "starting_hitpoints": 99,
+      "prayer_potions_four_dose_per_player": 4,
+      "prayer_threshold": 25,
+      "special_energy": "normal regeneration with Lightbearer",
+      "inventory_input_bridge": "HeldOpScript; shared supply-fixture contract verified",
+      "prepot": true,
+      "server_boosts": true,
+      "native_utilities": true,
+      "queued_damage_forecast": true,
+      "extra_dinh_25": false,
+      "defer_mage_thrall_renewal": false,
+      "manta_rays_once_per_player": 5,
+      "food_hp_threshold": 65,
+      "damage": "randomized",
+      "gear": "role loadouts from mage-strategy.md and range-strategy.md; see adapter"
+    }
+  },
+  "packed_control": {
+    "rooms": 250,
+    "completed": 250,
+    "eligible": 244,
+    "wave19_failures": 6,
+    "mean_seconds": 195.777,
+    "p5_ticks": 316,
+    "p95_ticks": 340,
+    "p5_seconds": 189.6,
+    "p95_seconds": 204.0,
+    "rooms_by_328_ticks": 166,
+    "rooms_by_3m22": 233,
+    "eligible_tick_histogram": {
+      "308": 2,
+      "312": 8,
+      "316": 20,
+      "320": 51,
+      "324": 47,
+      "328": 36,
+      "332": 41,
+      "336": 24,
+      "340": 6,
+      "344": 5,
+      "348": 4
+    },
+    "statuses": {
+      "completed": 250
+    },
+    "pre_cap_stalls_mean": 2.54,
+    "pre_cap_at_most_one": 59,
+    "total_retries_by_last_wave": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 2,
+      "7": 2,
+      "8": 5,
+      "9": 0,
+      "10": 110,
+      "11": 50,
+      "12": 107,
+      "13": 60,
+      "14": 30,
+      "15": 94,
+      "16": 128,
+      "17": 20,
+      "18": 2,
+      "19": 25,
+      "20": 0,
+      "21": 82,
+      "22": 0,
+      "23": 1,
+      "24": 4,
+      "25": 5,
+      "26": 6,
+      "27": 13,
+      "28": 596,
+      "29": 503,
+      "30": 342
+    },
+    "per_cohort": {
+      "control-250": {
+        "first_seed": 203784395992168,
+        "last_seed": 203784395992417,
+        "trials_csv_sha256": "e9e28026256af8b66e20ea7b308fabf6b82fb50c48274d562e3f5a80e94f5bf1",
+        "trace_sha256": "dfa49803695030757f3eb89be33957b47c670781cb98ebabbfbb55e9358ce9ca",
+        "rooms": 250,
+        "completed": 250,
+        "eligible": 244,
+        "wave19_failures": 6,
+        "mean_seconds": 195.777,
+        "p5_ticks": 316,
+        "p95_ticks": 340,
+        "p5_seconds": 189.6,
+        "p95_seconds": 204.0,
+        "rooms_by_328_ticks": 166,
+        "rooms_by_3m22": 233,
+        "eligible_tick_histogram": {
+          "308": 2,
+          "312": 8,
+          "316": 20,
+          "320": 51,
+          "324": 47,
+          "328": 36,
+          "332": 41,
+          "336": 24,
+          "340": 6,
+          "344": 5,
+          "348": 4
+        }
+      }
+    },
+    "source_hashes": {
+      "policy_sha256": {
+        "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+        "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+        "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+        "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+        "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+        "org/localscape/nylocas/mage/MageStrategy.java": "34da6bad4b3be03a75e9f28d1dd37e1ed317a51b12bc34613f2e37c96aec16f3",
+        "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+        "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "a519280081b8e9cd6877b8a942c9a9d414437251dc6a85533cbbb8965f4fb073",
+        "org/localscape/nylocas/ranger/RangerStrategy.java": "896eed8f83fe007439dfa32319951553c6c934421b3ed655f7d29e3bec607182"
+      },
+      "adapter_sha256": {
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasServerAgents.kt": "9aaacf4e2f517cba97d7f6a196ece73004ce14318de15133f2b7315811399bb2",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationAreas.kt": "d37dacf487cfbabbdcb9ebd6b05b2c1d702040c2b6c16be727a16fb269d95cdc",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationStalls.kt": "329a5e818dc2468b408f1a60e4038845a06e20b700611eb9c456f928d86e0149",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationSupplies.kt": "c8dfa7b030428845b720ee3f682ad01c1cc85011c6ec8f0868beb5068e18cc41",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationTest.kt": "ccc8e3db8876263ca98611b217d7255cfa5b7011066555f9097314971a3a70e4",
+        "api/stats-plugin/src/main/kotlin/org/rsmod/api/stats/plugin/StatRegenScript.kt": "2ea612b185d3052ec9e80e0abb98bde3509e9ddf8220bd7f17a9dcdd22ed33c9",
+        "api/testing/src/main/kotlin/org/rsmod/api/testing/scope/GameTestScope.kt": "521d83fff56aba2b6cc8293996467dec80f767537d366ed9cb7e5d44bede6854",
+        "content/other/login/src/main/kotlin/org/rsmod/content/other/login/LoginScript.kt": "ed82d01a241076816811ea3208a8792ee8c3518d1232120e3e22e5a35985a99f",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotClient.kt": "9ddb23023dde2cc1e68fde50393ec78261ee98a35bb7a5e28aff4a4037dee507",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotController.kt": "55eb2566c6c3b6d87b6f220269145b66c95e1688162a61dab48a50c8412657d8",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotGroupInputs.kt": "75c1cdec5adc9916bab747ab6d9886274339ce8f8a6196471f27da60c1cf413f",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotInputs.kt": "95146bf352cf71037add4d007556f8c49758b9910959cb3d71316671cb311908",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotService.kt": "39060c587fb27b547a99f9a52c2c239ffff5400a07a38765a84551105e6e5421",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotUtilities.kt": "ac81420eac2aa8e7c27036d12fda35a7e0ccc7cf01da90dcfe489298e61fb669",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotUtilitySupplies.kt": "937de43b61928fda25e638630dabe5dabc22c28826db5704ceeb5bfde916d6f2",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasCombatIdle.kt": "ba19211218d4ac9cc21c623ae91d79cfe9cac43e55f6313a36850f531994413f"
+      }
+    },
+    "packet_counts": {
+      "completed": 250,
+      "east13_combat_deaths": 250,
+      "east13_after_pair": 93,
+      "east13_by_two_ticks_after_pair": 51,
+      "east14_combat_deaths": 250,
+      "east14_after_pair": 0,
+      "east14_by_two_ticks_after_pair": 0,
+      "west8_combat_deaths": 250,
+      "west8_birth_attack": 6,
+      "west8_first_attack_lethal_roll": 138,
+      "west5_combat_deaths": 250,
+      "west5_pipe_at_plus2": 0,
+      "west26_combat_deaths": 245,
+      "south25_combat_deaths": 240,
+      "south27_combat_deaths": 246,
+      "south29_combat_deaths": 240,
+      "opening_west_to_east_in_5": 250,
+      "West chin 10": 250,
+      "East chin 10": 250,
+      "South chin 10": 250,
+      "East barrage 11": 250,
+      "12 east scythe": 250,
+      "12 west Dinh": 250,
+      "21 west barrage": 250,
+      "22 south Dinh": 250,
+      "26 Dinh on 28": 237,
+      "West big 24": 225,
+      "south30_named_black_chin": 250,
+      "south30_first_green": 250,
+      "south30_roll_both": 248,
+      "south30_impact_both": 250,
+      "rooms_with_wave1_melee_primary": 0,
+      "rooms_with_wave1_melee_roll": 0,
+      "rooms_with_wave1_melee_positive_damage": 0
+    },
+    "physical_timing_counts": {
+      "rooms": 250,
+      "west8_eye_at_birth": 6,
+      "west8_uncovered_when_eye_ready": 193,
+      "west8_retried_on_that_tick": 38,
+      "west10_chin_on_spawn": 210,
+      "east15_north_opened_by_mage": 20,
+      "south30_both_positive": 248,
+      "south30_both_zero_hp": 132,
+      "south30_thrown_during_actual31": 90,
+      "south30_thrown_on_dimmed_pair": 0,
+      "south30_one_tick_food_deferrals": 0
+    },
+    "parent_timing_histograms": {
+      "east13_first_attack_age": {
+        "29": 74,
+        "30": 27,
+        "31": 80,
+        "32": 66,
+        "33": 3
+      },
+      "east13_after_pair_ticks": {
+        "-28": 2,
+        "-27": 1,
+        "-24": 3,
+        "-23": 3,
+        "-22": 3,
+        "-21": 3,
+        "-20": 2,
+        "-19": 3,
+        "-18": 3,
+        "-17": 6,
+        "-16": 5,
+        "-15": 8,
+        "-14": 7,
+        "-13": 11,
+        "-12": 2,
+        "-11": 5,
+        "-10": 4,
+        "-9": 3,
+        "-8": 4,
+        "-7": 4,
+        "-6": 10,
+        "-5": 6,
+        "-4": 10,
+        "-3": 12,
+        "-2": 23,
+        "-1": 14,
+        "0": 22,
+        "1": 15,
+        "2": 14,
+        "3": 18,
+        "4": 9,
+        "5": 11,
+        "6": 4
+      },
+      "east14_first_attack_age": {
+        "8": 3,
+        "10": 101,
+        "11": 93,
+        "12": 53
+      },
+      "east14_after_pair_ticks": {
+        "-36": 1,
+        "-35": 2,
+        "-34": 2,
+        "-33": 3,
+        "-32": 3,
+        "-31": 3,
+        "-30": 5,
+        "-29": 2,
+        "-28": 6,
+        "-27": 8,
+        "-26": 7,
+        "-25": 11,
+        "-24": 4,
+        "-23": 2,
+        "-22": 8,
+        "-21": 7,
+        "-20": 2,
+        "-19": 6,
+        "-18": 5,
+        "-17": 2,
+        "-16": 12,
+        "-15": 5,
+        "-14": 11,
+        "-13": 12,
+        "-12": 19,
+        "-11": 24,
+        "-10": 17,
+        "-9": 21,
+        "-8": 27,
+        "-7": 5,
+        "-6": 8
+      },
+      "west8_first_attack_age": {
+        "0": 6,
+        "1": 71,
+        "2": 21,
+        "3": 34,
+        "4": 50,
+        "5": 33,
+        "6": 27,
+        "7": 7,
+        "8": 1
+      },
+      "west5_first_attack_age": {
+        "5": 117,
+        "6": 133
+      },
+      "west26_first_attack_age": {
+        "0": 5,
+        "1": 32,
+        "2": 51,
+        "3": 18,
+        "4": 43,
+        "5": 32,
+        "6": 17,
+        "7": 15,
+        "8": 6,
+        "9": 3,
+        "10": 6,
+        "11": 3,
+        "12": 3,
+        "13": 3,
+        "14": 2,
+        "15": 4,
+        "16": 1,
+        "23": 1,
+        "25": 1
+      },
+      "south25_first_attack_age": {
+        "3": 7,
+        "4": 14,
+        "5": 25,
+        "6": 41,
+        "7": 31,
+        "8": 27,
+        "9": 19,
+        "10": 7,
+        "11": 7,
+        "12": 7,
+        "13": 14,
+        "14": 10,
+        "15": 7,
+        "16": 10,
+        "17": 2,
+        "21": 4,
+        "23": 5,
+        "25": 1,
+        "29": 1,
+        "31": 1,
+        "35": 1,
+        "36": 1
+      },
+      "south27_first_attack_age": {
+        "7": 249,
+        "9": 1
+      },
+      "south29_first_attack_age": {
+        "7": 223,
+        "8": 3,
+        "9": 24
+      }
+    },
+    "physical_timing_histograms": {
+      "west8_ticks_to_zero_hp": {
+        "4": 2,
+        "5": 42,
+        "6": 16,
+        "7": 23,
+        "8": 62,
+        "9": 21,
+        "10": 46,
+        "11": 12,
+        "12": 13,
+        "13": 5,
+        "14": 4,
+        "15": 2,
+        "17": 1,
+        "18": 1
+      },
+      "east15_south_first_attack_age": {
+        "7": 3,
+        "8": 39,
+        "9": 45,
+        "10": 30,
+        "11": 17,
+        "12": 18,
+        "13": 35,
+        "14": 16,
+        "15": 3,
+        "16": 4,
+        "17": 2,
+        "20": 1,
+        "21": 1,
+        "23": 2,
+        "24": 2,
+        "25": 4,
+        "26": 3,
+        "27": 3,
+        "28": 2,
+        "29": 1,
+        "30": 2,
+        "33": 1
+      }
+    },
+    "mean_ticks_by_eligible_finish": {
+      "eligible_by_deadline": {
+        "entry_to_wave20": 160.0732,
+        "wave20_to_wave31": 107.7073,
+        "wave31_to_boss": 54.0976,
+        "pre_cap_stalls": 2.0183,
+        "rooms": 164
+      },
+      "eligible_past_deadline": {
+        "entry_to_wave20": 165.8,
+        "wave20_to_wave31": 111.45,
+        "wave31_to_boss": 58.1,
+        "pre_cap_stalls": 3.45,
+        "rooms": 80
+      }
+    },
+    "original_parent_expiries": {},
+    "split_occupancy": {
+      "counts": {
+        "rooms": 250,
+        "parents_removed_within_two_ticks": 7,
+        "parents_removed_together": 1
+      },
+      "parents": {
+        "east14": {
+          "rooms": 250,
+          "combat_death_before_removal": 250,
+          "both_newborn_tiles_observed": 250,
+          "population_before_split_total": 3000,
+          "population_on_split_frame_total": 3240,
+          "at_or_above_12_before_split": 168,
+          "at_or_above_12_on_split_frame": 232
+        },
+        "east13": {
+          "rooms": 250,
+          "combat_death_before_removal": 250,
+          "both_newborn_tiles_observed": 250,
+          "population_before_split_total": 2924,
+          "population_on_split_frame_total": 3065,
+          "at_or_above_12_before_split": 137,
+          "at_or_above_12_on_split_frame": 177
+        }
+      },
+      "tick_separation": {
+        "0": 1,
+        "1": 1,
+        "2": 5,
+        "3": 11,
+        "4": 12,
+        "5": 15,
+        "6": 24,
+        "7": 28,
+        "8": 32,
+        "9": 22,
+        "10": 36,
+        "11": 31,
+        "12": 14,
+        "13": 4,
+        "14": 3,
+        "15": 3,
+        "16": 7,
+        "18": 1
+      }
+    },
+    "late_parent_combat_deaths": {
+      "west24": 250,
+      "south24": 250,
+      "west25": 250,
+      "east24": 249,
+      "west26": 245,
+      "south29": 240
+    },
+    "late_parent_expiries": [
+      {
+        "seed": 203784395992173,
+        "parent": "west26",
+        "birth_tick": 240,
+        "last_observed_tick": 294,
+        "last_hp": 4,
+        "actual_primary_ticks": [
+          253,
+          256,
+          271
+        ],
+        "mage_first_null_tick": 261
+      },
+      {
+        "seed": 203784395992181,
+        "parent": "south29",
+        "birth_tick": 260,
+        "last_observed_tick": 314,
+        "last_hp": 4,
+        "actual_primary_ticks": [
+          267
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992189,
+        "parent": "south29",
+        "birth_tick": 256,
+        "last_observed_tick": 310,
+        "last_hp": 2,
+        "actual_primary_ticks": [
+          263
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992198,
+        "parent": "south29",
+        "birth_tick": 264,
+        "last_observed_tick": 318,
+        "last_hp": 2,
+        "actual_primary_ticks": [
+          271,
+          276
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992215,
+        "parent": "south29",
+        "birth_tick": 256,
+        "last_observed_tick": 310,
+        "last_hp": 2,
+        "actual_primary_ticks": [
+          263
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992222,
+        "parent": "south29",
+        "birth_tick": 240,
+        "last_observed_tick": 294,
+        "last_hp": 5,
+        "actual_primary_ticks": [
+          247
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992233,
+        "parent": "south29",
+        "birth_tick": 256,
+        "last_observed_tick": 310,
+        "last_hp": 12,
+        "actual_primary_ticks": [
+          263
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992243,
+        "parent": "south29",
+        "birth_tick": 260,
+        "last_observed_tick": 314,
+        "last_hp": 7,
+        "actual_primary_ticks": [
+          267
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992309,
+        "parent": "west26",
+        "birth_tick": 220,
+        "last_observed_tick": 274,
+        "last_hp": 1,
+        "actual_primary_ticks": [
+          256,
+          263
+        ],
+        "mage_first_null_tick": 243
+      },
+      {
+        "seed": 203784395992321,
+        "parent": "west26",
+        "birth_tick": 224,
+        "last_observed_tick": 278,
+        "last_hp": 15,
+        "actual_primary_ticks": [
+          240
+        ],
+        "mage_first_null_tick": 245
+      },
+      {
+        "seed": 203784395992332,
+        "parent": "south29",
+        "birth_tick": 252,
+        "last_observed_tick": 306,
+        "last_hp": 9,
+        "actual_primary_ticks": [
+          259
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992335,
+        "parent": "east24",
+        "birth_tick": 196,
+        "last_observed_tick": 250,
+        "last_hp": 7,
+        "actual_primary_ticks": [
+          224
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992347,
+        "parent": "west26",
+        "birth_tick": 224,
+        "last_observed_tick": 278,
+        "last_hp": 16,
+        "actual_primary_ticks": [],
+        "mage_first_null_tick": 247
+      },
+      {
+        "seed": 203784395992347,
+        "parent": "south29",
+        "birth_tick": 252,
+        "last_observed_tick": 306,
+        "last_hp": 14,
+        "actual_primary_ticks": [
+          259
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992351,
+        "parent": "south29",
+        "birth_tick": 252,
+        "last_observed_tick": 306,
+        "last_hp": 2,
+        "actual_primary_ticks": [
+          259
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992414,
+        "parent": "west26",
+        "birth_tick": 224,
+        "last_observed_tick": 278,
+        "last_hp": 16,
+        "actual_primary_ticks": [],
+        "mage_first_null_tick": 245
+      }
+    ],
+    "precap_freshness": {
+      "roles": [
+        "ranger",
+        "mage"
+      ],
+      "counts": {
+        "role1_fresh_ready_wait_frames": 76,
+        "role0_primary_on_age_zero_to_two": 2797,
+        "role1_primary_on_age_zero_to_two": 1725,
+        "role0_ordinary_old_small_requests": 186,
+        "role1_ordinary_old_small_requests": 92,
+        "role0_old_small_with_observed_birth_next_two": 75,
+        "role0_fresh_cooldown_stage_frames": 26,
+        "role0_fresh_ready_wait_frames": 18,
+        "role1_fresh_cooldown_stage_frames": 74,
+        "role1_old_small_with_observed_birth_next_two": 9
+      },
+      "west6_first_attack_age": {
+        "0": {
+          "none": 172,
+          "3": 32,
+          "8": 10,
+          "1": 1,
+          "4": 14,
+          "2": 15,
+          "7": 4,
+          "11": 1,
+          "9": 1
+        },
+        "1": {
+          "14": 3,
+          "0": 10,
+          "2": 6,
+          "12": 5,
+          "none": 57,
+          "6": 48,
+          "3": 22,
+          "11": 28,
+          "5": 21,
+          "4": 27,
+          "10": 6,
+          "8": 5,
+          "7": 8,
+          "13": 3,
+          "1": 1
+        }
+      },
+      "maximum_ready_wait_between_attacks": {
+        "0": {
+          "0": 236,
+          "1": 10,
+          "2": 4
+        },
+        "1": {
+          "1": 26,
+          "0": 201,
+          "2": 23
+        }
+      },
+      "observed_split_clock": {
+        "observed_removals": 3179,
+        "both_children_at_predicted_squares": 3179,
+        "all_forecasts_equal_observed_removal": 3179
+      }
+    },
+    "by_pre_cap_stall_count": {
+      "0": {
+        "rooms": 5,
+        "by_deadline": 5
+      },
+      "1": {
+        "rooms": 54,
+        "by_deadline": 51
+      },
+      "2": {
+        "rooms": 74,
+        "by_deadline": 61
+      },
+      "3": {
+        "rooms": 61,
+        "by_deadline": 34
+      },
+      "4": {
+        "rooms": 36,
+        "by_deadline": 13
+      },
+      "5": {
+        "rooms": 16,
+        "by_deadline": 2
+      },
+      "6": {
+        "rooms": 3,
+        "by_deadline": 0
+      },
+      "8": {
+        "rooms": 1,
+        "by_deadline": 0
+      }
+    },
+    "opening_or_chin_exceptions": []
+  },
+  "retained_same_seeds": {
+    "rooms": 250,
+    "completed": 250,
+    "eligible": 245,
+    "wave19_failures": 5,
+    "mean_seconds": 195.5069,
+    "p5_ticks": 312,
+    "p95_ticks": 340,
+    "p5_seconds": 187.2,
+    "p95_seconds": 204.0,
+    "rooms_by_328_ticks": 170,
+    "rooms_by_3m22": 232,
+    "eligible_tick_histogram": {
+      "308": 1,
+      "312": 15,
+      "316": 21,
+      "320": 46,
+      "324": 43,
+      "328": 44,
+      "332": 40,
+      "336": 20,
+      "340": 11,
+      "344": 3,
+      "352": 1
+    },
+    "statuses": {
+      "completed": 250
+    },
+    "pre_cap_stalls_mean": 2.42,
+    "pre_cap_at_most_one": 70,
+    "total_retries_by_last_wave": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 1,
+      "8": 17,
+      "9": 2,
+      "10": 83,
+      "11": 43,
+      "12": 107,
+      "13": 52,
+      "14": 34,
+      "15": 57,
+      "16": 156,
+      "17": 24,
+      "18": 5,
+      "19": 24,
+      "20": 0,
+      "21": 98,
+      "22": 0,
+      "23": 3,
+      "24": 9,
+      "25": 6,
+      "26": 13,
+      "27": 18,
+      "28": 615,
+      "29": 531,
+      "30": 357
+    },
+    "per_cohort": {
+      "retained-matched-250": {
+        "first_seed": 203784395992168,
+        "last_seed": 203784395992417,
+        "trials_csv_sha256": "4fc18db3c4f792c2d8ce994b68c9d55b381c4d5cd9de3915c2ae97ab9869e95d",
+        "trace_sha256": "1dd5054c10645ffdbad33cfe59ebe911c615d8a61928a7f4ff02a4c7e4c8ac7b",
+        "rooms": 250,
+        "completed": 250,
+        "eligible": 245,
+        "wave19_failures": 5,
+        "mean_seconds": 195.5069,
+        "p5_ticks": 312,
+        "p95_ticks": 340,
+        "p5_seconds": 187.2,
+        "p95_seconds": 204.0,
+        "rooms_by_328_ticks": 170,
+        "rooms_by_3m22": 232,
+        "eligible_tick_histogram": {
+          "308": 1,
+          "312": 15,
+          "316": 21,
+          "320": 46,
+          "324": 43,
+          "328": 44,
+          "332": 40,
+          "336": 20,
+          "340": 11,
+          "344": 3,
+          "352": 1
+        }
+      }
+    },
+    "source_hashes": {
+      "policy_sha256": {
+        "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+        "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+        "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+        "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+        "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+        "org/localscape/nylocas/mage/MageStrategy.java": "86fdff6376993f91f0dfd8e4f544970bb10d844e17e79c2196c09a63d94bf678",
+        "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+        "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "be413134b37be4dabf06ea8455f12143d0220dca28ca87e1c2acf8c0061ecfb1",
+        "org/localscape/nylocas/ranger/RangerStrategy.java": "8a47f25f5d1d5a2880c6e9e7ae4d79fff04ebca48c73a14976dcf51a6cab8043"
+      },
+      "adapter_sha256": {
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasServerAgents.kt": "9aaacf4e2f517cba97d7f6a196ece73004ce14318de15133f2b7315811399bb2",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationAreas.kt": "d37dacf487cfbabbdcb9ebd6b05b2c1d702040c2b6c16be727a16fb269d95cdc",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationStalls.kt": "329a5e818dc2468b408f1a60e4038845a06e20b700611eb9c456f928d86e0149",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationSupplies.kt": "c8dfa7b030428845b720ee3f682ad01c1cc85011c6ec8f0868beb5068e18cc41",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationTest.kt": "ccc8e3db8876263ca98611b217d7255cfa5b7011066555f9097314971a3a70e4",
+        "api/stats-plugin/src/main/kotlin/org/rsmod/api/stats/plugin/StatRegenScript.kt": "2ea612b185d3052ec9e80e0abb98bde3509e9ddf8220bd7f17a9dcdd22ed33c9",
+        "api/testing/src/main/kotlin/org/rsmod/api/testing/scope/GameTestScope.kt": "521d83fff56aba2b6cc8293996467dec80f767537d366ed9cb7e5d44bede6854",
+        "content/other/login/src/main/kotlin/org/rsmod/content/other/login/LoginScript.kt": "ed82d01a241076816811ea3208a8792ee8c3518d1232120e3e22e5a35985a99f",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotClient.kt": "9ddb23023dde2cc1e68fde50393ec78261ee98a35bb7a5e28aff4a4037dee507",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotController.kt": "fc02b1455a09c83b4828d49ebf2b08f5948707852ab6b53072bdf82910b76bda",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotGroupInputs.kt": "75c1cdec5adc9916bab747ab6d9886274339ce8f8a6196471f27da60c1cf413f",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotInputs.kt": "95146bf352cf71037add4d007556f8c49758b9910959cb3d71316671cb311908",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotService.kt": "39060c587fb27b547a99f9a52c2c239ffff5400a07a38765a84551105e6e5421",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotUtilities.kt": "ac81420eac2aa8e7c27036d12fda35a7e0ccc7cf01da90dcfe489298e61fb669",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotUtilitySupplies.kt": "937de43b61928fda25e638630dabe5dabc22c28826db5704ceeb5bfde916d6f2",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasCombatIdle.kt": "ba19211218d4ac9cc21c623ae91d79cfe9cac43e55f6313a36850f531994413f"
+      }
+    },
+    "packet_counts": {
+      "completed": 250,
+      "east13_combat_deaths": 250,
+      "east13_after_pair": 229,
+      "east13_by_two_ticks_after_pair": 188,
+      "east14_combat_deaths": 250,
+      "east14_after_pair": 241,
+      "east14_by_two_ticks_after_pair": 237,
+      "west8_combat_deaths": 250,
+      "west8_birth_attack": 250,
+      "west8_first_attack_lethal_roll": 154,
+      "west5_combat_deaths": 250,
+      "west5_pipe_at_plus2": 250,
+      "west26_combat_deaths": 249,
+      "south25_combat_deaths": 250,
+      "south27_combat_deaths": 250,
+      "south29_combat_deaths": 242,
+      "opening_west_to_east_in_5": 250,
+      "West chin 10": 250,
+      "East chin 10": 250,
+      "South chin 10": 250,
+      "East barrage 11": 250,
+      "12 east scythe": 250,
+      "12 west Dinh": 250,
+      "21 west barrage": 250,
+      "22 south Dinh": 250,
+      "26 Dinh on 28": 240,
+      "West big 24": 250,
+      "south30_named_black_chin": 250,
+      "south30_first_green": 250,
+      "south30_roll_both": 248,
+      "south30_impact_both": 250,
+      "rooms_with_wave1_melee_primary": 0,
+      "rooms_with_wave1_melee_roll": 0,
+      "rooms_with_wave1_melee_positive_damage": 0
+    },
+    "physical_timing_counts": {
+      "rooms": 250,
+      "west8_eye_at_birth": 250,
+      "west8_uncovered_when_eye_ready": 96,
+      "west8_retried_on_that_tick": 96,
+      "west10_chin_on_spawn": 248,
+      "east15_north_opened_by_mage": 92,
+      "east15_mage_opened_north_within_four": 91,
+      "south30_both_positive": 248,
+      "south30_both_zero_hp": 107,
+      "south30_thrown_during_actual31": 82,
+      "south30_thrown_on_dimmed_pair": 0,
+      "south30_one_tick_food_deferrals": 0
+    },
+    "parent_timing_histograms": {
+      "east13_first_attack_age": {
+        "21": 2,
+        "22": 8,
+        "23": 8,
+        "24": 32,
+        "25": 23,
+        "26": 25,
+        "27": 29,
+        "28": 29,
+        "29": 20,
+        "30": 10,
+        "31": 31,
+        "32": 19,
+        "33": 11,
+        "34": 3
+      },
+      "east13_after_pair_ticks": {
+        "-23": 1,
+        "-21": 1,
+        "-13": 1,
+        "-8": 1,
+        "-5": 1,
+        "-3": 6,
+        "-2": 3,
+        "-1": 7,
+        "0": 66,
+        "1": 70,
+        "2": 52,
+        "3": 39,
+        "4": 2
+      },
+      "east14_first_attack_age": {
+        "13": 1,
+        "14": 11,
+        "15": 20,
+        "16": 23,
+        "17": 20,
+        "18": 32,
+        "19": 46,
+        "20": 19,
+        "21": 28,
+        "22": 27,
+        "23": 10,
+        "24": 4,
+        "25": 5,
+        "26": 1,
+        "27": 1,
+        "28": 2
+      },
+      "east14_after_pair_ticks": {
+        "-26": 2,
+        "-15": 1,
+        "-10": 1,
+        "-7": 2,
+        "-6": 1,
+        "-5": 2,
+        "0": 2,
+        "1": 133,
+        "2": 102,
+        "4": 1,
+        "5": 3
+      },
+      "west8_first_attack_age": {
+        "0": 250
+      },
+      "west5_first_attack_age": {
+        "2": 250
+      },
+      "west26_first_attack_age": {
+        "0": 5,
+        "1": 45,
+        "2": 36,
+        "3": 19,
+        "4": 53,
+        "5": 26,
+        "6": 20,
+        "7": 12,
+        "8": 4,
+        "9": 13,
+        "10": 6,
+        "11": 2,
+        "12": 2,
+        "13": 1,
+        "14": 2,
+        "15": 1,
+        "25": 1
+      },
+      "south25_first_attack_age": {
+        "5": 6,
+        "6": 23,
+        "7": 34,
+        "8": 23,
+        "9": 18,
+        "10": 9,
+        "11": 15,
+        "12": 39,
+        "13": 56,
+        "14": 23,
+        "15": 1,
+        "16": 1,
+        "18": 1,
+        "29": 1
+      },
+      "south27_first_attack_age": {
+        "7": 248,
+        "8": 1,
+        "10": 1
+      },
+      "south29_first_attack_age": {
+        "7": 226,
+        "9": 24
+      }
+    },
+    "physical_timing_histograms": {
+      "west8_ticks_to_zero_hp": {
+        "4": 154,
+        "6": 7,
+        "7": 67,
+        "9": 21,
+        "10": 1
+      },
+      "east15_south_first_attack_age_with_early_mage_north": {
+        "3": 1,
+        "4": 1,
+        "5": 20,
+        "6": 27,
+        "7": 20,
+        "8": 13,
+        "9": 4,
+        "11": 4,
+        "14": 1
+      },
+      "east15_south_first_attack_age": {
+        "3": 9,
+        "4": 17,
+        "5": 55,
+        "6": 74,
+        "7": 43,
+        "8": 31,
+        "9": 10,
+        "10": 2,
+        "11": 5,
+        "12": 1,
+        "14": 2,
+        "31": 1
+      }
+    },
+    "mean_ticks_by_eligible_finish": {
+      "eligible_by_deadline": {
+        "entry_to_wave20": 159.4588,
+        "wave20_to_wave31": 109.4353,
+        "wave31_to_boss": 52.9176,
+        "pre_cap_stalls": 1.8647,
+        "rooms": 170
+      },
+      "eligible_past_deadline": {
+        "entry_to_wave20": 165.8133,
+        "wave20_to_wave31": 112.6933,
+        "wave31_to_boss": 56.48,
+        "pre_cap_stalls": 3.4533,
+        "rooms": 75
+      }
+    },
+    "original_parent_expiries": {
+      "west26": [
+        {
+          "seed": 203784395992259,
+          "observation": "expired",
+          "remaining_hp": 5
+        }
+      ]
+    },
+    "split_occupancy": {
+      "counts": {
+        "rooms": 250,
+        "parents_removed_within_two_ticks": 109,
+        "parents_removed_together": 22
+      },
+      "parents": {
+        "east14": {
+          "rooms": 250,
+          "combat_death_before_removal": 250,
+          "both_newborn_tiles_observed": 250,
+          "population_before_split_total": 2999,
+          "population_on_split_frame_total": 3129,
+          "at_or_above_12_before_split": 166,
+          "at_or_above_12_on_split_frame": 195
+        },
+        "east13": {
+          "rooms": 250,
+          "combat_death_before_removal": 250,
+          "both_newborn_tiles_observed": 250,
+          "population_before_split_total": 3078,
+          "population_on_split_frame_total": 3255,
+          "at_or_above_12_before_split": 183,
+          "at_or_above_12_on_split_frame": 223
+        }
+      },
+      "tick_separation": {
+        "0": 22,
+        "1": 41,
+        "2": 46,
+        "3": 43,
+        "4": 32,
+        "5": 30,
+        "6": 19,
+        "7": 10,
+        "8": 2,
+        "9": 2,
+        "10": 3
+      }
+    },
+    "late_parent_combat_deaths": {
+      "west24": 250,
+      "south24": 250,
+      "west25": 250,
+      "east24": 249,
+      "west26": 249,
+      "south29": 242
+    },
+    "late_parent_expiries": [
+      {
+        "seed": 203784395992259,
+        "parent": "west26",
+        "birth_tick": 216,
+        "last_observed_tick": 270,
+        "last_hp": 5,
+        "actual_primary_ticks": [
+          243
+        ],
+        "mage_first_null_tick": 237
+      },
+      {
+        "seed": 203784395992274,
+        "parent": "south29",
+        "birth_tick": 272,
+        "last_observed_tick": 326,
+        "last_hp": 1,
+        "actual_primary_ticks": [
+          279
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992325,
+        "parent": "south29",
+        "birth_tick": 256,
+        "last_observed_tick": 310,
+        "last_hp": 10,
+        "actual_primary_ticks": [
+          263
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992339,
+        "parent": "south29",
+        "birth_tick": 248,
+        "last_observed_tick": 302,
+        "last_hp": 9,
+        "actual_primary_ticks": [
+          255
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992353,
+        "parent": "south29",
+        "birth_tick": 260,
+        "last_observed_tick": 314,
+        "last_hp": 9,
+        "actual_primary_ticks": [
+          267
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992355,
+        "parent": "south29",
+        "birth_tick": 256,
+        "last_observed_tick": 310,
+        "last_hp": 9,
+        "actual_primary_ticks": [
+          263
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992369,
+        "parent": "south29",
+        "birth_tick": 260,
+        "last_observed_tick": 314,
+        "last_hp": 6,
+        "actual_primary_ticks": [
+          267
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992393,
+        "parent": "east24",
+        "birth_tick": 208,
+        "last_observed_tick": 262,
+        "last_hp": 16,
+        "actual_primary_ticks": [],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992397,
+        "parent": "south29",
+        "birth_tick": 252,
+        "last_observed_tick": 306,
+        "last_hp": 6,
+        "actual_primary_ticks": [
+          259
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 203784395992405,
+        "parent": "south29",
+        "birth_tick": 248,
+        "last_observed_tick": 302,
+        "last_hp": 2,
+        "actual_primary_ticks": [
+          255,
+          260
+        ],
+        "mage_first_null_tick": null
+      }
+    ],
+    "precap_freshness": {
+      "roles": [
+        "ranger",
+        "mage"
+      ],
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 3122,
+        "role1_primary_on_age_zero_to_two": 1920,
+        "role0_ordinary_old_small_requests": 183,
+        "role0_old_small_with_observed_birth_next_two": 64,
+        "role1_fresh_ready_wait_frames": 93,
+        "role1_fresh_cooldown_stage_frames": 110,
+        "role1_ordinary_old_small_requests": 100,
+        "role0_fresh_cooldown_stage_frames": 23,
+        "role0_fresh_ready_wait_frames": 14,
+        "role1_old_small_with_observed_birth_next_two": 9
+      },
+      "west6_first_attack_age": {
+        "0": {
+          "none": 148,
+          "3": 43,
+          "8": 1,
+          "2": 18,
+          "9": 1,
+          "7": 2,
+          "4": 25,
+          "11": 2,
+          "1": 1,
+          "17": 4,
+          "20": 2,
+          "16": 1,
+          "15": 1,
+          "12": 1
+        },
+        "1": {
+          "4": 24,
+          "none": 67,
+          "2": 19,
+          "0": 10,
+          "10": 7,
+          "8": 9,
+          "3": 38,
+          "6": 31,
+          "7": 5,
+          "11": 13,
+          "5": 17,
+          "12": 4,
+          "1": 4,
+          "19": 2
+        }
+      },
+      "maximum_ready_wait_between_attacks": {
+        "0": {
+          "0": 240,
+          "1": 7,
+          "2": 3
+        },
+        "1": {
+          "0": 189,
+          "2": 24,
+          "1": 37
+        }
+      },
+      "observed_split_clock": {
+        "observed_removals": 3194,
+        "both_children_at_predicted_squares": 3194,
+        "all_forecasts_equal_observed_removal": 3194
+      }
+    },
+    "by_pre_cap_stall_count": {
+      "0": {
+        "rooms": 18,
+        "by_deadline": 18
+      },
+      "1": {
+        "rooms": 52,
+        "by_deadline": 48
+      },
+      "2": {
+        "rooms": 70,
+        "by_deadline": 54
+      },
+      "3": {
+        "rooms": 57,
+        "by_deadline": 39
+      },
+      "4": {
+        "rooms": 32,
+        "by_deadline": 11
+      },
+      "5": {
+        "rooms": 13,
+        "by_deadline": 0
+      },
+      "6": {
+        "rooms": 7,
+        "by_deadline": 0
+      },
+      "7": {
+        "rooms": 1,
+        "by_deadline": 0
+      }
+    },
+    "opening_or_chin_exceptions": []
+  },
+  "same_seed_change": {
+    "rooms": 250,
+    "before": {
+      "rooms": 250,
+      "completed": 250,
+      "eligible": 244,
+      "wave19_failures": 6,
+      "mean_seconds": 195.777,
+      "p5_ticks": 316,
+      "p95_ticks": 340,
+      "p5_seconds": 189.6,
+      "p95_seconds": 204.0,
+      "rooms_by_328_ticks": 166,
+      "rooms_by_3m22": 233,
+      "eligible_tick_histogram": {
+        "308": 2,
+        "312": 8,
+        "316": 20,
+        "320": 51,
+        "324": 47,
+        "328": 36,
+        "332": 41,
+        "336": 24,
+        "340": 6,
+        "344": 5,
+        "348": 4
+      }
+    },
+    "after": {
+      "rooms": 250,
+      "completed": 250,
+      "eligible": 245,
+      "wave19_failures": 5,
+      "mean_seconds": 195.5069,
+      "p5_ticks": 312,
+      "p95_ticks": 340,
+      "p5_seconds": 187.2,
+      "p95_seconds": 204.0,
+      "rooms_by_328_ticks": 170,
+      "rooms_by_3m22": 232,
+      "eligible_tick_histogram": {
+        "308": 1,
+        "312": 15,
+        "316": 21,
+        "320": 46,
+        "324": 43,
+        "328": 44,
+        "332": 40,
+        "336": 20,
+        "340": 11,
+        "344": 3,
+        "352": 1
+      }
+    },
+    "earlier": 105,
+    "same": 43,
+    "later": 102,
+    "gained_deadline": 55,
+    "lost_deadline": 51,
+    "mean_delta_ticks": -0.272,
+    "pre_cap_total_delta": -30
+  },
+  "final_independent": {
+    "rooms": 900,
+    "completed": 900,
+    "eligible": 875,
+    "wave19_failures": 25,
+    "mean_seconds": 194.9349,
+    "p5_ticks": 312,
+    "p95_ticks": 336,
+    "p5_seconds": 187.2,
+    "p95_seconds": 201.6,
+    "rooms_by_328_ticks": 672,
+    "rooms_by_3m22": 847,
+    "eligible_tick_histogram": {
+      "308": 8,
+      "312": 47,
+      "316": 101,
+      "320": 184,
+      "324": 160,
+      "328": 168,
+      "332": 112,
+      "336": 53,
+      "340": 24,
+      "344": 6,
+      "348": 8,
+      "352": 3,
+      "356": 1
+    },
+    "statuses": {
+      "completed": 900
+    },
+    "pre_cap_stalls_mean": 2.3522,
+    "pre_cap_at_most_one": 269,
+    "total_retries_by_last_wave": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 1,
+      "8": 65,
+      "9": 12,
+      "10": 288,
+      "11": 191,
+      "12": 349,
+      "13": 160,
+      "14": 123,
+      "15": 194,
+      "16": 477,
+      "17": 112,
+      "18": 24,
+      "19": 121,
+      "20": 0,
+      "21": 318,
+      "22": 2,
+      "23": 6,
+      "24": 20,
+      "25": 23,
+      "26": 29,
+      "27": 78,
+      "28": 2200,
+      "29": 1881,
+      "30": 1161
+    },
+    "per_cohort": {
+      "retained-fresh-400": {
+        "first_seed": 117919208328818,
+        "last_seed": 117919208329217,
+        "trials_csv_sha256": "06bebb9e9f11cfa3dc6d19001b7ea9b250487ba8bc355cdafec7a193bf8c6db0",
+        "trace_sha256": "fb01887ce7d2165d96d8412835efff9ee58f380beec2c4713d23d0ecd2eb84d7",
+        "rooms": 400,
+        "completed": 400,
+        "eligible": 393,
+        "wave19_failures": 7,
+        "mean_seconds": 194.8763,
+        "p5_ticks": 312,
+        "p95_ticks": 340,
+        "p5_seconds": 187.2,
+        "p95_seconds": 204.0,
+        "rooms_by_328_ticks": 310,
+        "rooms_by_3m22": 376,
+        "eligible_tick_histogram": {
+          "308": 5,
+          "312": 22,
+          "316": 44,
+          "320": 81,
+          "324": 79,
+          "328": 77,
+          "332": 39,
+          "336": 24,
+          "340": 13,
+          "344": 3,
+          "348": 4,
+          "352": 1,
+          "356": 1
+        }
+      },
+      "retained-fresh-500": {
+        "first_seed": 14403012897928,
+        "last_seed": 14403012898427,
+        "trials_csv_sha256": "556ef8981d50c31699908f89f1f6200b11170a5883345fdb308ba1f76a28c5c8",
+        "trace_sha256": "1b40aa4493dad6788c6ae69fea0fc5f95457afb872f066ec0b239439807da05e",
+        "rooms": 500,
+        "completed": 500,
+        "eligible": 482,
+        "wave19_failures": 18,
+        "mean_seconds": 194.9826,
+        "p5_ticks": 312,
+        "p95_ticks": 336,
+        "p5_seconds": 187.2,
+        "p95_seconds": 201.6,
+        "rooms_by_328_ticks": 362,
+        "rooms_by_3m22": 471,
+        "eligible_tick_histogram": {
+          "308": 3,
+          "312": 25,
+          "316": 57,
+          "320": 103,
+          "324": 81,
+          "328": 91,
+          "332": 73,
+          "336": 29,
+          "340": 11,
+          "344": 3,
+          "348": 4,
+          "352": 2
+        }
+      }
+    },
+    "source_hashes": {
+      "policy_sha256": {
+        "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+        "org/localscape/nylocas/AttackTiming.java": "0a9e81a623875cd0776864ac653059ea385356aff22a57043f5bb2dba731b0d8",
+        "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+        "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+        "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+        "org/localscape/nylocas/mage/MageStrategy.java": "86fdff6376993f91f0dfd8e4f544970bb10d844e17e79c2196c09a63d94bf678",
+        "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+        "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "be413134b37be4dabf06ea8455f12143d0220dca28ca87e1c2acf8c0061ecfb1",
+        "org/localscape/nylocas/ranger/RangerStrategy.java": "8a47f25f5d1d5a2880c6e9e7ae4d79fff04ebca48c73a14976dcf51a6cab8043"
+      },
+      "adapter_sha256": {
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasServerAgents.kt": "9aaacf4e2f517cba97d7f6a196ece73004ce14318de15133f2b7315811399bb2",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationAreas.kt": "d37dacf487cfbabbdcb9ebd6b05b2c1d702040c2b6c16be727a16fb269d95cdc",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationStalls.kt": "329a5e818dc2468b408f1a60e4038845a06e20b700611eb9c456f928d86e0149",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationSupplies.kt": "c8dfa7b030428845b720ee3f682ad01c1cc85011c6ec8f0868beb5068e18cc41",
+        "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationTest.kt": "ccc8e3db8876263ca98611b217d7255cfa5b7011066555f9097314971a3a70e4",
+        "api/stats-plugin/src/main/kotlin/org/rsmod/api/stats/plugin/StatRegenScript.kt": "2ea612b185d3052ec9e80e0abb98bde3509e9ddf8220bd7f17a9dcdd22ed33c9",
+        "api/testing/src/main/kotlin/org/rsmod/api/testing/scope/GameTestScope.kt": "521d83fff56aba2b6cc8293996467dec80f767537d366ed9cb7e5d44bede6854",
+        "content/other/login/src/main/kotlin/org/rsmod/content/other/login/LoginScript.kt": "ed82d01a241076816811ea3208a8792ee8c3518d1232120e3e22e5a35985a99f",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotClient.kt": "9ddb23023dde2cc1e68fde50393ec78261ee98a35bb7a5e28aff4a4037dee507",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotController.kt": "fc02b1455a09c83b4828d49ebf2b08f5948707852ab6b53072bdf82910b76bda",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotGroupInputs.kt": "75c1cdec5adc9916bab747ab6d9886274339ce8f8a6196471f27da60c1cf413f",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotInputs.kt": "95146bf352cf71037add4d007556f8c49758b9910959cb3d71316671cb311908",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotService.kt": "39060c587fb27b547a99f9a52c2c239ffff5400a07a38765a84551105e6e5421",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotUtilities.kt": "ac81420eac2aa8e7c27036d12fda35a7e0ccc7cf01da90dcfe489298e61fb669",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotUtilitySupplies.kt": "937de43b61928fda25e638630dabe5dabc22c28826db5704ceeb5bfde916d6f2",
+        "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasCombatIdle.kt": "ba19211218d4ac9cc21c623ae91d79cfe9cac43e55f6313a36850f531994413f"
+      }
+    },
+    "packet_counts": {
+      "completed": 900,
+      "east13_combat_deaths": 900,
+      "east13_after_pair": 846,
+      "east13_by_two_ticks_after_pair": 681,
+      "east14_combat_deaths": 900,
+      "east14_after_pair": 864,
+      "east14_by_two_ticks_after_pair": 849,
+      "west8_combat_deaths": 900,
+      "west8_birth_attack": 900,
+      "west8_first_attack_lethal_roll": 511,
+      "west5_combat_deaths": 900,
+      "west5_pipe_at_plus2": 900,
+      "west26_combat_deaths": 895,
+      "south25_combat_deaths": 900,
+      "south27_combat_deaths": 900,
+      "south29_combat_deaths": 880,
+      "opening_west_to_east_in_5": 900,
+      "West chin 10": 900,
+      "East chin 10": 900,
+      "South chin 10": 900,
+      "East barrage 11": 900,
+      "12 east scythe": 900,
+      "12 west Dinh": 900,
+      "21 west barrage": 900,
+      "22 south Dinh": 900,
+      "26 Dinh on 28": 858,
+      "West big 24": 900,
+      "south30_named_black_chin": 900,
+      "south30_first_green": 900,
+      "south30_roll_both": 890,
+      "south30_impact_both": 900,
+      "rooms_with_wave1_melee_primary": 0,
+      "rooms_with_wave1_melee_roll": 0,
+      "rooms_with_wave1_melee_positive_damage": 0
+    },
+    "physical_timing_counts": {
+      "rooms": 900,
+      "west8_eye_at_birth": 900,
+      "west10_chin_on_spawn": 894,
+      "east15_north_opened_by_mage": 344,
+      "south30_both_positive": 889,
+      "south30_both_zero_hp": 464,
+      "south30_thrown_during_actual31": 348,
+      "south30_thrown_on_dimmed_pair": 5,
+      "south30_one_tick_food_deferrals": 0,
+      "east15_mage_opened_north_within_four": 335,
+      "west8_uncovered_when_eye_ready": 389,
+      "west8_retried_on_that_tick": 389
+    },
+    "parent_timing_histograms": {
+      "east13_first_attack_age": {
+        "20": 3,
+        "21": 5,
+        "22": 29,
+        "23": 36,
+        "24": 100,
+        "25": 87,
+        "26": 87,
+        "27": 111,
+        "28": 131,
+        "29": 71,
+        "30": 37,
+        "31": 95,
+        "32": 64,
+        "33": 35,
+        "34": 8,
+        "35": 1
+      },
+      "east13_after_pair_ticks": {
+        "-28": 1,
+        "-27": 1,
+        "-22": 1,
+        "-21": 1,
+        "-20": 3,
+        "-19": 2,
+        "-15": 1,
+        "-14": 1,
+        "-11": 2,
+        "-10": 3,
+        "-8": 4,
+        "-7": 4,
+        "-6": 2,
+        "-4": 2,
+        "-3": 5,
+        "-2": 9,
+        "-1": 12,
+        "0": 180,
+        "1": 265,
+        "2": 236,
+        "3": 162,
+        "5": 1,
+        "6": 2
+      },
+      "east14_first_attack_age": {
+        "13": 9,
+        "14": 35,
+        "15": 60,
+        "16": 101,
+        "17": 69,
+        "18": 148,
+        "19": 161,
+        "20": 89,
+        "21": 87,
+        "22": 66,
+        "23": 28,
+        "24": 25,
+        "25": 10,
+        "26": 6,
+        "27": 4,
+        "28": 2
+      },
+      "east14_after_pair_ticks": {
+        "-29": 1,
+        "-27": 1,
+        "-26": 1,
+        "-25": 1,
+        "-24": 2,
+        "-22": 1,
+        "-20": 1,
+        "-18": 1,
+        "-17": 2,
+        "-15": 3,
+        "-14": 2,
+        "-11": 1,
+        "-9": 4,
+        "-8": 2,
+        "-7": 2,
+        "-6": 1,
+        "-5": 7,
+        "-3": 3,
+        "0": 14,
+        "1": 476,
+        "2": 359,
+        "3": 1,
+        "4": 5,
+        "5": 9
+      },
+      "west8_first_attack_age": {
+        "0": 900
+      },
+      "west5_first_attack_age": {
+        "2": 900
+      },
+      "west26_first_attack_age": {
+        "0": 9,
+        "1": 159,
+        "2": 140,
+        "3": 82,
+        "4": 182,
+        "5": 121,
+        "6": 50,
+        "7": 38,
+        "8": 29,
+        "9": 22,
+        "10": 23,
+        "11": 10,
+        "12": 15,
+        "13": 6,
+        "14": 11,
+        "16": 1
+      },
+      "south25_first_attack_age": {
+        "5": 25,
+        "6": 74,
+        "7": 105,
+        "8": 91,
+        "9": 78,
+        "10": 58,
+        "11": 53,
+        "12": 147,
+        "13": 147,
+        "14": 94,
+        "15": 9,
+        "16": 12,
+        "17": 2,
+        "18": 1,
+        "19": 1,
+        "20": 1,
+        "21": 1
+      },
+      "south27_first_attack_age": {
+        "7": 895,
+        "8": 1,
+        "9": 1,
+        "10": 3
+      },
+      "south29_first_attack_age": {
+        "7": 803,
+        "9": 95,
+        "14": 2
+      }
+    },
+    "physical_timing_histograms": {
+      "west8_ticks_to_zero_hp": {
+        "4": 511,
+        "5": 6,
+        "6": 28,
+        "7": 286,
+        "8": 1,
+        "9": 57,
+        "10": 3,
+        "11": 1,
+        "12": 6,
+        "18": 1
+      },
+      "east15_south_first_attack_age": {
+        "3": 35,
+        "4": 76,
+        "5": 204,
+        "6": 255,
+        "7": 164,
+        "8": 98,
+        "9": 41,
+        "10": 4,
+        "11": 6,
+        "12": 8,
+        "14": 1,
+        "21": 1,
+        "23": 1,
+        "24": 1,
+        "29": 1
+      },
+      "east15_south_first_attack_age_with_early_mage_north": {
+        "3": 17,
+        "4": 4,
+        "5": 71,
+        "6": 116,
+        "7": 69,
+        "8": 39,
+        "9": 12,
+        "11": 5,
+        "23": 1,
+        "29": 1
+      }
+    },
+    "mean_ticks_by_eligible_finish": {
+      "eligible_by_deadline": {
+        "entry_to_wave20": 159.6228,
+        "wave20_to_wave31": 108.8263,
+        "wave31_to_boss": 53.2096,
+        "pre_cap_stalls": 1.9057,
+        "rooms": 668
+      },
+      "eligible_past_deadline": {
+        "entry_to_wave20": 165.3913,
+        "wave20_to_wave31": 111.6908,
+        "wave31_to_boss": 58.2415,
+        "pre_cap_stalls": 3.3478,
+        "rooms": 207
+      }
+    },
+    "original_parent_expiries": {
+      "west26": [
+        {
+          "seed": 117919208328933,
+          "observation": "expired",
+          "remaining_hp": 15
+        },
+        {
+          "seed": 117919208329055,
+          "observation": "expired",
+          "remaining_hp": 7
+        },
+        {
+          "seed": 117919208329073,
+          "observation": "expired",
+          "remaining_hp": 8
+        },
+        {
+          "seed": 14403012898164,
+          "observation": "expired",
+          "remaining_hp": 16
+        },
+        {
+          "seed": 14403012898243,
+          "observation": "expired",
+          "remaining_hp": 7
+        }
+      ]
+    },
+    "split_occupancy": {
+      "counts": {
+        "rooms": 900,
+        "parents_removed_within_two_ticks": 452,
+        "parents_removed_together": 92
+      },
+      "parents": {
+        "east13": {
+          "rooms": 900,
+          "combat_death_before_removal": 900,
+          "both_newborn_tiles_observed": 900,
+          "population_before_split_total": 11020,
+          "population_on_split_frame_total": 11649,
+          "at_or_above_12_before_split": 671,
+          "at_or_above_12_on_split_frame": 787
+        },
+        "east14": {
+          "rooms": 900,
+          "combat_death_before_removal": 900,
+          "both_newborn_tiles_observed": 900,
+          "population_before_split_total": 10805,
+          "population_on_split_frame_total": 11437,
+          "at_or_above_12_before_split": 593,
+          "at_or_above_12_on_split_frame": 731
+        }
+      },
+      "tick_separation": {
+        "0": 92,
+        "1": 181,
+        "2": 179,
+        "3": 157,
+        "4": 107,
+        "5": 77,
+        "6": 43,
+        "7": 30,
+        "8": 16,
+        "9": 5,
+        "10": 8,
+        "11": 1,
+        "12": 1,
+        "13": 2,
+        "16": 1
+      }
+    },
+    "late_parent_combat_deaths": {
+      "west24": 899,
+      "south24": 900,
+      "east24": 899,
+      "west25": 900,
+      "west26": 895,
+      "south29": 880
+    },
+    "late_parent_expiries": [
+      {
+        "seed": 117919208328874,
+        "parent": "south29",
+        "birth_tick": 256,
+        "last_observed_tick": 310,
+        "last_hp": 11,
+        "actual_primary_ticks": [
+          263
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 117919208328879,
+        "parent": "south29",
+        "birth_tick": 256,
+        "last_observed_tick": 310,
+        "last_hp": 8,
+        "actual_primary_ticks": [
+          263
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 117919208328933,
+        "parent": "west26",
+        "birth_tick": 220,
+        "last_observed_tick": 274,
+        "last_hp": 15,
+        "actual_primary_ticks": [
+          233
+        ],
+        "mage_first_null_tick": 241
+      },
+      {
+        "seed": 117919208328971,
+        "parent": "south29",
+        "birth_tick": 256,
+        "last_observed_tick": 310,
+        "last_hp": 11,
+        "actual_primary_ticks": [
+          263
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 117919208329055,
+        "parent": "west26",
+        "birth_tick": 220,
+        "last_observed_tick": 274,
+        "last_hp": 7,
+        "actual_primary_ticks": [
+          232,
+          235
+        ],
+        "mage_first_null_tick": 241
+      },
+      {
+        "seed": 117919208329073,
+        "parent": "west26",
+        "birth_tick": 232,
+        "last_observed_tick": 286,
+        "last_hp": 8,
+        "actual_primary_ticks": [
+          244,
+          247
+        ],
+        "mage_first_null_tick": 253
+      },
+      {
+        "seed": 117919208329089,
+        "parent": "south29",
+        "birth_tick": 252,
+        "last_observed_tick": 306,
+        "last_hp": 3,
+        "actual_primary_ticks": [
+          259
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 117919208329140,
+        "parent": "south29",
+        "birth_tick": 264,
+        "last_observed_tick": 318,
+        "last_hp": 14,
+        "actual_primary_ticks": [
+          271
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 117919208329195,
+        "parent": "south29",
+        "birth_tick": 256,
+        "last_observed_tick": 310,
+        "last_hp": 6,
+        "actual_primary_ticks": [
+          263
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 14403012897963,
+        "parent": "south29",
+        "birth_tick": 252,
+        "last_observed_tick": 306,
+        "last_hp": 10,
+        "actual_primary_ticks": [
+          259
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 14403012898011,
+        "parent": "south29",
+        "birth_tick": 248,
+        "last_observed_tick": 302,
+        "last_hp": 15,
+        "actual_primary_ticks": [
+          255
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 14403012898093,
+        "parent": "south29",
+        "birth_tick": 252,
+        "last_observed_tick": 306,
+        "last_hp": 7,
+        "actual_primary_ticks": [
+          259
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 14403012898094,
+        "parent": "south29",
+        "birth_tick": 260,
+        "last_observed_tick": 314,
+        "last_hp": 7,
+        "actual_primary_ticks": [
+          267
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 14403012898138,
+        "parent": "south29",
+        "birth_tick": 252,
+        "last_observed_tick": 306,
+        "last_hp": 4,
+        "actual_primary_ticks": [
+          259
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 14403012898157,
+        "parent": "south29",
+        "birth_tick": 268,
+        "last_observed_tick": 322,
+        "last_hp": 13,
+        "actual_primary_ticks": [
+          275
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 14403012898164,
+        "parent": "west26",
+        "birth_tick": 212,
+        "last_observed_tick": 266,
+        "last_hp": 16,
+        "actual_primary_ticks": [],
+        "mage_first_null_tick": 233
+      },
+      {
+        "seed": 14403012898169,
+        "parent": "south29",
+        "birth_tick": 256,
+        "last_observed_tick": 310,
+        "last_hp": 9,
+        "actual_primary_ticks": [
+          263
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 14403012898172,
+        "parent": "south29",
+        "birth_tick": 256,
+        "last_observed_tick": 310,
+        "last_hp": 11,
+        "actual_primary_ticks": [
+          263
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 14403012898205,
+        "parent": "south29",
+        "birth_tick": 252,
+        "last_observed_tick": 306,
+        "last_hp": 7,
+        "actual_primary_ticks": [
+          259,
+          264
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 14403012898211,
+        "parent": "south29",
+        "birth_tick": 252,
+        "last_observed_tick": 306,
+        "last_hp": 3,
+        "actual_primary_ticks": [
+          259
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 14403012898239,
+        "parent": "south29",
+        "birth_tick": 236,
+        "last_observed_tick": 290,
+        "last_hp": 15,
+        "actual_primary_ticks": [
+          243
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 14403012898243,
+        "parent": "west26",
+        "birth_tick": 220,
+        "last_observed_tick": 274,
+        "last_hp": 7,
+        "actual_primary_ticks": [
+          233,
+          236
+        ],
+        "mage_first_null_tick": 241
+      },
+      {
+        "seed": 14403012898295,
+        "parent": "south29",
+        "birth_tick": 244,
+        "last_observed_tick": 298,
+        "last_hp": 3,
+        "actual_primary_ticks": [
+          251
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 14403012898330,
+        "parent": "east24",
+        "birth_tick": 200,
+        "last_observed_tick": 254,
+        "last_hp": 16,
+        "actual_primary_ticks": [],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 14403012898345,
+        "parent": "west24",
+        "birth_tick": 208,
+        "last_observed_tick": 262,
+        "last_hp": 3,
+        "actual_primary_ticks": [
+          211,
+          213,
+          228
+        ],
+        "mage_first_null_tick": 245
+      },
+      {
+        "seed": 14403012898421,
+        "parent": "south29",
+        "birth_tick": 272,
+        "last_observed_tick": 326,
+        "last_hp": 7,
+        "actual_primary_ticks": [
+          279
+        ],
+        "mage_first_null_tick": null
+      },
+      {
+        "seed": 14403012898427,
+        "parent": "south29",
+        "birth_tick": 256,
+        "last_observed_tick": 310,
+        "last_hp": 13,
+        "actual_primary_ticks": [
+          263
+        ],
+        "mage_first_null_tick": null
+      }
+    ],
+    "precap_freshness": {
+      "roles": [
+        "ranger",
+        "mage"
+      ],
+      "counts": {
+        "role0_fresh_ready_wait_frames": 55,
+        "role0_primary_on_age_zero_to_two": 11167,
+        "role1_primary_on_age_zero_to_two": 7000,
+        "role0_ordinary_old_small_requests": 696,
+        "role0_old_small_with_observed_birth_next_two": 216,
+        "role1_ordinary_old_small_requests": 363,
+        "role0_fresh_cooldown_stage_frames": 73,
+        "role1_fresh_cooldown_stage_frames": 388,
+        "role1_fresh_ready_wait_frames": 359,
+        "role1_old_small_with_observed_birth_next_two": 34
+      },
+      "west6_first_attack_age": {
+        "0": {
+          "none": 576,
+          "2": 43,
+          "4": 110,
+          "3": 135,
+          "8": 7,
+          "5": 2,
+          "1": 2,
+          "11": 1,
+          "17": 9,
+          "0": 1,
+          "7": 3,
+          "9": 3,
+          "16": 4,
+          "22": 1,
+          "27": 1,
+          "20": 1,
+          "18": 1
+        },
+        "1": {
+          "4": 100,
+          "6": 82,
+          "0": 39,
+          "10": 25,
+          "none": 231,
+          "2": 55,
+          "8": 22,
+          "5": 100,
+          "3": 138,
+          "11": 55,
+          "12": 10,
+          "7": 18,
+          "1": 12,
+          "13": 10,
+          "19": 2,
+          "40": 1
+        }
+      },
+      "maximum_ready_wait_between_attacks": {
+        "0": {
+          "1": 30,
+          "0": 858,
+          "2": 12
+        },
+        "1": {
+          "0": 695,
+          "2": 119,
+          "1": 86
+        }
+      },
+      "observed_split_clock": {
+        "observed_removals": 11443,
+        "both_children_at_predicted_squares": 11443,
+        "all_forecasts_equal_observed_removal": 11443
+      }
+    },
+    "by_pre_cap_stall_count": {
+      "0": {
+        "rooms": 54,
+        "by_deadline": 53
+      },
+      "1": {
+        "rooms": 215,
+        "by_deadline": 194
+      },
+      "2": {
+        "rooms": 279,
+        "by_deadline": 242
+      },
+      "3": {
+        "rooms": 183,
+        "by_deadline": 127
+      },
+      "4": {
+        "rooms": 98,
+        "by_deadline": 47
+      },
+      "5": {
+        "rooms": 46,
+        "by_deadline": 9
+      },
+      "6": {
+        "rooms": 11,
+        "by_deadline": 0
+      },
+      "7": {
+        "rooms": 10,
+        "by_deadline": 0
+      },
+      "8": {
+        "rooms": 2,
+        "by_deadline": 0
+      },
+      "10": {
+        "rooms": 1,
+        "by_deadline": 0
+      },
+      "11": {
+        "rooms": 1,
+        "by_deadline": 0
+      }
+    },
+    "opening_or_chin_exceptions": []
+  },
+  "scorecard": {
+    "file": "packed-parent-timing-trials.csv.gz",
+    "sha256": "79cf107762e103a08ecf29dd804654f57a9468fe4f702c5857c64eb0e6b24c12"
+  },
+  "isolated_east15_comparisons": {
+    "ranger_earlier_south_pipe": {
+      "control": "mid-e15-260",
+      "test": "r15-lane-pair200",
+      "result": {
+        "rooms": 200,
+        "before": {
+          "rooms": 200,
+          "completed": 200,
+          "eligible": 198,
+          "wave19_failures": 2,
+          "mean_seconds": 194.7636,
+          "p5_ticks": 312,
+          "p95_ticks": 336,
+          "p5_seconds": 187.2,
+          "p95_seconds": 201.6,
+          "rooms_by_328_ticks": 150,
+          "rooms_by_3m22": 190,
+          "eligible_tick_histogram": {
+            "308": 2,
+            "312": 12,
+            "316": 24,
+            "320": 47,
+            "324": 33,
+            "328": 32,
+            "332": 25,
+            "336": 14,
+            "340": 5,
+            "348": 3,
+            "352": 1
+          }
+        },
+        "after": {
+          "rooms": 200,
+          "completed": 200,
+          "eligible": 198,
+          "wave19_failures": 2,
+          "mean_seconds": 195.3455,
+          "p5_ticks": 312,
+          "p95_ticks": 340,
+          "p5_seconds": 187.2,
+          "p95_seconds": 204.0,
+          "rooms_by_328_ticks": 144,
+          "rooms_by_3m22": 183,
+          "eligible_tick_histogram": {
+            "308": 2,
+            "312": 10,
+            "316": 24,
+            "320": 43,
+            "324": 34,
+            "328": 31,
+            "332": 21,
+            "336": 16,
+            "340": 9,
+            "344": 1,
+            "348": 5,
+            "352": 1,
+            "356": 1
+          }
+        },
+        "earlier": 24,
+        "same": 140,
+        "later": 36,
+        "gained_deadline": 9,
+        "lost_deadline": 15,
+        "mean_delta_ticks": 0.9,
+        "pre_cap_total_delta": 7
+      },
+      "retained": false,
+      "behavior": "With an early mage attack on north, the first south pipe moved from a mean age of 6.45 to 4.89 ticks in the 56 qualifying rooms. Last-wave-16 retries rose from 76 to 93."
+    },
+    "mage_cardinal_contact": {
+      "control": "early-recovery-280",
+      "test": "mage15-contact-pair200",
+      "result": {
+        "rooms": 200,
+        "before": {
+          "rooms": 200,
+          "completed": 200,
+          "eligible": 198,
+          "wave19_failures": 2,
+          "mean_seconds": 194.8,
+          "p5_ticks": 312,
+          "p95_ticks": 340,
+          "p5_seconds": 187.2,
+          "p95_seconds": 204.0,
+          "rooms_by_328_ticks": 146,
+          "rooms_by_3m22": 189,
+          "eligible_tick_histogram": {
+            "308": 2,
+            "312": 12,
+            "316": 27,
+            "320": 38,
+            "324": 38,
+            "328": 29,
+            "332": 30,
+            "336": 12,
+            "340": 6,
+            "344": 4
+          }
+        },
+        "after": {
+          "rooms": 200,
+          "completed": 200,
+          "eligible": 195,
+          "wave19_failures": 5,
+          "mean_seconds": 194.8677,
+          "p5_ticks": 312,
+          "p95_ticks": 340,
+          "p5_seconds": 187.2,
+          "p95_seconds": 204.0,
+          "rooms_by_328_ticks": 144,
+          "rooms_by_3m22": 183,
+          "eligible_tick_histogram": {
+            "308": 2,
+            "312": 13,
+            "316": 28,
+            "320": 34,
+            "324": 41,
+            "328": 26,
+            "332": 25,
+            "336": 11,
+            "340": 9,
+            "344": 6
+          }
+        },
+        "earlier": 27,
+        "same": 143,
+        "later": 30,
+        "gained_deadline": 10,
+        "lost_deadline": 12,
+        "mean_delta_ticks": 0.32,
+        "pre_cap_total_delta": 10
+      },
+      "retained": true,
+      "behavior": "The mage spent paid cooldown moving into cardinal contact in 80 rooms. In 200 trials the mage opened on the first policy-ready observation after both smalls were covered in 152 rooms, compared with 135."
+    }
+  },
+  "deterministic_replays": [
+    {
+      "seed": 164046106452635,
+      "run": "south30-food-witness",
+      "role": "ranger",
+      "wave30_birth": 260,
+      "green_tick": 265,
+      "south_originals": [
+        184,
+        185
+      ],
+      "primary": 185,
+      "attack_id": 159,
+      "fix": "At 65 HP the ranger deferred a finite manta by one tick, launched a black chin, healed to 87 at tick 266 and dealt 2 and 8 damage on tick 268. Previously it ate at tick 265 and never threw the chin.",
+      "boss_ticks": 336
+    },
+    {
+      "seed": 120739708142431,
+      "run": "mage15-contact-witness",
+      "role": "mage",
+      "fix": "The ranger rolled lethal damage on the second east-15 small at tick 114. With coverage observable at tick 115 both parents received attacks on tick 116. The mage previously reached its parent on tick 117."
+    },
+    {
+      "seed": 23055301678632,
+      "run": "pipe-east21-witness",
+      "role": "ranger",
+      "fix": "The east-21 chin left a 4-HP original. A blowpipe shot at 179 landed at 181, and west 22 opened at 184. The previous west-22 opener was 188.",
+      "boss_ticks_before": 328,
+      "boss_ticks_after": 320
+    },
+    {
+      "seed": 164046106452528,
+      "run": "west26-order-528",
+      "role": "mage",
+      "fix": "The mage killed west 26 with Eye at 237, used Dinh at 244 and killed east 24 with scythe at 249."
+    },
+    {
+      "seed": 164046106452595,
+      "run": "west26-order-595",
+      "role": "mage",
+      "fix": "West 26 received Eye at 230 and 233 and died, then the east-24 parent died from the scheduled Dinh at 241."
+    },
+    {
+      "seed": 164046106452635,
+      "run": "west-return-29-witness",
+      "role": "mage",
+      "fix": "The mage moved in from the west, kept the tick-260 Eye and used scythe on south 29 at 263. The parent died at 264."
+    }
+  ],
+  "tests": {
+    "java_role_tests": 442,
+    "native_bot_integration": {
+      "tests": 66,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "python_tests": 58,
+    "python_skipped": 4
+  }
+}

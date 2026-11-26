@@ -1,0 +1,41 @@
+--- a/RangerPreCapPlanner.java
++++ b/RangerPreCapPlanner.java
+@@ -175,6 +175,9 @@
+ 		int serviceTick = Math.max(tick, ready);
+ 		if (choices.stream().anyMatch(p -> capClearanceSmall(p, room)))
+ 			choices.removeIf(p -> !capClearanceSmall(p, room));
++		else if (choices.stream().noneMatch(p -> strategy.confirmedFollowup(last(p), serviceTick))
++			&& choices.stream().anyMatch(p -> budgetedWest19Followup(p, room, serviceTick)))
++			choices.removeIf(p -> !budgetedWest19Followup(p, room, serviceTick));
+ 		else if (RangerStrategy.wave18Released(room, serviceTick) && choices.stream()
+ 			.anyMatch(p -> last(p).target.big && last(p).target.wave == 18))
+ 			choices.removeIf(p -> !last(p).target.big || last(p).target.wave != 18);
+@@ -265,6 +268,28 @@
+ 			if (tick + travel <= due && (best == null || due < best.due)) best = new Opportunity(due, Weapon.PIPE, stage);
+ 		}
+ 		return best;
++	}
++
++	private boolean budgetedWest19Followup(Plan plan, Room room, int tick)
++	{
++		if (plan.shots.size() != 1 || room.wave != 19 || tick < room.ready || room.spawns[19] < 0
++			|| tick < room.spawns[19] + 8 || tick > room.spawns[19] + 14) return false;
++		Shot shot = plan.shots.get(0);
++		Crab west = shot.decision.target;
++		if (shot.tick != tick || !west.big || west.wave != 19 || west.lane != Lane.WEST
++			|| shot.decision.weapon != Weapon.EYE || !strategy.opened(west)
++			|| west.pendingDamage < 0 || west.pendingDamage >= west.hp || west.hp - west.pendingDamage > 8
++			|| west.distance(room.player) > Weapon.EYE.range || room.obstructed.contains(west.key)) return false;
++		List<Crab> parents = room.crabs.stream().filter(c -> c.big && c.wave == 18 && c.hp > 0 && !c.dying && !c.nulled)
++			.collect(Collectors.toList());
++		if (parents.stream().anyMatch(c -> c.pendingDamage < 0)) return false;
++		parents.removeIf(c -> c.claimed(tick) || c.awaitingHit(tick));
++		if (parents.isEmpty() || parents.stream().anyMatch(strategy::opened)) return false;
++		int shots = parents.stream().mapToInt(c -> Math.max(1, (c.hp - c.pendingDamage + 7) / 8)).sum();
++		int deadline = Math.min(room.spawns[19] + 17, parents.stream().mapToInt(c -> c.born + 26).min().getAsInt());
++		// Actual covered18 parents release one supported West19 Eye follow-up, while every
++		// remaining18 work unit and the earliest20 West bow still fit. Normal rolls may need recovery.
++		return tick + Weapon.EYE.cooldown + (shots - 1) * Weapon.PIPE.cooldown + 2 <= deadline;
+ 	}
+ 
+ 	private boolean capClearanceSmall(Plan plan, Room room)

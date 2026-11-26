@@ -1,0 +1,164 @@
+--- a/org/localscape/nylocas/mage/MageStrategy.java
++++ b/org/localscape/nylocas/mage/MageStrategy.java
+@@ -83,6 +83,8 @@
+ 		// Read-only native utility observations; the optional packet never credits an uncast spell.
+ 		public boolean extraDinh25Enabled;
+ 		public boolean rangerWest19PacketFeasible;
++		// Native observation: the controlled ranger can cover the local normal scratch.
++		public boolean rangerEast7ScratchFeasible;
+ 		public int deathChargeStacks, deathChargeExpiry;
+ 		public int specialRegenAt = -1, specialRegenInterval = 25;
+ 		public Room() { Arrays.fill(spawns, -1); }
+@@ -243,7 +245,15 @@
+ 	private List<Window> windows(Room room, int tick)
+ 	{
+ 		List<Window> result = new ArrayList<>();
+-		int s11 = spawn(room, 11, tick), s12 = spawn(room, 12, tick), s21 = spawn(room, 21, tick), s22 = spawn(room, 22, tick), s28 = spawn(room, 28, tick);
++		int s8 = spawn(room, 8, tick), s11 = spawn(room, 11, tick), s12 = spawn(room, 12, tick), s21 = spawn(room, 21, tick), s22 = spawn(room, 22, tick), s28 = spawn(room, 28, tick);
++		// The urgent8 opening keeps the same cooldown and west-return budget.
++		if (s8 >= 0 && room.wave <= 8
++			&& (room.wave == 8 || room.crabs.stream().noneMatch(c -> c.wave == 7 && c.lane == Lane.EAST
++				&& !c.big && c.style == Style.MELEE && eligible(room, c, tick)
++				&& (!room.rangerEast7ScratchFeasible || c.partnerNulled)))
++			&& (room.wave < 8 || room.crabs.stream().anyMatch(c ->
++			c.wave == 8 && c.lane == Lane.WEST && c.big && !opened.contains(c.key) && eligible(room, c, tick))))
++			result.add(new Window("West big 8", s8, s8 + 2, Weapon.EYE, 3290, 4249));
+ 		if (s11 >= 0 && room.wave < 29) result.add(new Window("East barrage 11", s11, s11 + 1, Weapon.BARRAGE, 3301, 4249));
+ 		if (s12 >= 0 && room.wave < 29)
+ 		{
+@@ -277,6 +287,7 @@
+ 			boolean identity;
+ 			switch (window.name)
+ 			{
++				case "West big 8": identity = c.wave == 8 && c.lane == Lane.WEST && c.big; break;
+ 				case "South big 29": identity = c.wave == 29 && c.lane == Lane.SOUTH && c.big; break;
+ 				case "East barrage 11": identity = c.wave == 11 && c.lane == Lane.EAST && !c.big; break;
+ 				case "12 east scythe": identity = c.wave == 12 && c.lane == Lane.EAST && !c.big; break;
+@@ -303,6 +314,7 @@
+ 			{
+ 				switch (window.name)
+ 				{
++					case "West big 8": return c.wave == 8 && c.lane == Lane.WEST && c.big;
+ 					case "South big 29": return c.wave == 29 && c.lane == Lane.SOUTH && c.big;
+ 					case "East barrage 11": return c.wave == 11 && c.lane == Lane.EAST && !c.big;
+ 					case "12 east scythe": return c.wave == 12 && c.lane == Lane.EAST && !c.big;
+@@ -654,7 +666,9 @@
+ 	private boolean guidanceDeferred(Room room, Crab c, int tick)
+ 	{
+ 		// Jordan's opening leaves the wave-3 lane melee for natural expiry.
+-		if (!c.big && c.wave == 3 && c.lane != Lane.SPLIT && c.style == Style.MELEE) return true;
++		if (!c.big && (c.wave == 1 || c.wave == 3) && c.lane != Lane.SPLIT && c.style == Style.MELEE) return true;
++		if (room.rangerEast7ScratchFeasible && !c.big && c.wave == 7 && c.lane == Lane.EAST
++			&& c.style == Style.MELEE && !c.partnerNulled) return true;
+ 		// One south-11 Ayak precedes opening west-11, leaving that parent's
+ 		// children until the wave-13 admission. A NULL/claimed south can yield.
+ 		if (c.big && c.wave == 11 && c.lane == Lane.WEST && !completed.contains("South magic 11")
+--- a/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ b/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -162,7 +162,7 @@
+ 		for (int i = 0; i < room.crabs.size(); i++)
+ 		{
+ 			Crab crab = room.crabs.get(i);
+-			if (crab.dying || crab.nulled || plan.hp[i] <= 0) continue;
++			if (crab.dying || crab.nulled || RangerStrategy.avoidedOriginalMelee(crab) || plan.hp[i] <= 0) continue;
+ 			for (Weapon weapon : Weapon.values())
+ 			{
+ 				for (int at = ready; at <= now + HORIZON; at++)
+@@ -189,7 +189,8 @@
+ 						&& RangerStrategy.RULES.stream().anyMatch(r -> r.wave == 10 && r.matches(crab)
+ 							&& !strategy.completed(r) && age <= r.last)) continue;
+ 					// All 40 vetted south-3 witnesses chin one matching ranged victim in this opening window.
+-					boolean singleSouthOpening = rule != null && "South chin 3".equals(rule.name);
++					boolean singleSouthOpening = rule != null && ("South chin 3".equals(rule.name)
++						|| "South chin 6".equals(rule.name) || "East chin 8".equals(rule.name));
+ 					if (weapon == Weapon.CHIN && !hard && !singleSouthOpening
+ 						&& victims(room, plan, crab, weapon, now, at).size() < 2) continue;
+ 					Decision action = new Decision(crab, weapon, destination,
+--- a/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -303,6 +303,47 @@
+ 		return next != null && "West magic big 19".equals(next.rule.name) ? next.due : -1;
+ 	}
+ 
++	/** Pure handoff proof: local normal claws, bounded cooldown, and protected work checked.
++	 * The native adapter separately verifies controlled role, weapon, food and action delay. */
++	public int east7ScratchDue(Room room, int tick)
++	{
++		return east7ScratchDue(room, tick, 2);
++	}
++
++	private int east7ScratchDue(Room room, int tick, int lookahead)
++	{
++		if (room.wave < 7 || room.wave > 8) return -1;
++		int due = Math.max(tick, room.ready);
++		if (due > tick + lookahead) return -1;
++		Crab target = room.crabs.stream().filter(c -> c.wave == 7 && c.lane == Lane.EAST && c.slot == 'N' && !c.big
++			&& c.style == Style.MELEE && c.hp > 0 && !c.dying && !c.nulled && !c.claimed(tick) && !c.awaitingHit(tick)
++			&& due - c.born >= 9 && due - c.born <= 12
++			// After age9 native target movement can turn; only promise an already local ready scratch.
++			&& (due == tick || due - c.born == 9) && east7ScratchStand(room, c, tick, due)
++			&& !room.obstructed.contains(c.key)).findFirst().orElse(null);
++		if (target == null) return -1;
++		for (Crab c : room.crabs)
++		{
++			if (c == target || c.hp <= 0 || c.dying || c.nulled || c.claimed(tick) || c.awaitingHit(tick)) continue;
++			if (c.key == latestAttack || c.big && assignedBig(c, room, tick - c.born)) return -1;
++		}
++		Reservation next = reservation(room, tick);
++		if (next != null && due + Math.max(Weapon.CLAWS.cooldown, (target.point.distanceTo(next.rule.stage) + 1) / 2) > next.due) return -1;
++		int s8 = room.spawns[8] >= 0 ? room.spawns[8] : room.spawns[7] >= 0 ? room.spawns[7] + DELAYS[7] : -1;
++		if (s8 >= 0 && due + Math.max(Weapon.CLAWS.cooldown, (target.point.distanceTo(tile(3301, 4248)) + 1) / 2) > s8 + 4) return -1;
++		return due;
++	}
++
++	private boolean east7ScratchStand(Room room, Crab target, int tick, int due)
++	{
++		if (due == tick) return target.distance(room.player) <= Weapon.CLAWS.range;
++		if (target.distance(room.player) > 3) return false;
++		Tile point = AttackTiming.position(target.point, target.lane.ordinal(), tick - target.born, due + 1 - tick);
++		Tile stand = AttackTiming.attackTile(room.player, point, false, Weapon.CLAWS.range);
++		return AttackTiming.distance(stand, point, false) <= Weapon.CLAWS.range
++			&& (room.player.distanceTo(stand) + 1) / 2 <= due - tick;
++	}
++
+ 	boolean committed(Decision decision, int tick) { return intent.matches(decision.target.key, decision.weapon, tick); }
+ 
+ 	boolean confirmedFollowup(Decision decision, int tick)
+@@ -318,13 +359,24 @@
+ 		if (room.wave == 0) return prepare(Weapon.BOW, tile(3292, 4249), "Opening setup");
+ 		if (room.wave == 31 && finalPacketFinished(room, tick)) room.cleanup = true;
+ 		Reservation next = reservation(room, tick);
++		int scratchDue = east7ScratchDue(room, tick, room.ready > tick ? 3 : 2);
++		if (scratchDue >= tick)
++		{
++			Crab target = room.crabs.stream().filter(c -> c.wave == 7 && c.lane == Lane.EAST && c.slot == 'N' && !c.big).findFirst().get();
++			if (scratchDue > tick)
++			{
++				Tile point = AttackTiming.position(target.point, target.lane.ordinal(), tick - target.born, scratchDue + 1 - tick);
++				return prepare(Weapon.CLAWS, AttackTiming.attackTile(room.player, point, false, Weapon.CLAWS.range), "Prepare East7 melee scratch");
++			}
++			return new Decision(target, Weapon.CLAWS, target.point, false, "East melee scratch 7", "East7 melee scratch");
++		}
+ 		if (room.wave < 20) return preCap.decide(room, tick, next);
+ 		Crab lastLiving = room.wave == 31 ? lastLiving(room) : null;
+ 		List<Candidate> candidates = new ArrayList<>();
+ 		for (Crab crab : room.crabs)
+ 		{
+ 			int age = tick - crab.born;
+-			if (crab.hp <= 0 || crab.dying || crab.nulled || savedMagePrimary(crab, tick)
++			if (crab.hp <= 0 || crab.dying || crab.nulled || avoidedOriginalMelee(crab) || savedMagePrimary(crab, tick)
+ 				|| crab != lastLiving && crab.claimed(tick) || crab.awaitingHit(tick)
+ 				|| age >= 49 || crab.big && crab.wave < 20 && room.wave < 29
+ 					&& !(room.wave == 20 && crab.wave == 18)
+@@ -627,6 +679,11 @@
+ 			|| c.wave == 21 && c.lane == Lane.WEST && tick - c.born <= 2);
+ 	}
+ 
++	static boolean avoidedOriginalMelee(Crab crab)
++	{
++		return crab.wave == 1 && !crab.big && crab.lane == Lane.EAST && crab.slot == 'N';
++	}
++
+ 	static boolean savedMagePrimary(Crab crab, int tick)
+ 	{
+ 		int age = tick - crab.born;

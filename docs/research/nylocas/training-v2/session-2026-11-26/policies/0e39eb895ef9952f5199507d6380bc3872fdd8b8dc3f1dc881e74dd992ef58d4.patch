@@ -1,0 +1,199 @@
+--- a/org/localscape/nylocas/mage/MageStrategy.java
++++ b/org/localscape/nylocas/mage/MageStrategy.java
+@@ -5,6 +5,8 @@
+ import java.util.Comparator;
+ import java.util.HashSet;
+ import java.util.List;
++import java.util.Map;
++import java.util.HashMap;
+ import java.util.Set;
+ import org.localscape.nylocas.Tile;
+ import org.localscape.nylocas.NylocasFlickers;
+@@ -163,8 +165,11 @@
+ 	private final Set<Integer> opened = new HashSet<>();
+ 	private final AttackIntent<Weapon> intent = new AttackIntent<>();
+ 	private int scythe12 = -1, barrage21 = -1;
+-
+-	public void reset() { completed.clear(); opened.clear(); intent.clear(); scythe12 = barrage21 = -1; }
++	private final Map<Integer, Integer> parentDeathSeen = new HashMap<>();
++	private int freshWaitWave = -1;
++	private int freshWaitUntil = -1;
++
++	public void reset() { completed.clear(); opened.clear(); intent.clear(); scythe12 = barrage21 = -1; parentDeathSeen.clear(); freshWaitWave = -1; freshWaitUntil = -1; }
+ 
+ 	public void attacked(Decision decision, int observationTick)
+ 	{
+@@ -174,6 +179,7 @@
+ 	public void attacked(Decision decision, int observationTick, int requestTick)
+ 	{
+ 		intent.clear();
++		freshWaitWave = -1; freshWaitUntil = -1;
+ 		if (decision.rule != null) completed.add(decision.rule);
+ 		opened.add(decision.target.key);
+ 		// AnimationChanged can precede the next GameTick counter increment.
+@@ -367,6 +373,8 @@
+ 
+ 	public Decision decide(Room room, int tick)
+ 	{
++		for (Crab c : room.crabs) if (c.big && c.dying && c.hp <= 0) parentDeathSeen.putIfAbsent(c.key, tick);
++		parentDeathSeen.keySet().removeIf(k -> room.crabs.stream().noneMatch(c -> c.key == k));
+ 		if (room.wave == 0) return stage(room.shadowOpening ? Weapon.SHADOW : Weapon.EYE, tile(3296, 4244), "Opening south setup");
+ 		if (room.wave == 1 && room.spawns[1] >= 0 && tick < room.spawns[1] + 1)
+ 			return stage(room.shadowOpening ? Weapon.SHADOW : Weapon.EYE, tile(3296, 4244), "Opening south setup");
+@@ -492,6 +500,8 @@
+ 		Candidate best = candidates.stream().min(priority).orElse(null);
+ 		if (best != null)
+ 		{
++			Decision fresh = anticipateFresh(room, tick, best, next, candidates);
++			if (fresh != null) { intent.clear(); return fresh; }
+ 			Candidate selected = best;
+ 			// Keep an equally early commitment within the same rotation step;
+ 			// useful earlier attacks and reserved packets can replace an approach.
+@@ -552,6 +562,65 @@
+ 			room.wave == 31 ? "Clear wave 30 and 31 survivors" : "Clear complete; stage");
+ 	}
+ 
++	private Decision anticipateFresh(Room room, int tick, Candidate old, Window next, List<Candidate> candidates)
++	{
++		Crab target = old.decision.target;
++		if (room.wave >= 20 || tick < room.ready || room.wave - target.wave < 4 || target.big
++			|| old.decision.rule != null || target.partnerNulled || next != null && next.due <= tick + 2) return null;
++		// An observed fresh target can justify a bounded approach, never a fabricated attack.
++		for (Candidate fresh : candidates)
++		{
++			Crab c = fresh.decision.target;
++			if (c.born < tick - 2 || c.wave <= target.wave || fresh.at <= tick || fresh.at > tick + 2) continue;
++			Decision wait = waitForFresh(room.wave, "seen:" + c.key, fresh.at, tick, fresh.decision.weapon, fresh.position);
++			if (wait != null) { wait.approach = c; return wait; }
++		}
++		int upcoming = room.wave + 1, born = spawn(room, upcoming, tick);
++		if (born >= tick && born <= tick + 2)
++		{
++			for (Assignment a : ASSIGNMENTS)
++			{
++				if (a.wave != upcoming) continue;
++				Tile origin = a.lane == Lane.WEST ? tile(3281, a.big || a.slot == 'S' ? 4248 : 4249)
++					: a.lane == Lane.EAST ? tile(a.big ? 3309 : 3310, a.big || a.slot == 'S' ? 4248 : 4249)
++					: tile(a.big || a.slot == 'W' ? 3295 : 3296, 4233);
++				for (int at = Math.max(tick, born); at <= tick + 2; at++)
++				{
++					Tile point = AttackTiming.position(origin, a.lane.ordinal(), 0, at + 1 - born);
++					Tile position = AttackTiming.attackTile(room.player, point, a.big, a.weapon.range);
++					int travel = Math.max(0, (room.player.distanceTo(position) + 1) / 2 - 1);
++					int back = next == null ? 0 : (position.distanceTo(next.stage) + 1) / 2;
++					if (tick + travel > at || AttackTiming.distance(position, point, a.big) > a.weapon.range
++						|| next != null && at + Math.max(a.weapon.cooldown, back) > next.due) continue;
++					Decision wait = waitForFresh(room.wave, "lane:" + upcoming, Math.max(tick + 1, at), tick, a.weapon, a.stage);
++					if (wait != null) return wait;
++					break;
++				}
++			}
++		}
++		// Big combat death is five animation ticks, plus up to three moving ticks.
++		// Predict only the observed late body interval; a missed forecast releases in two ticks.
++		for (Crab parent : room.crabs)
++		{
++			Integer seen = parentDeathSeen.get(parent.key);
++			if (seen == null || parent.wave <= target.wave) continue;
++			int birth = seen + 7;
++			if (birth <= tick || birth > tick + 2) continue;
++			Tile position = AttackTiming.attackTile(room.player, parent.point, true, 1);
++			if (next != null && birth + (position.distanceTo(next.stage) + 1) / 2 > next.due) continue;
++			Decision wait = waitForFresh(room.wave, "parent:" + parent.key, birth, tick, Weapon.EYE, position);
++			if (wait != null) return wait;
++		}
++		return null;
++	}
++
++	private Decision waitForFresh(int wave, String key, int at, int tick, Weapon weapon, Tile position)
++	{
++		if (freshWaitWave != wave) { freshWaitWave = wave; freshWaitUntil = Math.min(tick + 1, at - 1); }
++		if (tick > freshWaitUntil) return null;
++		return stage(weapon, position, "Wait for fresh crab: " + key);
++	}
++
+ 	private static final class Candidate
+ 	{
+ 		final Decision decision;
+@@ -653,8 +722,8 @@
+ 
+ 	private boolean guidanceDeferred(Room room, Crab c, int tick)
+ 	{
+-		// Jordan's opening leaves the wave-3 lane melee for natural expiry.
+-		if (!c.big && c.wave == 3 && c.lane != Lane.SPLIT && c.style == Style.MELEE) return true;
++		// Jordan never targets the original wave-1 melee, and leaves wave-3 lane melee for expiry.
++		if (!c.big && (c.wave == 1 || c.wave == 3) && c.lane != Lane.SPLIT && c.style == Style.MELEE) return true;
+ 		// One south-11 Ayak precedes opening west-11, leaving that parent's
+ 		// children until the wave-13 admission. A NULL/claimed south can yield.
+ 		if (c.big && c.wave == 11 && c.lane == Lane.WEST && !completed.contains("South magic 11")
+--- a/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ b/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -109,6 +109,7 @@
+ 		// Preserve the explicit opening order, including its one-tick scratch approach.
+ 		int opening = choices.stream().mapToInt(p -> openingOrder(last(p))).min().getAsInt();
+ 		if (opening != Integer.MAX_VALUE) choices.removeIf(p -> openingOrder(last(p)) != opening);
++		preferFreshWithinTwo(choices, room);
+ 		// Keep attacking while ready; use cooldown to reach a big that needs service.
+ 		if (tick >= ready) keepEarliest(choices);
+ 		// Spend the first feasible opening bow tick before ordinary clearing.
+@@ -126,6 +127,28 @@
+ 			&& RangerStrategy.transitionLane(last(p).target) > lane);
+ 	}
+ 
++	private void preferFreshWithinTwo(List<Plan> choices, Room room)
++	{
++		int earliest = choices.stream().mapToInt(p -> p.shots.get(p.shots.size() - 1).tick).min().getAsInt();
++		if (choices.stream().noneMatch(p -> p.shots.get(p.shots.size() - 1).tick == earliest
++			&& last(p).rule == null && !last(p).target.big && room.wave - last(p).target.wave >= 4)) return;
++		if (choices.stream().filter(p -> p.shots.get(p.shots.size() - 1).tick == earliest).anyMatch(p ->
++			last(p).target.wave < room.wave - 1
++				&& (last(p).rule != null || last(p).target.big || room.wave - last(p).target.wave < 4))) return;
++		if (choices.stream().anyMatch(p -> p.shots.get(p.shots.size() - 1).tick <= earliest + 2
++			&& (last(p).rule != null || last(p).target.big) && last(p).target.wave < room.wave - 1)) return;
++		List<Plan> fresh = choices.stream().filter(p -> p.shots.get(p.shots.size() - 1).tick <= earliest + 2
++			&& last(p).target.wave >= room.wave - 1)
++			.filter(p -> !(last(p).weapon == Weapon.BOW && last(p).rule == null
++				&& choices.stream().anyMatch(f -> last(f).target.key == last(p).target.key && last(f).weapon == Weapon.PIPE
++					&& last(f).rule != null && f.shots.get(f.shots.size() - 1).tick <= earliest + 2)))
++			.collect(Collectors.toList());
++		if (fresh.isEmpty() || fresh.stream().mapToInt(p -> p.shots.get(p.shots.size() - 1).tick).min().getAsInt() <= earliest) return;
++		// Only the newly permitted one/two-tick wait changes here. Existing ready
++		// survivor/cluster choices and protected work retain their normal priorities.
++		choices.retainAll(fresh);
++	}
++
+ 	private int openingOrder(Decision decision)
+ 	{
+ 		Crab target = decision.target;
+@@ -162,7 +185,7 @@
+ 		for (int i = 0; i < room.crabs.size(); i++)
+ 		{
+ 			Crab crab = room.crabs.get(i);
+-			if (crab.dying || crab.nulled || plan.hp[i] <= 0) continue;
++			if (crab.dying || crab.nulled || RangerStrategy.avoidedOriginalMelee(crab) || plan.hp[i] <= 0) continue;
+ 			for (Weapon weapon : Weapon.values())
+ 			{
+ 				for (int at = ready; at <= now + HORIZON; at++)
+--- a/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -324,7 +324,7 @@
+ 		for (Crab crab : room.crabs)
+ 		{
+ 			int age = tick - crab.born;
+-			if (crab.hp <= 0 || crab.dying || crab.nulled || savedMagePrimary(crab, tick)
++			if (crab.hp <= 0 || crab.dying || crab.nulled || avoidedOriginalMelee(crab) || savedMagePrimary(crab, tick)
+ 				|| crab != lastLiving && crab.claimed(tick) || crab.awaitingHit(tick)
+ 				|| age >= 49 || crab.big && crab.wave < 20 && room.wave < 29
+ 					&& !(room.wave == 20 && crab.wave == 18)
+@@ -627,6 +627,11 @@
+ 			|| c.wave == 21 && c.lane == Lane.WEST && tick - c.born <= 2);
+ 	}
+ 
++	static boolean avoidedOriginalMelee(Crab crab)
++	{
++		return crab.wave == 1 && !crab.big && crab.lane == Lane.EAST && crab.slot == 'N';
++	}
++
+ 	static boolean savedMagePrimary(Crab crab, int tick)
+ 	{
+ 		int age = tick - crab.born;

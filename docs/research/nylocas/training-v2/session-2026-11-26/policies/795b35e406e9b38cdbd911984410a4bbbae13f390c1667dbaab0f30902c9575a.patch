@@ -1,0 +1,51 @@
+--- a/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -420,12 +420,12 @@
+ 			}
+ 		}
+ 
+-		if (room.wave == 31)
++		if (room.wave >= 30)
+ 		{
+ 			for (Crab crab : room.crabs)
+ 			{
+ 				int age = tick - crab.born;
+-				if (dimmed(room, crab) || !crab.partnerNulled || crab.hp <= 0 || crab.dying || crab.nulled
++				if (!freshCleanup(room, crab) || !crab.partnerNulled || crab.hp <= 0 || crab.dying || crab.nulled
+ 					|| age >= 49 || crab.awaitingHit(tick)) continue;
+ 				Rule rule = RULES.stream().filter(r -> !completed.contains(r.name) && r.matches(crab)
+ 					&& age >= r.first && age <= r.last && r.weapon.style == crab.style)
+@@ -437,7 +437,7 @@
+ 					rule == null ? null : rule.name, "Partner NULL cleanup rescue");
+ 				add(candidates, room, next, rescue, 25000 - age * 40, tick, crab.born + 48);
+ 			}
+-			prioritizeCleanupRescue(candidates);
++			prioritizeCleanupRescue(candidates, room);
+ 		}
+ 
+ 		preferTransitionLane(candidates);
+@@ -451,7 +451,7 @@
+ 			.min(Comparator.comparingInt((Candidate c) -> -c.score)).orElse(null);
+ 		// The conditional west-24 Eye window takes priority over filler planned before the flicker.
+ 		if (west24 != null) best = west24;
+-		else if (!(room.wave == 31 && best.decision.target.partnerNulled))
++		else if (!(room.wave >= 30 && freshCleanup(room, best.decision.target) && best.decision.target.partnerNulled))
+ 			best = candidates.stream().filter(c -> c.at == earliest && committed(c.decision, tick))
+ 			.min(Comparator.comparingInt((Candidate c) -> -c.score)).orElse(best);
+ 		if (best.at <= tick || tick >= room.ready && !room.obstructed.contains(best.decision.target.key))
+@@ -478,12 +478,12 @@
+ 		return last;
+ 	}
+ 
+-	private static void prioritizeCleanupRescue(List<Candidate> candidates)
++	private static void prioritizeCleanupRescue(List<Candidate> candidates, Room room)
+ 	{
+ 		int earliest = candidates.stream().mapToInt(c -> c.at).min().orElse(Integer.MAX_VALUE);
+-		if (candidates.stream().noneMatch(c -> c.at == earliest && c.decision.target.partnerNulled)) return;
++		if (candidates.stream().noneMatch(c -> c.at == earliest && freshCleanup(room, c.decision.target) && c.decision.target.partnerNulled)) return;
+ 		boolean protectedWork = candidates.stream().anyMatch(c -> c.at == earliest && protectedCleanupWork(c));
+-		candidates.removeIf(c -> c.at == earliest && (protectedWork ? !protectedCleanupWork(c) : !c.decision.target.partnerNulled));
++		candidates.removeIf(c -> c.at == earliest && (protectedWork ? !protectedCleanupWork(c) : !freshCleanup(room, c.decision.target) || !c.decision.target.partnerNulled));
+ 	}
+ 
+ 	private static boolean protectedCleanupWork(Candidate candidate)

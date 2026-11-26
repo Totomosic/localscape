@@ -1,0 +1,1175 @@
+{
+  "run": ".state/simulations/training-v5-20261126-guided-chase-west9-300",
+  "counts": {
+    "unhit_old_before_observed_local_split": 12,
+    "conservative_model_due_later": 11,
+    "model_due_within_two": 1
+  },
+  "events": [
+    {
+      "seed": 2789165362232,
+      "shot": {
+        "tick": 93,
+        "wave": 12,
+        "target": {
+          "key": 28,
+          "wave": 8,
+          "born": 52,
+          "lane": "east",
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "x": 3301,
+          "y": 4245,
+          "dying": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "xy": [
+          3296,
+          4246,
+          0
+        ],
+        "already_hit": false,
+        "other_null": false,
+        "population": 12,
+        "weapon": "PIPE",
+        "reason": "Pre-cap plan: PIPE #34 @93 \u2192 EYE #62 @95 \u2192 EYE #54 @98"
+      },
+      "future": [
+        {
+          "body": {
+            "key": 58,
+            "wave": 12,
+            "born": 95,
+            "lane": "split",
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3293,
+            "y": 4245,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 46,
+                "removed": 95,
+                "first": 89,
+                "wave": 11,
+                "born": 76,
+                "lane": "west"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        },
+        {
+          "body": {
+            "key": 59,
+            "wave": 12,
+            "born": 95,
+            "lane": "split",
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3294,
+            "y": 4246,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 46,
+                "removed": 95,
+                "first": 89,
+                "wave": 11,
+                "born": 76,
+                "lane": "west"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        }
+      ]
+    },
+    {
+      "seed": 2789165362267,
+      "shot": {
+        "tick": 50,
+        "wave": 7,
+        "target": {
+          "key": 4,
+          "wave": 2,
+          "born": 8,
+          "lane": "west",
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4254,
+          "dying": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "xy": [
+          3299,
+          4246,
+          0
+        ],
+        "already_hit": false,
+        "other_null": false,
+        "population": 10,
+        "weapon": "EYE",
+        "reason": "Pre-cap plan: EYE #10 @50 \u2192 PIPE #27 @53 \u2192 EYE #24 @55"
+      },
+      "future": [
+        {
+          "body": {
+            "key": 26,
+            "wave": 8,
+            "born": 52,
+            "lane": "split",
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4238,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 23,
+                "removed": 52,
+                "first": 46,
+                "wave": 7,
+                "born": 40,
+                "lane": "south"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        },
+        {
+          "body": {
+            "key": 27,
+            "wave": 8,
+            "born": 52,
+            "lane": "split",
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4239,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 23,
+                "removed": 52,
+                "first": 46,
+                "wave": 7,
+                "born": 40,
+                "lane": "south"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        }
+      ]
+    },
+    {
+      "seed": 2789165362274,
+      "shot": {
+        "tick": 132,
+        "wave": 17,
+        "target": {
+          "key": 61,
+          "wave": 13,
+          "born": 96,
+          "lane": "west",
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3294,
+          "y": 4247,
+          "dying": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "xy": [
+          3295,
+          4247,
+          0
+        ],
+        "already_hit": false,
+        "other_null": false,
+        "population": 10,
+        "weapon": "EYE",
+        "reason": "Pre-cap plan: EYE #67 @132"
+      },
+      "future": [
+        {
+          "body": {
+            "key": 83,
+            "wave": 17,
+            "born": 134,
+            "lane": "split",
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3297,
+            "y": 4247,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 64,
+                "removed": 134,
+                "first": 128,
+                "wave": 13,
+                "born": 96,
+                "lane": "east"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        },
+        {
+          "body": {
+            "key": 84,
+            "wave": 17,
+            "born": 134,
+            "lane": "split",
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3298,
+            "y": 4248,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 64,
+                "removed": 134,
+                "first": 128,
+                "wave": 13,
+                "born": 96,
+                "lane": "east"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        }
+      ]
+    },
+    {
+      "seed": 2789165362335,
+      "shot": {
+        "tick": 84,
+        "wave": 12,
+        "target": {
+          "key": 30,
+          "wave": 8,
+          "born": 52,
+          "lane": "east",
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "x": 3300,
+          "y": 4245,
+          "dying": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "xy": [
+          3295,
+          4247,
+          0
+        ],
+        "already_hit": false,
+        "other_null": false,
+        "population": 16,
+        "weapon": "PIPE",
+        "reason": "Pre-cap plan: PIPE #36 @84 \u2192 EYE #50 @86 \u2192 EYE #53 @89"
+      },
+      "future": [
+        {
+          "body": {
+            "key": 54,
+            "wave": 12,
+            "born": 86,
+            "lane": "split",
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4247,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 34,
+                "removed": 86,
+                "first": 81,
+                "wave": 9,
+                "born": 56,
+                "lane": "west"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 4
+        },
+        {
+          "body": {
+            "key": 55,
+            "wave": 12,
+            "born": 86,
+            "lane": "split",
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4248,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 34,
+                "removed": 86,
+                "first": 81,
+                "wave": 9,
+                "born": 56,
+                "lane": "west"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 4
+        }
+      ]
+    },
+    {
+      "seed": 2789165362366,
+      "shot": {
+        "tick": 133,
+        "wave": 17,
+        "target": {
+          "key": 59,
+          "wave": 13,
+          "born": 92,
+          "lane": "west",
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3295,
+          "y": 4246,
+          "dying": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "xy": [
+          3295,
+          4245,
+          0
+        ],
+        "already_hit": false,
+        "other_null": false,
+        "population": 9,
+        "weapon": "EYE",
+        "reason": "Pre-cap plan: EYE #65 @133 \u2192 EYE #69 @136 \u2192 EYE #77 @139"
+      },
+      "future": [
+        {
+          "body": {
+            "key": 85,
+            "wave": 17,
+            "born": 135,
+            "lane": "split",
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4245,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 62,
+                "removed": 135,
+                "first": 130,
+                "wave": 13,
+                "born": 92,
+                "lane": "east"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 4
+        },
+        {
+          "body": {
+            "key": 86,
+            "wave": 17,
+            "born": 135,
+            "lane": "split",
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3297,
+            "y": 4246,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 62,
+                "removed": 135,
+                "first": 130,
+                "wave": 13,
+                "born": 92,
+                "lane": "east"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 4
+        }
+      ]
+    },
+    {
+      "seed": 2789165362367,
+      "shot": {
+        "tick": 144,
+        "wave": 19,
+        "target": {
+          "key": 68,
+          "wave": 14,
+          "born": 100,
+          "lane": "south",
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4243,
+          "dying": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "xy": [
+          3290,
+          4247,
+          0
+        ],
+        "already_hit": false,
+        "other_null": false,
+        "population": 13,
+        "weapon": "EYE",
+        "reason": "Pre-cap plan: EYE #74 @144 \u2192 EYE #96 @147"
+      },
+      "future": [
+        {
+          "body": {
+            "key": 93,
+            "wave": 19,
+            "born": 145,
+            "lane": "split",
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3287,
+            "y": 4248,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 85,
+                "removed": 145,
+                "first": 138,
+                "wave": 18,
+                "born": 132,
+                "lane": "west"
+              }
+            ]
+          },
+          "delta": 1,
+          "reachable": true,
+          "model_delta": 1
+        },
+        {
+          "body": {
+            "key": 94,
+            "wave": 19,
+            "born": 145,
+            "lane": "split",
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3288,
+            "y": 4249,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 85,
+                "removed": 145,
+                "first": 138,
+                "wave": 18,
+                "born": 132,
+                "lane": "west"
+              }
+            ]
+          },
+          "delta": 1,
+          "reachable": true,
+          "model_delta": 1
+        }
+      ]
+    },
+    {
+      "seed": 2789165362435,
+      "shot": {
+        "tick": 136,
+        "wave": 17,
+        "target": {
+          "key": 61,
+          "wave": 13,
+          "born": 100,
+          "lane": "west",
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3293,
+          "y": 4247,
+          "dying": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "xy": [
+          3294,
+          4247,
+          0
+        ],
+        "already_hit": false,
+        "other_null": false,
+        "population": 9,
+        "weapon": "EYE",
+        "reason": "Pre-cap plan: EYE #67 @136"
+      },
+      "future": [
+        {
+          "body": {
+            "key": 83,
+            "wave": 17,
+            "born": 138,
+            "lane": "split",
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4248,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 64,
+                "removed": 138,
+                "first": 132,
+                "wave": 13,
+                "born": 100,
+                "lane": "east"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        },
+        {
+          "body": {
+            "key": 84,
+            "wave": 17,
+            "born": 138,
+            "lane": "split",
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3297,
+            "y": 4249,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 64,
+                "removed": 138,
+                "first": 132,
+                "wave": 13,
+                "born": 100,
+                "lane": "east"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        }
+      ]
+    },
+    {
+      "seed": 2789165362436,
+      "shot": {
+        "tick": 119,
+        "wave": 15,
+        "target": {
+          "key": 48,
+          "wave": 11,
+          "born": 76,
+          "lane": "south",
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3299,
+          "y": 4244,
+          "dying": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "xy": [
+          3298,
+          4245,
+          0
+        ],
+        "already_hit": false,
+        "other_null": false,
+        "population": 10,
+        "weapon": "EYE",
+        "reason": "Pre-cap plan: EYE #54 @119 \u2192 EYE #79 @122 \u2192 EYE #70 @125"
+      },
+      "future": [
+        {
+          "body": {
+            "key": 78,
+            "wave": 16,
+            "born": 121,
+            "lane": "split",
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4246,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 69,
+                "removed": 121,
+                "first": 115,
+                "wave": 14,
+                "born": 100,
+                "lane": "east"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        },
+        {
+          "body": {
+            "key": 79,
+            "wave": 16,
+            "born": 121,
+            "lane": "split",
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3296,
+            "y": 4247,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 69,
+                "removed": 121,
+                "first": 115,
+                "wave": 14,
+                "born": 100,
+                "lane": "east"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        }
+      ]
+    },
+    {
+      "seed": 2789165362456,
+      "shot": {
+        "tick": 92,
+        "wave": 12,
+        "target": {
+          "key": 30,
+          "wave": 8,
+          "born": 52,
+          "lane": "east",
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "x": 3301,
+          "y": 4245,
+          "dying": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "xy": [
+          3296,
+          4249,
+          0
+        ],
+        "already_hit": false,
+        "other_null": false,
+        "population": 13,
+        "weapon": "PIPE",
+        "reason": "Pre-cap plan: PIPE #36 @92 \u2192 EYE #52 @94 \u2192 EYE #41 @97"
+      },
+      "future": [
+        {
+          "body": {
+            "key": 58,
+            "wave": 12,
+            "born": 94,
+            "lane": "split",
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3292,
+            "y": 4247,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 44,
+                "removed": 94,
+                "first": 88,
+                "wave": 11,
+                "born": 76,
+                "lane": "west"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        },
+        {
+          "body": {
+            "key": 59,
+            "wave": 12,
+            "born": 94,
+            "lane": "split",
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3293,
+            "y": 4248,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 44,
+                "removed": 94,
+                "first": 88,
+                "wave": 11,
+                "born": 76,
+                "lane": "west"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        }
+      ]
+    },
+    {
+      "seed": 2789165362463,
+      "shot": {
+        "tick": 95,
+        "wave": 12,
+        "target": {
+          "key": 32,
+          "wave": 8,
+          "born": 54,
+          "lane": "split",
+          "style": "MAGIC",
+          "big": false,
+          "hp": 8,
+          "x": 3292,
+          "y": 4243,
+          "dying": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "xy": [
+          3296,
+          4247,
+          0
+        ],
+        "already_hit": false,
+        "other_null": false,
+        "population": 10,
+        "weapon": "EYE",
+        "reason": "Pre-cap plan: EYE #38 @95 \u2192 EYE #41 @98 \u2192 EYE #51 @101"
+      },
+      "future": [
+        {
+          "body": {
+            "key": 63,
+            "wave": 13,
+            "born": 97,
+            "lane": "split",
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3294,
+            "y": 4246,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 46,
+                "removed": 97,
+                "first": 91,
+                "wave": 11,
+                "born": 76,
+                "lane": "west"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        },
+        {
+          "body": {
+            "key": 64,
+            "wave": 13,
+            "born": 97,
+            "lane": "split",
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3295,
+            "y": 4247,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 46,
+                "removed": 97,
+                "first": 91,
+                "wave": 11,
+                "born": 76,
+                "lane": "west"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        }
+      ]
+    },
+    {
+      "seed": 2789165362480,
+      "shot": {
+        "tick": 88,
+        "wave": 12,
+        "target": {
+          "key": 32,
+          "wave": 8,
+          "born": 53,
+          "lane": "split",
+          "style": "MAGIC",
+          "big": false,
+          "hp": 4,
+          "x": 3300,
+          "y": 4245,
+          "dying": false,
+          "forecast": [
+            4,
+            0
+          ]
+        },
+        "xy": [
+          3298,
+          4246,
+          0
+        ],
+        "already_hit": false,
+        "other_null": false,
+        "population": 12,
+        "weapon": "EYE",
+        "reason": "Pre-cap plan: EYE #38 @88"
+      },
+      "future": [
+        {
+          "body": {
+            "key": 56,
+            "wave": 12,
+            "born": 90,
+            "lane": "split",
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4251,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 43,
+                "removed": 90,
+                "first": 84,
+                "wave": 10,
+                "born": 68,
+                "lane": "east"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        },
+        {
+          "body": {
+            "key": 57,
+            "wave": 12,
+            "born": 90,
+            "lane": "split",
+            "style": "MAGIC",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4252,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 43,
+                "removed": 90,
+                "first": 84,
+                "wave": 10,
+                "born": 68,
+                "lane": "east"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        }
+      ]
+    },
+    {
+      "seed": 2789165362485,
+      "shot": {
+        "tick": 84,
+        "wave": 12,
+        "target": {
+          "key": 28,
+          "wave": 8,
+          "born": 52,
+          "lane": "east",
+          "style": "RANGE",
+          "big": false,
+          "hp": 8,
+          "x": 3301,
+          "y": 4245,
+          "dying": false,
+          "forecast": [
+            8,
+            0
+          ]
+        },
+        "xy": [
+          3298,
+          4246,
+          0
+        ],
+        "already_hit": false,
+        "other_null": false,
+        "population": 15,
+        "weapon": "PIPE",
+        "reason": "Pre-cap plan: PIPE #34 @84 \u2192 EYE #52 @86 \u2192 EYE #54 @89"
+      },
+      "future": [
+        {
+          "body": {
+            "key": 56,
+            "wave": 12,
+            "born": 86,
+            "lane": "split",
+            "style": "MELEE",
+            "big": false,
+            "hp": 8,
+            "x": 3300,
+            "y": 4251,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 43,
+                "removed": 86,
+                "first": 80,
+                "wave": 10,
+                "born": 68,
+                "lane": "east"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        },
+        {
+          "body": {
+            "key": 57,
+            "wave": 12,
+            "born": 86,
+            "lane": "split",
+            "style": "RANGE",
+            "big": false,
+            "hp": 8,
+            "x": 3301,
+            "y": 4252,
+            "dying": false,
+            "forecast": [
+              8,
+              0
+            ],
+            "parents": [
+              {
+                "key": 43,
+                "removed": 86,
+                "first": 80,
+                "wave": 10,
+                "born": 68,
+                "lane": "east"
+              }
+            ]
+          },
+          "delta": 2,
+          "reachable": true,
+          "model_delta": 3
+        }
+      ]
+    }
+  ],
+  "caveat": "Screen old Ranger primaries against subsequently observed births and actual advance observations.\n\nA future birth alone is not foresight. Known dying-body+7 is conservative; exact\nborn+55 natural expiry is recorded separately. Reach does not prove future ray.\n"
+}

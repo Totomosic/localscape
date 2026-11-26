@@ -1,0 +1,18 @@
+--- a/org/localscape/nylocas/mage/MageStrategy.java
++++ b/org/localscape/nylocas/mage/MageStrategy.java
+@@ -410,6 +410,15 @@
+ 				Decision d = new Decision(c, weapon, a.stage, false, a.name, a.name);
+ 				// Most ordinary offsets are observations, not reasons to lose a ready tick.
+ 				int first = a.name.equals("Deferred east big 13") ? c.born + a.first : tick;
++				// Keep the unopened west11 parent intact while 12 admission moves.
++				// A small offset after actual12 matches the recorded entry sequence;
++				// the existing finite opening deadline and confirmed follow-ups remain.
++				if (a.name.equals("West big 11") && !opened.contains(c.key))
++				{
++					int twelve = spawn(room, 12, tick);
++					int release = Math.max(c.born + 9, twelve < 0 ? c.born + 9 : twelve + 2);
++					first = Math.max(first, Math.min(c.born + a.last, release));
++				}
+ 				// An unopened east/south19 parent keeps one cap slot until its first age3 request.
+ 				if (c.wave == 19 && c.big && !opened.contains(c.key) && (c.lane == Lane.EAST || c.lane == Lane.SOUTH))
+ 					first = Math.max(first, c.born + 3);

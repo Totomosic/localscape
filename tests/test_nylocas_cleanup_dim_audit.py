@@ -7,6 +7,58 @@ from tools.research.nylocas_cleanup_dim_audit import audit, expiry_status, is_di
 
 
 class CleanupDimAuditTests(unittest.TestCase):
+    def test_dim_recovery_tracks_the_original_parent_and_its_role(self):
+        def trace(t, role, wave, bodies, key=-1):
+            return '\t'.join(['NYLO_TRACE', str(t), str(role), str(wave), 'true',
+                              str(key >= 0).lower(), '3295,4248,0', 'PIPE', str(key),
+                              'null', 'test', bodies])
+
+        with tempfile.TemporaryDirectory() as temporary:
+            folder = Path(temporary)
+            (folder / 'trials.csv').write_text(
+                'seed,status,ticks,stalls_by_last_spawned_wave\n'
+                '1,completed,320,' + ';'.join(['0'] * 31) + '\n')
+            born = ('1,30,0,RANGE,true,16,3281,4248,0,0,false;'
+                    '2,30,0,MAGIC,true,16,3310,4248,0,0,false;'
+                    '3,30,0,MAGIC,false,8,3295,4248,0,0,false')
+            at = lambda age: born.replace(',30,0,', f',30,{age},')
+            (folder / 'server.log').write_text('\n'.join([
+                'NYLO_PLAYERS\t0', trace(240, 0, 28, ''), trace(252, 0, 29, ''),
+                trace(256, 0, 30, born), trace(260, 0, 31, at(4), 1),
+                trace(264, 0, 31, at(8), 1), trace(264, 1, 31, at(8), 2),
+                trace(267, 0, 31, at(11), 2), trace(267, 1, 31, at(11), 3),
+            ]) + '\n')
+            result = audit(folder, 16, True)['all_trials']
+            self.assertEqual(2, result['assigned_dimmed_parent_attacks'])
+            self.assertEqual(3, result['other_dimmed_primary_attacks'])
+
+    def test_only_one_scheduled_chin_on_an_original_green_south_small_is_exempt(self):
+        def trace(tick, wave, crabs='', target=-1, rule='null'):
+            return '\t'.join(['NYLO_TRACE', str(tick), '0', str(wave), 'true',
+                              str(target >= 0).lower(), '3293,4248,0', 'CHIN', str(target),
+                              rule, 'South pair', crabs])
+
+        def crab(key, age, x, z):
+            return f'{key},30,{age},RANGE,false,8,{x},{z},0,0,false'
+
+        named = 'South chin flicker 30'
+        with tempfile.TemporaryDirectory() as temporary:
+            folder = Path(temporary)
+            (folder / 'trials.csv').write_text(
+                'seed,status,ticks,stalls_by_last_spawned_wave\n'
+                '123,completed,320,' + ';'.join(['0'] * 31) + '\n')
+            (folder / 'server.log').write_text('\n'.join([
+                'NYLO_PLAYERS\t0', trace(240, 28), trace(252, 29),
+                trace(256, 30, ';'.join([crab(1, 0, 3296, 4233), crab(2, 0, 3295, 4248)])),
+                trace(261, 31, crab(2, 5, 3295, 4248), 2, named),
+                trace(261, 31, crab(1, 5, 3296, 4238), 1, named),
+                trace(262, 31, crab(1, 6, 3296, 4239), 1, named),
+            ]) + '\n')
+            totals = audit(folder, 16, True)['all_trials']
+            self.assertEqual(totals['dimmed_primary_attacks'], 3)
+            self.assertEqual(totals['scheduled_dimmed_south30_chins'], 1)
+            self.assertEqual(totals['other_dimmed_primary_attacks'], 2)
+
     def test_union_preserves_wave29_and_uses_inclusive_actual_birth_boundary(self):
         self.assertTrue(is_dimmed(dict(wave=29, born=117), 100, 16))
         self.assertTrue(is_dimmed(dict(wave=30, born=116), 100, 16))

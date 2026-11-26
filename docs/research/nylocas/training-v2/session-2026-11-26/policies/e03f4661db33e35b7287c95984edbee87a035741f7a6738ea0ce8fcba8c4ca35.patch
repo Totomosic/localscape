@@ -1,0 +1,27 @@
+--- a/org/localscape/nylocas/mage/MageStrategy.java
++++ b/org/localscape/nylocas/mage/MageStrategy.java
+@@ -482,6 +482,24 @@
+ 			}
+ 		}
+ 		if (candidates.isEmpty()) candidates.addAll(idleRange);
++		// With own attacks and approaches clear, remove small cap bodies rather
++		// than idling for 18/19. Ordinary partner ownership and the split's age4
++		// support window may yield, while real flights, NULL and packets do not.
++		if (candidates.isEmpty() && room.wave >= 16 && room.wave <= 19 && tick >= room.ready)
++		{
++			for (Crab c : room.crabs)
++			{
++				if (c.big || c.hp <= 0 || c.dying || c.nulled || c.style == Style.MELEE
++					|| c.claimed(tick) || c.awaitingHit(tick) || tick - c.born >= 49
++					|| room.wave - c.wave > MAX_WAVE_AGE || rangerPacket(c, tick) || protectedTarget(room, c, tick)) continue;
++				Weapon weapon = c.style == Style.MAGIC ? Weapon.EYE : Weapon.PIPE;
++				if (!matchesNext(c, weapon.style, tick) || c.distance(room.player) > weapon.range
++					|| room.obstructed.contains(c.key)) continue;
++				Decision help = new Decision(c, weapon, c.point, false, null, "Idle pre-cap " + c.style + " small support");
++				add(candidates, room, next, help, 500 - (tick - c.born) * 100
++					+ Math.max(0, 8 - c.hp) * 40 + (c.partnerNulled ? 10000 : 0), tick, tick, c.born + 48);
++			}
++		}
+ 		Comparator<Candidate> priority = Comparator.comparingInt((Candidate c) -> cleanupRescue(room, c.decision.target) ? 0
+ 			: west30MeleeTakeover(room, c.decision.target, tick) ? 1 : 2)
+ 			.thenComparingInt(c -> deferred(c, tick) ? 0 : 1)

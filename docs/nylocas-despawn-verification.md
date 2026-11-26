@@ -1,5 +1,16 @@
 # Nylocas despawn timing verification
 
+Movement follow-up, 2026-11-26: moving bigs now finish their pending lane step
+during the arrival delay, before the death animation starts. The delay previously
+froze their route, leaving the wave-4 first-Ayak splits one tile too far south.
+The native wave-4 regression casts at spawn+3 from both usual mage tiles and
+asserts lethal impact at +6, the final parent position, and both child tiles.
+Ordinary removal remains +13 from spawn, with children at
+`(3295,4240)`/`(3296,4241)`; a controlled qualifying extra impact gives removal
+at +12 and children at `(3295,4239)`/`(3296,4240)`. These match the two observed
+position/removal branches; the recordings do not identify individual extra splats.
+Smalls and unrelated NPCs retain their existing movement and death timing.
+
 Verified 2026-10-19 against the simulator's game loop and combat handlers.
 Overkill requires an actual positive-damage hit clamped to zero after the NPC
 has been killed by a player attack. That hit must land on the lethal tick or

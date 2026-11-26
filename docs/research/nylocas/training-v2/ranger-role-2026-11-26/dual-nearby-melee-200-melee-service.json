@@ -1,0 +1,497 @@
+{
+  "run": "dual-nearby-melee-200",
+  "attempts": [
+    {
+      "seed": 164562660436253,
+      "failed19": 0,
+      "age": 6,
+      "key": 94,
+      "hp": 8,
+      "forecast": [
+        8,
+        0
+      ],
+      "zero_delta": 2,
+      "removal_delta": 4,
+      "removed_by_check": true
+    },
+    {
+      "seed": 164562660436260,
+      "failed19": 0,
+      "age": 8,
+      "key": 93,
+      "hp": 8,
+      "forecast": [
+        8,
+        0
+      ],
+      "zero_delta": 2,
+      "removal_delta": 4,
+      "removed_by_check": true
+    },
+    {
+      "seed": 164562660436283,
+      "failed19": 0,
+      "age": 8,
+      "key": 93,
+      "hp": 8,
+      "forecast": [
+        8,
+        0
+      ],
+      "zero_delta": 2,
+      "removal_delta": 4,
+      "removed_by_check": true
+    },
+    {
+      "seed": 164562660436295,
+      "failed19": 0,
+      "age": 6,
+      "key": 84,
+      "hp": 8,
+      "forecast": [
+        8,
+        0
+      ],
+      "zero_delta": 2,
+      "removal_delta": 4,
+      "removed_by_check": true
+    },
+    {
+      "seed": 164562660436350,
+      "failed19": 0,
+      "age": 8,
+      "key": 93,
+      "hp": 8,
+      "forecast": [
+        8,
+        0
+      ],
+      "zero_delta": null,
+      "removal_delta": null,
+      "removed_by_check": false
+    },
+    {
+      "seed": 164562660436358,
+      "failed19": 0,
+      "age": 6,
+      "key": 94,
+      "hp": 8,
+      "forecast": [
+        8,
+        0
+      ],
+      "zero_delta": 2,
+      "removal_delta": 4,
+      "removed_by_check": true
+    },
+    {
+      "seed": 164562660436372,
+      "failed19": 0,
+      "age": 8,
+      "key": 93,
+      "hp": 8,
+      "forecast": [
+        8,
+        0
+      ],
+      "zero_delta": 2,
+      "removal_delta": 4,
+      "removed_by_check": true
+    }
+  ],
+  "counts": {
+    "6:True": 3,
+    "8:True": 3,
+    "8:False": 1
+  },
+  "failed_rooms": [
+    {
+      "seed": 164562660436242,
+      "failed19": 4,
+      "shots": [
+        {
+          "t": 1,
+          "w": "PIPE",
+          "id": 85
+        },
+        {
+          "t": 3,
+          "w": "EYE",
+          "id": 90
+        },
+        {
+          "t": 6,
+          "w": "PIPE",
+          "id": 86
+        },
+        {
+          "t": 8,
+          "w": "PIPE",
+          "id": 87
+        },
+        {
+          "t": 10,
+          "w": "EYE",
+          "id": 93
+        }
+      ]
+    },
+    {
+      "seed": 164562660436250,
+      "failed19": 1,
+      "shots": [
+        {
+          "t": 3,
+          "w": "EYE",
+          "id": 90
+        },
+        {
+          "t": 6,
+          "w": "PIPE",
+          "id": 94
+        },
+        {
+          "t": 8,
+          "w": "PIPE",
+          "id": 94
+        },
+        {
+          "t": 10,
+          "w": "PIPE",
+          "id": 88
+        },
+        {
+          "t": 12,
+          "w": "PIPE",
+          "id": 88
+        }
+      ]
+    },
+    {
+      "seed": 164562660436252,
+      "failed19": 8,
+      "shots": [
+        {
+          "t": 3,
+          "w": "EYE",
+          "id": 90
+        },
+        {
+          "t": 6,
+          "w": "PIPE",
+          "id": 88
+        },
+        {
+          "t": 8,
+          "w": "PIPE",
+          "id": 88
+        },
+        {
+          "t": 10,
+          "w": "PIPE",
+          "id": 88
+        },
+        {
+          "t": 12,
+          "w": "PIPE",
+          "id": 89
+        }
+      ]
+    },
+    {
+      "seed": 164562660436278,
+      "failed19": 5,
+      "shots": [
+        {
+          "t": 3,
+          "w": "EYE",
+          "id": 90
+        },
+        {
+          "t": 6,
+          "w": "PIPE",
+          "id": 87
+        },
+        {
+          "t": 8,
+          "w": "PIPE",
+          "id": 87
+        },
+        {
+          "t": 10,
+          "w": "PIPE",
+          "id": 88
+        },
+        {
+          "t": 12,
+          "w": "PIPE",
+          "id": 89
+        }
+      ]
+    },
+    {
+      "seed": 164562660436299,
+      "failed19": 5,
+      "shots": [
+        {
+          "t": 0,
+          "w": "PIPE",
+          "id": 83
+        },
+        {
+          "t": 3,
+          "w": "EYE",
+          "id": 90
+        },
+        {
+          "t": 6,
+          "w": "EYE",
+          "id": 87
+        },
+        {
+          "t": 9,
+          "w": "PIPE",
+          "id": 84
+        },
+        {
+          "t": 11,
+          "w": "PIPE",
+          "id": 85
+        }
+      ]
+    },
+    {
+      "seed": 164562660436300,
+      "failed19": 5,
+      "shots": [
+        {
+          "t": 1,
+          "w": "PIPE",
+          "id": 87
+        },
+        {
+          "t": 3,
+          "w": "EYE",
+          "id": 90
+        },
+        {
+          "t": 6,
+          "w": "PIPE",
+          "id": 88
+        },
+        {
+          "t": 8,
+          "w": "PIPE",
+          "id": 88
+        },
+        {
+          "t": 10,
+          "w": "PIPE",
+          "id": 88
+        },
+        {
+          "t": 12,
+          "w": "PIPE",
+          "id": 89
+        }
+      ]
+    },
+    {
+      "seed": 164562660436309,
+      "failed19": 4,
+      "shots": [
+        {
+          "t": 1,
+          "w": "PIPE",
+          "id": 85
+        },
+        {
+          "t": 3,
+          "w": "EYE",
+          "id": 90
+        },
+        {
+          "t": 6,
+          "w": "PIPE",
+          "id": 86
+        },
+        {
+          "t": 8,
+          "w": "PIPE",
+          "id": 86
+        },
+        {
+          "t": 10,
+          "w": "PIPE",
+          "id": 87
+        },
+        {
+          "t": 12,
+          "w": "PIPE",
+          "id": 87
+        }
+      ]
+    },
+    {
+      "seed": 164562660436353,
+      "failed19": 5,
+      "shots": [
+        {
+          "t": 3,
+          "w": "EYE",
+          "id": 90
+        },
+        {
+          "t": 6,
+          "w": "PIPE",
+          "id": 88
+        },
+        {
+          "t": 8,
+          "w": "PIPE",
+          "id": 88
+        },
+        {
+          "t": 10,
+          "w": "PIPE",
+          "id": 89
+        },
+        {
+          "t": 12,
+          "w": "PIPE",
+          "id": 89
+        }
+      ]
+    },
+    {
+      "seed": 164562660436359,
+      "failed19": 3,
+      "shots": [
+        {
+          "t": 3,
+          "w": "EYE",
+          "id": 90
+        },
+        {
+          "t": 7,
+          "w": "PIPE",
+          "id": 88
+        },
+        {
+          "t": 9,
+          "w": "PIPE",
+          "id": 89
+        },
+        {
+          "t": 11,
+          "w": "PIPE",
+          "id": 96
+        }
+      ]
+    },
+    {
+      "seed": 164562660436369,
+      "failed19": 4,
+      "shots": [
+        {
+          "t": 0,
+          "w": "PIPE",
+          "id": 87
+        },
+        {
+          "t": 3,
+          "w": "EYE",
+          "id": 90
+        },
+        {
+          "t": 6,
+          "w": "PIPE",
+          "id": 87
+        },
+        {
+          "t": 8,
+          "w": "PIPE",
+          "id": 93
+        },
+        {
+          "t": 10,
+          "w": "PIPE",
+          "id": 84
+        },
+        {
+          "t": 12,
+          "w": "PIPE",
+          "id": 85
+        }
+      ]
+    },
+    {
+      "seed": 164562660436405,
+      "failed19": 5,
+      "shots": [
+        {
+          "t": 1,
+          "w": "PIPE",
+          "id": 85
+        },
+        {
+          "t": 3,
+          "w": "EYE",
+          "id": 90
+        },
+        {
+          "t": 6,
+          "w": "PIPE",
+          "id": 88
+        },
+        {
+          "t": 8,
+          "w": "PIPE",
+          "id": 89
+        },
+        {
+          "t": 10,
+          "w": "PIPE",
+          "id": 86
+        },
+        {
+          "t": 12,
+          "w": "PIPE",
+          "id": 86
+        }
+      ]
+    },
+    {
+      "seed": 164562660436429,
+      "failed19": 4,
+      "shots": [
+        {
+          "t": 1,
+          "w": "PIPE",
+          "id": 87
+        },
+        {
+          "t": 3,
+          "w": "EYE",
+          "id": 90
+        },
+        {
+          "t": 6,
+          "w": "EYE",
+          "id": 75
+        },
+        {
+          "t": 9,
+          "w": "PIPE",
+          "id": 88
+        },
+        {
+          "t": 11,
+          "w": "PIPE",
+          "id": 88
+        }
+      ]
+    }
+  ]
+}

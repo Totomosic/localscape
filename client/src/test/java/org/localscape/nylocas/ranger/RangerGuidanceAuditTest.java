@@ -55,12 +55,13 @@ public class RangerGuidanceAuditTest
 	}
 
 	@Test
-	public void westElevenMageBigIsBackedUpWhenWaveTwelveEnters()
+	public void westElevenMageBigIsBackedUpAfterTheMagesOpeningOpportunity()
 	{
 		Room r = room(12, 108);
 		r.spawns[11] = 100;
 		Crab c = crab(r, 11, 100, Lane.WEST, 'S', true, Style.MAGIC, 3289, 4248);
-		Decision d = strategy.decide(r, 108);
+		assertNotSame(c, strategy.decide(r, 108).target);
+		Decision d = strategy.decide(r, 111);
 		assertSame(d.reason, c, d.target);
 		assertEquals(Weapon.EYE, d.weapon);
 	}
@@ -98,6 +99,121 @@ public class RangerGuidanceAuditTest
 	}
 
 	@Test
+	public void immediatelyCrossesEastWithTheBowAfterTheWestOpeningShot()
+	{
+		Room r = room(1, 4);
+		r.player = RangerStrategy.tile(3292, 4249);
+		Crab west = crab(r, 1, 4, Lane.WEST, 'S', false, Style.RANGE, 3281, 4248);
+		crab(r, 1, 4, Lane.SOUTH, 'E', false, Style.MAGIC, 3296, 4233);
+		Decision first = strategy.decide(r, 4);
+		assertSame(west, first.target);
+		assertEquals(Weapon.BOW, first.weapon);
+		strategy.attacked(first, 5);
+		west.pendingDamage = west.hp;
+		r.ready = 4 + Weapon.BOW.cooldown;
+
+		for (int tick = 5; tick < 8; tick++)
+		{
+			Decision cross = strategy.decide(r, tick);
+			assertEquals(cross.reason, Weapon.BOW, cross.weapon);
+			assertEquals(cross.reason, RangerStrategy.tile(3298, 4249), cross.tile);
+			assertNull(cross.target);
+			r.player = r.player.dx(2);
+		}
+		r.wave = 2;
+		r.spawns[2] = 8;
+		Crab east = crab(r, 2, 8, Lane.EAST, 'S', false, Style.RANGE, 3310, 4248);
+		east.point = RangerStrategy.tile(3309, 4248);
+		Decision second = strategy.decide(r, r.ready);
+		assertSame(east, second.target);
+		assertEquals(Weapon.BOW, second.weapon);
+	}
+
+	@Test
+	public void southThirtyChinReservesItsGreenFlickerThroughTheDimCutoff()
+	{
+		// Recorded seed 152274597635335: wave 30 was born exactly at wave 28 + 16.
+		Room r = room(31, 260);
+		r.spawns[28] = 240;
+		r.spawns[29] = 252;
+		r.spawns[30] = 256;
+		r.player = RangerStrategy.tile(3291, 4248);
+		r.ready = 260;
+		Crab east = crab(r, 30, 256, Lane.SOUTH, 'E', false, Style.MELEE, 3296, 4237);
+		Crab west = crab(r, 30, 256, Lane.SOUTH, 'W', false, Style.MAGIC, 3295, 4237);
+		Crab filler = crab(r, 31, 260, Lane.SPLIT, (char) 0, false, Style.RANGE, 3294, 4248);
+
+		Decision stage = strategy.decide(r, 260);
+		assertEquals(stage.reason, Weapon.CHIN, stage.weapon);
+		assertNull(stage.target);
+		assertEquals(RangerStrategy.tile(3293, 4249), stage.tile);
+		r.player = stage.tile;
+		r.obstructed.add(west.key);
+		east.style = west.style = Style.RANGE;
+		east.point = east.point.dy(1);
+		west.point = west.point.dy(1);
+		Decision shot = strategy.decide(r, 261);
+		assertSame(shot.reason, east, shot.target);
+		assertEquals(Weapon.CHIN, shot.weapon);
+		assertEquals("South chin flicker 30", shot.rule);
+		strategy.attacked(shot, 262);
+
+		r.crabs.remove(filler);
+		assertNull(strategy.decide(r, 262).target);
+		east.style = west.style = Style.MELEE;
+		assertNull(strategy.decide(r, 263).target);
+	}
+
+	@Test
+	public void waveThirtyLeavesTimeToStopOnTheWestPipeTileBeforeCrossingForTheChin()
+	{
+		Room r = room(30, 256);
+		r.player = RangerStrategy.tile(3296, 4248);
+		crab(r, 30, 256, Lane.WEST, 'S', true, Style.RANGE, 3281, 4248);
+		crab(r, 29, 251, Lane.SPLIT, (char) 0, false, Style.RANGE, 3296, 4247);
+
+		Decision stage = strategy.decide(r, 256);
+		assertNull(stage.reason, stage.target);
+		assertEquals(RangerStrategy.tile(3291, 4248), stage.tile);
+	}
+
+	@Test
+	public void unavailableWestThirtyPipeLeavesItsApproachTickForTheSouthChin()
+	{
+		Room r = room(30, 264);
+		r.player = RangerStrategy.tile(3291, 4248);
+		r.ready = 268;
+		crab(r, 30, 264, Lane.WEST, 'S', true, Style.RANGE, 3284, 4248);
+		crab(r, 30, 264, Lane.SOUTH, 'E', false, Style.MELEE, 3296, 4236);
+
+		Decision stage = strategy.decide(r, 267);
+		assertEquals(stage.reason, Weapon.CHIN, stage.weapon);
+		assertEquals(RangerStrategy.tile(3293, 4249), stage.tile);
+	}
+
+	@Test
+	public void southThirtyChinCanUseTheOtherGreenPrimary()
+	{
+		Room r = room(31, 260);
+		r.spawns[28] = 240;
+		r.spawns[29] = 252;
+		r.spawns[30] = 256;
+		r.player = RangerStrategy.tile(3295, 4247);
+		r.ready = 261;
+		Crab east = crab(r, 30, 256, Lane.SOUTH, 'E', false, Style.RANGE, 3296, 4238);
+		east.pendingDamage = east.hp;
+		Crab west = crab(r, 30, 256, Lane.SOUTH, 'W', false, Style.RANGE, 3295, 4238);
+		Decision shot = strategy.decide(r, 261);
+		assertSame(shot.reason, west, shot.target);
+		assertEquals(Weapon.CHIN, shot.weapon);
+
+		strategy.reset();
+		west.pendingDamage = west.hp;
+		Crab fresh = crab(r, 31, 260, Lane.SPLIT, (char) 0, false, Style.RANGE, 3294, 4248);
+		assertSame(fresh, strategy.decide(r, 261).target);
+	}
+
+	@Test
 	public void openingEastBowTakesFirstReadyTickOverNearbyMagicFiller()
 	{
 		Room r = room(2, 108);
@@ -130,12 +246,13 @@ public class RangerGuidanceAuditTest
 	}
 
 	@Test
-	public void waveTwelveBackupGetsReadyTickBeforeOrdinarySplit()
+	public void waveTwelvePartnerNullBackupGetsTheReadyTickBeforeOrdinarySplit()
 	{
 		Room r = room(12, 108);
 		r.spawns[11] = 100;
 		Crab c = crab(r, 11, 100, Lane.WEST, 'S', true, Style.MAGIC, 3289, 4248);
 		crab(r, 12, 108, Lane.SPLIT, (char) 0, false, Style.RANGE, 3299, 4248);
+		c.partnerNulled = true;
 		assertSame(c, strategy.decide(r, 108).target);
 	}
 

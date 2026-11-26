@@ -1,0 +1,24 @@
+--- .state/simulations/training-v5-20261126-range-user-fresh-priority/policy-source/org/localscape/nylocas/ranger/RangerStrategy.java
++++ .state/simulations/training-v5-20261126-range-user-fresh-priority-v2/policy-source/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -273,10 +273,12 @@
+ 		opened.clear();
+ 		latestAttack = -1;
+ 		intent.clear();
++		preCap.reset();
+ 	}
+ 
+ 	public void attacked(Decision decision, int tick)
+ 	{
++		preCap.confirmedAttack();
+ 		intent.clear();
+ 		if (decision.rule != null) completed.add(decision.rule);
+ 		opened.add(decision.target.key);
+@@ -627,6 +629,8 @@
+ 			|| c.wave == 21 && c.lane == Lane.WEST && tick - c.born <= 2);
+ 	}
+ 
++	static int naturalDelayAfter(int wave) { return DELAYS[wave]; }
++
+ 	static boolean avoidedOriginalMelee(Crab crab)
+ 	{
+ 		return crab.wave == 1 && !crab.big && crab.lane == Lane.EAST && crab.slot == 'N';

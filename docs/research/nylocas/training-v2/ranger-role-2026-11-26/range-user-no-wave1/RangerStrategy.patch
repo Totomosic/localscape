@@ -1,0 +1,23 @@
+--- upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/ranger/RangerStrategy.java
++++ .state/simulations/training-v5-20261126-range-user-no-wave1/policy-source/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -324,7 +324,7 @@
+ 		for (Crab crab : room.crabs)
+ 		{
+ 			int age = tick - crab.born;
+-			if (crab.hp <= 0 || crab.dying || crab.nulled || savedMagePrimary(crab, tick)
++			if (crab.hp <= 0 || crab.dying || crab.nulled || avoidedOriginalMelee(crab) || savedMagePrimary(crab, tick)
+ 				|| crab != lastLiving && crab.claimed(tick) || crab.awaitingHit(tick)
+ 				|| age >= 49 || crab.big && crab.wave < 20 && room.wave < 29
+ 					&& !(room.wave == 20 && crab.wave == 18)
+@@ -627,6 +627,11 @@
+ 			|| c.wave == 21 && c.lane == Lane.WEST && tick - c.born <= 2);
+ 	}
+ 
++	static boolean avoidedOriginalMelee(Crab crab)
++	{
++		return crab.wave == 1 && !crab.big && crab.lane == Lane.EAST && crab.slot == 'N';
++	}
++
+ 	static boolean savedMagePrimary(Crab crab, int tick)
+ 	{
+ 		int age = tick - crab.born;

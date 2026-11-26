@@ -1,0 +1,6850 @@
+{
+  "rooms": 200,
+  "role_order": [
+    "ranger",
+    "mage"
+  ],
+  "counts": {
+    "role0_fresh_cooldown_stage_frames": 39,
+    "role1_fresh_ready_wait_frames": 43,
+    "role0_primary_on_age_zero_to_two": 2564,
+    "role1_primary_on_age_zero_to_two": 1733,
+    "role0_ordinary_old_small_requests": 141,
+    "role1_ordinary_old_small_requests": 71,
+    "role0_fresh_ready_wait_frames": 20,
+    "role1_fresh_cooldown_stage_frames": 73,
+    "role0_old_small_with_observed_birth_next_two": 49,
+    "role1_old_small_with_observed_birth_next_two": 7
+  },
+  "rooms_with_event": {
+    "role0_fresh_cooldown_stage_frames": 28,
+    "role1_fresh_ready_wait_frames": 27,
+    "role0_primary_on_age_zero_to_two": 200,
+    "role1_primary_on_age_zero_to_two": 200,
+    "role0_ordinary_old_small_requests": 93,
+    "role1_ordinary_old_small_requests": 56,
+    "role0_fresh_ready_wait_frames": 17,
+    "role1_fresh_cooldown_stage_frames": 44,
+    "role0_old_small_with_observed_birth_next_two": 41,
+    "role1_old_small_with_observed_birth_next_two": 7
+  },
+  "first_west6_request_age_histogram": {
+    "0": {
+      "1": 11,
+      "2": 32,
+      "none": 153,
+      "3": 4
+    },
+    "1": {
+      "2": 61,
+      "none": 28,
+      "3": 53,
+      "0": 29,
+      "4": 5,
+      "1": 17,
+      "6": 2,
+      "13": 1,
+      "10": 1,
+      "9": 1,
+      "8": 1,
+      "12": 1
+    }
+  },
+  "pre_cap_observed_split_clock": {
+    "observed_removals": 2552,
+    "both_children_at_predicted_squares": 2552,
+    "all_forecasts_equal_observed_removal": 2552
+  },
+  "maximum_explicit_ready_waits_between_primaries_per_room": {
+    "0": {
+      "0": 183,
+      "2": 3,
+      "1": 14
+    },
+    "1": {
+      "1": 16,
+      "0": 173,
+      "2": 11
+    }
+  },
+  "note": "The old-small screen uses subsequently observed births. Their presence alone does not establish advance knowledge, line of sight or a spare packet budget.",
+  "per_room": [
+    {
+      "seed": 275826776679721,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role1_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": 1,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 1
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679722,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role1_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679723,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 10,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679724,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 7,
+        "role1_primary_on_age_zero_to_two": 7
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679725,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role0_fresh_ready_wait_frames": 2,
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 2,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679726,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679727,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 13
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 16,
+        "both_children_at_predicted_squares": 16,
+        "all_forecasts_equal_observed_removal": 16
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679728,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role1_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 1
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679729,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 10,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 2,
+        "role0_old_small_with_observed_birth_next_two": 2
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 27,
+          "role": 0,
+          "wave": 5,
+          "target": 1,
+          "target_wave": 1,
+          "weapon": 12926,
+          "births": [
+            {
+              "key": 16,
+              "tick": 29,
+              "wave": 5,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3295,
+              "y": 4239
+            },
+            {
+              "key": 17,
+              "tick": 29,
+              "wave": 5,
+              "style": "MELEE",
+              "big": false,
+              "x": 3296,
+              "y": 4240
+            }
+          ]
+        },
+        {
+          "tick": 39,
+          "role": 0,
+          "wave": 6,
+          "target": 5,
+          "target_wave": 2,
+          "weapon": 13652,
+          "births": [
+            {
+              "key": 23,
+              "tick": 40,
+              "wave": 7,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 24,
+              "tick": 40,
+              "wave": 7,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3296,
+              "y": 4233
+            },
+            {
+              "key": 25,
+              "tick": 40,
+              "wave": 7,
+              "style": "MELEE",
+              "big": false,
+              "x": 3310,
+              "y": 4249
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679730,
+      "counts": {
+        "role1_fresh_ready_wait_frames": 3,
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 7
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 2
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679731,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role0_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 1,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679732,
+      "counts": {
+        "role1_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role1_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 1
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679733,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role1_ordinary_old_small_requests": 3,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679734,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 9,
+        "role1_primary_on_age_zero_to_two": 7
+      },
+      "first_west6_request_age": {
+        "0": 3,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679735,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 4
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679736,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679737,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 2,
+        "role1_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 16,
+        "both_children_at_predicted_squares": 16,
+        "all_forecasts_equal_observed_removal": 16
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 1
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679738,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 10,
+        "role1_primary_on_age_zero_to_two": 7
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679739,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role1_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679740,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 2,
+        "role0_fresh_ready_wait_frames": 1,
+        "role1_fresh_ready_wait_frames": 2,
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 5,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": 1,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 1,
+        "1": 2
+      },
+      "examples": [
+        {
+          "tick": 95,
+          "role": 0,
+          "wave": 12,
+          "target": 26,
+          "target_wave": 8,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 58,
+              "tick": 96,
+              "wave": 13,
+              "style": "RANGE",
+              "big": false,
+              "x": 3293,
+              "y": 4246
+            },
+            {
+              "key": 59,
+              "tick": 96,
+              "wave": 13,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3294,
+              "y": 4247
+            },
+            {
+              "key": 60,
+              "tick": 96,
+              "wave": 13,
+              "style": "RANGE",
+              "big": false,
+              "x": 3281,
+              "y": 4249
+            },
+            {
+              "key": 61,
+              "tick": 96,
+              "wave": 13,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 62,
+              "tick": 96,
+              "wave": 13,
+              "style": "MELEE",
+              "big": false,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 63,
+              "tick": 96,
+              "wave": 13,
+              "style": "RANGE",
+              "big": false,
+              "x": 3296,
+              "y": 4233
+            },
+            {
+              "key": 64,
+              "tick": 96,
+              "wave": 13,
+              "style": "MELEE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679741,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 17,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679742,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679743,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 5,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 146,
+          "role": 0,
+          "wave": 17,
+          "target": 59,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 87,
+              "tick": 148,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 88,
+              "tick": 148,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 89,
+              "tick": 148,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679744,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role1_fresh_ready_wait_frames": 2,
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 10
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 2
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679745,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 6,
+        "role1_ordinary_old_small_requests": 2,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": 4
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679746,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role1_ordinary_old_small_requests": 1,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679747,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role0_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": 1,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679748,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role0_ordinary_old_small_requests": 3,
+        "role0_old_small_with_observed_birth_next_two": 2
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 52,
+          "role": 0,
+          "wave": 8,
+          "target": 5,
+          "target_wave": 2,
+          "weapon": 13652,
+          "births": [
+            {
+              "key": 31,
+              "tick": 54,
+              "wave": 8,
+              "style": "RANGE",
+              "big": false,
+              "x": 3300,
+              "y": 4245
+            },
+            {
+              "key": 32,
+              "tick": 54,
+              "wave": 8,
+              "style": "RANGE",
+              "big": false,
+              "x": 3301,
+              "y": 4246
+            }
+          ]
+        },
+        {
+          "tick": 91,
+          "role": 0,
+          "wave": 12,
+          "target": 26,
+          "target_wave": 8,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 58,
+              "tick": 92,
+              "wave": 13,
+              "style": "RANGE",
+              "big": false,
+              "x": 3281,
+              "y": 4249
+            },
+            {
+              "key": 59,
+              "tick": 92,
+              "wave": 13,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 60,
+              "tick": 92,
+              "wave": 13,
+              "style": "MELEE",
+              "big": false,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 61,
+              "tick": 92,
+              "wave": 13,
+              "style": "RANGE",
+              "big": false,
+              "x": 3296,
+              "y": 4233
+            },
+            {
+              "key": 62,
+              "tick": 92,
+              "wave": 13,
+              "style": "MELEE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679749,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role1_ordinary_old_small_requests": 2,
+        "role1_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 135,
+          "role": 1,
+          "wave": 17,
+          "target": 59,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 87,
+              "tick": 136,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 88,
+              "tick": 136,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 89,
+              "tick": 136,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679750,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679751,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679752,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role0_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 6,
+        "role1_ordinary_old_small_requests": 1,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 1,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679753,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 52,
+          "role": 0,
+          "wave": 8,
+          "target": 5,
+          "target_wave": 2,
+          "weapon": 13652,
+          "births": [
+            {
+              "key": 31,
+              "tick": 54,
+              "wave": 8,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3300,
+              "y": 4245
+            },
+            {
+              "key": 32,
+              "tick": 54,
+              "wave": 8,
+              "style": "MELEE",
+              "big": false,
+              "x": 3301,
+              "y": 4246
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679754,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679755,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role1_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 1
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679756,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679757,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 16,
+        "both_children_at_predicted_squares": 16,
+        "all_forecasts_equal_observed_removal": 16
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679758,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 10,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679759,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679760,
+      "counts": {
+        "role1_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 1
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679761,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 11
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679762,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 6
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679763,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role0_ordinary_old_small_requests": 1,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679764,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 10
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679765,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role1_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 1
+      },
+      "examples": [
+        {
+          "tick": 52,
+          "role": 0,
+          "wave": 8,
+          "target": 5,
+          "target_wave": 2,
+          "weapon": 13652,
+          "births": [
+            {
+              "key": 29,
+              "tick": 53,
+              "wave": 8,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3295,
+              "y": 4239
+            },
+            {
+              "key": 30,
+              "tick": 53,
+              "wave": 8,
+              "style": "RANGE",
+              "big": false,
+              "x": 3296,
+              "y": 4240
+            },
+            {
+              "key": 31,
+              "tick": 54,
+              "wave": 8,
+              "style": "RANGE",
+              "big": false,
+              "x": 3300,
+              "y": 4245
+            },
+            {
+              "key": 32,
+              "tick": 54,
+              "wave": 8,
+              "style": "RANGE",
+              "big": false,
+              "x": 3301,
+              "y": 4246
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679766,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role0_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679767,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 7,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role0_ordinary_old_small_requests": 3,
+        "role0_old_small_with_observed_birth_next_two": 2
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 127,
+          "role": 0,
+          "wave": 15,
+          "target": 50,
+          "target_wave": 11,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 75,
+              "tick": 128,
+              "wave": 16,
+              "style": "RANGE",
+              "big": false,
+              "x": 3281,
+              "y": 4249
+            },
+            {
+              "key": 76,
+              "tick": 128,
+              "wave": 16,
+              "style": "MELEE",
+              "big": false,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 77,
+              "tick": 128,
+              "wave": 16,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3310,
+              "y": 4248
+            }
+          ]
+        },
+        {
+          "tick": 142,
+          "role": 0,
+          "wave": 17,
+          "target": 59,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 85,
+              "tick": 144,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 86,
+              "tick": 144,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 87,
+              "tick": 144,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679768,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 9,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679769,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 6,
+        "role0_ordinary_old_small_requests": 3,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 128,
+          "role": 0,
+          "wave": 17,
+          "target": 58,
+          "target_wave": 12,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 81,
+              "tick": 130,
+              "wave": 17,
+              "style": "MELEE",
+              "big": false,
+              "x": 3294,
+              "y": 4246
+            },
+            {
+              "key": 82,
+              "tick": 130,
+              "wave": 17,
+              "style": "RANGE",
+              "big": false,
+              "x": 3295,
+              "y": 4247
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679770,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role0_ordinary_old_small_requests": 2,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 139,
+          "role": 0,
+          "wave": 17,
+          "target": 61,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 85,
+              "tick": 140,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 86,
+              "tick": 140,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 87,
+              "tick": 140,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679771,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 5,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": 6
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 94,
+          "role": 0,
+          "wave": 12,
+          "target": 30,
+          "target_wave": 8,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 58,
+              "tick": 96,
+              "wave": 13,
+              "style": "RANGE",
+              "big": false,
+              "x": 3281,
+              "y": 4249
+            },
+            {
+              "key": 59,
+              "tick": 96,
+              "wave": 13,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 60,
+              "tick": 96,
+              "wave": 13,
+              "style": "MELEE",
+              "big": false,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 61,
+              "tick": 96,
+              "wave": 13,
+              "style": "RANGE",
+              "big": false,
+              "x": 3296,
+              "y": 4233
+            },
+            {
+              "key": 62,
+              "tick": 96,
+              "wave": 13,
+              "style": "MELEE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679772,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 54,
+          "role": 0,
+          "wave": 8,
+          "target": 5,
+          "target_wave": 2,
+          "weapon": 13652,
+          "births": [
+            {
+              "key": 29,
+              "tick": 55,
+              "wave": 8,
+              "style": "MELEE",
+              "big": false,
+              "x": 3295,
+              "y": 4241
+            },
+            {
+              "key": 30,
+              "tick": 55,
+              "wave": 8,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3296,
+              "y": 4242
+            },
+            {
+              "key": 31,
+              "tick": 56,
+              "wave": 9,
+              "style": "MELEE",
+              "big": false,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 32,
+              "tick": 56,
+              "wave": 9,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 33,
+              "tick": 56,
+              "wave": 9,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3310,
+              "y": 4249
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679773,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 2,
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role1_fresh_ready_wait_frames": 2,
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 2
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679774,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role1_ordinary_old_small_requests": 1,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 134,
+          "role": 0,
+          "wave": 17,
+          "target": 59,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 85,
+              "tick": 136,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 86,
+              "tick": 136,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 87,
+              "tick": 136,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679775,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role1_fresh_ready_wait_frames": 2,
+        "role0_primary_on_age_zero_to_two": 9,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 2
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679776,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679777,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 11
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679778,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679779,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 6
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": 13
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679780,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 5,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679781,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679782,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679783,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role1_ordinary_old_small_requests": 2,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679784,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role0_ordinary_old_small_requests": 2,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 138,
+          "role": 0,
+          "wave": 18,
+          "target": 59,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 88,
+              "tick": 139,
+              "wave": 18,
+              "style": "RANGE",
+              "big": false,
+              "x": 3292,
+              "y": 4243
+            },
+            {
+              "key": 89,
+              "tick": 139,
+              "wave": 18,
+              "style": "MELEE",
+              "big": false,
+              "x": 3293,
+              "y": 4244
+            },
+            {
+              "key": 90,
+              "tick": 140,
+              "wave": 19,
+              "style": "MAGIC",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 91,
+              "tick": 140,
+              "wave": 19,
+              "style": "MAGIC",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 92,
+              "tick": 140,
+              "wave": 19,
+              "style": "MAGIC",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679785,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role0_fresh_ready_wait_frames": 1,
+        "role1_fresh_cooldown_stage_frames": 5,
+        "role1_fresh_ready_wait_frames": 2,
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 13,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 1,
+        "1": 1
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679786,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role1_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": 1,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 1
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679787,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 6,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 98,
+          "role": 0,
+          "wave": 13,
+          "target": 35,
+          "target_wave": 9,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 65,
+              "tick": 100,
+              "wave": 14,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3281,
+              "y": 4249
+            },
+            {
+              "key": 66,
+              "tick": 100,
+              "wave": 14,
+              "style": "MELEE",
+              "big": false,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 67,
+              "tick": 100,
+              "wave": 14,
+              "style": "RANGE",
+              "big": false,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 68,
+              "tick": 100,
+              "wave": 14,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3296,
+              "y": 4233
+            },
+            {
+              "key": 69,
+              "tick": 100,
+              "wave": 14,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679788,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 6
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679789,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679790,
+      "counts": {
+        "role1_fresh_ready_wait_frames": 2,
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 2
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679791,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 7
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679792,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role0_fresh_ready_wait_frames": 1,
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role1_fresh_ready_wait_frames": 2,
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 1,
+        "1": 2
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679793,
+      "counts": {
+        "role0_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 1,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679794,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 10,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679795,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 16,
+        "both_children_at_predicted_squares": 16,
+        "all_forecasts_equal_observed_removal": 16
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 31,
+          "role": 0,
+          "wave": 5,
+          "target": 1,
+          "target_wave": 1,
+          "weapon": 12926,
+          "births": [
+            {
+              "key": 16,
+              "tick": 32,
+              "wave": 5,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3295,
+              "y": 4242
+            },
+            {
+              "key": 17,
+              "tick": 32,
+              "wave": 5,
+              "style": "RANGE",
+              "big": false,
+              "x": 3296,
+              "y": 4243
+            },
+            {
+              "key": 18,
+              "tick": 33,
+              "wave": 5,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3287,
+              "y": 4248
+            },
+            {
+              "key": 19,
+              "tick": 33,
+              "wave": 5,
+              "style": "RANGE",
+              "big": false,
+              "x": 3288,
+              "y": 4249
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679796,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 9,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679797,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679798,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 10,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679799,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 12
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679800,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679801,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role0_ordinary_old_small_requests": 2,
+        "role0_old_small_with_observed_birth_next_two": 2
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 10
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 36,
+          "role": 0,
+          "wave": 6,
+          "target": 6,
+          "target_wave": 2,
+          "weapon": 12926,
+          "births": [
+            {
+              "key": 21,
+              "tick": 37,
+              "wave": 6,
+              "style": "RANGE",
+              "big": false,
+              "x": 3290,
+              "y": 4247
+            },
+            {
+              "key": 22,
+              "tick": 37,
+              "wave": 6,
+              "style": "MELEE",
+              "big": false,
+              "x": 3291,
+              "y": 4248
+            }
+          ]
+        },
+        {
+          "tick": 38,
+          "role": 0,
+          "wave": 6,
+          "target": 6,
+          "target_wave": 2,
+          "weapon": 12926,
+          "births": [
+            {
+              "key": 23,
+              "tick": 40,
+              "wave": 7,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 24,
+              "tick": 40,
+              "wave": 7,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3296,
+              "y": 4233
+            },
+            {
+              "key": 25,
+              "tick": 40,
+              "wave": 7,
+              "style": "MELEE",
+              "big": false,
+              "x": 3310,
+              "y": 4249
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679802,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role0_ordinary_old_small_requests": 3,
+        "role1_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 143,
+          "role": 0,
+          "wave": 17,
+          "target": 59,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 87,
+              "tick": 144,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 88,
+              "tick": 144,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 89,
+              "tick": 144,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679803,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role0_ordinary_old_small_requests": 2,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 123,
+          "role": 0,
+          "wave": 15,
+          "target": 46,
+          "target_wave": 11,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 77,
+              "tick": 124,
+              "wave": 16,
+              "style": "RANGE",
+              "big": false,
+              "x": 3281,
+              "y": 4249
+            },
+            {
+              "key": 78,
+              "tick": 124,
+              "wave": 16,
+              "style": "MELEE",
+              "big": false,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 79,
+              "tick": 124,
+              "wave": 16,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3310,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679804,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 6,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679805,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 17,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": 1,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679806,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679807,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679808,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679809,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": 3,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679810,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role1_ordinary_old_small_requests": 1,
+        "role1_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 135,
+          "role": 1,
+          "wave": 17,
+          "target": 63,
+          "target_wave": 13,
+          "weapon": 29084,
+          "births": [
+            {
+              "key": 85,
+              "tick": 136,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 86,
+              "tick": 136,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 87,
+              "tick": 136,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679811,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 2,
+        "role0_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role1_ordinary_old_small_requests": 1,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 1,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679812,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679813,
+      "counts": {
+        "role0_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 1,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679814,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679815,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role1_fresh_ready_wait_frames": 4,
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 9
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 2
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679816,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679817,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 10
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679818,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 18,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role1_ordinary_old_small_requests": 1,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679819,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role1_ordinary_old_small_requests": 2,
+        "role1_old_small_with_observed_birth_next_two": 1,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 139,
+          "role": 1,
+          "wave": 17,
+          "target": 63,
+          "target_wave": 13,
+          "weapon": 29084,
+          "births": [
+            {
+              "key": 87,
+              "tick": 140,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 88,
+              "tick": 140,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 89,
+              "tick": 140,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679820,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 142,
+          "role": 0,
+          "wave": 18,
+          "target": 63,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 90,
+              "tick": 144,
+              "wave": 19,
+              "style": "MAGIC",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 91,
+              "tick": 144,
+              "wave": 19,
+              "style": "MAGIC",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 92,
+              "tick": 144,
+              "wave": 19,
+              "style": "MAGIC",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679821,
+      "counts": {
+        "role1_fresh_ready_wait_frames": 2,
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 12
+      },
+      "first_west6_request_age": {
+        "0": 1,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 2
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679822,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679823,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 12,
+        "role0_ordinary_old_small_requests": 2,
+        "role0_old_small_with_observed_birth_next_two": 1,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 39,
+          "role": 0,
+          "wave": 6,
+          "target": 5,
+          "target_wave": 2,
+          "weapon": 13652,
+          "births": [
+            {
+              "key": 23,
+              "tick": 40,
+              "wave": 7,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 24,
+              "tick": 40,
+              "wave": 7,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3296,
+              "y": 4233
+            },
+            {
+              "key": 25,
+              "tick": 40,
+              "wave": 7,
+              "style": "MELEE",
+              "big": false,
+              "x": 3310,
+              "y": 4249
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679824,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679825,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 9,
+        "role1_primary_on_age_zero_to_two": 6,
+        "role0_ordinary_old_small_requests": 3,
+        "role0_old_small_with_observed_birth_next_two": 3,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 31,
+          "role": 0,
+          "wave": 5,
+          "target": 1,
+          "target_wave": 1,
+          "weapon": 12926,
+          "births": [
+            {
+              "key": 16,
+              "tick": 32,
+              "wave": 5,
+              "style": "MELEE",
+              "big": false,
+              "x": 3295,
+              "y": 4242
+            },
+            {
+              "key": 17,
+              "tick": 32,
+              "wave": 5,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3296,
+              "y": 4243
+            }
+          ]
+        },
+        {
+          "tick": 33,
+          "role": 0,
+          "wave": 5,
+          "target": 1,
+          "target_wave": 1,
+          "weapon": 12926,
+          "births": [
+            {
+              "key": 18,
+              "tick": 35,
+              "wave": 5,
+              "style": "MELEE",
+              "big": false,
+              "x": 3289,
+              "y": 4248
+            },
+            {
+              "key": 19,
+              "tick": 35,
+              "wave": 5,
+              "style": "MELEE",
+              "big": false,
+              "x": 3290,
+              "y": 4249
+            }
+          ]
+        },
+        {
+          "tick": 128,
+          "role": 0,
+          "wave": 17,
+          "target": 63,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 83,
+              "tick": 129,
+              "wave": 17,
+              "style": "RANGE",
+              "big": false,
+              "x": 3297,
+              "y": 4246
+            },
+            {
+              "key": 84,
+              "tick": 129,
+              "wave": 17,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3298,
+              "y": 4247
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679826,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role0_fresh_ready_wait_frames": 2,
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 2,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 2,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 107,
+          "role": 0,
+          "wave": 13,
+          "target": 36,
+          "target_wave": 9,
+          "weapon": 12926,
+          "births": [
+            {
+              "key": 67,
+              "tick": 108,
+              "wave": 14,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3281,
+              "y": 4249
+            },
+            {
+              "key": 68,
+              "tick": 108,
+              "wave": 14,
+              "style": "MELEE",
+              "big": false,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 69,
+              "tick": 108,
+              "wave": 14,
+              "style": "RANGE",
+              "big": false,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 70,
+              "tick": 108,
+              "wave": 14,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3296,
+              "y": 4233
+            },
+            {
+              "key": 71,
+              "tick": 108,
+              "wave": 14,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679827,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 6
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": 4
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679828,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role0_ordinary_old_small_requests": 2,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679829,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 5,
+        "role1_ordinary_old_small_requests": 1,
+        "role1_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 122,
+          "role": 1,
+          "wave": 15,
+          "target": 49,
+          "target_wave": 11,
+          "weapon": 29084,
+          "births": [
+            {
+              "key": 75,
+              "tick": 124,
+              "wave": 16,
+              "style": "RANGE",
+              "big": false,
+              "x": 3281,
+              "y": 4249
+            },
+            {
+              "key": 76,
+              "tick": 124,
+              "wave": 16,
+              "style": "MELEE",
+              "big": false,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 77,
+              "tick": 124,
+              "wave": 16,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3310,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679830,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 11
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679831,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role1_ordinary_old_small_requests": 1,
+        "role1_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 135,
+          "role": 1,
+          "wave": 17,
+          "target": 60,
+          "target_wave": 13,
+          "weapon": 29084,
+          "births": [
+            {
+              "key": 85,
+              "tick": 136,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 86,
+              "tick": 136,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 87,
+              "tick": 136,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679832,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679833,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 39,
+          "role": 0,
+          "wave": 6,
+          "target": 5,
+          "target_wave": 2,
+          "weapon": 13652,
+          "births": [
+            {
+              "key": 23,
+              "tick": 40,
+              "wave": 7,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 24,
+              "tick": 40,
+              "wave": 7,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3296,
+              "y": 4233
+            },
+            {
+              "key": 25,
+              "tick": 40,
+              "wave": 7,
+              "style": "MELEE",
+              "big": false,
+              "x": 3310,
+              "y": 4249
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679834,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 12
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679835,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 9,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role0_ordinary_old_small_requests": 1,
+        "role1_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679836,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679837,
+      "counts": {
+        "role1_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 11
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 10,
+        "both_children_at_predicted_squares": 10,
+        "all_forecasts_equal_observed_removal": 10
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 1
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679838,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role0_ordinary_old_small_requests": 1,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679839,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role1_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 17,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role0_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 1
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679840,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role0_ordinary_old_small_requests": 2,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 146,
+          "role": 0,
+          "wave": 18,
+          "target": 63,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 88,
+              "tick": 147,
+              "wave": 18,
+              "style": "MELEE",
+              "big": false,
+              "x": 3292,
+              "y": 4243
+            },
+            {
+              "key": 89,
+              "tick": 147,
+              "wave": 18,
+              "style": "MELEE",
+              "big": false,
+              "x": 3293,
+              "y": 4244
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679841,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 3,
+        "role0_primary_on_age_zero_to_two": 8,
+        "role1_primary_on_age_zero_to_two": 7
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679842,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role0_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 6,
+        "role0_ordinary_old_small_requests": 2,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 1,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 27,
+          "role": 0,
+          "wave": 5,
+          "target": 1,
+          "target_wave": 1,
+          "weapon": 12926,
+          "births": [
+            {
+              "key": 16,
+              "tick": 29,
+              "wave": 5,
+              "style": "RANGE",
+              "big": false,
+              "x": 3295,
+              "y": 4239
+            },
+            {
+              "key": 17,
+              "tick": 29,
+              "wave": 5,
+              "style": "MELEE",
+              "big": false,
+              "x": 3296,
+              "y": 4240
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679843,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 17,
+        "role1_primary_on_age_zero_to_two": 11
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679844,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 6,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679845,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 6
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679846,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": 3,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679847,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 13
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679848,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 5,
+        "role0_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679849,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 10,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679850,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 19,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 8
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679851,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 13
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679852,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role1_fresh_ready_wait_frames": 2,
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 2
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679853,
+      "counts": {
+        "role1_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 10,
+        "role1_primary_on_age_zero_to_two": 7
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 1
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679854,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679855,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679856,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 6,
+        "role1_ordinary_old_small_requests": 1,
+        "role0_ordinary_old_small_requests": 2,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 10,
+        "both_children_at_predicted_squares": 10,
+        "all_forecasts_equal_observed_removal": 10
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 139,
+          "role": 0,
+          "wave": 17,
+          "target": 59,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 87,
+              "tick": 140,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 88,
+              "tick": 140,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 89,
+              "tick": 140,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679857,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role1_fresh_ready_wait_frames": 2,
+        "role0_primary_on_age_zero_to_two": 8,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 2,
+        "role0_old_small_with_observed_birth_next_two": 1,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 2
+      },
+      "examples": [
+        {
+          "tick": 31,
+          "role": 0,
+          "wave": 5,
+          "target": 1,
+          "target_wave": 1,
+          "weapon": 12926,
+          "births": [
+            {
+              "key": 16,
+              "tick": 32,
+              "wave": 5,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3295,
+              "y": 4242
+            },
+            {
+              "key": 17,
+              "tick": 32,
+              "wave": 5,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3296,
+              "y": 4243
+            },
+            {
+              "key": 18,
+              "tick": 33,
+              "wave": 5,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3287,
+              "y": 4248
+            },
+            {
+              "key": 19,
+              "tick": 33,
+              "wave": 5,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3288,
+              "y": 4249
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679858,
+      "counts": {
+        "role0_fresh_ready_wait_frames": 2,
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 8,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role0_ordinary_old_small_requests": 4,
+        "role0_old_small_with_observed_birth_next_two": 3
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 12
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 2,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 123,
+          "role": 0,
+          "wave": 15,
+          "target": 48,
+          "target_wave": 11,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 75,
+              "tick": 124,
+              "wave": 16,
+              "style": "RANGE",
+              "big": false,
+              "x": 3281,
+              "y": 4249
+            },
+            {
+              "key": 76,
+              "tick": 124,
+              "wave": 16,
+              "style": "MELEE",
+              "big": false,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 77,
+              "tick": 124,
+              "wave": 16,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3310,
+              "y": 4248
+            }
+          ]
+        },
+        {
+          "tick": 139,
+          "role": 0,
+          "wave": 17,
+          "target": 59,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 85,
+              "tick": 140,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 86,
+              "tick": 140,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 87,
+              "tick": 140,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        },
+        {
+          "tick": 142,
+          "role": 0,
+          "wave": 18,
+          "target": 59,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 88,
+              "tick": 143,
+              "wave": 18,
+              "style": "MELEE",
+              "big": false,
+              "x": 3292,
+              "y": 4243
+            },
+            {
+              "key": 89,
+              "tick": 143,
+              "wave": 18,
+              "style": "MELEE",
+              "big": false,
+              "x": 3293,
+              "y": 4244
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679859,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 4
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679860,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 12
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679861,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 17,
+        "role1_primary_on_age_zero_to_two": 10
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679862,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role0_ordinary_old_small_requests": 2,
+        "role0_old_small_with_observed_birth_next_two": 1,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 37,
+          "role": 0,
+          "wave": 6,
+          "target": 6,
+          "target_wave": 2,
+          "weapon": 12926,
+          "births": [
+            {
+              "key": 21,
+              "tick": 39,
+              "wave": 6,
+              "style": "MELEE",
+              "big": false,
+              "x": 3290,
+              "y": 4245
+            },
+            {
+              "key": 22,
+              "tick": 39,
+              "wave": 6,
+              "style": "RANGE",
+              "big": false,
+              "x": 3291,
+              "y": 4246
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679863,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679864,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679865,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 94,
+          "role": 0,
+          "wave": 12,
+          "target": 32,
+          "target_wave": 8,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 58,
+              "tick": 96,
+              "wave": 13,
+              "style": "RANGE",
+              "big": false,
+              "x": 3281,
+              "y": 4249
+            },
+            {
+              "key": 59,
+              "tick": 96,
+              "wave": 13,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 60,
+              "tick": 96,
+              "wave": 13,
+              "style": "MELEE",
+              "big": false,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 61,
+              "tick": 96,
+              "wave": 13,
+              "style": "RANGE",
+              "big": false,
+              "x": 3296,
+              "y": 4233
+            },
+            {
+              "key": 62,
+              "tick": 96,
+              "wave": 13,
+              "style": "MELEE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679866,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 6,
+        "role1_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 16,
+        "both_children_at_predicted_squares": 16,
+        "all_forecasts_equal_observed_removal": 16
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679867,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 9,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 1,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679868,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 2,
+        "role0_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 13
+      },
+      "first_west6_request_age": {
+        "0": 3,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 1,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679869,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679870,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679871,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 13,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679872,
+      "counts": {
+        "role1_fresh_ready_wait_frames": 1,
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 17,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 1
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679873,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 8,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role0_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 4
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679874,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role0_ordinary_old_small_requests": 3,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 150,
+          "role": 0,
+          "wave": 18,
+          "target": 61,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 90,
+              "tick": 152,
+              "wave": 19,
+              "style": "MAGIC",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 91,
+              "tick": 152,
+              "wave": 19,
+              "style": "MAGIC",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 92,
+              "tick": 152,
+              "wave": 19,
+              "style": "MAGIC",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679875,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 10
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679876,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679877,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 11
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679878,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 3,
+        "role0_ordinary_old_small_requests": 2,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 143,
+          "role": 0,
+          "wave": 17,
+          "target": 58,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 87,
+              "tick": 144,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 88,
+              "tick": 144,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 89,
+              "tick": 144,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679879,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 90,
+          "role": 0,
+          "wave": 12,
+          "target": 28,
+          "target_wave": 8,
+          "weapon": 12926,
+          "births": [
+            {
+              "key": 58,
+              "tick": 92,
+              "wave": 13,
+              "style": "RANGE",
+              "big": false,
+              "x": 3281,
+              "y": 4249
+            },
+            {
+              "key": 59,
+              "tick": 92,
+              "wave": 13,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 60,
+              "tick": 92,
+              "wave": 13,
+              "style": "MELEE",
+              "big": false,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 61,
+              "tick": 92,
+              "wave": 13,
+              "style": "RANGE",
+              "big": false,
+              "x": 3296,
+              "y": 4233
+            },
+            {
+              "key": 62,
+              "tick": 92,
+              "wave": 13,
+              "style": "MELEE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679880,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 18,
+        "role1_primary_on_age_zero_to_two": 11
+      },
+      "first_west6_request_age": {
+        "0": 1,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679881,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 15,
+        "both_children_at_predicted_squares": 15,
+        "all_forecasts_equal_observed_removal": 15
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679882,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 13
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679883,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 118,
+          "role": 0,
+          "wave": 15,
+          "target": 46,
+          "target_wave": 11,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 75,
+              "tick": 120,
+              "wave": 16,
+              "style": "RANGE",
+              "big": false,
+              "x": 3281,
+              "y": 4249
+            },
+            {
+              "key": 76,
+              "tick": 120,
+              "wave": 16,
+              "style": "MELEE",
+              "big": false,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 77,
+              "tick": 120,
+              "wave": 16,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3310,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679884,
+      "counts": {
+        "role0_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 10,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role0_ordinary_old_small_requests": 4,
+        "role0_old_small_with_observed_birth_next_two": 1,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 1,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 97,
+          "role": 0,
+          "wave": 13,
+          "target": 35,
+          "target_wave": 9,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 63,
+              "tick": 98,
+              "wave": 13,
+              "style": "MELEE",
+              "big": false,
+              "x": 3293,
+              "y": 4248
+            },
+            {
+              "key": 64,
+              "tick": 98,
+              "wave": 13,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3294,
+              "y": 4249
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679885,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 5,
+        "role0_ordinary_old_small_requests": 1,
+        "role1_ordinary_old_small_requests": 1,
+        "role1_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": 1,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 142,
+          "role": 1,
+          "wave": 17,
+          "target": 64,
+          "target_wave": 13,
+          "weapon": 29084,
+          "births": [
+            {
+              "key": 87,
+              "tick": 144,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 88,
+              "tick": 144,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 89,
+              "tick": 144,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679886,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role0_ordinary_old_small_requests": 2,
+        "role1_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679887,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 1,
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679888,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 10
+      },
+      "first_west6_request_age": {
+        "0": 1,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679889,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 8,
+        "role1_primary_on_age_zero_to_two": 10
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679890,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679891,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 7,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role0_ordinary_old_small_requests": 2,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 138,
+          "role": 0,
+          "wave": 17,
+          "target": 64,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 85,
+              "tick": 139,
+              "wave": 17,
+              "style": "MELEE",
+              "big": false,
+              "x": 3292,
+              "y": 4243
+            },
+            {
+              "key": 86,
+              "tick": 139,
+              "wave": 17,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3293,
+              "y": 4244
+            },
+            {
+              "key": 87,
+              "tick": 140,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 88,
+              "tick": 140,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 89,
+              "tick": 140,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679892,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679893,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 27,
+          "role": 0,
+          "wave": 5,
+          "target": 1,
+          "target_wave": 1,
+          "weapon": 12926,
+          "births": [
+            {
+              "key": 16,
+              "tick": 29,
+              "wave": 5,
+              "style": "RANGE",
+              "big": false,
+              "x": 3295,
+              "y": 4239
+            },
+            {
+              "key": 17,
+              "tick": 29,
+              "wave": 5,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3296,
+              "y": 4240
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679894,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role0_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 11,
+        "role1_ordinary_old_small_requests": 1,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 1,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 138,
+          "role": 0,
+          "wave": 18,
+          "target": 64,
+          "target_wave": 13,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 88,
+              "tick": 139,
+              "wave": 18,
+              "style": "RANGE",
+              "big": false,
+              "x": 3292,
+              "y": 4243
+            },
+            {
+              "key": 89,
+              "tick": 139,
+              "wave": 18,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3293,
+              "y": 4244
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679895,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679896,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 1,
+        "role0_fresh_ready_wait_frames": 1,
+        "role1_fresh_ready_wait_frames": 2,
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 1,
+        "1": 1
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679897,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 9,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 4,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": 1,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679898,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 51,
+          "role": 0,
+          "wave": 7,
+          "target": 5,
+          "target_wave": 2,
+          "weapon": 13652,
+          "births": [
+            {
+              "key": 28,
+              "tick": 52,
+              "wave": 8,
+              "style": "MAGIC",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 29,
+              "tick": 52,
+              "wave": 8,
+              "style": "MELEE",
+              "big": false,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 30,
+              "tick": 52,
+              "wave": 8,
+              "style": "RANGE",
+              "big": false,
+              "x": 3310,
+              "y": 4248
+            },
+            {
+              "key": 31,
+              "tick": 53,
+              "wave": 8,
+              "style": "RANGE",
+              "big": false,
+              "x": 3300,
+              "y": 4246
+            },
+            {
+              "key": 32,
+              "tick": 53,
+              "wave": 8,
+              "style": "MELEE",
+              "big": false,
+              "x": 3301,
+              "y": 4247
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679899,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 6
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679900,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role1_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 10
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 1
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679901,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 7
+      },
+      "first_west6_request_age": {
+        "0": 1,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679902,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 6,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 10,
+        "both_children_at_predicted_squares": 10,
+        "all_forecasts_equal_observed_removal": 10
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679903,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role1_ordinary_old_small_requests": 2,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 15,
+        "both_children_at_predicted_squares": 15,
+        "all_forecasts_equal_observed_removal": 15
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 138,
+          "role": 0,
+          "wave": 18,
+          "target": 68,
+          "target_wave": 14,
+          "weapon": 31113,
+          "births": [
+            {
+              "key": 90,
+              "tick": 140,
+              "wave": 19,
+              "style": "MAGIC",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 91,
+              "tick": 140,
+              "wave": 19,
+              "style": "MAGIC",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 92,
+              "tick": 140,
+              "wave": 19,
+              "style": "MAGIC",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679904,
+      "counts": {
+        "role1_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 6,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679905,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679906,
+      "counts": {
+        "role0_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 1,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679907,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 9,
+        "role0_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679908,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 10,
+        "role1_primary_on_age_zero_to_two": 8
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 4
+      },
+      "split_clock": {
+        "observed_removals": 11,
+        "both_children_at_predicted_squares": 11,
+        "all_forecasts_equal_observed_removal": 11
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679909,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 14,
+        "role1_primary_on_age_zero_to_two": 9
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679910,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 10,
+        "role1_primary_on_age_zero_to_two": 7,
+        "role0_ordinary_old_small_requests": 2,
+        "role1_ordinary_old_small_requests": 2,
+        "role1_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 143,
+          "role": 1,
+          "wave": 17,
+          "target": 60,
+          "target_wave": 13,
+          "weapon": 29084,
+          "births": [
+            {
+              "key": 87,
+              "tick": 144,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 88,
+              "tick": 144,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3295,
+              "y": 4233
+            },
+            {
+              "key": 89,
+              "tick": 144,
+              "wave": 18,
+              "style": "RANGE",
+              "big": true,
+              "x": 3309,
+              "y": 4248
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679911,
+      "counts": {
+        "role1_fresh_ready_wait_frames": 1,
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 6
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 1
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679912,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 10
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679913,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 16,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role0_ordinary_old_small_requests": 2,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 1
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679914,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 15,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role0_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679915,
+      "counts": {
+        "role0_fresh_cooldown_stage_frames": 2,
+        "role0_primary_on_age_zero_to_two": 17,
+        "role1_primary_on_age_zero_to_two": 7
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 12,
+        "both_children_at_predicted_squares": 12,
+        "all_forecasts_equal_observed_removal": 12
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679916,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 6,
+        "role0_ordinary_old_small_requests": 1,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": 2,
+        "1": null
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679917,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 11,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role0_ordinary_old_small_requests": 1,
+        "role1_ordinary_old_small_requests": 2
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 3
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679918,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 10,
+        "role0_ordinary_old_small_requests": 1,
+        "role0_old_small_with_observed_birth_next_two": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 2
+      },
+      "split_clock": {
+        "observed_removals": 14,
+        "both_children_at_predicted_squares": 14,
+        "all_forecasts_equal_observed_removal": 14
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": [
+        {
+          "tick": 55,
+          "role": 0,
+          "wave": 8,
+          "target": 5,
+          "target_wave": 2,
+          "weapon": 13652,
+          "births": [
+            {
+              "key": 29,
+              "tick": 56,
+              "wave": 9,
+              "style": "RANGE",
+              "big": false,
+              "x": 3300,
+              "y": 4245
+            },
+            {
+              "key": 30,
+              "tick": 56,
+              "wave": 9,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3301,
+              "y": 4246
+            },
+            {
+              "key": 31,
+              "tick": 56,
+              "wave": 9,
+              "style": "MELEE",
+              "big": false,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 32,
+              "tick": 56,
+              "wave": 9,
+              "style": "RANGE",
+              "big": true,
+              "x": 3281,
+              "y": 4248
+            },
+            {
+              "key": 33,
+              "tick": 56,
+              "wave": 9,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3310,
+              "y": 4249
+            },
+            {
+              "key": 34,
+              "tick": 57,
+              "wave": 9,
+              "style": "MAGIC",
+              "big": false,
+              "x": 3295,
+              "y": 4243
+            },
+            {
+              "key": 35,
+              "tick": 57,
+              "wave": 9,
+              "style": "MELEE",
+              "big": false,
+              "x": 3296,
+              "y": 4244
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 275826776679919,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 12,
+        "role1_primary_on_age_zero_to_two": 7
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 13,
+        "both_children_at_predicted_squares": 13,
+        "all_forecasts_equal_observed_removal": 13
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    },
+    {
+      "seed": 275826776679920,
+      "counts": {
+        "role0_primary_on_age_zero_to_two": 13,
+        "role1_primary_on_age_zero_to_two": 8,
+        "role1_ordinary_old_small_requests": 1
+      },
+      "first_west6_request_age": {
+        "0": null,
+        "1": 0
+      },
+      "split_clock": {
+        "observed_removals": 15,
+        "both_children_at_predicted_squares": 15,
+        "all_forecasts_equal_observed_removal": 15
+      },
+      "max_explicit_ready_waits_between_primaries": {
+        "0": 0,
+        "1": 0
+      },
+      "examples": []
+    }
+  ]
+}

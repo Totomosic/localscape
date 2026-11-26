@@ -37,12 +37,12 @@ public class MageGuidanceAuditTest
 		crab(r, 2, 27, 108, Lane.WEST, 'S', true, Style.MAGIC, 3288, 4248);
 		assertSame(old, selected(strategy.decide(r, 111)));
 	}
-	@Test public void west26NullAllowsAnEarlyWest27Opening()
+	@Test public void west26NullStillPreventsAnOptionalWest27Opening()
 	{
 		Room r = room(27, 108, 3291, 4248);
 		Crab old = crab(r, 1, 26, 100, Lane.WEST, 'S', true, Style.MAGIC, 3288, 4248); old.nulled = true;
 		Crab current = crab(r, 2, 27, 108, Lane.WEST, 'S', true, Style.MAGIC, 3288, 4248);
-		assertSame(current, selected(strategy.decide(r, 111)));
+		assertNotSame(current, selected(strategy.decide(r, 111)));
 	}
 	@Test public void doesNotOpenWest27AfterItsEntryWindow()
 	{

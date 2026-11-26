@@ -1,0 +1,44 @@
+--- a/content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotController.kt
++++ b/content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotController.kt
+@@ -445,6 +445,13 @@
+                     println(
+                         "NYLO_FORECAST\t$tick\t${rangedCrabs.getValue(npc).key}\t${npc.hitpoints}\t$pendingDamage"
+                     )
++                // The room observes the split one cycle after the native animation delay ends.
++                val splitAt =
++                    if (npc.size == 2 && npc.hitpoints <= 0 && npc.deathState?.animationStarted == true)
++                        tick + (npc.delay - deps.clock.cycle).coerceAtLeast(0) + 1
++                    else -1
++                if (traceEnabled && splitAt >= 0 && wave in 1..19)
++                    println("NYLO_SPLIT_CLOCK\t$tick\t${rangedCrabs.getValue(npc).key}\t$splitAt")
+                 rangedCrabs.getValue(npc).also {
+                     it.point = point
+                     it.style = RangerStrategy.Style.values()[id % 3]
+@@ -452,6 +459,7 @@
+                     it.partnerNulled = deps.behaviour.isNulled(npc, magePlayer)
+                     it.hp = npc.hitpoints
+                     it.pendingDamage = pendingDamage
++                    if (splitAt >= 0) it.observeSplitAt(splitAt)
+                     it.dying = npc.hitpoints <= 0 || queues.death in npc.queueList
+                     if (
+                         !deps.rays.hasLineOfSight(
+@@ -470,6 +478,7 @@
+                     it.partnerNulled = deps.behaviour.isNulled(npc, rangerPlayer)
+                     it.hp = npc.hitpoints
+                     it.pendingDamage = pendingDamage
++                    if (splitAt >= 0) it.observeSplitAt(splitAt)
+                     it.fighting = id >= 6
+                     it.dying = npc.hitpoints <= 0 || queues.death in npc.queueList
+                     if (
+@@ -956,3 +965,11 @@
+             if (barrage) player.setVarBit(varbits.autocast_spell, barrageId)
+         }
+ }
++
++// Older external policy snapshots have no animation clock. Their planners use their own
++// first-death estimate. A current policy resolves the observation to its typed Java member.
++@Suppress("EXTENSION_SHADOWED_BY_MEMBER", "UNUSED_PARAMETER")
++private fun RangerStrategy.Crab.observeSplitAt(tick: Int) = Unit
++
++@Suppress("EXTENSION_SHADOWED_BY_MEMBER", "UNUSED_PARAMETER")
++private fun MageStrategy.Crab.observeSplitAt(tick: Int) = Unit

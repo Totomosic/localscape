@@ -1,0 +1,11 @@
+--- upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ .state/simulations/training-v5-20261126-range-user-no-wave1/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -162,7 +162,7 @@
+ 		for (int i = 0; i < room.crabs.size(); i++)
+ 		{
+ 			Crab crab = room.crabs.get(i);
+-			if (crab.dying || crab.nulled || plan.hp[i] <= 0) continue;
++			if (crab.dying || crab.nulled || RangerStrategy.avoidedOriginalMelee(crab) || plan.hp[i] <= 0) continue;
+ 			for (Weapon weapon : Weapon.values())
+ 			{
+ 				for (int at = ready; at <= now + HORIZON; at++)

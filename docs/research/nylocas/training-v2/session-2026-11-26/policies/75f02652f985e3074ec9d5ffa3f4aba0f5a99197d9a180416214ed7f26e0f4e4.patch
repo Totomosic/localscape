@@ -1,0 +1,102 @@
+--- a/org/localscape/nylocas/mage/MageStrategy.java
++++ b/org/localscape/nylocas/mage/MageStrategy.java
+@@ -410,6 +410,15 @@
+ 				Decision d = new Decision(c, weapon, a.stage, false, a.name, a.name);
+ 				// Most ordinary offsets are observations, not reasons to lose a ready tick.
+ 				int first = a.name.equals("Deferred east big 13") ? c.born + a.first : tick;
++				// Keep the unopened west11 parent intact while 12 admission moves.
++				// A small offset after actual12 matches the recorded entry sequence;
++				// the existing finite opening deadline and confirmed follow-ups remain.
++				if (a.name.equals("West big 11") && !opened.contains(c.key))
++				{
++					int twelve = spawn(room, 12, tick);
++					int release = Math.max(c.born + 9, twelve < 0 ? c.born + 9 : twelve + 2);
++					first = Math.max(first, Math.min(c.born + a.last, release));
++				}
+ 				// An unopened east/south19 parent keeps one cap slot until its first age3 request.
+ 				if (c.wave == 19 && c.big && !opened.contains(c.key) && (c.lane == Lane.EAST || c.lane == Lane.SOUTH))
+ 					first = Math.max(first, c.born + 3);
+@@ -653,8 +662,8 @@
+ 
+ 	private boolean guidanceDeferred(Room room, Crab c, int tick)
+ 	{
+-		// Jordan's opening leaves the wave-3 lane melee for natural expiry.
+-		if (!c.big && c.wave == 3 && c.lane != Lane.SPLIT && c.style == Style.MELEE) return true;
++		// Jordan never targets the original wave-1 melee, and leaves wave-3 lane melee for expiry.
++		if (!c.big && (c.wave == 1 || c.wave == 3) && c.lane != Lane.SPLIT && c.style == Style.MELEE) return true;
+ 		// One south-11 Ayak precedes opening west-11, leaving that parent's
+ 		// children until the wave-13 admission. A NULL/claimed south can yield.
+ 		if (c.big && c.wave == 11 && c.lane == Lane.WEST && !completed.contains("South magic 11")
+--- a/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ b/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -162,7 +162,7 @@
+ 		for (int i = 0; i < room.crabs.size(); i++)
+ 		{
+ 			Crab crab = room.crabs.get(i);
+-			if (crab.dying || crab.nulled || plan.hp[i] <= 0) continue;
++			if (crab.dying || crab.nulled || RangerStrategy.avoidedOriginalMelee(crab) || plan.hp[i] <= 0) continue;
+ 			for (Weapon weapon : Weapon.values())
+ 			{
+ 				for (int at = ready; at <= now + HORIZON; at++)
+--- a/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -324,7 +324,7 @@
+ 		for (Crab crab : room.crabs)
+ 		{
+ 			int age = tick - crab.born;
+-			if (crab.hp <= 0 || crab.dying || crab.nulled || savedMagePrimary(crab, tick)
++			if (crab.hp <= 0 || crab.dying || crab.nulled || avoidedOriginalMelee(crab) || savedMagePrimary(crab, tick)
+ 				|| crab != lastLiving && crab.claimed(tick) || crab.awaitingHit(tick)
+ 				|| age >= 49 || crab.big && crab.wave < 20 && room.wave < 29
+ 					&& !(room.wave == 20 && crab.wave == 18)
+@@ -526,7 +526,13 @@
+ 		if (room.wave == 20 && c.wave == 18)
+ 			return c.style == Style.RANGE && wave18Available(c, room, c.born + age);
+ 		if (room.wave >= 20 && c.wave < 20) return false;
+-		if (waveTwelveBackup(c, room) || partnerMagicBig(c, room, age)) return true;
++		// The mage opens west11 at actual12+2. Give that first request one
++		// bounded opportunity before backing it up, including with a human.
++		// Real survivor/flight feedback and partner NULL release the hold early.
++		if (waveTwelveBackup(c, room, c.born + age) && room.spawns[12] >= 0 && c.born + age < room.spawns[12] + 3
++			&& !c.partnerNulled && !opened.contains(c.key) && c.hp >= 16
++			&& c.pendingDamage <= 0 && c.claimedUntil <= c.born + age) return false;
++		if (waveTwelveBackup(c, room, c.born + age) || partnerMagicBig(c, room, age)) return true;
+ 		BigAssignment assignment = BigAssignment.of(c);
+ 		if (assignment != null) return age >= assignment.first && (c.wave != 19 || c.style == Style.MAGIC);
+ 		if (c.wave == 18) return wave18Available(c, room, c.born + age);
+@@ -537,9 +543,11 @@
+ 		return c.wave == 23 && c.lane == Lane.SOUTH;
+ 	}
+ 
+-	static boolean waveTwelveBackup(Crab c, Room room)
+-	{
+-		return room.wave == 12 && c.big && c.wave == 11 && c.lane == Lane.WEST && c.style == Style.MAGIC;
++	static boolean waveTwelveBackup(Crab c, Room room, int tick)
++	{
++		boolean duringPacket = room.wave == 12 || room.wave > 12 && room.wave < 20
++			&& room.spawns[12] >= 0 && (tick <= room.spawns[12] + 15 || c.partnerNulled);
++		return duringPacket && c.big && c.wave == 11 && c.lane == Lane.WEST && c.style == Style.MAGIC;
+ 	}
+ 
+ 	private static boolean requiredMageBackup(Crab c, Room room, int age)
+@@ -565,7 +573,7 @@
+ 	int bigServiceDeadline(Crab crab, Room room, int tick, Weapon weapon)
+ 	{
+ 		if (room.wave >= 20) return Integer.MAX_VALUE;
+-		if (waveTwelveBackup(crab, room)) return room.spawns[12];
++		if (waveTwelveBackup(crab, room, tick)) return room.spawns[12];
+ 		if (crab.big && crab.wave == 18 && wave18Available(crab, room, tick))
+ 		{
+ 			int deadline = crab.born + 26;
+@@ -625,6 +633,11 @@
+ 		return !c.big && (c.wave == 11 && c.lane == Lane.EAST && tick - c.born <= 2
+ 			|| c.wave == 11 && c.lane == Lane.SOUTH && c.slot == 'W' && !c.partnerNulled && tick - c.born <= 8
+ 			|| c.wave == 21 && c.lane == Lane.WEST && tick - c.born <= 2);
++	}
++
++	static boolean avoidedOriginalMelee(Crab crab)
++	{
++		return crab.wave == 1 && !crab.big && crab.lane == Lane.EAST && crab.slot == 'N';
+ 	}
+ 
+ 	static boolean savedMagePrimary(Crab crab, int tick)

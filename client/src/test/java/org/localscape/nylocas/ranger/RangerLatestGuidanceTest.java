@@ -304,9 +304,15 @@ public class RangerLatestGuidanceTest
 		room.spawns[5] = 120;
 		room.ready = 121;
 		Crab big = crab(room, 5, 120, Lane.WEST, 'S', true, Style.RANGE, 3282, 4248);
-		Decision decision = strategy.decide(room, 121);
-		assertTrue(decision.reason, decision.target == big || decision.approach == big);
-		assertEquals(Weapon.PIPE, decision.weapon);
+		Decision stage = strategy.decide(room, 121);
+		assertNull(stage.target);
+		assertEquals(RangerStrategy.tile(3290, 4248), stage.tile);
+		assertEquals(Weapon.PIPE, stage.weapon);
+		room.player = stage.tile;
+		big.point = RangerStrategy.tile(3283, 4248);
+		Decision shot = strategy.decide(room, 122);
+		assertSame(big, shot.target);
+		assertEquals(Weapon.PIPE, shot.weapon);
 	}
 
 	@Test

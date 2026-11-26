@@ -1,0 +1,23 @@
+--- a/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -440,6 +440,20 @@
+ 			prioritizeCleanupRescue(candidates);
+ 		}
+ 
++		if (candidates.isEmpty() && (room.wave == 27 || room.wave == 28))
++		{
++			// Vetted rangers spend otherwise spare pipe ticks on this late ranged parent.
++			for (Crab crab : room.crabs)
++			{
++				int age = tick - crab.born;
++				if (crab.wave != 23 || crab.lane != Lane.EAST || !crab.big || age < 26 || age >= 49
++					|| crab.hp <= 0 || crab.dying || crab.nulled || crab.claimed(tick) || crab.awaitingHit(tick)
++					|| !RangerFlickers.matchesNext(crab, Style.RANGE, tick)) continue;
++				Decision optional = new Decision(crab, Weapon.PIPE, CENTER, false, null, "Spare pipe on east23 parent");
++				add(candidates, room, next, optional, 100, tick, crab.born + 48);
++			}
++		}
++
+ 		preferTransitionLane(candidates);
+ 		Candidate best = candidates.stream().min(Comparator.comparingInt((Candidate c) -> c.at)
+ 			.thenComparingInt(c -> -c.score).thenComparingInt(c -> c.decision.target.key)).orElse(null);

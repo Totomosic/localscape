@@ -1,0 +1,14 @@
+--- a/org/localscape/nylocas/mage/MageStrategy.java
++++ b/org/localscape/nylocas/mage/MageStrategy.java
+@@ -259,6 +259,11 @@
+ 		}
+ 		if (s22 >= 0 && room.wave < 29) result.add(new Window("22 south Dinh", s22 + 9, s22 + 19, Weapon.DINH, 3295, 4244));
+ 		if (s28 >= 0 && room.wave < 31) result.add(new Window("26 Dinh on 28", s28 + 8, s28 + 10, Weapon.DINH, 3293, 4245));
++		// The south parent reaches the doorway at age seven, even if either later wave stalls.
++		if ((room.wave == 29 || room.wave == 30) && room.spawns[29] >= 0
++			&& room.crabs.stream().anyMatch(c -> c.wave == 29 && c.lane == Lane.SOUTH && c.big
++				&& c.hp > 0 && eligible(room, c, tick)))
++			result.add(new Window("South big 29", room.spawns[29] + 7, room.spawns[29] + 8, Weapon.SCYTHE, 3295, 4243));
+ 		if (room.wave == 30 && room.spawns[30] >= 0 && room.crabs.stream().anyMatch(c ->
+ 			c.wave == 29 && c.lane == Lane.SOUTH && c.big && !c.dying && !c.nulled && tick - c.born < 49))
+ 			result.add(new Window("South big 29", room.spawns[30] + 3, room.spawns[30] + 3, Weapon.SCYTHE, 3295, 4243));

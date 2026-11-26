@@ -1,0 +1,1787 @@
+{
+  "run": ".state/simulations/training-v5-20261126-ranger-natural-stage-200",
+  "counts": {
+    "stage_events": 19,
+    "stage_frames": 35,
+    "South12_events": 18,
+    "ambiguous_events": 0,
+    "children": 38,
+    "children_removed_before_first19": 15,
+    "ranger_child_requests": 20,
+    "ranger_request_birth_plus_2": 4,
+    "ranger_request_birth_plus_0": 13,
+    "ranger_request_birth_plus_3": 2,
+    "ranger_request_birth_plus_4": 1,
+    "South15_events": 1,
+    "rooms_with_stage": 19
+  },
+  "cases": [
+    {
+      "seed": 17271307180162,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 80,
+        "12": 88,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 244,
+        "29": 252,
+        "30": 260,
+        "31": 272
+      },
+      "parent_wave": 12,
+      "birth": 143,
+      "frames": [
+        {
+          "tick": 141,
+          "ready": false,
+          "player": "3293,4248,0"
+        },
+        {
+          "tick": 142,
+          "ready": false,
+          "player": "3293,4246,0"
+        }
+      ],
+      "children": [
+        88,
+        89
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 88,
+          "born": 143,
+          "wave": 18,
+          "style": "MELEE",
+          "first_zero": 150,
+          "removed": 151,
+          "requests": [
+            {
+              "tick": 144,
+              "role": 1,
+              "key": 88,
+              "weapon": "SULPHUR",
+              "reason": "Fresh MELEE small"
+            },
+            {
+              "tick": 148,
+              "role": 1,
+              "key": 88,
+              "weapon": "SULPHUR",
+              "reason": "Fresh MELEE small"
+            }
+          ]
+        },
+        {
+          "key": 89,
+          "born": 143,
+          "wave": 18,
+          "style": "MAGIC",
+          "first_zero": 149,
+          "removed": 151,
+          "requests": [
+            {
+              "tick": 145,
+              "role": 0,
+              "key": 89,
+              "weapon": "EYE",
+              "reason": "Pre-cap plan: EYE #95 @145 \u2192 CLAWS #94 @148"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180184,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 120,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 236,
+        "29": 248,
+        "30": 260,
+        "31": 272
+      },
+      "parent_wave": 12,
+      "birth": 139,
+      "frames": [
+        {
+          "tick": 137,
+          "ready": false,
+          "player": "3296,4247,0"
+        },
+        {
+          "tick": 138,
+          "ready": false,
+          "player": "3294,4246,0"
+        }
+      ],
+      "children": [
+        85,
+        86
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 85,
+          "born": 139,
+          "wave": 17,
+          "style": "RANGE",
+          "first_zero": 142,
+          "removed": 143,
+          "requests": [
+            {
+              "tick": 139,
+              "role": 0,
+              "key": 85,
+              "weapon": "PIPE",
+              "reason": "Pre-cap plan: PIPE #91 @139 \u2192 EYE #92 @141"
+            }
+          ]
+        },
+        {
+          "key": 86,
+          "born": 139,
+          "wave": 17,
+          "style": "MAGIC",
+          "first_zero": 145,
+          "removed": 147,
+          "requests": [
+            {
+              "tick": 141,
+              "role": 1,
+              "key": 86,
+              "weapon": "EYE",
+              "reason": "Fresh MAGIC small"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180199,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 116,
+        "17": 120,
+        "18": 132,
+        "19": 140,
+        "20": 152,
+        "21": 168,
+        "22": 176,
+        "23": 188,
+        "24": 196,
+        "25": 204,
+        "26": 212,
+        "27": 216,
+        "28": 224,
+        "29": 236,
+        "30": 240,
+        "31": 256
+      },
+      "parent_wave": 12,
+      "birth": 139,
+      "frames": [
+        {
+          "tick": 137,
+          "ready": false,
+          "player": "3293,4248,0"
+        },
+        {
+          "tick": 138,
+          "ready": true,
+          "player": "3293,4246,0"
+        }
+      ],
+      "children": [
+        88,
+        89
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 88,
+          "born": 139,
+          "wave": 18,
+          "style": "RANGE",
+          "first_zero": 142,
+          "removed": 143,
+          "requests": [
+            {
+              "tick": 139,
+              "role": 0,
+              "key": 88,
+              "weapon": "PIPE",
+              "reason": "Pre-cap plan: PIPE #94 @139 \u2192 CLAWS #95 @141"
+            }
+          ]
+        },
+        {
+          "key": 89,
+          "born": 139,
+          "wave": 18,
+          "style": "MELEE",
+          "first_zero": 142,
+          "removed": 143,
+          "requests": [
+            {
+              "tick": 140,
+              "role": 1,
+              "key": 89,
+              "weapon": "SULPHUR",
+              "reason": "Fresh MELEE small"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180208,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 116,
+        "17": 120,
+        "18": 132,
+        "19": 140,
+        "20": 152,
+        "21": 168,
+        "22": 176,
+        "23": 188,
+        "24": 196,
+        "25": 204,
+        "26": 212,
+        "27": 216,
+        "28": 224,
+        "29": 236,
+        "30": 248,
+        "31": 256
+      },
+      "parent_wave": 12,
+      "birth": 139,
+      "frames": [
+        {
+          "tick": 137,
+          "ready": false,
+          "player": "3293,4248,0"
+        },
+        {
+          "tick": 138,
+          "ready": true,
+          "player": "3293,4246,0"
+        }
+      ],
+      "children": [
+        88,
+        89
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 88,
+          "born": 139,
+          "wave": 18,
+          "style": "RANGE",
+          "first_zero": 142,
+          "removed": 143,
+          "requests": [
+            {
+              "tick": 139,
+              "role": 0,
+              "key": 88,
+              "weapon": "PIPE",
+              "reason": "Pre-cap plan: PIPE #94 @139 \u2192 EYE #95 @141"
+            }
+          ]
+        },
+        {
+          "key": 89,
+          "born": 139,
+          "wave": 18,
+          "style": "MAGIC",
+          "first_zero": 146,
+          "removed": 148,
+          "requests": [
+            {
+              "tick": 142,
+              "role": 1,
+              "key": 89,
+              "weapon": "EYE",
+              "reason": "Fresh MAGIC small"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180216,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 116,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 252,
+        "30": 256,
+        "31": 280
+      },
+      "parent_wave": 12,
+      "birth": 139,
+      "frames": [
+        {
+          "tick": 137,
+          "ready": false,
+          "player": "3294,4245,0"
+        }
+      ],
+      "children": [
+        85,
+        86
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 85,
+          "born": 139,
+          "wave": 17,
+          "style": "RANGE",
+          "first_zero": 142,
+          "removed": 143,
+          "requests": [
+            {
+              "tick": 139,
+              "role": 0,
+              "key": 85,
+              "weapon": "PIPE",
+              "reason": "Pre-cap plan: PIPE #91 @139 \u2192 CLAWS #72 @141 \u2192 CLAWS #92 @145"
+            }
+          ]
+        },
+        {
+          "key": 86,
+          "born": 139,
+          "wave": 17,
+          "style": "MELEE",
+          "first_zero": 141,
+          "removed": 143,
+          "requests": [
+            {
+              "tick": 139,
+              "role": 1,
+              "key": 86,
+              "weapon": "SULPHUR",
+              "reason": "Fresh MELEE small"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180220,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 80,
+        "12": 88,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 124,
+        "18": 136,
+        "19": 144,
+        "20": 156,
+        "21": 172,
+        "22": 180,
+        "23": 192,
+        "24": 200,
+        "25": 208,
+        "26": 216,
+        "27": 220,
+        "28": 228,
+        "29": 240,
+        "30": 252,
+        "31": 256
+      },
+      "parent_wave": 12,
+      "birth": 143,
+      "frames": [
+        {
+          "tick": 141,
+          "ready": true,
+          "player": "3293,4248,0"
+        },
+        {
+          "tick": 142,
+          "ready": true,
+          "player": "3293,4246,0"
+        }
+      ],
+      "children": [
+        88,
+        89
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 88,
+          "born": 143,
+          "wave": 18,
+          "style": "MELEE",
+          "first_zero": 146,
+          "removed": 147,
+          "requests": [
+            {
+              "tick": 144,
+              "role": 1,
+              "key": 88,
+              "weapon": "SULPHUR",
+              "reason": "Fresh MELEE small"
+            }
+          ]
+        },
+        {
+          "key": 89,
+          "born": 143,
+          "wave": 18,
+          "style": "RANGE",
+          "first_zero": 146,
+          "removed": 148,
+          "requests": [
+            {
+              "tick": 143,
+              "role": 0,
+              "key": 89,
+              "weapon": "PIPE",
+              "reason": "Pre-cap plan: PIPE #95 @143 \u2192 CLAWS #94 @145"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180226,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 256,
+        "30": 260,
+        "31": 272
+      },
+      "parent_wave": 12,
+      "birth": 139,
+      "frames": [
+        {
+          "tick": 137,
+          "ready": false,
+          "player": "3293,4248,0"
+        },
+        {
+          "tick": 138,
+          "ready": true,
+          "player": "3293,4246,0"
+        }
+      ],
+      "children": [
+        83,
+        84
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 83,
+          "born": 139,
+          "wave": 17,
+          "style": "RANGE",
+          "first_zero": 142,
+          "removed": 143,
+          "requests": [
+            {
+              "tick": 139,
+              "role": 0,
+              "key": 83,
+              "weapon": "CHIN",
+              "reason": "Pre-cap plan: CHIN #89 @139 \u2192 PIPE #92 @142"
+            }
+          ]
+        },
+        {
+          "key": 84,
+          "born": 139,
+          "wave": 17,
+          "style": "RANGE",
+          "first_zero": 145,
+          "removed": 147,
+          "requests": [
+            {
+              "tick": 142,
+              "role": 0,
+              "key": 84,
+              "weapon": "PIPE",
+              "reason": "Pre-cap plan: PIPE #90 @142 \u2192 PIPE #92 @144 \u2192 PIPE #93 @147"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180227,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 252,
+        "30": 256,
+        "31": 264
+      },
+      "parent_wave": 12,
+      "birth": 139,
+      "frames": [
+        {
+          "tick": 137,
+          "ready": false,
+          "player": "3292,4245,0"
+        },
+        {
+          "tick": 138,
+          "ready": true,
+          "player": "3292,4244,0"
+        }
+      ],
+      "children": [
+        83,
+        84
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 83,
+          "born": 139,
+          "wave": 17,
+          "style": "MELEE",
+          "first_zero": 142,
+          "removed": 143,
+          "requests": [
+            {
+              "tick": 140,
+              "role": 1,
+              "key": 83,
+              "weapon": "SULPHUR",
+              "reason": "Fresh MELEE small"
+            }
+          ]
+        },
+        {
+          "key": 84,
+          "born": 139,
+          "wave": 17,
+          "style": "RANGE",
+          "first_zero": 142,
+          "removed": 143,
+          "requests": [
+            {
+              "tick": 139,
+              "role": 0,
+              "key": 84,
+              "weapon": "PIPE",
+              "reason": "Pre-cap plan: PIPE #90 @139 \u2192 CLAWS #89 @141"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180240,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 116,
+        "17": 120,
+        "18": 132,
+        "19": 140,
+        "20": 152,
+        "21": 168,
+        "22": 176,
+        "23": 188,
+        "24": 196,
+        "25": 204,
+        "26": 212,
+        "27": 216,
+        "28": 224,
+        "29": 236,
+        "30": 248,
+        "31": 256
+      },
+      "parent_wave": 12,
+      "birth": 139,
+      "frames": [
+        {
+          "tick": 137,
+          "ready": false,
+          "player": "3293,4248,0"
+        },
+        {
+          "tick": 138,
+          "ready": true,
+          "player": "3293,4246,0"
+        }
+      ],
+      "children": [
+        88,
+        89
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 88,
+          "born": 139,
+          "wave": 18,
+          "style": "RANGE",
+          "first_zero": 142,
+          "removed": 143,
+          "requests": [
+            {
+              "tick": 139,
+              "role": 0,
+              "key": 88,
+              "weapon": "PIPE",
+              "reason": "Pre-cap plan: PIPE #94 @139 \u2192 CLAWS #95 @141"
+            }
+          ]
+        },
+        {
+          "key": 89,
+          "born": 139,
+          "wave": 18,
+          "style": "MELEE",
+          "first_zero": 143,
+          "removed": 144,
+          "requests": [
+            {
+              "tick": 141,
+              "role": 1,
+              "key": 89,
+              "weapon": "SULPHUR",
+              "reason": "Fresh MELEE small"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180281,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 112,
+        "16": 120,
+        "17": 124,
+        "18": 136,
+        "19": 144,
+        "20": 156,
+        "21": 172,
+        "22": 180,
+        "23": 192,
+        "24": 200,
+        "25": 208,
+        "26": 216,
+        "27": 220,
+        "28": 228,
+        "29": 244,
+        "30": 256,
+        "31": 260
+      },
+      "parent_wave": 12,
+      "birth": 139,
+      "frames": [
+        {
+          "tick": 137,
+          "ready": false,
+          "player": "3293,4247,0"
+        },
+        {
+          "tick": 138,
+          "ready": false,
+          "player": "3293,4245,0"
+        }
+      ],
+      "children": [
+        88,
+        89
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 88,
+          "born": 139,
+          "wave": 18,
+          "style": "RANGE",
+          "first_zero": 142,
+          "removed": 144,
+          "requests": [
+            {
+              "tick": 139,
+              "role": 1,
+              "key": 88,
+              "weapon": "PIPE",
+              "reason": "Idle ranged split support"
+            }
+          ]
+        },
+        {
+          "key": 89,
+          "born": 139,
+          "wave": 18,
+          "style": "RANGE",
+          "first_zero": 145,
+          "removed": 146,
+          "requests": [
+            {
+              "tick": 141,
+              "role": 1,
+              "key": 89,
+              "weapon": "PIPE",
+              "reason": "Idle ranged split support"
+            },
+            {
+              "tick": 142,
+              "role": 0,
+              "key": 89,
+              "weapon": "PIPE",
+              "reason": "Pre-cap plan: PIPE #95 @142"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180282,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 88,
+        "13": 100,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 248,
+        "30": 256,
+        "31": 260
+      },
+      "parent_wave": 12,
+      "birth": 143,
+      "frames": [
+        {
+          "tick": 141,
+          "ready": false,
+          "player": "3293,4248,0"
+        },
+        {
+          "tick": 142,
+          "ready": false,
+          "player": "3293,4246,0"
+        }
+      ],
+      "children": [
+        88,
+        89
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 88,
+          "born": 143,
+          "wave": 18,
+          "style": "MELEE",
+          "first_zero": 146,
+          "removed": 147,
+          "requests": [
+            {
+              "tick": 144,
+              "role": 1,
+              "key": 88,
+              "weapon": "SULPHUR",
+              "reason": "Fresh MELEE small"
+            }
+          ]
+        },
+        {
+          "key": 89,
+          "born": 143,
+          "wave": 18,
+          "style": "RANGE",
+          "first_zero": 148,
+          "removed": 149,
+          "requests": [
+            {
+              "tick": 145,
+              "role": 0,
+              "key": 89,
+              "weapon": "PIPE",
+              "reason": "Pre-cap plan: PIPE #95 @145 \u2192 CLAWS #68 @147"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180284,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 116,
+        "17": 124,
+        "18": 136,
+        "19": 144,
+        "20": 156,
+        "21": 172,
+        "22": 180,
+        "23": 192,
+        "24": 200,
+        "25": 208,
+        "26": 216,
+        "27": 220,
+        "28": 228,
+        "29": 236,
+        "30": 252,
+        "31": 264
+      },
+      "parent_wave": 12,
+      "birth": 139,
+      "frames": [
+        {
+          "tick": 137,
+          "ready": false,
+          "player": "3293,4248,0"
+        },
+        {
+          "tick": 138,
+          "ready": false,
+          "player": "3293,4246,0"
+        }
+      ],
+      "children": [
+        88,
+        89
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 88,
+          "born": 139,
+          "wave": 18,
+          "style": "MAGIC",
+          "first_zero": 145,
+          "removed": 147,
+          "requests": [
+            {
+              "tick": 141,
+              "role": 1,
+              "key": 88,
+              "weapon": "EYE",
+              "reason": "Fresh MAGIC small"
+            }
+          ]
+        },
+        {
+          "key": 89,
+          "born": 139,
+          "wave": 18,
+          "style": "RANGE",
+          "first_zero": 144,
+          "removed": 146,
+          "requests": [
+            {
+              "tick": 141,
+              "role": 0,
+              "key": 89,
+              "weapon": "PIPE",
+              "reason": "Pre-cap plan: PIPE #95 @141 \u2192 EYE #94 @143"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180287,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 120,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 244,
+        "30": 252,
+        "31": 268
+      },
+      "parent_wave": 12,
+      "birth": 139,
+      "frames": [
+        {
+          "tick": 137,
+          "ready": true,
+          "player": "3293,4248,0"
+        },
+        {
+          "tick": 138,
+          "ready": true,
+          "player": "3293,4246,0"
+        }
+      ],
+      "children": [
+        85,
+        86
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 85,
+          "born": 139,
+          "wave": 17,
+          "style": "MELEE",
+          "first_zero": 141,
+          "removed": 143,
+          "requests": [
+            {
+              "tick": 139,
+              "role": 0,
+              "key": 85,
+              "weapon": "CLAWS",
+              "reason": "Pre-cap plan: CLAWS #91 @139 \u2192 EYE #92 @143"
+            }
+          ]
+        },
+        {
+          "key": 86,
+          "born": 139,
+          "wave": 17,
+          "style": "MAGIC",
+          "first_zero": 143,
+          "removed": 145,
+          "requests": [
+            {
+              "tick": 139,
+              "role": 1,
+              "key": 86,
+              "weapon": "EYE",
+              "reason": "Fresh MAGIC small"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180304,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 88,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 124,
+        "18": 136,
+        "19": 144,
+        "20": 156,
+        "21": 172,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 248,
+        "30": 264,
+        "31": 268
+      },
+      "parent_wave": 12,
+      "birth": 143,
+      "frames": [
+        {
+          "tick": 141,
+          "ready": true,
+          "player": "3293,4248,0"
+        },
+        {
+          "tick": 142,
+          "ready": true,
+          "player": "3293,4246,0"
+        }
+      ],
+      "children": [
+        88,
+        89
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 88,
+          "born": 143,
+          "wave": 18,
+          "style": "RANGE",
+          "first_zero": 146,
+          "removed": 148,
+          "requests": [
+            {
+              "tick": 143,
+              "role": 1,
+              "key": 88,
+              "weapon": "PIPE",
+              "reason": "Idle ranged split support"
+            }
+          ]
+        },
+        {
+          "key": 89,
+          "born": 143,
+          "wave": 18,
+          "style": "RANGE",
+          "first_zero": 146,
+          "removed": 148,
+          "requests": [
+            {
+              "tick": 143,
+              "role": 0,
+              "key": 89,
+              "weapon": "PIPE",
+              "reason": "Pre-cap plan: PIPE #95 @143 \u2192 PIPE #94 @145"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180317,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 60,
+        "10": 72,
+        "11": 80,
+        "12": 88,
+        "13": 96,
+        "14": 104,
+        "15": 112,
+        "16": 120,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 240,
+        "29": 256,
+        "30": 260,
+        "31": 264
+      },
+      "parent_wave": 12,
+      "birth": 143,
+      "frames": [
+        {
+          "tick": 141,
+          "ready": false,
+          "player": "3293,4248,0"
+        },
+        {
+          "tick": 142,
+          "ready": false,
+          "player": "3293,4246,0"
+        }
+      ],
+      "children": [
+        88,
+        89
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 88,
+          "born": 143,
+          "wave": 18,
+          "style": "MAGIC",
+          "first_zero": 151,
+          "removed": 153,
+          "requests": [
+            {
+              "tick": 147,
+              "role": 0,
+              "key": 88,
+              "weapon": "EYE",
+              "reason": "Pre-cap plan: EYE #94 @147"
+            }
+          ]
+        },
+        {
+          "key": 89,
+          "born": 143,
+          "wave": 18,
+          "style": "RANGE",
+          "first_zero": 148,
+          "removed": 149,
+          "requests": [
+            {
+              "tick": 145,
+              "role": 0,
+              "key": 89,
+              "weapon": "PIPE",
+              "reason": "Pre-cap plan: PIPE #95 @145 \u2192 EYE #94 @147"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180340,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 120,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 240,
+        "30": 260,
+        "31": 272
+      },
+      "parent_wave": 12,
+      "birth": 139,
+      "frames": [
+        {
+          "tick": 137,
+          "ready": true,
+          "player": "3293,4248,0"
+        },
+        {
+          "tick": 138,
+          "ready": true,
+          "player": "3293,4246,0"
+        }
+      ],
+      "children": [
+        85,
+        86
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 85,
+          "born": 139,
+          "wave": 17,
+          "style": "MELEE",
+          "first_zero": 142,
+          "removed": 144,
+          "requests": [
+            {
+              "tick": 140,
+              "role": 1,
+              "key": 85,
+              "weapon": "SULPHUR",
+              "reason": "Fresh MELEE small"
+            }
+          ]
+        },
+        {
+          "key": 86,
+          "born": 139,
+          "wave": 17,
+          "style": "RANGE",
+          "first_zero": 142,
+          "removed": 144,
+          "requests": [
+            {
+              "tick": 139,
+              "role": 0,
+              "key": 86,
+              "weapon": "PIPE",
+              "reason": "Pre-cap plan: PIPE #92 @139 \u2192 CLAWS #91 @141"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180348,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 116,
+        "17": 120,
+        "18": 132,
+        "19": 140,
+        "20": 152,
+        "21": 168,
+        "22": 184,
+        "23": 196,
+        "24": 204,
+        "25": 212,
+        "26": 220,
+        "27": 224,
+        "28": 232,
+        "29": 248,
+        "30": 260,
+        "31": 272
+      },
+      "parent_wave": 12,
+      "birth": 139,
+      "frames": [
+        {
+          "tick": 137,
+          "ready": true,
+          "player": "3293,4248,0"
+        },
+        {
+          "tick": 138,
+          "ready": true,
+          "player": "3293,4246,0"
+        }
+      ],
+      "children": [
+        88,
+        89
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 88,
+          "born": 139,
+          "wave": 18,
+          "style": "MELEE",
+          "first_zero": 141,
+          "removed": 143,
+          "requests": [
+            {
+              "tick": 139,
+              "role": 0,
+              "key": 88,
+              "weapon": "CLAWS",
+              "reason": "Pre-cap plan: CLAWS #94 @139 \u2192 CLAWS #95 @143"
+            }
+          ]
+        },
+        {
+          "key": 89,
+          "born": 139,
+          "wave": 18,
+          "style": "MELEE",
+          "first_zero": 148,
+          "removed": 149,
+          "requests": [
+            {
+              "tick": 146,
+              "role": 1,
+              "key": 89,
+              "weapon": "SULPHUR",
+              "reason": "Fresh MELEE small"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180351,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 92,
+        "14": 100,
+        "15": 108,
+        "16": 120,
+        "17": 124,
+        "18": 136,
+        "19": 144,
+        "20": 176,
+        "21": 192,
+        "22": 200,
+        "23": 212,
+        "24": 220,
+        "25": 228,
+        "26": 236,
+        "27": 240,
+        "28": 248,
+        "29": 272,
+        "30": 276,
+        "31": 280
+      },
+      "parent_wave": 15,
+      "birth": 163,
+      "frames": [
+        {
+          "tick": 161,
+          "ready": true,
+          "player": "3293,4248,0"
+        }
+      ],
+      "children": [
+        99,
+        100
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3293,4246,0",
+      "outcomes": [
+        {
+          "key": 99,
+          "born": 163,
+          "wave": 19,
+          "style": "MELEE",
+          "first_zero": 169,
+          "removed": 170,
+          "requests": [
+            {
+              "tick": 167,
+              "role": 1,
+              "key": 99,
+              "weapon": "SULPHUR",
+              "reason": "Fresh MELEE small"
+            }
+          ]
+        },
+        {
+          "key": 100,
+          "born": 163,
+          "wave": 19,
+          "style": "MELEE",
+          "first_zero": 173,
+          "removed": 174,
+          "requests": [
+            {
+              "tick": 171,
+              "role": 1,
+              "key": 100,
+              "weapon": "SULPHUR",
+              "reason": "Fresh MELEE small"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17271307180354,
+      "spawns": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 36,
+        "7": 40,
+        "8": 52,
+        "9": 56,
+        "10": 68,
+        "11": 76,
+        "12": 84,
+        "13": 96,
+        "14": 108,
+        "15": 116,
+        "16": 124,
+        "17": 128,
+        "18": 140,
+        "19": 148,
+        "20": 160,
+        "21": 176,
+        "22": 188,
+        "23": 200,
+        "24": 208,
+        "25": 216,
+        "26": 224,
+        "27": 228,
+        "28": 236,
+        "29": 260,
+        "30": 264,
+        "31": 268
+      },
+      "parent_wave": 12,
+      "birth": 139,
+      "frames": [
+        {
+          "tick": 138,
+          "ready": true,
+          "player": "3294,4245,0"
+        }
+      ],
+      "children": [
+        83,
+        84
+      ],
+      "ambiguous": false,
+      "at_birth_position": "3292,4244,0",
+      "outcomes": [
+        {
+          "key": 83,
+          "born": 139,
+          "wave": 17,
+          "style": "MELEE",
+          "first_zero": 141,
+          "removed": 143,
+          "requests": [
+            {
+              "tick": 139,
+              "role": 0,
+              "key": 83,
+              "weapon": "CLAWS",
+              "reason": "Pre-cap plan: CLAWS #89 @139 \u2192 CLAWS #90 @143"
+            }
+          ]
+        },
+        {
+          "key": 84,
+          "born": 139,
+          "wave": 17,
+          "style": "MELEE",
+          "first_zero": 147,
+          "removed": 149,
+          "requests": [
+            {
+              "tick": 145,
+              "role": 1,
+              "key": 84,
+              "weapon": "SULPHUR",
+              "reason": "Fresh MELEE small"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "caveat": "Measure actual Ranger natural-stage movement, child requests, and first19 removals.\n\nBirth-square matches are diagnostic; simultaneous overlapping splits are flagged.\n"
+}

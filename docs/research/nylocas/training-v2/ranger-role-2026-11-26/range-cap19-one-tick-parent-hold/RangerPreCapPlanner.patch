@@ -1,0 +1,35 @@
+--- a/RangerPreCapPlanner.java
++++ b/RangerPreCapPlanner.java
+@@ -81,6 +81,8 @@
+ 		}
+ 		if (best == null) return RangerStrategy.staging(room, reservation, "No useful pre-cap attack");
+ 		Shot first = best.shots.get(0);
++		if (holdNewParentForFirstAdmission(room, tick, first))
++			return new Decision(null, Weapon.PIPE, room.player, false, null, "Protect first20 cap: defer new18 parent one tick");
+ 		String sequence = best.shots.stream().map(s -> s.decision.weapon + " #" + s.decision.target.index
+ 			+ " @" + s.tick).collect(Collectors.joining(" → "));
+ 		Decision action = first.decision;
+@@ -96,6 +98,23 @@
+ 		decision.pathToTarget = first.tick > tick && queue;
+ 		if (decision.target == null) decision.approach = action.target;
+ 		return decision;
++	}
++
++	private boolean holdNewParentForFirstAdmission(Room room, int tick, Shot first)
++	{
++		Crab target = first.decision.target;
++		if (room.wave != 19 || room.spawns[19] < 0 || tick != room.spawns[19] + 6
++			|| tick < room.ready || first.tick > tick || room.crabs.size() != 10
++			|| !target.big || target.wave != 18 || target.hp != 16 || target.pendingDamage != 0
++			|| strategy.opened(target)) return false;
++		// One dying West18 body will become two. A new18 parent pop at the first check
++		// can raise ten current bodies to twelve. Move its first request by exactly one tick.
++		boolean westBody = room.crabs.stream().anyMatch(c -> c.big && c.wave == 18 && c.lane == Lane.WEST
++			&& c.hp <= 0 && c.dying);
++		if (!westBody || room.crabs.stream().anyMatch(c -> !c.big && c.hp > 0 && !c.dying && !c.nulled
++			&& !c.claimed(tick) && !c.awaitingHit(tick))) return false;
++		return room.crabs.stream().noneMatch(c -> c.big && c.wave == 18 && c.hp > 0 && !c.dying
++			&& !c.nulled && !c.claimed(tick) && !c.awaitingHit(tick) && strategy.opened(c));
+ 	}
+ 
+ 	private static void keepEarliest(List<Plan> choices)

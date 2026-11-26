@@ -1,0 +1,22 @@
+--- a/org/localscape/nylocas/mage/MageStrategy.java
++++ b/org/localscape/nylocas/mage/MageStrategy.java
+@@ -481,6 +481,19 @@
+ 					+ Math.max(0, 8 - c.hp) * 40, tick, tick, c.born + 48);
+ 			}
+ 		}
++		// The ranger owns the 18 parents, but the mage otherwise only stages
++		// west for 19. Use that idle movement/cooldown budget for east's brief
++		// magic phase; ordinary own work and fresh split support keep priority.
++		if (candidates.isEmpty() && idleRange.isEmpty() && next == null && room.wave == 18)
++		{
++			for (Crab c : room.crabs)
++			{
++				if (c.wave != 18 || c.lane != Lane.EAST || !c.big || c.hp <= 0
++					|| tick > c.born + 5 || !eligible(room, c, tick)) continue;
++				Decision help = new Decision(c, Weapon.EYE, tile(3296, 4248), false, null, "Idle east18 magic opening support");
++				add(candidates, room, null, help, 500, tick, c.born + 5, c.born + 5);
++			}
++		}
+ 		if (candidates.isEmpty()) candidates.addAll(idleRange);
+ 		Comparator<Candidate> priority = Comparator.comparingInt((Candidate c) -> cleanupRescue(room, c.decision.target) ? 0
+ 			: west30MeleeTakeover(room, c.decision.target, tick) ? 1 : 2)

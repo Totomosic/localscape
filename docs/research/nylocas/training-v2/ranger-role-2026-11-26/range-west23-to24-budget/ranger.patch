@@ -1,0 +1,14 @@
+--- upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/ranger/RangerStrategy.java
++++ .state/simulations/training-v5-20261126-range-west23-to24-budget/policy-source/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -666,6 +666,11 @@
+ 			if (room.wave == 31 && rule.wave <= 29) continue;
+ 			if (rule.priority != 0 || completed.contains(rule.name)
+ 				|| room.wave < 20 && rule.wave != 10 && rule.wave != 20) continue;
++			// A late west23 pipe must leave cooldown for west24's last safe range request.
++			if ("West south flicker 23".equals(rule.name) && room.spawns[24] >= 0
++				&& tick + Weapon.PIPE.cooldown > room.spawns[24] + 3 && !completed.contains("West big 24")
++				&& room.crabs.stream().anyMatch(c -> c.wave == 24 && c.big && c.lane == Lane.WEST
++					&& !c.dying && !c.nulled && !c.claimed(tick) && !c.awaitingHit(tick))) continue;
+ 			if (rule.wave <= room.wave)
+ 			{
+ 				Crab crab = room.crabs.stream().filter(c -> rule.matches(c) && !c.dying && !c.nulled && !dimmed(room, c)).findFirst().orElse(null);

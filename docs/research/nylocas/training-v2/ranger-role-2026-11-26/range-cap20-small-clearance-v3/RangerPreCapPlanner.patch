@@ -1,0 +1,78 @@
+--- upstream/rsmod/api/nylocas-agents/src/main/java/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ .state/simulations/training-v5-20261126-range-cap20-small-clearance-v3/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -49,6 +49,8 @@
+ 
+ 	Decision decide(Room room, int tick, Reservation reservation)
+ 	{
++		if (waitForCapChildren(room, tick))
++			return new Decision(null, Weapon.PIPE, RangerStrategy.tile(3293, 4248), false, null, "Reserve imminent cap children");
+ 		int[] hp = room.crabs.stream().mapToInt(c -> c.hp).toArray();
+ 		List<Plan> beam = new ArrayList<>();
+ 		beam.add(new Plan(hp));
+@@ -115,7 +117,9 @@
+ 		if (choices.stream().anyMatch(p -> openingBow(last(p))))
+ 			choices.removeIf(p -> !openingBow(last(p)));
+ 		int serviceTick = Math.max(tick, ready);
+-		if (RangerStrategy.wave18Released(room, serviceTick) && choices.stream()
++		if (choices.stream().anyMatch(p -> capClearanceSmall(p, room)))
++			choices.removeIf(p -> !capClearanceSmall(p, room));
++		else if (RangerStrategy.wave18Released(room, serviceTick) && choices.stream()
+ 			.anyMatch(p -> last(p).target.big && last(p).target.wave == 18))
+ 			choices.removeIf(p -> !last(p).target.big || last(p).target.wave != 18);
+ 		int deadline = choices.stream().mapToInt(p -> serviceDeadline(p, room, serviceTick)).min().getAsInt();
+@@ -124,6 +128,45 @@
+ 		int lane = choices.stream().mapToInt(p -> RangerStrategy.transitionLane(last(p).target)).min().getAsInt();
+ 		if (lane != Integer.MAX_VALUE) choices.removeIf(p -> RangerStrategy.transitionLane(last(p).target) != Integer.MAX_VALUE
+ 			&& RangerStrategy.transitionLane(last(p).target) > lane);
++	}
++
++	private boolean capClearanceSmall(Plan plan, Room room)
++	{
++		Shot shot = plan.shots.get(plan.shots.size() - 1);
++		Crab small = shot.decision.target;
++		if (room.wave != 19 || room.spawns[19] < 0 || room.spawns[18] < 0 || room.crabs.size() < 11
++			|| shot.tick < room.spawns[19] + 5 || shot.tick > room.spawns[19] + 7
++			|| small.big || small.born + 49 <= room.spawns[19] + 12
++			|| shot.decision.weapon.style == Style.MELEE || small.pendingDamage < 0
++			|| small.pendingDamage >= small.hp) return false;
++		List<Crab> parents = room.crabs.stream().filter(c -> c.big && c.wave == 18
++			&& c.hp > 0 && !c.dying && !c.nulled && !c.claimed(shot.tick) && !c.awaitingHit(shot.tick))
++			.collect(Collectors.toList());
++		// Real parent survivor feedback keeps its existing priority. Defer unopened work only.
++		if (parents.isEmpty() || parents.stream().anyMatch(strategy::opened)) return false;
++		int shots = parents.stream().mapToInt(c -> Math.max(1, (c.hp - Math.max(0, c.pendingDamage) + 7) / 8)).sum();
++		int deadline = Math.min(parents.stream().mapToInt(c -> c.born + 49).min().getAsInt(), room.spawns[19] + 28 - 2);
++		// This is a service budget using the planner's existing eight-HP work estimate,
++		// not a promise that a normal roll kills. Reserve the west20 bow cooldown,
++		// then use the already-supported permanent-Magic recovery before actual21.
++		return shot.tick + shot.decision.weapon.cooldown + (shots - 1) * Weapon.PIPE.cooldown + 2
++			+ Weapon.BOW.cooldown <= deadline;
++	}
++
++	private boolean waitForCapChildren(Room room, int tick)
++	{
++		if (room.wave != 19 || room.spawns[19] < 0 || tick != room.spawns[19] + 6
++			|| tick < room.ready || room.crabs.size() < 11) return false;
++		boolean westBody = room.crabs.stream().anyMatch(c -> c.big && c.wave == 18 && c.lane == Lane.WEST
++			&& (c.dying || c.hp <= 0));
++		if (!westBody || room.crabs.stream().anyMatch(c -> !c.big && c.hp > 0 && !c.dying && !c.nulled
++			&& !c.claimed(tick) && !c.awaitingHit(tick))) return false;
++		// Only hold one ready tick before the final ordinary small-removal opportunity.
++		// Actual surviving parent followups remain protected; nothing waits past +6.
++		return room.crabs.stream().anyMatch(c -> c.big && c.wave == 18 && c.hp > 0 && !c.dying
++			&& !c.nulled && !c.claimed(tick) && !c.awaitingHit(tick))
++			&& room.crabs.stream().noneMatch(c -> c.big && c.wave == 18 && c.hp > 0 && !c.dying
++				&& !c.nulled && !c.claimed(tick) && !c.awaitingHit(tick) && strategy.opened(c));
+ 	}
+ 
+ 	private int openingOrder(Decision decision)
+@@ -247,7 +290,8 @@
+ 		if (weapon == Weapon.BOW && !crab.big && crab.wave > 2) return false;
+ 		if (crab.big)
+ 		{
+-			if (crab.wave == 18) return weapon.style == Style.RANGE && weapon != Weapon.CHIN
++			if (crab.wave == 18) return (weapon.style == Style.RANGE || weapon == Weapon.EYE && age == 5 && crab.lane == Lane.WEST)
++				&& weapon != Weapon.CHIN
+ 				&& RangerStrategy.wave18Available(crab, room, crab.born + age);
+ 			boolean clawAssignment = crab.wave == 6 && crab.lane == Lane.EAST && age >= 9;
+ 			return (clawAssignment || strategy.assignedBig(crab, room, age))

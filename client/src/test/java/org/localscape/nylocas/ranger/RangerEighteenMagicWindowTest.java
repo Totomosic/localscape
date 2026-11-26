@@ -116,15 +116,15 @@ public class RangerEighteenMagicWindowTest
 	}
 
 	@Test
-	public void existingUsefulMagicFillerCanKeepItsReadyAttack()
+	public void recentMagicFillerCanKeepItsReadyAttack()
 	{
 		Room room = room();
-		Crab parent = parent(room, Lane.WEST);
-		Crab old = new Crab(59, 65, 110, 11, Lane.SPLIT, 'S', false, Style.MAGIC,
+		parent(room, Lane.WEST);
+		Crab recent = new Crab(59, 65, 139, 17, Lane.SPLIT, 'S', false, Style.MAGIC,
 			RangerStrategy.tile(3296, 4247));
-		room.crabs.add(old);
+		room.crabs.add(recent);
 		Decision decision = strategy.decide(room, 145);
-		assertSame(decision.reason, old, decision.target);
+		assertSame(decision.reason, recent, decision.target);
 		assertEquals(Weapon.EYE, decision.weapon);
 	}
 

@@ -1,0 +1,13 @@
+--- .state/simulations/training-v5-20261126-range-cap20-small-clearance/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ .state/simulations/training-v5-20261126-range-cap20-small-clearance-v2/policy-source/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -134,8 +134,8 @@
+ 		Crab small = shot.decision.target;
+ 		if (room.wave != 19 || room.spawns[19] < 0 || room.spawns[18] < 0 || room.crabs.size() < 11
+ 			|| shot.tick < room.spawns[19] + 5 || shot.tick > room.spawns[19] + 8
+-			|| small.big || small.lane != Lane.SPLIT || small.born < room.spawns[18]
+-			|| shot.decision.weapon.style != Style.RANGE || small.pendingDamage < 0
++			|| small.big || small.born + 49 <= room.spawns[19] + 12
++			|| shot.decision.weapon.style == Style.MELEE || small.pendingDamage < 0
+ 			|| small.pendingDamage >= small.hp) return false;
+ 		List<Crab> parents = room.crabs.stream().filter(c -> c.big && c.wave == 18
+ 			&& c.hp > 0 && !c.dying && !c.nulled && !c.claimed(shot.tick) && !c.awaitingHit(shot.tick))

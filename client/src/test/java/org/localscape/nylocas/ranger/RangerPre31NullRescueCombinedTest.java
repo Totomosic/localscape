@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class RangerPre31NullRescueCombinedTest
 {
 	@Test
-	public void actualCombinedDimWitnessRescuesAnUndimmedThirtyChild()
+	public void actualCombinedDimWitnessFinishesWestThirtyBeforeRescuingAnUndimmedChild()
 	{
 		// Combined timestamp seed191996532081150 tick266, native delay0, HP99.
 		// Cutoff=max(actual29=244, actual28=228+16)=244; key190 born262 is fresh.
@@ -37,6 +37,10 @@ public class RangerPre31NullRescueCombinedTest
 		rescue.pendingDamage = 0;
 		room.crabs.add(rescue);
 		Decision decision = strategy.decide(room, 266);
+		assertSame(decision.reason, own, decision.target);
+		assertEquals(Weapon.PIPE, decision.weapon);
+		own.pendingDamage = own.hp;
+		decision = strategy.decide(room, 266);
 		assertSame(decision.reason, rescue, decision.target);
 		assertEquals(Weapon.EYE, decision.weapon);
 	}

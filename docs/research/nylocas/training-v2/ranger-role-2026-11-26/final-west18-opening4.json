@@ -1,0 +1,4888 @@
+[
+  {
+    "tick": 19,
+    "roles": [
+      {
+        "role": "0",
+        "wave": "4",
+        "ready": "false",
+        "attack": "false",
+        "xy": "3296,4243,0",
+        "weapon": "PIPE",
+        "target": "6",
+        "rule": "null",
+        "reason": "Pre-cap plan: PIPE #12 @21 \u2192 PIPE #16 @23 \u2192 EYE #15 @25",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 15,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3295",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 5,
+            "w": 2,
+            "age": 11,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4243"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 11,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4246"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 7,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3288",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 8,
+            "w": 3,
+            "age": 7,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3296",
+              "4239"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 9,
+            "w": 3,
+            "age": 7,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3303",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 3,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3284",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 3,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3295",
+              "4236"
+            ],
+            "claim": "50",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "16",
+              "21"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 3,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3307",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "1",
+        "wave": "4",
+        "ready": "false",
+        "attack": "false",
+        "xy": "3296,4243,0",
+        "weapon": "EYE",
+        "target": "9",
+        "rule": "null",
+        "reason": "Plan EYE #15 @20: East magic 3",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 15,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3295",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 5,
+            "w": 2,
+            "age": 11,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4243"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 11,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4246"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 7,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3288",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 8,
+            "w": 3,
+            "age": 7,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3296",
+              "4239"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 9,
+            "w": 3,
+            "age": 7,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3303",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 3,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3284",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 3,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3295",
+              "4236"
+            ],
+            "claim": "0",
+            "ownhit": "49",
+            "dying": "false",
+            "pending": [
+              "16",
+              "21"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 3,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3307",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      }
+    ],
+    "NYLO_PLAYERS": [
+      "99,99",
+      "9808,9148",
+      "88,87"
+    ],
+    "NYLO_ENGINE": [
+      "2,1",
+      "3,8",
+      "3296,4243,0,3296,4243,0"
+    ]
+  },
+  {
+    "tick": 20,
+    "roles": [
+      {
+        "role": "0",
+        "wave": "5",
+        "ready": "false",
+        "attack": "false",
+        "xy": "3296,4243,0",
+        "weapon": "PIPE",
+        "target": "13",
+        "rule": "West big 5",
+        "reason": "Pre-cap plan: PIPE #19 @22 \u2192 PIPE #19 @24 \u2192 PIPE #16 @26",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 16,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3294",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 5,
+            "w": 2,
+            "age": 12,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4243"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 12,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 8,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3289",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 9,
+            "w": 3,
+            "age": 8,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3302",
+              "4249"
+            ],
+            "claim": "53",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 4,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3285",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 4,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3295",
+              "4237"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "16",
+              "21"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 4,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3306",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 0,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3281",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "16",
+              "0"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 0,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4233"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 0,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3310",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "1",
+        "wave": "5",
+        "ready": "true",
+        "attack": "true",
+        "xy": "3296,4243,0",
+        "weapon": "EYE",
+        "target": "9",
+        "rule": "East magic 3",
+        "reason": "East magic 3",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 16,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3294",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 5,
+            "w": 2,
+            "age": 12,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4243"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 12,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 8,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3289",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 9,
+            "w": 3,
+            "age": 8,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3302",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "52",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 4,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3285",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 4,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3295",
+              "4237"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "16",
+              "21"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 4,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3306",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 0,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3281",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "16",
+              "0"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 0,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4233"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 0,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3310",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      }
+    ],
+    "NYLO_PLAYERS": [
+      "99,99",
+      "9751,9172",
+      "88,87"
+    ],
+    "NYLO_ENGINE": [
+      "1,0",
+      "16,8",
+      "3294,4243,0,3296,4243,0"
+    ]
+  },
+  {
+    "tick": 21,
+    "roles": [
+      {
+        "role": "0",
+        "wave": "5",
+        "ready": "true",
+        "attack": "false",
+        "xy": "3294,4243,0",
+        "weapon": "PIPE",
+        "target": "13",
+        "rule": "West big 5",
+        "reason": "Pre-cap plan: PIPE #19 @22 \u2192 PIPE #19 @24 \u2192 PIPE #16 @26",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 17,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3293",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 13,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 9,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3290",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 9,
+            "w": 3,
+            "age": 9,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3301",
+              "4249"
+            ],
+            "claim": "53",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "27"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 5,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3286",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 5,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 5,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3305",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 1,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3282",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "16",
+              "0"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 1,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4234"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 1,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3309",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "1",
+        "wave": "5",
+        "ready": "false",
+        "attack": "false",
+        "xy": "3296,4243,0",
+        "weapon": "EYE",
+        "target": "15",
+        "rule": "null",
+        "reason": "Plan EYE #21 @23: East magic 5",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 17,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3293",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 13,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 9,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3290",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 9,
+            "w": 3,
+            "age": 9,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3301",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "52",
+            "dying": "false",
+            "pending": [
+              "8",
+              "27"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 5,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3286",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 5,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 5,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3305",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 1,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3282",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "16",
+              "0"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 1,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4234"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 1,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3309",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      }
+    ],
+    "NYLO_PLAYERS": [
+      "99,99",
+      "9694,9087",
+      "87,87"
+    ],
+    "NYLO_ENGINE": [
+      "0,2",
+      "16,8",
+      "3292,4243,0,3298,4244,0"
+    ]
+  },
+  {
+    "tick": 22,
+    "roles": [
+      {
+        "role": "0",
+        "wave": "5",
+        "ready": "true",
+        "attack": "false",
+        "xy": "3292,4243,0",
+        "weapon": "PIPE",
+        "target": "13",
+        "rule": "West big 5",
+        "reason": "Pre-cap plan: PIPE #19 @22 \u2192 PIPE #19 @24 \u2192 PIPE #16 @26",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 18,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 14,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 10,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3291",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 9,
+            "w": 3,
+            "age": 10,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "5",
+            "xy": [
+              "3300",
+              "4248"
+            ],
+            "claim": "53",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "5",
+              "24"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 6,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3287",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 6,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 6,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3304",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 2,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3283",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "16",
+              "0"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 2,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4235"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 2,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3308",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "1",
+        "wave": "5",
+        "ready": "false",
+        "attack": "false",
+        "xy": "3298,4244,0",
+        "weapon": "EYE",
+        "target": "15",
+        "rule": "null",
+        "reason": "Plan EYE #21 @23: East magic 5",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 18,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 14,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 10,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3291",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 9,
+            "w": 3,
+            "age": 10,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "5",
+            "xy": [
+              "3300",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "52",
+            "dying": "false",
+            "pending": [
+              "5",
+              "24"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 6,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3287",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 6,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 6,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3304",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 2,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3283",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "16",
+              "0"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 2,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4235"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 2,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3308",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      }
+    ],
+    "NYLO_PLAYERS": [
+      "99,99",
+      "9637,9002",
+      "87,87"
+    ],
+    "NYLO_ENGINE": [
+      "-1,1",
+      "16,8",
+      "3292,4245,0,3300,4245,0"
+    ]
+  },
+  {
+    "tick": 23,
+    "roles": [
+      {
+        "role": "0",
+        "wave": "5",
+        "ready": "true",
+        "attack": "true",
+        "xy": "3292,4245,0",
+        "weapon": "PIPE",
+        "target": "13",
+        "rule": "West big 5",
+        "reason": "Pre-cap plan: PIPE #19 @23 \u2192 PIPE #19 @25 \u2192 PIPE #16 @27",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 19,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 15,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 11,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4250"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 9,
+            "w": 3,
+            "age": 11,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "5",
+            "xy": [
+              "3299",
+              "4247"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "5",
+              "24"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 7,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3288",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 7,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 7,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3303",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 3,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3284",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "55",
+            "dying": "false",
+            "pending": [
+              "16",
+              "0"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 3,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4236"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 3,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3307",
+              "4249"
+            ],
+            "claim": "56",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "1",
+        "wave": "5",
+        "ready": "true",
+        "attack": "true",
+        "xy": "3300,4245,0",
+        "weapon": "EYE",
+        "target": "15",
+        "rule": "East magic 5",
+        "reason": "East magic 5",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 19,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 15,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 11,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4250"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 9,
+            "w": 3,
+            "age": 11,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "5",
+            "xy": [
+              "3299",
+              "4247"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "5",
+              "24"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 7,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3288",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 7,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 7,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3303",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 3,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3284",
+              "4248"
+            ],
+            "claim": "56",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "16",
+              "0"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 3,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4236"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 3,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3307",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "55",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      }
+    ],
+    "NYLO_PLAYERS": [
+      "99,99",
+      "9580,9026",
+      "87,86"
+    ],
+    "NYLO_ENGINE": [
+      "-2,0",
+      "16,8",
+      "3291,4247,0,3300,4245,0"
+    ]
+  },
+  {
+    "tick": 24,
+    "roles": [
+      {
+        "role": "0",
+        "wave": "5",
+        "ready": "false",
+        "attack": "false",
+        "xy": "3291,4247,0",
+        "weapon": "PIPE",
+        "target": "13",
+        "rule": "null",
+        "reason": "Pre-cap plan: PIPE #19 @25 \u2192 PIPE #19 @27 \u2192 PIPE #16 @29",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 20,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 16,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 12,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3293",
+              "4251"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 9,
+            "w": 3,
+            "age": 12,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3298",
+              "4246"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 8,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3289",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 8,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 8,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3302",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 4,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3285",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "55",
+            "dying": "false",
+            "pending": [
+              "16",
+              "1"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 4,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4237"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 4,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3306",
+              "4249"
+            ],
+            "claim": "56",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "24"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "1",
+        "wave": "5",
+        "ready": "false",
+        "attack": "false",
+        "xy": "3300,4245,0",
+        "weapon": "SULPHUR",
+        "target": "12",
+        "rule": "null",
+        "reason": "Plan SULPHUR #18 @26: East melee 4",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 20,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 16,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 12,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3293",
+              "4251"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 9,
+            "w": 3,
+            "age": 12,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3298",
+              "4246"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 8,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3289",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 8,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 8,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3302",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 4,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3285",
+              "4248"
+            ],
+            "claim": "56",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "16",
+              "1"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 4,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4237"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 4,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3306",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "55",
+            "dying": "false",
+            "pending": [
+              "8",
+              "24"
+            ]
+          }
+        ]
+      }
+    ],
+    "NYLO_PLAYERS": [
+      "99,99",
+      "9604,8941",
+      "87,86"
+    ],
+    "NYLO_ENGINE": [
+      "1,2",
+      "16,8",
+      "3291,4247,0,3301,4247,0"
+    ]
+  },
+  {
+    "tick": 25,
+    "roles": [
+      {
+        "role": "0",
+        "wave": "5",
+        "ready": "true",
+        "attack": "true",
+        "xy": "3291,4247,0",
+        "weapon": "PIPE",
+        "target": "13",
+        "rule": "null",
+        "reason": "Pre-cap plan: PIPE #19 @25 \u2192 PIPE #19 @27 \u2192 PIPE #16 @29",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 21,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 17,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 13,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3294",
+              "4252"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 9,
+            "w": 3,
+            "age": 13,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3298",
+              "4246"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 9,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3290",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 9,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 9,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3301",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 5,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3286",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "57",
+            "dying": "false",
+            "pending": [
+              "16",
+              "1"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 5,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 5,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3305",
+              "4249"
+            ],
+            "claim": "56",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "24"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "1",
+        "wave": "5",
+        "ready": "false",
+        "attack": "false",
+        "xy": "3301,4247,0",
+        "weapon": "SULPHUR",
+        "target": "12",
+        "rule": "null",
+        "reason": "Plan SULPHUR #18 @26: East melee 4",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 21,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 17,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 13,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3294",
+              "4252"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 9,
+            "w": 3,
+            "age": 13,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3298",
+              "4246"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 9,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3290",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 9,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 9,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3301",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 5,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "16",
+            "xy": [
+              "3286",
+              "4248"
+            ],
+            "claim": "58",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "16",
+              "1"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 5,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 5,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3305",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "55",
+            "dying": "false",
+            "pending": [
+              "8",
+              "24"
+            ]
+          }
+        ]
+      }
+    ],
+    "NYLO_PLAYERS": [
+      "99,99",
+      "9628,8965",
+      "86,86"
+    ],
+    "NYLO_ENGINE": [
+      "0,1",
+      "15,8",
+      "3291,4247,0,3301,4247,0"
+    ]
+  },
+  {
+    "tick": 26,
+    "roles": [
+      {
+        "role": "0",
+        "wave": "5",
+        "ready": "false",
+        "attack": "false",
+        "xy": "3291,4247,0",
+        "weapon": "PIPE",
+        "target": "13",
+        "rule": "null",
+        "reason": "Pre-cap plan: PIPE #19 @27 \u2192 PIPE #19 @29 \u2192 PIPE #16 @31",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 22,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 18,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 14,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3295",
+              "4253"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 10,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3290",
+              "4250"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 10,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 10,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3301",
+              "4249"
+            ],
+            "claim": "59",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 6,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "15",
+            "xy": [
+              "3287",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "57",
+            "dying": "false",
+            "pending": [
+              "15",
+              "0"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 6,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4239"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 6,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3304",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "24"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "1",
+        "wave": "5",
+        "ready": "true",
+        "attack": "true",
+        "xy": "3301,4247,0",
+        "weapon": "SULPHUR",
+        "target": "12",
+        "rule": "East melee 4",
+        "reason": "East melee 4",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 22,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 18,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 14,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3295",
+              "4253"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 10,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3290",
+              "4250"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 10,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 10,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3301",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "58",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 6,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "15",
+            "xy": [
+              "3287",
+              "4248"
+            ],
+            "claim": "58",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "15",
+              "0"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 6,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4239"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 6,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3304",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "24"
+            ]
+          }
+        ]
+      }
+    ],
+    "NYLO_PLAYERS": [
+      "99,99",
+      "9652,8880",
+      "86,86"
+    ],
+    "NYLO_ENGINE": [
+      "1,0",
+      "15,8",
+      "3291,4247,0,3301,4249,0"
+    ]
+  },
+  {
+    "tick": 27,
+    "roles": [
+      {
+        "role": "0",
+        "wave": "5",
+        "ready": "true",
+        "attack": "true",
+        "xy": "3291,4247,0",
+        "weapon": "PIPE",
+        "target": "13",
+        "rule": "null",
+        "reason": "Pre-cap plan: PIPE #19 @27 \u2192 PIPE #19 @29 \u2192 PIPE #16 @31",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 23,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 19,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 15,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 11,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3290",
+              "4251"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 11,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 11,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3301",
+              "4250"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "19"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 7,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "15",
+            "xy": [
+              "3288",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "59",
+            "dying": "false",
+            "pending": [
+              "15",
+              "0"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 7,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4240"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 7,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3303",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "1",
+        "wave": "5",
+        "ready": "false",
+        "attack": "false",
+        "xy": "3301,4249,0",
+        "weapon": "SULPHUR",
+        "target": "14",
+        "rule": "null",
+        "reason": "Plan SULPHUR #20 @30: South melee 5",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 23,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 19,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 15,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 11,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3290",
+              "4251"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 11,
+            "w": 4,
+            "age": 11,
+            "style": "MAGIC",
+            "big": "true",
+            "hp": "0",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 11,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3301",
+              "4250"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "19"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 7,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "15",
+            "xy": [
+              "3288",
+              "4248"
+            ],
+            "claim": "60",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "15",
+              "0"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 7,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4240"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 7,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3303",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          }
+        ]
+      }
+    ],
+    "NYLO_PLAYERS": [
+      "99,99",
+      "9676,8795",
+      "86,85"
+    ],
+    "NYLO_ENGINE": [
+      "0,3",
+      "15,8",
+      "3291,4247,0,3301,4247,0"
+    ]
+  },
+  {
+    "tick": 28,
+    "roles": [
+      {
+        "role": "0",
+        "wave": "5",
+        "ready": "false",
+        "attack": "false",
+        "xy": "3291,4247,0",
+        "weapon": "PIPE",
+        "target": "13",
+        "rule": "null",
+        "reason": "Pre-cap plan: PIPE #19 @29 \u2192 PIPE #19 @31 \u2192 PIPE #16 @33",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 24,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 20,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 16,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3297",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 12,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3290",
+              "4252"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 12,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3301",
+              "4251"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 8,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "15",
+            "xy": [
+              "3289",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "59",
+            "dying": "false",
+            "pending": [
+              "15",
+              "2"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 8,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4241"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 8,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3303",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 16,
+            "w": 5,
+            "age": 0,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 17,
+            "w": 5,
+            "age": 0,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4239"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "1",
+        "wave": "5",
+        "ready": "false",
+        "attack": "false",
+        "xy": "3301,4247,0",
+        "weapon": "SULPHUR",
+        "target": "14",
+        "rule": "null",
+        "reason": "Plan SULPHUR #20 @30: South melee 5",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 24,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 20,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 16,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3297",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 12,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3290",
+              "4252"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 12,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3301",
+              "4251"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 8,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "15",
+            "xy": [
+              "3289",
+              "4248"
+            ],
+            "claim": "60",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "15",
+              "2"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 8,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4241"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 15,
+            "w": 5,
+            "age": 8,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3303",
+              "4249"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 16,
+            "w": 5,
+            "age": 0,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3295",
+              "4238"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 17,
+            "w": 5,
+            "age": 0,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4239"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      }
+    ],
+    "NYLO_PLAYERS": [
+      "99,99",
+      "9700,8710",
+      "86,85"
+    ],
+    "NYLO_ENGINE": [
+      "1,2",
+      "15,8",
+      "3291,4247,0,3299,4245,0"
+    ]
+  },
+  {
+    "tick": 29,
+    "roles": [
+      {
+        "role": "0",
+        "wave": "5",
+        "ready": "true",
+        "attack": "true",
+        "xy": "3291,4247,0",
+        "weapon": "PIPE",
+        "target": "13",
+        "rule": "null",
+        "reason": "Pre-cap plan: PIPE #19 @29 \u2192 PIPE #19 @31 \u2192 PIPE #16 @33",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 25,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 21,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 17,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3298",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 13,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3290",
+              "4252"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 13,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3301",
+              "4251"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 9,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "15",
+            "xy": [
+              "3290",
+              "4248"
+            ],
+            "claim": "0",
+            "ownhit": "61",
+            "dying": "false",
+            "pending": [
+              "15",
+              "2"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 9,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4242"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 16,
+            "w": 5,
+            "age": 1,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3295",
+              "4239"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 17,
+            "w": 5,
+            "age": 1,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4240"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "1",
+        "wave": "5",
+        "ready": "false",
+        "attack": "false",
+        "xy": "3299,4245,0",
+        "weapon": "SULPHUR",
+        "target": "14",
+        "rule": "null",
+        "reason": "Plan SULPHUR #20 @30: South melee 5",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 25,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 21,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 17,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3298",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 13,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3290",
+              "4252"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 12,
+            "w": 4,
+            "age": 13,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "0",
+            "xy": [
+              "3301",
+              "4251"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "true",
+            "pending": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 9,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "15",
+            "xy": [
+              "3290",
+              "4248"
+            ],
+            "claim": "62",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "15",
+              "2"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 9,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4242"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 16,
+            "w": 5,
+            "age": 1,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3295",
+              "4239"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 17,
+            "w": 5,
+            "age": 1,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4240"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      }
+    ],
+    "NYLO_PLAYERS": [
+      "99,99",
+      "9724,8625",
+      "85,85"
+    ],
+    "NYLO_ENGINE": [
+      "0,1",
+      "13,8",
+      "3292,4247,0,3297,4243,0"
+    ]
+  },
+  {
+    "tick": 30,
+    "roles": [
+      {
+        "role": "0",
+        "wave": "5",
+        "ready": "false",
+        "attack": "false",
+        "xy": "3292,4247,0",
+        "weapon": "PIPE",
+        "target": "13",
+        "rule": "null",
+        "reason": "Pre-cap plan: PIPE #19 @31 \u2192 PIPE #19 @33 \u2192 PIPE #12 @35",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 26,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 22,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 18,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3299",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 14,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3290",
+              "4252"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 10,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "13",
+            "xy": [
+              "3290",
+              "4247"
+            ],
+            "claim": "0",
+            "ownhit": "61",
+            "dying": "false",
+            "pending": [
+              "13",
+              "0"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 10,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4243"
+            ],
+            "claim": "63",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 16,
+            "w": 5,
+            "age": 2,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3295",
+              "4240"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 17,
+            "w": 5,
+            "age": 2,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4241"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "1",
+        "wave": "5",
+        "ready": "true",
+        "attack": "true",
+        "xy": "3297,4243,0",
+        "weapon": "SULPHUR",
+        "target": "14",
+        "rule": "South melee 5",
+        "reason": "South melee 5",
+        "nulls": null,
+        "crabs": [
+          {
+            "key": 3,
+            "w": 1,
+            "age": 26,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3292",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 6,
+            "w": 2,
+            "age": 22,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "3",
+            "xy": [
+              "3301",
+              "4245"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "3",
+              "0"
+            ]
+          },
+          {
+            "key": 7,
+            "w": 3,
+            "age": 18,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3299",
+              "4254"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 10,
+            "w": 4,
+            "age": 14,
+            "style": "RANGE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3290",
+              "4252"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 13,
+            "w": 5,
+            "age": 10,
+            "style": "RANGE",
+            "big": "true",
+            "hp": "13",
+            "xy": [
+              "3290",
+              "4247"
+            ],
+            "claim": "62",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "13",
+              "0"
+            ]
+          },
+          {
+            "key": 14,
+            "w": 5,
+            "age": 10,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4243"
+            ],
+            "claim": "0",
+            "ownhit": "62",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 16,
+            "w": 5,
+            "age": 2,
+            "style": "MAGIC",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3295",
+              "4240"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          },
+          {
+            "key": 17,
+            "w": 5,
+            "age": 2,
+            "style": "MELEE",
+            "big": "false",
+            "hp": "8",
+            "xy": [
+              "3296",
+              "4241"
+            ],
+            "claim": "0",
+            "ownhit": "0",
+            "dying": "false",
+            "pending": [
+              "8",
+              "0"
+            ]
+          }
+        ]
+      }
+    ],
+    "NYLO_PLAYERS": [
+      "99,99",
+      "9748,8649",
+      "85,84"
+    ],
+    "NYLO_ENGINE": [
+      "1,0",
+      "13,8",
+      "3292,4247,0,3296,4243,0"
+    ]
+  }
+]

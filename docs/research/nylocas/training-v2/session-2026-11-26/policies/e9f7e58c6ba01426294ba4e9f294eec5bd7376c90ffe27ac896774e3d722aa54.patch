@@ -1,0 +1,86 @@
+--- a/org/localscape/nylocas/mage/MageStrategy.java
++++ b/org/localscape/nylocas/mage/MageStrategy.java
+@@ -653,8 +653,8 @@
+ 
+ 	private boolean guidanceDeferred(Room room, Crab c, int tick)
+ 	{
+-		// Jordan's opening leaves the wave-3 lane melee for natural expiry.
+-		if (!c.big && c.wave == 3 && c.lane != Lane.SPLIT && c.style == Style.MELEE) return true;
++		// Jordan never targets the original wave-1 melee, and leaves wave-3 lane melee for expiry.
++		if (!c.big && (c.wave == 1 || c.wave == 3) && c.lane != Lane.SPLIT && c.style == Style.MELEE) return true;
+ 		// One south-11 Ayak precedes opening west-11, leaving that parent's
+ 		// children until the wave-13 admission. A NULL/claimed south can yield.
+ 		if (c.big && c.wave == 11 && c.lane == Lane.WEST && !completed.contains("South magic 11")
+--- a/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
++++ b/org/localscape/nylocas/ranger/RangerPreCapPlanner.java
+@@ -115,7 +115,9 @@
+ 		if (choices.stream().anyMatch(p -> openingBow(last(p))))
+ 			choices.removeIf(p -> !openingBow(last(p)));
+ 		int serviceTick = Math.max(tick, ready);
+-		if (RangerStrategy.wave18Released(room, serviceTick) && choices.stream()
++		if (choices.stream().anyMatch(p -> capClearanceSmall(p, room)))
++			choices.removeIf(p -> !capClearanceSmall(p, room));
++		else if (RangerStrategy.wave18Released(room, serviceTick) && choices.stream()
+ 			.anyMatch(p -> last(p).target.big && last(p).target.wave == 18))
+ 			choices.removeIf(p -> !last(p).target.big || last(p).target.wave != 18);
+ 		int deadline = choices.stream().mapToInt(p -> serviceDeadline(p, room, serviceTick)).min().getAsInt();
+@@ -126,6 +128,27 @@
+ 			&& RangerStrategy.transitionLane(last(p).target) > lane);
+ 	}
+ 
++	private boolean capClearanceSmall(Plan plan, Room room)
++	{
++		Shot shot = plan.shots.get(plan.shots.size() - 1);
++		Crab small = shot.decision.target;
++		if (room.wave != 19 || room.spawns[19] < 0 || room.spawns[18] < 0 || room.crabs.size() < 11
++			|| shot.tick < room.spawns[19] + 5 || shot.tick > room.spawns[19] + 8
++			|| small.big || small.born + 49 <= room.spawns[19] + 12
++			|| shot.decision.weapon.style == Style.MELEE || small.pendingDamage < 0
++			|| small.pendingDamage >= small.hp) return false;
++		List<Crab> parents = room.crabs.stream().filter(c -> c.big && c.wave == 18
++			&& c.hp > 0 && !c.dying && !c.nulled && !c.claimed(shot.tick) && !c.awaitingHit(shot.tick))
++			.collect(Collectors.toList());
++		// Real parent survivor feedback keeps its existing priority. Defer unopened work only.
++		if (parents.isEmpty() || parents.stream().anyMatch(strategy::opened)) return false;
++		int shots = parents.stream().mapToInt(c -> Math.max(1, (c.hp - Math.max(0, c.pendingDamage) + 7) / 8)).sum();
++		int deadline = parents.stream().mapToInt(c -> c.born + 26).min().getAsInt();
++		// This is a service budget using the planner's existing eight-HP work estimate,
++		// not a promise that a normal roll kills. Keep time for all remaining parents.
++		return shot.tick + shot.decision.weapon.cooldown + (shots - 1) * Weapon.PIPE.cooldown + 2 <= deadline;
++	}
++
+ 	private int openingOrder(Decision decision)
+ 	{
+ 		Crab target = decision.target;
+@@ -162,7 +185,7 @@
+ 		for (int i = 0; i < room.crabs.size(); i++)
+ 		{
+ 			Crab crab = room.crabs.get(i);
+-			if (crab.dying || crab.nulled || plan.hp[i] <= 0) continue;
++			if (crab.dying || crab.nulled || RangerStrategy.avoidedOriginalMelee(crab) || plan.hp[i] <= 0) continue;
+ 			for (Weapon weapon : Weapon.values())
+ 			{
+ 				for (int at = ready; at <= now + HORIZON; at++)
+--- a/org/localscape/nylocas/ranger/RangerStrategy.java
++++ b/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -324,7 +324,7 @@
+ 		for (Crab crab : room.crabs)
+ 		{
+ 			int age = tick - crab.born;
+-			if (crab.hp <= 0 || crab.dying || crab.nulled || savedMagePrimary(crab, tick)
++			if (crab.hp <= 0 || crab.dying || crab.nulled || avoidedOriginalMelee(crab) || savedMagePrimary(crab, tick)
+ 				|| crab != lastLiving && crab.claimed(tick) || crab.awaitingHit(tick)
+ 				|| age >= 49 || crab.big && crab.wave < 20 && room.wave < 29
+ 					&& !(room.wave == 20 && crab.wave == 18)
+@@ -627,6 +627,11 @@
+ 			|| c.wave == 21 && c.lane == Lane.WEST && tick - c.born <= 2);
+ 	}
+ 
++	static boolean avoidedOriginalMelee(Crab crab)
++	{
++		return crab.wave == 1 && !crab.big && crab.lane == Lane.EAST && crab.slot == 'N';
++	}
++
+ 	static boolean savedMagePrimary(Crab crab, int tick)
+ 	{
+ 		int age = tick - crab.born;

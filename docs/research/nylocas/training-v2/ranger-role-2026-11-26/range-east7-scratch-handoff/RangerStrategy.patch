@@ -1,0 +1,47 @@
+--- .state/simulations/training-v5-20261126-range-user-no-wave1/policy-source/org/localscape/nylocas/ranger/RangerStrategy.java
++++ .state/simulations/training-v5-20261126-range-east7-scratch-handoff/policy-source/org/localscape/nylocas/ranger/RangerStrategy.java
+@@ -303,6 +303,30 @@
+ 		return next != null && "West magic big 19".equals(next.rule.name) ? next.due : -1;
+ 	}
+ 
++	/** Pure handoff proof: local normal claws, bounded cooldown, and protected work checked.
++	 * The native adapter separately verifies controlled role, weapon, food and action delay. */
++	public int east7ScratchDue(Room room, int tick)
++	{
++		if (room.wave < 7 || room.wave > 8) return -1;
++		int due = Math.max(tick, room.ready);
++		if (due > tick + 2) return -1;
++		Crab target = room.crabs.stream().filter(c -> c.wave == 7 && c.lane == Lane.EAST && c.slot == 'N' && !c.big
++			&& c.style == Style.MELEE && c.hp > 0 && !c.dying && !c.nulled && !c.claimed(tick) && !c.awaitingHit(tick)
++			&& due - c.born >= 9 && due - c.born <= 12 && c.distance(room.player) <= 1
++			&& !room.obstructed.contains(c.key)).findFirst().orElse(null);
++		if (target == null) return -1;
++		for (Crab c : room.crabs)
++		{
++			if (c == target || c.hp <= 0 || c.dying || c.nulled || c.claimed(tick) || c.awaitingHit(tick)) continue;
++			if (c.key == latestAttack || c.big && assignedBig(c, room, tick - c.born)) return -1;
++		}
++		Reservation next = reservation(room, tick);
++		if (next != null && due + Math.max(Weapon.CLAWS.cooldown, (target.point.distanceTo(next.rule.stage) + 1) / 2) > next.due) return -1;
++		int s8 = room.spawns[8] >= 0 ? room.spawns[8] : room.spawns[7] >= 0 ? room.spawns[7] + DELAYS[7] : -1;
++		if (s8 >= 0 && due + Math.max(Weapon.CLAWS.cooldown, (target.point.distanceTo(tile(3301, 4248)) + 1) / 2) > s8 + 4) return -1;
++		return due;
++	}
++
+ 	boolean committed(Decision decision, int tick) { return intent.matches(decision.target.key, decision.weapon, tick); }
+ 
+ 	boolean confirmedFollowup(Decision decision, int tick)
+@@ -318,6 +342,13 @@
+ 		if (room.wave == 0) return prepare(Weapon.BOW, tile(3292, 4249), "Opening setup");
+ 		if (room.wave == 31 && finalPacketFinished(room, tick)) room.cleanup = true;
+ 		Reservation next = reservation(room, tick);
++		int scratchDue = east7ScratchDue(room, tick);
++		if (scratchDue >= tick)
++		{
++			Crab target = room.crabs.stream().filter(c -> c.wave == 7 && c.lane == Lane.EAST && c.slot == 'N' && !c.big).findFirst().get();
++			if (scratchDue > tick) return prepare(Weapon.CLAWS, AttackTiming.attackTile(room.player, target.point, false, 0), "Prepare East7 melee scratch");
++			return new Decision(target, Weapon.CLAWS, target.point, false, "East melee scratch 7", "East7 melee scratch");
++		}
+ 		if (room.wave < 20) return preCap.decide(room, tick, next);
+ 		Crab lastLiving = room.wave == 31 ? lastLiving(room) : null;
+ 		List<Candidate> candidates = new ArrayList<>();

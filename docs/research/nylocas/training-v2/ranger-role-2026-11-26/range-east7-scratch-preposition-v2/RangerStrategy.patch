@@ -1,0 +1,57 @@
+--- a/RangerStrategy.java
++++ b/RangerStrategy.java
+@@ -307,12 +307,17 @@
+ 	 * The native adapter separately verifies controlled role, weapon, food and action delay. */
+ 	public int east7ScratchDue(Room room, int tick)
+ 	{
++		return east7ScratchDue(room, tick, 2);
++	}
++
++	private int east7ScratchDue(Room room, int tick, int lookahead)
++	{
+ 		if (room.wave < 7 || room.wave > 8) return -1;
+ 		int due = Math.max(tick, room.ready);
+-		if (due > tick + 2) return -1;
++		if (due > tick + lookahead) return -1;
+ 		Crab target = room.crabs.stream().filter(c -> c.wave == 7 && c.lane == Lane.EAST && c.slot == 'N' && !c.big
+ 			&& c.style == Style.MELEE && c.hp > 0 && !c.dying && !c.nulled && !c.claimed(tick) && !c.awaitingHit(tick)
+-			&& due - c.born >= 9 && due - c.born <= 12 && c.distance(room.player) <= 1
++			&& due - c.born >= 9 && due - c.born <= 12 && east7ScratchStand(room, c, tick, due)
+ 			&& !room.obstructed.contains(c.key)).findFirst().orElse(null);
+ 		if (target == null) return -1;
+ 		for (Crab c : room.crabs)
+@@ -327,6 +332,16 @@
+ 		return due;
+ 	}
+ 
++	private boolean east7ScratchStand(Room room, Crab target, int tick, int due)
++	{
++		if (due == tick) return target.distance(room.player) <= Weapon.CLAWS.range;
++		if (target.distance(room.player) > 3) return false;
++		Tile point = AttackTiming.position(target.point, target.lane.ordinal(), tick - target.born, due + 1 - tick);
++		Tile stand = AttackTiming.attackTile(room.player, point, false, Weapon.CLAWS.range);
++		return AttackTiming.distance(stand, point, false) <= Weapon.CLAWS.range
++			&& (room.player.distanceTo(stand) + 1) / 2 <= due - tick;
++	}
++
+ 	boolean committed(Decision decision, int tick) { return intent.matches(decision.target.key, decision.weapon, tick); }
+ 
+ 	boolean confirmedFollowup(Decision decision, int tick)
+@@ -342,11 +357,15 @@
+ 		if (room.wave == 0) return prepare(Weapon.BOW, tile(3292, 4249), "Opening setup");
+ 		if (room.wave == 31 && finalPacketFinished(room, tick)) room.cleanup = true;
+ 		Reservation next = reservation(room, tick);
+-		int scratchDue = east7ScratchDue(room, tick);
++		int scratchDue = east7ScratchDue(room, tick, room.ready > tick ? 3 : 2);
+ 		if (scratchDue >= tick)
+ 		{
+ 			Crab target = room.crabs.stream().filter(c -> c.wave == 7 && c.lane == Lane.EAST && c.slot == 'N' && !c.big).findFirst().get();
+-			if (scratchDue > tick) return prepare(Weapon.CLAWS, AttackTiming.attackTile(room.player, target.point, false, 0), "Prepare East7 melee scratch");
++			if (scratchDue > tick)
++			{
++				Tile point = AttackTiming.position(target.point, target.lane.ordinal(), tick - target.born, scratchDue + 1 - tick);
++				return prepare(Weapon.CLAWS, AttackTiming.attackTile(room.player, point, false, Weapon.CLAWS.range), "Prepare East7 melee scratch");
++			}
+ 			return new Decision(target, Weapon.CLAWS, target.point, false, "East melee scratch 7", "East7 melee scratch");
+ 		}
+ 		if (room.wave < 20) return preCap.decide(room, tick, next);

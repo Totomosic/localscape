@@ -198,13 +198,13 @@ public class MageStrategyTest
 		r.crabs.remove(big); Crab child = crab(r, 30, 253, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3297, 4248);
 		assertSame(child, strategy.decide(r, 258).target);
 	}
-	@Test public void leavesUnclaimedPartnerMagicAndFlickersToTheRanger()
+	@Test public void anIdleMageCanHelpWithLocalMagicWhileTheNextFlickerIsUnsafe()
 	{
 		Room r = room(16, 120, 3295, 4248);
 		Crab partnerWork = crab(r, 15, 112, Lane.EAST, 'N', false, Style.MAGIC, 3295, 4249);
 		Crab flicker = crab(r, 16, 120, Lane.EAST, 'S', false, Style.MAGIC, 3295, 4248);
 		assertFalse(MageStrategy.matchesNext(flicker, Style.MAGIC, 124));
-		assertNull(strategy.decide(r, 124).target);
+		assertSame(partnerWork, strategy.decide(r, 124).target);
 		partnerWork.claimedUntil = 130;
 		assertNull(strategy.decide(r, 124).target);
 	}
@@ -240,7 +240,7 @@ public class MageStrategyTest
 		Room r = room(18, 100, 3290, 4248);
 		Crab distant = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.MELEE, 3301, 4248);
 		Decision approach = strategy.decide(r, 100);
-		assertSame(distant, approach.target); assertTrue(approach.pathToTarget);
+		assertNull(approach.target); assertSame(distant, approach.approach); assertFalse(approach.pathToTarget);
 		r.player = MageStrategy.tile(3292, 4248);
 		Crab local = crab(r, 18, 101, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3293, 4248);
 		assertSame(local, strategy.decide(r, 101).target);
@@ -284,7 +284,7 @@ public class MageStrategyTest
 	{
 		Room r = room(29, 100, 3290, 4248); r.specialEnergy = 0;
 		Crab original = crab(r, 29, 100, Lane.SPLIT, (char) 0, false, Style.MELEE, 3301, 4248);
-		assertSame(original, strategy.decide(r, 100).target);
+		assertSame(original, strategy.decide(r, 100).approach);
 		r.wave = 31; r.spawns[31] = 101;
 		assertNull(strategy.decide(r, 101).target);
 		strategy.reset(); r.crabs.clear(); r.wave = 18; r.ready = 105;
@@ -296,7 +296,7 @@ public class MageStrategyTest
 		Room r = room(12, 108, 3295, 4248);
 		Crab melee = crab(r, 12, 108, Lane.SPLIT, (char) 0, false, Style.MELEE, 3301, 4248);
 		Decision approach = strategy.decide(r, 108);
-		assertSame(melee, approach.target); assertTrue(approach.pathToTarget);
+		assertNull(approach.target); assertSame(melee, approach.approach); assertFalse(approach.pathToTarget);
 		// No movement progress for two ticks: even moving and attacking in the
 		// same cycle can no longer fit a clearing hit before +7.
 		Decision reserve = strategy.decide(r, 110);
@@ -362,7 +362,7 @@ public class MageStrategyTest
 		assertSame(child, strategy.decide(r, 130).target);
 		assertEquals(29, r.wave); assertEquals(-1, r.spawns[30]);
 		r.wave = 31; r.spawns[30] = 130; r.spawns[31] = 134;
-		assertNull(strategy.decide(r, 134).target);
+		assertSame(child, strategy.decide(r, 134).target);
 	}
 	@Test public void predictedFinalSpawnTickDoesNotDiscardWorkBeforeTheRealWaveMarker()
 	{
@@ -465,7 +465,7 @@ public class MageStrategyTest
 		Decision attack = strategy.decide(r, 109);
 		assertSame(south, attack.target); assertEquals(Weapon.SCYTHE, attack.weapon);
 		r.wave = 31; r.spawns[31] = 110;
-		assertNull(strategy.decide(r, 110).target);
+		assertSame(south, strategy.decide(r, 110).target);
 	}
 
 	@Test public void authoritativeNullStatusExcludesOrdinaryAssignedAndPacketTargets()
@@ -519,14 +519,15 @@ public class MageStrategyTest
 		ranged.nulled = true;
 		assertNull(strategy.decide(r, 102).target);
 	}
-	@Test public void partnerNullRescueRemainsBelowReadyMagicAndMeleeWork()
+	@Test public void prioritizeUncoveredPartnerNullThenReturnToReadyMelee()
 	{
 		Room r = room(18, 100, 3295, 4248);
 		Crab ranged = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3296, 4248);
 		ranged.partnerNulled = true;
 		Crab magic = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3295, 4249);
-		assertSame(magic, strategy.decide(r, 102).target);
+		assertSame(ranged, strategy.decide(r, 102).target);
 		strategy.reset();
+		ranged.pendingDamage = ranged.hp;
 		Crab melee = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.MELEE, 3294, 4248);
 		assertSame(melee, strategy.decide(r, 102).target);
 	}
@@ -549,27 +550,28 @@ public class MageStrategyTest
 		assertNull(strategy.decide(r, 105).target);
 	}
 
-	@Test public void rescueCommitmentYieldsWhenPrimaryRoleWorkBecomesAvailable()
+	@Test public void coveredRescueCommitmentYieldsWhenPrimaryRoleWorkBecomesAvailable()
 	{
 		Room r = room(18, 100, 3295, 4248); r.ready = 102;
 		Crab ranged = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3296, 4248);
 		ranged.partnerNulled = true;
 		assertSame(ranged, strategy.decide(r, 100).approach);
+		ranged.pendingDamage = ranged.hp;
 		Crab magic = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3295, 4249);
 		assertSame(magic, strategy.decide(r, 101).approach);
 	}
 
-	@Test public void south29BigWaitsForActual30AndDoesNotInferItThroughCapRetries()
+	@Test public void south29BigOpensAtTheDoorwayAndRemainsAssignedDuring31()
 	{
 		Room r = room(29, 100, 3295, 4244);
 		Crab south = crab(r, 29, 100, Lane.SOUTH, 'W', true, Style.MELEE, 3295, 4243);
-		assertNull(strategy.decide(r, 109).target);
-		assertNull(strategy.decide(r, 124).target);
+		assertSame(south, strategy.decide(r, 107).target);
+		assertSame(south, strategy.decide(r, 124).target);
 		assertEquals(-1, r.spawns[30]);
 		r.wave = 30; r.spawns[30] = 124;
 		assertSame(south, strategy.decide(r, 124).target);
 		r.wave = 31; r.spawns[31] = 128;
-		assertNull(strategy.decide(r, 128).target);
+		assertSame(south, strategy.decide(r, 128).target);
 	}
 	@Test public void lastPre31ScytheDeadlineRejectsALongCooldownFiller()
 	{
@@ -734,28 +736,32 @@ public class MageStrategyTest
 		Crab melee = crab(r, 31, 100, Lane.SPLIT, (char) 0, false, Style.MELEE, 3296, 4248);
 		assertSame(melee, strategy.decide(r, 102).target);
 	}
-	@Test public void cleanupRescueLeavesNamedMageLaneAndPartnerPacketGuardsIntact()
+	@Test public void rescueAnUncoveredCleanupTargetThenServiceTheNamedLane()
 	{
 		Room r = room(31, 100, 3295, 4248);
 		Crab rescue = crab(r, 31, 100, Lane.SPLIT, (char) 0, false, Style.MAGIC, 3298, 4248);
 		rescue.partnerNulled = true;
 		Crab east = crab(r, 31, 100, Lane.EAST, 'N', false, Style.MAGIC, 3300, 4249);
+		assertSame(rescue, strategy.decide(r, 102).target);
+		rescue.pendingDamage = rescue.hp;
 		assertSame(east, strategy.decide(r, 102).target);
 		east.dying = true; rescue.dying = true;
 		Crab saved = crab(r, 31, 100, Lane.WEST, 'N', false, Style.MAGIC, 3291, 4249);
 		saved.partnerNulled = true;
+		assertSame(saved, strategy.decide(r, 102).target);
+		saved.nulled = true;
 		assertNull(strategy.decide(r, 102).target);
 	}
 
 
-	@Test public void idlePreCapPipeSupportsOnlyFreshRangedSplits()
+	@Test public void anIdleMageCanFinishALocalRangedSplitInWave18()
 	{
 		Room r = room(18, 100, 3295, 4248);
 		Crab split = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3296, 4248);
 		Decision d = strategy.decide(r, 102);
 		assertSame(split, d.target); assertEquals(Weapon.PIPE, d.weapon);
 		assertEquals("Idle ranged split support", d.reason);
-		assertNull(strategy.decide(r, 105).target);
+		assertSame(split, strategy.decide(r, 105).target);
 	}
 	@Test public void idlePipeNeverDisplacesOwnReadyMagicOrMelee()
 	{
@@ -810,11 +816,11 @@ public class MageStrategyTest
 		assertNull(reserve.target); assertEquals(Weapon.BARRAGE, reserve.weapon);
 		assertEquals(MageStrategy.tile(3301, 4249), reserve.tile);
 	}
-	@Test public void idlePipeNeverOpensLaneTargetsBigsOrPostCapWork()
+	@Test public void idleWave18SupportCanClearALocalLaneSmall()
 	{
 		Room r = room(18, 100, 3295, 4248);
 		Crab lane = crab(r, 18, 100, Lane.WEST, 'S', false, Style.RANGE, 3296, 4248);
-		assertNull(strategy.decide(r, 102).target); r.crabs.remove(lane);
+		assertSame(lane, strategy.decide(r, 102).target); r.crabs.remove(lane);
 		Crab big = crab(r, 18, 100, Lane.SPLIT, (char) 0, true, Style.RANGE, 3296, 4248);
 		assertNull(strategy.decide(r, 102).target); r.crabs.remove(big);
 		crab(r, 20, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3296, 4248);
@@ -884,5 +890,29 @@ public class MageStrategyTest
 		Crab west = crab(r, 21, 100, Lane.WEST, 'N', false, Style.MAGIC, 3281, 4249);
 		Decision packet = strategy.decide(r, 100); assertSame(west, packet.target);
 		assertEquals("21 west barrage", packet.rule); assertEquals(Weapon.BARRAGE, packet.weapon);
+	}
+
+	@Test public void finishesWoundedEastTwentyFourWhenBothRequiredParentsCanBeScythedNow()
+	{
+		Room r = room(29, 240, 3292, 4245);
+		r.spawns[24] = 200;
+		r.spawns[25] = 208;
+		r.spawns[26] = 216;
+		r.spawns[27] = 220;
+		r.spawns[28] = 228;
+		r.ready = 241;
+		Crab east = crab(r, 24, 200, Lane.EAST, 'S', true, Style.MELEE, 3295, 4245);
+		Crab west = crab(r, 25, 208, Lane.WEST, 'S', true, Style.MELEE, 3293, 4245);
+		east.hp = 5;
+		east.pendingDamage = 0;
+		west.pendingDamage = 0;
+		strategy.attacked(new Decision(east, Weapon.SCYTHE, east.point, false, null, "24 east"), 229, 228);
+		east.ownHitUntil = 0;
+
+		Decision follow = strategy.decide(r, 241);
+		assertSame(east, follow.target);
+		assertEquals(Weapon.SCYTHE, follow.weapon);
+		east.pendingDamage = 5;
+		assertSame(west, strategy.decide(r, 241).target);
 	}
 }

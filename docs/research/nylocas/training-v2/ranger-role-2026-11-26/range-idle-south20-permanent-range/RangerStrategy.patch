@@ -1,0 +1,29 @@
+--- a/RangerStrategy.java
++++ b/RangerStrategy.java
+@@ -382,6 +382,26 @@
+ 			Decision filler = new Decision(crab, weapon, CENTER, false, null, "Recent " + crab.style + (crab.big ? " big" : " small"));
+ 			add(candidates, room, next, filler, score, tick, crab.born + 48);
+ 		}
++		if (candidates.isEmpty() && (room.wave == 21 || room.wave == 22) && tick >= room.ready)
++		{
++			// Mage can no longer damage South20 after its permanent range change.
++			// Only a literal spare, immediately local Pipe fits; existing work and packets stay first.
++			for (Crab crab : room.crabs)
++			{
++				int age = tick - crab.born;
++				if (!crab.big || crab.wave != 20 || crab.lane != Lane.SOUTH || age < 26 || age >= 49
++					|| crab.style != Style.RANGE || crab.hp <= 0 || crab.dying || crab.nulled
++					|| crab.claimed(tick) || crab.pendingDamage < 0 || crab.awaitingHit(tick)
++					|| room.obstructed.contains(crab.key) || crab.distance(room.player) > Weapon.PIPE.range) continue;
++				long replacements = room.crabs.stream().filter(c -> c != crab && c.big
++					&& (c.dying || c.hp <= 0 || c.pendingDamage >= c.hp && c.hp > 0)).count();
++				// One parent becomes two children; allow known other deaths within the raised cap.
++				if (room.crabs.size() + 1 + replacements >= 24) continue;
++				Decision backup = new Decision(crab, Weapon.PIPE, room.player, false, null, "Idle permanent-range South20 backup");
++				add(candidates, room, next, backup, 100, tick, tick);
++			}
++		}
++
+ 		if (candidates.isEmpty() && room.wave >= 20 && room.wave < 29)
+ 		{
+ 			// Keep the lane assignments first; spare cooldown can finish an older big.

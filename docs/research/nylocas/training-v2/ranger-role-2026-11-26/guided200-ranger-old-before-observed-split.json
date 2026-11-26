@@ -1,0 +1,410 @@
+[
+  {
+    "seed": 83400450855196,
+    "tick": 136,
+    "old": 61,
+    "oldwave": 13,
+    "oldhp": 8,
+    "actualDelta": 2,
+    "modelDelta": 3,
+    "bodyDelay": 6,
+    "parent": {
+      "k": 64,
+      "w": 13,
+      "l": "east",
+      "age": 38,
+      "first": 132,
+      "xy": [
+        3296,
+        4245
+      ],
+      "delay": 6
+    },
+    "after": [
+      {
+        "k": 83,
+        "w": 17,
+        "s": "MELEE",
+        "lane": "split",
+        "big": false,
+        "delta": 2,
+        "dist": 3,
+        "opp": true,
+        "parent": {
+          "k": 64,
+          "w": 13,
+          "l": "east",
+          "age": 38,
+          "first": 132,
+          "xy": [
+            3296,
+            4245
+          ],
+          "delay": 6
+        }
+      },
+      {
+        "k": 84,
+        "w": 17,
+        "s": "RANGE",
+        "lane": "split",
+        "big": false,
+        "delta": 2,
+        "dist": 4,
+        "opp": true,
+        "parent": {
+          "k": 64,
+          "w": 13,
+          "l": "east",
+          "age": 38,
+          "first": 132,
+          "xy": [
+            3296,
+            4245
+          ],
+          "delay": 6
+        }
+      }
+    ]
+  },
+  {
+    "seed": 83400450855230,
+    "tick": 98,
+    "old": 37,
+    "oldwave": 9,
+    "oldhp": 2,
+    "actualDelta": 2,
+    "modelDelta": 3,
+    "bodyDelay": 6,
+    "parent": {
+      "k": 44,
+      "w": 11,
+      "l": "west",
+      "age": 24,
+      "first": 94,
+      "xy": [
+        3291,
+        4247
+      ],
+      "delay": 6
+    },
+    "after": [
+      {
+        "k": 63,
+        "w": 13,
+        "s": "MAGIC",
+        "lane": "split",
+        "big": false,
+        "delta": 2,
+        "dist": 2,
+        "opp": true,
+        "parent": {
+          "k": 44,
+          "w": 11,
+          "l": "west",
+          "age": 24,
+          "first": 94,
+          "xy": [
+            3291,
+            4247
+          ],
+          "delay": 6
+        }
+      },
+      {
+        "k": 64,
+        "w": 13,
+        "s": "MELEE",
+        "lane": "split",
+        "big": false,
+        "delta": 2,
+        "dist": 1,
+        "opp": true,
+        "parent": {
+          "k": 44,
+          "w": 11,
+          "l": "west",
+          "age": 24,
+          "first": 94,
+          "xy": [
+            3291,
+            4247
+          ],
+          "delay": 6
+        }
+      }
+    ]
+  },
+  {
+    "seed": 83400450855231,
+    "tick": 132,
+    "old": 59,
+    "oldwave": 13,
+    "oldhp": 8,
+    "actualDelta": 2,
+    "modelDelta": 4,
+    "bodyDelay": 5,
+    "parent": {
+      "k": 62,
+      "w": 13,
+      "l": "east",
+      "age": 42,
+      "first": 129,
+      "xy": [
+        3295,
+        4247
+      ],
+      "delay": 5
+    },
+    "after": [
+      {
+        "k": 83,
+        "w": 17,
+        "s": "RANGE",
+        "lane": "split",
+        "big": false,
+        "delta": 2,
+        "dist": 1,
+        "opp": true,
+        "parent": {
+          "k": 62,
+          "w": 13,
+          "l": "east",
+          "age": 42,
+          "first": 129,
+          "xy": [
+            3295,
+            4247
+          ],
+          "delay": 5
+        }
+      },
+      {
+        "k": 84,
+        "w": 17,
+        "s": "RANGE",
+        "lane": "split",
+        "big": false,
+        "delta": 2,
+        "dist": 1,
+        "opp": true,
+        "parent": {
+          "k": 62,
+          "w": 13,
+          "l": "east",
+          "age": 42,
+          "first": 129,
+          "xy": [
+            3295,
+            4247
+          ],
+          "delay": 5
+        }
+      }
+    ]
+  },
+  {
+    "seed": 83400450855256,
+    "tick": 134,
+    "old": 61,
+    "oldwave": 13,
+    "oldhp": 8,
+    "actualDelta": 2,
+    "modelDelta": 3,
+    "bodyDelay": 6,
+    "parent": {
+      "k": 64,
+      "w": 13,
+      "l": "east",
+      "age": 40,
+      "first": 130,
+      "xy": [
+        3296,
+        4246
+      ],
+      "delay": 6
+    },
+    "after": [
+      {
+        "k": 83,
+        "w": 18,
+        "s": "MAGIC",
+        "lane": "split",
+        "big": false,
+        "delta": 2,
+        "dist": 1,
+        "opp": true,
+        "parent": {
+          "k": 64,
+          "w": 13,
+          "l": "east",
+          "age": 40,
+          "first": 130,
+          "xy": [
+            3296,
+            4246
+          ],
+          "delay": 6
+        }
+      },
+      {
+        "k": 84,
+        "w": 18,
+        "s": "MELEE",
+        "lane": "split",
+        "big": false,
+        "delta": 2,
+        "dist": 2,
+        "opp": true,
+        "parent": {
+          "k": 64,
+          "w": 13,
+          "l": "east",
+          "age": 40,
+          "first": 130,
+          "xy": [
+            3296,
+            4246
+          ],
+          "delay": 6
+        }
+      }
+    ]
+  },
+  {
+    "seed": 83400450855327,
+    "tick": 93,
+    "old": 37,
+    "oldwave": 9,
+    "oldhp": 8,
+    "actualDelta": 2,
+    "modelDelta": 3,
+    "bodyDelay": 6,
+    "parent": {
+      "k": 46,
+      "w": 11,
+      "l": "west",
+      "age": 19,
+      "first": 89,
+      "xy": [
+        3293,
+        4245
+      ],
+      "delay": 6
+    },
+    "after": [
+      {
+        "k": 63,
+        "w": 13,
+        "s": "RANGE",
+        "lane": "split",
+        "big": false,
+        "delta": 2,
+        "dist": 3,
+        "opp": true,
+        "parent": {
+          "k": 46,
+          "w": 11,
+          "l": "west",
+          "age": 19,
+          "first": 89,
+          "xy": [
+            3293,
+            4245
+          ],
+          "delay": 6
+        }
+      },
+      {
+        "k": 64,
+        "w": 13,
+        "s": "MAGIC",
+        "lane": "split",
+        "big": false,
+        "delta": 2,
+        "dist": 2,
+        "opp": true,
+        "parent": {
+          "k": 46,
+          "w": 11,
+          "l": "west",
+          "age": 19,
+          "first": 89,
+          "xy": [
+            3293,
+            4245
+          ],
+          "delay": 6
+        }
+      }
+    ]
+  },
+  {
+    "seed": 83400450855343,
+    "tick": 140,
+    "old": 61,
+    "oldwave": 13,
+    "oldhp": 8,
+    "actualDelta": 2,
+    "modelDelta": 3,
+    "bodyDelay": 6,
+    "parent": {
+      "k": 64,
+      "w": 13,
+      "l": "east",
+      "age": 38,
+      "first": 136,
+      "xy": [
+        3297,
+        4246
+      ],
+      "delay": 6
+    },
+    "after": [
+      {
+        "k": 83,
+        "w": 17,
+        "s": "MELEE",
+        "lane": "split",
+        "big": false,
+        "delta": 2,
+        "dist": 4,
+        "opp": true,
+        "parent": {
+          "k": 64,
+          "w": 13,
+          "l": "east",
+          "age": 38,
+          "first": 136,
+          "xy": [
+            3297,
+            4246
+          ],
+          "delay": 6
+        }
+      },
+      {
+        "k": 84,
+        "w": 17,
+        "s": "MELEE",
+        "lane": "split",
+        "big": false,
+        "delta": 2,
+        "dist": 5,
+        "opp": true,
+        "parent": {
+          "k": 64,
+          "w": 13,
+          "l": "east",
+          "age": 38,
+          "first": 136,
+          "xy": [
+            3297,
+            4246
+          ],
+          "delay": 6
+        }
+      }
+    ]
+  }
+]

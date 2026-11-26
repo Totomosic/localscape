@@ -117,10 +117,13 @@ ready, each boundary fixture checks a six-tile edge distance and a seven-tile
 edge distance before chasing can move the thrall. These tests characterize the
 simulator; they do not independently measure OSRS's range rule.
 
-Overkill does provide a mechanism for a parent to stop farther back: the
-existing moving-big death probes retain a final step on an ordinary lethal
-tick, while a qualifying same-tick extra hit starts death early and suppresses
-that step. `NylocasOverkillTest` includes a positive thrall hit clamped to zero
+Overkill does provide a mechanism for a parent to stop farther back. Following
+the 2026-11-26 movement correction, bigs finish the pending step during their
+pre-animation arrival delay. An ordinary moving kill can step on the lethal
+tick and the following arrival tick; a qualifying same-tick extra hit starts
+death early, leaving only the lethal-tick arrival step. The wave-4 first-Ayak
+regression verifies both final positions without changing either despawn delay.
+`NylocasOverkillTest` includes a positive thrall hit clamped to zero
 after a player kill. This differs from a thrall delivering the lethal damage,
 which does not qualify for the speedup. In-flight thrall projectiles can still
 impact after a player kill, but `Thralls.process` rejects new attacks on a

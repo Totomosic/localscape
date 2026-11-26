@@ -1,0 +1,49 @@
+--- a/RangerPreCapPlanner.java
++++ b/RangerPreCapPlanner.java
+@@ -88,7 +88,11 @@
+ 			beam = new ArrayList<>(choices.subList(0, Math.min(WIDTH, choices.size())));
+ 			best = beam.get(0);
+ 		}
+-		if (best == null) return RangerStrategy.staging(room, reservation, "No useful pre-cap attack");
++		if (best == null)
++		{
++			Decision naturalStage = idleNaturalSouthChildren(room, tick, reservation);
++			return naturalStage != null ? naturalStage : RangerStrategy.staging(room, reservation, "No useful pre-cap attack");
++		}
+ 		Shot first = best.shots.get(0);
+ 		int available = Math.max(tick, room.ready);
+ 		if (ordinaryOldUnhit(first.decision, room) && reservation == null
+@@ -117,6 +121,33 @@
+ 		decision.pathToTarget = first.tick > tick && queue;
+ 		if (decision.target == null) decision.approach = action.target;
+ 		return decision;
++	}
++
++	private Decision idleNaturalSouthChildren(Room room, int tick, Reservation reservation)
++	{
++		if (room.wave < 17 || room.wave >= 20) return null;
++		for (Crab parent : room.crabs)
++		{
++			if (!parent.big || parent.lane != Lane.SOUTH || parent.wave != 12 && parent.wave != 15
++				|| parent.hp <= 0 || parent.dying || parent.pendingDamage < 0 || parent.pendingDamage >= parent.hp
++				|| parent.point.getX() != 3292 || parent.point.getY() != 4243) continue;
++			int birth = parent.born + 55;
++			int service = Math.max(birth, room.ready);
++			if (birth <= tick || birth > tick + 2 || service > birth + 2) continue;
++			// These two fixed-anchor children appear southwest/northeast. This square touches both.
++			Tile stage = RangerStrategy.tile(parent.point.getX(), parent.point.getY() + 1);
++			if ((room.player.distanceTo(stage) + 1) / 2 > birth - tick) continue;
++			int returnTravel = reservation == null ? 0 : (stage.distanceTo(reservation.rule.stage) + 1) / 2;
++			if (reservation != null && service + Math.max(Weapon.CLAWS.cooldown, returnTravel) > reservation.due) continue;
++			int nineteen = room.spawns[19] >= 0 ? room.spawns[19]
++				: room.wave == 18 && room.spawns[18] >= 0 ? room.spawns[18] + 8
++				: room.wave == 17 && room.spawns[17] >= 0 ? room.spawns[17] + 20 : -1;
++			if (nineteen >= 0 && tick < nineteen + 3
++				&& service + Math.max(Weapon.CLAWS.cooldown, (stage.distanceTo(RangerStrategy.tile(3293, 4248)) + 1) / 2) > nineteen + 3) continue;
++			// No existing plan was displaced. The fixed birth leaves at most two ready staging ticks.
++			return new Decision(null, Weapon.PIPE, stage, false, null, "Prepare natural South" + parent.wave + " children @" + birth);
++		}
++		return null;
+ 	}
+ 
+ 	private static void keepEarliest(List<Plan> choices)
