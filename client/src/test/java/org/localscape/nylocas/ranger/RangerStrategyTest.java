@@ -353,7 +353,10 @@ public class RangerStrategyTest
 		closing.point = room.player.dx(-3);
 		Decision decision = strategy.decide(room, 102);
 		assertSame(closing, decision.target);
-		assertTrue(decision.reason.contains("#" + permanent.index + " @104"));
+		strategy.attacked(decision, 103);
+		closing.pendingDamage = closing.hp;
+		room.ready = 104;
+		assertSame(permanent, strategy.decide(room, 104).target);
 	}
 
 	@Test
@@ -405,15 +408,21 @@ public class RangerStrategyTest
 	}
 
 	@Test
-	public void twoChinsClearingAllWorkAreKeptOverAThreeAttackPlan()
+	public void reusesChinOnTheRemainingPairAfterObservingTheFirstPairDie()
 	{
 		Room room = room(12, 100);
 		for (int x : new int[]{3292, 3293, 3298, 3299})
 			crab(room, 12, 100, Lane.SPLIT, (char) 0, false, Style.RANGE).point = RangerStrategy.tile(x, 4248);
 		Decision decision = strategy.decide(room, 100);
 		assertEquals(Weapon.CHIN, decision.weapon);
-		assertEquals(2, decision.reason.split("CHIN", -1).length - 1);
-		assertFalse(decision.reason.contains("PIPE"));
+		strategy.attacked(decision, 101);
+		for (Crab crab : room.crabs)
+			if (crab.point.distanceTo(decision.target.point) <= 1) { crab.dying = true; crab.hp = 0; }
+		room.ready = 103;
+		Decision second = strategy.decide(room, 103);
+		assertEquals(Weapon.CHIN, second.weapon);
+		assertNotNull(second.target);
+		assertTrue(second.target.point.distanceTo(decision.target.point) > 1);
 	}
 
 	@Test
@@ -525,7 +534,8 @@ public class RangerStrategyTest
 		Room room = room(16, 116);
 		Crab big = crab(room, 14, 100, Lane.EAST, 'S', true, Style.RANGE);
 		Decision first = strategy.decide(room, 116);
-		assertTrue(first.reason.contains("#" + big.index + " @118"));
+		assertSame(big, first.target);
+		assertEquals(Weapon.PIPE, first.weapon);
 		strategy.attacked(first, 117);
 		assertEquals("Deferred east big 14", first.rule);
 		for (int i = 0; i < 10; i++)
@@ -886,46 +896,49 @@ public class RangerStrategyTest
 	}
 
 	@Test
-	public void handoffDeadlineComesFromTheActualPacketAndClearsAfterAcknowledgement()
+	public void observedWestNineteenPacketNeverRepeatsAnAcknowledgedAttack()
 	{
 		Room room = room(19, 100);
 		room.player = RangerStrategy.tile(3293, 4248);
 		Crab west = crab(room, 19, 100, Lane.WEST, 'S', true, Style.MAGIC);
-		west.point = RangerStrategy.tile(3281, 4248);
-		room.wave = 18;
-		assertEquals(-1, strategy.west19PacketDue(room, 100));
-		room.wave = 19;
-		assertEquals(103, strategy.west19PacketDue(room, 100));
-		west.point = west.point.dx(3);
+		west.point = RangerStrategy.tile(3284, 4248);
 		Decision launch = strategy.decide(room, 103);
 		assertSame(west, launch.target);
+		assertEquals("West magic big 19", launch.rule);
 		strategy.attacked(launch, 104);
-		assertEquals(-1, strategy.west19PacketDue(room, 104));
+		assertNotEquals(launch.rule, strategy.decide(room, 104).rule);
 	}
 
 	@Test
-	public void handoffDeadlineRejectsUnavailableCooldownClaimsNullAndCurrentObstruction()
+	public void obstructedOrClaimedWestNineteenPacketRequiresANewObservationBeforeLaunch()
 	{
 		Room room = room(19, 100);
 		room.player = RangerStrategy.tile(3293, 4248);
 		Crab west = crab(room, 19, 100, Lane.WEST, 'S', true, Style.MAGIC);
-		west.point = RangerStrategy.tile(3281, 4248);
-		room.ready = 104;
-		assertEquals(-1, strategy.west19PacketDue(room, 100));
+		west.point = RangerStrategy.tile(3284, 4248);
 		room.ready = 103;
-		assertEquals(103, strategy.west19PacketDue(room, 100));
-		west.claimedUntil = 102;
-		assertEquals(-1, strategy.west19PacketDue(room, 100));
+		west.claimedUntil = 104;
+		assertNotSame(west, strategy.decide(room, 103).target);
 		west.claimedUntil = 0;
-		west.nulled = true;
-		assertEquals(-1, strategy.west19PacketDue(room, 100));
-		west.nulled = false;
 		room.obstructed.add(west.key);
-		assertEquals(103, strategy.west19PacketDue(room, 100));
-		west.point = west.point.dx(3);
-		assertEquals(-1, strategy.west19PacketDue(room, 103));
+		assertNotSame(west, strategy.decide(room, 103).target);
 		room.obstructed.clear();
-		assertEquals(103, strategy.west19PacketDue(room, 103));
+		assertSame(west, strategy.decide(room, 103).target);
+	}
+
+	@Test
+	public void aWoundedMageAssignmentGetsBackupWhileTheMageIsOnCooldown()
+	{
+		Room room = room(28, 108);
+		Crab west26 = crab(room, 26, 100, Lane.WEST, 'S', true, Style.MAGIC);
+		west26.hp = 6;
+		west26.pendingDamage = 0;
+		room.observePartner(room.player, 110);
+		assertNull(strategy.decide(room, 110).target);
+		room.observePartner(room.player, 114);
+		assertSame(west26, strategy.decide(room, 110).target);
+		west26.pendingDamage = 6;
+		assertNull(strategy.decide(room, 110).target);
 	}
 
 	@Test

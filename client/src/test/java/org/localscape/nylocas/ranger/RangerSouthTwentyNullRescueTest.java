@@ -81,7 +81,7 @@ public class RangerSouthTwentyNullRescueTest
 	@Test
 	public void realClaimsLethalFlightAndOwnNullStillProtectTheParent()
 	{
-		for (int guard = 0; guard < 8; guard++)
+		for (int guard = 0; guard < 7; guard++)
 		{
 			Room room = room(23);
 			Crab parent = south(room);
@@ -90,9 +90,8 @@ public class RangerSouthTwentyNullRescueTest
 			if (guard == 2) parent.pendingDamage = -1;
 			if (guard == 3) parent.partnerNulled = false;
 			if (guard == 4) { parent.pendingDamage = -1; parent.claimedUntil = 195; }
-			if (guard == 5) parent.provisionalClaimUntil = 195;
-			if (guard == 6) parent.dying = true;
-			if (guard == 7) parent.hp = 0;
+			if (guard == 5) parent.dying = true;
+			if (guard == 6) parent.hp = 0;
 			Crab small = add(room, 100, 23, 188, Lane.SPLIT, false, Style.RANGE);
 			assertSame("guard " + guard, small, new RangerStrategy().decide(room, 190).target);
 		}

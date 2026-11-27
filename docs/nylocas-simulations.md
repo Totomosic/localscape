@@ -97,14 +97,15 @@ python3 tools/simulate-nylocas.py --report-only .state/simulations/comparison/tr
 
 The canonical policy sources live in the server submodule at
 `api/nylocas-agents/src/main/java/org/localscape/nylocas/`. This Java library has
-no RuneLite or RSMod dependencies. It contains the two strategies, ranger's
-pre-cap planner, flicker predictions, source-room tiles, and prayer/supply
-decisions. Strategy changes are made here once.
+no RuneLite or RSMod dependencies. Both role strategies use the same 16-tick
+room planner. It projects wave admissions, cap retries, pending hits, parent
+splits and follow-up attacks. The native encounter supplies the next real
+observation after the bot acts. [Decision model and paired evaluation](nylocas-decision-model.md)
 
 Each role exposes `decide(room, tick)`, `attacked(decision, ...)`, and `reset()`.
 The room is a mutable observation snapshot with persistent crab lifetime
 objects. Adapters update position, live style, observed HP, wave births,
-cooldown, obstruction, and partner claims before deciding. Coordinates are
+cooldown, obstruction, partner position and confirmed flights before deciding. Coordinates are
 normalized to the source room, with north/south represented by `Tile.y`.
 An NPC's stable key identifies its lifetime; its slot/index alone is insufficient.
 

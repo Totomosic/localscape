@@ -345,6 +345,20 @@ public class MageStrategyTest
 		body.dying = true;
 		assertNull(strategy.decide(r, 112).target);
 	}
+
+	@Test public void spendsASpareAttackOnAnObservedRangerParentSurvivorAfterItsWindow()
+	{
+		Room r = room(7, 44, 3291, 4248);
+		Crab west = crab(r, 5, 20, Lane.WEST, 'S', true, Style.RANGE, 3292, 4248);
+		west.pendingDamage = 0;
+		assertNull(strategy.decide(r, 44).target);
+		west.hp = 5;
+		Decision help = strategy.decide(r, 44);
+		assertSame(west, help.target);
+		assertEquals(Weapon.PIPE, help.weapon);
+		west.pendingDamage = west.hp;
+		assertNull(strategy.decide(r, 44).target);
+	}
 	@Test public void south29DeadlineTakesPriorityDuring30AndCancelsAt31()
 	{
 		Room r = room(30, 104, 3296, 4248); r.spawns[29] = 100;
@@ -428,6 +442,24 @@ public class MageStrategyTest
 		Crab east = crab(r, 11, 108, Lane.EAST, 'N', false, Style.MAGIC, 3310, 4249);
 		Decision cast = strategy.decide(r, 108);
 		assertSame(east, cast.target); assertEquals(Weapon.BARRAGE, cast.weapon);
+	}
+
+	@Test public void usesFasterSulphurOnAClusterWhenOnlyFourTicksRemainBeforeBarrage()
+	{
+		Room r = room(10, 100, 3301, 4249);
+		crab(r, 10, 101, Lane.SPLIT, (char) 0, false, Style.MELEE, 3300, 4249);
+		crab(r, 10, 101, Lane.SPLIT, (char) 0, false, Style.MELEE, 3300, 4250);
+		Decision filler = strategy.decide(r, 104);
+		assertNotNull(filler.target);
+		assertEquals(Weapon.SULPHUR, filler.weapon);
+		strategy.attacked(filler, 105, 104);
+		r.ready = 108;
+		r.wave = 11;
+		r.spawns[11] = 108;
+		Crab east = crab(r, 11, 108, Lane.EAST, 'S', false, Style.MAGIC, 3310, 4248);
+		Decision barrage = strategy.decide(r, 108);
+		assertSame(east, barrage.target);
+		assertEquals(Weapon.BARRAGE, barrage.weapon);
 	}
 	@Test public void missedScythePacketDoesNotProtectItsSurvivorsForever()
 	{
@@ -664,7 +696,7 @@ public class MageStrategyTest
 
 	@Test public void west19YieldsAnEquallyEarlyEastOrSouthBigDuringRangerPacket()
 	{
-		Room r = room(19, 100, 3295, 4248); r.rangerWest19PacketFeasible = true;
+		Room r = room(19, 100, 3295, 4248); r.observePartner(MageStrategy.tile(3291, 4248), 103);
 		Crab west = crab(r, 19, 100, Lane.WEST, (char) 0, true, Style.MAGIC, 3290, 4248);
 		Crab east = crab(r, 19, 100, Lane.EAST, (char) 0, true, Style.MAGIC, 3300, 4248);
 		Crab south = crab(r, 19, 100, Lane.SOUTH, (char) 0, true, Style.MAGIC, 3295, 4242);
@@ -695,20 +727,35 @@ public class MageStrategyTest
 		assertSame(east, strategy.decide(r, 106).target);
 	}
 
-	@Test public void feasibleRangerWest19PacketIsProtectedOnlyThroughItsActualRequest()
+	@Test public void observedRangerPositionAndCooldownReserveWestOnlyThroughItsAssignedTick()
 	{
-		Room r = room(19, 100, 3295, 4248); r.rangerWest19PacketFeasible = true;
+		Room r = room(19, 100, 3295, 4248); r.observePartner(MageStrategy.tile(3291, 4248), 103);
 		Crab west = crab(r, 19, 100, Lane.WEST, (char) 0, true, Style.MAGIC, 3290, 4248);
 		assertNull(strategy.decide(r, 100).target);
 		assertNull(strategy.decide(r, 103).target);
-		r.rangerWest19PacketFeasible = false;
+		r.observePartner(MageStrategy.tile(3291, 4248), 106);
 		assertSame(west, strategy.decide(r, 103).target);
-		r.rangerWest19PacketFeasible = true;
+		r.observePartner(MageStrategy.tile(3301, 4248), 100);
+		assertSame(west, strategy.decide(r, 103).target);
+		r.observePartner(MageStrategy.tile(3291, 4248), 103);
 		assertSame(west, strategy.decide(r, 107).target);
+	}
+
+	@Test public void confirmedNonlethalRangerFlightReleasesWestNineteenImmediately()
+	{
+		Room r = room(19, 100, 3295, 4248);
+		Crab west = crab(r, 19, 100, Lane.WEST, 'S', true, Style.MAGIC, 3290, 4248);
+		r.observePartner(MageStrategy.tile(3291, 4248), 103);
+		assertNull(strategy.decide(r, 103).target);
+		west.claimedUntil = 106;
+		west.pendingDamage = 2;
+		assertSame(west, strategy.decide(r, 103).target);
+		west.pendingDamage = west.hp;
+		assertNull(strategy.decide(r, 103).target);
 	}
 	@Test public void rangerWest19ProtectionDoesNotSuppressMageOwnedBiggerWorkOrNullRescue()
 	{
-		Room r = room(19, 100, 3295, 4248); r.rangerWest19PacketFeasible = true;
+		Room r = room(19, 100, 3295, 4248); r.observePartner(MageStrategy.tile(3291, 4248), 103);
 		Crab west = crab(r, 19, 100, Lane.WEST, (char) 0, true, Style.MAGIC, 3290, 4248);
 		Crab east = crab(r, 19, 100, Lane.EAST, (char) 0, true, Style.MAGIC, 3300, 4248);
 		assertNull(strategy.decide(r, 100).target);
@@ -833,6 +880,21 @@ public class MageStrategyTest
 		Decision d = strategy.decide(r, 102); assertNull(d.target); assertNull(d.approach);
 	}
 
+	@Test public void idlePipeLeavesTheClosestGreenForOneTickAndCanServeAnotherSplit()
+	{
+		Room r = room(18, 100, 3295, 4248);
+		r.observePartner(MageStrategy.tile(3293, 4248), 102);
+		Crab nearestRanger = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3293, 4247);
+		Crab east = crab(r, 18, 100, Lane.SPLIT, (char) 0, false, Style.RANGE, 3298, 4248);
+		assertSame(east, strategy.decide(r, 102).target);
+		east.dying = true;
+		assertNull(strategy.decide(r, 102).target);
+		assertSame(nearestRanger, strategy.decide(r, 103).target);
+		strategy.reset();
+		r.observePartner(r.rangerPosition, 105);
+		assertSame(nearestRanger, strategy.decide(r, 102).target);
+	}
+
 	@Test public void unopenedEastAndSouth19DoNotRequestBeforeAge3()
 	{
 		for (Lane lane : new Lane[] {Lane.EAST, Lane.SOUTH})
@@ -872,13 +934,13 @@ public class MageStrategyTest
 		Crab melee = crab(r, 19, 100, Lane.SPLIT, (char) 0, false, Style.MELEE, 3294, 4243);
 		assertSame(melee, strategy.decide(r, 100).target);
 	}
-	@Test public void west19HumanFallbackRemainsImmediateBeforeAge3()
+	@Test public void west19FallbackUsesTheSameObservationsForAHumanPartner()
 	{
 		Room r = room(19, 100, 3295, 4248);
 		Crab west = crab(r, 19, 100, Lane.WEST, 'S', true, Style.MAGIC, 3290, 4248);
 		crab(r, 19, 100, Lane.EAST, 'S', true, Style.MAGIC, 3300, 4248);
-		assertFalse(r.rangerWest19PacketFeasible); assertSame(west, strategy.decide(r, 100).target);
-		r.rangerWest19PacketFeasible = true; assertNull(strategy.decide(r, 100).target);
+		assertNull(r.rangerPosition); assertSame(west, strategy.decide(r, 100).target);
+		r.observePartner(MageStrategy.tile(3291, 4248), 103); assertNull(strategy.decide(r, 100).target);
 		west.partnerNulled = true; assertSame(west, strategy.decide(r, 100).target);
 	}
 	@Test public void age3ParentExperimentKeepsStagingAndMandatoryPackets()
@@ -914,5 +976,45 @@ public class MageStrategyTest
 		assertEquals(Weapon.SCYTHE, follow.weapon);
 		east.pendingDamage = 5;
 		assertSame(west, strategy.decide(r, 241).target);
+	}
+
+	@Test public void approachesEastTwentyFourDuringCooldownBeforeOpeningWestTwentyFive()
+	{
+		// Seed 11276015, after the confirmed lethal Scythe on west 24 at tick 210.
+		Room r = room(25, 208, 3290, 4247);
+		r.spawns[24] = 200;
+		r.ready = 215;
+		Crab east = crab(r, 24, 200, Lane.EAST, 'S', true, Style.MELEE, 3298, 4247);
+		Crab west = crab(r, 25, 208, Lane.WEST, 'S', true, Style.MELEE, 3284, 4248);
+		Crab priorWest = crab(r, 24, 200, Lane.WEST, 'S', true, Style.MELEE, 3291, 4247);
+		priorWest.hp = priorWest.pendingDamage = 2;
+		east.pendingDamage = west.pendingDamage = 0;
+
+		assertSame(east, strategy.decide(r, 211).approach);
+		east.nulled = true;
+		assertSame(west, strategy.decide(r, 211).approach);
+		east.nulled = false;
+		east.point = MageStrategy.tile(3296, 4247);
+		west.point = MageStrategy.tile(3288, 4248);
+		r.player = MageStrategy.tile(3290, 4248);
+		assertSame(west, strategy.decide(r, 215).target);
+	}
+
+	@Test public void olderEastOpeningLeavesActualWestParentSurvivorsTheirFollowup()
+	{
+		Room r = room(25, 208, 3292, 4247);
+		r.spawns[24] = 200;
+		r.ready = 215;
+		crab(r, 24, 200, Lane.EAST, 'S', true, Style.MELEE, 3294, 4247);
+		Crab west = crab(r, 25, 208, Lane.WEST, 'S', true, Style.MELEE, 3289, 4248);
+		Crab priorWest = crab(r, 24, 200, Lane.WEST, 'S', true, Style.MELEE, 3291, 4247);
+		priorWest.hp = 2;
+		priorWest.pendingDamage = west.pendingDamage = 0;
+		assertSame(priorWest, strategy.decide(r, 215).target);
+
+		priorWest.pendingDamage = priorWest.hp;
+		strategy.attacked(new Decision(west, Weapon.SCYTHE, west.point, false, null, "West 25"), 211, 210);
+		west.hp = 13;
+		assertSame(west, strategy.decide(r, 215).target);
 	}
 }

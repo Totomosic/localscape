@@ -1,9 +1,8 @@
 # Nylocas planning and idle validation
 
-The current mage objective is to follow the rotation, avoid ranger-owned work,
-and favor newer eligible birth waves. Ready-idle remains measured, but the
-previous sub-20 target is secondary to those constraints. This revision changes
-only the mage; existing ranger behavior is retained.
+This earlier mage revision prioritized the rotation, ranger ownership and newer
+eligible birth waves. It measured ready-idle as a secondary objective. The current
+ranger and mage use independent 16-tick planners. [Decision model and measured performance](nylocas-decision-model.md)
 
 ## Measurement window
 

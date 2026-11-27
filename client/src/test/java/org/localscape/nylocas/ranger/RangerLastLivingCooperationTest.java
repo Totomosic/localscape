@@ -57,7 +57,7 @@ public class RangerLastLivingCooperationTest
 	}
 
 	@Test
-	public void nativeFinalMagicWitnessAllowsCooperationOnMagesProvisionalClaim()
+	public void nativeFinalMagicWitnessAllowsCooperationOnAnUnknownPartnerFlight()
 	{
 		// Retained seed257451351778437 tick307: Mage launches Eye at the only living key206.
 		Room room = room();
