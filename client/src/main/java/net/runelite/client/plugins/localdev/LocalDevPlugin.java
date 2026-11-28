@@ -27,8 +27,8 @@ import net.runelite.client.ui.PluginPanel;
 
 @PluginDescriptor(
 	name = "Local Development",
-	description = "Theatre controls, shared gear setups, and debug tools for the local server",
-	tags = {"local", "development", "theatre", "gear", "debug"},
+	description = "Theatre controls, Nylocas bots, shared gear setups, and debug tools for the local server",
+	tags = {"local", "development", "theatre", "bots", "gear", "debug"},
 	enabledByDefault = true
 )
 public class LocalDevPlugin extends Plugin
@@ -195,6 +195,14 @@ public class LocalDevPlugin extends Plugin
 	{
 		boolean started = client.getVarbitValue(VarbitID.TOB_CLIENT_PARTYSTATUS) == 2;
 		updateTheatrePanel(current -> current.setRaidStarted(started));
+		LocalToolsPanel currentTools = toolsPanel;
+		SwingUtilities.invokeLater(() ->
+		{
+			if (currentTools != null && toolsPanel == currentTools)
+			{
+				currentTools.setRaidStarted(started);
+			}
+		});
 	}
 
 	private void resetItems()

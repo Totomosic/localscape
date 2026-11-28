@@ -354,11 +354,14 @@ the change; no cache repack is required.
 powered weapon requiring 85 Magic. It reuses the Sanguinesti staff's model,
 stance, casting animation, graphics and sound. Normal casts take three ticks,
 with base max hit `floor(current_magic_level / 3) - 10`, +15% magic damage and
-seven-tile range (nine on Longrange). Both inventory forms cast without charges.
+six-tile range (eight on Longrange), matching Eye of ayak. Projectiles take one
+tick at distances 1–4 and two ticks at 5–8; damage resolves on the following queue
+tick. Both inventory forms cast without charges.
 
 Zorya's flow costs 50% special energy and grants +150% accuracy and +60% damage.
-A successful special empowers the next three casts with those bonuses and a
-two-tick cycle. Existing empowerment also applies to another special: the bonuses
+A special's initial cast has a three-tick cycle. A successful special empowers
+the next three casts with those bonuses and a two-tick cycle. Existing empowerment
+also applies to another special: the bonuses
 add to +300% accuracy/+120% damage, consuming one buff charge before granting
 three more, up to five stored. Buffs survive weapon switches, expire after 50
 idle ticks, refresh when consumed, and clear on teleport. The local combat dummy
@@ -463,8 +466,10 @@ Attack timing and special effects follow the
 Their total bonuses are +34 Ranged accuracy and +58 Ranged strength: +23 from the
 weapon and +35 from dragon darts. Rapid attacks take two ticks; Accurate and
 Longrange take three.
-Range is six tiles, or eight on Longrange. A charged or blessed Dizana's quiver,
-including the max cape variants, adds its conditional +10 accuracy and +1 strength
+Range is six tiles, or eight on Longrange. Projectile timing matches the toxic
+blowpipe: one tick at distances 1–5 and two at 6–8, followed by the damage queue
+tick. A charged or blessed Dizana's quiver, including the max cape variants,
+adds its conditional +10 accuracy and +1 strength
 on top of its normal cape stats while darts are loaded. Quiver-slot ammunition
 adds no stats and is never consumed. Uncharged quivers provide only their normal
 cape stats. Ascension crossbows have no special attack; their native special bar

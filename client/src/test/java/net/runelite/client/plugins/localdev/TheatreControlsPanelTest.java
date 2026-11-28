@@ -1,8 +1,12 @@
 package net.runelite.client.plugins.localdev;
 
+import java.awt.Component;
+import java.awt.Container;
+import java.util.stream.Stream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import javax.swing.JButton;
 import javax.swing.AbstractButton;
 import javax.swing.JSpinner;
@@ -27,7 +31,7 @@ public class TheatreControlsPanelTest
 			assertFalse(wave.isEnabled());
 			panel.setLoggedIn(true);
 			button(panel, "Start raid").doClick();
-			assertEquals(Arrays.asList("theatrestart 1 zeal"), commands);
+			assertEquals(Arrays.asList("theatrestart 1 zeal"), starts(commands));
 			assertFalse(wave.isEnabled());
 			assertFalse(button(panel, "Start raid").isEnabled());
 			assertTrue(button(panel, "Create lobby").isEnabled());
@@ -56,7 +60,7 @@ public class TheatreControlsPanelTest
 			}
 			((JSpinner.DefaultEditor) wave.getEditor()).getTextField().setText("21");
 			button(panel, "Start raid").doClick();
-			assertEquals(Arrays.asList("theatrestart 21 zeal"), commands);
+			assertEquals(Arrays.asList("theatrestart 21 zeal"), starts(commands));
 			assertFalse(wave.isEnabled());
 		});
 	}
@@ -83,7 +87,7 @@ public class TheatreControlsPanelTest
 			assertTrue(slow.isSelected());
 			hp.doClick();
 			button(panel, "Start raid").doClick();
-			assertEquals(Arrays.asList("theatrestart 1 maxhit-slow hp250 zeal"), commands);
+			assertEquals(Arrays.asList("theatrestart 1 maxhit-slow hp250 zeal"), starts(commands));
 			assertFalse(all.isEnabled());
 			assertFalse(slow.isEnabled());
 			assertFalse(hp.isEnabled());
@@ -93,25 +97,58 @@ public class TheatreControlsPanelTest
 			assertFalse(slow.isSelected());
 			zeal.doClick();
 			button(panel, "Start raid").doClick();
-			assertEquals("theatrestart 1 maxhit-all hp250", commands.get(1));
+			assertEquals("theatrestart 1 maxhit-all hp250", starts(commands).get(1));
 		});
+	}
+
+	@Test
+	public void savesSelectedOptionsForAutomaticPassageStart() throws Exception
+	{
+		SwingUtilities.invokeAndWait(() ->
+		{
+			List<String> commands = new ArrayList<>();
+			TheatreControlsPanel panel = new TheatreControlsPanel(commands::add);
+			panel.setLoggedIn(true);
+			button(panel, "Create lobby").doClick();
+			assertEquals(Arrays.asList("theatrecreate", "theatreoptions 1 zeal"), commands);
+			wave(panel).setValue(21);
+			assertEquals("theatreoptions 21 zeal", commands.get(commands.size() - 1));
+			option(panel, "Max hit: 5 ticks or slower").doClick();
+			option(panel, "Start everyone at 250 HP").doClick();
+			option(panel, "Replace Piety with Zeal").doClick();
+			assertEquals("theatreoptions 21 maxhit-slow hp250", commands.get(commands.size() - 1));
+			assertTrue(starts(commands).isEmpty());
+		});
+	}
+
+	private static List<String> starts(List<String> commands)
+	{
+		return commands.stream().filter(command -> command.startsWith("theatrestart ")).collect(Collectors.toList());
+	}
+
+	private static Stream<Component> descendants(Component component)
+	{
+		return component instanceof Container
+			? Stream.concat(Stream.of(component), Arrays.stream(((Container) component).getComponents())
+				.flatMap(TheatreControlsPanelTest::descendants))
+			: Stream.of(component);
 	}
 
 	private static AbstractButton option(TheatreControlsPanel panel, String text)
 	{
-		return Arrays.stream(panel.getComponents()).filter(AbstractButton.class::isInstance)
+		return Stream.concat(descendants(panel), descendants(panel.raidOptions())).filter(AbstractButton.class::isInstance)
 			.map(AbstractButton.class::cast).filter(button -> button.getText().equals(text)).findFirst().get();
 	}
 
 	static JSpinner wave(TheatreControlsPanel panel)
 	{
-		return Arrays.stream(panel.getComponents()).filter(JSpinner.class::isInstance)
+		return Stream.concat(descendants(panel), descendants(panel.raidOptions())).filter(JSpinner.class::isInstance)
 			.map(JSpinner.class::cast).findFirst().get();
 	}
 
 	private static JButton button(TheatreControlsPanel panel, String text)
 	{
-		return Arrays.stream(panel.getComponents()).filter(JButton.class::isInstance)
+		return Stream.concat(descendants(panel), descendants(panel.raidOptions())).filter(JButton.class::isInstance)
 			.map(JButton.class::cast).filter(button -> button.getText().equals(text)).findFirst().get();
 	}
 }

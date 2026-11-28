@@ -310,4 +310,22 @@ public class RoomPlannerTest
 		for (int wave = 1; wave <= 31; wave++)
 			for (int index = 0; index < 6; index++) assertEquals(seen[wave][index], WaveSchedule.spawn(wave, index) != '.');
 	}
+	@Test public void strategyTwoProjectileBoundariesMatchNativeTravelAndDamageQueue()
+	{
+		assertEquals(3, RoomProjection.flight(RoomPlanner.Strike.PIPE, 5, true));
+		assertEquals(4, RoomProjection.flight(RoomPlanner.Strike.PIPE, 6, true));
+		assertEquals(3, RoomProjection.flight(RoomPlanner.Strike.EYE, 4, true));
+		assertEquals(4, RoomProjection.flight(RoomPlanner.Strike.EYE, 5, true));
+		assertEquals(3, RoomProjection.flight(RoomPlanner.Strike.PIPE, 6, false));
+		assertEquals(4, RoomProjection.flight(RoomPlanner.Strike.EYE, 4, false));
+	}
+
+	@Test public void projectedTomeDamageStacksSpecialAndStoredEmpowerment()
+	{
+		assertEquals(32, RoomProjection.tomeMaxHit(32, false, false));
+		assertEquals(51, RoomProjection.tomeMaxHit(32, true, false));
+		assertEquals(51, RoomProjection.tomeMaxHit(32, false, true));
+		assertEquals(70, RoomProjection.tomeMaxHit(32, true, true));
+	}
+
 }

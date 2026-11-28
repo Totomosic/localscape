@@ -8,6 +8,19 @@ from pathlib import Path
 import statistics
 
 
+def planned_tome_rotation(births, casts):
+    pre_cap = [cast for cast in casts if 7 <= cast['wave'] < 20]
+    if len(casts) != 3 or len(pre_cap) != 2:
+        return False
+    west_11 = [cast for cast in pre_cap if (target := births.get(cast['target']))
+               and target['big'] and target['wave'] == 11 and target['x'] == 3281]
+    if len(west_11) != 1 or west_11[0]['wave'] != 11:
+        return False
+    last = births.get(casts[-1]['target'])
+    return bool(casts[-1]['wave'] == 24 and last and last['big'] and last['wave'] == 24 and
+                (last['x'] == 3281 or last['y'] == 4233))
+
+
 def audit(directory):
     trials = []
     current = None
@@ -33,6 +46,18 @@ def audit(directory):
                         record['prayer_increases'][role] += 1
                 previous_prayer = prayer
                 continue
+            if line.startswith('NYLO_TOME\t'):
+                _, tick, wave, target, special, before, after, charges, *stored = line.split('\t')
+                if current is None:
+                    raise ValueError('Tome cast before trial start')
+                casts = current['tome_casts']
+                # Earlier traces recorded post-cast charges only. Each cast refreshes their 50-tick lifetime.
+                previous = casts[-1] if casts and int(tick) - casts[-1]['tick'] < 50 else None
+                stored_before = int(stored[0]) if stored else previous['stored_after'] if previous else 0
+                casts.append(dict(tick=int(tick), wave=int(wave), target=int(target),
+                                  special=special == 'true', energy_before=int(before), energy_after=int(after),
+                                  stored_before=stored_before, stored_after=int(charges)))
+                continue
             if line.startswith('NYLO_NULL\t'):
                 _, tick, role, keys = line.split('\t')
                 if current is None:
@@ -52,7 +77,7 @@ def audit(directory):
             tick, role, wave, target = map(int, (tick, role, wave, target))
             if tick == 0 and role == 0:
                 current = {'wave_ticks': {}, 'packets': Counter(), 'primary_births': Counter(), 'ready_idle_reasons': [Counter(), Counter()],
-                           'old_cleanup_attacks': [], 'births': {}, 'transition_remaining': None,
+                           'old_cleanup_attacks': [], 'tome_casts': [], 'births': {}, 'transition_remaining': None,
                            'nulled_tick': {}, 'null_targets_seen': [set(), set()], 'null_primary_attacks': []}
                 trials.append(current)
             if current is None:
@@ -106,7 +131,29 @@ def audit(directory):
         births.update(t['primary_births'])
         for role in (0, 1):
             idle[role].update(t['ready_idle_reasons'][role])
-    return {'trials': len(trials), 'mean_wave_spawn_ticks': {str(w): statistics.mean(t['wave_ticks'][w] for t in trials if w in t['wave_ticks']) for w in waves},
+    tome = {}
+    if any(t['tome_casts'] for t in trials) or any(r.get('strategy') == '2' for r in rows):
+        # A launch plus a native energy debit also counts a special whose accuracy roll missed.
+        specials = [[c for c in t['tome_casts'] if c['special'] and c['energy_after'] < c['energy_before']]
+                    for t in trials]
+        cast_counts = Counter()
+        for trial in trials:
+            for cast in trial['tome_casts']:
+                if cast['wave'] >= 20:
+                    continue
+                if cast['special'] and cast['energy_after'] < cast['energy_before']:
+                    cast_counts['special'] += 1
+                elif cast['stored_before'] > 0:
+                    cast_counts['stored'] += 1
+                else:
+                    cast_counts['ordinary'] += 1
+        tome['ranger_tome_specials'] = {
+            'pre_cap_casts': {key: cast_counts[key] for key in ('special', 'stored', 'ordinary')},
+            'rooms_with_planned_three_specials': sum(
+                planned_tome_rotation(t['births'], casts) for t, casts in zip(trials, specials)),
+            'per_seed': {r['seed']: casts for r, casts in zip(rows, specials)},
+        }
+    return {**tome, 'trials': len(trials), 'mean_wave_spawn_ticks': {str(w): statistics.mean(t['wave_ticks'][w] for t in trials if w in t['wave_ticks']) for w in waves},
             'confirmed_rule_attacks': dict(totals), 'confirmed_attacks_by_birth': dict(births),
             'ready_idle_reason_window': 'all traced ticks including entrance and terminal waits; use summary ready_idle metrics for combat window', 'ready_idle_reasons': [dict(x.most_common()) for x in idle],
             'old_cleanup_attacks': sum(len(t['old_cleanup_attacks']) for t in trials),

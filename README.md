@@ -201,7 +201,7 @@ Publish the fix commit to your fork before others clone the workspace.
 ## Change the custom client
 
 To add a server-controlled duo partner, create a solo lobby with `::theatrecreate`,
-then use `::nylobot range` or `::nylobot mage` before starting. See
+then use `::nylobot range` or `::nylobot mage` before starting. Append `2` to select the second strategy, for example `::nylobot range 2` or `::nylobot spectate 2`. See
 [bot commands and lifecycle](docs/nylocas-bots.md) and
 [training progress](docs/nylocas-training-v2.md).
 Use `::nylobot spectate` instead to watch a ranger and mage bot: start the raid,

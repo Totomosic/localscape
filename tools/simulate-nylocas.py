@@ -17,6 +17,7 @@ import time
 import dev
 
 
+BOSS_MEAN_TARGET_TICKS = 315
 BOSS_P95_TARGET_TICKS = 328
 STALL_METRICS = {
     "pre_cap_stalls": "Pre-cap stalls (last spawned 1–19)",
@@ -56,7 +57,7 @@ def training_metrics(rows):
         "completed_boss_3m07_to_3m12": sum(187 <= int(row["ticks"]) * 0.6 <= 192 for row in completed),
         "completed_boss_over_3m14": sum(int(row["ticks"]) * 0.6 > 194 for row in completed),
         "consistency_denominator_all_trials": len(rows),
-        "boss_mean_target_ticks": 315,
+        "boss_mean_target_ticks": BOSS_MEAN_TARGET_TICKS,
         "completed_boss_at_most_3m16_8": sum(int(row["ticks"]) <= BOSS_P95_TARGET_TICKS for row in completed),
         "boss_reliability_target_seconds": 202,
         "boss_reliability_target_rate": 0.95,
@@ -133,6 +134,8 @@ def boss_time_benchmark(rows):
         "wave19_policy_failure_trials": len(stalled),
         "all_trials_with_wave_counter_evidence": len(measured),
         "wave19_zero_stall_goal_met": bool(rows) and len(measured) == len(rows) and not stalled,
+        "mean_target_ticks": BOSS_MEAN_TARGET_TICKS,
+        "mean_target_met": timing["mean"] <= BOSS_MEAN_TARGET_TICKS if ticks else None,
         "p95_target_ticks": BOSS_P95_TARGET_TICKS,
         "p95_target_met": timing["p95"] <= BOSS_P95_TARGET_TICKS if ticks else None,
         "completion_ticks": timing,
@@ -145,6 +148,14 @@ def write_report(csv_path, output, metadata):
         rows = list(csv.DictReader(source))
     if not rows:
         raise ValueError("The trial CSV contains no results.")
+    if "strategy" in rows[0]:
+        versions = {row["strategy"] for row in rows}
+        if versions not in ({"1"}, {"2"}):
+            raise ValueError("Each report must contain one supported bot strategy.")
+        version = int(versions.pop())
+        if metadata.get("strategy", version) != version:
+            raise ValueError("Requested strategy differs from the native trial results.")
+        metadata = {**metadata, "strategy": version}
     report = summarize(rows)
     report["run"] = metadata
     output.mkdir(parents=True, exist_ok=True)
@@ -153,8 +164,18 @@ def write_report(csv_path, output, metadata):
     completion = report["completion_ticks"]
     benchmark = report["boss_time_benchmark"]
     boss_seconds = benchmark["completion_game_seconds"]
+    goals = report["training"]
+    goal_status = {True: "Met", False: "Missed", None: "No eligible rooms"}
+    timing_goals = [
+        "| Boss-time measure | Target | Observed | Result |",
+        "| --- | --- | ---: | --- |",
+        f"| Eligible mean | 3:09 or faster | {fmt(boss_seconds['mean'])} s | {goal_status[benchmark['mean_target_met']]} |",
+        f"| Eligible P95 | 3:16.8 or faster | {fmt(boss_seconds['p95'])} s | {goal_status[benchmark['p95_target_met']]} |",
+        f"| All trials by 3:22 | At least 95% | {goals['completed_boss_at_most_3m22']}/{len(rows)} | {goal_status[goals['boss_95pct_at_most_3m22_goal_met']]} |",
+    ]
     lines = [
         "# Duo Nylocas simulation report", "",
+        *([f"Bot strategy: {metadata['strategy']}.", ""] if "strategy" in metadata else []),
         f"Endpoint: {report['endpoint']}.", "",
         "Damage profile: **always-max-hit diagnostic — excluded from randomized benchmarks**." if metadata.get("max_hit_diagnostic") else "Damage profile: randomized (unless legacy metadata states otherwise).", "",
         f"Trials: {report['trials']}; completed: {report['completed']}; deaths: {report['deaths']}; timeouts: {report['timeouts']}.", "",
@@ -164,6 +185,7 @@ def write_report(csv_path, output, metadata):
         f"Wave-19 stalls excluded **{benchmark['excluded_completed_wave19_stall_trials']}** completed rooms. "
         f"**{benchmark['completed_without_wave_counter_evidence']}** completed rooms had unknown wave counters.", "",
         f"Wave-19 policy failures occurred in **{benchmark['wave19_policy_failure_trials']}/{report['trials']}** trials.", "",
+        *timing_goals, "",
         f"The eligible P95 target is **3:16.8** ({BOSS_P95_TARGET_TICKS} ticks). "
         f"Across all trials, **{report['training']['completed_boss_at_most_3m16_8']}/{len(rows)}** reached boss spawn by that time.", "",
         f"Across all completed rooms, completion ticks averaged **{fmt(completion['mean'])}**, "
@@ -181,7 +203,6 @@ def write_report(csv_path, output, metadata):
     for role, stats in report["completed_ready_idle"].items():
         lines.append("")
         lines.append(f"{role.capitalize()} completed trials with fewer than 20 ready-idle ticks: **{stats['under_20']}/{stats['trials']}**; 95th percentile **{fmt(stats['p95'])}**.")
-    goals = report["training"]
     lines += ["", f"**{goals['completed_boss_at_most_3m22']}/{len(rows)}** trials reached boss spawn by **3:22**, "
               f"or **{fmt(None if goals['boss_at_most_3m22_rate_all_trials'] is None else goals['boss_at_most_3m22_rate_all_trials'] * 100)}%** "
               "(target **95%**). The denominator includes wave-19 failure rooms, deaths and timeouts."]
@@ -197,12 +218,14 @@ def write_report(csv_path, output, metadata):
               "Fixed equipment and 99 base stats are defined in the server adapter. Reports cover server model behavior; see docs/nylocas-simulations.md for assumptions.", ""]
     (output / "report.md").write_text("\n".join(lines))
     print("\n".join(lines[:12]))
+    print("\n".join(timing_goals))
     print(f"Reports: {output}")
     return report
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--strategy", type=int, choices=(1, 2), default=1, help="Nylocas bot strategy for both roles")
     parser.add_argument("--trials", type=int, default=100)
     parser.add_argument("--seed", type=int, help="Optional recorded seed; default selects a new random seed range for every batch")
     parser.add_argument("--max-ticks", type=int, default=2000)
@@ -241,7 +264,7 @@ def main():
     if args.offline:
         command.append("--offline")
     command += [":api:combat:combat-scripts:simulateNylocas", f"-Pnylo.trials={args.trials}",
-                f"-Pnylo.seed={args.seed}", f"-Pnylo.maxTicks={args.max_ticks}", f"-Pnylo.output={csv_path}", f"-Pnylo.hitpoints={args.starting_hitpoints}", f"-Pnylo.utilities={str(args.utilities).lower()}",
+                f"-Pnylo.strategy={args.strategy}", f"-Pnylo.seed={args.seed}", f"-Pnylo.maxTicks={args.max_ticks}", f"-Pnylo.output={csv_path}", f"-Pnylo.hitpoints={args.starting_hitpoints}", f"-Pnylo.utilities={str(args.utilities).lower()}",
                 f"-Pnylo.extraDinh25={str(args.extra_dinh_25).lower()}",
                 f"-Pnylo.deferMageThrallRenewal={str(args.defer_mage_thrall_renewal).lower()}",
                 f"-Pnylo.serverBoosts={str(args.server_boosts).lower()}",
@@ -251,7 +274,7 @@ def main():
         command.append("-Pnylo.trace=true")
     if args.prepot:
         command.append("-Pnylo.prepot=true")
-    print(f"Running {args.trials} trials, seeds {args.seed}..{args.seed + args.trials - 1}. Log: {output / 'server.log'}", flush=True)
+    print(f"Running strategy {args.strategy}, {args.trials} trials, seeds {args.seed}..{args.seed + args.trials - 1}. Log: {output / 'server.log'}", flush=True)
     source_root = args.policy_source or dev.UPSTREAM / "rsmod/api/nylocas-agents/src/main/java"
     snapshot = output / "policy-source"
     if snapshot.exists():
@@ -286,7 +309,7 @@ def main():
             if not any(line.lstrip().startswith("NYLO_FORECAST\t") for line in source):
                 raise SystemExit("Requested queued-damage forecast has no native trace coverage; refusing to label this run enabled.")
     report = write_report(csv_path, output, {
-        "seed": args.seed, "max_ticks": args.max_ticks,
+        "strategy": args.strategy, "seed": args.seed, "max_ticks": args.max_ticks,
         "max_hit_diagnostic": args.max_hit_diagnostic,
         "queued_damage_forecast": args.queued_damage_forecast,
         "idle_window": "each role's first confirmed attack through the final living nylo's death",
@@ -303,7 +326,7 @@ def main():
                     "defer_mage_thrall_renewal": args.defer_mage_thrall_renewal,
                     "manta_rays_once_per_player": 5 if args.starting_hitpoints == 99 else 0,
                     "food_hp_threshold": 65,
-                    "damage": "always-max-hit diagnostic" if args.max_hit_diagnostic else "randomized", "gear": "role loadouts from mage-strategy.md and range-strategy.md; see adapter"},
+                    "damage": "always-max-hit diagnostic" if args.max_hit_diagnostic else "randomized", "gear": ("strategy 2 with Ascension crossbows and Zorya's tome" if args.strategy == 2 else "role loadouts from mage-strategy.md and range-strategy.md; see adapter")},
         "adapter_sha256": adapter_hashes,
     })
     if report["trials"] != args.trials:

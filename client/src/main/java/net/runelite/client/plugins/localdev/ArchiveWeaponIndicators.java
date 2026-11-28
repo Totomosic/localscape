@@ -1,13 +1,21 @@
 package net.runelite.client.plugins.localdev;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import javax.inject.Inject;
 import lombok.extern.slf4j.Slf4j;
+import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
+import net.runelite.api.GameState;
 import net.runelite.api.VarPlayer;
+import net.runelite.api.events.ChatMessage;
+import net.runelite.api.events.GameStateChanged;
+import net.runelite.api.events.GameTick;
+import net.runelite.api.events.NpcDespawned;
 import net.runelite.api.events.VarbitChanged;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.events.PluginChanged;
@@ -15,7 +23,7 @@ import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.plugins.PluginManager;
 
-/** Extends the Hub plugin's weapon lists while retaining its native XP and party handling. */
+/** Adapts local weapons and bot flights to the Hub plugin's native XP and party handling. */
 @Slf4j
 @PluginDescriptor(name = "Local Archive Death Indicators", enabledByDefault = true, hidden = true)
 public class ArchiveWeaponIndicators extends Plugin
@@ -30,6 +38,10 @@ public class ArchiveWeaponIndicators extends Plugin
 	private PluginManager pluginManager;
 
 	private Object indicator;
+	private final NylocasBotDamage botDamage = new NylocasBotDamage();
+	private Constructor<?> damageConstructor;
+	private Method receiveDamage;
+	private Method setDamageMember;
 	private Set<Integer> meleeWeapons;
 	private Set<Integer> multikillWeapons;
 	private final List<Runnable> restoreNativeIds = new ArrayList<>();
@@ -86,6 +98,11 @@ public class ArchiveWeaponIndicators extends Plugin
 			remember(meleeWeapons, OBLIGATORS);
 			remember(multikillWeapons, OBLIGATORS);
 			staves.addAll(TOMES);
+			Class<?> damageType = type.getClassLoader().loadClass("com.infernostats.NpcDamaged");
+			damageConstructor = damageType.getConstructor(int.class, int.class);
+			receiveDamage = type.getDeclaredMethod("onNpcDamaged", damageType);
+			receiveDamage.setAccessible(true);
+			setDamageMember = damageType.getMethod("setMemberId", long.class);
 			indicator = plugin;
 			updateStyle();
 		}
@@ -118,8 +135,66 @@ public class ArchiveWeaponIndicators extends Plugin
 		restoreNativeIds.forEach(Runnable::run);
 		restoreNativeIds.clear();
 		indicator = null;
+		damageConstructor = null;
+		receiveDamage = null;
+		setDamageMember = null;
+		botDamage.reset();
 		meleeWeapons = null;
 		multikillWeapons = null;
+	}
+
+	@Subscribe
+	public void onChatMessage(ChatMessage event)
+	{
+		if (indicator != null && event.getType() == ChatMessageType.CONSOLE)
+		{
+			botDamage.receive(event.getMessage());
+		}
+	}
+
+	@Subscribe
+	public void onGameTick(GameTick event)
+	{
+		if (indicator != null)
+		{
+			botDamage.apply(client, this::receiveBotDamage);
+		}
+	}
+
+	@Subscribe
+	public void onNpcDespawned(NpcDespawned event)
+	{
+		botDamage.despawn(event.getNpc());
+	}
+
+	@Subscribe
+	public void onGameStateChanged(GameStateChanged event)
+	{
+		// Discard queued packets and NPC references across logout, hopping and scene rebuilds.
+		if (event.getGameState() != GameState.LOGGED_IN)
+		{
+			botDamage.reset();
+		}
+	}
+
+	private void receiveBotDamage(int index, int damage)
+	{
+		if (indicator == null)
+		{
+			return;
+		}
+		try
+		{
+			Object message = damageConstructor.newInstance(index, damage);
+			// This is a local bot notification, never the local RuneLite party member's echo.
+			setDamageMember.invoke(message, Long.MIN_VALUE);
+			receiveDamage.invoke(indicator, message);
+		}
+		catch (ReflectiveOperationException | RuntimeException ex)
+		{
+			log.warn("Unable to deliver bot damage to Nylo Death Indicators", ex);
+			detach();
+		}
 	}
 
 	@Subscribe

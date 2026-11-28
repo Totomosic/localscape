@@ -152,3 +152,9 @@ Jordan confirmed **“Yes — later splits remain fresh”** for a split born252
 Follow up Jordan’s living-nylo observation by comparing the policy’s predicted request with the confirmed native primary. A target selection that causes movement can still lose an attack cycle. **When the mage selects melee and only chases, was a fresh magic target already in range, with native line of sight and no NULL, claim or lethal coverage?** Preserve newer-target priorities when both attacks have comparable availability, and protect named packets, required parents and rescue work.
 
 Timestamp control seed215613141308293/tick270 is a bounded example: the mage chooses a nonadjacent wave31 melee split and moves without a hit; two healthy late29 magic splits are within Eye range. Both native-map ray checks pass. Split children walk toward assigned pillars, while the current short timing model leaves their split-lane coordinates stationary. The isolated approach-aware candidate is being measured; this observation does not establish an outcome before native validation.
+
+## 11. Has strategy 2 reached the training goals?
+
+Jordan asked, “how has it reached the goal?” The latest independent strategy 2 run met one of three timing goals. All 500 rooms completed and 494 (98.8%) reached boss spawn by 3:22, above the 95% reliability target. The 488 rooms without a wave-19 stall averaged 3:11.81 against a 3:09 target. Their P95 was 3:19.2 against a 3:16.8 target. Only 175 of 500 rooms had zero stalls on waves 21–27. [Strategy 2 measurements](nylocas-strategy-2-training.md)
+
+At each checkpoint, compare the eligible mean and P95 with their own thresholds, and give the all-trial reliability numerator and denominator. Include the number of rooms excluded for wave-19 stalls. Report whether each goal was reached on seeds held out from policy selection.

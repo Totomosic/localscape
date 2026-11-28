@@ -78,7 +78,7 @@ class SimulationReportTests(unittest.TestCase):
     def test_written_reports_include_all_stall_averages(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            row = self.row("completed", 300)
+            row = dict(self.row("completed", 300), strategy="2")
             source = root / "trials.csv"
             with source.open("w", newline="") as output:
                 writer = csv.DictWriter(output, fieldnames=list(row))
@@ -86,6 +86,10 @@ class SimulationReportTests(unittest.TestCase):
                 writer.writerow(row)
             report = simulation.write_report(source, root, {})
             markdown = (root / "report.md").read_text()
+            self.assertEqual(report["run"]["strategy"], 2)
+            self.assertIn("Bot strategy: 2", markdown)
+            with self.assertRaisesRegex(ValueError, "Requested strategy"):
+                simulation.write_report(source, root, {"strategy": 1})
             for metric, label in simulation.STALL_METRICS.items():
                 self.assertEqual(report["metrics_all_trials"][metric]["mean"], 2)
                 self.assertIn(f"{label} **2.00**", markdown)
@@ -175,7 +179,20 @@ class SimulationReportTests(unittest.TestCase):
         self.assertEqual(benchmark["completed_without_wave_counter_evidence"], 1)
         self.assertFalse(benchmark["wave19_zero_stall_goal_met"])
         self.assertIsNone(benchmark["completion_ticks"]["mean"])
+        self.assertIsNone(benchmark["mean_target_met"])
         self.assertIsNone(benchmark["p95_target_met"])
+
+    def test_eligible_mean_goal_is_independent_of_the_two_deadlines(self):
+        clean = dict(self.row("completed", 314), stalls_by_last_spawned_wave=";".join(["0"] * 31))
+        counts = [0] * 31
+        counts[19] = 1
+        stalled = dict(clean, ticks="336", stalls_by_last_spawned_wave=";".join(map(str, counts)))
+        rows = [clean, dict(clean, ticks="316"), stalled]
+        self.assertTrue(simulation.summarize(rows)["boss_time_benchmark"]["mean_target_met"])
+        report = simulation.summarize(rows + [dict(clean, ticks="316")])
+        self.assertFalse(report["boss_time_benchmark"]["mean_target_met"])
+        self.assertTrue(report["boss_time_benchmark"]["p95_target_met"])
+        self.assertTrue(report["training"]["boss_95pct_at_most_3m22_goal_met"])
 
     def test_3m16_8_target_uses_eligible_p95_and_reports_all_trial_successes(self):
         boundary = dict(self.row("completed", 328), stalls_by_last_spawned_wave=";".join(["0"] * 31))

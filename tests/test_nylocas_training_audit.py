@@ -38,6 +38,35 @@ class TrainingTraceAuditTests(unittest.TestCase):
             self.assertEqual(result["confirmed_rule_attacks"]["0:null"], 2)
             self.assertEqual(result["per_trial"][0]["old_cleanup_attacks"][0]["birth_wave"], 29)
 
+    def test_tome_special_counts_require_an_energy_debit(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            root.joinpath("trials.csv").write_text("seed,status,ticks,strategy\n7,completed,315,2\n")
+            root.joinpath("server.log").write_text(
+                "NYLO_TRACE\t0\t0\t0\ttrue\tfalse\t3295,4254,0\tBOW\t-1\tnull\tOpening\t\n"
+                "NYLO_TOME\t41\t7\t24\ttrue\t1000\t500\t3\n"
+                "NYLO_TOME\t44\t7\t26\tfalse\t500\t500\t2\n"
+                "NYLO_TOME\t48\t8\t27\tfalse\t500\t500\t0\t0\n"
+                "NYLO_TRACE\t77\t0\t11\ttrue\tfalse\t3291,4248,0\tTOME\t46\tnull\tApproach\t46,11,0,MAGIC,true,16,3281,4248,0,0,false\n"
+                "NYLO_TOME\t78\t11\t46\ttrue\t700\t200\t4\n"
+                "NYLO_TOME\t200\t24\t91\ttrue\t400\t400\t0\n"
+                "NYLO_TOME\t205\t24\t91\ttrue\t500\t0\t0\n"
+                "NYLO_TRACE\t205\t0\t24\ttrue\ttrue\t3295,4248,0\tTOME\t91\tnull\tSouth\t91,24,6,MAGIC,true,16,3295,4233,0,0,false\n"
+            )
+            stats = audit_module.audit(root)["ranger_tome_specials"]
+            self.assertEqual(stats["rooms_with_planned_three_specials"], 1)
+            self.assertEqual(stats["pre_cap_casts"], {"special": 2, "stored": 1, "ordinary": 1})
+            self.assertEqual([cast["tick"] for cast in stats["per_seed"]["7"]], [41, 78, 205])
+
+    def test_planned_tome_specials_must_hit_the_assigned_waves_on_time(self):
+        births = {46: dict(big=True, wave=11, x=3281), 91: dict(big=True, wave=24, x=3281)}
+        casts = [dict(wave=7, target=24), dict(wave=11, target=46), dict(wave=24, target=91)]
+        self.assertTrue(audit_module.planned_tome_rotation(births, casts))
+        self.assertFalse(audit_module.planned_tome_rotation(births, [casts[1], casts[1], casts[2]]))
+        self.assertFalse(audit_module.planned_tome_rotation(births, [casts[1], dict(wave=12, target=46), casts[2]]))
+        self.assertFalse(audit_module.planned_tome_rotation(births, [casts[0], dict(wave=12, target=46), casts[2]]))
+        self.assertFalse(audit_module.planned_tome_rotation(births, [*casts[:2], dict(wave=25, target=91)]))
+
     def test_incomplete_trace_cannot_be_reported_as_a_clean_audit(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

@@ -12,14 +12,18 @@ import net.runelite.client.ui.PluginPanel;
 final class LocalToolsPanel extends PluginPanel
 {
 	private final JButton teleportLobby = new JButton("Teleport to lobby");
+	private final NylocasBotsPanel bots;
 
-	LocalToolsPanel(Consumer<String> submit, PluginPanel theatre, PluginPanel gear, PluginPanel debug)
+	LocalToolsPanel(Consumer<String> submit, TheatreControlsPanel theatre, PluginPanel gear, PluginPanel debug)
 	{
 		teleportLobby.setToolTipText("Teleport to the Ver Sinhaza raid lobby.");
 		teleportLobby.addActionListener(event -> submit.accept("sinhaza"));
 		teleportLobby.setEnabled(false);
 		add(teleportLobby);
 		addSection("Theatre controls", theatre, true);
+		addSection("Raid options", theatre.raidOptions(), false);
+		bots = new NylocasBotsPanel(submit);
+		addSection("Nylocas bots", bots, false);
 		addSection("Gear setups", gear, false);
 		addSection("Debug tools", debug, false);
 	}
@@ -27,6 +31,12 @@ final class LocalToolsPanel extends PluginPanel
 	void setLoggedIn(boolean loggedIn)
 	{
 		teleportLobby.setEnabled(loggedIn);
+		bots.setLoggedIn(loggedIn);
+	}
+
+	void setRaidStarted(boolean started)
+	{
+		bots.setRaidStarted(started);
 	}
 
 	private void addSection(String title, PluginPanel content, boolean expanded)

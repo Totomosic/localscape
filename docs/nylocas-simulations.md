@@ -128,6 +128,8 @@ acknowledges server attack events,
 and walks during staging without accidentally attacking an approach target.
 The harness supplies no human input and starts both players through the barrier.
 
+Pass `--strategy 2` to the Python runner or `-Pnylo.strategy=2` to Gradle for a strategy 2 duo. The default is strategy 1. Each new trial CSV records the strategy, including when regenerating a report with `--report-only`.
+
 The dedicated Gradle entry point is:
 
 ```bash
@@ -141,6 +143,8 @@ Ordinary integration runs skip the batch job. It always executes when explicitly
 requested, even if its build inputs are unchanged.
 
 ## Baseline conditions
+
+With `--strategy 2`, the ranger uses rapid Ascension crossbows and a longrange Zorya’s tome. A traced run records the ranger’s special energy and stored tome attacks at each confirmed launch. Run `python3 tools/analyze-nylocas-training.py <run-directory>` to count the two pre-cap specials, the wave-24 special and the share of pre-cap casts made with stored attacks. [Strategy 2 training](nylocas-strategy-2-training.md)
 
 The controller provisions the role loadouts in [mage-strategy.md](../mage-strategy.md)
 and [range-strategy.md](../range-strategy.md): ranger uses elite ranged Void,
@@ -220,7 +224,7 @@ not be treated as valid multi-combat training results.
 
 The Markdown headline and `boss_time_benchmark` use completed rooms with a known zero count for last-spawned wave 19. The mean, P5 and P95 all use this sample. For a combined checkpoint, pool individual room times, sort them and take the observations at one-based ranks `ceil(0.05 × N)` and `ceil(0.95 × N)`. Report unknown wave counters and wave-19 failures separately. Jordan accepted the nine wave-19 failures in the 500-room checkpoint on 26 November.
 
-The current upper target is **3:16.8** (328 ticks). `boss_time_benchmark.p95_target_met` compares the eligible P95 with this target. `training.completed_boss_at_most_3m16_8` counts all trials that reached the boss by the same deadline, including rooms that stalled on wave 19.
+The eligible mean target is **3:09** (315 ticks). `boss_time_benchmark.mean_target_met` compares the unrounded mean against it. The eligible P95 target is **3:16.8** (328 ticks). `boss_time_benchmark.p95_target_met` reports that result. Both fields are null when no room qualifies. `training.completed_boss_at_most_3m16_8` counts all trials that reached the boss by the same deadline, including rooms that stalled on wave 19.
 
 `completion_ticks`, `completion_game_seconds`, original CSV rows, completion rate, deaths and all-room consistency/stall metrics retain their raw definitions. Reports show raw timings separately. This reporting rule does not alter native encounter caps, damage, resources or simulation behavior. Historical immutable reports retain the definitions used when generated.
 

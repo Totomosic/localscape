@@ -1,6 +1,16 @@
 # Nylocas training — resume handoff
 
-## Paused after requested wrapup — latest stop state
+## Strategy 2 paused, 28 November 2026
+
+Jordan asked to finish the running comparisons and pause training. The working tree contains the validated ranger and mage policies. Use `::nylobot range 2`, `::nylobot mage 2` or `::nylobot spectate 2` to run them. Omitting the number selects strategy 1. A 100-seed replay of strategy 1 matched every recorded gameplay column of the original control.
+
+The retained strategy 2 checkpoint completed 500/500 fresh rooms and reached boss spawn by 3:22 in 494 (98.8%). The 488 rooms with zero wave-19 stalls averaged 3:11.81. P5 was 3:04.8 and P95 was 3:19.2. The outstanding goals are a 3:09 eligible mean and a 3:16.8 eligible P95. All 500 rangers spent their three specials as assigned. Both the working policy and the native adapter were saved in `.state/simulations/strategy2-goal-repairs-independent500/`. The per-seed table includes that run as `resumed-repairs-independent500`. [Training results and replay command](nylocas-strategy-2-training.md) · [Per-seed data](research/nylocas/strategy-2-2026-11-28.csv)
+
+On the next training request, use the retained pair as the control. Wave 21 delayed admission to 22 in 158 of the 488 eligible rooms. Follow those rooms through cleanup when evaluating changes. The original movement and mandatory parent attacks performed better than moving toward every firing tile during cooldown or taking an extra two-target scythe after the wave-21 barrage. Compare changes on matched seeds first, then use fresh seeds to check all three time targets.
+
+For a focused replay, seed `156337459231358` reached the first admission check after wave 24 with exactly 24 bodies at tick 204. At tick 198 the mage was ready and adjacent to melee child 139 with 8 HP. A sulphur-blade attack could have landed before the check and still left the mage ready for its east-24 scythe at tick 202. This is an opportunity from the trace. Its effect on room time still needs a native comparison. The local gate audit is in `.state/simulations/strategy2-mage-random300-gate-audit/handoff.json`.
+
+## Earlier strategy 1 checkpoint
 
 Subsequent commit request: rsmod local checkpoint `21cccf08de8ccaab52e08f1423460393d9f5ca8f` on `nylocas-training-v2`; parent commit records the submodule and training evidence. Training remains paused. See [the commit-aware handoff](nylocas-training-handoff-2026-11-25.md).
 

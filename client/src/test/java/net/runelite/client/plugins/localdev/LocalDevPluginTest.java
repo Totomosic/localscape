@@ -83,14 +83,24 @@ public class LocalDevPluginTest
 		LocalToolsPanel tools = (LocalToolsPanel) navigation.getValue().getPanel();
 		JPanel section = (JPanel) tools.getComponent(1);
 		TheatreControlsPanel theatre = (TheatreControlsPanel) ((BorderLayout) section.getLayout()).getLayoutComponent(BorderLayout.CENTER);
+		JPanel botsSection = (JPanel) tools.getComponent(3);
+		NylocasBotsPanel bots = (NylocasBotsPanel) ((BorderLayout) botsSection.getLayout()).getLayoutComponent(BorderLayout.CENTER);
 		GameStateChanged login = new GameStateChanged();
 		login.setGameState(GameState.LOGGED_IN);
 		when(client.getVarbitValue(VarbitID.TOB_CLIENT_PARTYSTATUS)).thenReturn(2);
 		plugin.onGameStateChanged(login);
-		SwingUtilities.invokeAndWait(() -> assertFalse(TheatreControlsPanelTest.wave(theatre).isEnabled()));
+		SwingUtilities.invokeAndWait(() ->
+		{
+			assertFalse(TheatreControlsPanelTest.wave(theatre).isEnabled());
+			assertFalse(NylocasBotsPanelTest.button(bots, "Add ranger bot").isEnabled());
+		});
 		when(client.getVarbitValue(VarbitID.TOB_CLIENT_PARTYSTATUS)).thenReturn(0);
 		plugin.onGameTick(new GameTick());
-		SwingUtilities.invokeAndWait(() -> assertTrue(TheatreControlsPanelTest.wave(theatre).isEnabled()));
+		SwingUtilities.invokeAndWait(() ->
+		{
+			assertTrue(TheatreControlsPanelTest.wave(theatre).isEnabled());
+			assertTrue(NylocasBotsPanelTest.button(bots, "Add ranger bot").isEnabled());
+		});
 	}
 
 	@Test
@@ -98,7 +108,7 @@ public class LocalDevPluginTest
 	{
 		ArgumentCaptor<NavigationButton> navigation = ArgumentCaptor.forClass(NavigationButton.class);
 		verify(clientToolbar).addNavigation(navigation.capture());
-		assertEquals(4, navigation.getValue().getPanel().getComponentCount());
+		assertEquals(6, navigation.getValue().getPanel().getComponentCount());
 		GameStateChanged state = new GameStateChanged();
 		state.setGameState(GameState.LOGIN_SCREEN);
 		GameTick tick = new GameTick();
