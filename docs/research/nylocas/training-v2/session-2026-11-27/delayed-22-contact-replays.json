@@ -1,0 +1,259 @@
+{
+  "profile": "Normal random damage at 99 HP, live boosts, finite supplies, utilities, and rolled incoming damage. The affected-room sample selects on publicly visible contact geometry, before looking at outcome.",
+  "reference_blocks": {
+    "ordered-flights-crosscheck-420": 420,
+    "ordered-control-confirm-480": 480,
+    "ordered-flights-matched-360": 360,
+    "ordered-retained-matched-480": 480,
+    "ordered-next-control-480": 480
+  },
+  "screened": 2220,
+  "selected_by_initial_geometry": 11,
+  "changed_by_final_ground_guard": 7,
+  "with_a_native_sweep_before": 9,
+  "with_a_native_sweep_after": 11,
+  "previous_plus14_launches_delayed_one_tick": 3,
+  "all_room_boss_tick_change_in_selection": -32,
+  "by328_change_in_selection": 1,
+  "selected_rooms": [
+    {
+      "control": "ordered-control-confirm-480",
+      "seed": 53184067592898,
+      "previous_sweeps": [
+        190
+      ],
+      "new_sweeps": [
+        [
+          190,
+          127
+        ]
+      ],
+      "south_eyes": [
+        184,
+        187
+      ],
+      "first_wave24": 196,
+      "staged_at": null,
+      "old_boss": 316,
+      "new_boss": 316
+    },
+    {
+      "control": "ordered-control-confirm-480",
+      "seed": 53184067592987,
+      "previous_sweeps": [
+        194
+      ],
+      "new_sweeps": [
+        [
+          194,
+          127
+        ]
+      ],
+      "south_eyes": [
+        188,
+        191
+      ],
+      "first_wave24": 200,
+      "staged_at": null,
+      "old_boss": 320,
+      "new_boss": 320
+    },
+    {
+      "control": "ordered-control-confirm-480",
+      "seed": 53184067593007,
+      "previous_sweeps": [
+        202
+      ],
+      "new_sweeps": [
+        [
+          202,
+          127
+        ]
+      ],
+      "south_eyes": [
+        195,
+        198
+      ],
+      "first_wave24": 208,
+      "staged_at": null,
+      "old_boss": 324,
+      "new_boss": 324
+    },
+    {
+      "control": "ordered-control-confirm-480",
+      "seed": 53184067593270,
+      "previous_sweeps": [
+        202
+      ],
+      "new_sweeps": [
+        [
+          203,
+          127
+        ]
+      ],
+      "south_eyes": [
+        195,
+        198
+      ],
+      "first_wave24": 208,
+      "staged_at": 202,
+      "old_boss": 328,
+      "new_boss": 328
+    },
+    {
+      "control": "ordered-next-control-480",
+      "seed": 54848649224455,
+      "previous_sweeps": [],
+      "new_sweeps": [
+        [
+          195,
+          129
+        ]
+      ],
+      "south_eyes": [
+        188,
+        191
+      ],
+      "first_wave24": 200,
+      "staged_at": 194,
+      "old_boss": 336,
+      "new_boss": 316
+    },
+    {
+      "control": "ordered-next-control-480",
+      "seed": 54848649224474,
+      "previous_sweeps": [],
+      "new_sweeps": [
+        [
+          195,
+          129
+        ]
+      ],
+      "south_eyes": [
+        187,
+        190
+      ],
+      "first_wave24": 200,
+      "staged_at": 194,
+      "old_boss": 324,
+      "new_boss": 316
+    },
+    {
+      "control": "ordered-next-control-480",
+      "seed": 54848649224525,
+      "previous_sweeps": [
+        190
+      ],
+      "new_sweeps": [
+        [
+          191,
+          123
+        ]
+      ],
+      "south_eyes": [
+        184,
+        187
+      ],
+      "first_wave24": 196,
+      "staged_at": 190,
+      "old_boss": 320,
+      "new_boss": 312
+    },
+    {
+      "control": "ordered-next-control-480",
+      "seed": 54848649224541,
+      "previous_sweeps": [
+        198
+      ],
+      "new_sweeps": [
+        [
+          199,
+          129
+        ]
+      ],
+      "south_eyes": [
+        192,
+        195
+      ],
+      "first_wave24": 204,
+      "staged_at": 198,
+      "old_boss": 324,
+      "new_boss": 320
+    },
+    {
+      "control": "ordered-retained-matched-480",
+      "seed": 109674661720803,
+      "previous_sweeps": [
+        195
+      ],
+      "new_sweeps": [
+        [
+          195,
+          129
+        ]
+      ],
+      "south_eyes": [
+        187,
+        190
+      ],
+      "first_wave24": 200,
+      "staged_at": 194,
+      "old_boss": 320,
+      "new_boss": 320
+    },
+    {
+      "control": "ordered-retained-matched-480",
+      "seed": 109674661720812,
+      "previous_sweeps": [
+        199
+      ],
+      "new_sweeps": [
+        [
+          199,
+          129
+        ]
+      ],
+      "south_eyes": [
+        191,
+        194
+      ],
+      "first_wave24": 204,
+      "staged_at": 198,
+      "old_boss": 320,
+      "new_boss": 328
+    },
+    {
+      "control": "ordered-retained-matched-480",
+      "seed": 109674661720854,
+      "previous_sweeps": [
+        198
+      ],
+      "new_sweeps": [
+        [
+          198,
+          129
+        ]
+      ],
+      "south_eyes": [
+        191,
+        194
+      ],
+      "first_wave24": 204,
+      "staged_at": null,
+      "old_boss": 332,
+      "new_boss": 332
+    }
+  ],
+  "integrated_planner_witness": {
+    "seed": 53184067593286,
+    "initial_geometric_recovery_source": "mage-w22-delayed-contact-recovery",
+    "baseline_boss_ticks": 328,
+    "replay_boss_ticks": 324,
+    "stage_tick": 202,
+    "sweep_tick": 203,
+    "big_key": 129,
+    "south_blue_kills": 2,
+    "sweep_kills": 6
+  },
+  "mage_sha256": "beef679ce1e4534a2a975d8f40d3bc63b26178f3f405020f08f7a805463f8f55"
+}

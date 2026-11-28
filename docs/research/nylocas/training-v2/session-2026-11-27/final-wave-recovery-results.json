@@ -1,0 +1,814 @@
+{
+  "endpoint": "Actual boss spawn, 0.6 seconds per tick; deadline 328 ticks.",
+  "reference": "Revised ranger melee gear and ordered-hit pair before the final two recoveries.",
+  "profile": "Randomized 99 HP local RSMod duo, finite supplies, prepot, utilities, live server boosts and real rolled damage observations.",
+  "sampling": "Five historical ordered-hit blocks contain 2,220 distinct seeded rooms. All 52 rooms that failed the wave-19 check, plus all eleven from the wider moving-contact geometry screen, were rerun with the exact final pair. The native-state screen found neither trigger in the other 2,157 recorded rooms. Their baseline rows were carried forward. A separate block of 480 seeds was reserved before comparing the recovery policies and ran in full on both the control and the final pair. These six blocks are disjoint.",
+  "historic_and_fresh_before": {
+    "rooms": 2700,
+    "completed": 2700,
+    "failures_by_status": {
+      "completed": 2700
+    },
+    "pre_cap_stalls": 4019,
+    "mean_pre_cap_stalls": 1.4885185185185186,
+    "zero_to_three": 2554,
+    "pre_cap_stall_distribution": {
+      "0": 515,
+      "1": 1031,
+      "2": 722,
+      "3": 286,
+      "4": 85,
+      "5": 32,
+      "6": 22,
+      "7": 3,
+      "8": 3,
+      "9": 1
+    },
+    "wave19_failures": 63,
+    "wave19_retries": 242,
+    "eligible": 2637,
+    "eligible_ticks_mean": 320.3064087978764,
+    "eligible_p95_ticks": 332,
+    "eligible_by_328": 2439,
+    "all_by_328": 2462,
+    "all_p95_ticks": 332
+  },
+  "historic_and_fresh_after": {
+    "rooms": 2700,
+    "completed": 2700,
+    "failures_by_status": {
+      "completed": 2700
+    },
+    "pre_cap_stalls": 4008,
+    "mean_pre_cap_stalls": 1.4844444444444445,
+    "zero_to_three": 2554,
+    "pre_cap_stall_distribution": {
+      "0": 515,
+      "1": 1031,
+      "2": 722,
+      "3": 286,
+      "4": 89,
+      "5": 33,
+      "6": 19,
+      "7": 2,
+      "8": 1,
+      "9": 2
+    },
+    "wave19_failures": 63,
+    "wave19_retries": 231,
+    "eligible": 2637,
+    "eligible_ticks_mean": 320.2927569207433,
+    "eligible_p95_ticks": 332,
+    "eligible_by_328": 2440,
+    "all_by_328": 2468,
+    "all_p95_ticks": 332
+  },
+  "fresh_trials_sha256": "1c5eb2c364366a86b3cc4599522ee7610fc3e1803906e6dadc4d9499db7ca77a",
+  "selected_trials_sha256": "cd6b0633dd32e1f37763f328360c63195a82178916980aa86b27f4d9c7ac8c58",
+  "policy_sha256": {
+    "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+    "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+    "org/localscape/nylocas/WaveSchedule.java": "76f41f596eee6d7f2b43baac0bedc142543ff8c8377ce40f427b968a0a8f708d",
+    "org/localscape/nylocas/AttackTiming.java": "614841c9e56079ccb2cf4f7362f8086d7e2873584d9abb93b387d73e26ef073f",
+    "org/localscape/nylocas/RoomPlanner.java": "e256ae4d29077084e978d241aec1b068cda28605219a14e050943a23fb928a45",
+    "org/localscape/nylocas/CleanupMelee.java": "b564ac888c3e7fc715cf1eccdaef3fd9388d0bd95eebe43e52a382f5802af1d2",
+    "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+    "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+    "org/localscape/nylocas/RoomProjection.java": "369ebfc2996aaa1d530dea7d1aca4f9e08310efd6f63072f09b35a04ad938b14",
+    "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "e0bc77d36fbcac6d26005e83ead1940dae7c6d9e4096b9ad419d0f73098bb80e",
+    "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+    "org/localscape/nylocas/ranger/RangerStrategy.java": "a4a25aeae0d602ebe6aaf97f5f3e7ddd3a467a65bae8bc65bd1231be55719230",
+    "org/localscape/nylocas/mage/MageStrategy.java": "beef679ce1e4534a2a975d8f40d3bc63b26178f3f405020f08f7a805463f8f55"
+  },
+  "adapter_sha256": {
+    "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasServerAgents.kt": "9aaacf4e2f517cba97d7f6a196ece73004ce14318de15133f2b7315811399bb2",
+    "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationTest.kt": "ccc8e3db8876263ca98611b217d7255cfa5b7011066555f9097314971a3a70e4",
+    "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationAreas.kt": "d37dacf487cfbabbdcb9ebd6b05b2c1d702040c2b6c16be727a16fb269d95cdc",
+    "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationStalls.kt": "329a5e818dc2468b408f1a60e4038845a06e20b700611eb9c456f928d86e0149",
+    "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationSupplies.kt": "c8dfa7b030428845b720ee3f682ad01c1cc85011c6ec8f0868beb5068e18cc41",
+    "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotClient.kt": "9ddb23023dde2cc1e68fde50393ec78261ee98a35bb7a5e28aff4a4037dee507",
+    "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotController.kt": "faad5753aec0282f772efd243264490d20ebba0f26cb65baaafa34a369833928",
+    "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotGroupInputs.kt": "75c1cdec5adc9916bab747ab6d9886274339ce8f8a6196471f27da60c1cf413f",
+    "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotInputs.kt": "95146bf352cf71037add4d007556f8c49758b9910959cb3d71316671cb311908",
+    "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotService.kt": "39060c587fb27b547a99f9a52c2c239ffff5400a07a38765a84551105e6e5421",
+    "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotUtilities.kt": "9c4bcacebe8465c8522270804c58638d800296391ffa0626f3c88f931e1c2e09",
+    "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotUtilitySupplies.kt": "937de43b61928fda25e638630dabe5dabc22c28826db5704ceeb5bfde916d6f2",
+    "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasCombatIdle.kt": "ba19211218d4ac9cc21c623ae91d79cfe9cac43e55f6313a36850f531994413f",
+    "content/other/login/src/main/kotlin/org/rsmod/content/other/login/LoginScript.kt": "ed82d01a241076816811ea3208a8792ee8c3518d1232120e3e22e5a35985a99f",
+    "api/stats-plugin/src/main/kotlin/org/rsmod/api/stats/plugin/StatRegenScript.kt": "2ea612b185d3052ec9e80e0abb98bde3509e9ddf8220bd7f17a9dcdd22ed33c9",
+    "api/testing/src/main/kotlin/org/rsmod/api/testing/scope/GameTestScope.kt": "521d83fff56aba2b6cc8293996467dec80f767537d366ed9cb7e5d44bede6854"
+  },
+  "per_block": {
+    "ordered-flights-matched-360": {
+      "native_rerun": 7,
+      "carried_over": 353,
+      "before": {
+        "rooms": 360,
+        "completed": 360,
+        "failures_by_status": {
+          "completed": 360
+        },
+        "pre_cap_stalls": 525,
+        "mean_pre_cap_stalls": 1.4583333333333333,
+        "zero_to_three": 340,
+        "pre_cap_stall_distribution": {
+          "0": 66,
+          "1": 146,
+          "2": 94,
+          "3": 34,
+          "4": 14,
+          "5": 5,
+          "6": 0,
+          "7": 0,
+          "8": 1
+        },
+        "wave19_failures": 7,
+        "wave19_retries": 25,
+        "eligible": 353,
+        "eligible_ticks_mean": 319.6827195467422,
+        "eligible_p95_ticks": 332,
+        "eligible_by_328": 331,
+        "all_by_328": 335,
+        "all_p95_ticks": 332
+      },
+      "after": {
+        "rooms": 360,
+        "completed": 360,
+        "failures_by_status": {
+          "completed": 360
+        },
+        "pre_cap_stalls": 523,
+        "mean_pre_cap_stalls": 1.4527777777777777,
+        "zero_to_three": 340,
+        "pre_cap_stall_distribution": {
+          "0": 66,
+          "1": 146,
+          "2": 94,
+          "3": 34,
+          "4": 14,
+          "5": 5,
+          "6": 1
+        },
+        "wave19_failures": 7,
+        "wave19_retries": 23,
+        "eligible": 353,
+        "eligible_ticks_mean": 319.6827195467422,
+        "eligible_p95_ticks": 332,
+        "eligible_by_328": 331,
+        "all_by_328": 336,
+        "all_p95_ticks": 332
+      }
+    },
+    "ordered-flights-crosscheck-420": {
+      "native_rerun": 12,
+      "carried_over": 408,
+      "before": {
+        "rooms": 420,
+        "completed": 420,
+        "failures_by_status": {
+          "completed": 420
+        },
+        "pre_cap_stalls": 618,
+        "mean_pre_cap_stalls": 1.4714285714285715,
+        "zero_to_three": 395,
+        "pre_cap_stall_distribution": {
+          "0": 84,
+          "1": 165,
+          "2": 103,
+          "3": 43,
+          "4": 13,
+          "5": 7,
+          "6": 4,
+          "7": 1
+        },
+        "wave19_failures": 12,
+        "wave19_retries": 47,
+        "eligible": 408,
+        "eligible_ticks_mean": 320.47058823529414,
+        "eligible_p95_ticks": 332,
+        "eligible_by_328": 372,
+        "all_by_328": 376,
+        "all_p95_ticks": 332
+      },
+      "after": {
+        "rooms": 420,
+        "completed": 420,
+        "failures_by_status": {
+          "completed": 420
+        },
+        "pre_cap_stalls": 614,
+        "mean_pre_cap_stalls": 1.4619047619047618,
+        "zero_to_three": 395,
+        "pre_cap_stall_distribution": {
+          "0": 84,
+          "1": 165,
+          "2": 103,
+          "3": 43,
+          "4": 15,
+          "5": 7,
+          "6": 2,
+          "7": 1
+        },
+        "wave19_failures": 12,
+        "wave19_retries": 43,
+        "eligible": 408,
+        "eligible_ticks_mean": 320.47058823529414,
+        "eligible_p95_ticks": 332,
+        "eligible_by_328": 372,
+        "all_by_328": 378,
+        "all_p95_ticks": 332
+      }
+    },
+    "ordered-retained-matched-480": {
+      "native_rerun": 12,
+      "carried_over": 468,
+      "before": {
+        "rooms": 480,
+        "completed": 480,
+        "failures_by_status": {
+          "completed": 480
+        },
+        "pre_cap_stalls": 731,
+        "mean_pre_cap_stalls": 1.5229166666666667,
+        "zero_to_three": 452,
+        "pre_cap_stall_distribution": {
+          "0": 91,
+          "1": 175,
+          "2": 135,
+          "3": 51,
+          "4": 19,
+          "5": 3,
+          "6": 3,
+          "7": 1,
+          "8": 1,
+          "9": 1
+        },
+        "wave19_failures": 9,
+        "wave19_retries": 40,
+        "eligible": 471,
+        "eligible_ticks_mean": 320.50106157112526,
+        "eligible_p95_ticks": 332,
+        "eligible_by_328": 432,
+        "all_by_328": 434,
+        "all_p95_ticks": 332
+      },
+      "after": {
+        "rooms": 480,
+        "completed": 480,
+        "failures_by_status": {
+          "completed": 480
+        },
+        "pre_cap_stalls": 732,
+        "mean_pre_cap_stalls": 1.525,
+        "zero_to_three": 452,
+        "pre_cap_stall_distribution": {
+          "0": 91,
+          "1": 175,
+          "2": 135,
+          "3": 51,
+          "4": 19,
+          "5": 3,
+          "6": 3,
+          "7": 1,
+          "8": 0,
+          "9": 2
+        },
+        "wave19_failures": 9,
+        "wave19_retries": 41,
+        "eligible": 471,
+        "eligible_ticks_mean": 320.5180467091295,
+        "eligible_p95_ticks": 332,
+        "eligible_by_328": 432,
+        "all_by_328": 434,
+        "all_p95_ticks": 332
+      }
+    },
+    "ordered-control-confirm-480": {
+      "native_rerun": 15,
+      "carried_over": 465,
+      "before": {
+        "rooms": 480,
+        "completed": 480,
+        "failures_by_status": {
+          "completed": 480
+        },
+        "pre_cap_stalls": 678,
+        "mean_pre_cap_stalls": 1.4125,
+        "zero_to_three": 457,
+        "pre_cap_stall_distribution": {
+          "0": 108,
+          "1": 176,
+          "2": 124,
+          "3": 49,
+          "4": 14,
+          "5": 4,
+          "6": 4,
+          "7": 1
+        },
+        "wave19_failures": 11,
+        "wave19_retries": 44,
+        "eligible": 469,
+        "eligible_ticks_mean": 320.1620469083156,
+        "eligible_p95_ticks": 332,
+        "eligible_by_328": 433,
+        "all_by_328": 436,
+        "all_p95_ticks": 332
+      },
+      "after": {
+        "rooms": 480,
+        "completed": 480,
+        "failures_by_status": {
+          "completed": 480
+        },
+        "pre_cap_stalls": 673,
+        "mean_pre_cap_stalls": 1.4020833333333333,
+        "zero_to_three": 457,
+        "pre_cap_stall_distribution": {
+          "0": 108,
+          "1": 176,
+          "2": 124,
+          "3": 49,
+          "4": 15,
+          "5": 6,
+          "6": 2
+        },
+        "wave19_failures": 11,
+        "wave19_retries": 39,
+        "eligible": 469,
+        "eligible_ticks_mean": 320.1620469083156,
+        "eligible_p95_ticks": 332,
+        "eligible_by_328": 433,
+        "all_by_328": 438,
+        "all_p95_ticks": 332
+      }
+    },
+    "ordered-next-control-480": {
+      "native_rerun": 17,
+      "carried_over": 463,
+      "before": {
+        "rooms": 480,
+        "completed": 480,
+        "failures_by_status": {
+          "completed": 480
+        },
+        "pre_cap_stalls": 743,
+        "mean_pre_cap_stalls": 1.5479166666666666,
+        "zero_to_three": 454,
+        "pre_cap_stall_distribution": {
+          "0": 77,
+          "1": 192,
+          "2": 131,
+          "3": 54,
+          "4": 12,
+          "5": 7,
+          "6": 6,
+          "7": 0,
+          "8": 1
+        },
+        "wave19_failures": 13,
+        "wave19_retries": 43,
+        "eligible": 467,
+        "eligible_ticks_mean": 320.75374732334046,
+        "eligible_p95_ticks": 332,
+        "eligible_by_328": 434,
+        "all_by_328": 437,
+        "all_p95_ticks": 332
+      },
+      "after": {
+        "rooms": 480,
+        "completed": 480,
+        "failures_by_status": {
+          "completed": 480
+        },
+        "pre_cap_stalls": 742,
+        "mean_pre_cap_stalls": 1.5458333333333334,
+        "zero_to_three": 454,
+        "pre_cap_stall_distribution": {
+          "0": 77,
+          "1": 192,
+          "2": 131,
+          "3": 54,
+          "4": 13,
+          "5": 6,
+          "6": 6,
+          "7": 0,
+          "8": 1
+        },
+        "wave19_failures": 13,
+        "wave19_retries": 42,
+        "eligible": 467,
+        "eligible_ticks_mean": 320.66809421841543,
+        "eligible_p95_ticks": 332,
+        "eligible_by_328": 435,
+        "all_by_328": 439,
+        "all_p95_ticks": 332
+      }
+    },
+    "fresh_confirm_480": {
+      "native_rerun": 480,
+      "carried_over": 0,
+      "reference": "recovery-control-confirm-480",
+      "candidate": "final-wave-recovery-confirm-480",
+      "before": {
+        "rooms": 480,
+        "completed": 480,
+        "failures_by_status": {
+          "completed": 480
+        },
+        "pre_cap_stalls": 724,
+        "mean_pre_cap_stalls": 1.5083333333333333,
+        "zero_to_three": 456,
+        "pre_cap_stall_distribution": {
+          "0": 89,
+          "1": 177,
+          "2": 135,
+          "3": 55,
+          "4": 13,
+          "5": 6,
+          "6": 5
+        },
+        "wave19_failures": 11,
+        "wave19_retries": 43,
+        "eligible": 469,
+        "eligible_ticks_mean": 320.136460554371,
+        "eligible_p95_ticks": 332,
+        "eligible_by_328": 437,
+        "all_by_328": 444,
+        "all_p95_ticks": 332
+      },
+      "after": {
+        "rooms": 480,
+        "completed": 480,
+        "failures_by_status": {
+          "completed": 480
+        },
+        "pre_cap_stalls": 724,
+        "mean_pre_cap_stalls": 1.5083333333333333,
+        "zero_to_three": 456,
+        "pre_cap_stall_distribution": {
+          "0": 89,
+          "1": 177,
+          "2": 135,
+          "3": 55,
+          "4": 13,
+          "5": 6,
+          "6": 5
+        },
+        "wave19_failures": 11,
+        "wave19_retries": 43,
+        "eligible": 469,
+        "eligible_ticks_mean": 320.1279317697228,
+        "eligible_p95_ticks": 332,
+        "eligible_by_328": 437,
+        "all_by_328": 443,
+        "all_p95_ticks": 332
+      }
+    }
+  },
+  "final_fresh_equipment": {
+    "rooms": 480,
+    "ranger_launches_in_correct_worn_gear": 53172,
+    "launches_by_weapon": {
+      "20997": 2412,
+      "11959": 6468,
+      "29084": 1810,
+      "12926": 31515,
+      "31113": 10115,
+      "13652": 852
+    },
+    "east6_first_attack_claws_special": 480,
+    "ordinary_sulphur_launches": 1810,
+    "ordinary_sulphur_two_accuracy_successes": 1767,
+    "opening_scratch_sulphur": 480,
+    "claw_launches": 852,
+    "claw_specials_by_energy": 852,
+    "native_sulphur_reported_roll_maxima": {
+      "(21, 22)": 1767,
+      "(22,)": 16,
+      "(21,)": 27
+    },
+    "trials_sha256": "1c5eb2c364366a86b3cc4599522ee7610fc3e1803906e6dadc4d9499db7ca77a"
+  },
+  "final_fresh_named_attacks": {
+    "wave19_failure_rooms": 11,
+    "west8_eye_at_birth": 480,
+    "south20_post_barrage_scythe": 0,
+    "west27_selections": 0,
+    "west27_outside_exception_selections": 0,
+    "west27_positive_impacts": 1,
+    "south30_first_green": 480,
+    "south30_both_hit_by_same_chin": 480,
+    "west30_rooms_with_intervening_filler": 0,
+    "west8_uncovered_three_ticks_later": 185,
+    "west8_eye_retry_on_that_tick": 185,
+    "west30_uncovered_after_chin": 234,
+    "west30_rooms_with_uncovered_ranger_shot": 234,
+    "west30_first_uncovered_shot_on_parent": 234
+  },
+  "final_fresh_expired_required_parents": [],
+  "final_fresh_dinh": {
+    "opening_shadow": 480,
+    "rooms": 480,
+    "wave12_attack_ids_identified": 480,
+    "wave12_big_killed_by_special": 37,
+    "wave12_big_rolled_on": 50,
+    "wave12_both_north_at_launch": 445,
+    "wave12_east_both_hit_by_scythe": 478,
+    "wave12_east_both_hit_from_row_4247": 0,
+    "wave12_east_both_hit_from_row_4248": 478,
+    "wave12_east_both_hit_from_row_4249": 0,
+    "wave12_east_scythe_from_row_4247": 1,
+    "wave12_east_scythe_from_row_4248": 478,
+    "wave12_east_scythe_from_row_4249": 1,
+    "wave12_east_scythes": 480,
+    "wave12_mage_north_at_launch": 469,
+    "wave12_ranger_north_at_launch": 455,
+    "wave12_specials": 480,
+    "wave12_victims_killed": 1415,
+    "wave22_attack_ids_identified": 480,
+    "wave22_delayed_big_primary": 182,
+    "wave22_delayed_east_big_killed_as_primary": 38,
+    "wave22_delayed_east_big_primary": 42,
+    "wave22_delayed_west_big_killed_as_primary": 130,
+    "wave22_delayed_west_big_primary": 140,
+    "wave22_kills_on_delayed_specials": 1346,
+    "wave22_launch_age_10": 130,
+    "wave22_launch_age_11": 21,
+    "wave22_launch_age_12": 47,
+    "wave22_launch_age_13": 92,
+    "wave22_launch_age_14": 28,
+    "wave22_launch_age_15": 3,
+    "wave22_launch_age_9": 159,
+    "wave22_rooms_with_1_south_eyes": 142,
+    "wave22_rooms_with_2_south_eyes": 117,
+    "wave22_rooms_with_south_clear": 259,
+    "wave22_south_clear_lethal_impacts": 283,
+    "wave22_south_clear_shots": 376,
+    "wave22_special_after_south_clear": 259,
+    "wave22_specials": 480,
+    "wave22_victims_killed": 2868,
+    "west_step_next_tick": 480
+  },
+  "final_fresh_dim": {
+    "dim": {
+      "wave": 29,
+      "wave29_mode": "timestamp",
+      "additional_wave28_offset": null,
+      "activation": "actual31"
+    },
+    "all_trials": {
+      "trials": 480,
+      "completed": 480,
+      "eligible": 469,
+      "wave19_failure_rooms": 11,
+      "reported_seconds": {
+        "mean": 192.07675906183368,
+        "min": 180.0,
+        "max": 206.4
+      },
+      "within_3m22": 475,
+      "expiry_status": {
+        "undimmed_targets_last_alive": 373,
+        "made_dim_expiry": 80,
+        "same_tick_boundary": 27
+      },
+      "dimmed_primary_attacks": 11,
+      "scheduled_dimmed_south30_chins": 0,
+      "assigned_dimmed_parent_attacks": 11,
+      "other_dimmed_primary_attacks": 0,
+      "additional_time_dim_rooms": 0,
+      "undimmed_expiry_rooms": 142,
+      "dimmed_big_expiry_rooms": 476,
+      "additional_time_dim_big_expiry_rooms": 0
+    },
+    "eligible_trials": {
+      "trials": 469,
+      "completed": 469,
+      "eligible": 469,
+      "wave19_failure_rooms": 0,
+      "reported_seconds": {
+        "mean": 192.07675906183368,
+        "min": 180.0,
+        "max": 206.4
+      },
+      "within_3m22": 467,
+      "expiry_status": {
+        "undimmed_targets_last_alive": 364,
+        "made_dim_expiry": 78,
+        "same_tick_boundary": 27
+      },
+      "dimmed_primary_attacks": 11,
+      "scheduled_dimmed_south30_chins": 0,
+      "assigned_dimmed_parent_attacks": 11,
+      "other_dimmed_primary_attacks": 0,
+      "additional_time_dim_rooms": 0,
+      "undimmed_expiry_rooms": 137,
+      "dimmed_big_expiry_rooms": 465,
+      "additional_time_dim_big_expiry_rooms": 0
+    },
+    "by_wave28_stalls": {
+      "0": {
+        "trials": 43,
+        "completed": 43,
+        "eligible": 41,
+        "wave19_failure_rooms": 2,
+        "reported_seconds": {
+          "mean": 191.82439024390243,
+          "min": 180.0,
+          "max": 201.6
+        },
+        "within_3m22": 42,
+        "expiry_status": {
+          "undimmed_targets_last_alive": 43
+        },
+        "dimmed_primary_attacks": 0,
+        "scheduled_dimmed_south30_chins": 0,
+        "assigned_dimmed_parent_attacks": 0,
+        "other_dimmed_primary_attacks": 0,
+        "additional_time_dim_rooms": 0,
+        "undimmed_expiry_rooms": 27,
+        "dimmed_big_expiry_rooms": 43,
+        "additional_time_dim_big_expiry_rooms": 0
+      },
+      "1": {
+        "trials": 68,
+        "completed": 68,
+        "eligible": 66,
+        "wave19_failure_rooms": 2,
+        "reported_seconds": {
+          "mean": 191.4181818181818,
+          "min": 182.4,
+          "max": 206.4
+        },
+        "within_3m22": 67,
+        "expiry_status": {
+          "undimmed_targets_last_alive": 65,
+          "same_tick_boundary": 1,
+          "made_dim_expiry": 2
+        },
+        "dimmed_primary_attacks": 1,
+        "scheduled_dimmed_south30_chins": 0,
+        "assigned_dimmed_parent_attacks": 1,
+        "other_dimmed_primary_attacks": 0,
+        "additional_time_dim_rooms": 0,
+        "undimmed_expiry_rooms": 25,
+        "dimmed_big_expiry_rooms": 67,
+        "additional_time_dim_big_expiry_rooms": 0
+      },
+      "2": {
+        "trials": 282,
+        "completed": 282,
+        "eligible": 275,
+        "wave19_failure_rooms": 7,
+        "reported_seconds": {
+          "mean": 191.5549090909091,
+          "min": 182.4,
+          "max": 204.0
+        },
+        "within_3m22": 279,
+        "expiry_status": {
+          "undimmed_targets_last_alive": 230,
+          "made_dim_expiry": 36,
+          "same_tick_boundary": 16
+        },
+        "dimmed_primary_attacks": 6,
+        "scheduled_dimmed_south30_chins": 0,
+        "assigned_dimmed_parent_attacks": 6,
+        "other_dimmed_primary_attacks": 0,
+        "additional_time_dim_rooms": 0,
+        "undimmed_expiry_rooms": 83,
+        "dimmed_big_expiry_rooms": 280,
+        "additional_time_dim_big_expiry_rooms": 0
+      },
+      "3": {
+        "trials": 39,
+        "completed": 39,
+        "eligible": 39,
+        "wave19_failure_rooms": 0,
+        "reported_seconds": {
+          "mean": 194.15384615384616,
+          "min": 187.2,
+          "max": 201.6
+        },
+        "within_3m22": 39,
+        "expiry_status": {
+          "undimmed_targets_last_alive": 23,
+          "made_dim_expiry": 11,
+          "same_tick_boundary": 5
+        },
+        "dimmed_primary_attacks": 3,
+        "scheduled_dimmed_south30_chins": 0,
+        "assigned_dimmed_parent_attacks": 3,
+        "other_dimmed_primary_attacks": 0,
+        "additional_time_dim_rooms": 0,
+        "undimmed_expiry_rooms": 7,
+        "dimmed_big_expiry_rooms": 38,
+        "additional_time_dim_big_expiry_rooms": 0
+      },
+      "4": {
+        "trials": 34,
+        "completed": 34,
+        "eligible": 34,
+        "wave19_failure_rooms": 0,
+        "reported_seconds": {
+          "mean": 193.76470588235293,
+          "min": 187.2,
+          "max": 201.6
+        },
+        "within_3m22": 34,
+        "expiry_status": {
+          "undimmed_targets_last_alive": 10,
+          "made_dim_expiry": 20,
+          "same_tick_boundary": 4
+        },
+        "dimmed_primary_attacks": 1,
+        "scheduled_dimmed_south30_chins": 0,
+        "assigned_dimmed_parent_attacks": 1,
+        "other_dimmed_primary_attacks": 0,
+        "additional_time_dim_rooms": 0,
+        "undimmed_expiry_rooms": 0,
+        "dimmed_big_expiry_rooms": 34,
+        "additional_time_dim_big_expiry_rooms": 0
+      },
+      "5": {
+        "trials": 9,
+        "completed": 9,
+        "eligible": 9,
+        "wave19_failure_rooms": 0,
+        "reported_seconds": {
+          "mean": 195.46666666666667,
+          "min": 194.4,
+          "max": 196.79999999999998
+        },
+        "within_3m22": 9,
+        "expiry_status": {
+          "made_dim_expiry": 7,
+          "undimmed_targets_last_alive": 1,
+          "same_tick_boundary": 1
+        },
+        "dimmed_primary_attacks": 0,
+        "scheduled_dimmed_south30_chins": 0,
+        "assigned_dimmed_parent_attacks": 0,
+        "other_dimmed_primary_attacks": 0,
+        "additional_time_dim_rooms": 0,
+        "undimmed_expiry_rooms": 0,
+        "dimmed_big_expiry_rooms": 9,
+        "additional_time_dim_big_expiry_rooms": 0
+      },
+      "6": {
+        "trials": 4,
+        "completed": 4,
+        "eligible": 4,
+        "wave19_failure_rooms": 0,
+        "reported_seconds": {
+          "mean": 198.0,
+          "min": 196.79999999999998,
+          "max": 199.2
+        },
+        "within_3m22": 4,
+        "expiry_status": {
+          "undimmed_targets_last_alive": 1,
+          "made_dim_expiry": 3
+        },
+        "dimmed_primary_attacks": 0,
+        "scheduled_dimmed_south30_chins": 0,
+        "assigned_dimmed_parent_attacks": 0,
+        "other_dimmed_primary_attacks": 0,
+        "additional_time_dim_rooms": 0,
+        "undimmed_expiry_rooms": 0,
+        "dimmed_big_expiry_rooms": 4,
+        "additional_time_dim_big_expiry_rooms": 0
+      },
+      "7": {
+        "trials": 1,
+        "completed": 1,
+        "eligible": 1,
+        "wave19_failure_rooms": 0,
+        "reported_seconds": {
+          "mean": 196.79999999999998,
+          "min": 196.79999999999998,
+          "max": 196.79999999999998
+        },
+        "within_3m22": 1,
+        "expiry_status": {
+          "made_dim_expiry": 1
+        },
+        "dimmed_primary_attacks": 0,
+        "scheduled_dimmed_south30_chins": 0,
+        "assigned_dimmed_parent_attacks": 0,
+        "other_dimmed_primary_attacks": 0,
+        "additional_time_dim_rooms": 0,
+        "undimmed_expiry_rooms": 0,
+        "dimmed_big_expiry_rooms": 1,
+        "additional_time_dim_big_expiry_rooms": 0
+      }
+    },
+    "caveat": "Last positive-HP/non-dying snapshots distinguish natural expiry from combat death. A terminal queued-lethal fresh target is still living in that snapshot; no lost tick is inferred. Same-tick old/fresh endings are kept separate. AoE secondary hits are not primary dim violations."
+  },
+  "checks": {
+    "role_java_passed": 956,
+    "native_integration_passed": 87,
+    "python_passed": 55,
+    "python_skipped": 4
+  }
+}

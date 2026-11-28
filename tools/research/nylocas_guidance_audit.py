@@ -98,12 +98,13 @@ def ranger_audit(rows, frames, launches):
             if c['wave']==31 and c['lane'] in ('west','east') and not c['big'] and c['age']==26 and c['hp']>0 and c['style']=='MELEE':
                 late31.setdefault((f['trial'],c['key']),dict(seed=f['seed'],tick=f['tick'],lane=c['lane'],hp=c['hp'],key=c['key']))
     south30=select(30,'south',False,'CHIN')
-    scratch=select(2,'south',False,'CLAWS')
+    scratch=[s for s in select(2,'south',False) if s['weapon'] in ('SULPHUR','CLAWS')]
     expected=['west1_bow','east2_bow','south3_chin','south2_scratch','west5_pipe','west4_pipe']
     def packet(shot):
         c=shot['target'];identity=(c['wave'],c['lane'],c['big'],shot['weapon'])
         return {(1,'west',False,'BOW'):expected[0],(2,'east',False,'BOW'):expected[1],
                 (3,'south',False,'CHIN'):expected[2],(2,'south',False,'CLAWS'):expected[3],
+                (2,'south',False,'SULPHUR'):expected[3],
                 (5,'west',True,'PIPE'):expected[4],(4,'west',False,'PIPE'):expected[5]}.get(identity,'other')
     opening_matches=[]
     for trial,ss in by_trial.items():

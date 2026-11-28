@@ -82,6 +82,6 @@ public class RangerPrecapFreshnessTest
 		room.crabs.add(split);
 		Decision attack = new RangerStrategy().decide(room, 40);
 		assertSame(split, attack.target);
-		assertEquals(Weapon.CLAWS, attack.weapon);
+		assertEquals(Weapon.SULPHUR, attack.weapon);
 	}
 }

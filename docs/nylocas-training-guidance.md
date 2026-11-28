@@ -212,3 +212,15 @@ When reviewing a room, follow the two original south crabs across the wave-count
 - **Ranger on wave 30.** Keep the west blowpipe and the first-green south chin. Immediately after the chin, the original west-30 big has first claim on every attack it still needs, including during wave 31. Move west during the chin cooldown. Once the big dies or a lethal hit is on the way, resume cleanup.
 
 For the first-green chin, the current ranger can defer a manta for one tick when it has prayer and damage already queued through the following tick leaves at least 55 HP. The same floor applies if it starts the tick at 59 HP. This updates the earlier 60–65 HP condition.
+
+## Wave-12 Dinh setup, 27 November
+
+Both players help keep the original south-12 melee big clear of the mage's Dinh special when practical. An occasional kill is acceptable.
+
+- Before the big settles, kill any crab occupying the east side of the southwest pillar so the big can settle one tile north.
+- Line up on the southern east-lane row at (3301, 4248) to scythe the southern small and cleave its northern sibling. After the swing, move diagonally northwest. Both players should reach the northern line of the east and west lanes before Dinh's. This draws the aggressive west-12 small one tile north. Use it as the Dinh primary and keep the south big outside the sweep when practical.
+- Check both player positions, the big's settled square and the aggressive small's position at launch. Count how often the Dinh clips the big, how often it kills the big, and how often the scheduled special fires. A low roll on the big still counts as a clip.
+
+## Wave-22 Dinh timing, 27 November
+
+When small magic nylos remain south, the mage can spend a few ticks killing them before using Dinh's. If the wave-22 melee big walks near the usual Dinh tile, it can serve as the primary for the delayed sweep. Use the normal timing when the extra shot and later sweep offer little.

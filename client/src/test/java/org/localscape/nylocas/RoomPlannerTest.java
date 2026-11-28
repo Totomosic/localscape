@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 import org.junit.Test;
+import org.localscape.nylocas.mage.MageStrategy;
 import org.localscape.nylocas.ranger.RangerStrategy.Crab;
 import org.localscape.nylocas.ranger.RangerStrategy.Lane;
 import org.localscape.nylocas.ranger.RangerStrategy.Room;
@@ -33,6 +34,62 @@ public class RoomPlannerTest
 	private RoomProjection.Outcome idle(Room r)
 	{
 		return new RoomProjection(RoomPlanner.ranger(r, NOW), 0).run(null);
+	}
+
+	@Test public void anObservedSplitStepPredictsAtMostTwoTilesAndStopsBeforeAPillar()
+	{
+		Tile previous = CENTER.dx(-1);
+		assertEquals(CENTER.dx(2), AttackTiming.position(CENTER, previous, 3, 1, 5, false));
+		assertEquals(CENTER.dx(1), AttackTiming.position(CENTER, previous, 0, 12, 5, true));
+		Tile south = new Tile(3292, 4244, 0);
+		assertEquals(south, AttackTiming.position(south, south.dx(1), 3, 2, 2, false));
+		assertEquals(CENTER, AttackTiming.position(CENTER, CENTER, 3, 4, 2, false));
+	}
+
+	@Test public void secondSulphurSplatCanFreeTheTwelfthSlotOneTickEarlier()
+	{
+		MageStrategy.Room r = new MageStrategy.Room();
+		r.wave = 19;
+		r.player = CENTER;
+		r.ready = NOW;
+		r.spawns[19] = NOW - 9; // Next admission at NOW + 3.
+		for (int key = 1; key <= 12; key++)
+		{
+			MageStrategy.Crab c = new MageStrategy.Crab(key, key, NOW - 4, 19, MageStrategy.Lane.SPLIT,
+				(char) 0, false, MageStrategy.Style.MELEE, key == 1 ? CENTER.dx(1) : CENTER.dx(4));
+			c.nulled = key != 1;
+			c.hp = 1;
+			r.crabs.add(c);
+		}
+		RoomPlanner<String> planner = RoomPlanner.mage(r, NOW);
+		RoomPlanner.Choice<String> scythe = new RoomPlanner.Choice<>("single splat", 1,
+			RoomPlanner.Strike.SCYTHE, NOW, CENTER, false, 0);
+		RoomPlanner.Choice<String> sulphur = new RoomPlanner.Choice<>("two splats", 1,
+			RoomPlanner.Strike.SULPHUR, NOW, CENTER, false, 0);
+		boolean saved = false;
+		for (int scenario = 0; scenario < RoomPlanner.SCENARIOS; scenario++)
+		{
+			int one = new RoomProjection(planner, scenario).run(scythe).transitionStalls;
+			int two = new RoomProjection(planner, scenario).run(sulphur).transitionStalls;
+			if (one == 1 && two == 0) saved = true;
+		}
+		assertTrue(saved);
+	}
+
+	@Test public void fastWaveTwentyNineLeavesTheNextTicksSplitFreshInTheRollout()
+	{
+		Room r = room(31, 0);
+		r.spawns[28] = 88;
+		r.spawns[29] = 92;
+		r.ready = NOW;
+		Crab original = new Crab(1, 1, 92, 29, Lane.SPLIT, (char) 0, false, Style.RANGE, CENTER);
+		r.crabs.add(original);
+		assertEquals(0, idle(r).damage);
+		Crab child = new Crab(2, 2, 93, 29, Lane.SPLIT, (char) 0, false, Style.RANGE, CENTER.dx(1));
+		r.crabs.add(child);
+		assertTrue(idle(r).damage > 0);
+		r.spawns[29] = -1;
+		assertEquals(0, idle(r).damage);
 	}
 
 	@Test public void waveTwentyStillNeedsOldCapAndChecksEveryFourTicks()
@@ -90,6 +147,41 @@ public class RoomPlannerTest
 		assertEquals(0, beyond.emptyCleanupTicks);
 	}
 
+	@Test public void aVisibleSmallDeathAnimationCanFreeTheSlotAtTheNextCheck()
+	{
+		Room r = room(19, 12);
+		r.spawns[19] = NOW - 11;
+		Crab dying = r.crabs.get(0);
+		dying.hp = 0;
+		dying.dying = true;
+		dying.observeRemovalAt(NOW + 2);
+		assertEquals(1, idle(r).transitionStalls);
+		dying.observeRemovalAt(NOW + 1);
+		assertEquals(0, idle(r).transitionStalls);
+	}
+
+	@Test public void rangerTakesTheOtherSplitWhenTheMageIsRunningTowardOne()
+	{
+		for (int direction : new int[] {-1, 1})
+		{
+			Room r = room(31, 0);
+			r.ready = NOW;
+			r.spawns[29] = NOW - 12;
+			r.observePartner(CENTER, NOW);
+			r.observePartner(CENTER.dx(direction * 2), NOW);
+			for (int side : new int[] {-1, 1})
+				r.crabs.add(new Crab(side + 2, side + 2, NOW, 31, Lane.SPLIT, (char) 0, false,
+					Style.MAGIC, CENTER.dx(side * 3)));
+			RoomPlanner<Integer> planner = RoomPlanner.ranger(r, NOW);
+			for (Crab c : r.crabs)
+				planner.offer(c.key, c.key, RoomPlanner.Strike.EYE, NOW, CENTER, false, 0);
+			assertEquals(Integer.valueOf(2 - direction), planner.choose());
+			RoomPlanner<Integer> only = RoomPlanner.ranger(r, NOW);
+			only.offer(2 + direction, 2 + direction, RoomPlanner.Strike.EYE, NOW, CENTER, false, 0);
+			assertEquals(Integer.valueOf(2 + direction), only.choose());
+		}
+	}
+
 	@Test public void aProjectedStallOpensTimeForAShotBeforeTheShiftedPacket()
 	{
 		Room r = room(20, 24);
@@ -128,13 +220,56 @@ public class RoomPlannerTest
 		for (int[] count : counts) assertArrayEquals(new int[] {2, 2, 2}, count);
 	}
 
+	@Test public void aPreparationCanCostAnAdmissionWhileThePartnerRemainsFreeToShoot()
+	{
+		Room r = room(19, 12);
+		Crab small = r.crabs.get(0);
+		small.hp = 1;
+		r.ready = NOW;
+		RoomPlanner<String> planner = RoomPlanner.ranger(r, NOW);
+		planner.prepare("stage", NOW + 13, CENTER.dx(3), 0);
+		planner.offer("shoot", small.key, RoomPlanner.Strike.PIPE, NOW, CENTER, false, 0);
+		assertEquals("shoot", planner.choose());
+		RoomPlanner.Choice<String> hold = new RoomPlanner.Choice<>("stage", 0, null, NOW + 13, CENTER.dx(3), false, 0);
+		assertTrue(new RoomProjection(planner, 0).run(hold).transitionStalls > 0);
+		r.observePartner(CENTER, NOW);
+		assertEquals(0, new RoomProjection(RoomPlanner.ranger(r, NOW), 0).run(hold).transitionStalls);
+	}
+
+	@Test public void stagingForEastElevenIncludesTheBarrageOnTheIncomingPair()
+	{
+		MageStrategy.Room r = new MageStrategy.Room();
+		r.wave = 10;
+		r.spawns[10] = NOW - 7;
+		r.ready = NOW + 11;
+		r.player = CENTER.dx(6).dy(1);
+		RoomPlanner<String> planner = RoomPlanner.mage(r, NOW);
+		planner.prepare("wait", NOW + 1, r.player, 0);
+		planner.prepareSpawn("east barrage", NOW + 1, r.player, 0, RoomPlanner.Strike.BARRAGE,
+			11, MageStrategy.Lane.EAST.ordinal(), (char) 0, false);
+		assertEquals("east barrage", planner.choose());
+	}
+
+	@Test public void aStalledWaveCannotSupplyTheStagedTarget()
+	{
+		Room r = room(10, 12);
+		r.spawns[10] = NOW - 7;
+		r.ready = NOW;
+		for (Crab c : r.crabs) c.nulled = true;
+		RoomPlanner<String> planner = RoomPlanner.ranger(r, NOW);
+		planner.prepare("wait", NOW + 1, CENTER, 0.1);
+		planner.prepareSpawn("west shot", NOW + 1, CENTER, 0, RoomPlanner.Strike.EYE,
+			11, Lane.WEST.ordinal(), (char) 0, true);
+		assertEquals("wait", planner.choose());
+	}
+
 	@Test public void lowRollLeavesASurvivorAndReplanningDoesNotChangeTheObservation()
 	{
 		Room r = room(31, 0);
 		Crab big = new Crab(10, 10, NOW, 31, Lane.SPLIT, (char) 0, true, Style.RANGE, CENTER);
 		r.crabs.add(big);
 		// Launch at the end of the horizon. Its impact is visible before another shot can land.
-		r.ready = NOW + 14;
+		r.ready = NOW + 13;
 		RoomPlanner<String> p = RoomPlanner.ranger(r, NOW);
 		RoomPlanner.Choice<String> first = new RoomPlanner.Choice<>("pipe", 10, RoomPlanner.Strike.PIPE,
 			r.ready, CENTER, false, 0);

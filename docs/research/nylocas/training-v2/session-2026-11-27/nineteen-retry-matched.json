@@ -1,0 +1,434 @@
+{
+  "policy": "Ranger only. Starts at or after the first failed wave-19 admission, ends before its next retry. Existing selected primary can be an original 18/19 big and the public room still forecasts at least 12 occupied bodies at the retry. Prioritize a reachable uncovered small.",
+  "selection": "Full 420 development rooms. Independent comparison reran every baseline room with a missed wave-19 admission in the four other consecutive cohorts. A room that passes wave-19 admission on the first check can never enter the changed branch. Counts for bypassing rooms are carried over by that invariant; they were not rerun for this role-only comparison.",
+  "selected_runner_parity": {
+    "rooms": 3,
+    "nonconsecutive_seeds": [
+      127344902864875,
+      127344902864928,
+      127344902865276
+    ],
+    "identical_gameplay_columns": 30,
+    "identical_trace_records": 22397
+  },
+  "per_block": {
+    "ordered-flights-crosscheck-420": {
+      "rerun": 420,
+      "reference": {
+        "rooms": 420,
+        "completed": 420,
+        "precap_stalls": 618,
+        "precap_mean": 1.4714285714285715,
+        "zero_to_three": 395,
+        "eligible": 408,
+        "wave19_failed": 12,
+        "wave19_retries": 47,
+        "eligible_p95_ticks": 332,
+        "eligible_mean_ticks": 320.47058823529414,
+        "eligible_by328": 372,
+        "all_by328": 376,
+        "all_p95_ticks": 332
+      },
+      "candidate_with_structurally_identical_rooms": {
+        "rooms": 420,
+        "completed": 420,
+        "precap_stalls": 614,
+        "precap_mean": 1.4619047619047618,
+        "zero_to_three": 395,
+        "eligible": 408,
+        "wave19_failed": 12,
+        "wave19_retries": 43,
+        "eligible_p95_ticks": 332,
+        "eligible_mean_ticks": 320.47058823529414,
+        "eligible_by328": 372,
+        "all_by328": 378,
+        "all_p95_ticks": 332
+      },
+      "changed_outcomes": [
+        {
+          "seed": 127344902864973,
+          "control": {
+            "status": "completed",
+            "ticks": "336",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;5;0;0;0;0;0;0;0;0;2;4;2",
+            "pre_cap_stalls": "5"
+          },
+          "candidate": {
+            "status": "completed",
+            "ticks": "324",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;4;0;0;0;0;0;0;0;0;2;4;0",
+            "pre_cap_stalls": "4"
+          }
+        },
+        {
+          "seed": 127344902865069,
+          "control": {
+            "status": "completed",
+            "ticks": "328",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;4;0;0;0;0;0;0;0;0;2;1;3",
+            "pre_cap_stalls": "5"
+          },
+          "candidate": {
+            "status": "completed",
+            "ticks": "328",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;4;0;0;0;0;0;0;0;0;2;2;2",
+            "pre_cap_stalls": "5"
+          }
+        },
+        {
+          "seed": 127344902865075,
+          "control": {
+            "status": "completed",
+            "ticks": "332",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;5;0;0;0;0;0;0;0;0;2;0;2",
+            "pre_cap_stalls": "6"
+          },
+          "candidate": {
+            "status": "completed",
+            "ticks": "328",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;3;0;0;0;0;0;0;0;0;1;3;2",
+            "pre_cap_stalls": "4"
+          }
+        },
+        {
+          "seed": 127344902865079,
+          "control": {
+            "status": "completed",
+            "ticks": "332",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;1;0;3;0;0;0;0;0;0;0;0;1;0;2",
+            "pre_cap_stalls": "6"
+          },
+          "candidate": {
+            "status": "completed",
+            "ticks": "344",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;1;0;3;0;0;0;0;0;0;0;0;6;0;0",
+            "pre_cap_stalls": "6"
+          }
+        },
+        {
+          "seed": 127344902865259,
+          "control": {
+            "status": "completed",
+            "ticks": "340",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;4;0;0;0;0;0;0;0;0;2;1;3",
+            "pre_cap_stalls": "6"
+          },
+          "candidate": {
+            "status": "completed",
+            "ticks": "336",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;3;0;0;0;0;0;0;0;2;3;0;2",
+            "pre_cap_stalls": "5"
+          }
+        }
+      ]
+    },
+    "ordered-flights-matched-360": {
+      "rerun": 7,
+      "reference": {
+        "rooms": 360,
+        "completed": 360,
+        "precap_stalls": 525,
+        "precap_mean": 1.4583333333333333,
+        "zero_to_three": 340,
+        "eligible": 353,
+        "wave19_failed": 7,
+        "wave19_retries": 25,
+        "eligible_p95_ticks": 332,
+        "eligible_mean_ticks": 319.6827195467422,
+        "eligible_by328": 331,
+        "all_by328": 335,
+        "all_p95_ticks": 332
+      },
+      "candidate_with_structurally_identical_rooms": {
+        "rooms": 360,
+        "completed": 360,
+        "precap_stalls": 523,
+        "precap_mean": 1.4527777777777777,
+        "zero_to_three": 340,
+        "eligible": 353,
+        "wave19_failed": 7,
+        "wave19_retries": 23,
+        "eligible_p95_ticks": 332,
+        "eligible_mean_ticks": 319.6827195467422,
+        "eligible_by328": 331,
+        "all_by328": 336,
+        "all_p95_ticks": 332
+      },
+      "changed_outcomes": [
+        {
+          "seed": 85126825783630,
+          "control": {
+            "status": "completed",
+            "ticks": "348",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;7;0;0;0;0;0;0;0;0;2;2;2",
+            "pre_cap_stalls": "8"
+          },
+          "candidate": {
+            "status": "completed",
+            "ticks": "344",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;5;0;0;0;0;0;0;0;0;5;1;0",
+            "pre_cap_stalls": "6"
+          }
+        },
+        {
+          "seed": 85126825783689,
+          "control": {
+            "status": "completed",
+            "ticks": "332",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;4;0;0;0;0;0;0;0;0;4;0;3",
+            "pre_cap_stalls": "5"
+          },
+          "candidate": {
+            "status": "completed",
+            "ticks": "328",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;4;0;0;0;0;0;0;0;0;2;0;1",
+            "pre_cap_stalls": "5"
+          }
+        }
+      ]
+    },
+    "ordered-retained-matched-480": {
+      "rerun": 9,
+      "reference": {
+        "rooms": 480,
+        "completed": 480,
+        "precap_stalls": 731,
+        "precap_mean": 1.5229166666666667,
+        "zero_to_three": 452,
+        "eligible": 471,
+        "wave19_failed": 9,
+        "wave19_retries": 40,
+        "eligible_p95_ticks": 332,
+        "eligible_mean_ticks": 320.50106157112526,
+        "eligible_by328": 432,
+        "all_by328": 434,
+        "all_p95_ticks": 332
+      },
+      "candidate_with_structurally_identical_rooms": {
+        "rooms": 480,
+        "completed": 480,
+        "precap_stalls": 732,
+        "precap_mean": 1.525,
+        "zero_to_three": 452,
+        "eligible": 471,
+        "wave19_failed": 9,
+        "wave19_retries": 41,
+        "eligible_p95_ticks": 332,
+        "eligible_mean_ticks": 320.50106157112526,
+        "eligible_by328": 432,
+        "all_by328": 434,
+        "all_p95_ticks": 332
+      },
+      "changed_outcomes": [
+        {
+          "seed": 109674661720615,
+          "control": {
+            "status": "completed",
+            "ticks": "340",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1;6;0;0;0;0;0;0;0;0;0;1;5",
+            "pre_cap_stalls": "8"
+          },
+          "candidate": {
+            "status": "completed",
+            "ticks": "348",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1;7;0;0;0;0;0;0;0;0;2;2;2",
+            "pre_cap_stalls": "9"
+          }
+        }
+      ]
+    },
+    "ordered-control-confirm-480": {
+      "rerun": 11,
+      "reference": {
+        "rooms": 480,
+        "completed": 480,
+        "precap_stalls": 678,
+        "precap_mean": 1.4125,
+        "zero_to_three": 457,
+        "eligible": 469,
+        "wave19_failed": 11,
+        "wave19_retries": 44,
+        "eligible_p95_ticks": 332,
+        "eligible_mean_ticks": 320.1620469083156,
+        "eligible_by328": 433,
+        "all_by328": 436,
+        "all_p95_ticks": 332
+      },
+      "candidate_with_structurally_identical_rooms": {
+        "rooms": 480,
+        "completed": 480,
+        "precap_stalls": 673,
+        "precap_mean": 1.4020833333333333,
+        "zero_to_three": 457,
+        "eligible": 469,
+        "wave19_failed": 11,
+        "wave19_retries": 39,
+        "eligible_p95_ticks": 332,
+        "eligible_mean_ticks": 320.1620469083156,
+        "eligible_by328": 433,
+        "all_by328": 438,
+        "all_p95_ticks": 332
+      },
+      "changed_outcomes": [
+        {
+          "seed": 53184067592890,
+          "control": {
+            "status": "completed",
+            "ticks": "340",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;6;0;0;0;0;0;0;0;0;2;0;2",
+            "pre_cap_stalls": "7"
+          },
+          "candidate": {
+            "status": "completed",
+            "ticks": "332",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;4;0;0;0;0;0;0;0;0;2;1;0",
+            "pre_cap_stalls": "5"
+          }
+        },
+        {
+          "seed": 53184067593020,
+          "control": {
+            "status": "completed",
+            "ticks": "332",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;5;0;0;0;0;0;0;0;0;2;2;2",
+            "pre_cap_stalls": "6"
+          },
+          "candidate": {
+            "status": "completed",
+            "ticks": "324",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;4;0;0;0;0;0;0;0;0;1;0;4",
+            "pre_cap_stalls": "5"
+          }
+        },
+        {
+          "seed": 53184067593238,
+          "control": {
+            "status": "completed",
+            "ticks": "336",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;5;0;0;0;0;0;0;0;0;2;1;3",
+            "pre_cap_stalls": "6"
+          },
+          "candidate": {
+            "status": "completed",
+            "ticks": "328",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;3;0;0;0;0;0;0;0;0;1;4;0",
+            "pre_cap_stalls": "4"
+          }
+        }
+      ]
+    },
+    "ordered-next-control-480": {
+      "rerun": 13,
+      "reference": {
+        "rooms": 480,
+        "completed": 480,
+        "precap_stalls": 743,
+        "precap_mean": 1.5479166666666666,
+        "zero_to_three": 454,
+        "eligible": 467,
+        "wave19_failed": 13,
+        "wave19_retries": 43,
+        "eligible_p95_ticks": 332,
+        "eligible_mean_ticks": 320.75374732334046,
+        "eligible_by328": 434,
+        "all_by328": 437,
+        "all_p95_ticks": 332
+      },
+      "candidate_with_structurally_identical_rooms": {
+        "rooms": 480,
+        "completed": 480,
+        "precap_stalls": 742,
+        "precap_mean": 1.5458333333333334,
+        "zero_to_three": 454,
+        "eligible": 467,
+        "wave19_failed": 13,
+        "wave19_retries": 42,
+        "eligible_p95_ticks": 332,
+        "eligible_mean_ticks": 320.75374732334046,
+        "eligible_by328": 434,
+        "all_by328": 438,
+        "all_p95_ticks": 332
+      },
+      "changed_outcomes": [
+        {
+          "seed": 54848649224163,
+          "control": {
+            "status": "completed",
+            "ticks": "344",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;5;0;0;0;0;0;0;0;0;2;4;0",
+            "pre_cap_stalls": "6"
+          },
+          "candidate": {
+            "status": "completed",
+            "ticks": "332",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;5;0;0;0;0;0;0;0;0;2;2;3",
+            "pre_cap_stalls": "6"
+          }
+        },
+        {
+          "seed": 54848649224469,
+          "control": {
+            "status": "completed",
+            "ticks": "332",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;4;1;0",
+            "pre_cap_stalls": "3"
+          },
+          "candidate": {
+            "status": "completed",
+            "ticks": "328",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;5;1;0",
+            "pre_cap_stalls": "3"
+          }
+        },
+        {
+          "seed": 54848649224592,
+          "control": {
+            "status": "completed",
+            "ticks": "332",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;4;0;0;0;0;0;0;0;0;1;1;4",
+            "pre_cap_stalls": "5"
+          },
+          "candidate": {
+            "status": "completed",
+            "ticks": "332",
+            "stalls_by_last_spawned_wave": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;3;0;0;0;0;0;0;0;0;0;5;2",
+            "pre_cap_stalls": "4"
+          }
+        }
+      ]
+    }
+  },
+  "pooled": {
+    "control": {
+      "rooms": 2220,
+      "completed": 2220,
+      "precap_stalls": 3295,
+      "precap_mean": 1.4842342342342343,
+      "zero_to_three": 2098,
+      "eligible": 2168,
+      "wave19_failed": 52,
+      "wave19_retries": 199,
+      "eligible_p95_ticks": 332,
+      "eligible_mean_ticks": 320.34317343173433,
+      "eligible_by328": 2002,
+      "all_by328": 2018,
+      "all_p95_ticks": 332
+    },
+    "ranger_recovery": {
+      "rooms": 2220,
+      "completed": 2220,
+      "precap_stalls": 3284,
+      "precap_mean": 1.4792792792792793,
+      "zero_to_three": 2098,
+      "eligible": 2168,
+      "wave19_failed": 52,
+      "wave19_retries": 188,
+      "eligible_p95_ticks": 332,
+      "eligible_mean_ticks": 320.34317343173433,
+      "eligible_by328": 2002,
+      "all_by328": 2024,
+      "all_p95_ticks": 332
+    }
+  },
+  "recovery_source_sha256": "dc488e819db962ea3e10c8cd5d9ca40688ebfd58058ba2695a75426fc8983bdc"
+}

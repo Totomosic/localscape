@@ -99,7 +99,7 @@ public class RangerOriginalWestThirtyTest
 		crab(room, 4, 324, 31, Lane.SPLIT, (char) 0, false, Style.RANGE);
 		Decision shot = strategy.decide(room, 326);
 		assertSame(west, shot.target);
-		assertEquals(Weapon.CLAWS, shot.weapon);
+		assertEquals(Weapon.SULPHUR, shot.weapon);
 	}
 
 	@Test

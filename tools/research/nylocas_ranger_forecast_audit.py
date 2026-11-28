@@ -55,7 +55,8 @@ def audit(directory):
                         examples['nonlethal_without_eye'].append(dict(seed=f['seed'],tick=f['tick'],
                             target=c,forecast=forecast,weapon=f['weapon'],selected=f['target_key'],reason=f['reason']))
     theft = []
-    styles = {'BOW': 'RANGE', 'PIPE': 'RANGE', 'CHIN': 'RANGE', 'EYE': 'MAGIC', 'CLAWS': 'MELEE'}
+    styles = {'BOW': 'RANGE', 'PIPE': 'RANGE', 'CHIN': 'RANGE', 'EYE': 'MAGIC',
+              'CLAWS': 'MELEE', 'SULPHUR': 'MELEE'}
     for s in shots:
         if s['role'] != 0:
             continue

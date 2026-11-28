@@ -49,13 +49,13 @@ public class RangerIdleMeleeCleanupTest
 		magePrimary.claimedUntil = 299;
 		Decision approach = strategy.decide(room, 298);
 		assertTrue(approach.reason, approach.approach == melee || approach.target == melee && approach.pathToTarget);
-		assertEquals(Weapon.CLAWS, approach.weapon);
+		assertEquals(Weapon.SULPHUR, approach.weapon);
 		assertFalse(approach.special);
 		room.player = RangerStrategy.tile(3291, 4251);
 		magePrimary.claimedUntil = 300;
 		Decision attack = strategy.decide(room, 299);
 		assertSame(attack.reason, melee, attack.target);
-		assertEquals(Weapon.CLAWS, attack.weapon);
+		assertEquals(Weapon.SULPHUR, attack.weapon);
 		assertFalse(attack.special);
 	}
 
@@ -83,7 +83,7 @@ public class RangerIdleMeleeCleanupTest
 			Crab own = crab(room, 31, 290, false, style, 3301, 4248);
 			Decision decision = strategy.decide(room, 298);
 			assertTrue(decision.reason, decision.target == own || decision.approach == own);
-			assertNotEquals(Weapon.CLAWS, decision.weapon);
+			assertNotEquals(Weapon.SULPHUR, decision.weapon);
 		}
 	}
 
@@ -115,7 +115,7 @@ public class RangerIdleMeleeCleanupTest
 		parent.claimedUntil = 302;
 		Decision decision = strategy.decide(room, 298);
 		assertTrue(decision.reason, decision.target == parent || decision.approach == parent);
-		assertEquals(Weapon.CLAWS, decision.weapon);
+		assertEquals(Weapon.SULPHUR, decision.weapon);
 		assertFalse(decision.special);
 	}
 
@@ -142,7 +142,7 @@ public class RangerIdleMeleeCleanupTest
 		crab(room, 29, 252, false, Style.MAGIC, 3296, 4248);
 		Decision decision = strategy.decide(room, 298);
 		assertTrue(decision.reason, decision.approach == melee || decision.target == melee);
-		assertEquals(Weapon.CLAWS, decision.weapon);
+		assertEquals(Weapon.SULPHUR, decision.weapon);
 	}
 
 	@Test

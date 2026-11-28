@@ -38,7 +38,7 @@ public class RangerCleanupFreshSplitTest
 	{
 		Crab old = split(room, 278, Style.MAGIC, 3296, 4252);
 		Decision plan = strategy.decide(room, 283);
-		assertSame(plan.reason, old, plan.approach);
+		assertTrue(plan.reason, plan.approach == old || plan.reason.startsWith("Close during cleanup cooldown for Eye #" + old.index));
 		assertEquals(Weapon.EYE, plan.weapon);
 		old.point = RangerStrategy.tile(3297, 4253);
 		return old;

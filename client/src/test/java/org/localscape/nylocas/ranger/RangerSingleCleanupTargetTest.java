@@ -41,7 +41,7 @@ public class RangerSingleCleanupTargetTest
 		Crab target = crab(room, 31, 120, false, 3299, 4248);
 		Decision decision = strategy.decide(room, 121);
 		assertTrue(decision.reason, decision.target == target || decision.approach == target);
-		assertEquals(Weapon.CLAWS, decision.weapon);
+		assertEquals(Weapon.SULPHUR, decision.weapon);
 		assertTrue(decision.tile.getX() > room.player.getX());
 		assertFalse(decision.special);
 	}
@@ -54,7 +54,7 @@ public class RangerSingleCleanupTargetTest
 		target.hp = 4;
 		Decision decision = strategy.decide(room, 130);
 		assertSame(decision.reason, target, decision.target);
-		assertEquals(Weapon.CLAWS, decision.weapon);
+		assertEquals(Weapon.SULPHUR, decision.weapon);
 		assertFalse(decision.special);
 	}
 
@@ -119,7 +119,7 @@ public class RangerSingleCleanupTargetTest
 		target.pendingDamage = 2;
 		Decision decision = strategy.decide(room, 121);
 		assertTrue(decision.reason, decision.target == target || decision.approach == target);
-		assertEquals(Weapon.CLAWS, decision.weapon);
+		assertEquals(Weapon.SULPHUR, decision.weapon);
 	}
 
 	@Test

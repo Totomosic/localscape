@@ -4,7 +4,7 @@
 
 ### Melee gear
 
-Void range set, Dizana's quiver, Necklace of anguish, dragon arrows, avernic treads (max), lightbearer, dragon claws
+Torva helm, Oathplate chest and legs, amulet of blood fury, ferocious gloves, lightbearer, sulphur blades, infernal cape, avernic treads (max), dragon arrows
 
 ### Range gear
 

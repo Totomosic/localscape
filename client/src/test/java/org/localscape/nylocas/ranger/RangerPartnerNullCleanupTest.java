@@ -74,7 +74,7 @@ public class RangerPartnerNullCleanupTest
 		crab(room, 31, 295, false, Style.RANGE, 3295, 4248);
 		Decision decision = strategy.decide(room, 300);
 		assertSame(decision.reason, rescue, decision.target);
-		assertEquals(Weapon.CLAWS, decision.weapon);
+		assertEquals(Weapon.SULPHUR, decision.weapon);
 		assertFalse(decision.special);
 	}
 

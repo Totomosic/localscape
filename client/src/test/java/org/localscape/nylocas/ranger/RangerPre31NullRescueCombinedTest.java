@@ -46,7 +46,7 @@ public class RangerPre31NullRescueCombinedTest
 	}
 
 	@Test
-	public void additionalTimeDimCannotReceiveEarlyRescuePriority()
+	public void splitBornAfterWaveTwentyNineGetsEarlyRescuePriority()
 	{
 		RangerStrategy strategy = new RangerStrategy();
 		Room room = new Room();
@@ -56,15 +56,15 @@ public class RangerPre31NullRescueCombinedTest
 		room.spawns[30] = 248;
 		room.player = RangerStrategy.tile(3293, 4248);
 		room.ready = 256;
-		Crab excluded = new Crab(176, 176, 243, 29, Lane.SPLIT, (char) 0, false,
+		Crab split = new Crab(176, 176, 243, 29, Lane.SPLIT, (char) 0, false,
 			Style.MAGIC, RangerStrategy.tile(3299, 4244));
-		excluded.partnerNulled = true;
-		excluded.pendingDamage = 0;
-		room.crabs.add(excluded);
+		split.partnerNulled = true;
+		split.pendingDamage = 0;
+		room.crabs.add(split);
 		Crab ordinary = new Crab(184, 184, 251, 30, Lane.SPLIT, (char) 0, false,
 			Style.RANGE, RangerStrategy.tile(3292, 4243));
 		ordinary.pendingDamage = 0;
 		room.crabs.add(ordinary);
-		assertSame(ordinary, strategy.decide(room, 256).target);
+		assertSame(split, strategy.decide(room, 256).target);
 	}
 }

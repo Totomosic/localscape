@@ -118,7 +118,7 @@ public class RangerLatestGuidanceTest
 		crab(room, 4, 116, Lane.WEST, 'N', false, Style.RANGE, 3282, 4249);
 		Decision decision = strategy.decide(room, 117);
 		assertTrue(decision.reason, decision.target == scratch || decision.approach == scratch);
-		assertEquals(Weapon.CLAWS, decision.weapon);
+		assertEquals(Weapon.SULPHUR, decision.weapon);
 	}
 
 	@Test

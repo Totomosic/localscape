@@ -277,7 +277,7 @@ public class MageStrategyTest
 		strategy.attacked(cast, 113); r.ready = 115;
 		Crab east = crab(r, 12, 108, Lane.EAST, 'S', false, Style.MELEE, 3302, 4248);
 		assertNull(strategy.decide(r, 113).target);
-		assertEquals(MageStrategy.tile(3301, 4249), strategy.decide(r, 113).tile);
+		assertEquals(MageStrategy.tile(3301, 4248), strategy.decide(r, 113).tile);
 		assertSame(east, strategy.decide(r, 115).target);
 	}
 	@Test public void finalWaveCutoffAndResetReleaseAnExistingApproach()
@@ -301,8 +301,8 @@ public class MageStrategyTest
 		// same cycle can no longer fit a clearing hit before +7.
 		Decision reserve = strategy.decide(r, 110);
 		assertNull(reserve.target); assertNull(reserve.approach);
-		assertEquals(MageStrategy.tile(3301, 4249), reserve.tile);
-		r.player = MageStrategy.tile(3301, 4249);
+		assertEquals(MageStrategy.tile(3301, 4248), reserve.tile);
+		r.player = MageStrategy.tile(3301, 4248);
 		Crab east = crab(r, 12, 108, Lane.EAST, 'S', false, Style.MELEE, 3302, 4248);
 		assertSame(east, strategy.decide(r, 115).target);
 	}
@@ -998,6 +998,25 @@ public class MageStrategyTest
 		west.point = MageStrategy.tile(3288, 4248);
 		r.player = MageStrategy.tile(3290, 4248);
 		assertSame(west, strategy.decide(r, 215).target);
+	}
+
+	@Test public void savesTheLastTwoWestTwentyFiveSwingsAfterTheSouthTwentyNineOpener()
+	{
+		Room r = room(29, 240, 3293, 4246);
+		r.spawns[25] = 212;
+		Crab west = crab(r, 25, 212, Lane.WEST, 'S', true, Style.MELEE, 3292, 4244);
+		Crab south = crab(r, 29, 240, Lane.SOUTH, 'W', true, Style.MELEE, 3294, 4246);
+		west.pendingDamage = south.pendingDamage = 0;
+		south.hp = 3;
+		strategy.attacked(new Decision(south, Weapon.SCYTHE, south.point, false, "South big 29", "Opening"),
+			248, 247);
+		r.ready = 253;
+
+		Decision first = strategy.decide(r, 253);
+		assertSame(west, first.target);
+		assertEquals(Weapon.SCYTHE, first.weapon);
+		west.pendingDamage = west.hp;
+		assertSame(south, strategy.decide(r, 253).target);
 	}
 
 	@Test public void olderEastOpeningLeavesActualWestParentSurvivorsTheirFollowup()

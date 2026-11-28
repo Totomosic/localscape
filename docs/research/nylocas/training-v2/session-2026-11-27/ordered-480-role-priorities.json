@@ -1,0 +1,190 @@
+{
+  "rooms": 480,
+  "statuses": {
+    "completed": 480
+  },
+  "counts": {
+    "wave19_failure_rooms": 9,
+    "west8_eye_at_birth": 480,
+    "south20_post_barrage_scythe": 0,
+    "west27_selections": 0,
+    "west27_outside_exception_selections": 0,
+    "west27_positive_impacts": 0,
+    "south30_first_green": 480,
+    "south30_both_hit_by_same_chin": 480,
+    "west30_rooms_with_intervening_filler": 0,
+    "west8_uncovered_three_ticks_later": 202,
+    "west8_eye_retry_on_that_tick": 202,
+    "west30_uncovered_after_chin": 209,
+    "west30_rooms_with_uncovered_ranger_shot": 209,
+    "west30_first_uncovered_shot_on_parent": 209
+  },
+  "precap": {
+    "ranger_ordinary_small_two_or_more_waves_old": 2229,
+    "mage_fresh_ready_waits": 1026,
+    "mage_ordinary_small_two_or_more_waves_old": 1286,
+    "ranger_fresh_ready_waits": 229
+  },
+  "movement": {
+    "ranger_npc_clicks": 53598,
+    "ranger_blocked_npc_clicks": 0,
+    "ranger_beyond_one_cycle_npc_clicks": 0,
+    "ranger_precap_cooldown_ground_moves": 25954,
+    "mage_npc_clicks": 36167,
+    "mage_blocked_npc_clicks": 0,
+    "mage_beyond_one_cycle_npc_clicks": 0,
+    "ranger_precap_cooldown_ground_moves_with_step": 25954,
+    "mage_precap_cooldown_ground_moves": 31385,
+    "mage_precap_cooldown_ground_moves_with_step": 31070
+  },
+  "max_fresh_ready_ticks_between_primaries": {
+    "ranger": 2,
+    "mage": 2
+  },
+  "parents": {
+    "20S": {
+      "combat_deaths": 480,
+      "mean_age_at_zero_hp": 7.4,
+      "median_age_at_zero_hp": 6.0
+    },
+    "23S": {
+      "combat_deaths": 480,
+      "mean_age_at_zero_hp": 6.34,
+      "median_age_at_zero_hp": 5.0
+    },
+    "24E": {
+      "combat_deaths": 480,
+      "mean_age_at_zero_hp": 11.34,
+      "median_age_at_zero_hp": 10.0
+    },
+    "24S": {
+      "combat_deaths": 480,
+      "mean_age_at_zero_hp": 10.11,
+      "median_age_at_zero_hp": 9.0
+    },
+    "24W": {
+      "combat_deaths": 480,
+      "mean_age_at_zero_hp": 8.46,
+      "median_age_at_zero_hp": 6.0
+    },
+    "25W": {
+      "combat_deaths": 480,
+      "mean_age_at_zero_hp": 12.85,
+      "median_age_at_zero_hp": 10.5
+    },
+    "26W": {
+      "combat_deaths": 480,
+      "mean_age_at_zero_hp": 10.19,
+      "median_age_at_zero_hp": 9.0
+    },
+    "27W": {
+      "combat_deaths": 0,
+      "mean_age_at_zero_hp": null,
+      "median_age_at_zero_hp": null
+    },
+    "29S": {
+      "combat_deaths": 480,
+      "mean_age_at_zero_hp": 9.83,
+      "median_age_at_zero_hp": 9.0
+    },
+    "30E": {
+      "combat_deaths": 480,
+      "mean_age_at_zero_hp": 9.78,
+      "median_age_at_zero_hp": 9.0
+    },
+    "30W": {
+      "combat_deaths": 480,
+      "mean_age_at_zero_hp": 8.55,
+      "median_age_at_zero_hp": 6.0
+    }
+  },
+  "expired_required_parents": [],
+  "order_exceptions": [],
+  "boss": {
+    "eligible": 471,
+    "min_ticks": 304,
+    "mean_ticks": 320.5011,
+    "p5_ticks": 308,
+    "p95_ticks": 332,
+    "max_ticks": 344,
+    "eligible_tick_histogram": {
+      "304": 4,
+      "308": 23,
+      "312": 48,
+      "316": 100,
+      "320": 113,
+      "324": 83,
+      "328": 61,
+      "332": 27,
+      "336": 8,
+      "340": 2,
+      "344": 2
+    },
+    "all_by_328": 434,
+    "all_by_3m22": 471
+  },
+  "cohorts": {
+    "ordered-retained-matched-480": {
+      "rooms": 480,
+      "first_seed": 109674661720395,
+      "last_seed": 109674661720874,
+      "trials_sha256": "f640593af8e7bf10bf38b04a3361776b888a02f5020828f766d882212e9c8a74",
+      "trace_sha256": "3f5040c066e8e75401cc631abebb9caba40f00230705823c143d92695830f670"
+    }
+  },
+  "sources": {
+    "fixture": {
+      "base_stats": 99,
+      "agility": 99,
+      "starting_run_energy": 10000,
+      "starting_hitpoints": 99,
+      "prayer_potions_four_dose_per_player": 4,
+      "prayer_threshold": 25,
+      "special_energy": "normal regeneration with Lightbearer",
+      "inventory_input_bridge": "HeldOpScript; shared supply-fixture contract verified",
+      "prepot": true,
+      "server_boosts": true,
+      "native_utilities": true,
+      "queued_damage_forecast": true,
+      "extra_dinh_25": false,
+      "defer_mage_thrall_renewal": false,
+      "manta_rays_once_per_player": 5,
+      "food_hp_threshold": 65,
+      "damage": "randomized",
+      "gear": "role loadouts from mage-strategy.md and range-strategy.md; see adapter"
+    },
+    "policy_sha256": {
+      "org/localscape/nylocas/AttackIntent.java": "95481f4408995162cc6a425588715633975a715badd7336999dd77a3e76826cd",
+      "org/localscape/nylocas/AttackTiming.java": "614841c9e56079ccb2cf4f7362f8086d7e2873584d9abb93b387d73e26ef073f",
+      "org/localscape/nylocas/CleanupMelee.java": "b564ac888c3e7fc715cf1eccdaef3fd9388d0bd95eebe43e52a382f5802af1d2",
+      "org/localscape/nylocas/NylocasFlickers.java": "45807a81a36306e6b0354d1a592cca1f79751508e996f766434b723b66d4e44f",
+      "org/localscape/nylocas/PrayerPolicy.java": "594822b78696e31995bd1adebbf50bb73253fb2bea6dfc84bafab8ab63476e96",
+      "org/localscape/nylocas/RoomPlanner.java": "e256ae4d29077084e978d241aec1b068cda28605219a14e050943a23fb928a45",
+      "org/localscape/nylocas/RoomProjection.java": "369ebfc2996aaa1d530dea7d1aca4f9e08310efd6f63072f09b35a04ad938b14",
+      "org/localscape/nylocas/Tile.java": "7cb9394667933313683db3c80738fe4a669bdfc8ee0000f0c190b1aa33cb1e98",
+      "org/localscape/nylocas/WaveSchedule.java": "76f41f596eee6d7f2b43baac0bedc142543ff8c8377ce40f427b968a0a8f708d",
+      "org/localscape/nylocas/mage/MageStrategy.java": "89270993c6394f0874c38c13ed8bd923587f99a7c6b7e6b344ca2629051ca060",
+      "org/localscape/nylocas/ranger/RangerFlickers.java": "3738e2ef44e0c2dcbed2b642f20bac55295fc01e7873c7cc37334aec0ea12b0a",
+      "org/localscape/nylocas/ranger/RangerPreCapPlanner.java": "ed5d4e1136ad6879e1befa5796f641c18de6ba1fb895402bec8efcd5ced7fb0a",
+      "org/localscape/nylocas/ranger/RangerStrategy.java": "a4a25aeae0d602ebe6aaf97f5f3e7ddd3a467a65bae8bc65bd1231be55719230"
+    },
+    "adapter_sha256": {
+      "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasServerAgents.kt": "9aaacf4e2f517cba97d7f6a196ece73004ce14318de15133f2b7315811399bb2",
+      "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationTest.kt": "ccc8e3db8876263ca98611b217d7255cfa5b7011066555f9097314971a3a70e4",
+      "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationAreas.kt": "d37dacf487cfbabbdcb9ebd6b05b2c1d702040c2b6c16be727a16fb269d95cdc",
+      "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationStalls.kt": "329a5e818dc2468b408f1a60e4038845a06e20b700611eb9c456f928d86e0149",
+      "api/combat/combat-scripts/src/integration/kotlin/org/rsmod/api/combat/NylocasSimulationSupplies.kt": "c8dfa7b030428845b720ee3f682ad01c1cc85011c6ec8f0868beb5068e18cc41",
+      "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotClient.kt": "9ddb23023dde2cc1e68fde50393ec78261ee98a35bb7a5e28aff4a4037dee507",
+      "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotController.kt": "faad5753aec0282f772efd243264490d20ebba0f26cb65baaafa34a369833928",
+      "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotGroupInputs.kt": "75c1cdec5adc9916bab747ab6d9886274339ce8f8a6196471f27da60c1cf413f",
+      "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotInputs.kt": "95146bf352cf71037add4d007556f8c49758b9910959cb3d71316671cb311908",
+      "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotService.kt": "39060c587fb27b547a99f9a52c2c239ffff5400a07a38765a84551105e6e5421",
+      "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotUtilities.kt": "9c4bcacebe8465c8522270804c58638d800296391ffa0626f3c88f931e1c2e09",
+      "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasBotUtilitySupplies.kt": "937de43b61928fda25e638630dabe5dabc22c28826db5704ceeb5bfde916d6f2",
+      "content/other/nylocas-bots/src/main/kotlin/org/rsmod/content/other/nylocas/bots/NylocasCombatIdle.kt": "ba19211218d4ac9cc21c623ae91d79cfe9cac43e55f6313a36850f531994413f",
+      "content/other/login/src/main/kotlin/org/rsmod/content/other/login/LoginScript.kt": "ed82d01a241076816811ea3208a8792ee8c3518d1232120e3e22e5a35985a99f",
+      "api/stats-plugin/src/main/kotlin/org/rsmod/api/stats/plugin/StatRegenScript.kt": "2ea612b185d3052ec9e80e0abb98bde3509e9ddf8220bd7f17a9dcdd22ed33c9",
+      "api/testing/src/main/kotlin/org/rsmod/api/testing/scope/GameTestScope.kt": "521d83fff56aba2b6cc8293996467dec80f767537d366ed9cb7e5d44bede6854"
+    }
+  }
+}

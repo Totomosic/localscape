@@ -22,6 +22,7 @@ import org.localscape.nylocas.ranger.RangerStrategy.Crab;
 import org.localscape.nylocas.ranger.RangerStrategy.Lane;
 import org.localscape.nylocas.ranger.RangerStrategy.Rule;
 import org.localscape.nylocas.ranger.RangerStrategy.Style;
+import org.localscape.nylocas.ranger.RangerStrategy.Weapon;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -101,7 +102,8 @@ public class RangerReplayTest
 				int age = tick - crab.born - 1;
 				for (Rule rule : RangerStrategy.RULES)
 				{
-					if (rule.matches(crab) && weapon == rule.weapon.itemId && age >= rule.first && age <= rule.last
+					if (rule.matches(crab) && recordedPacketWeapon(rule, weapon, attack.get("type").getAsInt())
+						&& age >= rule.first && age <= rule.last
 						&& (!rule.special || attack.get("type").getAsInt() == 20)) support.merge(rule.name, 1, Integer::sum);
 				}
 			}
@@ -109,6 +111,36 @@ public class RangerReplayTest
 		assertEquals("Only pinned fast rooms from fully vetted pairs", 42, selected);
 		assertTrue("Substantial direct NPC observations were checked", updates > 40000);
 		for (Rule rule : RangerStrategy.RULES) assertTrue("No replay supports packet: " + rule.name, support.getOrDefault(rule.name, 0) > 0);
+	}
+
+	private boolean recordedPacketWeapon(Rule rule, int recordedWeapon, int attackType)
+	{
+		if (recordedWeapon == rule.weapon.itemId) return true;
+		// Keep the pinned human event as an ordinary dragon-claw scratch. The
+		// bot's new sulphur scratch has the same identity and request window.
+		return "Opening scratch".equals(rule.name) && rule.weapon == Weapon.SULPHUR && !rule.special
+			&& recordedWeapon == Weapon.CLAWS.itemId && attackType == 19;
+	}
+
+	@Test public void historicalScratchEquivalenceDoesNotAcceptSpecialsOrOtherWeapons()
+	{
+		Rule scratch = RangerStrategy.RULES.stream().filter(r -> r.name.equals("Opening scratch")).findFirst().get();
+		assertEquals(Weapon.SULPHUR, scratch.weapon);
+		assertTrue(recordedPacketWeapon(scratch, Weapon.CLAWS.itemId, 19));
+		assertTrue(recordedPacketWeapon(scratch, Weapon.SULPHUR.itemId, 19));
+		assertFalse(recordedPacketWeapon(scratch, Weapon.CLAWS.itemId, 20));
+		assertFalse(recordedPacketWeapon(scratch, Weapon.PIPE.itemId, 19));
+	}
+
+	@Test public void otherNamedPacketsRetainTheirExactRecordedWeapon()
+	{
+		for (Rule rule : RangerStrategy.RULES)
+		{
+			if ("Opening scratch".equals(rule.name)) continue;
+			assertTrue(recordedPacketWeapon(rule, rule.weapon.itemId, rule.special ? 20 : 19));
+			for (Weapon other : Weapon.values())
+				if (other != rule.weapon) assertFalse(rule.name, recordedPacketWeapon(rule, other.itemId, 19));
+		}
 	}
 
 	private JsonElement checked(Path corpus, JsonObject entry) throws Exception

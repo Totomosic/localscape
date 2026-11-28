@@ -63,10 +63,12 @@ public class RangerWaveTenSparePipeTest
 	}
 
 	@Test
-	public void noCapPressureKeepsTheNormalEastChin()
+	public void usefulSparePipeDoesNotRequireAnAlreadyCrowdedCheck()
 	{
 		room.crabs.remove(room.crabs.size() - 1);
-		assertEquals("East chin 10", ranger.decide(room, 71).rule);
+		Decision pipe = ranger.decide(room, 71);
+		assertSame(split, pipe.target);
+		assertEquals(Weapon.PIPE, pipe.weapon);
 	}
 
 	@Test

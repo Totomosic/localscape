@@ -115,16 +115,15 @@ public class RangerStrategyTest
 	}
 
 	@Test
-	public void distantSmallApproachesWithPipeUnderLatestGuidance()
+	public void distantSmallCanReceiveAnEarlierChinWithoutUsingTheBow()
 	{
 		Room room = room(12, 100);
 		room.player = RangerStrategy.tile(3290, 4248);
 		Crab distant = crab(room, 12, 105, Lane.SPLIT, (char) 0, false, Style.RANGE);
 		distant.point = RangerStrategy.tile(3300, 4248);
 		Decision decision = strategy.decide(room, 108);
-		assertNull(decision.target);
-		assertSame(distant, decision.approach);
-		assertEquals(Weapon.PIPE, decision.weapon);
+		assertSame(distant, decision.target);
+		assertEquals(Weapon.CHIN, decision.weapon);
 		assertFalse(decision.pathToTarget);
 	}
 
@@ -1075,7 +1074,7 @@ public class RangerStrategyTest
 		assertNull(strategy.decide(room, 116).target);
 		assertNull(strategy.decide(room, 117).target);
 		assertSame(south, strategy.decide(room, 118).target);
-		assertEquals(Weapon.CLAWS, strategy.decide(room, 118).weapon);
+		assertEquals(Weapon.SULPHUR, strategy.decide(room, 118).weapon);
 	}
 
 	@Test

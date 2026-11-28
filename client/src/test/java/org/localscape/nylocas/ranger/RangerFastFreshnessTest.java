@@ -53,7 +53,7 @@ public class RangerFastFreshnessTest
 	}
 
 	@Test
-	public void aVisibleFreshSplitTwoMovementTicksAwayCannotDelayTheReadyPipe()
+	public void anEarlyChinMakesTheVisibleFreshSplitAvailableWithoutWaitingForPipeMovement()
 	{
 		Room room = room(122, Style.RANGE);
 		room.crabs.remove(0);
@@ -65,15 +65,18 @@ public class RangerFastFreshnessTest
 		fresh.pendingDamage = 0;
 		room.crabs.add(fresh);
 		Decision shot = new RangerStrategy().decide(room, 120);
-		assertSame(old, shot.target);
-		assertEquals(Weapon.PIPE, shot.weapon);
+		assertSame(fresh, shot.target);
+		assertEquals(Weapon.CHIN, shot.weapon);
 		assertFalse(shot.pathToTarget);
 	}
 
 	@Test
-	public void oneTickImminentSplitStillJustifiesWaitingRatherThanTheOldPipe()
+	public void aUsefulReadyPipeCanBeatTheExplicitOneTickSplitPreparation()
 	{
-		assertNull(new RangerStrategy().decide(room(121, Style.RANGE), 120).target);
+		Room room = room(121, Style.RANGE);
+		Decision decision = new RangerStrategy().decide(room, 120);
+		assertSame(room.crabs.get(1), decision.target);
+		assertEquals(Weapon.PIPE, decision.weapon);
 	}
 
 	@Test

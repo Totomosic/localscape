@@ -24,7 +24,7 @@ public class RangerOpeningWestFiveTest
 		room.player = RangerStrategy.tile(3296, 4243);
 		room.ready = 21;
 		Crab scratch = new Crab(5, 5, 8, 2, Lane.SOUTH, 'W', false, Style.MELEE, room.player);
-		ranger.attacked(new Decision(scratch, Weapon.CLAWS, room.player, false, "Opening scratch", "scratch"), 18);
+		ranger.attacked(new Decision(scratch, Weapon.SULPHUR, room.player, false, "Opening scratch", "scratch"), 18);
 	}
 
 	@Test
